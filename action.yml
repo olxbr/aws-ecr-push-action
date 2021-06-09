@@ -1,0 +1,15 @@
+name: Push to Amazon ECR
+description: Create the repository, if it doesn't exist, and push a docker image to Amazon ECR.
+inputs:
+  ecr_repository:
+    description: The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
+  tags:
+    description: Comma-separated string of ECR image tags (ex. latest, 1.0.0)
+    required: false
+outputs:
+  repository_uri:
+    description: 'The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.'
+runs:
+  using: 'node12'
+  main: 'actionHandler.js'
+  post: 'cleanup.js'

@@ -1,0 +1,22 @@
+import { SSOClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SSOClient";
+import { GetRoleCredentialsRequest, GetRoleCredentialsResponse } from "../models/models_0";
+import { Command as $Command } from "@aws-sdk/smithy-client";
+import { Handler, MiddlewareStack, HttpHandlerOptions as __HttpHandlerOptions, MetadataBearer as __MetadataBearer } from "@aws-sdk/types";
+export interface GetRoleCredentialsCommandInput extends GetRoleCredentialsRequest {
+}
+export interface GetRoleCredentialsCommandOutput extends GetRoleCredentialsResponse, __MetadataBearer {
+}
+/**
+ * <p>Returns the STS short-term credentials for a given role name that is assigned to the
+ *       user.</p>
+ */
+export declare class GetRoleCredentialsCommand extends $Command<GetRoleCredentialsCommandInput, GetRoleCredentialsCommandOutput, SSOClientResolvedConfig> {
+    readonly input: GetRoleCredentialsCommandInput;
+    constructor(input: GetRoleCredentialsCommandInput);
+    /**
+     * @internal
+     */
+    resolveMiddleware(clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>, configuration: SSOClientResolvedConfig, options?: __HttpHandlerOptions): Handler<GetRoleCredentialsCommandInput, GetRoleCredentialsCommandOutput>;
+    private serialize;
+    private deserialize;
+}
