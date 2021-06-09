@@ -9,6 +9,7 @@ const {
 const policy = require('./policy')
 
 
+const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
 
 
