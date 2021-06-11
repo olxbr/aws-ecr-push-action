@@ -42,13 +42,27 @@ const getRepositoryUri = (config) => describeRepo(config)
 
 const buildImage = (config) => new Promise((resolve, reject) => {
   console.log('Building image...')
-  const cmd = spawn('docker', [`build`, `-t`, `${ECR_ENDPOINT}/${config.repositoryNames[0]}`,  '.'])
+  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`
+  const cmd = spawn('docker', [`build`, `-t`, imageName,  '.'])
   cmd.stdout.on('data', logBuffer)
   cmd.stderr.on('data', logBuffer)
   cmd.on('error', reject)
   cmd.on('close', resolve)
 })
    
+
+const tagImage = (config) => new Promise((resolve, reject) => {
+  console.log(`Tagging image with ${config.tag}...`)
+  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`
+  const cmd = spawn('docker', [`tag`, imageName, `${imageName}:${config.tag}`])
+
+  cmd.stdout.on('data', logBuffer)
+  cmd.stderr.on('data', logBuffer)
+  cmd.on('error', reject)
+  cmd.on('close', resolve)
+})
+
+
 const parseAuthToken = async (config) => {
   console.log('Getting ECR auth token...')
   const response = await getAuthorizationToken({ registryIds: [AWS_ACCOUNT_ID]  })
@@ -90,3 +104,4 @@ const pushImage = async (config) => {
 exports.getRepositoryUri = getRepositoryUri
 exports.buildImage = buildImage
 exports.pushImage = pushImage
+exports.tagImage = tagImage
