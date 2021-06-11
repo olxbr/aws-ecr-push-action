@@ -3,7 +3,7 @@ Action to push images to Amazon's Elastic Container Registry.
 
 ### Usage
 
-You have to set up the target AWS account id as an environment variable!
+You have to set up the target `AWS_ACCOUNT_ID` as an environment variable!
 
 
 ```yaml
