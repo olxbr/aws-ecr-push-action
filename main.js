@@ -6,14 +6,19 @@ const {
   PutImageCommand,
   GetAuthorizationTokenCommand,
 } = require("@aws-sdk/client-ecr");
+const { defaultProvider } = require('@aws-sdk/credential-provider-node')
 const policy = require('./policy')
 
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
 
+const credentialsProvider = defaultProvider({ timeout: 20000 })
 
-const client = new ECRClient({ region: "us-east-1" });
+const client = new ECRClient({
+  region: "us-east-1",
+  credentialDefaultProvider: credentialsProvider,
+})
 
 
 const logData = (data) => { console.log(data); return data }
@@ -26,7 +31,7 @@ const createRepo = (params) => client.send(new CreateRepositoryCommand(params))
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params))
 
 
-const describeRepoErrorHandler = 
+const describeRepoErrorHandler =
   (config) =>
     (error) => {
       if (error.name !== 'RepositoryNotFoundException') throw error
@@ -49,7 +54,7 @@ const buildImage = (config) => new Promise((resolve, reject) => {
   cmd.on('error', reject)
   cmd.on('close', resolve)
 })
-   
+
 
 const tagImage = (config) => new Promise((resolve, reject) => {
   console.log(`Tagging image with ${config.tag}...`)
@@ -73,7 +78,7 @@ const parseAuthToken = async (config) => {
   console.log(`Proxy endpoint: ${proxyEndpoint}`)
   const decodedTokenData = Buffer.from(authData.authorizationToken, 'base64').toString()
   const authArray = decodedTokenData.split(':')
-  return { 
+  return {
     username: authArray[0],
     password: authArray[1],
     proxyEndpoint,
@@ -81,7 +86,7 @@ const parseAuthToken = async (config) => {
 }
 
 const dockerLoginOnECR = (config) => new Promise(async (resolve, reject) => {
-  const loginData = await parseAuthToken() 
+  const loginData = await parseAuthToken()
   const cmd = spawn('docker', [`login`, `-u`, loginData.username,  '-p', loginData.password, loginData.proxyEndpoint])
   cmd.stdout.on('data', logBuffer)
   cmd.stderr.on('data', logBuffer)
