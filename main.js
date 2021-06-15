@@ -38,11 +38,14 @@ const describeRepoErrorHandler =
       if (error.name !== 'RepositoryNotFoundException') throw error
       const repositoryName = config.repositoryNames[0]
 
+      const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID })
+
       console.log(`Creating repository ${repositoryName}...`)
+      console.log(`Policy: ${policy}`)
       const repoData = await createRepo({ repositoryName })
       await setRepositoryPolicy({ 
         repositoryName, 
-        policyText: buildPolicy({ accountId: AWS_ACCOUNT_ID }), 
+        policyText: policy, 
       })
 
       return repoData.repository

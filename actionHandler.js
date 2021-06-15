@@ -21,7 +21,7 @@ const run = async () => {
     }
 
     const output = await getRepositoryUri(params)
-    const repositoryUri = output.repositories[0].repositoryUri
+    const repositoryUri = output.repositoryUri
     core.setOutput('repository_uri', repositoryUri);
     await buildImage(params)
     tags.forEach(async (tag) => {
