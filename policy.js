@@ -1,11 +1,11 @@
-const policy = {
+const buildPolicy = ({ accountId }) => JSON.stringify({
     "Version": "2008-10-17",
     "Statement": [
         {
             "Sid": "AllowPushPull",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::account-id:root"
+                "AWS": `arn:aws:iam::${accountId}:root`
             },
             "Action": [
                 "ecr:GetDownloadUrlForLayer",
@@ -18,6 +18,6 @@ const policy = {
             ]
         }
     ]
-}
+})
 
-module.exports.default = policy
+exports.buildPolicy = buildPolicy

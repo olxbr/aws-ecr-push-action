@@ -5,10 +5,10 @@ const {
   CreateRepositoryCommand,
   PutImageCommand,
   GetAuthorizationTokenCommand,
+  SetRepositoryPolicyCommand,
 } = require("@aws-sdk/client-ecr");
 const { defaultProvider } = require('@aws-sdk/credential-provider-node')
-const policy = require('./policy')
-
+const { buildPolicy }= require('./policy')
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
@@ -29,19 +29,28 @@ const logBuffer = (buffer) => logData(buffer.toString())
 const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(params))
 const createRepo = (params) => client.send(new CreateRepositoryCommand(params))
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params))
+const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params))
 
 
 const describeRepoErrorHandler =
   (config) =>
-    (error) => {
+    async(error) => {
       if (error.name !== 'RepositoryNotFoundException') throw error
+      const repositoryName = config.repositoryNames[0]
 
-      console.log('Creating repository...')
-      return createRepo({ repositoryName: config.repositoryNames[0] })
+      console.log(`Creating repository ${repositoryName}...`)
+      const repoData = await createRepo({ repositoryName })
+      await setRepositoryPolicy({ 
+        repositoryName, 
+        policyText: buildPolicy({ accountId: AWS_ACCOUNT_ID }), 
+      })
+
+      return repoData.repository
     }
 
 
 const getRepositoryUri = (config) => describeRepo(config)
+  .then(data => data.repositories[0])
   .catch(describeRepoErrorHandler(config))
   .catch(logError)
 

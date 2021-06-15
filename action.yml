@@ -3,9 +3,10 @@ description: Create the repository, if it doesn't exist, and push a docker image
 inputs:
   ecr_repository:
     description: The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
+    required: true
   tags:
     description: Comma-separated string of ECR image tags (ex. latest, 1.0.0)
-    required: false
+    required: true
 outputs:
   repository_uri:
     description: 'The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.'
