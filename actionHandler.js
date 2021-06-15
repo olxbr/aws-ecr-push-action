@@ -29,7 +29,7 @@ const run = async () => {
     })
     await pushImage(params)
   } catch(e) {
-    console.error(e)
+    core.setFailed(error.message)
   }
 }
 
