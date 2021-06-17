@@ -26,8 +26,8 @@ const run = async () => {
     await buildImage(params)
     tags.forEach(async (tag) => {
       await tagImage({ ...params, tag })
+      await pushImage({ ...params, tag })
     })
-    await pushImage(params)
   } catch(e) {
     core.setFailed(error.message)
   }

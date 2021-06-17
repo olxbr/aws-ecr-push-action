@@ -98,6 +98,7 @@ const parseAuthToken = async (config) => {
 }
 
 const dockerLoginOnECR = (config) => new Promise(async (resolve, reject) => {
+  console.log('Login on ECR...')
   const loginData = await parseAuthToken()
   const cmd = spawn('docker', [`login`, `-u`, loginData.username,  '-p', loginData.password, loginData.proxyEndpoint])
   cmd.stdout.on('data', logBuffer)
@@ -109,8 +110,9 @@ const dockerLoginOnECR = (config) => new Promise(async (resolve, reject) => {
 const pushImage = async (config) => {
   await dockerLoginOnECR()
 
+  console.log(`Pushing tag ${config.tag}...`)
   return new Promise((resolve, reject) => {
-    const cmd = spawn('docker', ['push', `${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`])
+    const cmd = spawn('docker', ['push', `${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tag}`])
     cmd.stdout.on('data', logBuffer)
     cmd.stderr.on('data', logBuffer)
     cmd.on('error', reject)

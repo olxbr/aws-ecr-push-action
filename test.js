@@ -23,8 +23,8 @@ const test = async () => {
     await buildImage(params)
     tags.forEach(async (tag) => {
       await tagImage({ ...params, tag })
+      await pushImage({ ...params, tag }).catch(console.error)
     })
-    await pushImage(params).catch(console.error)
   } catch(e) {
     console.log(e)
   }
