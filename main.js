@@ -125,7 +125,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   const curl = spawnSync('curl', [`https://raw.githubusercontent.com/olxbr/X9Containers/main/${config.x9ContainerDistro}.X9.Dockerfile`, '--output', 'X9.Dockerfile']);
   if (curl.status !== 0) {
     console.error(curl.stderr.toString());
-    return reject('reportImageThreats curl failed');
+    return reject('report image threats curl failed');
   }
 
   var minimalSeverity = '';
@@ -142,7 +142,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   const dockerBuild = spawnSync('docker', ['build', '-f', 'X9.Dockerfile', '-t', 'suspectimage', '--build-arg', `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`, '--build-arg', `TRIVY_SEVERITY=${minimalSeverity}`, '--quiet', '.']);
   if (dockerBuild.status !== 0) {
     console.error(dockerBuild.stderr.toString());
-    return reject('reportImageThreats docker build failed');
+    return reject('report image threats docker build failed');
   }
 
   const scansFolder = './scans';
@@ -152,7 +152,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
     const cat = spawnSync('cat', [`${scansFolder}/${report}`]);
     if (cat.status !== 0) {
       console.error(cat.stderr.toString());
-      return reject('reportImageThreats cat failed');
+      return reject('report image threats cat failed');
     }
     console.log(cat.stdout.toString());
   });
@@ -164,37 +164,38 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   const clamScanFileName = 'recursive-root-dir-clamscan.txt';
   const clamScanFile = `${scansFolder}/${clamScanFileName}`;
   if (!fs.existsSync(clamScanFile)) {
-    return reject(`reportImageThreats ${clamScanFileName} reading failed`);
+    return reject(`report image threats file ${clamScanFileName} reading failed`);
   }
   const grepClam = spawnSync('grep', ['^Infected files: ', `${clamScanFile}`]);
   if (grepClam.status !== 0) {
     console.error(grepClam.stderr.toString());
-    return reject(`reportImageThreats ${clamScanFileName} grep failed`);
+    return reject(`report image threats file ${clamScanFileName} grep failed`);
   }
   const summaryClam = grepClam.stdout.toString();
   const totalsClam = summaryClam.match(/\d+/);
   if (totalsClam.some(isNaN)) {
-    return reject(`reportImageThreats ${clamScanFileName} missing totals`);
+    return reject(`report image threats file ${clamScanFileName} missing totals`);
   }
   process.stdout.write('ClamAV	');
   console.log(summaryClam);
   if (totalsClam[0] > VIRUS_THRESHOLD) {
-    return reject(`reportImageThreats ${clamScanFileName} threat threshold exceeded`);
+    return reject(`report image threats file ${clamScanFileName} threat threshold exceeded`);
   }
 
-  const trivyScanFile = `${scansFolder}/image-vulnerabilities-trivy.txt`;
+  const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
+  const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
   if (!fs.existsSync(trivyScanFile)) {
-    return reject('reportImageThreats image-vulnerabilities-trivy.txt reading failed');
+    return reject(`report image threats file ${trivyScanFileName} reading failed`);
   }
   const grepTrivy = spawnSync('grep', ['^Total: ', `${trivyScanFile}`]);
   if (grepTrivy.status !== 0) {
     console.error(grepTrivy.stderr.toString());
-    return reject('reportImageThreats image-vulnerabilities-trivy.txt grep failed');
+    return reject(`report image threats file ${trivyScanFileName} grep failed`);
   }
   const summaryTrivy = grepTrivy.stdout.toString();
   const totalsTrivy = summaryTrivy.match(/\d+/);
   if (totalsTrivy.some(isNaN)) {
-    return reject('reportImageThreats image-vulnerabilities-trivy.txt missing totals');
+    return reject(`report image threats file ${trivyScanFileName} missing totals`);
   }
   process.stdout.write('Trivy	');
   console.log(summaryTrivy);
@@ -205,8 +206,9 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
     ((`${config.minimalSeverity}` === 'LOW') && (totalsTrivy[0] > LOW_THRESHOLD || totalsTrivy[1] > MEDIUM_THRESHOLD || totalsTrivy[2] > HIGH_THRESHOLD || totalsTrivy[3] > CRITICAL_THRESHOLD)) ||
     ((`${config.minimalSeverity}` === 'UNKNOWN') && (totalsTrivy[0] > UNKNOWN_THRESHOLD || totalsTrivy[1] > LOW_THRESHOLD || totalsTrivy[2] > MEDIUM_THRESHOLD || totalsTrivy[3] > HIGH_THRESHOLD || totalsTrivy[4] > CRITICAL_THRESHOLD))
   ) {
-    return reject('reportImageThreats image-vulnerabilities-trivy.txt threat threshold exceeded');
+    return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
+  
   resolve('reportImageThreats successfully finished');
 });
 
