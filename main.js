@@ -161,21 +161,25 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
     return resolve('ignore_threats is true, skipping workflow interruption');
   }
 
-  const clamScanFile = `${scansFolder}/recursive-root-dir-clamscan.txt`;
+  const clamScanFileName = 'recursive-root-dir-clamscan.txt';
+  const clamScanFile = `${scansFolder}/${clamScanFileName}`;
   if (!fs.existsSync(clamScanFile)) {
-    return reject('reportImageThreats recursive-root-dir-clamscan.txt reading failed');
+    return reject(`reportImageThreats ${clamScanFileName} reading failed`);
   }
   const grepClam = spawnSync('grep', ['^Infected files: ', `${clamScanFile}`]);
   if (grepClam.status !== 0) {
     console.error(grepClam.stderr.toString());
-    return reject('reportImageThreats recursive-root-dir-clamscan.txt grep failed');
+    return reject(`reportImageThreats ${clamScanFileName} grep failed`);
   }
   const summaryClam = grepClam.stdout.toString();
   const totalsClam = summaryClam.match(/\d+/);
+  if (totalsClam.some(isNaN)) {
+    return reject(`reportImageThreats ${clamScanFileName} missing totals`);
+  }
   process.stdout.write('ClamAV	');
   console.log(summaryClam);
   if (totalsClam[0] > VIRUS_THRESHOLD) {
-    return reject('reportImageThreats recursive-root-dir-clamscan.txt threat threshold exceeded');
+    return reject(`reportImageThreats ${clamScanFileName} threat threshold exceeded`);
   }
 
   const trivyScanFile = `${scansFolder}/image-vulnerabilities-trivy.txt`;
@@ -189,6 +193,9 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   }
   const summaryTrivy = grepTrivy.stdout.toString();
   const totalsTrivy = summaryTrivy.match(/\d+/);
+  if (totalsTrivy.some(isNaN)) {
+    return reject('reportImageThreats image-vulnerabilities-trivy.txt missing totals');
+  }
   process.stdout.write('Trivy	');
   console.log(summaryTrivy);
   if (
