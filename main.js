@@ -137,8 +137,10 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
     minimalSeverity = 'MEDIUM,HIGH,CRITICAL';
   else if (`${config.minimalSeverity}` === 'LOW')
     minimalSeverity = 'LOW,MEDIUM,HIGH,CRITICAL';
-  else
+  else {
+    config.minimalSeverity = 'UNKNOWN';
     minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
+  }
   const dockerBuild = spawnSync('docker', ['build', '-f', 'X9.Dockerfile', '-t', 'suspectimage', '--build-arg', `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`, '--build-arg', `TRIVY_SEVERITY=${minimalSeverity}`, '--quiet', '.']);
   if (dockerBuild.status !== 0) {
     console.error(dockerBuild.stderr.toString());
@@ -208,7 +210,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   ) {
     return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
-  
+
   resolve('reportImageThreats successfully finished');
 });
 
