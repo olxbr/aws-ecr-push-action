@@ -11,7 +11,7 @@ inputs:
     description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from https://github.com/olxbr/X9Containers with a preferred distro and tools (ex. debian.clamav.trivy).
     required: true
   minimal_severity:
-    description: Minimal threat detection level, for security scan (ex CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
+    description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
     required: false
     default: CRITICAL
   ignore_threats:
