@@ -211,7 +211,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
     return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
 
-  resolve('reportImageThreats successfully finished');
+  resolve('report image threats successfully finished');
 });
 
 exports.getRepositoryUri = getRepositoryUri
