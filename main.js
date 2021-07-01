@@ -122,7 +122,14 @@ const pushImage = async (config) => {
 const reportImageThreats = (config) => new Promise((resolve, reject) => {
   console.log('X9 will find something to blame now...');
 
-  const curl = spawnSync('curl', [`https://raw.githubusercontent.com/olxbr/X9Containers/main/${config.x9ContainerDistro}.X9.Dockerfile`, '--output', 'X9.Dockerfile']);
+  const curl = spawnSync(
+    'curl',
+    [
+      `https://raw.githubusercontent.com/olxbr/X9Containers/main/${config.x9ContainerDistro}.X9.Dockerfile`,
+      '--output',
+      'X9.Dockerfile'
+    ]
+  );
   if (curl.status !== 0) {
     console.error(curl.stderr.toString());
     return reject('report image threats curl failed');
@@ -147,7 +154,22 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
       minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
       break;
   }
-  const dockerBuild = spawnSync('docker', ['build', '-f', 'X9.Dockerfile', '-t', 'suspectimage', '--build-arg', `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`, '--build-arg', `TRIVY_SEVERITY=${minimalSeverity}`, '--quiet', '.']);
+  const dockerBuild = spawnSync(
+    'docker',
+    [
+      'build',
+      '-f',
+      'X9.Dockerfile',
+      '-t',
+      'suspectimage',
+      '--build-arg',
+      `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`,
+      '--build-arg',
+      `TRIVY_SEVERITY=${minimalSeverity}`,
+      '--quiet',
+      '.'
+    ]
+  );
   if (dockerBuild.status !== 0) {
     console.error(dockerBuild.stderr.toString());
     return reject('report image threats docker build failed');
@@ -209,10 +231,18 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   console.log(summaryTrivy);
   if (
     ((`${config.minimalSeverity}` === 'CRITICAL') && (totalsTrivy[0] > CRITICAL_THRESHOLD)) ||
-    ((`${config.minimalSeverity}` === 'HIGH') && (totalsTrivy[0] > HIGH_THRESHOLD || totalsTrivy[1] > CRITICAL_THRESHOLD)) ||
-    ((`${config.minimalSeverity}` === 'MEDIUM') && (totalsTrivy[0] > MEDIUM_THRESHOLD || totalsTrivy[1] > HIGH_THRESHOLD || totalsTrivy[2] > CRITICAL_THRESHOLD)) ||
-    ((`${config.minimalSeverity}` === 'LOW') && (totalsTrivy[0] > LOW_THRESHOLD || totalsTrivy[1] > MEDIUM_THRESHOLD || totalsTrivy[2] > HIGH_THRESHOLD || totalsTrivy[3] > CRITICAL_THRESHOLD)) ||
-    ((`${config.minimalSeverity}` === 'UNKNOWN') && (totalsTrivy[0] > UNKNOWN_THRESHOLD || totalsTrivy[1] > LOW_THRESHOLD || totalsTrivy[2] > MEDIUM_THRESHOLD || totalsTrivy[3] > HIGH_THRESHOLD || totalsTrivy[4] > CRITICAL_THRESHOLD))
+
+    ((`${config.minimalSeverity}` === 'HIGH') && (totalsTrivy[0] > HIGH_THRESHOLD ||
+      totalsTrivy[1] > CRITICAL_THRESHOLD)) ||
+
+    ((`${config.minimalSeverity}` === 'MEDIUM') && (totalsTrivy[0] > MEDIUM_THRESHOLD ||
+      totalsTrivy[1] > HIGH_THRESHOLD || totalsTrivy[2] > CRITICAL_THRESHOLD)) ||
+
+    ((`${config.minimalSeverity}` === 'LOW') && (totalsTrivy[0] > LOW_THRESHOLD ||
+      totalsTrivy[1] > MEDIUM_THRESHOLD || totalsTrivy[2] > HIGH_THRESHOLD || totalsTrivy[3] > CRITICAL_THRESHOLD)) ||
+
+    ((`${config.minimalSeverity}` === 'UNKNOWN') && (totalsTrivy[0] > UNKNOWN_THRESHOLD ||
+      totalsTrivy[1] > LOW_THRESHOLD || totalsTrivy[2] > MEDIUM_THRESHOLD || totalsTrivy[3] > HIGH_THRESHOLD || totalsTrivy[4] > CRITICAL_THRESHOLD))
   ) {
     return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
