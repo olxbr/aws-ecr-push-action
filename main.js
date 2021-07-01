@@ -129,17 +129,23 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   }
 
   var minimalSeverity = '';
-  if (`${config.minimalSeverity}` === 'CRITICAL')
-    minimalSeverity = 'CRITICAL';
-  else if (`${config.minimalSeverity}` === 'HIGH')
-    minimalSeverity = 'HIGH,CRITICAL';
-  else if (`${config.minimalSeverity}` === 'MEDIUM')
-    minimalSeverity = 'MEDIUM,HIGH,CRITICAL';
-  else if (`${config.minimalSeverity}` === 'LOW')
-    minimalSeverity = 'LOW,MEDIUM,HIGH,CRITICAL';
-  else {
-    config.minimalSeverity = 'UNKNOWN';
-    minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
+  switch (`${config.minimalSeverity}`) {
+    case 'CRITICAL':
+      minimalSeverity = 'CRITICAL';
+      break;
+    case 'HIGH':
+      minimalSeverity = 'HIGH,CRITICAL';
+      break;
+    case 'MEDIUM':
+      minimalSeverity = 'MEDIUM,HIGH,CRITICAL';
+      break;
+    case 'LOW':
+      minimalSeverity = 'LOW,MEDIUM,HIGH,CRITICAL';
+      break;
+    default:
+      config.minimalSeverity = 'UNKNOWN';
+      minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
+      break;
   }
   const dockerBuild = spawnSync('docker', ['build', '-f', 'X9.Dockerfile', '-t', 'suspectimage', '--build-arg', `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`, '--build-arg', `TRIVY_SEVERITY=${minimalSeverity}`, '--quiet', '.']);
   if (dockerBuild.status !== 0) {

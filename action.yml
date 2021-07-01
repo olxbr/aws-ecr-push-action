@@ -18,11 +18,11 @@ inputs:
   ignore_threats:
     description: If true, don't interrupt workflow if has security findings, during security scan.
     required: false
-    default: "false"
+    default: 'false'
 outputs:
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
 runs:
-  using: "node12"
-  main: "actionHandler.js"
-  post: "cleanup.js"
+  using: 'node12'
+  main: 'actionHandler.js'
+  post: 'cleanup.js'
