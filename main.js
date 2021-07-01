@@ -13,12 +13,12 @@ const fs = require('fs')
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
 
-const CRITICAL_THRESHOLD = 10;
-const HIGH_THRESHOLD = 250;
-const MEDIUM_THRESHOLD = 500;
-const LOW_THRESHOLD = 1000;
-const UNKNOWN_THRESHOLD = 200;
 const VIRUS_THRESHOLD = 0;
+const CRITICAL_VULNS_THRESHOLD = 10;
+const HIGH_VULNS_THRESHOLD = 250;
+const MEDIUM_VULNS_THRESHOLD = 500;
+const LOW_VULNS_THRESHOLD = 1000;
+const UNKNOWN_VULNS_THRESHOLD = 2000;
 
 const credentialsProvider = defaultProvider({ timeout: 20000 })
 
@@ -230,19 +230,40 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
   process.stdout.write('Trivy	');
   console.log(summaryTrivy);
   if (
-    ((`${config.minimalSeverity}` === 'CRITICAL') && (totalsTrivy[0] > CRITICAL_THRESHOLD)) ||
+    ((`${config.minimalSeverity}` === 'CRITICAL') &&
+      (
+        totalsTrivy[0] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-    ((`${config.minimalSeverity}` === 'HIGH') && (totalsTrivy[0] > HIGH_THRESHOLD ||
-      totalsTrivy[1] > CRITICAL_THRESHOLD)) ||
+    ((`${config.minimalSeverity}` === 'HIGH') &&
+      (
+        totalsTrivy[0] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[1] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-    ((`${config.minimalSeverity}` === 'MEDIUM') && (totalsTrivy[0] > MEDIUM_THRESHOLD ||
-      totalsTrivy[1] > HIGH_THRESHOLD || totalsTrivy[2] > CRITICAL_THRESHOLD)) ||
+    ((`${config.minimalSeverity}` === 'MEDIUM') &&
+      (
+        totalsTrivy[0] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[1] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[2] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-    ((`${config.minimalSeverity}` === 'LOW') && (totalsTrivy[0] > LOW_THRESHOLD ||
-      totalsTrivy[1] > MEDIUM_THRESHOLD || totalsTrivy[2] > HIGH_THRESHOLD || totalsTrivy[3] > CRITICAL_THRESHOLD)) ||
+    ((`${config.minimalSeverity}` === 'LOW') &&
+      (
+        totalsTrivy[0] > LOW_VULNS_THRESHOLD ||
+        totalsTrivy[1] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[2] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[3] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-    ((`${config.minimalSeverity}` === 'UNKNOWN') && (totalsTrivy[0] > UNKNOWN_THRESHOLD ||
-      totalsTrivy[1] > LOW_THRESHOLD || totalsTrivy[2] > MEDIUM_THRESHOLD || totalsTrivy[3] > HIGH_THRESHOLD || totalsTrivy[4] > CRITICAL_THRESHOLD))
+    ((`${config.minimalSeverity}` === 'UNKNOWN') &&
+      (
+        totalsTrivy[0] > UNKNOWN_VULNS_THRESHOLD ||
+        totalsTrivy[1] > LOW_VULNS_THRESHOLD ||
+        totalsTrivy[2] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[3] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[4] > CRITICAL_VULNS_THRESHOLD)
+    )
   ) {
     return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
