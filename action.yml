@@ -5,11 +5,23 @@ inputs:
     description: The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
     required: true
   tags:
-    description: Comma-separated string of ECR image tags (ex. latest, 1.0.0)
+    description: Comma-separated string of ECR image tags (ex. latest, 1.0.0).
     required: true
+  x9_container_distro:
+    description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from https://github.com/olxbr/X9Containers with a preferred distro and tools (ex. debian.clamav.trivy).
+    required: false
+    default: distroless.clamav.trivy
+  minimal_severity:
+    description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
+    required: false
+    default: CRITICAL
+  ignore_threats:
+    description: If true, don't interrupt workflow if has security findings, during security scan.
+    required: false
+    default: 'false'
 outputs:
   repository_uri:
-    description: 'The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.'
+    description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
 runs:
   using: 'node12'
   main: 'actionHandler.js'
