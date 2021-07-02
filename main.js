@@ -15,10 +15,10 @@ const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
 
 const VIRUS_THRESHOLD = 0;
 const CRITICAL_VULNS_THRESHOLD = 10;
-const HIGH_VULNS_THRESHOLD = 250;
-const MEDIUM_VULNS_THRESHOLD = 500;
-const LOW_VULNS_THRESHOLD = 1000;
-const UNKNOWN_VULNS_THRESHOLD = 2000;
+const HIGH_VULNS_THRESHOLD = 50;
+const MEDIUM_VULNS_THRESHOLD = 100;
+const LOW_VULNS_THRESHOLD = 250;
+const UNKNOWN_VULNS_THRESHOLD = 1000;
 
 const credentialsProvider = defaultProvider({ timeout: 20000 })
 
