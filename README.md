@@ -21,8 +21,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Docker build and push to ECR
-        # Check the latest action version and replace it here.
-        uses: olxbr/aws-ecr-push-action@v0.10
+        # Check the action version that you want and replace it here.
+        uses: olxbr/aws-ecr-push-action@main
         id: ecr
         with:
           # The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
