@@ -10,6 +10,7 @@ const {
 
 const run = async () => {
   try {
+
     const REPO = core.getInput('ecr_repository');
     const tags = core.getInput('tags').split(',');
     const minimalSeverity = core.getInput('minimal_severity');
@@ -22,9 +23,11 @@ const run = async () => {
       x9ContainerDistro,
       ignoreThreats
     };
+
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
     core.setOutput('repository_uri', output.repositoryUri);
+
     await dockerLoginOnECR();
     buildImage(params);
     reportImageThreats(params);
@@ -32,6 +35,7 @@ const run = async () => {
       tagImage({ ...params, tag });
       pushImage({ ...params, tag });
     });
+
   } catch (err) {
     core.setFailed(err.message);
   }
