@@ -48,15 +48,19 @@ const describeRepoErrorHandler = (config) => async (err) => {
   if (err.name !== 'RepositoryNotFoundException') {
     throw new Error(err.message);
   }
+
   const repositoryName = config.repositoryNames[0];
   const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID });
   console.log(`Creating repository ${repositoryName}...`);
   console.log(`Policy: ${policy}`);
+
   const repoData = await createRepo({ repositoryName });
+
   await setRepositoryPolicy({
     repositoryName,
     policyText: policy
   });
+
   return repoData.repository;
 }
 
@@ -81,12 +85,15 @@ const parseAuthToken = async () => {
   console.log('Getting ECR auth token...');
   const response = await getAuthorizationToken({ registryIds: [AWS_ACCOUNT_ID] });
   const authData = response.authorizationData[0];
+
   const expires = authData.expiresAt;
   const proxyEndpoint = authData.proxyEndpoint;
   console.log(`Token will expire at ${expires}`);
   console.log(`Proxy endpoint: ${proxyEndpoint}`);
+
   const decodedTokenData = Buffer.from(authData.authorizationToken, 'base64').toString();
   const authArray = decodedTokenData.split(':');
+
   return {
     username: authArray[0],
     password: authArray[1],
@@ -107,6 +114,7 @@ const pushImage = (config) => {
 
 const reportImageThreats = (config) => {
   console.log('X9 will find something to blame now...');
+
   // Obtain a X9Container Dockerfile
   executeSyncCmd(
     'curl',
@@ -117,6 +125,7 @@ const reportImageThreats = (config) => {
     ],
     'report image threats curl failed'
   );
+
   // Run image scan
   var minimalSeverity = '';
   switch (`${config.minimalSeverity}`) {
@@ -154,6 +163,7 @@ const reportImageThreats = (config) => {
     ],
     'report image threats docker build failed'
   );
+
   // Extract scan results from container
   const scansFolder = './scans';
   executeSyncCmd('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
@@ -161,11 +171,13 @@ const reportImageThreats = (config) => {
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
+
   // Assert the need of threat evaluation
   if (config.ignoreThreats === 'true') {
     console.log('ignore_threats is true, skipping workflow interruption');
     return 'ignore_threats is true, skipping workflow interruption';
   }
+
   // Evaluate findings from ClamAV
   const clamScanFileName = 'recursive-root-dir-clamscan.txt';
   const clamScanFile = `${scansFolder}/${clamScanFileName}`;
@@ -185,6 +197,7 @@ const reportImageThreats = (config) => {
   if (totalsClam[0] > VIRUS_THRESHOLD) {
     throw new Error(`report image threats file ${clamScanFileName} threat threshold exceeded`);
   }
+
   // Evaluate findings from Trivy
   const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
   const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
@@ -240,6 +253,7 @@ const reportImageThreats = (config) => {
     throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
 
+  // End scan
   console.log('report image threats successfully finished');
   return 'report image threats successfully finished';
 };
