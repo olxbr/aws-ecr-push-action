@@ -1,17 +1,17 @@
-const { spawn, spawnSync } = require("child_process")
+const { spawnSync } = require("child_process");
 const {
   ECRClient,
   DescribeRepositoriesCommand,
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
-  SetRepositoryPolicyCommand,
+  SetRepositoryPolicyCommand
 } = require("@aws-sdk/client-ecr");
-const { defaultProvider } = require('@aws-sdk/credential-provider-node')
-const { buildPolicy } = require('./policy')
-const fs = require('fs')
+const { defaultProvider } = require('@aws-sdk/credential-provider-node');
+const { buildPolicy } = require('./policy');
+const fs = require('fs');
 
-const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
-const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
+const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
+const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 const VIRUS_THRESHOLD = 0;
 const CRITICAL_VULNS_THRESHOLD = 10;
@@ -20,121 +20,104 @@ const MEDIUM_VULNS_THRESHOLD = 100;
 const LOW_VULNS_THRESHOLD = 250;
 const UNKNOWN_VULNS_THRESHOLD = 1000;
 
-const credentialsProvider = defaultProvider({ timeout: 20000 })
+const credentialsProvider = defaultProvider({ timeout: 20000 });
 
 const client = new ECRClient({
   region: "us-east-1",
-  credentialDefaultProvider: credentialsProvider,
-})
+  credentialDefaultProvider: credentialsProvider
+});
 
-const logData = (data) => { console.log(data); return data }
-const logError = (error) => { console.error(error); throw error }
-const logBuffer = (buffer) => logData(buffer.toString())
+const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(params));
+const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
+const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
+const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 
-const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(params))
-const createRepo = (params) => client.send(new CreateRepositoryCommand(params))
-const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params))
-const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params))
-
-const describeRepoErrorHandler =
-  (config) =>
-    async (error) => {
-      if (error.name !== 'RepositoryNotFoundException') throw error
-      const repositoryName = config.repositoryNames[0]
-
-      const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID })
-
-      console.log(`Creating repository ${repositoryName}...`)
-      console.log(`Policy: ${policy}`)
-      const repoData = await createRepo({ repositoryName })
-      await setRepositoryPolicy({
-        repositoryName,
-        policyText: policy,
-      })
-
-      return repoData.repository
+const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
+  const cmd = spawnSync(command, arrayOfParams);
+  if (cmd.status !== 0) {
+    if (errorMessage) {
+      throw new Error(errorMessage);
     }
+    throw new Error(cmd.stderr.toString());
+  }
+  console.log(cmd.stdout.toString());
+  return cmd.stdout.toString();
+};
 
-const getRepositoryUri = (config) => describeRepo(config)
-  .then(data => data.repositories[0])
-  .catch(describeRepoErrorHandler(config))
-  .catch(logError)
+const describeRepoErrorHandler = (config) => async (err) => {
+  if (err.name !== 'RepositoryNotFoundException') {
+    throw new Error(err.message);
+  }
+  const repositoryName = config.repositoryNames[0];
+  const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID });
+  console.log(`Creating repository ${repositoryName}...`);
+  console.log(`Policy: ${policy}`);
+  const repoData = await createRepo({ repositoryName });
+  await setRepositoryPolicy({
+    repositoryName,
+    policyText: policy
+  });
+  return repoData.repository;
+}
 
-const buildImage = (config) => new Promise((resolve, reject) => {
-  console.log('Building image...')
-  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`
-  const cmd = spawn('docker', [`build`, `-t`, imageName, '.'])
-  cmd.stdout.on('data', logBuffer)
-  cmd.stderr.on('data', logBuffer)
-  cmd.on('error', reject)
-  cmd.on('close', resolve)
-})
+const getRepositoryUri = async (config) =>
+  await describeRepo(config)
+    .then(data => data.repositories[0])
+    .catch(describeRepoErrorHandler(config));
 
-const tagImage = (config) => new Promise((resolve, reject) => {
-  console.log(`Tagging image with ${config.tag}...`)
-  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`
-  const cmd = spawn('docker', [`tag`, imageName, `${imageName}:${config.tag}`])
-  cmd.stdout.on('data', logBuffer)
-  cmd.stderr.on('data', logBuffer)
-  cmd.on('error', reject)
-  cmd.on('close', resolve)
-})
+const buildImage = (config) => {
+  console.log('Building image...');
+  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`;
+  return executeSyncCmd('docker', [`build`, `-t`, imageName, '.']);
+};
 
-const parseAuthToken = async (config) => {
-  console.log('Getting ECR auth token...')
-  const response = await getAuthorizationToken({ registryIds: [AWS_ACCOUNT_ID] })
-  const authData = response.authorizationData[0]
-  const expires = authData.expiresAt
-  const proxyEndpoint = authData.proxyEndpoint
-  console.log(`Token will expire at ${expires}`)
-  console.log(`Proxy endpoint: ${proxyEndpoint}`)
-  const decodedTokenData = Buffer.from(authData.authorizationToken, 'base64').toString()
-  const authArray = decodedTokenData.split(':')
+const tagImage = (config) => {
+  console.log(`Tagging image with ${config.tag}...`);
+  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`;
+  return executeSyncCmd('docker', [`tag`, imageName, `${imageName}:${config.tag}`]);
+};
+
+const parseAuthToken = async () => {
+  console.log('Getting ECR auth token...');
+  const response = await getAuthorizationToken({ registryIds: [AWS_ACCOUNT_ID] });
+  const authData = response.authorizationData[0];
+  const expires = authData.expiresAt;
+  const proxyEndpoint = authData.proxyEndpoint;
+  console.log(`Token will expire at ${expires}`);
+  console.log(`Proxy endpoint: ${proxyEndpoint}`);
+  const decodedTokenData = Buffer.from(authData.authorizationToken, 'base64').toString();
+  const authArray = decodedTokenData.split(':');
   return {
     username: authArray[0],
     password: authArray[1],
-    proxyEndpoint,
+    proxyEndpoint
   }
-}
+};
 
-const dockerLoginOnECR = (config) => new Promise(async (resolve, reject) => {
-  console.log('Login on ECR...')
-  const loginData = await parseAuthToken()
-  const cmd = spawn('docker', [`login`, `-u`, loginData.username, '-p', loginData.password, loginData.proxyEndpoint])
-  cmd.stdout.on('data', logBuffer)
-  cmd.stderr.on('data', logBuffer)
-  cmd.on('error', reject)
-  cmd.on('close', resolve)
-})
+const dockerLoginOnECR = async () => {
+  console.log('Login on ECR...');
+  const loginData = await parseAuthToken();
+  return executeSyncCmd('docker', [`login`, `-u`, loginData.username, '-p', loginData.password, loginData.proxyEndpoint]);
+};
 
-const pushImage = async (config) => {
-  await dockerLoginOnECR()
-  console.log(`Pushing tag ${config.tag}...`)
-  return new Promise((resolve, reject) => {
-    const cmd = spawn('docker', ['push', `${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tag}`])
-    cmd.stdout.on('data', logBuffer)
-    cmd.stderr.on('data', logBuffer)
-    cmd.on('error', reject)
-    cmd.on('close', resolve)
-  })
-}
+const pushImage = (config) => {
+  console.log(`Pushing tag ${config.tag}...`);
+  return executeSyncCmd('docker', ['push', `${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tag}`]);
+};
 
-const reportImageThreats = (config) => new Promise((resolve, reject) => {
+const reportImageThreats = (config) => {
   console.log('X9 will find something to blame now...');
-
-  const curl = spawnSync(
+  // Obtain a X9Container Dockerfile
+  executeSyncCmd(
     'curl',
     [
       `https://raw.githubusercontent.com/olxbr/X9Containers/main/${config.x9ContainerDistro}.X9.Dockerfile`,
       '--output',
       'X9.Dockerfile'
-    ]
+    ],
+    'report image threats curl failed'
   );
-  if (curl.status !== 0) {
-    console.error(curl.stderr.toString());
-    return reject('report image threats curl failed');
-  }
-
+  // Run image scan
   var minimalSeverity = '';
   switch (`${config.minimalSeverity}`) {
     case 'CRITICAL':
@@ -154,7 +137,7 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
       minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
       break;
   }
-  const dockerBuild = spawnSync(
+  executeSyncCmd(
     'docker',
     [
       'build',
@@ -168,67 +151,56 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--quiet',
       '.'
-    ]
+    ],
+    'report image threats docker build failed'
   );
-  if (dockerBuild.status !== 0) {
-    console.error(dockerBuild.stderr.toString());
-    return reject('report image threats docker build failed');
-  }
-
+  // Extract scan results from container
   const scansFolder = './scans';
-  spawnSync('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
-  spawnSync('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+  executeSyncCmd('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
+  executeSyncCmd('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
   fs.readdirSync(scansFolder).forEach(report => {
-    const cat = spawnSync('cat', [`${scansFolder}/${report}`]);
-    if (cat.status !== 0) {
-      console.error(cat.stderr.toString());
-      return reject('report image threats cat failed');
-    }
-    console.log(cat.stdout.toString());
+    executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
-
+  // Assert the need of threat evaluation
   if (config.ignoreThreats === 'true') {
-    return resolve('ignore_threats is true, skipping workflow interruption');
+    console.log('ignore_threats is true, skipping workflow interruption');
+    return 'ignore_threats is true, skipping workflow interruption';
   }
-
+  // Evaluate findings from ClamAV
   const clamScanFileName = 'recursive-root-dir-clamscan.txt';
   const clamScanFile = `${scansFolder}/${clamScanFileName}`;
   if (!fs.existsSync(clamScanFile)) {
-    return reject(`report image threats file ${clamScanFileName} reading failed`);
-  }
-  const grepClam = spawnSync('grep', ['^Infected files: ', `${clamScanFile}`]);
-  if (grepClam.status !== 0) {
-    console.error(grepClam.stderr.toString());
-    return reject(`report image threats file ${clamScanFileName} grep failed`);
-  }
-  const summaryClam = grepClam.stdout.toString();
-  const totalsClam = summaryClam.match(/\d+/);
-  if (totalsClam.some(isNaN)) {
-    return reject(`report image threats file ${clamScanFileName} missing totals`);
+    throw new Error(`report image threats file ${clamScanFileName} reading failed`);
   }
   process.stdout.write('ClamAV	');
-  console.log(summaryClam);
-  if (totalsClam[0] > VIRUS_THRESHOLD) {
-    return reject(`report image threats file ${clamScanFileName} threat threshold exceeded`);
+  const grepClam = executeSyncCmd(
+    'grep',
+    ['^Infected files: ', `${clamScanFile}`],
+    `report image threats file ${clamScanFileName} grep failed`
+  );
+  const totalsClam = grepClam.match(/\d+/);
+  if (totalsClam.some(isNaN)) {
+    throw new Error(`report image threats file ${clamScanFileName} missing totals`);
   }
-
+  if (totalsClam[0] > VIRUS_THRESHOLD) {
+    throw new Error(`report image threats file ${clamScanFileName} threat threshold exceeded`);
+  }
+  // Evaluate findings from Trivy
   const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
   const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
   if (!fs.existsSync(trivyScanFile)) {
-    return reject(`report image threats file ${trivyScanFileName} reading failed`);
-  }
-  const grepTrivy = spawnSync('grep', ['^Total: ', `${trivyScanFile}`]);
-  if (grepTrivy.status !== 0) {
-    console.error(grepTrivy.stderr.toString());
-    return reject(`report image threats file ${trivyScanFileName} grep failed`);
-  }
-  const summaryTrivy = grepTrivy.stdout.toString();
-  const totalsTrivy = summaryTrivy.match(/\d+/);
-  if (totalsTrivy.some(isNaN)) {
-    return reject(`report image threats file ${trivyScanFileName} missing totals`);
+    throw new Error(`report image threats file ${trivyScanFileName} reading failed`);
   }
   process.stdout.write('Trivy	');
-  console.log(summaryTrivy);
+  const grepTrivy = executeSyncCmd(
+    'grep',
+    ['^Total: ', `${trivyScanFile}`],
+    `report image threats file ${trivyScanFileName} grep failed`
+  );
+  const totalsTrivy = grepTrivy.match(/\d+/);
+  if (totalsTrivy.some(isNaN)) {
+    throw new Error(`report image threats file ${trivyScanFileName} missing totals`);
+  }
   if (
     ((`${config.minimalSeverity}` === 'CRITICAL') &&
       (
@@ -265,14 +237,16 @@ const reportImageThreats = (config) => new Promise((resolve, reject) => {
         totalsTrivy[4] > CRITICAL_VULNS_THRESHOLD)
     )
   ) {
-    return reject(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
+    throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
 
-  resolve('report image threats successfully finished');
-});
+  console.log('report image threats successfully finished');
+  return 'report image threats successfully finished';
+};
 
-exports.getRepositoryUri = getRepositoryUri
-exports.buildImage = buildImage
-exports.pushImage = pushImage
-exports.tagImage = tagImage
+exports.getRepositoryUri = getRepositoryUri;
+exports.dockerLoginOnECR = dockerLoginOnECR;
+exports.buildImage = buildImage;
 exports.reportImageThreats = reportImageThreats;
+exports.tagImage = tagImage;
+exports.pushImage = pushImage;
