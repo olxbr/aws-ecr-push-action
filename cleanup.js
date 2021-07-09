@@ -7,6 +7,8 @@ const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).trim().split(
 for (let id of containerIds) {
   console.log(`Stopping container ${id}`)
   executeSyncCmd('docker', ['stop', id])
+  console.log(`Removing container ${id}`)
+  executeSyncCmd('docker', ['rm', id])
 }
 
 for (let id of imageIds) {
