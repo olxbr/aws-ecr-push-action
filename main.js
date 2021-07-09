@@ -11,6 +11,7 @@ const { buildPolicy } = require('./policy');
 const fs = require('fs');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
+const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 const VIRUS_THRESHOLD = 0;
@@ -50,7 +51,7 @@ const describeRepoErrorHandler = (config) => async (err) => {
   }
 
   const repositoryName = config.repositoryNames[0];
-  const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID });
+  const policy = buildPolicy({ awsPrincipalRules: AWS_PRINCIPAL_RULES });
   console.log(`Creating repository ${repositoryName}...`);
   console.log(`Policy: ${policy}`);
 
