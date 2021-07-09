@@ -1,4 +1,3 @@
-const { spawnSync } = require("child_process");
 const {
   ECRClient,
   DescribeRepositoriesCommand,
@@ -8,6 +7,7 @@ const {
 } = require("@aws-sdk/client-ecr");
 const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
+const { executeSyncCmd } = require('./utils');
 const fs = require('fs');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
@@ -33,17 +33,6 @@ const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 
-const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
-  const cmd = spawnSync(command, arrayOfParams);
-  if (cmd.status !== 0) {
-    if (errorMessage) {
-      throw new Error(errorMessage);
-    }
-    throw new Error(cmd.stderr.toString());
-  }
-  console.log(cmd.stdout.toString());
-  return cmd.stdout.toString();
-};
 
 const describeRepoErrorHandler = (config) => async (err) => {
   if (err.name !== 'RepositoryNotFoundException') {
