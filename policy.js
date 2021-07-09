@@ -1,11 +1,11 @@
-const buildPolicy = ({ accountId }) => JSON.stringify({
+const buildPolicy = ({ awsPrincipalRules }) => JSON.stringify({
     "Version": "2008-10-17",
     "Statement": [
         {
             "Sid": "AllowPushPull",
             "Effect": "Allow",
             "Principal": {
-                "AWS": `arn:aws:iam::${accountId}:root`
+                "AWS": JSON.parse(awsPrincipalRules)
             },
             "Action": [
                 "ecr:GetDownloadUrlForLayer",
