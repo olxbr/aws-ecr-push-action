@@ -24,5 +24,6 @@ outputs:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
 runs:
   using: 'node12'
+  pre: 'cleanup.js'
   main: 'actionHandler.js'
   post: 'cleanup.js'
