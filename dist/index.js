@@ -1,16 +1,17052 @@
-(()=>{var e={5859:e=>{"use strict";e.exports=JSON.parse('{"name":"@aws-sdk/client-ecr","description":"AWS SDK for JavaScript Ecr Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.13.1","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/credential-provider-node":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-signing":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","@aws-sdk/util-waiter":"3.13.1","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ecr","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ecr"}}')},8267:e=>{"use strict";e.exports=JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}')},1508:e=>{"use strict";e.exports=JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.13.1","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.13.1","@aws-sdk/credential-provider-node":"3.13.1","@aws-sdk/fetch-http-handler":"3.13.1","@aws-sdk/hash-node":"3.13.1","@aws-sdk/invalid-dependency":"3.13.1","@aws-sdk/middleware-content-length":"3.13.1","@aws-sdk/middleware-host-header":"3.13.1","@aws-sdk/middleware-logger":"3.13.1","@aws-sdk/middleware-retry":"3.13.1","@aws-sdk/middleware-sdk-sts":"3.13.1","@aws-sdk/middleware-serde":"3.13.1","@aws-sdk/middleware-signing":"3.13.1","@aws-sdk/middleware-stack":"3.13.1","@aws-sdk/middleware-user-agent":"3.13.1","@aws-sdk/node-config-provider":"3.13.1","@aws-sdk/node-http-handler":"3.13.1","@aws-sdk/protocol-http":"3.13.1","@aws-sdk/smithy-client":"3.13.1","@aws-sdk/types":"3.13.1","@aws-sdk/url-parser":"3.13.1","@aws-sdk/util-base64-browser":"3.13.1","@aws-sdk/util-base64-node":"3.13.1","@aws-sdk/util-body-length-browser":"3.13.1","@aws-sdk/util-body-length-node":"3.13.1","@aws-sdk/util-user-agent-browser":"3.13.1","@aws-sdk/util-user-agent-node":"3.13.1","@aws-sdk/util-utf8-browser":"3.13.1","@aws-sdk/util-utf8-node":"3.13.1","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.13.1","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.2.4"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}')},7351:function(e,t,n){"use strict";var s=this&&this.__createBinding||(Object.create?function(e,t,n,s){if(s===undefined)s=n;Object.defineProperty(e,s,{enumerable:true,get:function(){return t[n]}})}:function(e,t,n,s){if(s===undefined)s=n;e[s]=t[n]});var o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:true,value:t})}:function(e,t){e["default"]=t});var i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(e!=null)for(var n in e)if(n!=="default"&&Object.hasOwnProperty.call(e,n))s(t,e,n);o(t,e);return t};Object.defineProperty(t,"__esModule",{value:true});t.issue=t.issueCommand=void 0;const r=i(n(2087));const a=n(5278);function issueCommand(e,t,n){const s=new Command(e,t,n);process.stdout.write(s.toString()+r.EOL)}t.issueCommand=issueCommand;function issue(e,t=""){issueCommand(e,{},t)}t.issue=issue;const c="::";class Command{constructor(e,t,n){if(!e){e="missing.command"}this.command=e;this.properties=t;this.message=n}toString(){let e=c+this.command;if(this.properties&&Object.keys(this.properties).length>0){e+=" ";let t=true;for(const n in this.properties){if(this.properties.hasOwnProperty(n)){const s=this.properties[n];if(s){if(t){t=false}else{e+=","}e+=`${n}=${escapeProperty(s)}`}}}}e+=`${c}${escapeData(this.message)}`;return e}}function escapeData(e){return a.toCommandValue(e).replace(/%/g,"%25").replace(/\r/g,"%0D").replace(/\n/g,"%0A")}function escapeProperty(e){return a.toCommandValue(e).replace(/%/g,"%25").replace(/\r/g,"%0D").replace(/\n/g,"%0A").replace(/:/g,"%3A").replace(/,/g,"%2C")}},2186:function(e,t,n){"use strict";var s=this&&this.__createBinding||(Object.create?function(e,t,n,s){if(s===undefined)s=n;Object.defineProperty(e,s,{enumerable:true,get:function(){return t[n]}})}:function(e,t,n,s){if(s===undefined)s=n;e[s]=t[n]});var o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:true,value:t})}:function(e,t){e["default"]=t});var i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(e!=null)for(var n in e)if(n!=="default"&&Object.hasOwnProperty.call(e,n))s(t,e,n);o(t,e);return t};var r=this&&this.__awaiter||function(e,t,n,s){function adopt(e){return e instanceof n?e:new n((function(t){t(e)}))}return new(n||(n=Promise))((function(n,o){function fulfilled(e){try{step(s.next(e))}catch(e){o(e)}}function rejected(e){try{step(s["throw"](e))}catch(e){o(e)}}function step(e){e.done?n(e.value):adopt(e.value).then(fulfilled,rejected)}step((s=s.apply(e,t||[])).next())}))};Object.defineProperty(t,"__esModule",{value:true});t.getState=t.saveState=t.group=t.endGroup=t.startGroup=t.info=t.warning=t.error=t.debug=t.isDebug=t.setFailed=t.setCommandEcho=t.setOutput=t.getBooleanInput=t.getInput=t.addPath=t.setSecret=t.exportVariable=t.ExitCode=void 0;const a=n(7351);const c=n(717);const d=n(5278);const l=i(n(2087));const u=i(n(5622));var m;(function(e){e[e["Success"]=0]="Success";e[e["Failure"]=1]="Failure"})(m=t.ExitCode||(t.ExitCode={}));function exportVariable(e,t){const n=d.toCommandValue(t);process.env[e]=n;const s=process.env["GITHUB_ENV"]||"";if(s){const t="_GitHubActionsFileCommandDelimeter_";const s=`${e}<<${t}${l.EOL}${n}${l.EOL}${t}`;c.issueCommand("ENV",s)}else{a.issueCommand("set-env",{name:e},n)}}t.exportVariable=exportVariable;function setSecret(e){a.issueCommand("add-mask",{},e)}t.setSecret=setSecret;function addPath(e){const t=process.env["GITHUB_PATH"]||"";if(t){c.issueCommand("PATH",e)}else{a.issueCommand("add-path",{},e)}process.env["PATH"]=`${e}${u.delimiter}${process.env["PATH"]}`}t.addPath=addPath;function getInput(e,t){const n=process.env[`INPUT_${e.replace(/ /g,"_").toUpperCase()}`]||"";if(t&&t.required&&!n){throw new Error(`Input required and not supplied: ${e}`)}if(t&&t.trimWhitespace===false){return n}return n.trim()}t.getInput=getInput;function getBooleanInput(e,t){const n=["true","True","TRUE"];const s=["false","False","FALSE"];const o=getInput(e,t);if(n.includes(o))return true;if(s.includes(o))return false;throw new TypeError(`Input does not meet YAML 1.2 "Core Schema" specification: ${e}\n`+`Support boolean input list: \`true | True | TRUE | false | False | FALSE\``)}t.getBooleanInput=getBooleanInput;function setOutput(e,t){process.stdout.write(l.EOL);a.issueCommand("set-output",{name:e},t)}t.setOutput=setOutput;function setCommandEcho(e){a.issue("echo",e?"on":"off")}t.setCommandEcho=setCommandEcho;function setFailed(e){process.exitCode=m.Failure;error(e)}t.setFailed=setFailed;function isDebug(){return process.env["RUNNER_DEBUG"]==="1"}t.isDebug=isDebug;function debug(e){a.issueCommand("debug",{},e)}t.debug=debug;function error(e){a.issue("error",e instanceof Error?e.toString():e)}t.error=error;function warning(e){a.issue("warning",e instanceof Error?e.toString():e)}t.warning=warning;function info(e){process.stdout.write(e+l.EOL)}t.info=info;function startGroup(e){a.issue("group",e)}t.startGroup=startGroup;function endGroup(){a.issue("endgroup")}t.endGroup=endGroup;function group(e,t){return r(this,void 0,void 0,(function*(){startGroup(e);let n;try{n=yield t()}finally{endGroup()}return n}))}t.group=group;function saveState(e,t){a.issueCommand("save-state",{name:e},t)}t.saveState=saveState;function getState(e){return process.env[`STATE_${e}`]||""}t.getState=getState},717:function(e,t,n){"use strict";var s=this&&this.__createBinding||(Object.create?function(e,t,n,s){if(s===undefined)s=n;Object.defineProperty(e,s,{enumerable:true,get:function(){return t[n]}})}:function(e,t,n,s){if(s===undefined)s=n;e[s]=t[n]});var o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:true,value:t})}:function(e,t){e["default"]=t});var i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(e!=null)for(var n in e)if(n!=="default"&&Object.hasOwnProperty.call(e,n))s(t,e,n);o(t,e);return t};Object.defineProperty(t,"__esModule",{value:true});t.issueCommand=void 0;const r=i(n(5747));const a=i(n(2087));const c=n(5278);function issueCommand(e,t){const n=process.env[`GITHUB_${e}`];if(!n){throw new Error(`Unable to find environment variable for file command ${e}`)}if(!r.existsSync(n)){throw new Error(`Missing file at path: ${n}`)}r.appendFileSync(n,`${c.toCommandValue(t)}${a.EOL}`,{encoding:"utf8"})}t.issueCommand=issueCommand},5278:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.toCommandValue=void 0;function toCommandValue(e){if(e===null||e===undefined){return""}else if(typeof e==="string"||e instanceof String){return e}return JSON.stringify(e)}t.toCommandValue=toCommandValue},9531:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ECR=void 0;const s=n(9989);const o=n(6133);const i=n(9354);const r=n(8916);const a=n(6569);const c=n(5920);const d=n(74);const l=n(5245);const u=n(1694);const m=n(648);const f=n(2519);const g=n(9305);const p=n(1740);const y=n(4530);const w=n(1356);const h=n(8116);const v=n(4722);const _=n(8498);const E=n(8258);const S=n(290);const R=n(5141);const b=n(3369);const C=n(7690);const P=n(4433);const A=n(3110);const I=n(7601);const x=n(3884);const T=n(6003);const L=n(886);const N=n(9950);const z=n(5233);const k=n(4021);const M=n(9578);const D=n(2062);const O=n(7265);class ECR extends s.ECRClient{batchCheckLayerAvailability(e,t,n){const s=new o.BatchCheckLayerAvailabilityCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}batchDeleteImage(e,t,n){const s=new i.BatchDeleteImageCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}batchGetImage(e,t,n){const s=new r.BatchGetImageCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}completeLayerUpload(e,t,n){const s=new a.CompleteLayerUploadCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}createRepository(e,t,n){const s=new c.CreateRepositoryCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}deleteLifecyclePolicy(e,t,n){const s=new d.DeleteLifecyclePolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}deleteRegistryPolicy(e,t,n){const s=new l.DeleteRegistryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}deleteRepository(e,t,n){const s=new u.DeleteRepositoryCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}deleteRepositoryPolicy(e,t,n){const s=new m.DeleteRepositoryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}describeImages(e,t,n){const s=new g.DescribeImagesCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}describeImageScanFindings(e,t,n){const s=new f.DescribeImageScanFindingsCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}describeRegistry(e,t,n){const s=new p.DescribeRegistryCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}describeRepositories(e,t,n){const s=new y.DescribeRepositoriesCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getAuthorizationToken(e,t,n){const s=new w.GetAuthorizationTokenCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getDownloadUrlForLayer(e,t,n){const s=new h.GetDownloadUrlForLayerCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getLifecyclePolicy(e,t,n){const s=new v.GetLifecyclePolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getLifecyclePolicyPreview(e,t,n){const s=new _.GetLifecyclePolicyPreviewCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getRegistryPolicy(e,t,n){const s=new E.GetRegistryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getRepositoryPolicy(e,t,n){const s=new S.GetRepositoryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}initiateLayerUpload(e,t,n){const s=new R.InitiateLayerUploadCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}listImages(e,t,n){const s=new b.ListImagesCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}listTagsForResource(e,t,n){const s=new C.ListTagsForResourceCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putImage(e,t,n){const s=new P.PutImageCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putImageScanningConfiguration(e,t,n){const s=new A.PutImageScanningConfigurationCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putImageTagMutability(e,t,n){const s=new I.PutImageTagMutabilityCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putLifecyclePolicy(e,t,n){const s=new x.PutLifecyclePolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putRegistryPolicy(e,t,n){const s=new T.PutRegistryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}putReplicationConfiguration(e,t,n){const s=new L.PutReplicationConfigurationCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}setRepositoryPolicy(e,t,n){const s=new N.SetRepositoryPolicyCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}startImageScan(e,t,n){const s=new z.StartImageScanCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}startLifecyclePolicyPreview(e,t,n){const s=new k.StartLifecyclePolicyPreviewCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}tagResource(e,t,n){const s=new M.TagResourceCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}untagResource(e,t,n){const s=new D.UntagResourceCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}uploadLayerPart(e,t,n){const s=new O.UploadLayerPartCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}}t.ECR=ECR},9989:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ECRClient=void 0;const s=n(9828);const o=n(7229);const i=n(9323);const r=n(8645);const a=n(8685);const c=n(7e3);const d=n(2487);const l=n(5976);const u=n(2223);class ECRClient extends u.Client{constructor(e){let t={...s.ClientDefaultValues,...e};let n=o.resolveRegionConfig(t);let u=o.resolveEndpointsConfig(n);let m=c.resolveRetryConfig(u);let f=r.resolveHostHeaderConfig(m);let g=d.resolveAwsAuthConfig(f);let p=l.resolveUserAgentConfig(g);super(p);this.config=p;this.middlewareStack.use(c.getRetryPlugin(this.config));this.middlewareStack.use(i.getContentLengthPlugin(this.config));this.middlewareStack.use(r.getHostHeaderPlugin(this.config));this.middlewareStack.use(a.getLoggerPlugin(this.config));this.middlewareStack.use(d.getAwsAuthPlugin(this.config));this.middlewareStack.use(l.getUserAgentPlugin(this.config))}destroy(){super.destroy()}}t.ECRClient=ECRClient},6133:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.BatchCheckLayerAvailabilityCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class BatchCheckLayerAvailabilityCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="BatchCheckLayerAvailabilityCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.BatchCheckLayerAvailabilityRequest.filterSensitiveLog,outputFilterSensitiveLog:s.BatchCheckLayerAvailabilityResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1BatchCheckLayerAvailabilityCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1BatchCheckLayerAvailabilityCommand(e,t)}}t.BatchCheckLayerAvailabilityCommand=BatchCheckLayerAvailabilityCommand},9354:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.BatchDeleteImageCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class BatchDeleteImageCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="BatchDeleteImageCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.BatchDeleteImageRequest.filterSensitiveLog,outputFilterSensitiveLog:s.BatchDeleteImageResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1BatchDeleteImageCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1BatchDeleteImageCommand(e,t)}}t.BatchDeleteImageCommand=BatchDeleteImageCommand},8916:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.BatchGetImageCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class BatchGetImageCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="BatchGetImageCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.BatchGetImageRequest.filterSensitiveLog,outputFilterSensitiveLog:s.BatchGetImageResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1BatchGetImageCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1BatchGetImageCommand(e,t)}}t.BatchGetImageCommand=BatchGetImageCommand},6569:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.CompleteLayerUploadCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class CompleteLayerUploadCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="CompleteLayerUploadCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.CompleteLayerUploadRequest.filterSensitiveLog,outputFilterSensitiveLog:s.CompleteLayerUploadResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1CompleteLayerUploadCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1CompleteLayerUploadCommand(e,t)}}t.CompleteLayerUploadCommand=CompleteLayerUploadCommand},5920:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.CreateRepositoryCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class CreateRepositoryCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="CreateRepositoryCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.CreateRepositoryRequest.filterSensitiveLog,outputFilterSensitiveLog:s.CreateRepositoryResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1CreateRepositoryCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1CreateRepositoryCommand(e,t)}}t.CreateRepositoryCommand=CreateRepositoryCommand},74:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DeleteLifecyclePolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DeleteLifecyclePolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DeleteLifecyclePolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DeleteLifecyclePolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DeleteLifecyclePolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DeleteLifecyclePolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DeleteLifecyclePolicyCommand(e,t)}}t.DeleteLifecyclePolicyCommand=DeleteLifecyclePolicyCommand},5245:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DeleteRegistryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DeleteRegistryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DeleteRegistryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DeleteRegistryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DeleteRegistryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DeleteRegistryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DeleteRegistryPolicyCommand(e,t)}}t.DeleteRegistryPolicyCommand=DeleteRegistryPolicyCommand},1694:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DeleteRepositoryCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DeleteRepositoryCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DeleteRepositoryCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DeleteRepositoryRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DeleteRepositoryResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DeleteRepositoryCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DeleteRepositoryCommand(e,t)}}t.DeleteRepositoryCommand=DeleteRepositoryCommand},648:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DeleteRepositoryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DeleteRepositoryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DeleteRepositoryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DeleteRepositoryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DeleteRepositoryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DeleteRepositoryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DeleteRepositoryPolicyCommand(e,t)}}t.DeleteRepositoryPolicyCommand=DeleteRepositoryPolicyCommand},2519:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DescribeImageScanFindingsCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DescribeImageScanFindingsCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DescribeImageScanFindingsCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DescribeImageScanFindingsRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DescribeImageScanFindingsResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DescribeImageScanFindingsCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DescribeImageScanFindingsCommand(e,t)}}t.DescribeImageScanFindingsCommand=DescribeImageScanFindingsCommand},9305:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DescribeImagesCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DescribeImagesCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DescribeImagesCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DescribeImagesRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DescribeImagesResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DescribeImagesCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DescribeImagesCommand(e,t)}}t.DescribeImagesCommand=DescribeImagesCommand},1740:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DescribeRegistryCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DescribeRegistryCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DescribeRegistryCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DescribeRegistryRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DescribeRegistryResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DescribeRegistryCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DescribeRegistryCommand(e,t)}}t.DescribeRegistryCommand=DescribeRegistryCommand},4530:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DescribeRepositoriesCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class DescribeRepositoriesCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="DescribeRepositoriesCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.DescribeRepositoriesRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DescribeRepositoriesResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1DescribeRepositoriesCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1DescribeRepositoriesCommand(e,t)}}t.DescribeRepositoriesCommand=DescribeRepositoriesCommand},1356:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetAuthorizationTokenCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetAuthorizationTokenCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetAuthorizationTokenCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetAuthorizationTokenRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetAuthorizationTokenResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetAuthorizationTokenCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetAuthorizationTokenCommand(e,t)}}t.GetAuthorizationTokenCommand=GetAuthorizationTokenCommand},8116:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetDownloadUrlForLayerCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetDownloadUrlForLayerCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetDownloadUrlForLayerCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetDownloadUrlForLayerRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetDownloadUrlForLayerResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetDownloadUrlForLayerCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetDownloadUrlForLayerCommand(e,t)}}t.GetDownloadUrlForLayerCommand=GetDownloadUrlForLayerCommand},4722:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetLifecyclePolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetLifecyclePolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetLifecyclePolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetLifecyclePolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetLifecyclePolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetLifecyclePolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetLifecyclePolicyCommand(e,t)}}t.GetLifecyclePolicyCommand=GetLifecyclePolicyCommand},8498:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetLifecyclePolicyPreviewCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetLifecyclePolicyPreviewCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetLifecyclePolicyPreviewCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetLifecyclePolicyPreviewRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetLifecyclePolicyPreviewResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetLifecyclePolicyPreviewCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetLifecyclePolicyPreviewCommand(e,t)}}t.GetLifecyclePolicyPreviewCommand=GetLifecyclePolicyPreviewCommand},8258:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetRegistryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetRegistryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetRegistryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetRegistryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetRegistryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetRegistryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetRegistryPolicyCommand(e,t)}}t.GetRegistryPolicyCommand=GetRegistryPolicyCommand},290:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetRepositoryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class GetRepositoryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="GetRepositoryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetRepositoryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetRepositoryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1GetRepositoryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1GetRepositoryPolicyCommand(e,t)}}t.GetRepositoryPolicyCommand=GetRepositoryPolicyCommand},5141:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.InitiateLayerUploadCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class InitiateLayerUploadCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="InitiateLayerUploadCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.InitiateLayerUploadRequest.filterSensitiveLog,outputFilterSensitiveLog:s.InitiateLayerUploadResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1InitiateLayerUploadCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1InitiateLayerUploadCommand(e,t)}}t.InitiateLayerUploadCommand=InitiateLayerUploadCommand},3369:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ListImagesCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class ListImagesCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="ListImagesCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.ListImagesRequest.filterSensitiveLog,outputFilterSensitiveLog:s.ListImagesResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1ListImagesCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1ListImagesCommand(e,t)}}t.ListImagesCommand=ListImagesCommand},7690:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ListTagsForResourceCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class ListTagsForResourceCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="ListTagsForResourceCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.ListTagsForResourceRequest.filterSensitiveLog,outputFilterSensitiveLog:s.ListTagsForResourceResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1ListTagsForResourceCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1ListTagsForResourceCommand(e,t)}}t.ListTagsForResourceCommand=ListTagsForResourceCommand},4433:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutImageCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutImageCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutImageCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutImageRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutImageResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutImageCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutImageCommand(e,t)}}t.PutImageCommand=PutImageCommand},3110:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutImageScanningConfigurationCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutImageScanningConfigurationCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutImageScanningConfigurationCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutImageScanningConfigurationRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutImageScanningConfigurationResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutImageScanningConfigurationCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutImageScanningConfigurationCommand(e,t)}}t.PutImageScanningConfigurationCommand=PutImageScanningConfigurationCommand},7601:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutImageTagMutabilityCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutImageTagMutabilityCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutImageTagMutabilityCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutImageTagMutabilityRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutImageTagMutabilityResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutImageTagMutabilityCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutImageTagMutabilityCommand(e,t)}}t.PutImageTagMutabilityCommand=PutImageTagMutabilityCommand},3884:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutLifecyclePolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutLifecyclePolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutLifecyclePolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutLifecyclePolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutLifecyclePolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutLifecyclePolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutLifecyclePolicyCommand(e,t)}}t.PutLifecyclePolicyCommand=PutLifecyclePolicyCommand},6003:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutRegistryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutRegistryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutRegistryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutRegistryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutRegistryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutRegistryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutRegistryPolicyCommand(e,t)}}t.PutRegistryPolicyCommand=PutRegistryPolicyCommand},886:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.PutReplicationConfigurationCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class PutReplicationConfigurationCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="PutReplicationConfigurationCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.PutReplicationConfigurationRequest.filterSensitiveLog,outputFilterSensitiveLog:s.PutReplicationConfigurationResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1PutReplicationConfigurationCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1PutReplicationConfigurationCommand(e,t)}}t.PutReplicationConfigurationCommand=PutReplicationConfigurationCommand},9950:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.SetRepositoryPolicyCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class SetRepositoryPolicyCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="SetRepositoryPolicyCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.SetRepositoryPolicyRequest.filterSensitiveLog,outputFilterSensitiveLog:s.SetRepositoryPolicyResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1SetRepositoryPolicyCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1SetRepositoryPolicyCommand(e,t)}}t.SetRepositoryPolicyCommand=SetRepositoryPolicyCommand},5233:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.StartImageScanCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class StartImageScanCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="StartImageScanCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.StartImageScanRequest.filterSensitiveLog,outputFilterSensitiveLog:s.StartImageScanResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1StartImageScanCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1StartImageScanCommand(e,t)}}t.StartImageScanCommand=StartImageScanCommand},4021:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.StartLifecyclePolicyPreviewCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class StartLifecyclePolicyPreviewCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="StartLifecyclePolicyPreviewCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.StartLifecyclePolicyPreviewRequest.filterSensitiveLog,outputFilterSensitiveLog:s.StartLifecyclePolicyPreviewResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1StartLifecyclePolicyPreviewCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1StartLifecyclePolicyPreviewCommand(e,t)}}t.StartLifecyclePolicyPreviewCommand=StartLifecyclePolicyPreviewCommand},9578:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.TagResourceCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class TagResourceCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="TagResourceCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.TagResourceRequest.filterSensitiveLog,outputFilterSensitiveLog:s.TagResourceResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1TagResourceCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1TagResourceCommand(e,t)}}t.TagResourceCommand=TagResourceCommand},2062:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.UntagResourceCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class UntagResourceCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="UntagResourceCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.UntagResourceRequest.filterSensitiveLog,outputFilterSensitiveLog:s.UntagResourceResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1UntagResourceCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1UntagResourceCommand(e,t)}}t.UntagResourceCommand=UntagResourceCommand},7265:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.UploadLayerPartCommand=void 0;const s=n(2391);const o=n(3454);const i=n(6142);const r=n(2223);class UploadLayerPartCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="ECRClient";const c="UploadLayerPartCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.UploadLayerPartRequest.filterSensitiveLog,outputFilterSensitiveLog:s.UploadLayerPartResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_json1_1UploadLayerPartCommand(e,t)}deserialize(e,t){return o.deserializeAws_json1_1UploadLayerPartCommand(e,t)}}t.UploadLayerPartCommand=UploadLayerPartCommand},5321:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultRegionInfoProvider=void 0;const n="api.ecr.{region}.amazonaws.com";const s="api.ecr.{region}.amazonaws.com.cn";const o="api.ecr.{region}.c2s.ic.gov";const i="api.ecr.{region}.sc2s.sgov.gov";const r="api.ecr.{region}.amazonaws.com";const a=new Set(["af-south-1","ap-east-1","ap-northeast-1","ap-northeast-2","ap-south-1","ap-southeast-1","ap-southeast-2","ca-central-1","eu-central-1","eu-north-1","eu-south-1","eu-west-1","eu-west-2","eu-west-3","me-south-1","sa-east-1","us-east-1","us-east-2","us-west-1","us-west-2"]);const c=new Set(["cn-north-1","cn-northwest-1"]);const d=new Set(["us-iso-east-1"]);const l=new Set(["us-isob-east-1"]);const u=new Set(["us-gov-east-1","us-gov-west-1"]);const defaultRegionInfoProvider=(e,t)=>{let m=undefined;switch(e){case"af-south-1":m={hostname:"api.ecr.af-south-1.amazonaws.com",partition:"aws",signingRegion:"af-south-1"};break;case"ap-east-1":m={hostname:"api.ecr.ap-east-1.amazonaws.com",partition:"aws",signingRegion:"ap-east-1"};break;case"ap-northeast-1":m={hostname:"api.ecr.ap-northeast-1.amazonaws.com",partition:"aws",signingRegion:"ap-northeast-1"};break;case"ap-northeast-2":m={hostname:"api.ecr.ap-northeast-2.amazonaws.com",partition:"aws",signingRegion:"ap-northeast-2"};break;case"ap-south-1":m={hostname:"api.ecr.ap-south-1.amazonaws.com",partition:"aws",signingRegion:"ap-south-1"};break;case"ap-southeast-1":m={hostname:"api.ecr.ap-southeast-1.amazonaws.com",partition:"aws",signingRegion:"ap-southeast-1"};break;case"ap-southeast-2":m={hostname:"api.ecr.ap-southeast-2.amazonaws.com",partition:"aws",signingRegion:"ap-southeast-2"};break;case"ca-central-1":m={hostname:"api.ecr.ca-central-1.amazonaws.com",partition:"aws",signingRegion:"ca-central-1"};break;case"cn-north-1":m={hostname:"api.ecr.cn-north-1.amazonaws.com.cn",partition:"aws-cn",signingRegion:"cn-north-1"};break;case"cn-northwest-1":m={hostname:"api.ecr.cn-northwest-1.amazonaws.com.cn",partition:"aws-cn",signingRegion:"cn-northwest-1"};break;case"eu-central-1":m={hostname:"api.ecr.eu-central-1.amazonaws.com",partition:"aws",signingRegion:"eu-central-1"};break;case"eu-north-1":m={hostname:"api.ecr.eu-north-1.amazonaws.com",partition:"aws",signingRegion:"eu-north-1"};break;case"eu-south-1":m={hostname:"api.ecr.eu-south-1.amazonaws.com",partition:"aws",signingRegion:"eu-south-1"};break;case"eu-west-1":m={hostname:"api.ecr.eu-west-1.amazonaws.com",partition:"aws",signingRegion:"eu-west-1"};break;case"eu-west-2":m={hostname:"api.ecr.eu-west-2.amazonaws.com",partition:"aws",signingRegion:"eu-west-2"};break;case"eu-west-3":m={hostname:"api.ecr.eu-west-3.amazonaws.com",partition:"aws",signingRegion:"eu-west-3"};break;case"fips-dkr-us-east-1":m={hostname:"ecr-fips.us-east-1.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"fips-dkr-us-east-2":m={hostname:"ecr-fips.us-east-2.amazonaws.com",partition:"aws",signingRegion:"us-east-2"};break;case"fips-dkr-us-gov-east-1":m={hostname:"ecr-fips.us-gov-east-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-east-1"};break;case"fips-dkr-us-gov-west-1":m={hostname:"ecr-fips.us-gov-west-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-west-1"};break;case"fips-dkr-us-west-1":m={hostname:"ecr-fips.us-west-1.amazonaws.com",partition:"aws",signingRegion:"us-west-1"};break;case"fips-dkr-us-west-2":m={hostname:"ecr-fips.us-west-2.amazonaws.com",partition:"aws",signingRegion:"us-west-2"};break;case"fips-us-east-1":m={hostname:"ecr-fips.us-east-1.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"fips-us-east-2":m={hostname:"ecr-fips.us-east-2.amazonaws.com",partition:"aws",signingRegion:"us-east-2"};break;case"fips-us-gov-east-1":m={hostname:"ecr-fips.us-gov-east-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-east-1"};break;case"fips-us-gov-west-1":m={hostname:"ecr-fips.us-gov-west-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-west-1"};break;case"fips-us-west-1":m={hostname:"ecr-fips.us-west-1.amazonaws.com",partition:"aws",signingRegion:"us-west-1"};break;case"fips-us-west-2":m={hostname:"ecr-fips.us-west-2.amazonaws.com",partition:"aws",signingRegion:"us-west-2"};break;case"me-south-1":m={hostname:"api.ecr.me-south-1.amazonaws.com",partition:"aws",signingRegion:"me-south-1"};break;case"sa-east-1":m={hostname:"api.ecr.sa-east-1.amazonaws.com",partition:"aws",signingRegion:"sa-east-1"};break;case"us-east-1":m={hostname:"api.ecr.us-east-1.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"us-east-2":m={hostname:"api.ecr.us-east-2.amazonaws.com",partition:"aws",signingRegion:"us-east-2"};break;case"us-gov-east-1":m={hostname:"api.ecr.us-gov-east-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-east-1"};break;case"us-gov-west-1":m={hostname:"api.ecr.us-gov-west-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-west-1"};break;case"us-iso-east-1":m={hostname:"api.ecr.us-iso-east-1.c2s.ic.gov",partition:"aws-iso",signingRegion:"us-iso-east-1"};break;case"us-isob-east-1":m={hostname:"api.ecr.us-isob-east-1.sc2s.sgov.gov",partition:"aws-iso-b",signingRegion:"us-isob-east-1"};break;case"us-west-1":m={hostname:"api.ecr.us-west-1.amazonaws.com",partition:"aws",signingRegion:"us-west-1"};break;case"us-west-2":m={hostname:"api.ecr.us-west-2.amazonaws.com",partition:"aws",signingRegion:"us-west-2"};break;default:if(a.has(e)){m={hostname:n.replace("{region}",e),partition:"aws"}}if(c.has(e)){m={hostname:s.replace("{region}",e),partition:"aws-cn"}}if(d.has(e)){m={hostname:o.replace("{region}",e),partition:"aws-iso"}}if(l.has(e)){m={hostname:i.replace("{region}",e),partition:"aws-iso-b"}}if(u.has(e)){m={hostname:r.replace("{region}",e),partition:"aws-us-gov"}}if(m===undefined){m={hostname:n.replace("{region}",e),partition:"aws"}}}return Promise.resolve({signingService:"ecr",...m})};t.defaultRegionInfoProvider=defaultRegionInfoProvider},4180:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(9989),t);s.__exportStar(n(9531),t);s.__exportStar(n(6133),t);s.__exportStar(n(9354),t);s.__exportStar(n(8916),t);s.__exportStar(n(6569),t);s.__exportStar(n(5920),t);s.__exportStar(n(74),t);s.__exportStar(n(5245),t);s.__exportStar(n(1694),t);s.__exportStar(n(648),t);s.__exportStar(n(9305),t);s.__exportStar(n(5575),t);s.__exportStar(n(2519),t);s.__exportStar(n(2628),t);s.__exportStar(n(9452),t);s.__exportStar(n(1740),t);s.__exportStar(n(4530),t);s.__exportStar(n(9898),t);s.__exportStar(n(1356),t);s.__exportStar(n(8116),t);s.__exportStar(n(4722),t);s.__exportStar(n(8498),t);s.__exportStar(n(6012),t);s.__exportStar(n(965),t);s.__exportStar(n(8258),t);s.__exportStar(n(290),t);s.__exportStar(n(5141),t);s.__exportStar(n(3369),t);s.__exportStar(n(948),t);s.__exportStar(n(7690),t);s.__exportStar(n(4433),t);s.__exportStar(n(3110),t);s.__exportStar(n(7601),t);s.__exportStar(n(3884),t);s.__exportStar(n(6003),t);s.__exportStar(n(886),t);s.__exportStar(n(9950),t);s.__exportStar(n(5233),t);s.__exportStar(n(4021),t);s.__exportStar(n(9578),t);s.__exportStar(n(2062),t);s.__exportStar(n(7265),t);s.__exportStar(n(632),t);s.__exportStar(n(9878),t)},9878:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(2391),t)},2391:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.TagStatus=t.RepositoryPolicyNotFoundException=t.DeleteRepositoryPolicyResponse=t.DeleteRepositoryPolicyRequest=t.RepositoryNotEmptyException=t.DeleteRepositoryResponse=t.DeleteRepositoryRequest=t.RegistryPolicyNotFoundException=t.DeleteRegistryPolicyResponse=t.DeleteRegistryPolicyRequest=t.LifecyclePolicyNotFoundException=t.DeleteLifecyclePolicyResponse=t.DeleteLifecyclePolicyRequest=t.TooManyTagsException=t.RepositoryAlreadyExistsException=t.LimitExceededException=t.InvalidTagParameterException=t.CreateRepositoryResponse=t.Repository=t.CreateRepositoryRequest=t.Tag=t.ImageTagMutability=t.ImageScanningConfiguration=t.EncryptionConfiguration=t.EncryptionType=t.UploadNotFoundException=t.LayerPartTooSmallException=t.LayerAlreadyExistsException=t.KmsException=t.InvalidLayerException=t.EmptyUploadException=t.CompleteLayerUploadResponse=t.CompleteLayerUploadRequest=t.BatchGetImageResponse=t.Image=t.BatchGetImageRequest=t.BatchDeleteImageResponse=t.ImageFailure=t.ImageFailureCode=t.BatchDeleteImageRequest=t.ImageIdentifier=t.ServerException=t.RepositoryNotFoundException=t.InvalidParameterException=t.BatchCheckLayerAvailabilityResponse=t.Layer=t.LayerAvailability=t.LayerFailure=t.LayerFailureCode=t.BatchCheckLayerAvailabilityRequest=void 0;t.ListImagesResponse=t.ListImagesRequest=t.ListImagesFilter=t.InitiateLayerUploadResponse=t.InitiateLayerUploadRequest=t.GetRepositoryPolicyResponse=t.GetRepositoryPolicyRequest=t.GetRegistryPolicyResponse=t.GetRegistryPolicyRequest=t.LifecyclePolicyPreviewNotFoundException=t.GetLifecyclePolicyPreviewResponse=t.LifecyclePolicyPreviewSummary=t.LifecyclePolicyPreviewStatus=t.LifecyclePolicyPreviewResult=t.LifecyclePolicyRuleAction=t.ImageActionType=t.GetLifecyclePolicyPreviewRequest=t.LifecyclePolicyPreviewFilter=t.GetLifecyclePolicyResponse=t.GetLifecyclePolicyRequest=t.LayersNotFoundException=t.LayerInaccessibleException=t.GetDownloadUrlForLayerResponse=t.GetDownloadUrlForLayerRequest=t.GetAuthorizationTokenResponse=t.AuthorizationData=t.GetAuthorizationTokenRequest=t.DescribeRepositoriesResponse=t.DescribeRepositoriesRequest=t.ValidationException=t.DescribeRegistryResponse=t.ReplicationConfiguration=t.ReplicationRule=t.ReplicationDestination=t.DescribeRegistryRequest=t.ScanNotFoundException=t.DescribeImageScanFindingsResponse=t.ImageScanFindings=t.ImageScanFinding=t.Attribute=t.DescribeImageScanFindingsRequest=t.ImageNotFoundException=t.DescribeImagesResponse=t.ImageDetail=t.ImageScanStatus=t.ScanStatus=t.ImageScanFindingsSummary=t.FindingSeverity=t.DescribeImagesRequest=t.DescribeImagesFilter=void 0;t.UploadLayerPartResponse=t.UploadLayerPartRequest=t.InvalidLayerPartException=t.UntagResourceResponse=t.UntagResourceRequest=t.TagResourceResponse=t.TagResourceRequest=t.StartLifecyclePolicyPreviewResponse=t.StartLifecyclePolicyPreviewRequest=t.LifecyclePolicyPreviewInProgressException=t.UnsupportedImageTypeException=t.StartImageScanResponse=t.StartImageScanRequest=t.SetRepositoryPolicyResponse=t.SetRepositoryPolicyRequest=t.PutReplicationConfigurationResponse=t.PutReplicationConfigurationRequest=t.PutRegistryPolicyResponse=t.PutRegistryPolicyRequest=t.PutLifecyclePolicyResponse=t.PutLifecyclePolicyRequest=t.PutImageTagMutabilityResponse=t.PutImageTagMutabilityRequest=t.PutImageScanningConfigurationResponse=t.PutImageScanningConfigurationRequest=t.ReferencedImagesNotFoundException=t.PutImageResponse=t.PutImageRequest=t.ImageTagAlreadyExistsException=t.ImageDigestDoesNotMatchException=t.ImageAlreadyExistsException=t.ListTagsForResourceResponse=t.ListTagsForResourceRequest=void 0;var n;(function(e){e.filterSensitiveLog=e=>({...e})})(n=t.BatchCheckLayerAvailabilityRequest||(t.BatchCheckLayerAvailabilityRequest={}));var s;(function(e){e["InvalidLayerDigest"]="InvalidLayerDigest";e["MissingLayerDigest"]="MissingLayerDigest"})(s=t.LayerFailureCode||(t.LayerFailureCode={}));var o;(function(e){e.filterSensitiveLog=e=>({...e})})(o=t.LayerFailure||(t.LayerFailure={}));var i;(function(e){e["AVAILABLE"]="AVAILABLE";e["UNAVAILABLE"]="UNAVAILABLE"})(i=t.LayerAvailability||(t.LayerAvailability={}));var r;(function(e){e.filterSensitiveLog=e=>({...e})})(r=t.Layer||(t.Layer={}));var a;(function(e){e.filterSensitiveLog=e=>({...e})})(a=t.BatchCheckLayerAvailabilityResponse||(t.BatchCheckLayerAvailabilityResponse={}));var c;(function(e){e.filterSensitiveLog=e=>({...e})})(c=t.InvalidParameterException||(t.InvalidParameterException={}));var d;(function(e){e.filterSensitiveLog=e=>({...e})})(d=t.RepositoryNotFoundException||(t.RepositoryNotFoundException={}));var l;(function(e){e.filterSensitiveLog=e=>({...e})})(l=t.ServerException||(t.ServerException={}));var u;(function(e){e.filterSensitiveLog=e=>({...e})})(u=t.ImageIdentifier||(t.ImageIdentifier={}));var m;(function(e){e.filterSensitiveLog=e=>({...e})})(m=t.BatchDeleteImageRequest||(t.BatchDeleteImageRequest={}));var f;(function(e){e["ImageNotFound"]="ImageNotFound";e["ImageReferencedByManifestList"]="ImageReferencedByManifestList";e["ImageTagDoesNotMatchDigest"]="ImageTagDoesNotMatchDigest";e["InvalidImageDigest"]="InvalidImageDigest";e["InvalidImageTag"]="InvalidImageTag";e["KmsError"]="KmsError";e["MissingDigestAndTag"]="MissingDigestAndTag"})(f=t.ImageFailureCode||(t.ImageFailureCode={}));var g;(function(e){e.filterSensitiveLog=e=>({...e})})(g=t.ImageFailure||(t.ImageFailure={}));var p;(function(e){e.filterSensitiveLog=e=>({...e})})(p=t.BatchDeleteImageResponse||(t.BatchDeleteImageResponse={}));var y;(function(e){e.filterSensitiveLog=e=>({...e})})(y=t.BatchGetImageRequest||(t.BatchGetImageRequest={}));var w;(function(e){e.filterSensitiveLog=e=>({...e})})(w=t.Image||(t.Image={}));var h;(function(e){e.filterSensitiveLog=e=>({...e})})(h=t.BatchGetImageResponse||(t.BatchGetImageResponse={}));var v;(function(e){e.filterSensitiveLog=e=>({...e})})(v=t.CompleteLayerUploadRequest||(t.CompleteLayerUploadRequest={}));var _;(function(e){e.filterSensitiveLog=e=>({...e})})(_=t.CompleteLayerUploadResponse||(t.CompleteLayerUploadResponse={}));var E;(function(e){e.filterSensitiveLog=e=>({...e})})(E=t.EmptyUploadException||(t.EmptyUploadException={}));var S;(function(e){e.filterSensitiveLog=e=>({...e})})(S=t.InvalidLayerException||(t.InvalidLayerException={}));var R;(function(e){e.filterSensitiveLog=e=>({...e})})(R=t.KmsException||(t.KmsException={}));var b;(function(e){e.filterSensitiveLog=e=>({...e})})(b=t.LayerAlreadyExistsException||(t.LayerAlreadyExistsException={}));var C;(function(e){e.filterSensitiveLog=e=>({...e})})(C=t.LayerPartTooSmallException||(t.LayerPartTooSmallException={}));var P;(function(e){e.filterSensitiveLog=e=>({...e})})(P=t.UploadNotFoundException||(t.UploadNotFoundException={}));var A;(function(e){e["AES256"]="AES256";e["KMS"]="KMS"})(A=t.EncryptionType||(t.EncryptionType={}));var I;(function(e){e.filterSensitiveLog=e=>({...e})})(I=t.EncryptionConfiguration||(t.EncryptionConfiguration={}));var x;(function(e){e.filterSensitiveLog=e=>({...e})})(x=t.ImageScanningConfiguration||(t.ImageScanningConfiguration={}));var T;(function(e){e["IMMUTABLE"]="IMMUTABLE";e["MUTABLE"]="MUTABLE"})(T=t.ImageTagMutability||(t.ImageTagMutability={}));var L;(function(e){e.filterSensitiveLog=e=>({...e})})(L=t.Tag||(t.Tag={}));var N;(function(e){e.filterSensitiveLog=e=>({...e})})(N=t.CreateRepositoryRequest||(t.CreateRepositoryRequest={}));var z;(function(e){e.filterSensitiveLog=e=>({...e})})(z=t.Repository||(t.Repository={}));var k;(function(e){e.filterSensitiveLog=e=>({...e})})(k=t.CreateRepositoryResponse||(t.CreateRepositoryResponse={}));var M;(function(e){e.filterSensitiveLog=e=>({...e})})(M=t.InvalidTagParameterException||(t.InvalidTagParameterException={}));var D;(function(e){e.filterSensitiveLog=e=>({...e})})(D=t.LimitExceededException||(t.LimitExceededException={}));var O;(function(e){e.filterSensitiveLog=e=>({...e})})(O=t.RepositoryAlreadyExistsException||(t.RepositoryAlreadyExistsException={}));var j;(function(e){e.filterSensitiveLog=e=>({...e})})(j=t.TooManyTagsException||(t.TooManyTagsException={}));var $;(function(e){e.filterSensitiveLog=e=>({...e})})($=t.DeleteLifecyclePolicyRequest||(t.DeleteLifecyclePolicyRequest={}));var F;(function(e){e.filterSensitiveLog=e=>({...e})})(F=t.DeleteLifecyclePolicyResponse||(t.DeleteLifecyclePolicyResponse={}));var q;(function(e){e.filterSensitiveLog=e=>({...e})})(q=t.LifecyclePolicyNotFoundException||(t.LifecyclePolicyNotFoundException={}));var U;(function(e){e.filterSensitiveLog=e=>({...e})})(U=t.DeleteRegistryPolicyRequest||(t.DeleteRegistryPolicyRequest={}));var G;(function(e){e.filterSensitiveLog=e=>({...e})})(G=t.DeleteRegistryPolicyResponse||(t.DeleteRegistryPolicyResponse={}));var H;(function(e){e.filterSensitiveLog=e=>({...e})})(H=t.RegistryPolicyNotFoundException||(t.RegistryPolicyNotFoundException={}));var V;(function(e){e.filterSensitiveLog=e=>({...e})})(V=t.DeleteRepositoryRequest||(t.DeleteRepositoryRequest={}));var B;(function(e){e.filterSensitiveLog=e=>({...e})})(B=t.DeleteRepositoryResponse||(t.DeleteRepositoryResponse={}));var W;(function(e){e.filterSensitiveLog=e=>({...e})})(W=t.RepositoryNotEmptyException||(t.RepositoryNotEmptyException={}));var K;(function(e){e.filterSensitiveLog=e=>({...e})})(K=t.DeleteRepositoryPolicyRequest||(t.DeleteRepositoryPolicyRequest={}));var Y;(function(e){e.filterSensitiveLog=e=>({...e})})(Y=t.DeleteRepositoryPolicyResponse||(t.DeleteRepositoryPolicyResponse={}));var J;(function(e){e.filterSensitiveLog=e=>({...e})})(J=t.RepositoryPolicyNotFoundException||(t.RepositoryPolicyNotFoundException={}));var X;(function(e){e["ANY"]="ANY";e["TAGGED"]="TAGGED";e["UNTAGGED"]="UNTAGGED"})(X=t.TagStatus||(t.TagStatus={}));var Q;(function(e){e.filterSensitiveLog=e=>({...e})})(Q=t.DescribeImagesFilter||(t.DescribeImagesFilter={}));var Z;(function(e){e.filterSensitiveLog=e=>({...e})})(Z=t.DescribeImagesRequest||(t.DescribeImagesRequest={}));var ee;(function(e){e["CRITICAL"]="CRITICAL";e["HIGH"]="HIGH";e["INFORMATIONAL"]="INFORMATIONAL";e["LOW"]="LOW";e["MEDIUM"]="MEDIUM";e["UNDEFINED"]="UNDEFINED"})(ee=t.FindingSeverity||(t.FindingSeverity={}));var te;(function(e){e.filterSensitiveLog=e=>({...e})})(te=t.ImageScanFindingsSummary||(t.ImageScanFindingsSummary={}));var ne;(function(e){e["COMPLETE"]="COMPLETE";e["FAILED"]="FAILED";e["IN_PROGRESS"]="IN_PROGRESS"})(ne=t.ScanStatus||(t.ScanStatus={}));var se;(function(e){e.filterSensitiveLog=e=>({...e})})(se=t.ImageScanStatus||(t.ImageScanStatus={}));var oe;(function(e){e.filterSensitiveLog=e=>({...e})})(oe=t.ImageDetail||(t.ImageDetail={}));var ie;(function(e){e.filterSensitiveLog=e=>({...e})})(ie=t.DescribeImagesResponse||(t.DescribeImagesResponse={}));var re;(function(e){e.filterSensitiveLog=e=>({...e})})(re=t.ImageNotFoundException||(t.ImageNotFoundException={}));var ae;(function(e){e.filterSensitiveLog=e=>({...e})})(ae=t.DescribeImageScanFindingsRequest||(t.DescribeImageScanFindingsRequest={}));var ce;(function(e){e.filterSensitiveLog=e=>({...e})})(ce=t.Attribute||(t.Attribute={}));var de;(function(e){e.filterSensitiveLog=e=>({...e})})(de=t.ImageScanFinding||(t.ImageScanFinding={}));var le;(function(e){e.filterSensitiveLog=e=>({...e})})(le=t.ImageScanFindings||(t.ImageScanFindings={}));var ue;(function(e){e.filterSensitiveLog=e=>({...e})})(ue=t.DescribeImageScanFindingsResponse||(t.DescribeImageScanFindingsResponse={}));var me;(function(e){e.filterSensitiveLog=e=>({...e})})(me=t.ScanNotFoundException||(t.ScanNotFoundException={}));var fe;(function(e){e.filterSensitiveLog=e=>({...e})})(fe=t.DescribeRegistryRequest||(t.DescribeRegistryRequest={}));var ge;(function(e){e.filterSensitiveLog=e=>({...e})})(ge=t.ReplicationDestination||(t.ReplicationDestination={}));var pe;(function(e){e.filterSensitiveLog=e=>({...e})})(pe=t.ReplicationRule||(t.ReplicationRule={}));var ye;(function(e){e.filterSensitiveLog=e=>({...e})})(ye=t.ReplicationConfiguration||(t.ReplicationConfiguration={}));var we;(function(e){e.filterSensitiveLog=e=>({...e})})(we=t.DescribeRegistryResponse||(t.DescribeRegistryResponse={}));var he;(function(e){e.filterSensitiveLog=e=>({...e})})(he=t.ValidationException||(t.ValidationException={}));var ve;(function(e){e.filterSensitiveLog=e=>({...e})})(ve=t.DescribeRepositoriesRequest||(t.DescribeRepositoriesRequest={}));var Ee;(function(e){e.filterSensitiveLog=e=>({...e})})(Ee=t.DescribeRepositoriesResponse||(t.DescribeRepositoriesResponse={}));var Se;(function(e){e.filterSensitiveLog=e=>({...e})})(Se=t.GetAuthorizationTokenRequest||(t.GetAuthorizationTokenRequest={}));var Re;(function(e){e.filterSensitiveLog=e=>({...e})})(Re=t.AuthorizationData||(t.AuthorizationData={}));var be;(function(e){e.filterSensitiveLog=e=>({...e})})(be=t.GetAuthorizationTokenResponse||(t.GetAuthorizationTokenResponse={}));var Ce;(function(e){e.filterSensitiveLog=e=>({...e})})(Ce=t.GetDownloadUrlForLayerRequest||(t.GetDownloadUrlForLayerRequest={}));var Pe;(function(e){e.filterSensitiveLog=e=>({...e})})(Pe=t.GetDownloadUrlForLayerResponse||(t.GetDownloadUrlForLayerResponse={}));var Ae;(function(e){e.filterSensitiveLog=e=>({...e})})(Ae=t.LayerInaccessibleException||(t.LayerInaccessibleException={}));var Ie;(function(e){e.filterSensitiveLog=e=>({...e})})(Ie=t.LayersNotFoundException||(t.LayersNotFoundException={}));var xe;(function(e){e.filterSensitiveLog=e=>({...e})})(xe=t.GetLifecyclePolicyRequest||(t.GetLifecyclePolicyRequest={}));var Te;(function(e){e.filterSensitiveLog=e=>({...e})})(Te=t.GetLifecyclePolicyResponse||(t.GetLifecyclePolicyResponse={}));var Le;(function(e){e.filterSensitiveLog=e=>({...e})})(Le=t.LifecyclePolicyPreviewFilter||(t.LifecyclePolicyPreviewFilter={}));var Ne;(function(e){e.filterSensitiveLog=e=>({...e})})(Ne=t.GetLifecyclePolicyPreviewRequest||(t.GetLifecyclePolicyPreviewRequest={}));var ze;(function(e){e["EXPIRE"]="EXPIRE"})(ze=t.ImageActionType||(t.ImageActionType={}));var ke;(function(e){e.filterSensitiveLog=e=>({...e})})(ke=t.LifecyclePolicyRuleAction||(t.LifecyclePolicyRuleAction={}));var Me;(function(e){e.filterSensitiveLog=e=>({...e})})(Me=t.LifecyclePolicyPreviewResult||(t.LifecyclePolicyPreviewResult={}));var De;(function(e){e["COMPLETE"]="COMPLETE";e["EXPIRED"]="EXPIRED";e["FAILED"]="FAILED";e["IN_PROGRESS"]="IN_PROGRESS"})(De=t.LifecyclePolicyPreviewStatus||(t.LifecyclePolicyPreviewStatus={}));var Oe;(function(e){e.filterSensitiveLog=e=>({...e})})(Oe=t.LifecyclePolicyPreviewSummary||(t.LifecyclePolicyPreviewSummary={}));var je;(function(e){e.filterSensitiveLog=e=>({...e})})(je=t.GetLifecyclePolicyPreviewResponse||(t.GetLifecyclePolicyPreviewResponse={}));var $e;(function(e){e.filterSensitiveLog=e=>({...e})})($e=t.LifecyclePolicyPreviewNotFoundException||(t.LifecyclePolicyPreviewNotFoundException={}));var Fe;(function(e){e.filterSensitiveLog=e=>({...e})})(Fe=t.GetRegistryPolicyRequest||(t.GetRegistryPolicyRequest={}));var qe;(function(e){e.filterSensitiveLog=e=>({...e})})(qe=t.GetRegistryPolicyResponse||(t.GetRegistryPolicyResponse={}));var Ue;(function(e){e.filterSensitiveLog=e=>({...e})})(Ue=t.GetRepositoryPolicyRequest||(t.GetRepositoryPolicyRequest={}));var Ge;(function(e){e.filterSensitiveLog=e=>({...e})})(Ge=t.GetRepositoryPolicyResponse||(t.GetRepositoryPolicyResponse={}));var He;(function(e){e.filterSensitiveLog=e=>({...e})})(He=t.InitiateLayerUploadRequest||(t.InitiateLayerUploadRequest={}));var Ve;(function(e){e.filterSensitiveLog=e=>({...e})})(Ve=t.InitiateLayerUploadResponse||(t.InitiateLayerUploadResponse={}));var Be;(function(e){e.filterSensitiveLog=e=>({...e})})(Be=t.ListImagesFilter||(t.ListImagesFilter={}));var We;(function(e){e.filterSensitiveLog=e=>({...e})})(We=t.ListImagesRequest||(t.ListImagesRequest={}));var Ke;(function(e){e.filterSensitiveLog=e=>({...e})})(Ke=t.ListImagesResponse||(t.ListImagesResponse={}));var Ye;(function(e){e.filterSensitiveLog=e=>({...e})})(Ye=t.ListTagsForResourceRequest||(t.ListTagsForResourceRequest={}));var Je;(function(e){e.filterSensitiveLog=e=>({...e})})(Je=t.ListTagsForResourceResponse||(t.ListTagsForResourceResponse={}));var Xe;(function(e){e.filterSensitiveLog=e=>({...e})})(Xe=t.ImageAlreadyExistsException||(t.ImageAlreadyExistsException={}));var Qe;(function(e){e.filterSensitiveLog=e=>({...e})})(Qe=t.ImageDigestDoesNotMatchException||(t.ImageDigestDoesNotMatchException={}));var Ze;(function(e){e.filterSensitiveLog=e=>({...e})})(Ze=t.ImageTagAlreadyExistsException||(t.ImageTagAlreadyExistsException={}));var et;(function(e){e.filterSensitiveLog=e=>({...e})})(et=t.PutImageRequest||(t.PutImageRequest={}));var tt;(function(e){e.filterSensitiveLog=e=>({...e})})(tt=t.PutImageResponse||(t.PutImageResponse={}));var nt;(function(e){e.filterSensitiveLog=e=>({...e})})(nt=t.ReferencedImagesNotFoundException||(t.ReferencedImagesNotFoundException={}));var st;(function(e){e.filterSensitiveLog=e=>({...e})})(st=t.PutImageScanningConfigurationRequest||(t.PutImageScanningConfigurationRequest={}));var ot;(function(e){e.filterSensitiveLog=e=>({...e})})(ot=t.PutImageScanningConfigurationResponse||(t.PutImageScanningConfigurationResponse={}));var it;(function(e){e.filterSensitiveLog=e=>({...e})})(it=t.PutImageTagMutabilityRequest||(t.PutImageTagMutabilityRequest={}));var rt;(function(e){e.filterSensitiveLog=e=>({...e})})(rt=t.PutImageTagMutabilityResponse||(t.PutImageTagMutabilityResponse={}));var at;(function(e){e.filterSensitiveLog=e=>({...e})})(at=t.PutLifecyclePolicyRequest||(t.PutLifecyclePolicyRequest={}));var ct;(function(e){e.filterSensitiveLog=e=>({...e})})(ct=t.PutLifecyclePolicyResponse||(t.PutLifecyclePolicyResponse={}));var dt;(function(e){e.filterSensitiveLog=e=>({...e})})(dt=t.PutRegistryPolicyRequest||(t.PutRegistryPolicyRequest={}));var lt;(function(e){e.filterSensitiveLog=e=>({...e})})(lt=t.PutRegistryPolicyResponse||(t.PutRegistryPolicyResponse={}));var ut;(function(e){e.filterSensitiveLog=e=>({...e})})(ut=t.PutReplicationConfigurationRequest||(t.PutReplicationConfigurationRequest={}));var mt;(function(e){e.filterSensitiveLog=e=>({...e})})(mt=t.PutReplicationConfigurationResponse||(t.PutReplicationConfigurationResponse={}));var ft;(function(e){e.filterSensitiveLog=e=>({...e})})(ft=t.SetRepositoryPolicyRequest||(t.SetRepositoryPolicyRequest={}));var gt;(function(e){e.filterSensitiveLog=e=>({...e})})(gt=t.SetRepositoryPolicyResponse||(t.SetRepositoryPolicyResponse={}));var pt;(function(e){e.filterSensitiveLog=e=>({...e})})(pt=t.StartImageScanRequest||(t.StartImageScanRequest={}));var yt;(function(e){e.filterSensitiveLog=e=>({...e})})(yt=t.StartImageScanResponse||(t.StartImageScanResponse={}));var wt;(function(e){e.filterSensitiveLog=e=>({...e})})(wt=t.UnsupportedImageTypeException||(t.UnsupportedImageTypeException={}));var ht;(function(e){e.filterSensitiveLog=e=>({...e})})(ht=t.LifecyclePolicyPreviewInProgressException||(t.LifecyclePolicyPreviewInProgressException={}));var vt;(function(e){e.filterSensitiveLog=e=>({...e})})(vt=t.StartLifecyclePolicyPreviewRequest||(t.StartLifecyclePolicyPreviewRequest={}));var _t;(function(e){e.filterSensitiveLog=e=>({...e})})(_t=t.StartLifecyclePolicyPreviewResponse||(t.StartLifecyclePolicyPreviewResponse={}));var Et;(function(e){e.filterSensitiveLog=e=>({...e})})(Et=t.TagResourceRequest||(t.TagResourceRequest={}));var St;(function(e){e.filterSensitiveLog=e=>({...e})})(St=t.TagResourceResponse||(t.TagResourceResponse={}));var Rt;(function(e){e.filterSensitiveLog=e=>({...e})})(Rt=t.UntagResourceRequest||(t.UntagResourceRequest={}));var bt;(function(e){e.filterSensitiveLog=e=>({...e})})(bt=t.UntagResourceResponse||(t.UntagResourceResponse={}));var Ct;(function(e){e.filterSensitiveLog=e=>({...e})})(Ct=t.InvalidLayerPartException||(t.InvalidLayerPartException={}));var Pt;(function(e){e.filterSensitiveLog=e=>({...e})})(Pt=t.UploadLayerPartRequest||(t.UploadLayerPartRequest={}));var At;(function(e){e.filterSensitiveLog=e=>({...e})})(At=t.UploadLayerPartResponse||(t.UploadLayerPartResponse={}))},2628:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateDescribeImageScanFindings=void 0;const s=n(9531);const o=n(9989);const i=n(2519);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.DescribeImageScanFindingsCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.describeImageScanFindings(t,...n);async function*paginateDescribeImageScanFindings(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.ECR){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.ECRClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected ECR | ECRClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateDescribeImageScanFindings=paginateDescribeImageScanFindings},5575:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateDescribeImages=void 0;const s=n(9531);const o=n(9989);const i=n(9305);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.DescribeImagesCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.describeImages(t,...n);async function*paginateDescribeImages(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.ECR){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.ECRClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected ECR | ECRClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateDescribeImages=paginateDescribeImages},9898:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateDescribeRepositories=void 0;const s=n(9531);const o=n(9989);const i=n(4530);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.DescribeRepositoriesCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.describeRepositories(t,...n);async function*paginateDescribeRepositories(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.ECR){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.ECRClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected ECR | ECRClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateDescribeRepositories=paginateDescribeRepositories},6012:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateGetLifecyclePolicyPreview=void 0;const s=n(9531);const o=n(9989);const i=n(8498);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.GetLifecyclePolicyPreviewCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.getLifecyclePolicyPreview(t,...n);async function*paginateGetLifecyclePolicyPreview(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.ECR){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.ECRClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected ECR | ECRClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateGetLifecyclePolicyPreview=paginateGetLifecyclePolicyPreview},632:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},948:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateListImages=void 0;const s=n(9531);const o=n(9989);const i=n(3369);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.ListImagesCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.listImages(t,...n);async function*paginateListImages(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.ECR){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.ECRClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected ECR | ECRClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateListImages=paginateListImages},3454:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.deserializeAws_json1_1GetLifecyclePolicyCommand=t.deserializeAws_json1_1GetDownloadUrlForLayerCommand=t.deserializeAws_json1_1GetAuthorizationTokenCommand=t.deserializeAws_json1_1DescribeRepositoriesCommand=t.deserializeAws_json1_1DescribeRegistryCommand=t.deserializeAws_json1_1DescribeImageScanFindingsCommand=t.deserializeAws_json1_1DescribeImagesCommand=t.deserializeAws_json1_1DeleteRepositoryPolicyCommand=t.deserializeAws_json1_1DeleteRepositoryCommand=t.deserializeAws_json1_1DeleteRegistryPolicyCommand=t.deserializeAws_json1_1DeleteLifecyclePolicyCommand=t.deserializeAws_json1_1CreateRepositoryCommand=t.deserializeAws_json1_1CompleteLayerUploadCommand=t.deserializeAws_json1_1BatchGetImageCommand=t.deserializeAws_json1_1BatchDeleteImageCommand=t.deserializeAws_json1_1BatchCheckLayerAvailabilityCommand=t.serializeAws_json1_1UploadLayerPartCommand=t.serializeAws_json1_1UntagResourceCommand=t.serializeAws_json1_1TagResourceCommand=t.serializeAws_json1_1StartLifecyclePolicyPreviewCommand=t.serializeAws_json1_1StartImageScanCommand=t.serializeAws_json1_1SetRepositoryPolicyCommand=t.serializeAws_json1_1PutReplicationConfigurationCommand=t.serializeAws_json1_1PutRegistryPolicyCommand=t.serializeAws_json1_1PutLifecyclePolicyCommand=t.serializeAws_json1_1PutImageTagMutabilityCommand=t.serializeAws_json1_1PutImageScanningConfigurationCommand=t.serializeAws_json1_1PutImageCommand=t.serializeAws_json1_1ListTagsForResourceCommand=t.serializeAws_json1_1ListImagesCommand=t.serializeAws_json1_1InitiateLayerUploadCommand=t.serializeAws_json1_1GetRepositoryPolicyCommand=t.serializeAws_json1_1GetRegistryPolicyCommand=t.serializeAws_json1_1GetLifecyclePolicyPreviewCommand=t.serializeAws_json1_1GetLifecyclePolicyCommand=t.serializeAws_json1_1GetDownloadUrlForLayerCommand=t.serializeAws_json1_1GetAuthorizationTokenCommand=t.serializeAws_json1_1DescribeRepositoriesCommand=t.serializeAws_json1_1DescribeRegistryCommand=t.serializeAws_json1_1DescribeImageScanFindingsCommand=t.serializeAws_json1_1DescribeImagesCommand=t.serializeAws_json1_1DeleteRepositoryPolicyCommand=t.serializeAws_json1_1DeleteRepositoryCommand=t.serializeAws_json1_1DeleteRegistryPolicyCommand=t.serializeAws_json1_1DeleteLifecyclePolicyCommand=t.serializeAws_json1_1CreateRepositoryCommand=t.serializeAws_json1_1CompleteLayerUploadCommand=t.serializeAws_json1_1BatchGetImageCommand=t.serializeAws_json1_1BatchDeleteImageCommand=t.serializeAws_json1_1BatchCheckLayerAvailabilityCommand=void 0;t.deserializeAws_json1_1UploadLayerPartCommand=t.deserializeAws_json1_1UntagResourceCommand=t.deserializeAws_json1_1TagResourceCommand=t.deserializeAws_json1_1StartLifecyclePolicyPreviewCommand=t.deserializeAws_json1_1StartImageScanCommand=t.deserializeAws_json1_1SetRepositoryPolicyCommand=t.deserializeAws_json1_1PutReplicationConfigurationCommand=t.deserializeAws_json1_1PutRegistryPolicyCommand=t.deserializeAws_json1_1PutLifecyclePolicyCommand=t.deserializeAws_json1_1PutImageTagMutabilityCommand=t.deserializeAws_json1_1PutImageScanningConfigurationCommand=t.deserializeAws_json1_1PutImageCommand=t.deserializeAws_json1_1ListTagsForResourceCommand=t.deserializeAws_json1_1ListImagesCommand=t.deserializeAws_json1_1InitiateLayerUploadCommand=t.deserializeAws_json1_1GetRepositoryPolicyCommand=t.deserializeAws_json1_1GetRegistryPolicyCommand=t.deserializeAws_json1_1GetLifecyclePolicyPreviewCommand=void 0;const s=n(7498);const serializeAws_json1_1BatchCheckLayerAvailabilityCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability"};let s;s=JSON.stringify(serializeAws_json1_1BatchCheckLayerAvailabilityRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1BatchCheckLayerAvailabilityCommand=serializeAws_json1_1BatchCheckLayerAvailabilityCommand;const serializeAws_json1_1BatchDeleteImageCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.BatchDeleteImage"};let s;s=JSON.stringify(serializeAws_json1_1BatchDeleteImageRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1BatchDeleteImageCommand=serializeAws_json1_1BatchDeleteImageCommand;const serializeAws_json1_1BatchGetImageCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.BatchGetImage"};let s;s=JSON.stringify(serializeAws_json1_1BatchGetImageRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1BatchGetImageCommand=serializeAws_json1_1BatchGetImageCommand;const serializeAws_json1_1CompleteLayerUploadCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.CompleteLayerUpload"};let s;s=JSON.stringify(serializeAws_json1_1CompleteLayerUploadRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1CompleteLayerUploadCommand=serializeAws_json1_1CompleteLayerUploadCommand;const serializeAws_json1_1CreateRepositoryCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.CreateRepository"};let s;s=JSON.stringify(serializeAws_json1_1CreateRepositoryRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1CreateRepositoryCommand=serializeAws_json1_1CreateRepositoryCommand;const serializeAws_json1_1DeleteLifecyclePolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DeleteLifecyclePolicy"};let s;s=JSON.stringify(serializeAws_json1_1DeleteLifecyclePolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DeleteLifecyclePolicyCommand=serializeAws_json1_1DeleteLifecyclePolicyCommand;const serializeAws_json1_1DeleteRegistryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1DeleteRegistryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DeleteRegistryPolicyCommand=serializeAws_json1_1DeleteRegistryPolicyCommand;const serializeAws_json1_1DeleteRepositoryCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DeleteRepository"};let s;s=JSON.stringify(serializeAws_json1_1DeleteRepositoryRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DeleteRepositoryCommand=serializeAws_json1_1DeleteRepositoryCommand;const serializeAws_json1_1DeleteRepositoryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DeleteRepositoryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1DeleteRepositoryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DeleteRepositoryPolicyCommand=serializeAws_json1_1DeleteRepositoryPolicyCommand;const serializeAws_json1_1DescribeImagesCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DescribeImages"};let s;s=JSON.stringify(serializeAws_json1_1DescribeImagesRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DescribeImagesCommand=serializeAws_json1_1DescribeImagesCommand;const serializeAws_json1_1DescribeImageScanFindingsCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DescribeImageScanFindings"};let s;s=JSON.stringify(serializeAws_json1_1DescribeImageScanFindingsRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DescribeImageScanFindingsCommand=serializeAws_json1_1DescribeImageScanFindingsCommand;const serializeAws_json1_1DescribeRegistryCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DescribeRegistry"};let s;s=JSON.stringify(serializeAws_json1_1DescribeRegistryRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DescribeRegistryCommand=serializeAws_json1_1DescribeRegistryCommand;const serializeAws_json1_1DescribeRepositoriesCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.DescribeRepositories"};let s;s=JSON.stringify(serializeAws_json1_1DescribeRepositoriesRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1DescribeRepositoriesCommand=serializeAws_json1_1DescribeRepositoriesCommand;const serializeAws_json1_1GetAuthorizationTokenCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetAuthorizationToken"};let s;s=JSON.stringify(serializeAws_json1_1GetAuthorizationTokenRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetAuthorizationTokenCommand=serializeAws_json1_1GetAuthorizationTokenCommand;const serializeAws_json1_1GetDownloadUrlForLayerCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer"};let s;s=JSON.stringify(serializeAws_json1_1GetDownloadUrlForLayerRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetDownloadUrlForLayerCommand=serializeAws_json1_1GetDownloadUrlForLayerCommand;const serializeAws_json1_1GetLifecyclePolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicy"};let s;s=JSON.stringify(serializeAws_json1_1GetLifecyclePolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetLifecyclePolicyCommand=serializeAws_json1_1GetLifecyclePolicyCommand;const serializeAws_json1_1GetLifecyclePolicyPreviewCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview"};let s;s=JSON.stringify(serializeAws_json1_1GetLifecyclePolicyPreviewRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetLifecyclePolicyPreviewCommand=serializeAws_json1_1GetLifecyclePolicyPreviewCommand;const serializeAws_json1_1GetRegistryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetRegistryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1GetRegistryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetRegistryPolicyCommand=serializeAws_json1_1GetRegistryPolicyCommand;const serializeAws_json1_1GetRepositoryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.GetRepositoryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1GetRepositoryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1GetRepositoryPolicyCommand=serializeAws_json1_1GetRepositoryPolicyCommand;const serializeAws_json1_1InitiateLayerUploadCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload"};let s;s=JSON.stringify(serializeAws_json1_1InitiateLayerUploadRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1InitiateLayerUploadCommand=serializeAws_json1_1InitiateLayerUploadCommand;const serializeAws_json1_1ListImagesCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.ListImages"};let s;s=JSON.stringify(serializeAws_json1_1ListImagesRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1ListImagesCommand=serializeAws_json1_1ListImagesCommand;const serializeAws_json1_1ListTagsForResourceCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.ListTagsForResource"};let s;s=JSON.stringify(serializeAws_json1_1ListTagsForResourceRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1ListTagsForResourceCommand=serializeAws_json1_1ListTagsForResourceCommand;const serializeAws_json1_1PutImageCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutImage"};let s;s=JSON.stringify(serializeAws_json1_1PutImageRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutImageCommand=serializeAws_json1_1PutImageCommand;const serializeAws_json1_1PutImageScanningConfigurationCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutImageScanningConfiguration"};let s;s=JSON.stringify(serializeAws_json1_1PutImageScanningConfigurationRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutImageScanningConfigurationCommand=serializeAws_json1_1PutImageScanningConfigurationCommand;const serializeAws_json1_1PutImageTagMutabilityCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutImageTagMutability"};let s;s=JSON.stringify(serializeAws_json1_1PutImageTagMutabilityRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutImageTagMutabilityCommand=serializeAws_json1_1PutImageTagMutabilityCommand;const serializeAws_json1_1PutLifecyclePolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutLifecyclePolicy"};let s;s=JSON.stringify(serializeAws_json1_1PutLifecyclePolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutLifecyclePolicyCommand=serializeAws_json1_1PutLifecyclePolicyCommand;const serializeAws_json1_1PutRegistryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutRegistryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1PutRegistryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutRegistryPolicyCommand=serializeAws_json1_1PutRegistryPolicyCommand;const serializeAws_json1_1PutReplicationConfigurationCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.PutReplicationConfiguration"};let s;s=JSON.stringify(serializeAws_json1_1PutReplicationConfigurationRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1PutReplicationConfigurationCommand=serializeAws_json1_1PutReplicationConfigurationCommand;const serializeAws_json1_1SetRepositoryPolicyCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.SetRepositoryPolicy"};let s;s=JSON.stringify(serializeAws_json1_1SetRepositoryPolicyRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1SetRepositoryPolicyCommand=serializeAws_json1_1SetRepositoryPolicyCommand;const serializeAws_json1_1StartImageScanCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.StartImageScan"};let s;s=JSON.stringify(serializeAws_json1_1StartImageScanRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1StartImageScanCommand=serializeAws_json1_1StartImageScanCommand;const serializeAws_json1_1StartLifecyclePolicyPreviewCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.StartLifecyclePolicyPreview"};let s;s=JSON.stringify(serializeAws_json1_1StartLifecyclePolicyPreviewRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1StartLifecyclePolicyPreviewCommand=serializeAws_json1_1StartLifecyclePolicyPreviewCommand;const serializeAws_json1_1TagResourceCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.TagResource"};let s;s=JSON.stringify(serializeAws_json1_1TagResourceRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1TagResourceCommand=serializeAws_json1_1TagResourceCommand;const serializeAws_json1_1UntagResourceCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.UntagResource"};let s;s=JSON.stringify(serializeAws_json1_1UntagResourceRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1UntagResourceCommand=serializeAws_json1_1UntagResourceCommand;const serializeAws_json1_1UploadLayerPartCommand=async(e,t)=>{const n={"content-type":"application/x-amz-json-1.1","x-amz-target":"AmazonEC2ContainerRegistry_V20150921.UploadLayerPart"};let s;s=JSON.stringify(serializeAws_json1_1UploadLayerPartRequest(e,t));return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_json1_1UploadLayerPartCommand=serializeAws_json1_1UploadLayerPartCommand;const deserializeAws_json1_1BatchCheckLayerAvailabilityCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1BatchCheckLayerAvailabilityCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1BatchCheckLayerAvailabilityResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1BatchCheckLayerAvailabilityCommand=deserializeAws_json1_1BatchCheckLayerAvailabilityCommand;const deserializeAws_json1_1BatchCheckLayerAvailabilityCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1BatchDeleteImageCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1BatchDeleteImageCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1BatchDeleteImageResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1BatchDeleteImageCommand=deserializeAws_json1_1BatchDeleteImageCommand;const deserializeAws_json1_1BatchDeleteImageCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1BatchGetImageCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1BatchGetImageCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1BatchGetImageResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1BatchGetImageCommand=deserializeAws_json1_1BatchGetImageCommand;const deserializeAws_json1_1BatchGetImageCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1CompleteLayerUploadCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1CompleteLayerUploadCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1CompleteLayerUploadResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1CompleteLayerUploadCommand=deserializeAws_json1_1CompleteLayerUploadCommand;const deserializeAws_json1_1CompleteLayerUploadCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"EmptyUploadException":case"com.amazonaws.ecr#EmptyUploadException":s={...await deserializeAws_json1_1EmptyUploadExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidLayerException":case"com.amazonaws.ecr#InvalidLayerException":s={...await deserializeAws_json1_1InvalidLayerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LayerAlreadyExistsException":case"com.amazonaws.ecr#LayerAlreadyExistsException":s={...await deserializeAws_json1_1LayerAlreadyExistsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LayerPartTooSmallException":case"com.amazonaws.ecr#LayerPartTooSmallException":s={...await deserializeAws_json1_1LayerPartTooSmallExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UploadNotFoundException":case"com.amazonaws.ecr#UploadNotFoundException":s={...await deserializeAws_json1_1UploadNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1CreateRepositoryCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1CreateRepositoryCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1CreateRepositoryResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1CreateRepositoryCommand=deserializeAws_json1_1CreateRepositoryCommand;const deserializeAws_json1_1CreateRepositoryCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidTagParameterException":case"com.amazonaws.ecr#InvalidTagParameterException":s={...await deserializeAws_json1_1InvalidTagParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LimitExceededException":case"com.amazonaws.ecr#LimitExceededException":s={...await deserializeAws_json1_1LimitExceededExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryAlreadyExistsException":case"com.amazonaws.ecr#RepositoryAlreadyExistsException":s={...await deserializeAws_json1_1RepositoryAlreadyExistsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyTagsException":case"com.amazonaws.ecr#TooManyTagsException":s={...await deserializeAws_json1_1TooManyTagsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DeleteLifecyclePolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DeleteLifecyclePolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DeleteLifecyclePolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DeleteLifecyclePolicyCommand=deserializeAws_json1_1DeleteLifecyclePolicyCommand;const deserializeAws_json1_1DeleteLifecyclePolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LifecyclePolicyNotFoundException":case"com.amazonaws.ecr#LifecyclePolicyNotFoundException":s={...await deserializeAws_json1_1LifecyclePolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DeleteRegistryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DeleteRegistryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DeleteRegistryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DeleteRegistryPolicyCommand=deserializeAws_json1_1DeleteRegistryPolicyCommand;const deserializeAws_json1_1DeleteRegistryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegistryPolicyNotFoundException":case"com.amazonaws.ecr#RegistryPolicyNotFoundException":s={...await deserializeAws_json1_1RegistryPolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DeleteRepositoryCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DeleteRepositoryCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DeleteRepositoryResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DeleteRepositoryCommand=deserializeAws_json1_1DeleteRepositoryCommand;const deserializeAws_json1_1DeleteRepositoryCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotEmptyException":case"com.amazonaws.ecr#RepositoryNotEmptyException":s={...await deserializeAws_json1_1RepositoryNotEmptyExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DeleteRepositoryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DeleteRepositoryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DeleteRepositoryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DeleteRepositoryPolicyCommand=deserializeAws_json1_1DeleteRepositoryPolicyCommand;const deserializeAws_json1_1DeleteRepositoryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryPolicyNotFoundException":case"com.amazonaws.ecr#RepositoryPolicyNotFoundException":s={...await deserializeAws_json1_1RepositoryPolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DescribeImagesCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DescribeImagesCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DescribeImagesResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DescribeImagesCommand=deserializeAws_json1_1DescribeImagesCommand;const deserializeAws_json1_1DescribeImagesCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"ImageNotFoundException":case"com.amazonaws.ecr#ImageNotFoundException":s={...await deserializeAws_json1_1ImageNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DescribeImageScanFindingsCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DescribeImageScanFindingsCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DescribeImageScanFindingsResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DescribeImageScanFindingsCommand=deserializeAws_json1_1DescribeImageScanFindingsCommand;const deserializeAws_json1_1DescribeImageScanFindingsCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"ImageNotFoundException":case"com.amazonaws.ecr#ImageNotFoundException":s={...await deserializeAws_json1_1ImageNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ScanNotFoundException":case"com.amazonaws.ecr#ScanNotFoundException":s={...await deserializeAws_json1_1ScanNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DescribeRegistryCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DescribeRegistryCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DescribeRegistryResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DescribeRegistryCommand=deserializeAws_json1_1DescribeRegistryCommand;const deserializeAws_json1_1DescribeRegistryCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ValidationException":case"com.amazonaws.ecr#ValidationException":s={...await deserializeAws_json1_1ValidationExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1DescribeRepositoriesCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1DescribeRepositoriesCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1DescribeRepositoriesResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1DescribeRepositoriesCommand=deserializeAws_json1_1DescribeRepositoriesCommand;const deserializeAws_json1_1DescribeRepositoriesCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetAuthorizationTokenCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetAuthorizationTokenCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetAuthorizationTokenResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetAuthorizationTokenCommand=deserializeAws_json1_1GetAuthorizationTokenCommand;const deserializeAws_json1_1GetAuthorizationTokenCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetDownloadUrlForLayerCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetDownloadUrlForLayerCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetDownloadUrlForLayerResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetDownloadUrlForLayerCommand=deserializeAws_json1_1GetDownloadUrlForLayerCommand;const deserializeAws_json1_1GetDownloadUrlForLayerCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LayerInaccessibleException":case"com.amazonaws.ecr#LayerInaccessibleException":s={...await deserializeAws_json1_1LayerInaccessibleExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LayersNotFoundException":case"com.amazonaws.ecr#LayersNotFoundException":s={...await deserializeAws_json1_1LayersNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetLifecyclePolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetLifecyclePolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetLifecyclePolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetLifecyclePolicyCommand=deserializeAws_json1_1GetLifecyclePolicyCommand;const deserializeAws_json1_1GetLifecyclePolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LifecyclePolicyNotFoundException":case"com.amazonaws.ecr#LifecyclePolicyNotFoundException":s={...await deserializeAws_json1_1LifecyclePolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetLifecyclePolicyPreviewCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetLifecyclePolicyPreviewCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetLifecyclePolicyPreviewResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetLifecyclePolicyPreviewCommand=deserializeAws_json1_1GetLifecyclePolicyPreviewCommand;const deserializeAws_json1_1GetLifecyclePolicyPreviewCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LifecyclePolicyPreviewNotFoundException":case"com.amazonaws.ecr#LifecyclePolicyPreviewNotFoundException":s={...await deserializeAws_json1_1LifecyclePolicyPreviewNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetRegistryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetRegistryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetRegistryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetRegistryPolicyCommand=deserializeAws_json1_1GetRegistryPolicyCommand;const deserializeAws_json1_1GetRegistryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegistryPolicyNotFoundException":case"com.amazonaws.ecr#RegistryPolicyNotFoundException":s={...await deserializeAws_json1_1RegistryPolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1GetRepositoryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1GetRepositoryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1GetRepositoryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1GetRepositoryPolicyCommand=deserializeAws_json1_1GetRepositoryPolicyCommand;const deserializeAws_json1_1GetRepositoryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryPolicyNotFoundException":case"com.amazonaws.ecr#RepositoryPolicyNotFoundException":s={...await deserializeAws_json1_1RepositoryPolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1InitiateLayerUploadCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1InitiateLayerUploadCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1InitiateLayerUploadResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1InitiateLayerUploadCommand=deserializeAws_json1_1InitiateLayerUploadCommand;const deserializeAws_json1_1InitiateLayerUploadCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1ListImagesCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1ListImagesCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1ListImagesResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1ListImagesCommand=deserializeAws_json1_1ListImagesCommand;const deserializeAws_json1_1ListImagesCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1ListTagsForResourceCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1ListTagsForResourceCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1ListTagsForResourceResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1ListTagsForResourceCommand=deserializeAws_json1_1ListTagsForResourceCommand;const deserializeAws_json1_1ListTagsForResourceCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutImageCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutImageCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutImageResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutImageCommand=deserializeAws_json1_1PutImageCommand;const deserializeAws_json1_1PutImageCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"ImageAlreadyExistsException":case"com.amazonaws.ecr#ImageAlreadyExistsException":s={...await deserializeAws_json1_1ImageAlreadyExistsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ImageDigestDoesNotMatchException":case"com.amazonaws.ecr#ImageDigestDoesNotMatchException":s={...await deserializeAws_json1_1ImageDigestDoesNotMatchExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ImageTagAlreadyExistsException":case"com.amazonaws.ecr#ImageTagAlreadyExistsException":s={...await deserializeAws_json1_1ImageTagAlreadyExistsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LayersNotFoundException":case"com.amazonaws.ecr#LayersNotFoundException":s={...await deserializeAws_json1_1LayersNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LimitExceededException":case"com.amazonaws.ecr#LimitExceededException":s={...await deserializeAws_json1_1LimitExceededExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ReferencedImagesNotFoundException":case"com.amazonaws.ecr#ReferencedImagesNotFoundException":s={...await deserializeAws_json1_1ReferencedImagesNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutImageScanningConfigurationCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutImageScanningConfigurationCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutImageScanningConfigurationResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutImageScanningConfigurationCommand=deserializeAws_json1_1PutImageScanningConfigurationCommand;const deserializeAws_json1_1PutImageScanningConfigurationCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutImageTagMutabilityCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutImageTagMutabilityCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutImageTagMutabilityResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutImageTagMutabilityCommand=deserializeAws_json1_1PutImageTagMutabilityCommand;const deserializeAws_json1_1PutImageTagMutabilityCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutLifecyclePolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutLifecyclePolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutLifecyclePolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutLifecyclePolicyCommand=deserializeAws_json1_1PutLifecyclePolicyCommand;const deserializeAws_json1_1PutLifecyclePolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutRegistryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutRegistryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutRegistryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutRegistryPolicyCommand=deserializeAws_json1_1PutRegistryPolicyCommand;const deserializeAws_json1_1PutRegistryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1PutReplicationConfigurationCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1PutReplicationConfigurationCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1PutReplicationConfigurationResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1PutReplicationConfigurationCommand=deserializeAws_json1_1PutReplicationConfigurationCommand;const deserializeAws_json1_1PutReplicationConfigurationCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ValidationException":case"com.amazonaws.ecr#ValidationException":s={...await deserializeAws_json1_1ValidationExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1SetRepositoryPolicyCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1SetRepositoryPolicyCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1SetRepositoryPolicyResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1SetRepositoryPolicyCommand=deserializeAws_json1_1SetRepositoryPolicyCommand;const deserializeAws_json1_1SetRepositoryPolicyCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1StartImageScanCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1StartImageScanCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1StartImageScanResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1StartImageScanCommand=deserializeAws_json1_1StartImageScanCommand;const deserializeAws_json1_1StartImageScanCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"ImageNotFoundException":case"com.amazonaws.ecr#ImageNotFoundException":s={...await deserializeAws_json1_1ImageNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LimitExceededException":case"com.amazonaws.ecr#LimitExceededException":s={...await deserializeAws_json1_1LimitExceededExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UnsupportedImageTypeException":case"com.amazonaws.ecr#UnsupportedImageTypeException":s={...await deserializeAws_json1_1UnsupportedImageTypeExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1StartLifecyclePolicyPreviewCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1StartLifecyclePolicyPreviewCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1StartLifecyclePolicyPreviewResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1StartLifecyclePolicyPreviewCommand=deserializeAws_json1_1StartLifecyclePolicyPreviewCommand;const deserializeAws_json1_1StartLifecyclePolicyPreviewCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LifecyclePolicyNotFoundException":case"com.amazonaws.ecr#LifecyclePolicyNotFoundException":s={...await deserializeAws_json1_1LifecyclePolicyNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LifecyclePolicyPreviewInProgressException":case"com.amazonaws.ecr#LifecyclePolicyPreviewInProgressException":s={...await deserializeAws_json1_1LifecyclePolicyPreviewInProgressExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1TagResourceCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1TagResourceCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1TagResourceResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1TagResourceCommand=deserializeAws_json1_1TagResourceCommand;const deserializeAws_json1_1TagResourceCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidTagParameterException":case"com.amazonaws.ecr#InvalidTagParameterException":s={...await deserializeAws_json1_1InvalidTagParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyTagsException":case"com.amazonaws.ecr#TooManyTagsException":s={...await deserializeAws_json1_1TooManyTagsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1UntagResourceCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1UntagResourceCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1UntagResourceResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1UntagResourceCommand=deserializeAws_json1_1UntagResourceCommand;const deserializeAws_json1_1UntagResourceCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidTagParameterException":case"com.amazonaws.ecr#InvalidTagParameterException":s={...await deserializeAws_json1_1InvalidTagParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyTagsException":case"com.amazonaws.ecr#TooManyTagsException":s={...await deserializeAws_json1_1TooManyTagsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1UploadLayerPartCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_json1_1UploadLayerPartCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_json1_1UploadLayerPartResponse(n,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_json1_1UploadLayerPartCommand=deserializeAws_json1_1UploadLayerPartCommand;const deserializeAws_json1_1UploadLayerPartCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidLayerPartException":case"com.amazonaws.ecr#InvalidLayerPartException":s={...await deserializeAws_json1_1InvalidLayerPartExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidParameterException":case"com.amazonaws.ecr#InvalidParameterException":s={...await deserializeAws_json1_1InvalidParameterExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"KmsException":case"com.amazonaws.ecr#KmsException":s={...await deserializeAws_json1_1KmsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"LimitExceededException":case"com.amazonaws.ecr#LimitExceededException":s={...await deserializeAws_json1_1LimitExceededExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RepositoryNotFoundException":case"com.amazonaws.ecr#RepositoryNotFoundException":s={...await deserializeAws_json1_1RepositoryNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ServerException":case"com.amazonaws.ecr#ServerException":s={...await deserializeAws_json1_1ServerExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UploadNotFoundException":case"com.amazonaws.ecr#UploadNotFoundException":s={...await deserializeAws_json1_1UploadNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_json1_1EmptyUploadExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1EmptyUploadException(n,t);const o={name:"EmptyUploadException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ImageAlreadyExistsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ImageAlreadyExistsException(n,t);const o={name:"ImageAlreadyExistsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ImageDigestDoesNotMatchExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ImageDigestDoesNotMatchException(n,t);const o={name:"ImageDigestDoesNotMatchException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ImageNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ImageNotFoundException(n,t);const o={name:"ImageNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ImageTagAlreadyExistsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ImageTagAlreadyExistsException(n,t);const o={name:"ImageTagAlreadyExistsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1InvalidLayerExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1InvalidLayerException(n,t);const o={name:"InvalidLayerException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1InvalidLayerPartExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1InvalidLayerPartException(n,t);const o={name:"InvalidLayerPartException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1InvalidParameterExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1InvalidParameterException(n,t);const o={name:"InvalidParameterException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1InvalidTagParameterExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1InvalidTagParameterException(n,t);const o={name:"InvalidTagParameterException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1KmsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1KmsException(n,t);const o={name:"KmsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LayerAlreadyExistsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LayerAlreadyExistsException(n,t);const o={name:"LayerAlreadyExistsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LayerInaccessibleExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LayerInaccessibleException(n,t);const o={name:"LayerInaccessibleException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LayerPartTooSmallExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LayerPartTooSmallException(n,t);const o={name:"LayerPartTooSmallException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LayersNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LayersNotFoundException(n,t);const o={name:"LayersNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LifecyclePolicyNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LifecyclePolicyNotFoundException(n,t);const o={name:"LifecyclePolicyNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LifecyclePolicyPreviewInProgressExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LifecyclePolicyPreviewInProgressException(n,t);const o={name:"LifecyclePolicyPreviewInProgressException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LifecyclePolicyPreviewNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LifecyclePolicyPreviewNotFoundException(n,t);const o={name:"LifecyclePolicyPreviewNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1LimitExceededExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1LimitExceededException(n,t);const o={name:"LimitExceededException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ReferencedImagesNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ReferencedImagesNotFoundException(n,t);const o={name:"ReferencedImagesNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1RegistryPolicyNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1RegistryPolicyNotFoundException(n,t);const o={name:"RegistryPolicyNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1RepositoryAlreadyExistsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1RepositoryAlreadyExistsException(n,t);const o={name:"RepositoryAlreadyExistsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1RepositoryNotEmptyExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1RepositoryNotEmptyException(n,t);const o={name:"RepositoryNotEmptyException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1RepositoryNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1RepositoryNotFoundException(n,t);const o={name:"RepositoryNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1RepositoryPolicyNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1RepositoryPolicyNotFoundException(n,t);const o={name:"RepositoryPolicyNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ScanNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ScanNotFoundException(n,t);const o={name:"ScanNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ServerExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ServerException(n,t);const o={name:"ServerException",$fault:"server",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1TooManyTagsExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1TooManyTagsException(n,t);const o={name:"TooManyTagsException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1UnsupportedImageTypeExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1UnsupportedImageTypeException(n,t);const o={name:"UnsupportedImageTypeException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1UploadNotFoundExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1UploadNotFoundException(n,t);const o={name:"UploadNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_json1_1ValidationExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_json1_1ValidationException(n,t);const o={name:"ValidationException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const serializeAws_json1_1BatchCheckLayerAvailabilityRequest=(e,t)=>({...e.layerDigests!==undefined&&e.layerDigests!==null&&{layerDigests:serializeAws_json1_1BatchedOperationLayerDigestList(e.layerDigests,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1BatchDeleteImageRequest=(e,t)=>({...e.imageIds!==undefined&&e.imageIds!==null&&{imageIds:serializeAws_json1_1ImageIdentifierList(e.imageIds,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1BatchedOperationLayerDigestList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1BatchGetImageRequest=(e,t)=>({...e.acceptedMediaTypes!==undefined&&e.acceptedMediaTypes!==null&&{acceptedMediaTypes:serializeAws_json1_1MediaTypeList(e.acceptedMediaTypes,t)},...e.imageIds!==undefined&&e.imageIds!==null&&{imageIds:serializeAws_json1_1ImageIdentifierList(e.imageIds,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1CompleteLayerUploadRequest=(e,t)=>({...e.layerDigests!==undefined&&e.layerDigests!==null&&{layerDigests:serializeAws_json1_1LayerDigestList(e.layerDigests,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName},...e.uploadId!==undefined&&e.uploadId!==null&&{uploadId:e.uploadId}});const serializeAws_json1_1CreateRepositoryRequest=(e,t)=>({...e.encryptionConfiguration!==undefined&&e.encryptionConfiguration!==null&&{encryptionConfiguration:serializeAws_json1_1EncryptionConfiguration(e.encryptionConfiguration,t)},...e.imageScanningConfiguration!==undefined&&e.imageScanningConfiguration!==null&&{imageScanningConfiguration:serializeAws_json1_1ImageScanningConfiguration(e.imageScanningConfiguration,t)},...e.imageTagMutability!==undefined&&e.imageTagMutability!==null&&{imageTagMutability:e.imageTagMutability},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName},...e.tags!==undefined&&e.tags!==null&&{tags:serializeAws_json1_1TagList(e.tags,t)}});const serializeAws_json1_1DeleteLifecyclePolicyRequest=(e,t)=>({...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1DeleteRegistryPolicyRequest=(e,t)=>({});const serializeAws_json1_1DeleteRepositoryPolicyRequest=(e,t)=>({...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1DeleteRepositoryRequest=(e,t)=>({...e.force!==undefined&&e.force!==null&&{force:e.force},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1DescribeImageScanFindingsRequest=(e,t)=>({...e.imageId!==undefined&&e.imageId!==null&&{imageId:serializeAws_json1_1ImageIdentifier(e.imageId,t)},...e.maxResults!==undefined&&e.maxResults!==null&&{maxResults:e.maxResults},...e.nextToken!==undefined&&e.nextToken!==null&&{nextToken:e.nextToken},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1DescribeImagesFilter=(e,t)=>({...e.tagStatus!==undefined&&e.tagStatus!==null&&{tagStatus:e.tagStatus}});const serializeAws_json1_1DescribeImagesRequest=(e,t)=>({...e.filter!==undefined&&e.filter!==null&&{filter:serializeAws_json1_1DescribeImagesFilter(e.filter,t)},...e.imageIds!==undefined&&e.imageIds!==null&&{imageIds:serializeAws_json1_1ImageIdentifierList(e.imageIds,t)},...e.maxResults!==undefined&&e.maxResults!==null&&{maxResults:e.maxResults},...e.nextToken!==undefined&&e.nextToken!==null&&{nextToken:e.nextToken},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1DescribeRegistryRequest=(e,t)=>({});const serializeAws_json1_1DescribeRepositoriesRequest=(e,t)=>({...e.maxResults!==undefined&&e.maxResults!==null&&{maxResults:e.maxResults},...e.nextToken!==undefined&&e.nextToken!==null&&{nextToken:e.nextToken},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryNames!==undefined&&e.repositoryNames!==null&&{repositoryNames:serializeAws_json1_1RepositoryNameList(e.repositoryNames,t)}});const serializeAws_json1_1EncryptionConfiguration=(e,t)=>({...e.encryptionType!==undefined&&e.encryptionType!==null&&{encryptionType:e.encryptionType},...e.kmsKey!==undefined&&e.kmsKey!==null&&{kmsKey:e.kmsKey}});const serializeAws_json1_1GetAuthorizationTokenRegistryIdList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1GetAuthorizationTokenRequest=(e,t)=>({...e.registryIds!==undefined&&e.registryIds!==null&&{registryIds:serializeAws_json1_1GetAuthorizationTokenRegistryIdList(e.registryIds,t)}});const serializeAws_json1_1GetDownloadUrlForLayerRequest=(e,t)=>({...e.layerDigest!==undefined&&e.layerDigest!==null&&{layerDigest:e.layerDigest},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1GetLifecyclePolicyPreviewRequest=(e,t)=>({...e.filter!==undefined&&e.filter!==null&&{filter:serializeAws_json1_1LifecyclePolicyPreviewFilter(e.filter,t)},...e.imageIds!==undefined&&e.imageIds!==null&&{imageIds:serializeAws_json1_1ImageIdentifierList(e.imageIds,t)},...e.maxResults!==undefined&&e.maxResults!==null&&{maxResults:e.maxResults},...e.nextToken!==undefined&&e.nextToken!==null&&{nextToken:e.nextToken},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1GetLifecyclePolicyRequest=(e,t)=>({...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1GetRegistryPolicyRequest=(e,t)=>({});const serializeAws_json1_1GetRepositoryPolicyRequest=(e,t)=>({...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1ImageIdentifier=(e,t)=>({...e.imageDigest!==undefined&&e.imageDigest!==null&&{imageDigest:e.imageDigest},...e.imageTag!==undefined&&e.imageTag!==null&&{imageTag:e.imageTag}});const serializeAws_json1_1ImageIdentifierList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return serializeAws_json1_1ImageIdentifier(e,t)}));const serializeAws_json1_1ImageScanningConfiguration=(e,t)=>({...e.scanOnPush!==undefined&&e.scanOnPush!==null&&{scanOnPush:e.scanOnPush}});const serializeAws_json1_1InitiateLayerUploadRequest=(e,t)=>({...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1LayerDigestList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1LifecyclePolicyPreviewFilter=(e,t)=>({...e.tagStatus!==undefined&&e.tagStatus!==null&&{tagStatus:e.tagStatus}});const serializeAws_json1_1ListImagesFilter=(e,t)=>({...e.tagStatus!==undefined&&e.tagStatus!==null&&{tagStatus:e.tagStatus}});const serializeAws_json1_1ListImagesRequest=(e,t)=>({...e.filter!==undefined&&e.filter!==null&&{filter:serializeAws_json1_1ListImagesFilter(e.filter,t)},...e.maxResults!==undefined&&e.maxResults!==null&&{maxResults:e.maxResults},...e.nextToken!==undefined&&e.nextToken!==null&&{nextToken:e.nextToken},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1ListTagsForResourceRequest=(e,t)=>({...e.resourceArn!==undefined&&e.resourceArn!==null&&{resourceArn:e.resourceArn}});const serializeAws_json1_1MediaTypeList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1PutImageRequest=(e,t)=>({...e.imageDigest!==undefined&&e.imageDigest!==null&&{imageDigest:e.imageDigest},...e.imageManifest!==undefined&&e.imageManifest!==null&&{imageManifest:e.imageManifest},...e.imageManifestMediaType!==undefined&&e.imageManifestMediaType!==null&&{imageManifestMediaType:e.imageManifestMediaType},...e.imageTag!==undefined&&e.imageTag!==null&&{imageTag:e.imageTag},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1PutImageScanningConfigurationRequest=(e,t)=>({...e.imageScanningConfiguration!==undefined&&e.imageScanningConfiguration!==null&&{imageScanningConfiguration:serializeAws_json1_1ImageScanningConfiguration(e.imageScanningConfiguration,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1PutImageTagMutabilityRequest=(e,t)=>({...e.imageTagMutability!==undefined&&e.imageTagMutability!==null&&{imageTagMutability:e.imageTagMutability},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1PutLifecyclePolicyRequest=(e,t)=>({...e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null&&{lifecyclePolicyText:e.lifecyclePolicyText},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1PutRegistryPolicyRequest=(e,t)=>({...e.policyText!==undefined&&e.policyText!==null&&{policyText:e.policyText}});const serializeAws_json1_1PutReplicationConfigurationRequest=(e,t)=>({...e.replicationConfiguration!==undefined&&e.replicationConfiguration!==null&&{replicationConfiguration:serializeAws_json1_1ReplicationConfiguration(e.replicationConfiguration,t)}});const serializeAws_json1_1ReplicationConfiguration=(e,t)=>({...e.rules!==undefined&&e.rules!==null&&{rules:serializeAws_json1_1ReplicationRuleList(e.rules,t)}});const serializeAws_json1_1ReplicationDestination=(e,t)=>({...e.region!==undefined&&e.region!==null&&{region:e.region},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId}});const serializeAws_json1_1ReplicationDestinationList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return serializeAws_json1_1ReplicationDestination(e,t)}));const serializeAws_json1_1ReplicationRule=(e,t)=>({...e.destinations!==undefined&&e.destinations!==null&&{destinations:serializeAws_json1_1ReplicationDestinationList(e.destinations,t)}});const serializeAws_json1_1ReplicationRuleList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return serializeAws_json1_1ReplicationRule(e,t)}));const serializeAws_json1_1RepositoryNameList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1SetRepositoryPolicyRequest=(e,t)=>({...e.force!==undefined&&e.force!==null&&{force:e.force},...e.policyText!==undefined&&e.policyText!==null&&{policyText:e.policyText},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1StartImageScanRequest=(e,t)=>({...e.imageId!==undefined&&e.imageId!==null&&{imageId:serializeAws_json1_1ImageIdentifier(e.imageId,t)},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1StartLifecyclePolicyPreviewRequest=(e,t)=>({...e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null&&{lifecyclePolicyText:e.lifecyclePolicyText},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName}});const serializeAws_json1_1Tag=(e,t)=>({...e.Key!==undefined&&e.Key!==null&&{Key:e.Key},...e.Value!==undefined&&e.Value!==null&&{Value:e.Value}});const serializeAws_json1_1TagKeyList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const serializeAws_json1_1TagList=(e,t)=>e.filter((e=>e!=null)).map((e=>{if(e===null){return null}return serializeAws_json1_1Tag(e,t)}));const serializeAws_json1_1TagResourceRequest=(e,t)=>({...e.resourceArn!==undefined&&e.resourceArn!==null&&{resourceArn:e.resourceArn},...e.tags!==undefined&&e.tags!==null&&{tags:serializeAws_json1_1TagList(e.tags,t)}});const serializeAws_json1_1UntagResourceRequest=(e,t)=>({...e.resourceArn!==undefined&&e.resourceArn!==null&&{resourceArn:e.resourceArn},...e.tagKeys!==undefined&&e.tagKeys!==null&&{tagKeys:serializeAws_json1_1TagKeyList(e.tagKeys,t)}});const serializeAws_json1_1UploadLayerPartRequest=(e,t)=>({...e.layerPartBlob!==undefined&&e.layerPartBlob!==null&&{layerPartBlob:t.base64Encoder(e.layerPartBlob)},...e.partFirstByte!==undefined&&e.partFirstByte!==null&&{partFirstByte:e.partFirstByte},...e.partLastByte!==undefined&&e.partLastByte!==null&&{partLastByte:e.partLastByte},...e.registryId!==undefined&&e.registryId!==null&&{registryId:e.registryId},...e.repositoryName!==undefined&&e.repositoryName!==null&&{repositoryName:e.repositoryName},...e.uploadId!==undefined&&e.uploadId!==null&&{uploadId:e.uploadId}});const deserializeAws_json1_1Attribute=(e,t)=>({key:e.key!==undefined&&e.key!==null?e.key:undefined,value:e.value!==undefined&&e.value!==null?e.value:undefined});const deserializeAws_json1_1AttributeList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1Attribute(e,t)}));const deserializeAws_json1_1AuthorizationData=(e,t)=>({authorizationToken:e.authorizationToken!==undefined&&e.authorizationToken!==null?e.authorizationToken:undefined,expiresAt:e.expiresAt!==undefined&&e.expiresAt!==null?new Date(Math.round(e.expiresAt*1e3)):undefined,proxyEndpoint:e.proxyEndpoint!==undefined&&e.proxyEndpoint!==null?e.proxyEndpoint:undefined});const deserializeAws_json1_1AuthorizationDataList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1AuthorizationData(e,t)}));const deserializeAws_json1_1BatchCheckLayerAvailabilityResponse=(e,t)=>({failures:e.failures!==undefined&&e.failures!==null?deserializeAws_json1_1LayerFailureList(e.failures,t):undefined,layers:e.layers!==undefined&&e.layers!==null?deserializeAws_json1_1LayerList(e.layers,t):undefined});const deserializeAws_json1_1BatchDeleteImageResponse=(e,t)=>({failures:e.failures!==undefined&&e.failures!==null?deserializeAws_json1_1ImageFailureList(e.failures,t):undefined,imageIds:e.imageIds!==undefined&&e.imageIds!==null?deserializeAws_json1_1ImageIdentifierList(e.imageIds,t):undefined});const deserializeAws_json1_1BatchGetImageResponse=(e,t)=>({failures:e.failures!==undefined&&e.failures!==null?deserializeAws_json1_1ImageFailureList(e.failures,t):undefined,images:e.images!==undefined&&e.images!==null?deserializeAws_json1_1ImageList(e.images,t):undefined});const deserializeAws_json1_1CompleteLayerUploadResponse=(e,t)=>({layerDigest:e.layerDigest!==undefined&&e.layerDigest!==null?e.layerDigest:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,uploadId:e.uploadId!==undefined&&e.uploadId!==null?e.uploadId:undefined});const deserializeAws_json1_1CreateRepositoryResponse=(e,t)=>({repository:e.repository!==undefined&&e.repository!==null?deserializeAws_json1_1Repository(e.repository,t):undefined});const deserializeAws_json1_1DeleteLifecyclePolicyResponse=(e,t)=>({lastEvaluatedAt:e.lastEvaluatedAt!==undefined&&e.lastEvaluatedAt!==null?new Date(Math.round(e.lastEvaluatedAt*1e3)):undefined,lifecyclePolicyText:e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null?e.lifecyclePolicyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1DeleteRegistryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined});const deserializeAws_json1_1DeleteRepositoryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1DeleteRepositoryResponse=(e,t)=>({repository:e.repository!==undefined&&e.repository!==null?deserializeAws_json1_1Repository(e.repository,t):undefined});const deserializeAws_json1_1DescribeImageScanFindingsResponse=(e,t)=>({imageId:e.imageId!==undefined&&e.imageId!==null?deserializeAws_json1_1ImageIdentifier(e.imageId,t):undefined,imageScanFindings:e.imageScanFindings!==undefined&&e.imageScanFindings!==null?deserializeAws_json1_1ImageScanFindings(e.imageScanFindings,t):undefined,imageScanStatus:e.imageScanStatus!==undefined&&e.imageScanStatus!==null?deserializeAws_json1_1ImageScanStatus(e.imageScanStatus,t):undefined,nextToken:e.nextToken!==undefined&&e.nextToken!==null?e.nextToken:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1DescribeImagesResponse=(e,t)=>({imageDetails:e.imageDetails!==undefined&&e.imageDetails!==null?deserializeAws_json1_1ImageDetailList(e.imageDetails,t):undefined,nextToken:e.nextToken!==undefined&&e.nextToken!==null?e.nextToken:undefined});const deserializeAws_json1_1DescribeRegistryResponse=(e,t)=>({registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,replicationConfiguration:e.replicationConfiguration!==undefined&&e.replicationConfiguration!==null?deserializeAws_json1_1ReplicationConfiguration(e.replicationConfiguration,t):undefined});const deserializeAws_json1_1DescribeRepositoriesResponse=(e,t)=>({nextToken:e.nextToken!==undefined&&e.nextToken!==null?e.nextToken:undefined,repositories:e.repositories!==undefined&&e.repositories!==null?deserializeAws_json1_1RepositoryList(e.repositories,t):undefined});const deserializeAws_json1_1EmptyUploadException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1EncryptionConfiguration=(e,t)=>({encryptionType:e.encryptionType!==undefined&&e.encryptionType!==null?e.encryptionType:undefined,kmsKey:e.kmsKey!==undefined&&e.kmsKey!==null?e.kmsKey:undefined});const deserializeAws_json1_1FindingSeverityCounts=(e,t)=>Object.entries(e).reduce(((e,[t,n])=>{if(n===null){return e}return{...e,[t]:n}}),{});const deserializeAws_json1_1GetAuthorizationTokenResponse=(e,t)=>({authorizationData:e.authorizationData!==undefined&&e.authorizationData!==null?deserializeAws_json1_1AuthorizationDataList(e.authorizationData,t):undefined});const deserializeAws_json1_1GetDownloadUrlForLayerResponse=(e,t)=>({downloadUrl:e.downloadUrl!==undefined&&e.downloadUrl!==null?e.downloadUrl:undefined,layerDigest:e.layerDigest!==undefined&&e.layerDigest!==null?e.layerDigest:undefined});const deserializeAws_json1_1GetLifecyclePolicyPreviewResponse=(e,t)=>({lifecyclePolicyText:e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null?e.lifecyclePolicyText:undefined,nextToken:e.nextToken!==undefined&&e.nextToken!==null?e.nextToken:undefined,previewResults:e.previewResults!==undefined&&e.previewResults!==null?deserializeAws_json1_1LifecyclePolicyPreviewResultList(e.previewResults,t):undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,status:e.status!==undefined&&e.status!==null?e.status:undefined,summary:e.summary!==undefined&&e.summary!==null?deserializeAws_json1_1LifecyclePolicyPreviewSummary(e.summary,t):undefined});const deserializeAws_json1_1GetLifecyclePolicyResponse=(e,t)=>({lastEvaluatedAt:e.lastEvaluatedAt!==undefined&&e.lastEvaluatedAt!==null?new Date(Math.round(e.lastEvaluatedAt*1e3)):undefined,lifecyclePolicyText:e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null?e.lifecyclePolicyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1GetRegistryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined});const deserializeAws_json1_1GetRepositoryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1Image=(e,t)=>({imageId:e.imageId!==undefined&&e.imageId!==null?deserializeAws_json1_1ImageIdentifier(e.imageId,t):undefined,imageManifest:e.imageManifest!==undefined&&e.imageManifest!==null?e.imageManifest:undefined,imageManifestMediaType:e.imageManifestMediaType!==undefined&&e.imageManifestMediaType!==null?e.imageManifestMediaType:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1ImageAlreadyExistsException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ImageDetail=(e,t)=>({artifactMediaType:e.artifactMediaType!==undefined&&e.artifactMediaType!==null?e.artifactMediaType:undefined,imageDigest:e.imageDigest!==undefined&&e.imageDigest!==null?e.imageDigest:undefined,imageManifestMediaType:e.imageManifestMediaType!==undefined&&e.imageManifestMediaType!==null?e.imageManifestMediaType:undefined,imagePushedAt:e.imagePushedAt!==undefined&&e.imagePushedAt!==null?new Date(Math.round(e.imagePushedAt*1e3)):undefined,imageScanFindingsSummary:e.imageScanFindingsSummary!==undefined&&e.imageScanFindingsSummary!==null?deserializeAws_json1_1ImageScanFindingsSummary(e.imageScanFindingsSummary,t):undefined,imageScanStatus:e.imageScanStatus!==undefined&&e.imageScanStatus!==null?deserializeAws_json1_1ImageScanStatus(e.imageScanStatus,t):undefined,imageSizeInBytes:e.imageSizeInBytes!==undefined&&e.imageSizeInBytes!==null?e.imageSizeInBytes:undefined,imageTags:e.imageTags!==undefined&&e.imageTags!==null?deserializeAws_json1_1ImageTagList(e.imageTags,t):undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1ImageDetailList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ImageDetail(e,t)}));const deserializeAws_json1_1ImageDigestDoesNotMatchException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ImageFailure=(e,t)=>({failureCode:e.failureCode!==undefined&&e.failureCode!==null?e.failureCode:undefined,failureReason:e.failureReason!==undefined&&e.failureReason!==null?e.failureReason:undefined,imageId:e.imageId!==undefined&&e.imageId!==null?deserializeAws_json1_1ImageIdentifier(e.imageId,t):undefined});const deserializeAws_json1_1ImageFailureList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ImageFailure(e,t)}));const deserializeAws_json1_1ImageIdentifier=(e,t)=>({imageDigest:e.imageDigest!==undefined&&e.imageDigest!==null?e.imageDigest:undefined,imageTag:e.imageTag!==undefined&&e.imageTag!==null?e.imageTag:undefined});const deserializeAws_json1_1ImageIdentifierList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ImageIdentifier(e,t)}));const deserializeAws_json1_1ImageList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1Image(e,t)}));const deserializeAws_json1_1ImageNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ImageScanFinding=(e,t)=>({attributes:e.attributes!==undefined&&e.attributes!==null?deserializeAws_json1_1AttributeList(e.attributes,t):undefined,description:e.description!==undefined&&e.description!==null?e.description:undefined,name:e.name!==undefined&&e.name!==null?e.name:undefined,severity:e.severity!==undefined&&e.severity!==null?e.severity:undefined,uri:e.uri!==undefined&&e.uri!==null?e.uri:undefined});const deserializeAws_json1_1ImageScanFindingList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ImageScanFinding(e,t)}));const deserializeAws_json1_1ImageScanFindings=(e,t)=>({findingSeverityCounts:e.findingSeverityCounts!==undefined&&e.findingSeverityCounts!==null?deserializeAws_json1_1FindingSeverityCounts(e.findingSeverityCounts,t):undefined,findings:e.findings!==undefined&&e.findings!==null?deserializeAws_json1_1ImageScanFindingList(e.findings,t):undefined,imageScanCompletedAt:e.imageScanCompletedAt!==undefined&&e.imageScanCompletedAt!==null?new Date(Math.round(e.imageScanCompletedAt*1e3)):undefined,vulnerabilitySourceUpdatedAt:e.vulnerabilitySourceUpdatedAt!==undefined&&e.vulnerabilitySourceUpdatedAt!==null?new Date(Math.round(e.vulnerabilitySourceUpdatedAt*1e3)):undefined});const deserializeAws_json1_1ImageScanFindingsSummary=(e,t)=>({findingSeverityCounts:e.findingSeverityCounts!==undefined&&e.findingSeverityCounts!==null?deserializeAws_json1_1FindingSeverityCounts(e.findingSeverityCounts,t):undefined,imageScanCompletedAt:e.imageScanCompletedAt!==undefined&&e.imageScanCompletedAt!==null?new Date(Math.round(e.imageScanCompletedAt*1e3)):undefined,vulnerabilitySourceUpdatedAt:e.vulnerabilitySourceUpdatedAt!==undefined&&e.vulnerabilitySourceUpdatedAt!==null?new Date(Math.round(e.vulnerabilitySourceUpdatedAt*1e3)):undefined});const deserializeAws_json1_1ImageScanningConfiguration=(e,t)=>({scanOnPush:e.scanOnPush!==undefined&&e.scanOnPush!==null?e.scanOnPush:undefined});const deserializeAws_json1_1ImageScanStatus=(e,t)=>({description:e.description!==undefined&&e.description!==null?e.description:undefined,status:e.status!==undefined&&e.status!==null?e.status:undefined});const deserializeAws_json1_1ImageTagAlreadyExistsException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ImageTagList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return e}));const deserializeAws_json1_1InitiateLayerUploadResponse=(e,t)=>({partSize:e.partSize!==undefined&&e.partSize!==null?e.partSize:undefined,uploadId:e.uploadId!==undefined&&e.uploadId!==null?e.uploadId:undefined});const deserializeAws_json1_1InvalidLayerException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1InvalidLayerPartException=(e,t)=>({lastValidByteReceived:e.lastValidByteReceived!==undefined&&e.lastValidByteReceived!==null?e.lastValidByteReceived:undefined,message:e.message!==undefined&&e.message!==null?e.message:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,uploadId:e.uploadId!==undefined&&e.uploadId!==null?e.uploadId:undefined});const deserializeAws_json1_1InvalidParameterException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1InvalidTagParameterException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1KmsException=(e,t)=>({kmsError:e.kmsError!==undefined&&e.kmsError!==null?e.kmsError:undefined,message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1Layer=(e,t)=>({layerAvailability:e.layerAvailability!==undefined&&e.layerAvailability!==null?e.layerAvailability:undefined,layerDigest:e.layerDigest!==undefined&&e.layerDigest!==null?e.layerDigest:undefined,layerSize:e.layerSize!==undefined&&e.layerSize!==null?e.layerSize:undefined,mediaType:e.mediaType!==undefined&&e.mediaType!==null?e.mediaType:undefined});const deserializeAws_json1_1LayerAlreadyExistsException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LayerFailure=(e,t)=>({failureCode:e.failureCode!==undefined&&e.failureCode!==null?e.failureCode:undefined,failureReason:e.failureReason!==undefined&&e.failureReason!==null?e.failureReason:undefined,layerDigest:e.layerDigest!==undefined&&e.layerDigest!==null?e.layerDigest:undefined});const deserializeAws_json1_1LayerFailureList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1LayerFailure(e,t)}));const deserializeAws_json1_1LayerInaccessibleException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LayerList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1Layer(e,t)}));const deserializeAws_json1_1LayerPartTooSmallException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LayersNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LifecyclePolicyNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LifecyclePolicyPreviewInProgressException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LifecyclePolicyPreviewNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1LifecyclePolicyPreviewResult=(e,t)=>({action:e.action!==undefined&&e.action!==null?deserializeAws_json1_1LifecyclePolicyRuleAction(e.action,t):undefined,appliedRulePriority:e.appliedRulePriority!==undefined&&e.appliedRulePriority!==null?e.appliedRulePriority:undefined,imageDigest:e.imageDigest!==undefined&&e.imageDigest!==null?e.imageDigest:undefined,imagePushedAt:e.imagePushedAt!==undefined&&e.imagePushedAt!==null?new Date(Math.round(e.imagePushedAt*1e3)):undefined,imageTags:e.imageTags!==undefined&&e.imageTags!==null?deserializeAws_json1_1ImageTagList(e.imageTags,t):undefined});const deserializeAws_json1_1LifecyclePolicyPreviewResultList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1LifecyclePolicyPreviewResult(e,t)}));const deserializeAws_json1_1LifecyclePolicyPreviewSummary=(e,t)=>({expiringImageTotalCount:e.expiringImageTotalCount!==undefined&&e.expiringImageTotalCount!==null?e.expiringImageTotalCount:undefined});const deserializeAws_json1_1LifecyclePolicyRuleAction=(e,t)=>({type:e.type!==undefined&&e.type!==null?e.type:undefined});const deserializeAws_json1_1LimitExceededException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ListImagesResponse=(e,t)=>({imageIds:e.imageIds!==undefined&&e.imageIds!==null?deserializeAws_json1_1ImageIdentifierList(e.imageIds,t):undefined,nextToken:e.nextToken!==undefined&&e.nextToken!==null?e.nextToken:undefined});const deserializeAws_json1_1ListTagsForResourceResponse=(e,t)=>({tags:e.tags!==undefined&&e.tags!==null?deserializeAws_json1_1TagList(e.tags,t):undefined});const deserializeAws_json1_1PutImageResponse=(e,t)=>({image:e.image!==undefined&&e.image!==null?deserializeAws_json1_1Image(e.image,t):undefined});const deserializeAws_json1_1PutImageScanningConfigurationResponse=(e,t)=>({imageScanningConfiguration:e.imageScanningConfiguration!==undefined&&e.imageScanningConfiguration!==null?deserializeAws_json1_1ImageScanningConfiguration(e.imageScanningConfiguration,t):undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1PutImageTagMutabilityResponse=(e,t)=>({imageTagMutability:e.imageTagMutability!==undefined&&e.imageTagMutability!==null?e.imageTagMutability:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1PutLifecyclePolicyResponse=(e,t)=>({lifecyclePolicyText:e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null?e.lifecyclePolicyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1PutRegistryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined});const deserializeAws_json1_1PutReplicationConfigurationResponse=(e,t)=>({replicationConfiguration:e.replicationConfiguration!==undefined&&e.replicationConfiguration!==null?deserializeAws_json1_1ReplicationConfiguration(e.replicationConfiguration,t):undefined});const deserializeAws_json1_1ReferencedImagesNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1RegistryPolicyNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ReplicationConfiguration=(e,t)=>({rules:e.rules!==undefined&&e.rules!==null?deserializeAws_json1_1ReplicationRuleList(e.rules,t):undefined});const deserializeAws_json1_1ReplicationDestination=(e,t)=>({region:e.region!==undefined&&e.region!==null?e.region:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined});const deserializeAws_json1_1ReplicationDestinationList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ReplicationDestination(e,t)}));const deserializeAws_json1_1ReplicationRule=(e,t)=>({destinations:e.destinations!==undefined&&e.destinations!==null?deserializeAws_json1_1ReplicationDestinationList(e.destinations,t):undefined});const deserializeAws_json1_1ReplicationRuleList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1ReplicationRule(e,t)}));const deserializeAws_json1_1Repository=(e,t)=>({createdAt:e.createdAt!==undefined&&e.createdAt!==null?new Date(Math.round(e.createdAt*1e3)):undefined,encryptionConfiguration:e.encryptionConfiguration!==undefined&&e.encryptionConfiguration!==null?deserializeAws_json1_1EncryptionConfiguration(e.encryptionConfiguration,t):undefined,imageScanningConfiguration:e.imageScanningConfiguration!==undefined&&e.imageScanningConfiguration!==null?deserializeAws_json1_1ImageScanningConfiguration(e.imageScanningConfiguration,t):undefined,imageTagMutability:e.imageTagMutability!==undefined&&e.imageTagMutability!==null?e.imageTagMutability:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryArn:e.repositoryArn!==undefined&&e.repositoryArn!==null?e.repositoryArn:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,repositoryUri:e.repositoryUri!==undefined&&e.repositoryUri!==null?e.repositoryUri:undefined});const deserializeAws_json1_1RepositoryAlreadyExistsException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1RepositoryList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1Repository(e,t)}));const deserializeAws_json1_1RepositoryNotEmptyException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1RepositoryNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1RepositoryPolicyNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ScanNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ServerException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1SetRepositoryPolicyResponse=(e,t)=>({policyText:e.policyText!==undefined&&e.policyText!==null?e.policyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1StartImageScanResponse=(e,t)=>({imageId:e.imageId!==undefined&&e.imageId!==null?deserializeAws_json1_1ImageIdentifier(e.imageId,t):undefined,imageScanStatus:e.imageScanStatus!==undefined&&e.imageScanStatus!==null?deserializeAws_json1_1ImageScanStatus(e.imageScanStatus,t):undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined});const deserializeAws_json1_1StartLifecyclePolicyPreviewResponse=(e,t)=>({lifecyclePolicyText:e.lifecyclePolicyText!==undefined&&e.lifecyclePolicyText!==null?e.lifecyclePolicyText:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,status:e.status!==undefined&&e.status!==null?e.status:undefined});const deserializeAws_json1_1Tag=(e,t)=>({Key:e.Key!==undefined&&e.Key!==null?e.Key:undefined,Value:e.Value!==undefined&&e.Value!==null?e.Value:undefined});const deserializeAws_json1_1TagList=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_json1_1Tag(e,t)}));const deserializeAws_json1_1TagResourceResponse=(e,t)=>({});const deserializeAws_json1_1TooManyTagsException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1UnsupportedImageTypeException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1UntagResourceResponse=(e,t)=>({});const deserializeAws_json1_1UploadLayerPartResponse=(e,t)=>({lastByteReceived:e.lastByteReceived!==undefined&&e.lastByteReceived!==null?e.lastByteReceived:undefined,registryId:e.registryId!==undefined&&e.registryId!==null?e.registryId:undefined,repositoryName:e.repositoryName!==undefined&&e.repositoryName!==null?e.repositoryName:undefined,uploadId:e.uploadId!==undefined&&e.uploadId!==null?e.uploadId:undefined});const deserializeAws_json1_1UploadNotFoundException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeAws_json1_1ValidationException=(e,t)=>({message:e.message!==undefined&&e.message!==null?e.message:undefined});const deserializeMetadata=e=>{var t;return{httpStatusCode:e.statusCode,requestId:(t=e.headers["x-amzn-requestid"])!==null&&t!==void 0?t:e.headers["x-amzn-request-id"],extendedRequestId:e.headers["x-amz-id-2"],cfId:e.headers["x-amz-cf-id"]}};const collectBody=(e=new Uint8Array,t)=>{if(e instanceof Uint8Array){return Promise.resolve(e)}return t.streamCollector(e)||Promise.resolve(new Uint8Array)};const collectBodyString=(e,t)=>collectBody(e,t).then((e=>t.utf8Encoder(e)));const buildHttpRpcRequest=async(e,t,n,o,i)=>{const{hostname:r,protocol:a="https",port:c}=await e.endpoint();const d={protocol:a,hostname:r,port:c,method:"POST",path:n,headers:t};if(o!==undefined){d.hostname=o}if(i!==undefined){d.body=i}return new s.HttpRequest(d)};const parseBody=(e,t)=>collectBodyString(e,t).then((e=>{if(e.length){return JSON.parse(e)}return{}}));const loadRestJsonErrorCode=(e,t)=>{const findKey=(e,t)=>Object.keys(e).find((e=>e.toLowerCase()===t.toLowerCase()));const sanitizeErrorCode=e=>{let t=e;if(t.indexOf(":")>=0){t=t.split(":")[0]}if(t.indexOf("#")>=0){t=t.split("#")[1]}return t};const n=findKey(e.headers,"x-amzn-errortype");if(n!==undefined){return sanitizeErrorCode(e.headers[n])}if(t.code!==undefined){return sanitizeErrorCode(t.code)}if(t["__type"]!==undefined){return sanitizeErrorCode(t["__type"])}return""}},9828:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientDefaultValues=void 0;const s=n(4351);const o=s.__importDefault(n(5859));const i=n(3285);const r=n(7229);const a=n(8030);const c=n(408);const d=n(7e3);const l=n(1124);const u=n(5168);const m=n(2091);const f=n(286);const g=n(4717);const p=n(5227);const y=n(4725);t.ClientDefaultValues={...y.ClientSharedValues,runtime:"node",base64Decoder:m.fromBase64,base64Encoder:m.toBase64,bodyLengthChecker:f.calculateBodyLength,credentialDefaultProvider:i.decorateDefaultCredentialProvider(a.defaultProvider),defaultUserAgentProvider:g.defaultUserAgent({serviceId:y.ClientSharedValues.serviceId,clientVersion:o.default.version}),maxAttempts:l.loadConfig(d.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),region:l.loadConfig(r.NODE_REGION_CONFIG_OPTIONS,r.NODE_REGION_CONFIG_FILE_OPTIONS),requestHandler:new u.NodeHttpHandler,sha256:c.Hash.bind(null,"sha256"),streamCollector:u.streamCollector,utf8Decoder:p.fromUtf8,utf8Encoder:p.toUtf8}},4725:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientSharedValues=void 0;const s=n(5321);const o=n(9427);t.ClientSharedValues={apiVersion:"2015-09-21",disableHostPrefix:false,logger:{},regionInfoProvider:s.defaultRegionInfoProvider,serviceId:"ECR",urlParser:o.parseUrl}},9452:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.waitForImageScanComplete=void 0;const s=n(2519);const o=n(6243);const checkState=async(e,t)=>{try{let n=await e.send(new s.DescribeImageScanFindingsCommand(t));try{let returnComparator=()=>n.imageScanStatus.status;if(returnComparator()==="COMPLETE"){return{state:o.WaiterState.SUCCESS}}}catch(e){}try{let returnComparator=()=>n.imageScanStatus.status;if(returnComparator()==="FAILED"){return{state:o.WaiterState.FAILURE}}}catch(e){}}catch(e){}return{state:o.WaiterState.RETRY}};const waitForImageScanComplete=async(e,t)=>{const n={minDelay:5,maxDelay:120};return o.createWaiter({...n,...e},t,checkState)};t.waitForImageScanComplete=waitForImageScanComplete},965:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.waitForLifecyclePolicyPreviewComplete=void 0;const s=n(8498);const o=n(6243);const checkState=async(e,t)=>{try{let n=await e.send(new s.GetLifecyclePolicyPreviewCommand(t));try{let returnComparator=()=>n.status;if(returnComparator()==="COMPLETE"){return{state:o.WaiterState.SUCCESS}}}catch(e){}try{let returnComparator=()=>n.status;if(returnComparator()==="FAILED"){return{state:o.WaiterState.FAILURE}}}catch(e){}}catch(e){}return{state:o.WaiterState.RETRY}};const waitForLifecyclePolicyPreviewComplete=async(e,t)=>{const n={minDelay:5,maxDelay:120};return o.createWaiter({...n,...e},t,checkState)};t.waitForLifecyclePolicyPreviewComplete=waitForLifecyclePolicyPreviewComplete},8207:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.SSO=void 0;const s=n(7975);const o=n(4703);const i=n(2665);const r=n(3878);const a=n(1163);class SSO extends s.SSOClient{getRoleCredentials(e,t,n){const s=new o.GetRoleCredentialsCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}listAccountRoles(e,t,n){const s=new i.ListAccountRolesCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}listAccounts(e,t,n){const s=new r.ListAccountsCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}logout(e,t,n){const s=new a.LogoutCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}}t.SSO=SSO},7975:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.SSOClient=void 0;const s=n(5498);const o=n(7229);const i=n(9323);const r=n(8645);const a=n(8685);const c=n(7e3);const d=n(5976);const l=n(2223);class SSOClient extends l.Client{constructor(e){let t={...s.ClientDefaultValues,...e};let n=o.resolveRegionConfig(t);let l=o.resolveEndpointsConfig(n);let u=c.resolveRetryConfig(l);let m=r.resolveHostHeaderConfig(u);let f=d.resolveUserAgentConfig(m);super(f);this.config=f;this.middlewareStack.use(c.getRetryPlugin(this.config));this.middlewareStack.use(i.getContentLengthPlugin(this.config));this.middlewareStack.use(r.getHostHeaderPlugin(this.config));this.middlewareStack.use(a.getLoggerPlugin(this.config));this.middlewareStack.use(d.getUserAgentPlugin(this.config))}destroy(){super.destroy()}}t.SSOClient=SSOClient},4703:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetRoleCredentialsCommand=void 0;const s=n(8928);const o=n(6015);const i=n(6142);const r=n(2223);class GetRoleCredentialsCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="SSOClient";const c="GetRoleCredentialsCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.GetRoleCredentialsRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetRoleCredentialsResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_restJson1GetRoleCredentialsCommand(e,t)}deserialize(e,t){return o.deserializeAws_restJson1GetRoleCredentialsCommand(e,t)}}t.GetRoleCredentialsCommand=GetRoleCredentialsCommand},2665:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ListAccountRolesCommand=void 0;const s=n(8928);const o=n(6015);const i=n(6142);const r=n(2223);class ListAccountRolesCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="SSOClient";const c="ListAccountRolesCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.ListAccountRolesRequest.filterSensitiveLog,outputFilterSensitiveLog:s.ListAccountRolesResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_restJson1ListAccountRolesCommand(e,t)}deserialize(e,t){return o.deserializeAws_restJson1ListAccountRolesCommand(e,t)}}t.ListAccountRolesCommand=ListAccountRolesCommand},3878:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ListAccountsCommand=void 0;const s=n(8928);const o=n(6015);const i=n(6142);const r=n(2223);class ListAccountsCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="SSOClient";const c="ListAccountsCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.ListAccountsRequest.filterSensitiveLog,outputFilterSensitiveLog:s.ListAccountsResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_restJson1ListAccountsCommand(e,t)}deserialize(e,t){return o.deserializeAws_restJson1ListAccountsCommand(e,t)}}t.ListAccountsCommand=ListAccountsCommand},1163:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.LogoutCommand=void 0;const s=n(8928);const o=n(6015);const i=n(6142);const r=n(2223);class LogoutCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="SSOClient";const c="LogoutCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.LogoutRequest.filterSensitiveLog,outputFilterSensitiveLog:e=>e};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_restJson1LogoutCommand(e,t)}deserialize(e,t){return o.deserializeAws_restJson1LogoutCommand(e,t)}}t.LogoutCommand=LogoutCommand},8274:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultRegionInfoProvider=void 0;const n="portal.sso.{region}.amazonaws.com";const s="portal.sso.{region}.amazonaws.com.cn";const o="portal.sso.{region}.c2s.ic.gov";const i="portal.sso.{region}.sc2s.sgov.gov";const r="portal.sso.{region}.amazonaws.com";const a=new Set(["af-south-1","ap-east-1","ap-northeast-1","ap-northeast-2","ap-south-1","ap-southeast-1","ap-southeast-2","ca-central-1","eu-central-1","eu-north-1","eu-south-1","eu-west-1","eu-west-2","eu-west-3","me-south-1","sa-east-1","us-east-1","us-east-2","us-west-1","us-west-2"]);const c=new Set(["cn-north-1","cn-northwest-1"]);const d=new Set(["us-iso-east-1"]);const l=new Set(["us-isob-east-1"]);const u=new Set(["us-gov-east-1","us-gov-west-1"]);const defaultRegionInfoProvider=(e,t)=>{let m=undefined;switch(e){case"ap-southeast-1":m={hostname:"portal.sso.ap-southeast-1.amazonaws.com",partition:"aws",signingRegion:"ap-southeast-1"};break;case"ap-southeast-2":m={hostname:"portal.sso.ap-southeast-2.amazonaws.com",partition:"aws",signingRegion:"ap-southeast-2"};break;case"ca-central-1":m={hostname:"portal.sso.ca-central-1.amazonaws.com",partition:"aws",signingRegion:"ca-central-1"};break;case"eu-central-1":m={hostname:"portal.sso.eu-central-1.amazonaws.com",partition:"aws",signingRegion:"eu-central-1"};break;case"eu-west-1":m={hostname:"portal.sso.eu-west-1.amazonaws.com",partition:"aws",signingRegion:"eu-west-1"};break;case"eu-west-2":m={hostname:"portal.sso.eu-west-2.amazonaws.com",partition:"aws",signingRegion:"eu-west-2"};break;case"us-east-1":m={hostname:"portal.sso.us-east-1.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"us-east-2":m={hostname:"portal.sso.us-east-2.amazonaws.com",partition:"aws",signingRegion:"us-east-2"};break;case"us-west-2":m={hostname:"portal.sso.us-west-2.amazonaws.com",partition:"aws",signingRegion:"us-west-2"};break;default:if(a.has(e)){m={hostname:n.replace("{region}",e),partition:"aws"}}if(c.has(e)){m={hostname:s.replace("{region}",e),partition:"aws-cn"}}if(d.has(e)){m={hostname:o.replace("{region}",e),partition:"aws-iso"}}if(l.has(e)){m={hostname:i.replace("{region}",e),partition:"aws-iso-b"}}if(u.has(e)){m={hostname:r.replace("{region}",e),partition:"aws-us-gov"}}if(m===undefined){m={hostname:n.replace("{region}",e),partition:"aws"}}}return Promise.resolve({signingService:"awsssoportal",...m})};t.defaultRegionInfoProvider=defaultRegionInfoProvider},2611:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(7975),t);s.__exportStar(n(8207),t);s.__exportStar(n(4703),t);s.__exportStar(n(2665),t);s.__exportStar(n(5895),t);s.__exportStar(n(3878),t);s.__exportStar(n(7118),t);s.__exportStar(n(1163),t);s.__exportStar(n(1621),t);s.__exportStar(n(2913),t)},2913:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(8928),t)},8928:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.LogoutRequest=t.ListAccountsResponse=t.ListAccountsRequest=t.ListAccountRolesResponse=t.RoleInfo=t.ListAccountRolesRequest=t.UnauthorizedException=t.TooManyRequestsException=t.ResourceNotFoundException=t.InvalidRequestException=t.GetRoleCredentialsResponse=t.RoleCredentials=t.GetRoleCredentialsRequest=t.AccountInfo=void 0;const s=n(2223);var o;(function(e){e.filterSensitiveLog=e=>({...e})})(o=t.AccountInfo||(t.AccountInfo={}));var i;(function(e){e.filterSensitiveLog=e=>({...e,...e.accessToken&&{accessToken:s.SENSITIVE_STRING}})})(i=t.GetRoleCredentialsRequest||(t.GetRoleCredentialsRequest={}));var r;(function(e){e.filterSensitiveLog=e=>({...e,...e.secretAccessKey&&{secretAccessKey:s.SENSITIVE_STRING},...e.sessionToken&&{sessionToken:s.SENSITIVE_STRING}})})(r=t.RoleCredentials||(t.RoleCredentials={}));var a;(function(e){e.filterSensitiveLog=e=>({...e,...e.roleCredentials&&{roleCredentials:r.filterSensitiveLog(e.roleCredentials)}})})(a=t.GetRoleCredentialsResponse||(t.GetRoleCredentialsResponse={}));var c;(function(e){e.filterSensitiveLog=e=>({...e})})(c=t.InvalidRequestException||(t.InvalidRequestException={}));var d;(function(e){e.filterSensitiveLog=e=>({...e})})(d=t.ResourceNotFoundException||(t.ResourceNotFoundException={}));var l;(function(e){e.filterSensitiveLog=e=>({...e})})(l=t.TooManyRequestsException||(t.TooManyRequestsException={}));var u;(function(e){e.filterSensitiveLog=e=>({...e})})(u=t.UnauthorizedException||(t.UnauthorizedException={}));var m;(function(e){e.filterSensitiveLog=e=>({...e,...e.accessToken&&{accessToken:s.SENSITIVE_STRING}})})(m=t.ListAccountRolesRequest||(t.ListAccountRolesRequest={}));var f;(function(e){e.filterSensitiveLog=e=>({...e})})(f=t.RoleInfo||(t.RoleInfo={}));var g;(function(e){e.filterSensitiveLog=e=>({...e})})(g=t.ListAccountRolesResponse||(t.ListAccountRolesResponse={}));var p;(function(e){e.filterSensitiveLog=e=>({...e,...e.accessToken&&{accessToken:s.SENSITIVE_STRING}})})(p=t.ListAccountsRequest||(t.ListAccountsRequest={}));var y;(function(e){e.filterSensitiveLog=e=>({...e})})(y=t.ListAccountsResponse||(t.ListAccountsResponse={}));var w;(function(e){e.filterSensitiveLog=e=>({...e,...e.accessToken&&{accessToken:s.SENSITIVE_STRING}})})(w=t.LogoutRequest||(t.LogoutRequest={}))},1621:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},5895:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateListAccountRoles=void 0;const s=n(8207);const o=n(7975);const i=n(2665);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.ListAccountRolesCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.listAccountRoles(t,...n);async function*paginateListAccountRoles(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.SSO){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.SSOClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected SSO | SSOClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateListAccountRoles=paginateListAccountRoles},7118:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.paginateListAccounts=void 0;const s=n(8207);const o=n(7975);const i=n(3878);const makePagedClientRequest=async(e,t,...n)=>await e.send(new i.ListAccountsCommand(t),...n);const makePagedRequest=async(e,t,...n)=>await e.listAccounts(t,...n);async function*paginateListAccounts(e,t,...n){let i=e.startingToken||undefined;let r=true;let a;while(r){t.nextToken=i;t["maxResults"]=e.pageSize;if(e.client instanceof s.SSO){a=await makePagedRequest(e.client,t,...n)}else if(e.client instanceof o.SSOClient){a=await makePagedClientRequest(e.client,t,...n)}else{throw new Error("Invalid client, expected SSO | SSOClient")}yield a;i=a.nextToken;r=!!i}return undefined}t.paginateListAccounts=paginateListAccounts},6015:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.deserializeAws_restJson1LogoutCommand=t.deserializeAws_restJson1ListAccountsCommand=t.deserializeAws_restJson1ListAccountRolesCommand=t.deserializeAws_restJson1GetRoleCredentialsCommand=t.serializeAws_restJson1LogoutCommand=t.serializeAws_restJson1ListAccountsCommand=t.serializeAws_restJson1ListAccountRolesCommand=t.serializeAws_restJson1GetRoleCredentialsCommand=void 0;const s=n(7498);const serializeAws_restJson1GetRoleCredentialsCommand=async(e,t)=>{const n={...isSerializableHeaderValue(e.accessToken)&&{"x-amz-sso_bearer_token":e.accessToken}};let o="/federation/credentials";const i={...e.roleName!==undefined&&{role_name:e.roleName},...e.accountId!==undefined&&{account_id:e.accountId}};let r;const{hostname:a,protocol:c="https",port:d}=await t.endpoint();return new s.HttpRequest({protocol:c,hostname:a,port:d,method:"GET",headers:n,path:o,query:i,body:r})};t.serializeAws_restJson1GetRoleCredentialsCommand=serializeAws_restJson1GetRoleCredentialsCommand;const serializeAws_restJson1ListAccountRolesCommand=async(e,t)=>{const n={...isSerializableHeaderValue(e.accessToken)&&{"x-amz-sso_bearer_token":e.accessToken}};let o="/assignment/roles";const i={...e.nextToken!==undefined&&{next_token:e.nextToken},...e.maxResults!==undefined&&{max_result:e.maxResults.toString()},...e.accountId!==undefined&&{account_id:e.accountId}};let r;const{hostname:a,protocol:c="https",port:d}=await t.endpoint();return new s.HttpRequest({protocol:c,hostname:a,port:d,method:"GET",headers:n,path:o,query:i,body:r})};t.serializeAws_restJson1ListAccountRolesCommand=serializeAws_restJson1ListAccountRolesCommand;const serializeAws_restJson1ListAccountsCommand=async(e,t)=>{const n={...isSerializableHeaderValue(e.accessToken)&&{"x-amz-sso_bearer_token":e.accessToken}};let o="/assignment/accounts";const i={...e.nextToken!==undefined&&{next_token:e.nextToken},...e.maxResults!==undefined&&{max_result:e.maxResults.toString()}};let r;const{hostname:a,protocol:c="https",port:d}=await t.endpoint();return new s.HttpRequest({protocol:c,hostname:a,port:d,method:"GET",headers:n,path:o,query:i,body:r})};t.serializeAws_restJson1ListAccountsCommand=serializeAws_restJson1ListAccountsCommand;const serializeAws_restJson1LogoutCommand=async(e,t)=>{const n={...isSerializableHeaderValue(e.accessToken)&&{"x-amz-sso_bearer_token":e.accessToken}};let o="/logout";let i;const{hostname:r,protocol:a="https",port:c}=await t.endpoint();return new s.HttpRequest({protocol:a,hostname:r,port:c,method:"POST",headers:n,path:o,body:i})};t.serializeAws_restJson1LogoutCommand=serializeAws_restJson1LogoutCommand;const deserializeAws_restJson1GetRoleCredentialsCommand=async(e,t)=>{if(e.statusCode!==200&&e.statusCode>=300){return deserializeAws_restJson1GetRoleCredentialsCommandError(e,t)}const n={$metadata:deserializeMetadata(e),roleCredentials:undefined};const s=await parseBody(e.body,t);if(s.roleCredentials!==undefined&&s.roleCredentials!==null){n.roleCredentials=deserializeAws_restJson1RoleCredentials(s.roleCredentials,t)}return Promise.resolve(n)};t.deserializeAws_restJson1GetRoleCredentialsCommand=deserializeAws_restJson1GetRoleCredentialsCommand;const deserializeAws_restJson1GetRoleCredentialsCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidRequestException":case"com.amazonaws.sso#InvalidRequestException":s={...await deserializeAws_restJson1InvalidRequestExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ResourceNotFoundException":case"com.amazonaws.sso#ResourceNotFoundException":s={...await deserializeAws_restJson1ResourceNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyRequestsException":case"com.amazonaws.sso#TooManyRequestsException":s={...await deserializeAws_restJson1TooManyRequestsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UnauthorizedException":case"com.amazonaws.sso#UnauthorizedException":s={...await deserializeAws_restJson1UnauthorizedExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_restJson1ListAccountRolesCommand=async(e,t)=>{if(e.statusCode!==200&&e.statusCode>=300){return deserializeAws_restJson1ListAccountRolesCommandError(e,t)}const n={$metadata:deserializeMetadata(e),nextToken:undefined,roleList:undefined};const s=await parseBody(e.body,t);if(s.nextToken!==undefined&&s.nextToken!==null){n.nextToken=s.nextToken}if(s.roleList!==undefined&&s.roleList!==null){n.roleList=deserializeAws_restJson1RoleListType(s.roleList,t)}return Promise.resolve(n)};t.deserializeAws_restJson1ListAccountRolesCommand=deserializeAws_restJson1ListAccountRolesCommand;const deserializeAws_restJson1ListAccountRolesCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidRequestException":case"com.amazonaws.sso#InvalidRequestException":s={...await deserializeAws_restJson1InvalidRequestExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ResourceNotFoundException":case"com.amazonaws.sso#ResourceNotFoundException":s={...await deserializeAws_restJson1ResourceNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyRequestsException":case"com.amazonaws.sso#TooManyRequestsException":s={...await deserializeAws_restJson1TooManyRequestsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UnauthorizedException":case"com.amazonaws.sso#UnauthorizedException":s={...await deserializeAws_restJson1UnauthorizedExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_restJson1ListAccountsCommand=async(e,t)=>{if(e.statusCode!==200&&e.statusCode>=300){return deserializeAws_restJson1ListAccountsCommandError(e,t)}const n={$metadata:deserializeMetadata(e),accountList:undefined,nextToken:undefined};const s=await parseBody(e.body,t);if(s.accountList!==undefined&&s.accountList!==null){n.accountList=deserializeAws_restJson1AccountListType(s.accountList,t)}if(s.nextToken!==undefined&&s.nextToken!==null){n.nextToken=s.nextToken}return Promise.resolve(n)};t.deserializeAws_restJson1ListAccountsCommand=deserializeAws_restJson1ListAccountsCommand;const deserializeAws_restJson1ListAccountsCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidRequestException":case"com.amazonaws.sso#InvalidRequestException":s={...await deserializeAws_restJson1InvalidRequestExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"ResourceNotFoundException":case"com.amazonaws.sso#ResourceNotFoundException":s={...await deserializeAws_restJson1ResourceNotFoundExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyRequestsException":case"com.amazonaws.sso#TooManyRequestsException":s={...await deserializeAws_restJson1TooManyRequestsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UnauthorizedException":case"com.amazonaws.sso#UnauthorizedException":s={...await deserializeAws_restJson1UnauthorizedExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_restJson1LogoutCommand=async(e,t)=>{if(e.statusCode!==200&&e.statusCode>=300){return deserializeAws_restJson1LogoutCommandError(e,t)}const n={$metadata:deserializeMetadata(e)};await collectBody(e.body,t);return Promise.resolve(n)};t.deserializeAws_restJson1LogoutCommand=deserializeAws_restJson1LogoutCommand;const deserializeAws_restJson1LogoutCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadRestJsonErrorCode(e,n.body);switch(o){case"InvalidRequestException":case"com.amazonaws.sso#InvalidRequestException":s={...await deserializeAws_restJson1InvalidRequestExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"TooManyRequestsException":case"com.amazonaws.sso#TooManyRequestsException":s={...await deserializeAws_restJson1TooManyRequestsExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"UnauthorizedException":case"com.amazonaws.sso#UnauthorizedException":s={...await deserializeAws_restJson1UnauthorizedExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.code||i.Code||o;s={...i,name:`${o}`,message:i.message||i.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_restJson1InvalidRequestExceptionResponse=async(e,t)=>{const n={name:"InvalidRequestException",$fault:"client",$metadata:deserializeMetadata(e),message:undefined};const s=e.body;if(s.message!==undefined&&s.message!==null){n.message=s.message}return n};const deserializeAws_restJson1ResourceNotFoundExceptionResponse=async(e,t)=>{const n={name:"ResourceNotFoundException",$fault:"client",$metadata:deserializeMetadata(e),message:undefined};const s=e.body;if(s.message!==undefined&&s.message!==null){n.message=s.message}return n};const deserializeAws_restJson1TooManyRequestsExceptionResponse=async(e,t)=>{const n={name:"TooManyRequestsException",$fault:"client",$metadata:deserializeMetadata(e),message:undefined};const s=e.body;if(s.message!==undefined&&s.message!==null){n.message=s.message}return n};const deserializeAws_restJson1UnauthorizedExceptionResponse=async(e,t)=>{const n={name:"UnauthorizedException",$fault:"client",$metadata:deserializeMetadata(e),message:undefined};const s=e.body;if(s.message!==undefined&&s.message!==null){n.message=s.message}return n};const deserializeAws_restJson1AccountInfo=(e,t)=>({accountId:e.accountId!==undefined&&e.accountId!==null?e.accountId:undefined,accountName:e.accountName!==undefined&&e.accountName!==null?e.accountName:undefined,emailAddress:e.emailAddress!==undefined&&e.emailAddress!==null?e.emailAddress:undefined});const deserializeAws_restJson1AccountListType=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_restJson1AccountInfo(e,t)}));const deserializeAws_restJson1RoleCredentials=(e,t)=>({accessKeyId:e.accessKeyId!==undefined&&e.accessKeyId!==null?e.accessKeyId:undefined,expiration:e.expiration!==undefined&&e.expiration!==null?e.expiration:undefined,secretAccessKey:e.secretAccessKey!==undefined&&e.secretAccessKey!==null?e.secretAccessKey:undefined,sessionToken:e.sessionToken!==undefined&&e.sessionToken!==null?e.sessionToken:undefined});const deserializeAws_restJson1RoleInfo=(e,t)=>({accountId:e.accountId!==undefined&&e.accountId!==null?e.accountId:undefined,roleName:e.roleName!==undefined&&e.roleName!==null?e.roleName:undefined});const deserializeAws_restJson1RoleListType=(e,t)=>(e||[]).filter((e=>e!=null)).map((e=>{if(e===null){return null}return deserializeAws_restJson1RoleInfo(e,t)}));const deserializeMetadata=e=>{var t;return{httpStatusCode:e.statusCode,requestId:(t=e.headers["x-amzn-requestid"])!==null&&t!==void 0?t:e.headers["x-amzn-request-id"],extendedRequestId:e.headers["x-amz-id-2"],cfId:e.headers["x-amz-cf-id"]}};const collectBody=(e=new Uint8Array,t)=>{if(e instanceof Uint8Array){return Promise.resolve(e)}return t.streamCollector(e)||Promise.resolve(new Uint8Array)};const collectBodyString=(e,t)=>collectBody(e,t).then((e=>t.utf8Encoder(e)));const isSerializableHeaderValue=e=>e!==undefined&&e!==null&&e!==""&&(!Object.getOwnPropertyNames(e).includes("length")||e.length!=0)&&(!Object.getOwnPropertyNames(e).includes("size")||e.size!=0);const parseBody=(e,t)=>collectBodyString(e,t).then((e=>{if(e.length){return JSON.parse(e)}return{}}));const loadRestJsonErrorCode=(e,t)=>{const findKey=(e,t)=>Object.keys(e).find((e=>e.toLowerCase()===t.toLowerCase()));const sanitizeErrorCode=e=>{let t=e;if(t.indexOf(":")>=0){t=t.split(":")[0]}if(t.indexOf("#")>=0){t=t.split("#")[1]}return t};const n=findKey(e.headers,"x-amzn-errortype");if(n!==undefined){return sanitizeErrorCode(e.headers[n])}if(t.code!==undefined){return sanitizeErrorCode(t.code)}if(t["__type"]!==undefined){return sanitizeErrorCode(t["__type"])}return""}},5498:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientDefaultValues=void 0;const s=n(4351);const o=s.__importDefault(n(8267));const i=n(7229);const r=n(408);const a=n(7e3);const c=n(1124);const d=n(5168);const l=n(2091);const u=n(286);const m=n(4717);const f=n(5227);const g=n(2284);t.ClientDefaultValues={...g.ClientSharedValues,runtime:"node",base64Decoder:l.fromBase64,base64Encoder:l.toBase64,bodyLengthChecker:u.calculateBodyLength,defaultUserAgentProvider:m.defaultUserAgent({serviceId:g.ClientSharedValues.serviceId,clientVersion:o.default.version}),maxAttempts:c.loadConfig(a.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),region:c.loadConfig(i.NODE_REGION_CONFIG_OPTIONS,i.NODE_REGION_CONFIG_FILE_OPTIONS),requestHandler:new d.NodeHttpHandler,sha256:r.Hash.bind(null,"sha256"),streamCollector:d.streamCollector,utf8Decoder:f.fromUtf8,utf8Encoder:f.toUtf8}},2284:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientSharedValues=void 0;const s=n(8274);const o=n(9427);t.ClientSharedValues={apiVersion:"2019-06-10",disableHostPrefix:false,logger:{},regionInfoProvider:s.defaultRegionInfoProvider,serviceId:"SSO",urlParser:o.parseUrl}},3853:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.STS=void 0;const s=n(2316);const o=n(3638);const i=n(550);const r=n(1733);const a=n(9448);const c=n(4317);const d=n(2439);const l=n(5239);const u=n(6499);class STS extends s.STSClient{assumeRole(e,t,n){const s=new o.AssumeRoleCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}assumeRoleWithSAML(e,t,n){const s=new i.AssumeRoleWithSAMLCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}assumeRoleWithWebIdentity(e,t,n){const s=new r.AssumeRoleWithWebIdentityCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}decodeAuthorizationMessage(e,t,n){const s=new a.DecodeAuthorizationMessageCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getAccessKeyInfo(e,t,n){const s=new c.GetAccessKeyInfoCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getCallerIdentity(e,t,n){const s=new d.GetCallerIdentityCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getFederationToken(e,t,n){const s=new l.GetFederationTokenCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}getSessionToken(e,t,n){const s=new u.GetSessionTokenCommand(e);if(typeof t==="function"){this.send(s,t)}else if(typeof n==="function"){if(typeof t!=="object")throw new Error(`Expect http options but get ${typeof t}`);this.send(s,t||{},n)}else{return this.send(s,t)}}}t.STS=STS},2316:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.STSClient=void 0;const s=n(4675);const o=n(7229);const i=n(9323);const r=n(8645);const a=n(8685);const c=n(7e3);const d=n(9637);const l=n(5976);const u=n(2223);class STSClient extends u.Client{constructor(e){let t={...s.ClientDefaultValues,...e};let n=o.resolveRegionConfig(t);let u=o.resolveEndpointsConfig(n);let m=c.resolveRetryConfig(u);let f=r.resolveHostHeaderConfig(m);let g=d.resolveStsAuthConfig(f,STSClient);let p=l.resolveUserAgentConfig(g);super(p);this.config=p;this.middlewareStack.use(c.getRetryPlugin(this.config));this.middlewareStack.use(i.getContentLengthPlugin(this.config));this.middlewareStack.use(r.getHostHeaderPlugin(this.config));this.middlewareStack.use(a.getLoggerPlugin(this.config));this.middlewareStack.use(l.getUserAgentPlugin(this.config))}destroy(){super.destroy()}}t.STSClient=STSClient},3638:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.AssumeRoleCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class AssumeRoleCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="AssumeRoleCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.AssumeRoleRequest.filterSensitiveLog,outputFilterSensitiveLog:s.AssumeRoleResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryAssumeRoleCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryAssumeRoleCommand(e,t)}}t.AssumeRoleCommand=AssumeRoleCommand},550:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.AssumeRoleWithSAMLCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2223);class AssumeRoleWithSAMLCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="STSClient";const c="AssumeRoleWithSAMLCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.AssumeRoleWithSAMLRequest.filterSensitiveLog,outputFilterSensitiveLog:s.AssumeRoleWithSAMLResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_queryAssumeRoleWithSAMLCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryAssumeRoleWithSAMLCommand(e,t)}}t.AssumeRoleWithSAMLCommand=AssumeRoleWithSAMLCommand},1733:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.AssumeRoleWithWebIdentityCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2223);class AssumeRoleWithWebIdentityCommand extends r.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));const o=e.concat(this.middlewareStack);const{logger:r}=t;const a="STSClient";const c="AssumeRoleWithWebIdentityCommand";const d={logger:r,clientName:a,commandName:c,inputFilterSensitiveLog:s.AssumeRoleWithWebIdentityRequest.filterSensitiveLog,outputFilterSensitiveLog:s.AssumeRoleWithWebIdentityResponse.filterSensitiveLog};const{requestHandler:l}=t;return o.resolve((e=>l.handle(e.request,n||{})),d)}serialize(e,t){return o.serializeAws_queryAssumeRoleWithWebIdentityCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryAssumeRoleWithWebIdentityCommand(e,t)}}t.AssumeRoleWithWebIdentityCommand=AssumeRoleWithWebIdentityCommand},9448:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.DecodeAuthorizationMessageCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class DecodeAuthorizationMessageCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="DecodeAuthorizationMessageCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.DecodeAuthorizationMessageRequest.filterSensitiveLog,outputFilterSensitiveLog:s.DecodeAuthorizationMessageResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryDecodeAuthorizationMessageCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryDecodeAuthorizationMessageCommand(e,t)}}t.DecodeAuthorizationMessageCommand=DecodeAuthorizationMessageCommand},4317:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetAccessKeyInfoCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class GetAccessKeyInfoCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="GetAccessKeyInfoCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.GetAccessKeyInfoRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetAccessKeyInfoResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryGetAccessKeyInfoCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryGetAccessKeyInfoCommand(e,t)}}t.GetAccessKeyInfoCommand=GetAccessKeyInfoCommand},2439:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetCallerIdentityCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class GetCallerIdentityCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="GetCallerIdentityCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.GetCallerIdentityRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetCallerIdentityResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryGetCallerIdentityCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryGetCallerIdentityCommand(e,t)}}t.GetCallerIdentityCommand=GetCallerIdentityCommand},5239:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetFederationTokenCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class GetFederationTokenCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="GetFederationTokenCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.GetFederationTokenRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetFederationTokenResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryGetFederationTokenCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryGetFederationTokenCommand(e,t)}}t.GetFederationTokenCommand=GetFederationTokenCommand},6499:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetSessionTokenCommand=void 0;const s=n(536);const o=n(6528);const i=n(6142);const r=n(2487);const a=n(2223);class GetSessionTokenCommand extends a.Command{constructor(e){super();this.input=e}resolveMiddleware(e,t,n){this.middlewareStack.use(i.getSerdePlugin(t,this.serialize,this.deserialize));this.middlewareStack.use(r.getAwsAuthPlugin(t));const o=e.concat(this.middlewareStack);const{logger:a}=t;const c="STSClient";const d="GetSessionTokenCommand";const l={logger:a,clientName:c,commandName:d,inputFilterSensitiveLog:s.GetSessionTokenRequest.filterSensitiveLog,outputFilterSensitiveLog:s.GetSessionTokenResponse.filterSensitiveLog};const{requestHandler:u}=t;return o.resolve((e=>u.handle(e.request,n||{})),l)}serialize(e,t){return o.serializeAws_queryGetSessionTokenCommand(e,t)}deserialize(e,t){return o.deserializeAws_queryGetSessionTokenCommand(e,t)}}t.GetSessionTokenCommand=GetSessionTokenCommand},7716:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.decorateDefaultCredentialProvider=t.getDefaultRoleAssumerWithWebIdentity=t.getDefaultRoleAssumer=void 0;const s=n(2418);const o=n(2316);const getDefaultRoleAssumer=(e={})=>s.getDefaultRoleAssumer(e,o.STSClient);t.getDefaultRoleAssumer=getDefaultRoleAssumer;const getDefaultRoleAssumerWithWebIdentity=(e={})=>s.getDefaultRoleAssumerWithWebIdentity(e,o.STSClient);t.getDefaultRoleAssumerWithWebIdentity=getDefaultRoleAssumerWithWebIdentity;const decorateDefaultCredentialProvider=e=>n=>e({roleAssumer:t.getDefaultRoleAssumer(n),roleAssumerWithWebIdentity:t.getDefaultRoleAssumerWithWebIdentity(n),...n});t.decorateDefaultCredentialProvider=decorateDefaultCredentialProvider},2418:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.decorateDefaultCredentialProvider=t.getDefaultRoleAssumerWithWebIdentity=t.getDefaultRoleAssumer=void 0;const s=n(3638);const o=n(1733);const i="us-east-1";const decorateDefaultRegion=e=>{if(typeof e!=="function"){return e===undefined?i:e}return async()=>{try{return await e()}catch(e){return i}}};const getDefaultRoleAssumer=(e,t)=>{let n;return async(o,i)=>{if(!n){const{logger:s,region:i}=e;n=new t({logger:s,credentials:o,region:decorateDefaultRegion(i)})}const{Credentials:r}=await n.send(new s.AssumeRoleCommand(i));if(!r||!r.AccessKeyId||!r.SecretAccessKey){throw new Error(`Invalid response from STS.assumeRole call with role ${i.RoleArn}`)}return{accessKeyId:r.AccessKeyId,secretAccessKey:r.SecretAccessKey,sessionToken:r.SessionToken,expiration:r.Expiration}}};t.getDefaultRoleAssumer=getDefaultRoleAssumer;const getDefaultRoleAssumerWithWebIdentity=(e,t)=>{let n;return async s=>{if(!n){const{logger:s,region:o}=e;n=new t({logger:s,region:decorateDefaultRegion(o)})}const{Credentials:i}=await n.send(new o.AssumeRoleWithWebIdentityCommand(s));if(!i||!i.AccessKeyId||!i.SecretAccessKey){throw new Error(`Invalid response from STS.assumeRoleWithWebIdentity call with role ${s.RoleArn}`)}return{accessKeyId:i.AccessKeyId,secretAccessKey:i.SecretAccessKey,sessionToken:i.SessionToken,expiration:i.Expiration}}};t.getDefaultRoleAssumerWithWebIdentity=getDefaultRoleAssumerWithWebIdentity;const decorateDefaultCredentialProvider=e=>n=>e({roleAssumer:t.getDefaultRoleAssumer(n,n.stsClientCtor),roleAssumerWithWebIdentity:t.getDefaultRoleAssumerWithWebIdentity(n,n.stsClientCtor),...n});t.decorateDefaultCredentialProvider=decorateDefaultCredentialProvider},2798:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultRegionInfoProvider=void 0;const n="sts.{region}.amazonaws.com";const s="sts.{region}.amazonaws.com.cn";const o="sts.{region}.c2s.ic.gov";const i="sts.{region}.sc2s.sgov.gov";const r="sts.{region}.amazonaws.com";const a=new Set(["af-south-1","ap-east-1","ap-northeast-1","ap-northeast-2","ap-south-1","ap-southeast-1","ap-southeast-2","ca-central-1","eu-central-1","eu-north-1","eu-south-1","eu-west-1","eu-west-2","eu-west-3","me-south-1","sa-east-1","us-east-1","us-east-2","us-west-1","us-west-2"]);const c=new Set(["cn-north-1","cn-northwest-1"]);const d=new Set(["us-iso-east-1"]);const l=new Set(["us-isob-east-1"]);const u=new Set(["us-gov-east-1","us-gov-west-1"]);const defaultRegionInfoProvider=(e,t)=>{let m=undefined;switch(e){case"af-south-1":m={hostname:"sts.af-south-1.amazonaws.com",partition:"aws"};break;case"ap-east-1":m={hostname:"sts.ap-east-1.amazonaws.com",partition:"aws"};break;case"ap-northeast-1":m={hostname:"sts.ap-northeast-1.amazonaws.com",partition:"aws"};break;case"ap-northeast-2":m={hostname:"sts.ap-northeast-2.amazonaws.com",partition:"aws"};break;case"ap-south-1":m={hostname:"sts.ap-south-1.amazonaws.com",partition:"aws"};break;case"ap-southeast-1":m={hostname:"sts.ap-southeast-1.amazonaws.com",partition:"aws"};break;case"ap-southeast-2":m={hostname:"sts.ap-southeast-2.amazonaws.com",partition:"aws"};break;case"aws-global":m={hostname:"sts.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"ca-central-1":m={hostname:"sts.ca-central-1.amazonaws.com",partition:"aws"};break;case"cn-north-1":m={hostname:"sts.cn-north-1.amazonaws.com.cn",partition:"aws-cn"};break;case"cn-northwest-1":m={hostname:"sts.cn-northwest-1.amazonaws.com.cn",partition:"aws-cn"};break;case"eu-central-1":m={hostname:"sts.eu-central-1.amazonaws.com",partition:"aws"};break;case"eu-north-1":m={hostname:"sts.eu-north-1.amazonaws.com",partition:"aws"};break;case"eu-south-1":m={hostname:"sts.eu-south-1.amazonaws.com",partition:"aws"};break;case"eu-west-1":m={hostname:"sts.eu-west-1.amazonaws.com",partition:"aws"};break;case"eu-west-2":m={hostname:"sts.eu-west-2.amazonaws.com",partition:"aws"};break;case"eu-west-3":m={hostname:"sts.eu-west-3.amazonaws.com",partition:"aws"};break;case"me-south-1":m={hostname:"sts.me-south-1.amazonaws.com",partition:"aws"};break;case"sa-east-1":m={hostname:"sts.sa-east-1.amazonaws.com",partition:"aws"};break;case"us-east-1":m={hostname:"sts.us-east-1.amazonaws.com",partition:"aws"};break;case"us-east-1-fips":m={hostname:"sts-fips.us-east-1.amazonaws.com",partition:"aws",signingRegion:"us-east-1"};break;case"us-east-2":m={hostname:"sts.us-east-2.amazonaws.com",partition:"aws"};break;case"us-east-2-fips":m={hostname:"sts-fips.us-east-2.amazonaws.com",partition:"aws",signingRegion:"us-east-2"};break;case"us-gov-east-1":m={hostname:"sts.us-gov-east-1.amazonaws.com",partition:"aws-us-gov"};break;case"us-gov-east-1-fips":m={hostname:"sts.us-gov-east-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-east-1"};break;case"us-gov-west-1":m={hostname:"sts.us-gov-west-1.amazonaws.com",partition:"aws-us-gov"};break;case"us-gov-west-1-fips":m={hostname:"sts.us-gov-west-1.amazonaws.com",partition:"aws-us-gov",signingRegion:"us-gov-west-1"};break;case"us-iso-east-1":m={hostname:"sts.us-iso-east-1.c2s.ic.gov",partition:"aws-iso"};break;case"us-isob-east-1":m={hostname:"sts.us-isob-east-1.sc2s.sgov.gov",partition:"aws-iso-b"};break;case"us-west-1":m={hostname:"sts.us-west-1.amazonaws.com",partition:"aws"};break;case"us-west-1-fips":m={hostname:"sts-fips.us-west-1.amazonaws.com",partition:"aws",signingRegion:"us-west-1"};break;case"us-west-2":m={hostname:"sts.us-west-2.amazonaws.com",partition:"aws"};break;case"us-west-2-fips":m={hostname:"sts-fips.us-west-2.amazonaws.com",partition:"aws",signingRegion:"us-west-2"};break;default:if(a.has(e)){m={hostname:n.replace("{region}",e),partition:"aws"}}if(c.has(e)){m={hostname:s.replace("{region}",e),partition:"aws-cn"}}if(d.has(e)){m={hostname:o.replace("{region}",e),partition:"aws-iso"}}if(l.has(e)){m={hostname:i.replace("{region}",e),partition:"aws-iso-b"}}if(u.has(e)){m={hostname:r.replace("{region}",e),partition:"aws-us-gov"}}if(m===undefined){m={hostname:n.replace("{region}",e),partition:"aws"}}}return Promise.resolve({signingService:"sts",...m})};t.defaultRegionInfoProvider=defaultRegionInfoProvider},3285:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(2316),t);s.__exportStar(n(3853),t);s.__exportStar(n(3638),t);s.__exportStar(n(550),t);s.__exportStar(n(1733),t);s.__exportStar(n(9448),t);s.__exportStar(n(4317),t);s.__exportStar(n(2439),t);s.__exportStar(n(5239),t);s.__exportStar(n(6499),t);s.__exportStar(n(5231),t);s.__exportStar(n(7716),t)},5231:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(536),t)},536:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.GetSessionTokenResponse=t.GetSessionTokenRequest=t.GetFederationTokenResponse=t.FederatedUser=t.GetFederationTokenRequest=t.GetCallerIdentityResponse=t.GetCallerIdentityRequest=t.GetAccessKeyInfoResponse=t.GetAccessKeyInfoRequest=t.InvalidAuthorizationMessageException=t.DecodeAuthorizationMessageResponse=t.DecodeAuthorizationMessageRequest=t.IDPCommunicationErrorException=t.AssumeRoleWithWebIdentityResponse=t.AssumeRoleWithWebIdentityRequest=t.InvalidIdentityTokenException=t.IDPRejectedClaimException=t.AssumeRoleWithSAMLResponse=t.AssumeRoleWithSAMLRequest=t.RegionDisabledException=t.PackedPolicyTooLargeException=t.MalformedPolicyDocumentException=t.ExpiredTokenException=t.AssumeRoleResponse=t.Credentials=t.AssumeRoleRequest=t.Tag=t.PolicyDescriptorType=t.AssumedRoleUser=void 0;var n;(function(e){e.filterSensitiveLog=e=>({...e})})(n=t.AssumedRoleUser||(t.AssumedRoleUser={}));var s;(function(e){e.filterSensitiveLog=e=>({...e})})(s=t.PolicyDescriptorType||(t.PolicyDescriptorType={}));var o;(function(e){e.filterSensitiveLog=e=>({...e})})(o=t.Tag||(t.Tag={}));var i;(function(e){e.filterSensitiveLog=e=>({...e})})(i=t.AssumeRoleRequest||(t.AssumeRoleRequest={}));var r;(function(e){e.filterSensitiveLog=e=>({...e})})(r=t.Credentials||(t.Credentials={}));var a;(function(e){e.filterSensitiveLog=e=>({...e})})(a=t.AssumeRoleResponse||(t.AssumeRoleResponse={}));var c;(function(e){e.filterSensitiveLog=e=>({...e})})(c=t.ExpiredTokenException||(t.ExpiredTokenException={}));var d;(function(e){e.filterSensitiveLog=e=>({...e})})(d=t.MalformedPolicyDocumentException||(t.MalformedPolicyDocumentException={}));var l;(function(e){e.filterSensitiveLog=e=>({...e})})(l=t.PackedPolicyTooLargeException||(t.PackedPolicyTooLargeException={}));var u;(function(e){e.filterSensitiveLog=e=>({...e})})(u=t.RegionDisabledException||(t.RegionDisabledException={}));var m;(function(e){e.filterSensitiveLog=e=>({...e})})(m=t.AssumeRoleWithSAMLRequest||(t.AssumeRoleWithSAMLRequest={}));var f;(function(e){e.filterSensitiveLog=e=>({...e})})(f=t.AssumeRoleWithSAMLResponse||(t.AssumeRoleWithSAMLResponse={}));var g;(function(e){e.filterSensitiveLog=e=>({...e})})(g=t.IDPRejectedClaimException||(t.IDPRejectedClaimException={}));var p;(function(e){e.filterSensitiveLog=e=>({...e})})(p=t.InvalidIdentityTokenException||(t.InvalidIdentityTokenException={}));var y;(function(e){e.filterSensitiveLog=e=>({...e})})(y=t.AssumeRoleWithWebIdentityRequest||(t.AssumeRoleWithWebIdentityRequest={}));var w;(function(e){e.filterSensitiveLog=e=>({...e})})(w=t.AssumeRoleWithWebIdentityResponse||(t.AssumeRoleWithWebIdentityResponse={}));var h;(function(e){e.filterSensitiveLog=e=>({...e})})(h=t.IDPCommunicationErrorException||(t.IDPCommunicationErrorException={}));var v;(function(e){e.filterSensitiveLog=e=>({...e})})(v=t.DecodeAuthorizationMessageRequest||(t.DecodeAuthorizationMessageRequest={}));var _;(function(e){e.filterSensitiveLog=e=>({...e})})(_=t.DecodeAuthorizationMessageResponse||(t.DecodeAuthorizationMessageResponse={}));var E;(function(e){e.filterSensitiveLog=e=>({...e})})(E=t.InvalidAuthorizationMessageException||(t.InvalidAuthorizationMessageException={}));var S;(function(e){e.filterSensitiveLog=e=>({...e})})(S=t.GetAccessKeyInfoRequest||(t.GetAccessKeyInfoRequest={}));var R;(function(e){e.filterSensitiveLog=e=>({...e})})(R=t.GetAccessKeyInfoResponse||(t.GetAccessKeyInfoResponse={}));var b;(function(e){e.filterSensitiveLog=e=>({...e})})(b=t.GetCallerIdentityRequest||(t.GetCallerIdentityRequest={}));var C;(function(e){e.filterSensitiveLog=e=>({...e})})(C=t.GetCallerIdentityResponse||(t.GetCallerIdentityResponse={}));var P;(function(e){e.filterSensitiveLog=e=>({...e})})(P=t.GetFederationTokenRequest||(t.GetFederationTokenRequest={}));var A;(function(e){e.filterSensitiveLog=e=>({...e})})(A=t.FederatedUser||(t.FederatedUser={}));var I;(function(e){e.filterSensitiveLog=e=>({...e})})(I=t.GetFederationTokenResponse||(t.GetFederationTokenResponse={}));var x;(function(e){e.filterSensitiveLog=e=>({...e})})(x=t.GetSessionTokenRequest||(t.GetSessionTokenRequest={}));var T;(function(e){e.filterSensitiveLog=e=>({...e})})(T=t.GetSessionTokenResponse||(t.GetSessionTokenResponse={}))},6528:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.deserializeAws_queryGetSessionTokenCommand=t.deserializeAws_queryGetFederationTokenCommand=t.deserializeAws_queryGetCallerIdentityCommand=t.deserializeAws_queryGetAccessKeyInfoCommand=t.deserializeAws_queryDecodeAuthorizationMessageCommand=t.deserializeAws_queryAssumeRoleWithWebIdentityCommand=t.deserializeAws_queryAssumeRoleWithSAMLCommand=t.deserializeAws_queryAssumeRoleCommand=t.serializeAws_queryGetSessionTokenCommand=t.serializeAws_queryGetFederationTokenCommand=t.serializeAws_queryGetCallerIdentityCommand=t.serializeAws_queryGetAccessKeyInfoCommand=t.serializeAws_queryDecodeAuthorizationMessageCommand=t.serializeAws_queryAssumeRoleWithWebIdentityCommand=t.serializeAws_queryAssumeRoleWithSAMLCommand=t.serializeAws_queryAssumeRoleCommand=void 0;const s=n(7498);const o=n(2223);const i=n(7448);const serializeAws_queryAssumeRoleCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryAssumeRoleRequest(e,t),Action:"AssumeRole",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryAssumeRoleCommand=serializeAws_queryAssumeRoleCommand;const serializeAws_queryAssumeRoleWithSAMLCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryAssumeRoleWithSAMLRequest(e,t),Action:"AssumeRoleWithSAML",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryAssumeRoleWithSAMLCommand=serializeAws_queryAssumeRoleWithSAMLCommand;const serializeAws_queryAssumeRoleWithWebIdentityCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryAssumeRoleWithWebIdentityRequest(e,t),Action:"AssumeRoleWithWebIdentity",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryAssumeRoleWithWebIdentityCommand=serializeAws_queryAssumeRoleWithWebIdentityCommand;const serializeAws_queryDecodeAuthorizationMessageCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryDecodeAuthorizationMessageRequest(e,t),Action:"DecodeAuthorizationMessage",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryDecodeAuthorizationMessageCommand=serializeAws_queryDecodeAuthorizationMessageCommand;const serializeAws_queryGetAccessKeyInfoCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryGetAccessKeyInfoRequest(e,t),Action:"GetAccessKeyInfo",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryGetAccessKeyInfoCommand=serializeAws_queryGetAccessKeyInfoCommand;const serializeAws_queryGetCallerIdentityCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryGetCallerIdentityRequest(e,t),Action:"GetCallerIdentity",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryGetCallerIdentityCommand=serializeAws_queryGetCallerIdentityCommand;const serializeAws_queryGetFederationTokenCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryGetFederationTokenRequest(e,t),Action:"GetFederationToken",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryGetFederationTokenCommand=serializeAws_queryGetFederationTokenCommand;const serializeAws_queryGetSessionTokenCommand=async(e,t)=>{const n={"content-type":"application/x-www-form-urlencoded"};let s;s=buildFormUrlencodedString({...serializeAws_queryGetSessionTokenRequest(e,t),Action:"GetSessionToken",Version:"2011-06-15"});return buildHttpRpcRequest(t,n,"/",undefined,s)};t.serializeAws_queryGetSessionTokenCommand=serializeAws_queryGetSessionTokenCommand;const deserializeAws_queryAssumeRoleCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryAssumeRoleCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryAssumeRoleResponse(n.AssumeRoleResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryAssumeRoleCommand=deserializeAws_queryAssumeRoleCommand;const deserializeAws_queryAssumeRoleCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"ExpiredTokenException":case"com.amazonaws.sts#ExpiredTokenException":s={...await deserializeAws_queryExpiredTokenExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"MalformedPolicyDocumentException":case"com.amazonaws.sts#MalformedPolicyDocumentException":s={...await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"PackedPolicyTooLargeException":case"com.amazonaws.sts#PackedPolicyTooLargeException":s={...await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegionDisabledException":case"com.amazonaws.sts#RegionDisabledException":s={...await deserializeAws_queryRegionDisabledExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryAssumeRoleWithSAMLCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryAssumeRoleWithSAMLCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryAssumeRoleWithSAMLResponse(n.AssumeRoleWithSAMLResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryAssumeRoleWithSAMLCommand=deserializeAws_queryAssumeRoleWithSAMLCommand;const deserializeAws_queryAssumeRoleWithSAMLCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"ExpiredTokenException":case"com.amazonaws.sts#ExpiredTokenException":s={...await deserializeAws_queryExpiredTokenExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"IDPRejectedClaimException":case"com.amazonaws.sts#IDPRejectedClaimException":s={...await deserializeAws_queryIDPRejectedClaimExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidIdentityTokenException":case"com.amazonaws.sts#InvalidIdentityTokenException":s={...await deserializeAws_queryInvalidIdentityTokenExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"MalformedPolicyDocumentException":case"com.amazonaws.sts#MalformedPolicyDocumentException":s={...await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"PackedPolicyTooLargeException":case"com.amazonaws.sts#PackedPolicyTooLargeException":s={...await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegionDisabledException":case"com.amazonaws.sts#RegionDisabledException":s={...await deserializeAws_queryRegionDisabledExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryAssumeRoleWithWebIdentityCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryAssumeRoleWithWebIdentityCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryAssumeRoleWithWebIdentityResponse(n.AssumeRoleWithWebIdentityResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryAssumeRoleWithWebIdentityCommand=deserializeAws_queryAssumeRoleWithWebIdentityCommand;const deserializeAws_queryAssumeRoleWithWebIdentityCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"ExpiredTokenException":case"com.amazonaws.sts#ExpiredTokenException":s={...await deserializeAws_queryExpiredTokenExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"IDPCommunicationErrorException":case"com.amazonaws.sts#IDPCommunicationErrorException":s={...await deserializeAws_queryIDPCommunicationErrorExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"IDPRejectedClaimException":case"com.amazonaws.sts#IDPRejectedClaimException":s={...await deserializeAws_queryIDPRejectedClaimExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"InvalidIdentityTokenException":case"com.amazonaws.sts#InvalidIdentityTokenException":s={...await deserializeAws_queryInvalidIdentityTokenExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"MalformedPolicyDocumentException":case"com.amazonaws.sts#MalformedPolicyDocumentException":s={...await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"PackedPolicyTooLargeException":case"com.amazonaws.sts#PackedPolicyTooLargeException":s={...await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegionDisabledException":case"com.amazonaws.sts#RegionDisabledException":s={...await deserializeAws_queryRegionDisabledExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryDecodeAuthorizationMessageCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryDecodeAuthorizationMessageCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryDecodeAuthorizationMessageResponse(n.DecodeAuthorizationMessageResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryDecodeAuthorizationMessageCommand=deserializeAws_queryDecodeAuthorizationMessageCommand;const deserializeAws_queryDecodeAuthorizationMessageCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"InvalidAuthorizationMessageException":case"com.amazonaws.sts#InvalidAuthorizationMessageException":s={...await deserializeAws_queryInvalidAuthorizationMessageExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryGetAccessKeyInfoCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryGetAccessKeyInfoCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryGetAccessKeyInfoResponse(n.GetAccessKeyInfoResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryGetAccessKeyInfoCommand=deserializeAws_queryGetAccessKeyInfoCommand;const deserializeAws_queryGetAccessKeyInfoCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){default:const t=n.body;o=t.Error.code||t.Error.Code||o;s={...t.Error,name:`${o}`,message:t.Error.message||t.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryGetCallerIdentityCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryGetCallerIdentityCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryGetCallerIdentityResponse(n.GetCallerIdentityResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryGetCallerIdentityCommand=deserializeAws_queryGetCallerIdentityCommand;const deserializeAws_queryGetCallerIdentityCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){default:const t=n.body;o=t.Error.code||t.Error.Code||o;s={...t.Error,name:`${o}`,message:t.Error.message||t.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryGetFederationTokenCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryGetFederationTokenCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryGetFederationTokenResponse(n.GetFederationTokenResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryGetFederationTokenCommand=deserializeAws_queryGetFederationTokenCommand;const deserializeAws_queryGetFederationTokenCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"MalformedPolicyDocumentException":case"com.amazonaws.sts#MalformedPolicyDocumentException":s={...await deserializeAws_queryMalformedPolicyDocumentExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"PackedPolicyTooLargeException":case"com.amazonaws.sts#PackedPolicyTooLargeException":s={...await deserializeAws_queryPackedPolicyTooLargeExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;case"RegionDisabledException":case"com.amazonaws.sts#RegionDisabledException":s={...await deserializeAws_queryRegionDisabledExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryGetSessionTokenCommand=async(e,t)=>{if(e.statusCode>=300){return deserializeAws_queryGetSessionTokenCommandError(e,t)}const n=await parseBody(e.body,t);let s={};s=deserializeAws_queryGetSessionTokenResponse(n.GetSessionTokenResult,t);const o={$metadata:deserializeMetadata(e),...s};return Promise.resolve(o)};t.deserializeAws_queryGetSessionTokenCommand=deserializeAws_queryGetSessionTokenCommand;const deserializeAws_queryGetSessionTokenCommandError=async(e,t)=>{const n={...e,body:await parseBody(e.body,t)};let s;let o="UnknownError";o=loadQueryErrorCode(e,n.body);switch(o){case"RegionDisabledException":case"com.amazonaws.sts#RegionDisabledException":s={...await deserializeAws_queryRegionDisabledExceptionResponse(n,t),name:o,$metadata:deserializeMetadata(e)};break;default:const i=n.body;o=i.Error.code||i.Error.Code||o;s={...i.Error,name:`${o}`,message:i.Error.message||i.Error.Message||o,$fault:"client",$metadata:deserializeMetadata(e)}}const i=s.message||s.Message||o;s.message=i;delete s.Message;return Promise.reject(Object.assign(new Error(i),s))};const deserializeAws_queryExpiredTokenExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryExpiredTokenException(n.Error,t);const o={name:"ExpiredTokenException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryIDPCommunicationErrorExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryIDPCommunicationErrorException(n.Error,t);const o={name:"IDPCommunicationErrorException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryIDPRejectedClaimExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryIDPRejectedClaimException(n.Error,t);const o={name:"IDPRejectedClaimException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryInvalidAuthorizationMessageExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryInvalidAuthorizationMessageException(n.Error,t);const o={name:"InvalidAuthorizationMessageException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryInvalidIdentityTokenExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryInvalidIdentityTokenException(n.Error,t);const o={name:"InvalidIdentityTokenException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryMalformedPolicyDocumentExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryMalformedPolicyDocumentException(n.Error,t);const o={name:"MalformedPolicyDocumentException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryPackedPolicyTooLargeExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryPackedPolicyTooLargeException(n.Error,t);const o={name:"PackedPolicyTooLargeException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const deserializeAws_queryRegionDisabledExceptionResponse=async(e,t)=>{const n=e.body;const s=deserializeAws_queryRegionDisabledException(n.Error,t);const o={name:"RegionDisabledException",$fault:"client",$metadata:deserializeMetadata(e),...s};return o};const serializeAws_queryAssumeRoleRequest=(e,t)=>{const n={};if(e.RoleArn!==undefined&&e.RoleArn!==null){n["RoleArn"]=e.RoleArn}if(e.RoleSessionName!==undefined&&e.RoleSessionName!==null){n["RoleSessionName"]=e.RoleSessionName}if(e.PolicyArns!==undefined&&e.PolicyArns!==null){const s=serializeAws_querypolicyDescriptorListType(e.PolicyArns,t);Object.entries(s).forEach((([e,t])=>{const s=`PolicyArns.${e}`;n[s]=t}))}if(e.Policy!==undefined&&e.Policy!==null){n["Policy"]=e.Policy}if(e.DurationSeconds!==undefined&&e.DurationSeconds!==null){n["DurationSeconds"]=e.DurationSeconds}if(e.Tags!==undefined&&e.Tags!==null){const s=serializeAws_querytagListType(e.Tags,t);Object.entries(s).forEach((([e,t])=>{const s=`Tags.${e}`;n[s]=t}))}if(e.TransitiveTagKeys!==undefined&&e.TransitiveTagKeys!==null){const s=serializeAws_querytagKeyListType(e.TransitiveTagKeys,t);Object.entries(s).forEach((([e,t])=>{const s=`TransitiveTagKeys.${e}`;n[s]=t}))}if(e.ExternalId!==undefined&&e.ExternalId!==null){n["ExternalId"]=e.ExternalId}if(e.SerialNumber!==undefined&&e.SerialNumber!==null){n["SerialNumber"]=e.SerialNumber}if(e.TokenCode!==undefined&&e.TokenCode!==null){n["TokenCode"]=e.TokenCode}if(e.SourceIdentity!==undefined&&e.SourceIdentity!==null){n["SourceIdentity"]=e.SourceIdentity}return n};const serializeAws_queryAssumeRoleWithSAMLRequest=(e,t)=>{const n={};if(e.RoleArn!==undefined&&e.RoleArn!==null){n["RoleArn"]=e.RoleArn}if(e.PrincipalArn!==undefined&&e.PrincipalArn!==null){n["PrincipalArn"]=e.PrincipalArn}if(e.SAMLAssertion!==undefined&&e.SAMLAssertion!==null){n["SAMLAssertion"]=e.SAMLAssertion}if(e.PolicyArns!==undefined&&e.PolicyArns!==null){const s=serializeAws_querypolicyDescriptorListType(e.PolicyArns,t);Object.entries(s).forEach((([e,t])=>{const s=`PolicyArns.${e}`;n[s]=t}))}if(e.Policy!==undefined&&e.Policy!==null){n["Policy"]=e.Policy}if(e.DurationSeconds!==undefined&&e.DurationSeconds!==null){n["DurationSeconds"]=e.DurationSeconds}return n};const serializeAws_queryAssumeRoleWithWebIdentityRequest=(e,t)=>{const n={};if(e.RoleArn!==undefined&&e.RoleArn!==null){n["RoleArn"]=e.RoleArn}if(e.RoleSessionName!==undefined&&e.RoleSessionName!==null){n["RoleSessionName"]=e.RoleSessionName}if(e.WebIdentityToken!==undefined&&e.WebIdentityToken!==null){n["WebIdentityToken"]=e.WebIdentityToken}if(e.ProviderId!==undefined&&e.ProviderId!==null){n["ProviderId"]=e.ProviderId}if(e.PolicyArns!==undefined&&e.PolicyArns!==null){const s=serializeAws_querypolicyDescriptorListType(e.PolicyArns,t);Object.entries(s).forEach((([e,t])=>{const s=`PolicyArns.${e}`;n[s]=t}))}if(e.Policy!==undefined&&e.Policy!==null){n["Policy"]=e.Policy}if(e.DurationSeconds!==undefined&&e.DurationSeconds!==null){n["DurationSeconds"]=e.DurationSeconds}return n};const serializeAws_queryDecodeAuthorizationMessageRequest=(e,t)=>{const n={};if(e.EncodedMessage!==undefined&&e.EncodedMessage!==null){n["EncodedMessage"]=e.EncodedMessage}return n};const serializeAws_queryGetAccessKeyInfoRequest=(e,t)=>{const n={};if(e.AccessKeyId!==undefined&&e.AccessKeyId!==null){n["AccessKeyId"]=e.AccessKeyId}return n};const serializeAws_queryGetCallerIdentityRequest=(e,t)=>{const n={};return n};const serializeAws_queryGetFederationTokenRequest=(e,t)=>{const n={};if(e.Name!==undefined&&e.Name!==null){n["Name"]=e.Name}if(e.Policy!==undefined&&e.Policy!==null){n["Policy"]=e.Policy}if(e.PolicyArns!==undefined&&e.PolicyArns!==null){const s=serializeAws_querypolicyDescriptorListType(e.PolicyArns,t);Object.entries(s).forEach((([e,t])=>{const s=`PolicyArns.${e}`;n[s]=t}))}if(e.DurationSeconds!==undefined&&e.DurationSeconds!==null){n["DurationSeconds"]=e.DurationSeconds}if(e.Tags!==undefined&&e.Tags!==null){const s=serializeAws_querytagListType(e.Tags,t);Object.entries(s).forEach((([e,t])=>{const s=`Tags.${e}`;n[s]=t}))}return n};const serializeAws_queryGetSessionTokenRequest=(e,t)=>{const n={};if(e.DurationSeconds!==undefined&&e.DurationSeconds!==null){n["DurationSeconds"]=e.DurationSeconds}if(e.SerialNumber!==undefined&&e.SerialNumber!==null){n["SerialNumber"]=e.SerialNumber}if(e.TokenCode!==undefined&&e.TokenCode!==null){n["TokenCode"]=e.TokenCode}return n};const serializeAws_querypolicyDescriptorListType=(e,t)=>{const n={};let s=1;for(let o of e){if(o===null){continue}const e=serializeAws_queryPolicyDescriptorType(o,t);Object.entries(e).forEach((([e,t])=>{n[`member.${s}.${e}`]=t}));s++}return n};const serializeAws_queryPolicyDescriptorType=(e,t)=>{const n={};if(e.arn!==undefined&&e.arn!==null){n["arn"]=e.arn}return n};const serializeAws_queryTag=(e,t)=>{const n={};if(e.Key!==undefined&&e.Key!==null){n["Key"]=e.Key}if(e.Value!==undefined&&e.Value!==null){n["Value"]=e.Value}return n};const serializeAws_querytagKeyListType=(e,t)=>{const n={};let s=1;for(let t of e){if(t===null){continue}n[`member.${s}`]=t;s++}return n};const serializeAws_querytagListType=(e,t)=>{const n={};let s=1;for(let o of e){if(o===null){continue}const e=serializeAws_queryTag(o,t);Object.entries(e).forEach((([e,t])=>{n[`member.${s}.${e}`]=t}));s++}return n};const deserializeAws_queryAssumedRoleUser=(e,t)=>{let n={AssumedRoleId:undefined,Arn:undefined};if(e["AssumedRoleId"]!==undefined){n.AssumedRoleId=e["AssumedRoleId"]}if(e["Arn"]!==undefined){n.Arn=e["Arn"]}return n};const deserializeAws_queryAssumeRoleResponse=(e,t)=>{let n={Credentials:undefined,AssumedRoleUser:undefined,PackedPolicySize:undefined,SourceIdentity:undefined};if(e["Credentials"]!==undefined){n.Credentials=deserializeAws_queryCredentials(e["Credentials"],t)}if(e["AssumedRoleUser"]!==undefined){n.AssumedRoleUser=deserializeAws_queryAssumedRoleUser(e["AssumedRoleUser"],t)}if(e["PackedPolicySize"]!==undefined){n.PackedPolicySize=parseInt(e["PackedPolicySize"])}if(e["SourceIdentity"]!==undefined){n.SourceIdentity=e["SourceIdentity"]}return n};const deserializeAws_queryAssumeRoleWithSAMLResponse=(e,t)=>{let n={Credentials:undefined,AssumedRoleUser:undefined,PackedPolicySize:undefined,Subject:undefined,SubjectType:undefined,Issuer:undefined,Audience:undefined,NameQualifier:undefined,SourceIdentity:undefined};if(e["Credentials"]!==undefined){n.Credentials=deserializeAws_queryCredentials(e["Credentials"],t)}if(e["AssumedRoleUser"]!==undefined){n.AssumedRoleUser=deserializeAws_queryAssumedRoleUser(e["AssumedRoleUser"],t)}if(e["PackedPolicySize"]!==undefined){n.PackedPolicySize=parseInt(e["PackedPolicySize"])}if(e["Subject"]!==undefined){n.Subject=e["Subject"]}if(e["SubjectType"]!==undefined){n.SubjectType=e["SubjectType"]}if(e["Issuer"]!==undefined){n.Issuer=e["Issuer"]}if(e["Audience"]!==undefined){n.Audience=e["Audience"]}if(e["NameQualifier"]!==undefined){n.NameQualifier=e["NameQualifier"]}if(e["SourceIdentity"]!==undefined){n.SourceIdentity=e["SourceIdentity"]}return n};const deserializeAws_queryAssumeRoleWithWebIdentityResponse=(e,t)=>{let n={Credentials:undefined,SubjectFromWebIdentityToken:undefined,AssumedRoleUser:undefined,PackedPolicySize:undefined,Provider:undefined,Audience:undefined,SourceIdentity:undefined};if(e["Credentials"]!==undefined){n.Credentials=deserializeAws_queryCredentials(e["Credentials"],t)}if(e["SubjectFromWebIdentityToken"]!==undefined){n.SubjectFromWebIdentityToken=e["SubjectFromWebIdentityToken"]}if(e["AssumedRoleUser"]!==undefined){n.AssumedRoleUser=deserializeAws_queryAssumedRoleUser(e["AssumedRoleUser"],t)}if(e["PackedPolicySize"]!==undefined){n.PackedPolicySize=parseInt(e["PackedPolicySize"])}if(e["Provider"]!==undefined){n.Provider=e["Provider"]}if(e["Audience"]!==undefined){n.Audience=e["Audience"]}if(e["SourceIdentity"]!==undefined){n.SourceIdentity=e["SourceIdentity"]}return n};const deserializeAws_queryCredentials=(e,t)=>{let n={AccessKeyId:undefined,SecretAccessKey:undefined,SessionToken:undefined,Expiration:undefined};if(e["AccessKeyId"]!==undefined){n.AccessKeyId=e["AccessKeyId"]}if(e["SecretAccessKey"]!==undefined){n.SecretAccessKey=e["SecretAccessKey"]}if(e["SessionToken"]!==undefined){n.SessionToken=e["SessionToken"]}if(e["Expiration"]!==undefined){n.Expiration=new Date(e["Expiration"])}return n};const deserializeAws_queryDecodeAuthorizationMessageResponse=(e,t)=>{let n={DecodedMessage:undefined};if(e["DecodedMessage"]!==undefined){n.DecodedMessage=e["DecodedMessage"]}return n};const deserializeAws_queryExpiredTokenException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryFederatedUser=(e,t)=>{let n={FederatedUserId:undefined,Arn:undefined};if(e["FederatedUserId"]!==undefined){n.FederatedUserId=e["FederatedUserId"]}if(e["Arn"]!==undefined){n.Arn=e["Arn"]}return n};const deserializeAws_queryGetAccessKeyInfoResponse=(e,t)=>{let n={Account:undefined};if(e["Account"]!==undefined){n.Account=e["Account"]}return n};const deserializeAws_queryGetCallerIdentityResponse=(e,t)=>{let n={UserId:undefined,Account:undefined,Arn:undefined};if(e["UserId"]!==undefined){n.UserId=e["UserId"]}if(e["Account"]!==undefined){n.Account=e["Account"]}if(e["Arn"]!==undefined){n.Arn=e["Arn"]}return n};const deserializeAws_queryGetFederationTokenResponse=(e,t)=>{let n={Credentials:undefined,FederatedUser:undefined,PackedPolicySize:undefined};if(e["Credentials"]!==undefined){n.Credentials=deserializeAws_queryCredentials(e["Credentials"],t)}if(e["FederatedUser"]!==undefined){n.FederatedUser=deserializeAws_queryFederatedUser(e["FederatedUser"],t)}if(e["PackedPolicySize"]!==undefined){n.PackedPolicySize=parseInt(e["PackedPolicySize"])}return n};const deserializeAws_queryGetSessionTokenResponse=(e,t)=>{let n={Credentials:undefined};if(e["Credentials"]!==undefined){n.Credentials=deserializeAws_queryCredentials(e["Credentials"],t)}return n};const deserializeAws_queryIDPCommunicationErrorException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryIDPRejectedClaimException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryInvalidAuthorizationMessageException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryInvalidIdentityTokenException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryMalformedPolicyDocumentException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryPackedPolicyTooLargeException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeAws_queryRegionDisabledException=(e,t)=>{let n={message:undefined};if(e["message"]!==undefined){n.message=e["message"]}return n};const deserializeMetadata=e=>{var t;return{httpStatusCode:e.statusCode,requestId:(t=e.headers["x-amzn-requestid"])!==null&&t!==void 0?t:e.headers["x-amzn-request-id"],extendedRequestId:e.headers["x-amz-id-2"],cfId:e.headers["x-amz-cf-id"]}};const collectBody=(e=new Uint8Array,t)=>{if(e instanceof Uint8Array){return Promise.resolve(e)}return t.streamCollector(e)||Promise.resolve(new Uint8Array)};const collectBodyString=(e,t)=>collectBody(e,t).then((e=>t.utf8Encoder(e)));const buildHttpRpcRequest=async(e,t,n,o,i)=>{const{hostname:r,protocol:a="https",port:c}=await e.endpoint();const d={protocol:a,hostname:r,port:c,method:"POST",path:n,headers:t};if(o!==undefined){d.hostname=o}if(i!==undefined){d.body=i}return new s.HttpRequest(d)};const decodeEscapedXML=e=>e.replace(/&amp;/g,"&").replace(/&apos;/g,"'").replace(/&quot;/g,'"').replace(/&gt;/g,">").replace(/&lt;/g,"<");const parseBody=(e,t)=>collectBodyString(e,t).then((e=>{if(e.length){const t=i.parse(e,{attributeNamePrefix:"",ignoreAttributes:false,parseNodeValue:false,trimValues:false,tagValueProcessor:(e,t)=>e.trim()===""?"":decodeEscapedXML(e)});const n="#text";const s=Object.keys(t)[0];const r=t[s];if(r[n]){r[s]=r[n];delete r[n]}return o.getValueFromTextNode(r)}return{}}));const buildFormUrlencodedString=e=>Object.entries(e).map((([e,t])=>o.extendedEncodeURIComponent(e)+"="+o.extendedEncodeURIComponent(t))).join("&");const loadQueryErrorCode=(e,t)=>{if(t.Error.Code!==undefined){return t.Error.Code}if(e.statusCode==404){return"NotFound"}return""}},4675:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientDefaultValues=void 0;const s=n(4351);const o=s.__importDefault(n(1508));const i=n(2418);const r=n(7229);const a=n(8030);const c=n(408);const d=n(7e3);const l=n(1124);const u=n(5168);const m=n(2091);const f=n(286);const g=n(4717);const p=n(5227);const y=n(8137);t.ClientDefaultValues={...y.ClientSharedValues,runtime:"node",base64Decoder:m.fromBase64,base64Encoder:m.toBase64,bodyLengthChecker:f.calculateBodyLength,credentialDefaultProvider:i.decorateDefaultCredentialProvider(a.defaultProvider),defaultUserAgentProvider:g.defaultUserAgent({serviceId:y.ClientSharedValues.serviceId,clientVersion:o.default.version}),maxAttempts:l.loadConfig(d.NODE_MAX_ATTEMPT_CONFIG_OPTIONS),region:l.loadConfig(r.NODE_REGION_CONFIG_OPTIONS,r.NODE_REGION_CONFIG_FILE_OPTIONS),requestHandler:new u.NodeHttpHandler,sha256:c.Hash.bind(null,"sha256"),streamCollector:u.streamCollector,utf8Decoder:p.fromUtf8,utf8Encoder:p.toUtf8}},8137:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ClientSharedValues=void 0;const s=n(2798);const o=n(9427);t.ClientSharedValues={apiVersion:"2011-06-15",disableHostPrefix:false,logger:{},regionInfoProvider:s.defaultRegionInfoProvider,serviceId:"STS",urlParser:o.parseUrl}},445:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.resolveEndpointsConfig=void 0;const resolveEndpointsConfig=e=>{var t;return{...e,tls:(t=e.tls)!==null&&t!==void 0?t:true,endpoint:e.endpoint?normalizeEndpoint(e):()=>getEndPointFromRegion(e),isCustomEndpoint:e.endpoint?true:false}};t.resolveEndpointsConfig=resolveEndpointsConfig;const normalizeEndpoint=e=>{const{endpoint:t,urlParser:n}=e;if(typeof t==="string"){const e=Promise.resolve(n(t));return()=>e}else if(typeof t==="object"){const e=Promise.resolve(t);return()=>e}return t};const getEndPointFromRegion=async e=>{var t;const{tls:n=true}=e;const s=await e.region();const o=new RegExp(/^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])$/);if(!o.test(s)){throw new Error("Invalid region in client config")}const{hostname:i}=(t=await e.regionInfoProvider(s))!==null&&t!==void 0?t:{};if(!i){throw new Error("Cannot resolve hostname from client config")}return e.urlParser(`${n?"https:":"http:"}//${i}`)}},1977:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.resolveRegionConfig=t.NODE_REGION_CONFIG_FILE_OPTIONS=t.NODE_REGION_CONFIG_OPTIONS=t.REGION_INI_NAME=t.REGION_ENV_NAME=void 0;t.REGION_ENV_NAME="AWS_REGION";t.REGION_INI_NAME="region";t.NODE_REGION_CONFIG_OPTIONS={environmentVariableSelector:e=>e[t.REGION_ENV_NAME],configFileSelector:e=>e[t.REGION_INI_NAME],default:()=>{throw new Error("Region is missing")}};t.NODE_REGION_CONFIG_FILE_OPTIONS={preferredFile:"credentials"};const resolveRegionConfig=e=>{if(!e.region){throw new Error("Region is missing")}return{...e,region:normalizeRegion(e.region)}};t.resolveRegionConfig=resolveRegionConfig;const normalizeRegion=e=>{if(typeof e==="string"){const t=Promise.resolve(e);return()=>t}return e}},7229:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(445),t);s.__exportStar(n(1977),t)},5886:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromEnv=t.ENV_EXPIRATION=t.ENV_SESSION=t.ENV_SECRET=t.ENV_KEY=void 0;const s=n(1014);t.ENV_KEY="AWS_ACCESS_KEY_ID";t.ENV_SECRET="AWS_SECRET_ACCESS_KEY";t.ENV_SESSION="AWS_SESSION_TOKEN";t.ENV_EXPIRATION="AWS_CREDENTIAL_EXPIRATION";function fromEnv(){return()=>{const e=process.env[t.ENV_KEY];const n=process.env[t.ENV_SECRET];const o=process.env[t.ENV_EXPIRATION];if(e&&n){return Promise.resolve({accessKeyId:e,secretAccessKey:n,sessionToken:process.env[t.ENV_SESSION],expiration:o?new Date(o):undefined})}return Promise.reject(new s.ProviderError("Unable to find environment variable credentials."))}}t.fromEnv=fromEnv},2262:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromContainerMetadata=t.ENV_CMDS_AUTH_TOKEN=t.ENV_CMDS_RELATIVE_URI=t.ENV_CMDS_FULL_URI=void 0;const s=n(1014);const o=n(8835);const i=n(9125);const r=n(5751);const a=n(9856);const c=n(5724);t.ENV_CMDS_FULL_URI="AWS_CONTAINER_CREDENTIALS_FULL_URI";t.ENV_CMDS_RELATIVE_URI="AWS_CONTAINER_CREDENTIALS_RELATIVE_URI";t.ENV_CMDS_AUTH_TOKEN="AWS_CONTAINER_AUTHORIZATION_TOKEN";const fromContainerMetadata=(e={})=>{const{timeout:t,maxRetries:n}=a.providerConfigFromInit(e);return()=>c.retry((async()=>{const e=await getCmdsUri();const n=JSON.parse(await requestFromEcsImds(t,e));if(!r.isImdsCredentials(n)){throw new s.ProviderError("Invalid response received from instance metadata service.")}return r.fromImdsCredentials(n)}),n)};t.fromContainerMetadata=fromContainerMetadata;const requestFromEcsImds=async(e,n)=>{if(process.env[t.ENV_CMDS_AUTH_TOKEN]){n.headers={...n.headers,Authorization:process.env[t.ENV_CMDS_AUTH_TOKEN]}}const s=await i.httpRequest({...n,timeout:e});return s.toString()};const d="169.254.170.2";const l={localhost:true,"127.0.0.1":true};const u={"http:":true,"https:":true};const getCmdsUri=async()=>{if(process.env[t.ENV_CMDS_RELATIVE_URI]){return{hostname:d,path:process.env[t.ENV_CMDS_RELATIVE_URI]}}if(process.env[t.ENV_CMDS_FULL_URI]){const e=o.parse(process.env[t.ENV_CMDS_FULL_URI]);if(!e.hostname||!(e.hostname in l)){throw new s.ProviderError(`${e.hostname} is not a valid container metadata service hostname`,false)}if(!e.protocol||!(e.protocol in u)){throw new s.ProviderError(`${e.protocol} is not a valid container metadata service protocol`,false)}return{...e,port:e.port?parseInt(e.port,10):undefined}}throw new s.ProviderError("The container metadata credential provider cannot be used unless"+` the ${t.ENV_CMDS_RELATIVE_URI} or ${t.ENV_CMDS_FULL_URI} environment`+" variable is set",false)}},3695:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromInstanceMetadata=void 0;const s=n(1014);const o=n(9125);const i=n(5751);const r=n(9856);const a=n(5724);const c="169.254.169.254";const d="/latest/meta-data/iam/security-credentials/";const l="/latest/api/token";const fromInstanceMetadata=(e={})=>{let t=false;const{timeout:n,maxRetries:s}=r.providerConfigFromInit(e);const getCredentials=async(e,n)=>{const s=(await a.retry((async()=>{let e;try{e=await getProfile(n)}catch(e){if(e.statusCode===401){t=false}throw e}return e}),e)).trim();return a.retry((async()=>{let e;try{e=await getCredentialsFromProfile(s,n)}catch(e){if(e.statusCode===401){t=false}throw e}return e}),e)};return async()=>{if(t){return getCredentials(s,{timeout:n})}else{let e;try{e=(await getMetadataToken({timeout:n})).toString()}catch(e){if((e===null||e===void 0?void 0:e.statusCode)===400){throw Object.assign(e,{message:"EC2 Metadata token request returned error"})}else if(e.message==="TimeoutError"||[403,404,405].includes(e.statusCode)){t=true}return getCredentials(s,{timeout:n})}return getCredentials(s,{timeout:n,headers:{"x-aws-ec2-metadata-token":e}})}}};t.fromInstanceMetadata=fromInstanceMetadata;const getMetadataToken=async e=>o.httpRequest({...e,host:c,path:l,method:"PUT",headers:{"x-aws-ec2-metadata-token-ttl-seconds":"21600"}});const getProfile=async e=>(await o.httpRequest({...e,host:c,path:d})).toString();const getCredentialsFromProfile=async(e,t)=>{const n=JSON.parse((await o.httpRequest({...t,host:c,path:d+e})).toString());if(!i.isImdsCredentials(n)){throw new s.ProviderError("Invalid response received from instance metadata service.")}return i.fromImdsCredentials(n)}},1732:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(2262),t);s.__exportStar(n(3695),t);s.__exportStar(n(9856),t)},5751:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromImdsCredentials=t.isImdsCredentials=void 0;const isImdsCredentials=e=>Boolean(e)&&typeof e==="object"&&typeof e.AccessKeyId==="string"&&typeof e.SecretAccessKey==="string"&&typeof e.Token==="string"&&typeof e.Expiration==="string";t.isImdsCredentials=isImdsCredentials;const fromImdsCredentials=e=>({accessKeyId:e.AccessKeyId,secretAccessKey:e.SecretAccessKey,sessionToken:e.Token,expiration:new Date(e.Expiration)});t.fromImdsCredentials=fromImdsCredentials},9856:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.providerConfigFromInit=t.DEFAULT_MAX_RETRIES=t.DEFAULT_TIMEOUT=void 0;t.DEFAULT_TIMEOUT=1e3;t.DEFAULT_MAX_RETRIES=0;const providerConfigFromInit=({maxRetries:e=t.DEFAULT_MAX_RETRIES,timeout:n=t.DEFAULT_TIMEOUT})=>({maxRetries:e,timeout:n});t.providerConfigFromInit=providerConfigFromInit},9125:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.httpRequest=void 0;const s=n(1014);const o=n(4293);const i=n(8605);function httpRequest(e){return new Promise(((t,n)=>{const r=i.request({method:"GET",...e});r.on("error",(e=>{n(Object.assign(new s.ProviderError("Unable to connect to instance metadata service"),e))}));r.on("timeout",(()=>{n(new Error("TimeoutError"))}));r.on("response",(e=>{const{statusCode:i=400}=e;if(i<200||300<=i){n(Object.assign(new s.ProviderError("Error response received from instance metadata service"),{statusCode:i}))}const r=[];e.on("data",(e=>{r.push(e)}));e.on("end",(()=>{t(o.Buffer.concat(r))}))}));r.end()}))}t.httpRequest=httpRequest},5724:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.retry=void 0;const retry=(e,t)=>{let n=e();for(let s=0;s<t;s++){n=n.catch(e)}return n};t.retry=retry},2975:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getMasterProfileName=t.parseKnownFiles=t.fromIni=t.ENV_PROFILE=void 0;const s=n(5886);const o=n(1732);const i=n(1961);const r=n(1014);const a=n(4847);const c="default";t.ENV_PROFILE="AWS_PROFILE";const isStaticCredsProfile=e=>Boolean(e)&&typeof e==="object"&&typeof e.aws_access_key_id==="string"&&typeof e.aws_secret_access_key==="string"&&["undefined","string"].indexOf(typeof e.aws_session_token)>-1;const isWebIdentityProfile=e=>Boolean(e)&&typeof e==="object"&&typeof e.web_identity_token_file==="string"&&typeof e.role_arn==="string"&&["undefined","string"].indexOf(typeof e.role_session_name)>-1;const isAssumeRoleProfile=e=>Boolean(e)&&typeof e==="object"&&typeof e.role_arn==="string"&&["undefined","string"].indexOf(typeof e.role_session_name)>-1&&["undefined","string"].indexOf(typeof e.external_id)>-1&&["undefined","string"].indexOf(typeof e.mfa_serial)>-1;const isAssumeRoleWithSourceProfile=e=>isAssumeRoleProfile(e)&&typeof e.source_profile==="string"&&typeof e.credential_source==="undefined";const isAssumeRoleWithProviderProfile=e=>isAssumeRoleProfile(e)&&typeof e.credential_source==="string"&&typeof e.source_profile==="undefined";const fromIni=(e={})=>async()=>{const n=await t.parseKnownFiles(e);return resolveProfileData(t.getMasterProfileName(e),n,e)};t.fromIni=fromIni;const parseKnownFiles=async e=>{const{loadedConfig:t=a.loadSharedConfigFiles(e)}=e;const n=await t;return{...n.configFile,...n.credentialsFile}};t.parseKnownFiles=parseKnownFiles;const getMasterProfileName=e=>e.profile||process.env[t.ENV_PROFILE]||c;t.getMasterProfileName=getMasterProfileName;const resolveProfileData=async(e,n,s,o={})=>{const i=n[e];if(Object.keys(o).length>0&&isStaticCredsProfile(i)){return resolveStaticCredentials(i)}if(isAssumeRoleWithSourceProfile(i)||isAssumeRoleWithProviderProfile(i)){const{external_id:a,mfa_serial:c,role_arn:d,role_session_name:l="aws-sdk-js-"+Date.now(),source_profile:u,credential_source:m}=i;if(!s.roleAssumer){throw new r.ProviderError(`Profile ${e} requires a role to be assumed, but no`+` role assumption callback was provided.`,false)}if(u&&u in o){throw new r.ProviderError(`Detected a cycle attempting to resolve credentials for profile`+` ${t.getMasterProfileName(s)}. Profiles visited: `+Object.keys(o).join(", "),false)}const f=u?resolveProfileData(u,n,s,{...o,[u]:true}):resolveCredentialSource(m,e)();const g={RoleArn:d,RoleSessionName:l,ExternalId:a};if(c){if(!s.mfaCodeProvider){throw new r.ProviderError(`Profile ${e} requires multi-factor authentication,`+` but no MFA code callback was provided.`,false)}g.SerialNumber=c;g.TokenCode=await s.mfaCodeProvider(c)}return s.roleAssumer(await f,g)}if(isStaticCredsProfile(i)){return resolveStaticCredentials(i)}if(isWebIdentityProfile(i)){return resolveWebIdentityCredentials(i,s)}throw new r.ProviderError(`Profile ${e} could not be found or parsed in shared`+` credentials file.`)};const resolveCredentialSource=(e,t)=>{const n={EcsContainer:o.fromContainerMetadata,Ec2InstanceMetadata:o.fromInstanceMetadata,Environment:s.fromEnv};if(e in n){return n[e]()}else{throw new r.ProviderError(`Unsupported credential source in profile ${t}. Got ${e}, `+`expected EcsContainer or Ec2InstanceMetadata or Environment.`)}};const resolveStaticCredentials=e=>Promise.resolve({accessKeyId:e.aws_access_key_id,secretAccessKey:e.aws_secret_access_key,sessionToken:e.aws_session_token});const resolveWebIdentityCredentials=async(e,t)=>i.fromTokenFile({webIdentityTokenFile:e.web_identity_token_file,roleArn:e.role_arn,roleSessionName:e.role_session_name,roleAssumerWithWebIdentity:t.roleAssumerWithWebIdentity})()},8030:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultProvider=t.ENV_IMDS_DISABLED=void 0;const s=n(5886);const o=n(1732);const i=n(2975);const r=n(693);const a=n(676);const c=n(1014);const d=n(4847);t.ENV_IMDS_DISABLED="AWS_EC2_METADATA_DISABLED";const defaultProvider=(e={})=>{const t={profile:process.env[i.ENV_PROFILE],...e};if(!t.loadedConfig)t.loadedConfig=d.loadSharedConfigFiles(e);const n=[a.fromSSO(t),i.fromIni(t),r.fromProcess(t),remoteProvider(t)];if(!t.profile)n.unshift(s.fromEnv());const o=c.chain(...n);return c.memoize(o,(e=>e.expiration!==undefined&&e.expiration.getTime()-Date.now()<3e5),(e=>e.expiration!==undefined))};t.defaultProvider=defaultProvider;const remoteProvider=e=>{if(process.env[o.ENV_CMDS_RELATIVE_URI]||process.env[o.ENV_CMDS_FULL_URI]){return o.fromContainerMetadata(e)}if(process.env[t.ENV_IMDS_DISABLED]){return()=>Promise.reject(new c.ProviderError("EC2 Instance Metadata Service access disabled"))}return o.fromInstanceMetadata(e)}},693:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromProcess=t.ENV_PROFILE=void 0;const s=n(2975);const o=n(1014);const i=n(3129);t.ENV_PROFILE="AWS_PROFILE";const fromProcess=(e={})=>async()=>{const t=await s.parseKnownFiles(e);return resolveProcessCredentials(s.getMasterProfileName(e),t)};t.fromProcess=fromProcess;const resolveProcessCredentials=async(e,t)=>{const n=t[e];if(t[e]){const t=n["credential_process"];if(t!==undefined){return await execPromise(t).then((t=>{let n;try{n=JSON.parse(t)}catch(t){throw Error(`Profile ${e} credential_process returned invalid JSON.`)}const{Version:s,AccessKeyId:o,SecretAccessKey:i,SessionToken:r,Expiration:a}=n;if(s!==1){throw Error(`Profile ${e} credential_process did not return Version 1.`)}if(o===undefined||i===undefined){throw Error(`Profile ${e} credential_process returned invalid credentials.`)}let c;if(a){const t=new Date;const n=new Date(a);if(n<t){throw Error(`Profile ${e} credential_process returned expired credentials.`)}c=Math.floor(new Date(a).valueOf()/1e3)}return{accessKeyId:o,secretAccessKey:i,sessionToken:r,expirationUnix:c}})).catch((e=>{throw new o.ProviderError(e.message)}))}else{throw new o.ProviderError(`Profile ${e} did not contain credential_process.`)}}else{throw new o.ProviderError(`Profile ${e} could not be found in shared credentials file.`)}};const execPromise=e=>new Promise((function(t,n){i.exec(e,((e,s)=>{if(e){n(e);return}t(s.trim())}))}))},676:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromSSO=t.EXPIRE_WINDOW_MS=void 0;const s=n(2611);const o=n(2975);const i=n(1014);const r=n(4847);const a=n(6417);const c=n(5747);const d=n(5622);t.EXPIRE_WINDOW_MS=15*60*1e3;const l=false;const fromSSO=(e={})=>async()=>{const t=await o.parseKnownFiles(e);return resolveSSOCredentials(o.getMasterProfileName(e),t,e)};t.fromSSO=fromSSO;const resolveSSOCredentials=async(e,n,o)=>{const u=n[e];if(!u){throw new i.ProviderError(`Profile ${e} could not be found in shared credentials file.`)}const{sso_start_url:m,sso_account_id:f,sso_region:g,sso_role_name:p}=u;if(!m&&!f&&!g&&!p){throw new i.ProviderError(`Profile ${e} is not configured with SSO credentials.`)}if(!m||!f||!g||!p){throw new i.ProviderError(`Profile ${e} does not have valid SSO credentials. Required parameters "sso_account_id", "sso_region", `+`"sso_role_name", "sso_start_url". Reference: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html`,l)}const y=a.createHash("sha1");const w=y.update(m).digest("hex");const h=d.join(r.getHomeDir(),".aws","sso","cache",`${w}.json`);let v;try{v=JSON.parse(c.readFileSync(h,{encoding:"utf-8"}));if(new Date(v.expiresAt).getTime()-Date.now()<=t.EXPIRE_WINDOW_MS){throw new Error("SSO token is expired.")}}catch(e){throw new i.ProviderError(`The SSO session associated with this profile has expired or is otherwise invalid. To refresh this SSO session `+`run aws sso login with the corresponding profile.`,l)}const{accessToken:_}=v;const E=o.ssoClient||new s.SSOClient({region:g});let S;try{S=await E.send(new s.GetRoleCredentialsCommand({accountId:f,roleName:p,accessToken:_}))}catch(e){throw i.ProviderError.from(e,l)}const{roleCredentials:{accessKeyId:R,secretAccessKey:b,sessionToken:C,expiration:P}={}}=S;if(!R||!b||!C||!P){throw new i.ProviderError("SSO returns an invalid temporary credential.",l)}return{accessKeyId:R,secretAccessKey:b,sessionToken:C,expiration:new Date(P)}}},8299:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromTokenFile=void 0;const s=n(5747);const o=n(7112);const i="AWS_WEB_IDENTITY_TOKEN_FILE";const r="AWS_ROLE_ARN";const a="AWS_ROLE_SESSION_NAME";const fromTokenFile=e=>{const{webIdentityTokenFile:t,roleArn:n,roleSessionName:c}=e;return o.fromWebToken({...e,webIdentityToken:s.readFileSync(t!==null&&t!==void 0?t:process.env[i],{encoding:"ascii"}),roleArn:n!==null&&n!==void 0?n:process.env[r],roleSessionName:c!==null&&c!==void 0?c:process.env[a]})};t.fromTokenFile=fromTokenFile},7112:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromWebToken=void 0;const s=n(1014);const fromWebToken=e=>()=>{const{roleArn:t,roleSessionName:n,webIdentityToken:o,providerId:i,policyArns:r,policy:a,durationSeconds:c,roleAssumerWithWebIdentity:d}=e;if(!d){throw new s.ProviderError(`Role Arn '${t}' needs to be assumed with web identity,`+` but no role assumption callback was provided.`,false)}return d({RoleArn:t,RoleSessionName:n!==null&&n!==void 0?n:`aws-sdk-js-session-${Date.now()}`,WebIdentityToken:o,ProviderId:i,PolicyArns:r,Policy:a,DurationSeconds:c})};t.fromWebToken=fromWebToken},1961:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(8299),t);s.__exportStar(n(7112),t)},408:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.Hash=void 0;const s=n(8577);const o=n(4293);const i=n(6417);class Hash{constructor(e,t){this.hash=t?i.createHmac(e,castSourceData(t)):i.createHash(e)}update(e,t){this.hash.update(castSourceData(e,t))}digest(){return Promise.resolve(this.hash.digest())}}t.Hash=Hash;function castSourceData(e,t){if(o.Buffer.isBuffer(e)){return e}if(typeof e==="string"){return s.fromString(e,t)}if(ArrayBuffer.isView(e)){return s.fromArrayBuffer(e.buffer,e.byteOffset,e.byteLength)}return s.fromArrayBuffer(e)}},694:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.isArrayBuffer=void 0;const isArrayBuffer=e=>typeof ArrayBuffer==="function"&&e instanceof ArrayBuffer||Object.prototype.toString.call(e)==="[object ArrayBuffer]";t.isArrayBuffer=isArrayBuffer},9323:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getContentLengthPlugin=t.contentLengthMiddlewareOptions=t.contentLengthMiddleware=void 0;const s=n(7498);const o="content-length";function contentLengthMiddleware(e){return t=>async n=>{const i=n.request;if(s.HttpRequest.isInstance(i)){const{body:t,headers:n}=i;if(t&&Object.keys(n).map((e=>e.toLowerCase())).indexOf(o)===-1){const n=e(t);if(n!==undefined){i.headers={...i.headers,[o]:String(n)}}}}return t({...n,request:i})}}t.contentLengthMiddleware=contentLengthMiddleware;t.contentLengthMiddlewareOptions={step:"build",tags:["SET_CONTENT_LENGTH","CONTENT_LENGTH"],name:"contentLengthMiddleware",override:true};const getContentLengthPlugin=e=>({applyToStack:n=>{n.add(contentLengthMiddleware(e.bodyLengthChecker),t.contentLengthMiddlewareOptions)}});t.getContentLengthPlugin=getContentLengthPlugin},8645:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getHostHeaderPlugin=t.hostHeaderMiddlewareOptions=t.hostHeaderMiddleware=t.resolveHostHeaderConfig=void 0;const s=n(7498);function resolveHostHeaderConfig(e){return e}t.resolveHostHeaderConfig=resolveHostHeaderConfig;const hostHeaderMiddleware=e=>t=>async n=>{if(!s.HttpRequest.isInstance(n.request))return t(n);const{request:o}=n;const{handlerProtocol:i=""}=e.requestHandler.metadata||{};if(i.indexOf("h2")>=0&&!o.headers[":authority"]){delete o.headers["host"];o.headers[":authority"]=""}else if(!o.headers["host"]){o.headers["host"]=o.hostname}return t(n)};t.hostHeaderMiddleware=hostHeaderMiddleware;t.hostHeaderMiddlewareOptions={name:"hostHeaderMiddleware",step:"build",priority:"low",tags:["HOST"],override:true};const getHostHeaderPlugin=e=>({applyToStack:n=>{n.add(t.hostHeaderMiddleware(e),t.hostHeaderMiddlewareOptions)}});t.getHostHeaderPlugin=getHostHeaderPlugin},8685:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(3712),t)},3712:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getLoggerPlugin=t.loggerMiddlewareOptions=t.loggerMiddleware=void 0;const loggerMiddleware=()=>(e,t)=>async n=>{const{clientName:s,commandName:o,inputFilterSensitiveLog:i,logger:r,outputFilterSensitiveLog:a}=t;const c=await e(n);if(!r){return c}if(typeof r.info==="function"){const{$metadata:e,...t}=c.output;r.info({clientName:s,commandName:o,input:i(n.input),output:a(t),metadata:e})}return c};t.loggerMiddleware=loggerMiddleware;t.loggerMiddlewareOptions={name:"loggerMiddleware",tags:["LOGGER"],step:"initialize",override:true};const getLoggerPlugin=e=>({applyToStack:e=>{e.add(t.loggerMiddleware(),t.loggerMiddlewareOptions)}});t.getLoggerPlugin=getLoggerPlugin},9083:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.NODE_RETRY_MODE_CONFIG_OPTIONS=t.CONFIG_RETRY_MODE=t.ENV_RETRY_MODE=t.resolveRetryConfig=t.NODE_MAX_ATTEMPT_CONFIG_OPTIONS=t.CONFIG_MAX_ATTEMPTS=t.ENV_MAX_ATTEMPTS=void 0;const s=n(5857);t.ENV_MAX_ATTEMPTS="AWS_MAX_ATTEMPTS";t.CONFIG_MAX_ATTEMPTS="max_attempts";t.NODE_MAX_ATTEMPT_CONFIG_OPTIONS={environmentVariableSelector:e=>{const n=e[t.ENV_MAX_ATTEMPTS];if(!n)return undefined;const s=parseInt(n);if(Number.isNaN(s)){throw new Error(`Environment variable ${t.ENV_MAX_ATTEMPTS} mast be a number, got "${n}"`)}return s},configFileSelector:e=>{const n=e[t.CONFIG_MAX_ATTEMPTS];if(!n)return undefined;const s=parseInt(n);if(Number.isNaN(s)){throw new Error(`Shared config file entry ${t.CONFIG_MAX_ATTEMPTS} mast be a number, got "${n}"`)}return s},default:s.DEFAULT_MAX_ATTEMPTS};const resolveRetryConfig=e=>{const t=normalizeMaxAttempts(e.maxAttempts);return{...e,maxAttempts:t,retryStrategy:e.retryStrategy||new s.StandardRetryStrategy(t)}};t.resolveRetryConfig=resolveRetryConfig;const normalizeMaxAttempts=(e=s.DEFAULT_MAX_ATTEMPTS)=>{if(typeof e==="number"){const t=Promise.resolve(e);return()=>t}return e};t.ENV_RETRY_MODE="AWS_RETRY_MODE";t.CONFIG_RETRY_MODE="retry_mode";t.NODE_RETRY_MODE_CONFIG_OPTIONS={environmentVariableSelector:e=>e[t.ENV_RETRY_MODE],configFileSelector:e=>e[t.CONFIG_RETRY_MODE],default:s.DEFAULT_RETRY_MODE}},1285:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.REQUEST_HEADER=t.INVOCATION_ID_HEADER=t.NO_RETRY_INCREMENT=t.TIMEOUT_RETRY_COST=t.RETRY_COST=t.INITIAL_RETRY_TOKENS=t.THROTTLING_RETRY_DELAY_BASE=t.MAXIMUM_RETRY_DELAY=t.DEFAULT_RETRY_DELAY_BASE=void 0;t.DEFAULT_RETRY_DELAY_BASE=100;t.MAXIMUM_RETRY_DELAY=20*1e3;t.THROTTLING_RETRY_DELAY_BASE=500;t.INITIAL_RETRY_TOKENS=500;t.RETRY_COST=5;t.TIMEOUT_RETRY_COST=10;t.NO_RETRY_INCREMENT=1;t.INVOCATION_ID_HEADER="amz-sdk-invocation-id";t.REQUEST_HEADER="amz-sdk-request"},6814:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getDefaultRetryQuota=void 0;const s=n(1285);const getDefaultRetryQuota=e=>{const t=e;let n=e;const getCapacityAmount=e=>e.name==="TimeoutError"?s.TIMEOUT_RETRY_COST:s.RETRY_COST;const hasRetryTokens=e=>getCapacityAmount(e)<=n;const retrieveRetryTokens=e=>{if(!hasRetryTokens(e)){throw new Error("No retry token available")}const t=getCapacityAmount(e);n-=t;return t};const releaseRetryTokens=e=>{n+=e!==null&&e!==void 0?e:s.NO_RETRY_INCREMENT;n=Math.min(n,t)};return Object.freeze({hasRetryTokens:hasRetryTokens,retrieveRetryTokens:retrieveRetryTokens,releaseRetryTokens:releaseRetryTokens})};t.getDefaultRetryQuota=getDefaultRetryQuota},5857:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.StandardRetryStrategy=t.DEFAULT_RETRY_MODE=t.DEFAULT_MAX_ATTEMPTS=void 0;const s=n(7498);const o=n(4011);const i=n(5840);const r=n(1285);const a=n(6814);const c=n(7659);const d=n(6553);t.DEFAULT_MAX_ATTEMPTS=3;t.DEFAULT_RETRY_MODE="standard";class StandardRetryStrategy{constructor(e,n){var s,o,i;this.maxAttemptsProvider=e;this.mode=t.DEFAULT_RETRY_MODE;this.retryDecider=(s=n===null||n===void 0?void 0:n.retryDecider)!==null&&s!==void 0?s:d.defaultRetryDecider;this.delayDecider=(o=n===null||n===void 0?void 0:n.delayDecider)!==null&&o!==void 0?o:c.defaultDelayDecider;this.retryQuota=(i=n===null||n===void 0?void 0:n.retryQuota)!==null&&i!==void 0?i:a.getDefaultRetryQuota(r.INITIAL_RETRY_TOKENS)}shouldRetry(e,t,n){return t<n&&this.retryDecider(e)&&this.retryQuota.hasRetryTokens(e)}async getMaxAttempts(){let e;try{e=await this.maxAttemptsProvider()}catch(n){e=t.DEFAULT_MAX_ATTEMPTS}return e}async retry(e,t){let n;let a=0;let c=0;const d=await this.getMaxAttempts();const{request:l}=t;if(s.HttpRequest.isInstance(l)){l.headers[r.INVOCATION_ID_HEADER]=i.v4()}while(true){try{if(s.HttpRequest.isInstance(l)){l.headers[r.REQUEST_HEADER]=`attempt=${a+1}; max=${d}`}const{response:o,output:i}=await e(t);this.retryQuota.releaseRetryTokens(n);i.$metadata.attempts=a+1;i.$metadata.totalRetryDelay=c;return{response:o,output:i}}catch(e){a++;if(this.shouldRetry(e,a,d)){n=this.retryQuota.retrieveRetryTokens(e);const t=this.delayDecider(o.isThrottlingError(e)?r.THROTTLING_RETRY_DELAY_BASE:r.DEFAULT_RETRY_DELAY_BASE,a);c+=t;await new Promise((e=>setTimeout(e,t)));continue}if(!e.$metadata){e.$metadata={}}e.$metadata.attempts=a;e.$metadata.totalRetryDelay=c;throw e}}}}t.StandardRetryStrategy=StandardRetryStrategy},7659:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultDelayDecider=void 0;const s=n(1285);const defaultDelayDecider=(e,t)=>Math.floor(Math.min(s.MAXIMUM_RETRY_DELAY,Math.random()*2**t*e));t.defaultDelayDecider=defaultDelayDecider},7e3:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(6730),t);s.__exportStar(n(9317),t);s.__exportStar(n(5857),t);s.__exportStar(n(9083),t);s.__exportStar(n(7659),t);s.__exportStar(n(6553),t)},9317:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getOmitRetryHeadersPlugin=t.omitRetryHeadersMiddlewareOptions=t.omitRetryHeadersMiddleware=void 0;const s=n(7498);const o=n(1285);const omitRetryHeadersMiddleware=()=>e=>async t=>{const{request:n}=t;if(s.HttpRequest.isInstance(n)){delete n.headers[o.INVOCATION_ID_HEADER];delete n.headers[o.REQUEST_HEADER]}return e(t)};t.omitRetryHeadersMiddleware=omitRetryHeadersMiddleware;t.omitRetryHeadersMiddlewareOptions={name:"omitRetryHeadersMiddleware",tags:["RETRY","HEADERS","OMIT_RETRY_HEADERS"],relation:"before",toMiddleware:"awsAuthMiddleware",override:true};const getOmitRetryHeadersPlugin=e=>({applyToStack:e=>{e.addRelativeTo(t.omitRetryHeadersMiddleware(),t.omitRetryHeadersMiddlewareOptions)}});t.getOmitRetryHeadersPlugin=getOmitRetryHeadersPlugin},6553:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultRetryDecider=void 0;const s=n(4011);const defaultRetryDecider=e=>{if(!e){return false}return s.isRetryableByTrait(e)||s.isClockSkewError(e)||s.isThrottlingError(e)||s.isTransientError(e)};t.defaultRetryDecider=defaultRetryDecider},6730:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getRetryPlugin=t.retryMiddlewareOptions=t.retryMiddleware=void 0;const retryMiddleware=e=>(t,n)=>async s=>{var o;if((o=e===null||e===void 0?void 0:e.retryStrategy)===null||o===void 0?void 0:o.mode)n.userAgent=[...n.userAgent||[],["cfg/retry-mode",e.retryStrategy.mode]];return e.retryStrategy.retry(t,s)};t.retryMiddleware=retryMiddleware;t.retryMiddlewareOptions={name:"retryMiddleware",tags:["RETRY"],step:"finalizeRequest",priority:"high",override:true};const getRetryPlugin=e=>({applyToStack:n=>{n.add(t.retryMiddleware(e),t.retryMiddlewareOptions)}});t.getRetryPlugin=getRetryPlugin},9637:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.resolveStsAuthConfig=void 0;const s=n(2487);const resolveStsAuthConfig=(e,t)=>s.resolveAwsAuthConfig({...e,stsClientCtor:t});t.resolveStsAuthConfig=resolveStsAuthConfig},5260:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.deserializerMiddleware=void 0;const deserializerMiddleware=(e,t)=>(n,s)=>async s=>{const{response:o}=await n(s);const i=await t(o,e);return{response:o,output:i}};t.deserializerMiddleware=deserializerMiddleware},6142:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(5260),t);s.__exportStar(n(1594),t);s.__exportStar(n(1288),t)},1288:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getSerdePlugin=t.serializerMiddlewareOption=t.deserializerMiddlewareOption=void 0;const s=n(5260);const o=n(1594);t.deserializerMiddlewareOption={name:"deserializerMiddleware",step:"deserialize",tags:["DESERIALIZER"],override:true};t.serializerMiddlewareOption={name:"serializerMiddleware",step:"serialize",tags:["SERIALIZER"],override:true};function getSerdePlugin(e,n,i){return{applyToStack:r=>{r.add(s.deserializerMiddleware(e,i),t.deserializerMiddlewareOption);r.add(o.serializerMiddleware(e,n),t.serializerMiddlewareOption)}}}t.getSerdePlugin=getSerdePlugin},1594:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.serializerMiddleware=void 0;const serializerMiddleware=(e,t)=>(n,s)=>async s=>{const o=await t(s.input,e);return n({...s,request:o})};t.serializerMiddleware=serializerMiddleware},5370:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.resolveAwsAuthConfig=void 0;const s=n(1014);const o=n(4172);const i=3e5;const resolveAwsAuthConfig=e=>{const t=e.credentials?normalizeCredentialProvider(e.credentials):e.credentialDefaultProvider(e);const{signingEscapePath:n=true,systemClockOffset:s=e.systemClockOffset||0,sha256:i}=e;let r;if(e.signer){r=normalizeProvider(e.signer)}else{r=()=>normalizeProvider(e.region)().then((async t=>[await e.regionInfoProvider(t)||{},t])).then((([s,r])=>{const{signingRegion:a,signingService:c}=s;e.signingRegion=e.signingRegion||a||r;e.signingName=e.signingName||c||e.serviceId;return new o.SignatureV4({credentials:t,region:e.signingRegion,service:e.signingName,sha256:i,uriEscapePath:n})}))}return{...e,systemClockOffset:s,signingEscapePath:n,credentials:t,signer:r}};t.resolveAwsAuthConfig=resolveAwsAuthConfig;const normalizeProvider=e=>{if(typeof e==="object"){const t=Promise.resolve(e);return()=>t}return e};const normalizeCredentialProvider=e=>{if(typeof e==="function"){return s.memoize(e,(e=>e.expiration!==undefined&&e.expiration.getTime()-Date.now()<i),(e=>e.expiration!==undefined))}return normalizeProvider(e)}},2487:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(5370),t);s.__exportStar(n(4834),t)},4834:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getAwsAuthPlugin=t.awsAuthMiddlewareOptions=t.awsAuthMiddleware=void 0;const s=n(7498);const isClockSkewed=(e,t)=>Math.abs(getSkewCorrectedDate(t).getTime()-e)>=3e5;const getSkewCorrectedDate=e=>new Date(Date.now()+e);function awsAuthMiddleware(e){return(t,n)=>async function(o){if(!s.HttpRequest.isInstance(o.request))return t(o);const i=typeof e.signer==="function"?await e.signer():e.signer;const r=await t({...o,request:await i.sign(o.request,{signingDate:new Date(Date.now()+e.systemClockOffset),signingRegion:n["signing_region"],signingService:n["signing_service"]})});const{headers:a}=r.response;const c=a&&(a.date||a.Date);if(c){const t=Date.parse(c);if(isClockSkewed(t,e.systemClockOffset)){e.systemClockOffset=t-Date.now()}}return r}}t.awsAuthMiddleware=awsAuthMiddleware;t.awsAuthMiddlewareOptions={name:"awsAuthMiddleware",tags:["SIGNATURE","AWSAUTH"],relation:"after",toMiddleware:"retryMiddleware",override:true};const getAwsAuthPlugin=e=>({applyToStack:n=>{n.addRelativeTo(awsAuthMiddleware(e),t.awsAuthMiddlewareOptions)}});t.getAwsAuthPlugin=getAwsAuthPlugin},9680:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.constructStack=void 0;const constructStack=()=>{let e=[];let o=[];const i=new Set;const sort=e=>e.sort(((e,t)=>n[t.step]-n[e.step]||s[t.priority||"normal"]-s[e.priority||"normal"]));const removeByName=t=>{let n=false;const filterCb=e=>{if(e.name&&e.name===t){n=true;i.delete(t);return false}return true};e=e.filter(filterCb);o=o.filter(filterCb);return n};const removeByReference=t=>{let n=false;const filterCb=e=>{if(e.middleware===t){n=true;if(e.name)i.delete(e.name);return false}return true};e=e.filter(filterCb);o=o.filter(filterCb);return n};const cloneTo=t=>{e.forEach((e=>{t.add(e.middleware,{...e})}));o.forEach((e=>{t.addRelativeTo(e.middleware,{...e})}));return t};const expandRelativeMiddlewareList=e=>{const t=[];e.before.forEach((e=>{if(e.before.length===0&&e.after.length===0){t.push(e)}else{t.push(...expandRelativeMiddlewareList(e))}}));t.push(e);e.after.reverse().forEach((e=>{if(e.before.length===0&&e.after.length===0){t.push(e)}else{t.push(...expandRelativeMiddlewareList(e))}}));return t};const getMiddlewareList=()=>{const t=[];const n=[];const s={};e.forEach((e=>{const n={...e,before:[],after:[]};if(n.name)s[n.name]=n;t.push(n)}));o.forEach((e=>{const t={...e,before:[],after:[]};if(t.name)s[t.name]=t;n.push(t)}));n.forEach((e=>{if(e.toMiddleware){const t=s[e.toMiddleware];if(t===undefined){throw new Error(`${e.toMiddleware} is not found when adding ${e.name||"anonymous"} middleware ${e.relation} ${e.toMiddleware}`)}if(e.relation==="after"){t.after.push(e)}if(e.relation==="before"){t.before.push(e)}}}));const i=sort(t).map(expandRelativeMiddlewareList).reduce(((e,t)=>{e.push(...t);return e}),[]);return i.map((e=>e.middleware))};const r={add:(t,n={})=>{const{name:s,override:o}=n;const r={step:"initialize",priority:"normal",middleware:t,...n};if(s){if(i.has(s)){if(!o)throw new Error(`Duplicate middleware name '${s}'`);const t=e.findIndex((e=>e.name===s));const n=e[t];if(n.step!==r.step||n.priority!==r.priority){throw new Error(`"${s}" middleware with ${n.priority} priority in ${n.step} step cannot be `+`overridden by same-name middleware with ${r.priority} priority in ${r.step} step.`)}e.splice(t,1)}i.add(s)}e.push(r)},addRelativeTo:(e,t)=>{const{name:n,override:s}=t;const r={middleware:e,...t};if(n){if(i.has(n)){if(!s)throw new Error(`Duplicate middleware name '${n}'`);const e=o.findIndex((e=>e.name===n));const t=o[e];if(t.toMiddleware!==r.toMiddleware||t.relation!==r.relation){throw new Error(`"${n}" middleware ${t.relation} "${t.toMiddleware}" middleware cannot be overridden `+`by same-name middleware ${r.relation} "${r.toMiddleware}" middleware.`)}o.splice(e,1)}i.add(n)}o.push(r)},clone:()=>cloneTo(t.constructStack()),use:e=>{e.applyToStack(r)},remove:e=>{if(typeof e==="string")return removeByName(e);else return removeByReference(e)},removeByTag:t=>{let n=false;const filterCb=e=>{const{tags:s,name:o}=e;if(s&&s.includes(t)){if(o)i.delete(o);n=true;return false}return true};e=e.filter(filterCb);o=o.filter(filterCb);return n},concat:e=>{const n=cloneTo(t.constructStack());n.use(e);return n},applyToStack:cloneTo,resolve:(e,t)=>{for(const n of getMiddlewareList().reverse()){e=n(e,t)}return e}};return r};t.constructStack=constructStack;const n={initialize:5,serialize:4,build:3,finalizeRequest:2,deserialize:1};const s={high:3,normal:2,low:1}},2928:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(9680),t)},6378:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.resolveUserAgentConfig=void 0;function resolveUserAgentConfig(e){return{...e,customUserAgent:typeof e.customUserAgent==="string"?[[e.customUserAgent]]:e.customUserAgent}}t.resolveUserAgentConfig=resolveUserAgentConfig},1584:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.UA_ESCAPE_REGEX=t.SPACE=t.X_AMZ_USER_AGENT=t.USER_AGENT=void 0;t.USER_AGENT="user-agent";t.X_AMZ_USER_AGENT="x-amz-user-agent";t.SPACE=" ";t.UA_ESCAPE_REGEX=/[^\!\#\$\%\&\'\*\+\-\.\^\_\`\|\~\d\w]/g},5976:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(6378),t);s.__exportStar(n(8240),t)},8240:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getUserAgentPlugin=t.getUserAgentMiddlewareOptions=t.userAgentMiddleware=void 0;const s=n(7498);const o=n(1584);const userAgentMiddleware=e=>(t,n)=>async i=>{var r,a;const{request:c}=i;if(!s.HttpRequest.isInstance(c))return t(i);const{headers:d}=c;const l=((r=n===null||n===void 0?void 0:n.userAgent)===null||r===void 0?void 0:r.map(escapeUserAgent))||[];const u=(await e.defaultUserAgentProvider()).map(escapeUserAgent);const m=((a=e===null||e===void 0?void 0:e.customUserAgent)===null||a===void 0?void 0:a.map(escapeUserAgent))||[];d[o.X_AMZ_USER_AGENT]=[...u,...l,...m].join(o.SPACE);const f=[...u.filter((e=>e.startsWith("aws-sdk-"))),...m].join(o.SPACE);if(e.runtime!=="browser"&&f){d[o.USER_AGENT]=d[o.USER_AGENT]?`${d[o.USER_AGENT]} ${f}`:f}return t({...i,request:c})};t.userAgentMiddleware=userAgentMiddleware;const escapeUserAgent=([e,t])=>{const n=e.indexOf("/");const s=e.substring(0,n);let i=e.substring(n+1);if(s==="api"){i=i.toLowerCase()}return[s,i,t].filter((e=>e&&e.length>0)).map((e=>e===null||e===void 0?void 0:e.replace(o.UA_ESCAPE_REGEX,"_"))).join("/")};t.getUserAgentMiddlewareOptions={name:"getUserAgentMiddleware",step:"build",priority:"low",tags:["SET_USER_AGENT","USER_AGENT"],override:true};const getUserAgentPlugin=e=>({applyToStack:n=>{n.add(t.userAgentMiddleware(e),t.getUserAgentMiddlewareOptions)}});t.getUserAgentPlugin=getUserAgentPlugin},3552:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.loadConfig=void 0;const s=n(1014);const o=n(8302);const i=n(5945);const r=n(5254);const loadConfig=({environmentVariableSelector:e,configFileSelector:t,default:n},a={})=>s.memoize(s.chain(o.fromEnv(e),i.fromSharedConfigFiles(t,a),r.fromStatic(n)));t.loadConfig=loadConfig},8302:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromEnv=void 0;const s=n(1014);const fromEnv=e=>async()=>{try{const t=e(process.env);if(t===undefined){throw new Error}return t}catch(t){throw new s.ProviderError(t.message||`Cannot load config from environment variables with getter: ${e}`)}};t.fromEnv=fromEnv},5945:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromSharedConfigFiles=t.ENV_PROFILE=void 0;const s=n(1014);const o=n(4847);const i="default";t.ENV_PROFILE="AWS_PROFILE";const fromSharedConfigFiles=(e,{preferredFile:n="config",...r}={})=>async()=>{const{loadedConfig:a=o.loadSharedConfigFiles(r),profile:c=process.env[t.ENV_PROFILE]||i}=r;const{configFile:d,credentialsFile:l}=await a;const u=l[c]||{};const m=d[c]||{};const f=n==="config"?{...u,...m}:{...m,...u};try{const t=e(f);if(t===undefined){throw new Error}return t}catch(t){throw new s.ProviderError(t.message||`Cannot load config for profile ${c} in SDK configuration files with getter: ${e}`)}};t.fromSharedConfigFiles=fromSharedConfigFiles},5254:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromStatic=void 0;const s=n(1014);const isFunction=e=>typeof e==="function";const fromStatic=e=>isFunction(e)?async()=>e():s.fromStatic(e);t.fromStatic=fromStatic},1124:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(3552),t)},8962:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.NODEJS_TIMEOUT_ERROR_CODES=void 0;t.NODEJS_TIMEOUT_ERROR_CODES=["ECONNRESET","EPIPE","ETIMEDOUT"]},2269:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getTransformedHeaders=void 0;const getTransformedHeaders=e=>{const t={};for(const n of Object.keys(e)){const s=e[n];t[n]=Array.isArray(s)?s.join(","):s}return t};t.getTransformedHeaders=getTransformedHeaders},5168:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(24),t);s.__exportStar(n(8731),t);s.__exportStar(n(1624),t)},24:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.NodeHttpHandler=void 0;const s=n(7498);const o=n(1035);const i=n(8605);const r=n(7211);const a=n(8962);const c=n(2269);const d=n(2072);const l=n(1700);const u=n(3306);class NodeHttpHandler{constructor({connectionTimeout:e,socketTimeout:t,httpAgent:n,httpsAgent:s}={}){this.metadata={handlerProtocol:"http/1.1"};this.connectionTimeout=e;this.socketTimeout=t;const o=true;const a=50;this.httpAgent=n||new i.Agent({keepAlive:o,maxSockets:a});this.httpsAgent=s||new r.Agent({keepAlive:o,maxSockets:a})}destroy(){this.httpAgent.destroy();this.httpsAgent.destroy()}handle(e,{abortSignal:t}={}){return new Promise(((n,m)=>{if(t===null||t===void 0?void 0:t.aborted){const e=new Error("Request aborted");e.name="AbortError";m(e);return}const f=e.protocol==="https:";const g=o.buildQueryString(e.query||{});const p={headers:e.headers,host:e.hostname,method:e.method,path:g?`${e.path}?${g}`:e.path,port:e.port,agent:f?this.httpsAgent:this.httpAgent};const y=f?r.request:i.request;const w=y(p,(e=>{const t=new s.HttpResponse({statusCode:e.statusCode||-1,headers:c.getTransformedHeaders(e.headers),body:e});n({response:t})}));w.on("error",(e=>{if(a.NODEJS_TIMEOUT_ERROR_CODES.includes(e.code)){m(Object.assign(e,{name:"TimeoutError"}))}else{m(e)}}));d.setConnectionTimeout(w,m,this.connectionTimeout);l.setSocketTimeout(w,m,this.socketTimeout);if(t){t.onabort=()=>{w.abort();const e=new Error("Request aborted");e.name="AbortError";m(e)}}u.writeRequestBody(w,e)}))}}t.NodeHttpHandler=NodeHttpHandler},8731:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.NodeHttp2Handler=void 0;const s=n(7498);const o=n(1035);const i=n(7565);const r=n(2269);const a=n(3306);class NodeHttp2Handler{constructor({requestTimeout:e,sessionTimeout:t}={}){this.metadata={handlerProtocol:"h2"};this.requestTimeout=e;this.sessionTimeout=t;this.connectionPool=new Map}destroy(){for(const[e,t]of this.connectionPool){t.destroy()}this.connectionPool.clear()}handle(e,{abortSignal:t}={}){return new Promise(((n,c)=>{if(t===null||t===void 0?void 0:t.aborted){const e=new Error("Request aborted");e.name="AbortError";c(e);return}const{hostname:d,method:l,port:u,protocol:m,path:f,query:g}=e;const p=o.buildQueryString(g||{});const y=this.getSession(`${m}//${d}${u?`:${u}`:""}`).request({...e.headers,[i.constants.HTTP2_HEADER_PATH]:p?`${f}?${p}`:f,[i.constants.HTTP2_HEADER_METHOD]:l});y.on("response",(e=>{const t=new s.HttpResponse({statusCode:e[":status"]||-1,headers:r.getTransformedHeaders(e),body:y});n({response:t})}));y.on("error",c);y.on("frameError",c);y.on("aborted",c);const w=this.requestTimeout;if(w){y.setTimeout(w,(()=>{y.close();const e=new Error(`Stream timed out because of no activity for ${w} ms`);e.name="TimeoutError";c(e)}))}if(t){t.onabort=()=>{y.close();const e=new Error("Request aborted");e.name="AbortError";c(e)}}a.writeRequestBody(y,e)}))}getSession(e){const t=this.connectionPool;const n=t.get(e);if(n)return n;const s=i.connect(e);t.set(e,s);const o=this.sessionTimeout;if(o){s.setTimeout(o,(()=>{s.close();t.delete(e)}))}return s}}t.NodeHttp2Handler=NodeHttp2Handler},2072:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.setConnectionTimeout=void 0;const setConnectionTimeout=(e,t,n=0)=>{if(!n){return}e.on("socket",(s=>{if(s.connecting){const o=setTimeout((()=>{e.destroy();t(Object.assign(new Error(`Socket timed out without establishing a connection within ${n} ms`),{name:"TimeoutError"}))}),n);s.on("connect",(()=>{clearTimeout(o)}))}}))};t.setConnectionTimeout=setConnectionTimeout},1700:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.setSocketTimeout=void 0;const setSocketTimeout=(e,t,n=0)=>{e.setTimeout(n,(()=>{e.destroy();t(Object.assign(new Error(`Connection timed out after ${n} ms`),{name:"TimeoutError"}))}))};t.setSocketTimeout=setSocketTimeout},701:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.Collector=void 0;const s=n(2413);class Collector extends s.Writable{constructor(){super(...arguments);this.bufferedBytes=[]}_write(e,t,n){this.bufferedBytes.push(e);n()}}t.Collector=Collector},1624:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.streamCollector=void 0;const s=n(701);const streamCollector=e=>new Promise(((t,n)=>{const o=new s.Collector;e.pipe(o);e.on("error",(e=>{o.end();n(e)}));o.on("error",n);o.on("finish",(function(){const e=new Uint8Array(Buffer.concat(this.bufferedBytes));t(e)}))}));t.streamCollector=streamCollector},3306:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.writeRequestBody=void 0;const s=n(2413);function writeRequestBody(e,t){const n=t.headers["Expect"]||t.headers["expect"];if(n==="100-continue"){e.on("continue",(()=>{writeBody(e,t.body)}))}else{writeBody(e,t.body)}}t.writeRequestBody=writeRequestBody;function writeBody(e,t){if(t instanceof s.Readable){t.pipe(e)}else if(t){e.end(Buffer.from(t))}else{e.end()}}},791:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.ProviderError=void 0;class ProviderError extends Error{constructor(e,t=true){super(e);this.tryNextLink=t}static from(e,t=true){Object.defineProperty(e,"tryNextLink",{value:t,configurable:false,enumerable:false,writable:false});return e}}t.ProviderError=ProviderError},330:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.chain=void 0;const s=n(791);function chain(...e){return()=>{let t=Promise.reject(new s.ProviderError("No providers in chain"));for(const n of e){t=t.catch((e=>{if(e===null||e===void 0?void 0:e.tryNextLink){return n()}throw e}))}return t}}t.chain=chain},2037:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromStatic=void 0;const fromStatic=e=>()=>Promise.resolve(e);t.fromStatic=fromStatic},1014:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(330),t);s.__exportStar(n(2037),t);s.__exportStar(n(7803),t);s.__exportStar(n(791),t)},7803:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.memoize=void 0;const memoize=(e,t,n)=>{let s;let o;if(t===undefined){return()=>{if(!o){s=e();o=true}return s}}let i=false;return async()=>{if(!o){s=e();o=true}if(i){return s}const r=await s;if(n&&!n(r)){i=true;return r}if(t(r)){return s=e()}return r}};t.memoize=memoize},6695:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},7577:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.HttpRequest=void 0;class HttpRequest{constructor(e){this.method=e.method||"GET";this.hostname=e.hostname||"localhost";this.port=e.port;this.query=e.query||{};this.headers=e.headers||{};this.body=e.body;this.protocol=e.protocol?e.protocol.substr(-1)!==":"?`${e.protocol}:`:e.protocol:"https:";this.path=e.path?e.path.charAt(0)!=="/"?`/${e.path}`:e.path:"/"}static isInstance(e){if(!e)return false;const t=e;return"method"in t&&"protocol"in t&&"hostname"in t&&"path"in t&&typeof t["query"]==="object"&&typeof t["headers"]==="object"}clone(){const e=new HttpRequest({...this,headers:{...this.headers}});if(e.query)e.query=cloneQuery(e.query);return e}}t.HttpRequest=HttpRequest;function cloneQuery(e){return Object.keys(e).reduce(((t,n)=>{const s=e[n];return{...t,[n]:Array.isArray(s)?[...s]:s}}),{})}},1772:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.HttpResponse=void 0;class HttpResponse{constructor(e){this.statusCode=e.statusCode;this.headers=e.headers||{};this.body=e.body}static isInstance(e){if(!e)return false;const t=e;return typeof t.statusCode==="number"&&typeof t.headers==="object"}}t.HttpResponse=HttpResponse},7498:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(1772),t);s.__exportStar(n(7577),t);s.__exportStar(n(6695),t);s.__exportStar(n(797),t)},797:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.isValidHostname=void 0;function isValidHostname(e){const t=/^[a-z0-9][a-z0-9\.\-]*[a-z0-9]$/;return t.test(e)}t.isValidHostname=isValidHostname},1035:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.buildQueryString=void 0;const s=n(7834);function buildQueryString(e){const t=[];for(let n of Object.keys(e).sort()){const o=e[n];n=s.escapeUri(n);if(Array.isArray(o)){for(let e=0,i=o.length;e<i;e++){t.push(`${n}=${s.escapeUri(o[e])}`)}}else{let e=n;if(o||typeof o==="string"){e+=`=${s.escapeUri(o)}`}t.push(e)}}return t.join("&")}t.buildQueryString=buildQueryString},2026:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.parseQueryString=void 0;function parseQueryString(e){const t={};e=e.replace(/^\?/,"");if(e){for(const n of e.split("&")){let[e,s=null]=n.split("=");e=decodeURIComponent(e);if(s){s=decodeURIComponent(s)}if(!(e in t)){t[e]=s}else if(Array.isArray(t[e])){t[e].push(s)}else{t[e]=[t[e],s]}}}return t}t.parseQueryString=parseQueryString},3584:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.TRANSIENT_ERROR_STATUS_CODES=t.TRANSIENT_ERROR_CODES=t.THROTTLING_ERROR_CODES=t.CLOCK_SKEW_ERROR_CODES=void 0;t.CLOCK_SKEW_ERROR_CODES=["AuthFailure","InvalidSignatureException","RequestExpired","RequestInTheFuture","RequestTimeTooSkewed","SignatureDoesNotMatch"];t.THROTTLING_ERROR_CODES=["BandwidthLimitExceeded","EC2ThrottledException","LimitExceededException","PriorRequestNotComplete","ProvisionedThroughputExceededException","RequestLimitExceeded","RequestThrottled","RequestThrottledException","SlowDown","ThrottledException","Throttling","ThrottlingException","TooManyRequestsException","TransactionInProgressException"];t.TRANSIENT_ERROR_CODES=["AbortError","TimeoutError","RequestTimeout","RequestTimeoutException"];t.TRANSIENT_ERROR_STATUS_CODES=[500,502,503,504]},4011:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.isTransientError=t.isThrottlingError=t.isClockSkewError=t.isRetryableByTrait=void 0;const s=n(3584);const isRetryableByTrait=e=>e.$retryable!==undefined;t.isRetryableByTrait=isRetryableByTrait;const isClockSkewError=e=>s.CLOCK_SKEW_ERROR_CODES.includes(e.name);t.isClockSkewError=isClockSkewError;const isThrottlingError=e=>{var t,n;return((t=e.$metadata)===null||t===void 0?void 0:t.httpStatusCode)===429||s.THROTTLING_ERROR_CODES.includes(e.name)||((n=e.$retryable)===null||n===void 0?void 0:n.throttling)==true};t.isThrottlingError=isThrottlingError;const isTransientError=e=>{var t;return s.TRANSIENT_ERROR_CODES.includes(e.name)||s.TRANSIENT_ERROR_STATUS_CODES.includes(((t=e.$metadata)===null||t===void 0?void 0:t.httpStatusCode)||0)};t.isTransientError=isTransientError},4847:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getHomeDir=t.loadSharedConfigFiles=t.ENV_CONFIG_PATH=t.ENV_CREDENTIALS_PATH=void 0;const s=n(5747);const o=n(2087);const i=n(5622);t.ENV_CREDENTIALS_PATH="AWS_SHARED_CREDENTIALS_FILE";t.ENV_CONFIG_PATH="AWS_CONFIG_FILE";const swallowError=()=>({});const loadSharedConfigFiles=(e={})=>{const{filepath:n=process.env[t.ENV_CREDENTIALS_PATH]||i.join(t.getHomeDir(),".aws","credentials"),configFilepath:s=process.env[t.ENV_CONFIG_PATH]||i.join(t.getHomeDir(),".aws","config")}=e;return Promise.all([slurpFile(s).then(parseIni).then(normalizeConfigFile).catch(swallowError),slurpFile(n).then(parseIni).catch(swallowError)]).then((e=>{const[t,n]=e;return{configFile:t,credentialsFile:n}}))};t.loadSharedConfigFiles=loadSharedConfigFiles;const r=/^profile\s(["'])?([^\1]+)\1$/;const normalizeConfigFile=e=>{const t={};for(const n of Object.keys(e)){let s;if(n==="default"){t.default=e.default}else if(s=r.exec(n)){const[o,i,r]=s;if(r){t[r]=e[n]}}}return t};const a=["__proto__","profile __proto__"];const parseIni=e=>{const t={};let n;for(let s of e.split(/\r?\n/)){s=s.split(/(^|\s)[;#]/)[0];const e=s.match(/^\s*\[([^\[\]]+)]\s*$/);if(e){n=e[1];if(a.includes(n)){throw new Error(`Found invalid profile name "${n}"`)}}else if(n){const e=s.match(/^\s*(.+?)\s*=\s*(.+?)\s*$/);if(e){t[n]=t[n]||{};t[n][e[1]]=e[2]}}}return t};const slurpFile=e=>new Promise(((t,n)=>{s.readFile(e,"utf8",((e,s)=>{if(e){n(e)}else{t(s)}}))}));const getHomeDir=()=>{const{HOME:e,USERPROFILE:t,HOMEPATH:n,HOMEDRIVE:s=`C:${i.sep}`}=process.env;if(e)return e;if(t)return t;if(n)return`${s}${n}`;return o.homedir()};t.getHomeDir=getHomeDir},7210:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.SignatureV4=void 0;const s=n(3291);const o=n(3851);const i=n(5478);const r=n(9201);const a=n(8706);const c=n(7902);const d=n(1402);const l=n(5850);const u=n(4952);const m=n(7850);class SignatureV4{constructor({applyChecksum:e,credentials:t,region:n,service:s,sha256:o,uriEscapePath:i=true}){this.service=s;this.sha256=o;this.uriEscapePath=i;this.applyChecksum=typeof e==="boolean"?e:true;this.regionProvider=normalizeRegionProvider(n);this.credentialProvider=normalizeCredentialsProvider(t)}async presign(e,t={}){const{signingDate:n=new Date,expiresIn:s=3600,unsignableHeaders:a,unhoistableHeaders:d,signableHeaders:m,signingRegion:f,signingService:g}=t;const p=await this.credentialProvider();const y=f!==null&&f!==void 0?f:await this.regionProvider();const{longDate:w,shortDate:h}=formatDate(n);if(s>o.MAX_PRESIGNED_TTL){return Promise.reject("Signature version 4 presigned URLs"+" must have an expiration date less than one week in"+" the future")}const v=i.createScope(h,y,g!==null&&g!==void 0?g:this.service);const _=l.moveHeadersToQuery(u.prepareRequest(e),{unhoistableHeaders:d});if(p.sessionToken){_.query[o.TOKEN_QUERY_PARAM]=p.sessionToken}_.query[o.ALGORITHM_QUERY_PARAM]=o.ALGORITHM_IDENTIFIER;_.query[o.CREDENTIAL_QUERY_PARAM]=`${p.accessKeyId}/${v}`;_.query[o.AMZ_DATE_QUERY_PARAM]=w;_.query[o.EXPIRES_QUERY_PARAM]=s.toString(10);const E=r.getCanonicalHeaders(_,a,m);_.query[o.SIGNED_HEADERS_QUERY_PARAM]=getCanonicalHeaderList(E);_.query[o.SIGNATURE_QUERY_PARAM]=await this.getSignature(w,v,this.getSigningKey(p,y,h,g),this.createCanonicalRequest(_,E,await c.getPayloadHash(e,this.sha256)));return _}async sign(e,t){if(typeof e==="string"){return this.signString(e,t)}else if(e.headers&&e.payload){return this.signEvent(e,t)}else{return this.signRequest(e,t)}}async signEvent({headers:e,payload:t},{signingDate:n=new Date,priorSignature:r,signingRegion:a,signingService:d}){const l=a!==null&&a!==void 0?a:await this.regionProvider();const{shortDate:u,longDate:m}=formatDate(n);const f=i.createScope(u,l,d!==null&&d!==void 0?d:this.service);const g=await c.getPayloadHash({headers:{},body:t},this.sha256);const p=new this.sha256;p.update(e);const y=s.toHex(await p.digest());const w=[o.EVENT_ALGORITHM_IDENTIFIER,m,f,r,y,g].join("\n");return this.signString(w,{signingDate:n,signingRegion:l,signingService:d})}async signString(e,{signingDate:t=new Date,signingRegion:n,signingService:o}={}){const i=await this.credentialProvider();const r=n!==null&&n!==void 0?n:await this.regionProvider();const{shortDate:a}=formatDate(t);const c=new this.sha256(await this.getSigningKey(i,r,a,o));c.update(e);return s.toHex(await c.digest())}async signRequest(e,{signingDate:t=new Date,signableHeaders:n,unsignableHeaders:s,signingRegion:a,signingService:l}={}){const m=await this.credentialProvider();const f=a!==null&&a!==void 0?a:await this.regionProvider();const g=u.prepareRequest(e);const{longDate:p,shortDate:y}=formatDate(t);const w=i.createScope(y,f,l!==null&&l!==void 0?l:this.service);g.headers[o.AMZ_DATE_HEADER]=p;if(m.sessionToken){g.headers[o.TOKEN_HEADER]=m.sessionToken}const h=await c.getPayloadHash(g,this.sha256);if(!d.hasHeader(o.SHA256_HEADER,g.headers)&&this.applyChecksum){g.headers[o.SHA256_HEADER]=h}const v=r.getCanonicalHeaders(g,s,n);const _=await this.getSignature(p,w,this.getSigningKey(m,f,y,l),this.createCanonicalRequest(g,v,h));g.headers[o.AUTH_HEADER]=`${o.ALGORITHM_IDENTIFIER} `+`Credential=${m.accessKeyId}/${w}, `+`SignedHeaders=${getCanonicalHeaderList(v)}, `+`Signature=${_}`;return g}createCanonicalRequest(e,t,n){const s=Object.keys(t).sort();return`${e.method}\n${this.getCanonicalPath(e)}\n${a.getCanonicalQuery(e)}\n${s.map((e=>`${e}:${t[e]}`)).join("\n")}\n\n${s.join(";")}\n${n}`}async createStringToSign(e,t,n){const i=new this.sha256;i.update(n);const r=await i.digest();return`${o.ALGORITHM_IDENTIFIER}\n${e}\n${t}\n${s.toHex(r)}`}getCanonicalPath({path:e}){if(this.uriEscapePath){const t=encodeURIComponent(e.replace(/^\//,""));return`/${t.replace(/%2F/g,"/")}`}return e}async getSignature(e,t,n,o){const i=await this.createStringToSign(e,t,o);const r=new this.sha256(await n);r.update(i);return s.toHex(await r.digest())}getSigningKey(e,t,n,s){return i.getSigningKey(this.sha256,e,n,t,s||this.service)}}t.SignatureV4=SignatureV4;const formatDate=e=>{const t=m.iso8601(e).replace(/[\-:]/g,"");return{longDate:t,shortDate:t.substr(0,8)}};const getCanonicalHeaderList=e=>Object.keys(e).sort().join(";");const normalizeRegionProvider=e=>{if(typeof e==="string"){const t=Promise.resolve(e);return()=>t}else{return e}};const normalizeCredentialsProvider=e=>{if(typeof e==="object"){const t=Promise.resolve(e);return()=>t}else{return e}}},4566:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.cloneRequest=void 0;function cloneRequest({headers:e,query:t,...n}){return{...n,headers:{...e},query:t?cloneQuery(t):undefined}}t.cloneRequest=cloneRequest;function cloneQuery(e){return Object.keys(e).reduce(((t,n)=>{const s=e[n];return{...t,[n]:Array.isArray(s)?[...s]:s}}),{})}},3851:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.MAX_PRESIGNED_TTL=t.KEY_TYPE_IDENTIFIER=t.MAX_CACHE_SIZE=t.UNSIGNED_PAYLOAD=t.EVENT_ALGORITHM_IDENTIFIER=t.ALGORITHM_IDENTIFIER=t.UNSIGNABLE_PATTERNS=t.SEC_HEADER_PATTERN=t.PROXY_HEADER_PATTERN=t.ALWAYS_UNSIGNABLE_HEADERS=t.HOST_HEADER=t.TOKEN_HEADER=t.SHA256_HEADER=t.SIGNATURE_HEADER=t.GENERATED_HEADERS=t.DATE_HEADER=t.AMZ_DATE_HEADER=t.AUTH_HEADER=t.TOKEN_QUERY_PARAM=t.SIGNATURE_QUERY_PARAM=t.EXPIRES_QUERY_PARAM=t.SIGNED_HEADERS_QUERY_PARAM=t.AMZ_DATE_QUERY_PARAM=t.CREDENTIAL_QUERY_PARAM=t.ALGORITHM_QUERY_PARAM=void 0;t.ALGORITHM_QUERY_PARAM="X-Amz-Algorithm";t.CREDENTIAL_QUERY_PARAM="X-Amz-Credential";t.AMZ_DATE_QUERY_PARAM="X-Amz-Date";t.SIGNED_HEADERS_QUERY_PARAM="X-Amz-SignedHeaders";t.EXPIRES_QUERY_PARAM="X-Amz-Expires";t.SIGNATURE_QUERY_PARAM="X-Amz-Signature";t.TOKEN_QUERY_PARAM="X-Amz-Security-Token";t.AUTH_HEADER="authorization";t.AMZ_DATE_HEADER=t.AMZ_DATE_QUERY_PARAM.toLowerCase();t.DATE_HEADER="date";t.GENERATED_HEADERS=[t.AUTH_HEADER,t.AMZ_DATE_HEADER,t.DATE_HEADER];t.SIGNATURE_HEADER=t.SIGNATURE_QUERY_PARAM.toLowerCase();t.SHA256_HEADER="x-amz-content-sha256";t.TOKEN_HEADER=t.TOKEN_QUERY_PARAM.toLowerCase();t.HOST_HEADER="host";t.ALWAYS_UNSIGNABLE_HEADERS={authorization:true,"cache-control":true,connection:true,expect:true,from:true,"keep-alive":true,"max-forwards":true,pragma:true,referer:true,te:true,trailer:true,"transfer-encoding":true,upgrade:true,"user-agent":true,"x-amzn-trace-id":true};t.PROXY_HEADER_PATTERN=/^proxy-/;t.SEC_HEADER_PATTERN=/^sec-/;t.UNSIGNABLE_PATTERNS=[/^proxy-/i,/^sec-/i];t.ALGORITHM_IDENTIFIER="AWS4-HMAC-SHA256";t.EVENT_ALGORITHM_IDENTIFIER="AWS4-HMAC-SHA256-PAYLOAD";t.UNSIGNED_PAYLOAD="UNSIGNED-PAYLOAD";t.MAX_CACHE_SIZE=50;t.KEY_TYPE_IDENTIFIER="aws4_request";t.MAX_PRESIGNED_TTL=60*60*24*7},5478:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.clearCredentialCache=t.getSigningKey=t.createScope=void 0;const s=n(3291);const o=n(3851);const i={};const r=[];function createScope(e,t,n){return`${e}/${t}/${n}/${o.KEY_TYPE_IDENTIFIER}`}t.createScope=createScope;const getSigningKey=async(e,t,n,a,c)=>{const d=await hmac(e,t.secretAccessKey,t.accessKeyId);const l=`${n}:${a}:${c}:${s.toHex(d)}:${t.sessionToken}`;if(l in i){return i[l]}r.push(l);while(r.length>o.MAX_CACHE_SIZE){delete i[r.shift()]}let u=`AWS4${t.secretAccessKey}`;for(const t of[n,a,c,o.KEY_TYPE_IDENTIFIER]){u=await hmac(e,u,t)}return i[l]=u};t.getSigningKey=getSigningKey;function clearCredentialCache(){r.length=0;Object.keys(i).forEach((e=>{delete i[e]}))}t.clearCredentialCache=clearCredentialCache;function hmac(e,t,n){const s=new e(t);s.update(n);return s.digest()}},9201:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getCanonicalHeaders=void 0;const s=n(3851);function getCanonicalHeaders({headers:e},t,n){const o={};for(const i of Object.keys(e).sort()){const r=i.toLowerCase();if(r in s.ALWAYS_UNSIGNABLE_HEADERS||(t===null||t===void 0?void 0:t.has(r))||s.PROXY_HEADER_PATTERN.test(r)||s.SEC_HEADER_PATTERN.test(r)){if(!n||n&&!n.has(r)){continue}}o[r]=e[i].trim().replace(/\s+/g," ")}return o}t.getCanonicalHeaders=getCanonicalHeaders},8706:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getCanonicalQuery=void 0;const s=n(7834);const o=n(3851);function getCanonicalQuery({query:e={}}){const t=[];const n={};for(const i of Object.keys(e).sort()){if(i.toLowerCase()===o.SIGNATURE_HEADER){continue}t.push(i);const r=e[i];if(typeof r==="string"){n[i]=`${s.escapeUri(i)}=${s.escapeUri(r)}`}else if(Array.isArray(r)){n[i]=r.slice(0).sort().reduce(((e,t)=>e.concat([`${s.escapeUri(i)}=${s.escapeUri(t)}`])),[]).join("&")}}return t.map((e=>n[e])).filter((e=>e)).join("&")}t.getCanonicalQuery=getCanonicalQuery},7902:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getPayloadHash=void 0;const s=n(694);const o=n(3291);const i=n(3851);async function getPayloadHash({headers:e,body:t},n){for(const t of Object.keys(e)){if(t.toLowerCase()===i.SHA256_HEADER){return e[t]}}if(t==undefined){return"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}else if(typeof t==="string"||ArrayBuffer.isView(t)||s.isArrayBuffer(t)){const e=new n;e.update(t);return o.toHex(await e.digest())}return i.UNSIGNED_PAYLOAD}t.getPayloadHash=getPayloadHash},1402:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.hasHeader=void 0;function hasHeader(e,t){e=e.toLowerCase();for(const n of Object.keys(t)){if(e===n.toLowerCase()){return true}}return false}t.hasHeader=hasHeader},4172:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(5478),t);s.__exportStar(n(7210),t)},5850:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.moveHeadersToQuery=void 0;const s=n(4566);function moveHeadersToQuery(e,t={}){var n;const{headers:o,query:i={}}=typeof e.clone==="function"?e.clone():s.cloneRequest(e);for(const e of Object.keys(o)){const s=e.toLowerCase();if(s.substr(0,6)==="x-amz-"&&!((n=t.unhoistableHeaders)===null||n===void 0?void 0:n.has(s))){i[e]=o[e];delete o[e]}}return{...e,headers:o,query:i}}t.moveHeadersToQuery=moveHeadersToQuery},4952:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.prepareRequest=void 0;const s=n(4566);const o=n(3851);function prepareRequest(e){e=typeof e.clone==="function"?e.clone():s.cloneRequest(e);for(const t of Object.keys(e.headers)){if(o.GENERATED_HEADERS.indexOf(t.toLowerCase())>-1){delete e.headers[t]}}return e}t.prepareRequest=prepareRequest},7850:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.toDate=t.iso8601=void 0;function iso8601(e){return toDate(e).toISOString().replace(/\.\d{3}Z$/,"Z")}t.iso8601=iso8601;function toDate(e){if(typeof e==="number"){return new Date(e*1e3)}if(typeof e==="string"){if(Number(e)){return new Date(Number(e)*1e3)}return new Date(e)}return e}t.toDate=toDate},6717:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.Client=void 0;const s=n(2928);class Client{constructor(e){this.middlewareStack=s.constructStack();this.config=e}send(e,t,n){const s=typeof t!=="function"?t:undefined;const o=typeof t==="function"?t:n;const i=e.resolveMiddleware(this.middlewareStack,this.config,s);if(o){i(e).then((e=>o(null,e.output)),(e=>o(e))).catch((()=>{}))}else{return i(e).then((e=>e.output))}}destroy(){if(this.config.requestHandler.destroy)this.config.requestHandler.destroy()}}t.Client=Client},6041:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.Command=void 0;const s=n(2928);class Command{constructor(){this.middlewareStack=s.constructStack()}}t.Command=Command},6171:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.SENSITIVE_STRING=void 0;t.SENSITIVE_STRING="***SensitiveInformation***"},1370:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.dateToUtcString=void 0;const n=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];const s=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];function dateToUtcString(e){const t=e.getUTCFullYear();const o=e.getUTCMonth();const i=e.getUTCDay();const r=e.getUTCDate();const a=e.getUTCHours();const c=e.getUTCMinutes();const d=e.getUTCSeconds();const l=r<10?`0${r}`:`${r}`;const u=a<10?`0${a}`:`${a}`;const m=c<10?`0${c}`:`${c}`;const f=d<10?`0${d}`:`${d}`;return`${n[i]}, ${l} ${s[o]} ${t} ${u}:${m}:${f} GMT`}t.dateToUtcString=dateToUtcString},8269:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},6582:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},7121:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.extendedEncodeURIComponent=void 0;function extendedEncodeURIComponent(e){return encodeURIComponent(e).replace(/[!'()*]/g,(function(e){return"%"+e.charCodeAt(0).toString(16)}))}t.extendedEncodeURIComponent=extendedEncodeURIComponent},4650:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getArrayIfSingleItem=void 0;const getArrayIfSingleItem=e=>Array.isArray(e)?e:[e];t.getArrayIfSingleItem=getArrayIfSingleItem},6526:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.getValueFromTextNode=void 0;const getValueFromTextNode=e=>{const n="#text";for(const s in e){if(e.hasOwnProperty(s)&&e[s][n]!==undefined){e[s]=e[s][n]}else if(typeof e[s]==="object"&&e[s]!==null){e[s]=t.getValueFromTextNode(e[s])}}return e};t.getValueFromTextNode=getValueFromTextNode},2223:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(6717),t);s.__exportStar(n(6041),t);s.__exportStar(n(8269),t);s.__exportStar(n(6582),t);s.__exportStar(n(7121),t);s.__exportStar(n(4650),t);s.__exportStar(n(6526),t);s.__exportStar(n(1207),t);s.__exportStar(n(1370),t);s.__exportStar(n(6399),t);s.__exportStar(n(6171),t);s.__exportStar(n(2908),t);s.__exportStar(n(1200),t)},1207:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.LazyJsonString=t.StringWrapper=void 0;const StringWrapper=function(){const e=Object.getPrototypeOf(this).constructor;const t=Function.bind.apply(String,[null,...arguments]);const n=new t;Object.setPrototypeOf(n,e.prototype);return n};t.StringWrapper=StringWrapper;t.StringWrapper.prototype=Object.create(String.prototype,{constructor:{value:t.StringWrapper,enumerable:false,writable:true,configurable:true}});Object.setPrototypeOf(t.StringWrapper,String);class LazyJsonString extends t.StringWrapper{deserializeJSON(){return JSON.parse(super.toString())}toJSON(){return super.toString()}static fromObject(e){if(e instanceof LazyJsonString){return e}else if(e instanceof String||typeof e==="string"){return new LazyJsonString(e)}return new LazyJsonString(JSON.stringify(e))}}t.LazyJsonString=LazyJsonString},2908:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},1200:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true})},6399:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.splitEvery=void 0;function splitEvery(e,t,n){if(n<=0||!Number.isInteger(n)){throw new Error("Invalid number of delimiters ("+n+") for splitEvery.")}const s=e.split(t);if(n===1){return s}const o=[];let i="";for(let e=0;e<s.length;e++){if(i===""){i=s[e]}else{i+=t+s[e]}if((e+1)%n===0){o.push(i);i=""}}if(i!==""){o.push(i)}return o}t.splitEvery=splitEvery},9427:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.parseUrl=void 0;const s=n(2026);const parseUrl=e=>{const{hostname:t,pathname:n,port:o,protocol:i,search:r}=new URL(e);let a;if(r){a=s.parseQueryString(r)}return{hostname:t,port:o?parseInt(o):undefined,protocol:i,path:n,query:a}};t.parseUrl=parseUrl},2091:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.toBase64=t.fromBase64=void 0;const s=n(8577);function fromBase64(e){const t=s.fromString(e,"base64");return new Uint8Array(t.buffer,t.byteOffset,t.byteLength)}t.fromBase64=fromBase64;function toBase64(e){return s.fromArrayBuffer(e.buffer,e.byteOffset,e.byteLength).toString("base64")}t.toBase64=toBase64},286:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.calculateBodyLength=void 0;const s=n(5747);function calculateBodyLength(e){if(!e){return 0}if(typeof e==="string"){return Buffer.from(e).length}else if(typeof e.byteLength==="number"){return e.byteLength}else if(typeof e.size==="number"){return e.size}else if(typeof e.path==="string"){return s.lstatSync(e.path).size}}t.calculateBodyLength=calculateBodyLength},8577:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.fromString=t.fromArrayBuffer=void 0;const s=n(694);const o=n(4293);const fromArrayBuffer=(e,t=0,n=e.byteLength-t)=>{if(!s.isArrayBuffer(e)){throw new TypeError(`The "input" argument must be ArrayBuffer. Received type ${typeof e} (${e})`)}return o.Buffer.from(e,t,n)};t.fromArrayBuffer=fromArrayBuffer;const fromString=(e,t)=>{if(typeof e!=="string"){throw new TypeError(`The "input" argument must be of type string. Received type ${typeof e} (${e})`)}return t?o.Buffer.from(e,t):o.Buffer.from(e)};t.fromString=fromString},3291:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.toHex=t.fromHex=void 0;const n={};const s={};for(let e=0;e<256;e++){let t=e.toString(16).toLowerCase();if(t.length===1){t=`0${t}`}n[e]=t;s[t]=e}function fromHex(e){if(e.length%2!==0){throw new Error("Hex encoded strings must have an even number length")}const t=new Uint8Array(e.length/2);for(let n=0;n<e.length;n+=2){const o=e.substr(n,2).toLowerCase();if(o in s){t[n/2]=s[o]}else{throw new Error(`Cannot decode unrecognized sequence ${o} as hexadecimal`)}}return t}t.fromHex=fromHex;function toHex(e){let t="";for(let s=0;s<e.byteLength;s++){t+=n[e[s]]}return t}t.toHex=toHex},3545:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.escapeUriPath=void 0;const s=n(4302);const escapeUriPath=e=>e.split("/").map(s.escapeUri).join("/");t.escapeUriPath=escapeUriPath},4302:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.escapeUri=void 0;const escapeUri=e=>encodeURIComponent(e).replace(/[!'()*]/g,hexEncode);t.escapeUri=escapeUri;const hexEncode=e=>`%${e.charCodeAt(0).toString(16).toUpperCase()}`},7834:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(4302),t);s.__exportStar(n(3545),t)},4717:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.defaultUserAgent=t.UA_APP_ID_INI_NAME=t.UA_APP_ID_ENV_NAME=void 0;const s=n(1124);const o=n(2087);const i=n(1765);t.UA_APP_ID_ENV_NAME="AWS_SDK_UA_APP_ID";t.UA_APP_ID_INI_NAME="sdk-ua-app-id";const defaultUserAgent=({serviceId:e,clientVersion:n})=>{const r=[["aws-sdk-js",n],[`os/${o.platform()}`,o.release()],["lang/js"],["md/nodejs",`${i.versions.node}`]];if(e){r.push([`api/${e}`,n])}if(i.env.AWS_EXECUTION_ENV){r.push([`exec-env/${i.env.AWS_EXECUTION_ENV}`])}const a=s.loadConfig({environmentVariableSelector:e=>e[t.UA_APP_ID_ENV_NAME],configFileSelector:e=>e[t.UA_APP_ID_INI_NAME],default:undefined})();let c=undefined;return async()=>{if(!c){const e=await a;c=e?[...r,[`app/${e}`]]:[...r]}return c}};t.defaultUserAgent=defaultUserAgent},5227:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.toUtf8=t.fromUtf8=void 0;const s=n(8577);const fromUtf8=e=>{const t=s.fromString(e,"utf8");return new Uint8Array(t.buffer,t.byteOffset,t.byteLength/Uint8Array.BYTES_PER_ELEMENT)};t.fromUtf8=fromUtf8;const toUtf8=e=>s.fromArrayBuffer(e.buffer,e.byteOffset,e.byteLength).toString("utf8");t.toUtf8=toUtf8},1194:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.createWaiter=void 0;const s=n(8015);const o=n(9534);const i=n(709);const abortTimeout=async e=>new Promise((t=>{e.onabort=()=>t({state:i.WaiterState.ABORTED})}));const createWaiter=async(e,t,n)=>{const r={...i.waiterServiceDefaults,...e};o.validateWaiterOptions(r);const a=[s.runPolling(r,t,n)];if(e.abortController){a.push(abortTimeout(e.abortController.signal))}return Promise.race(a)};t.createWaiter=createWaiter},6243:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(1194),t);s.__exportStar(n(709),t)},8015:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.runPolling=void 0;const s=n(5442);const o=n(709);const exponentialBackoffWithJitter=(e,t,n,s)=>{if(s>n)return t;const o=e*2**(s-1);return randomInRange(e,o)};const randomInRange=(e,t)=>e+Math.random()*(t-e);const runPolling=async({minDelay:e,maxDelay:t,maxWaitTime:n,abortController:i,client:r},a,c)=>{var d;const{state:l}=await c(r,a);if(l!==o.WaiterState.RETRY){return{state:l}}let u=1;const m=Date.now()+n*1e3;const f=Math.log(t/e)/Math.log(2)+1;while(true){if((d=i===null||i===void 0?void 0:i.signal)===null||d===void 0?void 0:d.aborted){return{state:o.WaiterState.ABORTED}}const n=exponentialBackoffWithJitter(e,t,f,u);if(Date.now()+n*1e3>m){return{state:o.WaiterState.TIMEOUT}}await s.sleep(n);const{state:l}=await c(r,a);if(l!==o.WaiterState.RETRY){return{state:l}}u+=1}};t.runPolling=runPolling},9534:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});const s=n(4351);s.__exportStar(n(5442),t);s.__exportStar(n(9067),t)},5442:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.sleep=void 0;const sleep=e=>new Promise((t=>setTimeout(t,e*1e3)));t.sleep=sleep},9067:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.validateWaiterOptions=void 0;const validateWaiterOptions=e=>{if(e.maxWaitTime<1){throw new Error(`WaiterConfiguration.maxWaitTime must be greater than 0`)}else if(e.minDelay<1){throw new Error(`WaiterConfiguration.minDelay must be greater than 0`)}else if(e.maxDelay<1){throw new Error(`WaiterConfiguration.maxDelay must be greater than 0`)}else if(e.maxWaitTime<=e.minDelay){throw new Error(`WaiterConfiguration.maxWaitTime [${e.maxWaitTime}] must be greater than WaiterConfiguration.minDelay [${e.minDelay}] for this waiter`)}else if(e.maxDelay<e.minDelay){throw new Error(`WaiterConfiguration.maxDelay [${e.maxDelay}] must be greater than WaiterConfiguration.minDelay [${e.minDelay}] for this waiter`)}};t.validateWaiterOptions=validateWaiterOptions},709:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.WaiterState=t.waiterServiceDefaults=void 0;t.waiterServiceDefaults={minDelay:2,maxDelay:120};var n;(function(e){e["ABORTED"]="ABORTED";e["FAILURE"]="FAILURE";e["SUCCESS"]="SUCCESS";e["RETRY"]="RETRY";e["TIMEOUT"]="TIMEOUT"})(n=t.WaiterState||(t.WaiterState={}))},5152:(e,t,n)=>{"use strict";const s=n(8280).buildOptions;const o={attributeNamePrefix:"@_",attrNodeName:false,textNodeName:"#text",ignoreAttributes:true,cdataTagName:false,cdataPositionChar:"\\c",format:false,indentBy:"  ",supressEmptyNode:false,tagValueProcessor:function(e){return e},attrValueProcessor:function(e){return e}};const i=["attributeNamePrefix","attrNodeName","textNodeName","ignoreAttributes","cdataTagName","cdataPositionChar","format","indentBy","supressEmptyNode","tagValueProcessor","attrValueProcessor"];function Parser(e){this.options=s(e,o,i);if(this.options.ignoreAttributes||this.options.attrNodeName){this.isAttribute=function(){return false}}else{this.attrPrefixLen=this.options.attributeNamePrefix.length;this.isAttribute=isAttribute}if(this.options.cdataTagName){this.isCDATA=isCDATA}else{this.isCDATA=function(){return false}}this.replaceCDATAstr=replaceCDATAstr;this.replaceCDATAarr=replaceCDATAarr;if(this.options.format){this.indentate=indentate;this.tagEndChar=">\n";this.newLine="\n"}else{this.indentate=function(){return""};this.tagEndChar=">";this.newLine=""}if(this.options.supressEmptyNode){this.buildTextNode=buildEmptyTextNode;this.buildObjNode=buildEmptyObjNode}else{this.buildTextNode=buildTextValNode;this.buildObjNode=buildObjectNode}this.buildTextValNode=buildTextValNode;this.buildObjectNode=buildObjectNode}Parser.prototype.parse=function(e){return this.j2x(e,0).val};Parser.prototype.j2x=function(e,t){let n="";let s="";const o=Object.keys(e);const i=o.length;for(let r=0;r<i;r++){const i=o[r];if(typeof e[i]==="undefined"){}else if(e[i]===null){s+=this.indentate(t)+"<"+i+"/"+this.tagEndChar}else if(e[i]instanceof Date){s+=this.buildTextNode(e[i],i,"",t)}else if(typeof e[i]!=="object"){const o=this.isAttribute(i);if(o){n+=" "+o+'="'+this.options.attrValueProcessor(""+e[i])+'"'}else if(this.isCDATA(i)){if(e[this.options.textNodeName]){s+=this.replaceCDATAstr(e[this.options.textNodeName],e[i])}else{s+=this.replaceCDATAstr("",e[i])}}else{if(i===this.options.textNodeName){if(e[this.options.cdataTagName]){}else{s+=this.options.tagValueProcessor(""+e[i])}}else{s+=this.buildTextNode(e[i],i,"",t)}}}else if(Array.isArray(e[i])){if(this.isCDATA(i)){s+=this.indentate(t);if(e[this.options.textNodeName]){s+=this.replaceCDATAarr(e[this.options.textNodeName],e[i])}else{s+=this.replaceCDATAarr("",e[i])}}else{const n=e[i].length;for(let o=0;o<n;o++){const n=e[i][o];if(typeof n==="undefined"){}else if(n===null){s+=this.indentate(t)+"<"+i+"/"+this.tagEndChar}else if(typeof n==="object"){const e=this.j2x(n,t+1);s+=this.buildObjNode(e.val,i,e.attrStr,t)}else{s+=this.buildTextNode(n,i,"",t)}}}}else{if(this.options.attrNodeName&&i===this.options.attrNodeName){const t=Object.keys(e[i]);const s=t.length;for(let o=0;o<s;o++){n+=" "+t[o]+'="'+this.options.attrValueProcessor(""+e[i][t[o]])+'"'}}else{const n=this.j2x(e[i],t+1);s+=this.buildObjNode(n.val,i,n.attrStr,t)}}}return{attrStr:n,val:s}};function replaceCDATAstr(e,t){e=this.options.tagValueProcessor(""+e);if(this.options.cdataPositionChar===""||e===""){return e+"<![CDATA["+t+"]]"+this.tagEndChar}else{return e.replace(this.options.cdataPositionChar,"<![CDATA["+t+"]]"+this.tagEndChar)}}function replaceCDATAarr(e,t){e=this.options.tagValueProcessor(""+e);if(this.options.cdataPositionChar===""||e===""){return e+"<![CDATA["+t.join("]]><![CDATA[")+"]]"+this.tagEndChar}else{for(let n in t){e=e.replace(this.options.cdataPositionChar,"<![CDATA["+t[n]+"]]>")}return e+this.newLine}}function buildObjectNode(e,t,n,s){if(n&&!e.includes("<")){return this.indentate(s)+"<"+t+n+">"+e+"</"+t+this.tagEndChar}else{return this.indentate(s)+"<"+t+n+this.tagEndChar+e+this.indentate(s)+"</"+t+this.tagEndChar}}function buildEmptyObjNode(e,t,n,s){if(e!==""){return this.buildObjectNode(e,t,n,s)}else{return this.indentate(s)+"<"+t+n+"/"+this.tagEndChar}}function buildTextValNode(e,t,n,s){return this.indentate(s)+"<"+t+n+">"+this.options.tagValueProcessor(e)+"</"+t+this.tagEndChar}function buildEmptyTextNode(e,t,n,s){if(e!==""){return this.buildTextValNode(e,t,n,s)}else{return this.indentate(s)+"<"+t+n+"/"+this.tagEndChar}}function indentate(e){return this.options.indentBy.repeat(e)}function isAttribute(e){if(e.startsWith(this.options.attributeNamePrefix)){return e.substr(this.attrPrefixLen)}else{return false}}function isCDATA(e){return e===this.options.cdataTagName}e.exports=Parser},1901:(e,t,n)=>{"use strict";const char=function(e){return String.fromCharCode(e)};const s={nilChar:char(176),missingChar:char(201),nilPremitive:char(175),missingPremitive:char(200),emptyChar:char(178),emptyValue:char(177),boundryChar:char(179),objStart:char(198),arrStart:char(204),arrayEnd:char(185)};const o=[s.nilChar,s.nilPremitive,s.missingChar,s.missingPremitive,s.boundryChar,s.emptyChar,s.emptyValue,s.arrayEnd,s.objStart,s.arrStart];const _e=function(e,t,n){if(typeof t==="string"){if(e&&e[0]&&e[0].val!==undefined){return getValue(e[0].val,t)}else{return getValue(e,t)}}else{const o=hasData(e);if(o===true){let o="";if(Array.isArray(t)){o+=s.arrStart;const i=t[0];const r=e.length;if(typeof i==="string"){for(let t=0;t<r;t++){const n=getValue(e[t].val,i);o=processValue(o,n)}}else{for(let t=0;t<r;t++){const s=_e(e[t],i,n);o=processValue(o,s)}}o+=s.arrayEnd}else{o+=s.objStart;const i=Object.keys(t);if(Array.isArray(e)){e=e[0]}for(let s in i){const r=i[s];let a;if(!n.ignoreAttributes&&e.attrsMap&&e.attrsMap[r]){a=_e(e.attrsMap[r],t[r],n)}else if(r===n.textNodeName){a=_e(e.val,t[r],n)}else{a=_e(e.child[r],t[r],n)}o=processValue(o,a)}}return o}else{return o}}};const getValue=function(e){switch(e){case undefined:return s.missingPremitive;case null:return s.nilPremitive;case"":return s.emptyValue;default:return e}};const processValue=function(e,t){if(!isAppChar(t[0])&&!isAppChar(e[e.length-1])){e+=s.boundryChar}return e+t};const isAppChar=function(e){return o.indexOf(e)!==-1};function hasData(e){if(e===undefined){return s.missingChar}else if(e===null){return s.nilChar}else if(e.child&&Object.keys(e.child).length===0&&(!e.attrsMap||Object.keys(e.attrsMap).length===0)){return s.emptyChar}else{return true}}const i=n(6712);const r=n(8280).buildOptions;const convert2nimn=function(e,t,n){n=r(n,i.defaultOptions,i.props);return _e(e,t,n)};t.convert2nimn=convert2nimn},8270:(e,t,n)=>{"use strict";const s=n(8280);const convertToJson=function(e,t,n){const o={};if((!e.child||s.isEmptyObject(e.child))&&(!e.attrsMap||s.isEmptyObject(e.attrsMap))){return s.isExist(e.val)?e.val:""}if(s.isExist(e.val)&&!(typeof e.val==="string"&&(e.val===""||e.val===t.cdataPositionChar))){const i=s.isTagNameInArrayMode(e.tagname,t.arrayMode,n);o[t.textNodeName]=i?[e.val]:e.val}s.merge(o,e.attrsMap,t.arrayMode);const i=Object.keys(e.child);for(let r=0;r<i.length;r++){const a=i[r];if(e.child[a]&&e.child[a].length>1){o[a]=[];for(let n in e.child[a]){if(e.child[a].hasOwnProperty(n)){o[a].push(convertToJson(e.child[a][n],t,a))}}}else{const i=convertToJson(e.child[a][0],t,a);const r=t.arrayMode===true&&typeof i==="object"||s.isTagNameInArrayMode(a,t.arrayMode,n);o[a]=r?[i]:i}}return o};t.convertToJson=convertToJson},6014:(e,t,n)=>{"use strict";const s=n(8280);const o=n(8280).buildOptions;const i=n(6712);const convertToJsonString=function(e,t){t=o(t,i.defaultOptions,i.props);t.indentBy=t.indentBy||"";return _cToJsonStr(e,t,0)};const _cToJsonStr=function(e,t,n){let o="{";const i=Object.keys(e.child);for(let n=0;n<i.length;n++){var r=i[n];if(e.child[r]&&e.child[r].length>1){o+='"'+r+'" : [ ';for(var a in e.child[r]){o+=_cToJsonStr(e.child[r][a],t)+" , "}o=o.substr(0,o.length-1)+" ] "}else{o+='"'+r+'" : '+_cToJsonStr(e.child[r][0],t)+" ,"}}s.merge(o,e.attrsMap);if(s.isEmptyObject(o)){return s.isExist(e.val)?e.val:""}else{if(s.isExist(e.val)){if(!(typeof e.val==="string"&&(e.val===""||e.val===t.cdataPositionChar))){o+='"'+t.textNodeName+'" : '+stringval(e.val)}}}if(o[o.length-1]===","){o=o.substr(0,o.length-2)}return o+"}"};function stringval(e){if(e===true||e===false||!isNaN(e)){return e}else{return'"'+e+'"'}}function indentate(e,t){return e.indentBy.repeat(t)}t.convertToJsonString=convertToJsonString},7448:(e,t,n)=>{"use strict";const s=n(8270);const o=n(6712);const i=n(6712);const r=n(8280).buildOptions;const a=n(1739);t.parse=function(e,t,n){if(n){if(n===true)n={};const t=a.validate(e,n);if(t!==true){throw Error(t.err.msg)}}t=r(t,i.defaultOptions,i.props);const c=o.getTraversalObj(e,t);return s.convertToJson(c,t)};t.convertTonimn=n(1901).convert2nimn;t.getTraversalObj=o.getTraversalObj;t.convertToJson=s.convertToJson;t.convertToJsonString=n(6014).convertToJsonString;t.validate=a.validate;t.j2xParser=n(5152);t.parseToNimn=function(e,n,s){return t.convertTonimn(t.getTraversalObj(e,s),n,s)};function print(e,t){if(e){console.log(t+"{");console.log(t+'  "tagName": "'+e.tagname+'", ');if(e.parent){console.log(t+'  "parent": "'+e.parent.tagname+'", ')}console.log(t+'  "val": "'+e.val+'", ');console.log(t+'  "attrs": '+JSON.stringify(e.attrsMap,null,4)+", ");if(e.child){console.log(t+'"child": {');const n=t+t;Object.keys(e.child).forEach((function(s){const o=e.child[s];if(Array.isArray(o)){console.log(t+'"'+s+'" :[');o.forEach((function(e,t){print(e,n)}));console.log(t+"],")}else{console.log(t+' "'+s+'" : {');print(o,n);console.log(t+"},")}}));console.log(t+"},")}console.log(t+"},")}}},8280:(e,t)=>{"use strict";const n=":A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD";const s=n+"\\-.\\d\\u00B7\\u0300-\\u036F\\u203F-\\u2040";const o="["+n+"]["+s+"]*";const i=new RegExp("^"+o+"$");const getAllMatches=function(e,t){const n=[];let s=t.exec(e);while(s){const o=[];const i=s.length;for(let e=0;e<i;e++){o.push(s[e])}n.push(o);s=t.exec(e)}return n};const isName=function(e){const t=i.exec(e);return!(t===null||typeof t==="undefined")};t.isExist=function(e){return typeof e!=="undefined"};t.isEmptyObject=function(e){return Object.keys(e).length===0};t.merge=function(e,t,n){if(t){const s=Object.keys(t);const o=s.length;for(let i=0;i<o;i++){if(n==="strict"){e[s[i]]=[t[s[i]]]}else{e[s[i]]=t[s[i]]}}}};t.getValue=function(e){if(t.isExist(e)){return e}else{return""}};t.buildOptions=function(e,t,n){var s={};if(!e){return t}for(let o=0;o<n.length;o++){if(e[n[o]]!==undefined){s[n[o]]=e[n[o]]}else{s[n[o]]=t[n[o]]}}return s};t.isTagNameInArrayMode=function(e,t,n){if(t===false){return false}else if(t instanceof RegExp){return t.test(e)}else if(typeof t==="function"){return!!t(e,n)}return t==="strict"};t.isName=isName;t.getAllMatches=getAllMatches;t.nameRegexp=o},1739:(e,t,n)=>{"use strict";const s=n(8280);const o={allowBooleanAttributes:false};const i=["allowBooleanAttributes"];t.validate=function(e,t){t=s.buildOptions(t,o,i);const n=[];let r=false;let a=false;if(e[0]==="\ufeff"){e=e.substr(1)}for(let s=0;s<e.length;s++){if(e[s]==="<"&&e[s+1]==="?"){s+=2;s=readPI(e,s);if(s.err)return s}else if(e[s]==="<"){s++;if(e[s]==="!"){s=readCommentAndCDATA(e,s);continue}else{let o=false;if(e[s]==="/"){o=true;s++}let i="";for(;s<e.length&&e[s]!==">"&&e[s]!==" "&&e[s]!=="\t"&&e[s]!=="\n"&&e[s]!=="\r";s++){i+=e[s]}i=i.trim();if(i[i.length-1]==="/"){i=i.substring(0,i.length-1);s--}if(!validateTagName(i)){let t;if(i.trim().length===0){t="There is an unnecessary space between tag name and backward slash '</ ..'."}else{t="Tag '"+i+"' is an invalid name."}return getErrorObject("InvalidTag",t,getLineNumberForPosition(e,s))}const c=readAttributeStr(e,s);if(c===false){return getErrorObject("InvalidAttr","Attributes for '"+i+"' have open quote.",getLineNumberForPosition(e,s))}let d=c.value;s=c.index;if(d[d.length-1]==="/"){d=d.substring(0,d.length-1);const n=validateAttributeString(d,t);if(n===true){r=true}else{return getErrorObject(n.err.code,n.err.msg,getLineNumberForPosition(e,s-d.length+n.err.line))}}else if(o){if(!c.tagClosed){return getErrorObject("InvalidTag","Closing tag '"+i+"' doesn't have proper closing.",getLineNumberForPosition(e,s))}else if(d.trim().length>0){return getErrorObject("InvalidTag","Closing tag '"+i+"' can't have attributes or invalid starting.",getLineNumberForPosition(e,s))}else{const t=n.pop();if(i!==t){return getErrorObject("InvalidTag","Closing tag '"+t+"' is expected inplace of '"+i+"'.",getLineNumberForPosition(e,s))}if(n.length==0){a=true}}}else{const o=validateAttributeString(d,t);if(o!==true){return getErrorObject(o.err.code,o.err.msg,getLineNumberForPosition(e,s-d.length+o.err.line))}if(a===true){return getErrorObject("InvalidXml","Multiple possible root nodes found.",getLineNumberForPosition(e,s))}else{n.push(i)}r=true}for(s++;s<e.length;s++){if(e[s]==="<"){if(e[s+1]==="!"){s++;s=readCommentAndCDATA(e,s);continue}else if(e[s+1]==="?"){s=readPI(e,++s);if(s.err)return s}else{break}}else if(e[s]==="&"){const t=validateAmpersand(e,s);if(t==-1)return getErrorObject("InvalidChar","char '&' is not expected.",getLineNumberForPosition(e,s));s=t}}if(e[s]==="<"){s--}}}else{if(e[s]===" "||e[s]==="\t"||e[s]==="\n"||e[s]==="\r"){continue}return getErrorObject("InvalidChar","char '"+e[s]+"' is not expected.",getLineNumberForPosition(e,s))}}if(!r){return getErrorObject("InvalidXml","Start tag expected.",1)}else if(n.length>0){return getErrorObject("InvalidXml","Invalid '"+JSON.stringify(n,null,4).replace(/\r?\n/g,"")+"' found.",1)}return true};function readPI(e,t){var n=t;for(;t<e.length;t++){if(e[t]=="?"||e[t]==" "){var s=e.substr(n,t-n);if(t>5&&s==="xml"){return getErrorObject("InvalidXml","XML declaration allowed only at the start of the document.",getLineNumberForPosition(e,t))}else if(e[t]=="?"&&e[t+1]==">"){t++;break}else{continue}}}return t}function readCommentAndCDATA(e,t){if(e.length>t+5&&e[t+1]==="-"&&e[t+2]==="-"){for(t+=3;t<e.length;t++){if(e[t]==="-"&&e[t+1]==="-"&&e[t+2]===">"){t+=2;break}}}else if(e.length>t+8&&e[t+1]==="D"&&e[t+2]==="O"&&e[t+3]==="C"&&e[t+4]==="T"&&e[t+5]==="Y"&&e[t+6]==="P"&&e[t+7]==="E"){let n=1;for(t+=8;t<e.length;t++){if(e[t]==="<"){n++}else if(e[t]===">"){n--;if(n===0){break}}}}else if(e.length>t+9&&e[t+1]==="["&&e[t+2]==="C"&&e[t+3]==="D"&&e[t+4]==="A"&&e[t+5]==="T"&&e[t+6]==="A"&&e[t+7]==="["){for(t+=8;t<e.length;t++){if(e[t]==="]"&&e[t+1]==="]"&&e[t+2]===">"){t+=2;break}}}return t}var r='"';var a="'";function readAttributeStr(e,t){let n="";let s="";let o=false;for(;t<e.length;t++){if(e[t]===r||e[t]===a){if(s===""){s=e[t]}else if(s!==e[t]){continue}else{s=""}}else if(e[t]===">"){if(s===""){o=true;break}}n+=e[t]}if(s!==""){return false}return{value:n,index:t,tagClosed:o}}const c=new RegExp("(\\s*)([^\\s=]+)(\\s*=)?(\\s*(['\"])(([\\s\\S])*?)\\5)?","g");function validateAttributeString(e,t){const n=s.getAllMatches(e,c);const o={};for(let s=0;s<n.length;s++){if(n[s][1].length===0){return getErrorObject("InvalidAttr","Attribute '"+n[s][2]+"' has no space in starting.",getPositionFromMatch(e,n[s][0]))}else if(n[s][3]===undefined&&!t.allowBooleanAttributes){return getErrorObject("InvalidAttr","boolean attribute '"+n[s][2]+"' is not allowed.",getPositionFromMatch(e,n[s][0]))}const i=n[s][2];if(!validateAttrName(i)){return getErrorObject("InvalidAttr","Attribute '"+i+"' is an invalid name.",getPositionFromMatch(e,n[s][0]))}if(!o.hasOwnProperty(i)){o[i]=1}else{return getErrorObject("InvalidAttr","Attribute '"+i+"' is repeated.",getPositionFromMatch(e,n[s][0]))}}return true}function validateNumberAmpersand(e,t){let n=/\d/;if(e[t]==="x"){t++;n=/[\da-fA-F]/}for(;t<e.length;t++){if(e[t]===";")return t;if(!e[t].match(n))break}return-1}function validateAmpersand(e,t){t++;if(e[t]===";")return-1;if(e[t]==="#"){t++;return validateNumberAmpersand(e,t)}let n=0;for(;t<e.length;t++,n++){if(e[t].match(/\w/)&&n<20)continue;if(e[t]===";")break;return-1}return t}function getErrorObject(e,t,n){return{err:{code:e,msg:t,line:n}}}function validateAttrName(e){return s.isName(e)}function validateTagName(e){return s.isName(e)}function getLineNumberForPosition(e,t){var n=e.substring(0,t).split(/\r?\n/);return n.length}function getPositionFromMatch(e,t){return e.indexOf(t)+t.length}},9539:e=>{"use strict";e.exports=function(e,t,n){this.tagname=e;this.parent=t;this.child={};this.attrsMap={};this.val=n;this.addChild=function(e){if(Array.isArray(this.child[e.tagname])){this.child[e.tagname].push(e)}else{this.child[e.tagname]=[e]}}}},6712:(e,t,n)=>{"use strict";const s=n(8280);const o=n(8280).buildOptions;const i=n(9539);const r="<((!\\[CDATA\\[([\\s\\S]*?)(]]>))|((NAME:)?(NAME))([^>]*)>|((\\/)(NAME)\\s*>))([^<]*)".replace(/NAME/g,s.nameRegexp);if(!Number.parseInt&&window.parseInt){Number.parseInt=window.parseInt}if(!Number.parseFloat&&window.parseFloat){Number.parseFloat=window.parseFloat}const a={attributeNamePrefix:"@_",attrNodeName:false,textNodeName:"#text",ignoreAttributes:true,ignoreNameSpace:false,allowBooleanAttributes:false,parseNodeValue:true,parseAttributeValue:false,arrayMode:false,trimValues:true,cdataTagName:false,cdataPositionChar:"\\c",tagValueProcessor:function(e,t){return e},attrValueProcessor:function(e,t){return e},stopNodes:[]};t.defaultOptions=a;const c=["attributeNamePrefix","attrNodeName","textNodeName","ignoreAttributes","ignoreNameSpace","allowBooleanAttributes","parseNodeValue","parseAttributeValue","arrayMode","trimValues","cdataTagName","cdataPositionChar","tagValueProcessor","attrValueProcessor","parseTrueNumberOnly","stopNodes"];t.props=c;function processTagValue(e,t,n){if(t){if(n.trimValues){t=t.trim()}t=n.tagValueProcessor(t,e);t=parseValue(t,n.parseNodeValue,n.parseTrueNumberOnly)}return t}function resolveNameSpace(e,t){if(t.ignoreNameSpace){const t=e.split(":");const n=e.charAt(0)==="/"?"/":"";if(t[0]==="xmlns"){return""}if(t.length===2){e=n+t[1]}}return e}function parseValue(e,t,n){if(t&&typeof e==="string"){let t;if(e.trim()===""||isNaN(e)){t=e==="true"?true:e==="false"?false:e}else{if(e.indexOf("0x")!==-1){t=Number.parseInt(e,16)}else if(e.indexOf(".")!==-1){t=Number.parseFloat(e);e=e.replace(/\.?0+$/,"")}else{t=Number.parseInt(e,10)}if(n){t=String(t)===e?t:e}}return t}else{if(s.isExist(e)){return e}else{return""}}}const d=new RegExp("([^\\s=]+)\\s*(=\\s*(['\"])(.*?)\\3)?","g");function buildAttributesMap(e,t){if(!t.ignoreAttributes&&typeof e==="string"){e=e.replace(/\r?\n/g," ");const n=s.getAllMatches(e,d);const o=n.length;const i={};for(let e=0;e<o;e++){const s=resolveNameSpace(n[e][1],t);if(s.length){if(n[e][4]!==undefined){if(t.trimValues){n[e][4]=n[e][4].trim()}n[e][4]=t.attrValueProcessor(n[e][4],s);i[t.attributeNamePrefix+s]=parseValue(n[e][4],t.parseAttributeValue,t.parseTrueNumberOnly)}else if(t.allowBooleanAttributes){i[t.attributeNamePrefix+s]=true}}}if(!Object.keys(i).length){return}if(t.attrNodeName){const e={};e[t.attrNodeName]=i;return e}return i}}const getTraversalObj=function(e,t){e=e.replace(/\r\n?/g,"\n");t=o(t,a,c);const n=new i("!xml");let r=n;let d="";for(let n=0;n<e.length;n++){const o=e[n];if(o==="<"){if(e[n+1]==="/"){const o=findClosingIndex(e,">",n,"Closing Tag is not closed.");let i=e.substring(n+2,o).trim();if(t.ignoreNameSpace){const e=i.indexOf(":");if(e!==-1){i=i.substr(e+1)}}if(r){if(r.val){r.val=s.getValue(r.val)+""+processTagValue(i,d,t)}else{r.val=processTagValue(i,d,t)}}if(t.stopNodes.length&&t.stopNodes.includes(r.tagname)){r.child=[];if(r.attrsMap==undefined){r.attrsMap={}}r.val=e.substr(r.startIndex+1,n-r.startIndex-1)}r=r.parent;d="";n=o}else if(e[n+1]==="?"){n=findClosingIndex(e,"?>",n,"Pi Tag is not closed.")}else if(e.substr(n+1,3)==="!--"){n=findClosingIndex(e,"--\x3e",n,"Comment is not closed.")}else if(e.substr(n+1,2)==="!D"){const t=findClosingIndex(e,">",n,"DOCTYPE is not closed.");const s=e.substring(n,t);if(s.indexOf("[")>=0){n=e.indexOf("]>",n)+1}else{n=t}}else if(e.substr(n+1,2)==="!["){const o=findClosingIndex(e,"]]>",n,"CDATA is not closed.")-2;const a=e.substring(n+9,o);if(d){r.val=s.getValue(r.val)+""+processTagValue(r.tagname,d,t);d=""}if(t.cdataTagName){const e=new i(t.cdataTagName,r,a);r.addChild(e);r.val=s.getValue(r.val)+t.cdataPositionChar;if(a){e.val=a}}else{r.val=(r.val||"")+(a||"")}n=o+2}else{const o=closingIndexForOpeningTag(e,n+1);let a=o.data;const c=o.index;const l=a.indexOf(" ");let u=a;let m=true;if(l!==-1){u=a.substr(0,l).replace(/\s\s*$/,"");a=a.substr(l+1)}if(t.ignoreNameSpace){const e=u.indexOf(":");if(e!==-1){u=u.substr(e+1);m=u!==o.data.substr(e+1)}}if(r&&d){if(r.tagname!=="!xml"){r.val=s.getValue(r.val)+""+processTagValue(r.tagname,d,t)}}if(a.length>0&&a.lastIndexOf("/")===a.length-1){if(u[u.length-1]==="/"){u=u.substr(0,u.length-1);a=u}else{a=a.substr(0,a.length-1)}const e=new i(u,r,"");if(u!==a){e.attrsMap=buildAttributesMap(a,t)}r.addChild(e)}else{const e=new i(u,r);if(t.stopNodes.length&&t.stopNodes.includes(e.tagname)){e.startIndex=c}if(u!==a&&m){e.attrsMap=buildAttributesMap(a,t)}r.addChild(e);r=e}d="";n=c}}else{d+=e[n]}}return n};function closingIndexForOpeningTag(e,t){let n;let s="";for(let o=t;o<e.length;o++){let t=e[o];if(n){if(t===n)n=""}else if(t==='"'||t==="'"){n=t}else if(t===">"){return{data:s,index:o}}else if(t==="\t"){t=" "}s+=t}}function findClosingIndex(e,t,n,s){const o=e.indexOf(t,n);if(o===-1){throw new Error(s)}else{return o+t.length-1}}t.getTraversalObj=getTraversalObj},4351:e=>{
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
+/***/ 9295:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-var t;var n;var s;var o;var i;var r;var a;var c;var d;var l;var u;var m;var f;var g;var p;var y;var w;var h;var v;var _;var E;var S;var R;var b;(function(t){var n=typeof global==="object"?global:typeof self==="object"?self:typeof this==="object"?this:{};if(typeof define==="function"&&define.amd){define("tslib",["exports"],(function(e){t(createExporter(n,createExporter(e)))}))}else if(true&&typeof e.exports==="object"){t(createExporter(n,createExporter(e.exports)))}else{t(createExporter(n))}function createExporter(e,t){if(e!==n){if(typeof Object.create==="function"){Object.defineProperty(e,"__esModule",{value:true})}else{e.__esModule=true}}return function(n,s){return e[n]=t?t(n,s):s}}})((function(e){var C=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var n in t)if(Object.prototype.hasOwnProperty.call(t,n))e[n]=t[n]};t=function(e,t){if(typeof t!=="function"&&t!==null)throw new TypeError("Class extends value "+String(t)+" is not a constructor or null");C(e,t);function __(){this.constructor=e}e.prototype=t===null?Object.create(t):(__.prototype=t.prototype,new __)};n=Object.assign||function(e){for(var t,n=1,s=arguments.length;n<s;n++){t=arguments[n];for(var o in t)if(Object.prototype.hasOwnProperty.call(t,o))e[o]=t[o]}return e};s=function(e,t){var n={};for(var s in e)if(Object.prototype.hasOwnProperty.call(e,s)&&t.indexOf(s)<0)n[s]=e[s];if(e!=null&&typeof Object.getOwnPropertySymbols==="function")for(var o=0,s=Object.getOwnPropertySymbols(e);o<s.length;o++){if(t.indexOf(s[o])<0&&Object.prototype.propertyIsEnumerable.call(e,s[o]))n[s[o]]=e[s[o]]}return n};o=function(e,t,n,s){var o=arguments.length,i=o<3?t:s===null?s=Object.getOwnPropertyDescriptor(t,n):s,r;if(typeof Reflect==="object"&&typeof Reflect.decorate==="function")i=Reflect.decorate(e,t,n,s);else for(var a=e.length-1;a>=0;a--)if(r=e[a])i=(o<3?r(i):o>3?r(t,n,i):r(t,n))||i;return o>3&&i&&Object.defineProperty(t,n,i),i};i=function(e,t){return function(n,s){t(n,s,e)}};r=function(e,t){if(typeof Reflect==="object"&&typeof Reflect.metadata==="function")return Reflect.metadata(e,t)};a=function(e,t,n,s){function adopt(e){return e instanceof n?e:new n((function(t){t(e)}))}return new(n||(n=Promise))((function(n,o){function fulfilled(e){try{step(s.next(e))}catch(e){o(e)}}function rejected(e){try{step(s["throw"](e))}catch(e){o(e)}}function step(e){e.done?n(e.value):adopt(e.value).then(fulfilled,rejected)}step((s=s.apply(e,t||[])).next())}))};c=function(e,t){var n={label:0,sent:function(){if(i[0]&1)throw i[1];return i[1]},trys:[],ops:[]},s,o,i,r;return r={next:verb(0),throw:verb(1),return:verb(2)},typeof Symbol==="function"&&(r[Symbol.iterator]=function(){return this}),r;function verb(e){return function(t){return step([e,t])}}function step(r){if(s)throw new TypeError("Generator is already executing.");while(n)try{if(s=1,o&&(i=r[0]&2?o["return"]:r[0]?o["throw"]||((i=o["return"])&&i.call(o),0):o.next)&&!(i=i.call(o,r[1])).done)return i;if(o=0,i)r=[r[0]&2,i.value];switch(r[0]){case 0:case 1:i=r;break;case 4:n.label++;return{value:r[1],done:false};case 5:n.label++;o=r[1];r=[0];continue;case 7:r=n.ops.pop();n.trys.pop();continue;default:if(!(i=n.trys,i=i.length>0&&i[i.length-1])&&(r[0]===6||r[0]===2)){n=0;continue}if(r[0]===3&&(!i||r[1]>i[0]&&r[1]<i[3])){n.label=r[1];break}if(r[0]===6&&n.label<i[1]){n.label=i[1];i=r;break}if(i&&n.label<i[2]){n.label=i[2];n.ops.push(r);break}if(i[2])n.ops.pop();n.trys.pop();continue}r=t.call(e,n)}catch(e){r=[6,e];o=0}finally{s=i=0}if(r[0]&5)throw r[1];return{value:r[0]?r[1]:void 0,done:true}}};d=function(e,t){for(var n in e)if(n!=="default"&&!Object.prototype.hasOwnProperty.call(t,n))b(t,e,n)};b=Object.create?function(e,t,n,s){if(s===undefined)s=n;Object.defineProperty(e,s,{enumerable:true,get:function(){return t[n]}})}:function(e,t,n,s){if(s===undefined)s=n;e[s]=t[n]};l=function(e){var t=typeof Symbol==="function"&&Symbol.iterator,n=t&&e[t],s=0;if(n)return n.call(e);if(e&&typeof e.length==="number")return{next:function(){if(e&&s>=e.length)e=void 0;return{value:e&&e[s++],done:!e}}};throw new TypeError(t?"Object is not iterable.":"Symbol.iterator is not defined.")};u=function(e,t){var n=typeof Symbol==="function"&&e[Symbol.iterator];if(!n)return e;var s=n.call(e),o,i=[],r;try{while((t===void 0||t-- >0)&&!(o=s.next()).done)i.push(o.value)}catch(e){r={error:e}}finally{try{if(o&&!o.done&&(n=s["return"]))n.call(s)}finally{if(r)throw r.error}}return i};m=function(){for(var e=[],t=0;t<arguments.length;t++)e=e.concat(u(arguments[t]));return e};f=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;for(var s=Array(e),o=0,t=0;t<n;t++)for(var i=arguments[t],r=0,a=i.length;r<a;r++,o++)s[o]=i[r];return s};g=function(e,t){for(var n=0,s=t.length,o=e.length;n<s;n++,o++)e[o]=t[n];return e};p=function(e){return this instanceof p?(this.v=e,this):new p(e)};y=function(e,t,n){if(!Symbol.asyncIterator)throw new TypeError("Symbol.asyncIterator is not defined.");var s=n.apply(e,t||[]),o,i=[];return o={},verb("next"),verb("throw"),verb("return"),o[Symbol.asyncIterator]=function(){return this},o;function verb(e){if(s[e])o[e]=function(t){return new Promise((function(n,s){i.push([e,t,n,s])>1||resume(e,t)}))}}function resume(e,t){try{step(s[e](t))}catch(e){settle(i[0][3],e)}}function step(e){e.value instanceof p?Promise.resolve(e.value.v).then(fulfill,reject):settle(i[0][2],e)}function fulfill(e){resume("next",e)}function reject(e){resume("throw",e)}function settle(e,t){if(e(t),i.shift(),i.length)resume(i[0][0],i[0][1])}};w=function(e){var t,n;return t={},verb("next"),verb("throw",(function(e){throw e})),verb("return"),t[Symbol.iterator]=function(){return this},t;function verb(s,o){t[s]=e[s]?function(t){return(n=!n)?{value:p(e[s](t)),done:s==="return"}:o?o(t):t}:o}};h=function(e){if(!Symbol.asyncIterator)throw new TypeError("Symbol.asyncIterator is not defined.");var t=e[Symbol.asyncIterator],n;return t?t.call(e):(e=typeof l==="function"?l(e):e[Symbol.iterator](),n={},verb("next"),verb("throw"),verb("return"),n[Symbol.asyncIterator]=function(){return this},n);function verb(t){n[t]=e[t]&&function(n){return new Promise((function(s,o){n=e[t](n),settle(s,o,n.done,n.value)}))}}function settle(e,t,n,s){Promise.resolve(s).then((function(t){e({value:t,done:n})}),t)}};v=function(e,t){if(Object.defineProperty){Object.defineProperty(e,"raw",{value:t})}else{e.raw=t}return e};var P=Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:true,value:t})}:function(e,t){e["default"]=t};_=function(e){if(e&&e.__esModule)return e;var t={};if(e!=null)for(var n in e)if(n!=="default"&&Object.prototype.hasOwnProperty.call(e,n))b(t,e,n);P(t,e);return t};E=function(e){return e&&e.__esModule?e:{default:e}};S=function(e,t,n,s){if(n==="a"&&!s)throw new TypeError("Private accessor was defined without a getter");if(typeof t==="function"?e!==t||!s:!t.has(e))throw new TypeError("Cannot read private member from an object whose class did not declare it");return n==="m"?s:n==="a"?s.call(e):s?s.value:t.get(e)};R=function(e,t,n,s,o){if(s==="m")throw new TypeError("Private method is not writable");if(s==="a"&&!o)throw new TypeError("Private accessor was defined without a setter");if(typeof t==="function"?e!==t||!o:!t.has(e))throw new TypeError("Cannot write private member to an object whose class did not declare it");return s==="a"?o.call(e,n):o?o.value=n:t.set(e,n),n};e("__extends",t);e("__assign",n);e("__rest",s);e("__decorate",o);e("__param",i);e("__metadata",r);e("__awaiter",a);e("__generator",c);e("__exportStar",d);e("__createBinding",b);e("__values",l);e("__read",u);e("__spread",m);e("__spreadArrays",f);e("__spreadArray",g);e("__await",p);e("__asyncGenerator",y);e("__asyncDelegator",w);e("__asyncValues",h);e("__makeTemplateObject",v);e("__importStar",_);e("__importDefault",E);e("__classPrivateFieldGet",S);e("__classPrivateFieldSet",R)}))},5840:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});Object.defineProperty(t,"v1",{enumerable:true,get:function(){return s.default}});Object.defineProperty(t,"v3",{enumerable:true,get:function(){return o.default}});Object.defineProperty(t,"v4",{enumerable:true,get:function(){return i.default}});Object.defineProperty(t,"v5",{enumerable:true,get:function(){return r.default}});Object.defineProperty(t,"NIL",{enumerable:true,get:function(){return a.default}});Object.defineProperty(t,"version",{enumerable:true,get:function(){return c.default}});Object.defineProperty(t,"validate",{enumerable:true,get:function(){return d.default}});Object.defineProperty(t,"stringify",{enumerable:true,get:function(){return l.default}});Object.defineProperty(t,"parse",{enumerable:true,get:function(){return u.default}});var s=_interopRequireDefault(n(8628));var o=_interopRequireDefault(n(6409));var i=_interopRequireDefault(n(5122));var r=_interopRequireDefault(n(9120));var a=_interopRequireDefault(n(5332));var c=_interopRequireDefault(n(1595));var d=_interopRequireDefault(n(6900));var l=_interopRequireDefault(n(8950));var u=_interopRequireDefault(n(2746));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}},4569:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(6417));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function md5(e){if(Array.isArray(e)){e=Buffer.from(e)}else if(typeof e==="string"){e=Buffer.from(e,"utf8")}return s.default.createHash("md5").update(e).digest()}var o=md5;t.default=o},5332:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var n="00000000-0000-0000-0000-000000000000";t.default=n},2746:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(6900));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function parse(e){if(!(0,s.default)(e)){throw TypeError("Invalid UUID")}let t;const n=new Uint8Array(16);n[0]=(t=parseInt(e.slice(0,8),16))>>>24;n[1]=t>>>16&255;n[2]=t>>>8&255;n[3]=t&255;n[4]=(t=parseInt(e.slice(9,13),16))>>>8;n[5]=t&255;n[6]=(t=parseInt(e.slice(14,18),16))>>>8;n[7]=t&255;n[8]=(t=parseInt(e.slice(19,23),16))>>>8;n[9]=t&255;n[10]=(t=parseInt(e.slice(24,36),16))/1099511627776&255;n[11]=t/4294967296&255;n[12]=t>>>24&255;n[13]=t>>>16&255;n[14]=t>>>8&255;n[15]=t&255;return n}var o=parse;t.default=o},814:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var n=/^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;t.default=n},807:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=rng;var s=_interopRequireDefault(n(6417));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}const o=new Uint8Array(256);let i=o.length;function rng(){if(i>o.length-16){s.default.randomFillSync(o);i=0}return o.slice(i,i+=16)}},5274:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(6417));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function sha1(e){if(Array.isArray(e)){e=Buffer.from(e)}else if(typeof e==="string"){e=Buffer.from(e,"utf8")}return s.default.createHash("sha1").update(e).digest()}var o=sha1;t.default=o},8950:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(6900));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}const o=[];for(let e=0;e<256;++e){o.push((e+256).toString(16).substr(1))}function stringify(e,t=0){const n=(o[e[t+0]]+o[e[t+1]]+o[e[t+2]]+o[e[t+3]]+"-"+o[e[t+4]]+o[e[t+5]]+"-"+o[e[t+6]]+o[e[t+7]]+"-"+o[e[t+8]]+o[e[t+9]]+"-"+o[e[t+10]]+o[e[t+11]]+o[e[t+12]]+o[e[t+13]]+o[e[t+14]]+o[e[t+15]]).toLowerCase();if(!(0,s.default)(n)){throw TypeError("Stringified UUID is invalid")}return n}var i=stringify;t.default=i},8628:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(807));var o=_interopRequireDefault(n(8950));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}let i;let r;let a=0;let c=0;function v1(e,t,n){let d=t&&n||0;const l=t||new Array(16);e=e||{};let u=e.node||i;let m=e.clockseq!==undefined?e.clockseq:r;if(u==null||m==null){const t=e.random||(e.rng||s.default)();if(u==null){u=i=[t[0]|1,t[1],t[2],t[3],t[4],t[5]]}if(m==null){m=r=(t[6]<<8|t[7])&16383}}let f=e.msecs!==undefined?e.msecs:Date.now();let g=e.nsecs!==undefined?e.nsecs:c+1;const p=f-a+(g-c)/1e4;if(p<0&&e.clockseq===undefined){m=m+1&16383}if((p<0||f>a)&&e.nsecs===undefined){g=0}if(g>=1e4){throw new Error("uuid.v1(): Can't create more than 10M uuids/sec")}a=f;c=g;r=m;f+=122192928e5;const y=((f&268435455)*1e4+g)%4294967296;l[d++]=y>>>24&255;l[d++]=y>>>16&255;l[d++]=y>>>8&255;l[d++]=y&255;const w=f/4294967296*1e4&268435455;l[d++]=w>>>8&255;l[d++]=w&255;l[d++]=w>>>24&15|16;l[d++]=w>>>16&255;l[d++]=m>>>8|128;l[d++]=m&255;for(let e=0;e<6;++e){l[d+e]=u[e]}return t||(0,o.default)(l)}var d=v1;t.default=d},6409:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(5998));var o=_interopRequireDefault(n(4569));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}const i=(0,s.default)("v3",48,o.default);var r=i;t.default=r},5998:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=_default;t.URL=t.DNS=void 0;var s=_interopRequireDefault(n(8950));var o=_interopRequireDefault(n(2746));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function stringToBytes(e){e=unescape(encodeURIComponent(e));const t=[];for(let n=0;n<e.length;++n){t.push(e.charCodeAt(n))}return t}const i="6ba7b810-9dad-11d1-80b4-00c04fd430c8";t.DNS=i;const r="6ba7b811-9dad-11d1-80b4-00c04fd430c8";t.URL=r;function _default(e,t,n){function generateUUID(e,i,r,a){if(typeof e==="string"){e=stringToBytes(e)}if(typeof i==="string"){i=(0,o.default)(i)}if(i.length!==16){throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)")}let c=new Uint8Array(16+e.length);c.set(i);c.set(e,i.length);c=n(c);c[6]=c[6]&15|t;c[8]=c[8]&63|128;if(r){a=a||0;for(let e=0;e<16;++e){r[a+e]=c[e]}return r}return(0,s.default)(c)}try{generateUUID.name=e}catch(e){}generateUUID.DNS=i;generateUUID.URL=r;return generateUUID}},5122:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(807));var o=_interopRequireDefault(n(8950));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function v4(e,t,n){e=e||{};const i=e.random||(e.rng||s.default)();i[6]=i[6]&15|64;i[8]=i[8]&63|128;if(t){n=n||0;for(let e=0;e<16;++e){t[n+e]=i[e]}return t}return(0,o.default)(i)}var i=v4;t.default=i},9120:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(5998));var o=_interopRequireDefault(n(5274));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}const i=(0,s.default)("v5",80,o.default);var r=i;t.default=r},6900:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(814));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function validate(e){return typeof e==="string"&&s.default.test(e)}var o=validate;t.default=o},1595:(e,t,n)=>{"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var s=_interopRequireDefault(n(6900));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function version(e){if(!(0,s.default)(e)){throw TypeError("Invalid UUID")}return parseInt(e.substr(14,1),16)}var o=version;t.default=o},9018:(e,t,n)=>{"use strict";n.r(t);n.d(t,{cleanup:()=>cleanup});const{executeSyncCmd:s}=n(1608);const filterEmpty=e=>e;const cleanup=()=>{console.log("Listing running containers...");const e=s("docker",["ps","-aq"]).split("\n").filter(filterEmpty);console.log("============================================");console.log(`Running containers: ${e.length}`);console.log("============================================\n");for(let t of e){console.log(`Stopping container ${t}`);s("docker",["stop",t]);console.log(`Removing container ${t}`);s("docker",["rm",t])}console.log("Finished docker cleanup.")}},1713:(e,t,n)=>{const{ECRClient:s,DescribeRepositoriesCommand:o,CreateRepositoryCommand:i,GetAuthorizationTokenCommand:r,SetRepositoryPolicyCommand:a}=n(4180);const{defaultProvider:c}=n(8030);const{buildPolicy:d}=n(5688);const{executeSyncCmd:l}=n(1608);const u=n(5747);const m=process.env.AWS_ACCOUNT_ID;const f=process.env.AWS_PRINCIPAL_RULES;const g=`${m}.dkr.ecr.us-east-1.amazonaws.com`;const p=0;const y=10;const w=50;const h=100;const v=250;const _=1e3;const E=c({timeout:2e4});const S=new s({region:"us-east-1",credentialDefaultProvider:E});const describeRepo=e=>S.send(new o(e));const createRepo=e=>S.send(new i(e));const getAuthorizationToken=e=>S.send(new r(e));const setRepositoryPolicy=e=>S.send(new a(e));const describeRepoErrorHandler=e=>async t=>{if(t.name!=="RepositoryNotFoundException"){throw new Error(t.message)}const n=e.repositoryNames[0];const s=d({awsPrincipalRules:f});console.log(`Creating repository ${n}...`);console.log(`Policy: ${s}`);const o=await createRepo({repositoryName:n});await setRepositoryPolicy({repositoryName:n,policyText:s});return o.repository};const getRepositoryUri=async e=>await describeRepo(e).then((e=>e.repositories[0])).catch(describeRepoErrorHandler(e));const buildImage=e=>{console.log("Building image...");const t=`${g}/${e.repositoryNames[0]}`;return l("docker",[`build`,`-t`,t,"."])};const tagImage=e=>{console.log(`Tagging image with ${e.tag}...`);const t=`${g}/${e.repositoryNames[0]}`;return l("docker",[`tag`,t,`${t}:${e.tag}`])};const parseAuthToken=async()=>{console.log("Getting ECR auth token...");const e=await getAuthorizationToken({registryIds:[m]});const t=e.authorizationData[0];const n=t.expiresAt;const s=t.proxyEndpoint;console.log(`Token will expire at ${n}`);console.log(`Proxy endpoint: ${s}`);const o=Buffer.from(t.authorizationToken,"base64").toString();const i=o.split(":");return{username:i[0],password:i[1],proxyEndpoint:s}};const dockerLoginOnECR=async()=>{console.log("Login on ECR...");const e=await parseAuthToken();return l("docker",[`login`,`-u`,e.username,"-p",e.password,e.proxyEndpoint])};const pushImage=e=>{console.log(`Pushing tag ${e.tag}...`);return l("docker",["push",`${g}/${e.repositoryNames[0]}:${e.tag}`])};const reportImageThreats=e=>{console.log("X9 will find something to blame now...");l("curl",[`https://raw.githubusercontent.com/olxbr/X9Containers/main/${e.x9ContainerDistro}.X9.Dockerfile`,"--output","X9.Dockerfile"],"report image threats curl failed");var t="";switch(`${e.minimalSeverity}`){case"CRITICAL":t="CRITICAL";break;case"HIGH":t="HIGH,CRITICAL";break;case"MEDIUM":t="MEDIUM,HIGH,CRITICAL";break;case"LOW":t="LOW,MEDIUM,HIGH,CRITICAL";break;default:e.minimalSeverity="UNKNOWN";t="UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL";break}l("docker",["build","-f","X9.Dockerfile","-t","suspectimage","--build-arg",`IMAGE=${g}/${e.repositoryNames[0]}:latest`,"--build-arg",`TRIVY_SEVERITY=${t}`,"--quiet","."],"report image threats docker build failed");const n="./scans";l("docker",["create","--name","suspectcontainer","suspectimage"]);l("docker",["cp","suspectcontainer:/scans",`${n}`]);u.readdirSync(n).forEach((e=>{l("cat",[`${n}/${e}`])}));if(e.ignoreThreats==="true"){console.log("ignore_threats is true, skipping workflow interruption");return"ignore_threats is true, skipping workflow interruption"}const s="recursive-root-dir-clamscan.txt";const o=`${n}/${s}`;if(!u.existsSync(o)){throw new Error(`report image threats file ${s} reading failed`)}process.stdout.write("ClamAV\t");const i=l("grep",["^Infected files: ",`${o}`],`report image threats file ${s} grep failed`);const r=i.match(/\d+/);if(r.some(isNaN)){throw new Error(`report image threats file ${s} missing totals`)}if(r[0]>p){throw new Error(`report image threats file ${s} threat threshold exceeded`)}const a="image-vulnerabilities-trivy.txt";const c=`${n}/${a}`;if(!u.existsSync(c)){throw new Error(`report image threats file ${a} reading failed`)}process.stdout.write("Trivy\t");const d=l("grep",["^Total: ",`${c}`],`report image threats file ${a} grep failed`);const m=d.match(/\d+/);if(m.some(isNaN)){throw new Error(`report image threats file ${a} missing totals`)}if(`${e.minimalSeverity}`==="CRITICAL"&&m[0]>y||`${e.minimalSeverity}`==="HIGH"&&(m[0]>w||m[1]>y)||`${e.minimalSeverity}`==="MEDIUM"&&(m[0]>h||m[1]>w||m[2]>y)||`${e.minimalSeverity}`==="LOW"&&(m[0]>v||m[1]>h||m[2]>w||m[3]>y)||`${e.minimalSeverity}`==="UNKNOWN"&&(m[0]>_||m[1]>v||m[2]>h||m[3]>w||m[4]>y)){throw new Error(`report image threats file ${a} threat threshold exceeded`)}console.log("report image threats successfully finished");return"report image threats successfully finished"};t.getRepositoryUri=getRepositoryUri;t.dockerLoginOnECR=dockerLoginOnECR;t.buildImage=buildImage;t.reportImageThreats=reportImageThreats;t.tagImage=tagImage;t.pushImage=pushImage},5688:(e,t)=>{const buildPolicy=({awsPrincipalRules:e})=>JSON.stringify({Version:"2008-10-17",Statement:[{Sid:"AllowPushPull",Effect:"Allow",Principal:{AWS:JSON.parse(e)},Action:["ecr:GetDownloadUrlForLayer","ecr:BatchGetImage","ecr:BatchCheckLayerAvailability","ecr:PutImage","ecr:InitiateLayerUpload","ecr:UploadLayerPart","ecr:CompleteLayerUpload"]}]});t.buildPolicy=buildPolicy},1608:(e,t,n)=>{const{spawnSync:s}=n(3129);const executeSyncCmd=(e,t,n)=>{const o=s(e,t);if(o.status!==0){if(n){throw new Error(n)}throw new Error(o.stderr.toString())}console.log(o.stdout.toString());return o.stdout.toString()};t.executeSyncCmd=executeSyncCmd},4293:e=>{"use strict";e.exports=require("buffer")},3129:e=>{"use strict";e.exports=require("child_process")},6417:e=>{"use strict";e.exports=require("crypto")},5747:e=>{"use strict";e.exports=require("fs")},8605:e=>{"use strict";e.exports=require("http")},7565:e=>{"use strict";e.exports=require("http2")},7211:e=>{"use strict";e.exports=require("https")},2087:e=>{"use strict";e.exports=require("os")},5622:e=>{"use strict";e.exports=require("path")},1765:e=>{"use strict";e.exports=require("process")},2413:e=>{"use strict";e.exports=require("stream")},8835:e=>{"use strict";e.exports=require("url")}};var t={};function __nccwpck_require__(n){var s=t[n];if(s!==undefined){return s.exports}var o=t[n]={exports:{}};var i=true;try{e[n].call(o.exports,o,o.exports,__nccwpck_require__);i=false}finally{if(i)delete t[n]}return o.exports}(()=>{__nccwpck_require__.d=(e,t)=>{for(var n in t){if(__nccwpck_require__.o(t,n)&&!__nccwpck_require__.o(e,n)){Object.defineProperty(e,n,{enumerable:true,get:t[n]})}}}})();(()=>{__nccwpck_require__.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)})();(()=>{__nccwpck_require__.r=e=>{if(typeof Symbol!=="undefined"&&Symbol.toStringTag){Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})}Object.defineProperty(e,"__esModule",{value:true})}})();if(typeof __nccwpck_require__!=="undefined")__nccwpck_require__.ab=__dirname+"/";var n={};(()=>{const e=__nccwpck_require__(2186);const{getRepositoryUri:t,dockerLoginOnECR:n,buildImage:s,reportImageThreats:o,tagImage:i,pushImage:r}=__nccwpck_require__(1713);const{cleanup:a}=__nccwpck_require__(9018);const c=!!process.env["STATE_isPre"];const d=!!process.env["STATE_isPost"];if(!c){e.saveState("isPre","true")}else if(c&&!d){e.saveState("isPost","true")}const run=async()=>{try{const a=e.getInput("ecr_repository");const c=e.getInput("tags").split(",");const d=e.getInput("minimal_severity");const l=e.getInput("x9_container_distro");const u=e.getInput("ignore_threats");const m={repositoryNames:[a],tags:c,minimalSeverity:d,x9ContainerDistro:l,ignoreThreats:u};console.log(`Looking for repo ${a}...`);const f=await t(m);e.setOutput("repository_uri",f.repositoryUri);await n();s(m);o(m);c.forEach((e=>{i({...m,tag:e});r({...m,tag:e})}))}catch(t){e.setFailed(t.message)}};if(c&&!d){run()}else if(!c||d){a()}})();module.exports=n})();
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.satisfies = exports.parseVersion = exports.getVersion = exports.isAvailable = exports.hasGitAuthToken = exports.isLocalOrTarExporter = exports.getSecret = exports.getSecretFile = exports.getSecretString = exports.getImageID = exports.getImageIDFile = void 0;
+const sync_1 = __importDefault(__nccwpck_require__(8750));
+const fs_1 = __importDefault(__nccwpck_require__(5747));
+const path_1 = __importDefault(__nccwpck_require__(5622));
+const semver = __importStar(__nccwpck_require__(1383));
+const exec = __importStar(__nccwpck_require__(1514));
+const context = __importStar(__nccwpck_require__(3842));
+function getImageIDFile() {
+    return __awaiter(this, void 0, void 0, function* () {
+        return path_1.default.join(context.tmpDir(), 'iidfile').split(path_1.default.sep).join(path_1.default.posix.sep);
+    });
+}
+exports.getImageIDFile = getImageIDFile;
+function getImageID() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const iidFile = yield getImageIDFile();
+        if (!fs_1.default.existsSync(iidFile)) {
+            return undefined;
+        }
+        return fs_1.default.readFileSync(iidFile, { encoding: 'utf-8' });
+    });
+}
+exports.getImageID = getImageID;
+function getSecretString(kvp) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return getSecret(kvp, false);
+    });
+}
+exports.getSecretString = getSecretString;
+function getSecretFile(kvp) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return getSecret(kvp, true);
+    });
+}
+exports.getSecretFile = getSecretFile;
+function getSecret(kvp, file) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const delimiterIndex = kvp.indexOf('=');
+        const key = kvp.substring(0, delimiterIndex);
+        let value = kvp.substring(delimiterIndex + 1);
+        if (key.length == 0 || value.length == 0) {
+            throw new Error(`${kvp} is not a valid secret`);
+        }
+        if (file) {
+            if (!fs_1.default.existsSync(value)) {
+                throw new Error(`secret file ${value} not found`);
+            }
+            value = fs_1.default.readFileSync(value, { encoding: 'utf-8' });
+        }
+        const secretFile = context.tmpNameSync({
+            tmpdir: context.tmpDir()
+        });
+        fs_1.default.writeFileSync(secretFile, value);
+        return `id=${key},src=${secretFile}`;
+    });
+}
+exports.getSecret = getSecret;
+function isLocalOrTarExporter(outputs) {
+    for (let output of sync_1.default(outputs.join(`\n`), {
+        delimiter: ',',
+        trim: true,
+        columns: false,
+        relaxColumnCount: true
+    })) {
+        // Local if no type is defined
+        // https://github.com/docker/buildx/blob/d2bf42f8b4784d83fde17acb3ed84703ddc2156b/build/output.go#L29-L43
+        if (output.length == 1 && !output[0].startsWith('type=')) {
+            return true;
+        }
+        for (let [key, value] of output.map(chunk => chunk.split('=').map(item => item.trim()))) {
+            if (key == 'type' && (value == 'local' || value == 'tar')) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+exports.isLocalOrTarExporter = isLocalOrTarExporter;
+function hasGitAuthToken(secrets) {
+    for (let secret of secrets) {
+        if (secret.startsWith('GIT_AUTH_TOKEN=')) {
+            return true;
+        }
+    }
+    return false;
+}
+exports.hasGitAuthToken = hasGitAuthToken;
+function isAvailable() {
+    return __awaiter(this, void 0, void 0, function* () {
+        return yield exec
+            .getExecOutput('docker', ['buildx'], {
+            ignoreReturnCode: true,
+            silent: true
+        })
+            .then(res => {
+            if (res.stderr.length > 0 && res.exitCode != 0) {
+                return false;
+            }
+            return res.exitCode == 0;
+        });
+    });
+}
+exports.isAvailable = isAvailable;
+function getVersion() {
+    return __awaiter(this, void 0, void 0, function* () {
+        return yield exec
+            .getExecOutput('docker', ['buildx', 'version'], {
+            ignoreReturnCode: true,
+            silent: true
+        })
+            .then(res => {
+            if (res.stderr.length > 0 && res.exitCode != 0) {
+                throw new Error(res.stderr.trim());
+            }
+            return parseVersion(res.stdout.trim());
+        });
+    });
+}
+exports.getVersion = getVersion;
+function parseVersion(stdout) {
+    const matches = /\sv?([0-9a-f]{7}|[0-9.]+)/.exec(stdout);
+    if (!matches) {
+        throw new Error(`Cannot parse buildx version`);
+    }
+    return matches[1];
+}
+exports.parseVersion = parseVersion;
+function satisfies(version, range) {
+    return semver.satisfies(version, range) || /^[0-9a-f]{7}$/.exec(version) !== null;
+}
+exports.satisfies = satisfies;
+//# sourceMappingURL=buildx.js.map
+
+/***/ }),
+
+/***/ 3842:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.setOutput = exports.asyncForEach = exports.getInputList = exports.getArgs = exports.getInputs = exports.tmpNameSync = exports.tmpDir = exports.defaultContext = void 0;
+const sync_1 = __importDefault(__nccwpck_require__(8750));
+const fs = __importStar(__nccwpck_require__(5747));
+const os = __importStar(__nccwpck_require__(2087));
+const path = __importStar(__nccwpck_require__(5622));
+const tmp = __importStar(__nccwpck_require__(8517));
+const core = __importStar(__nccwpck_require__(2186));
+const command_1 = __nccwpck_require__(5241);
+const github = __importStar(__nccwpck_require__(5438));
+const buildx = __importStar(__nccwpck_require__(9295));
+let _defaultContext, _tmpDir;
+function defaultContext() {
+    if (!_defaultContext) {
+        let ref = github.context.ref;
+        if (github.context.sha && ref && !ref.startsWith('refs/')) {
+            ref = `refs/heads/${github.context.ref}`;
+        }
+        if (github.context.sha && !ref.startsWith(`refs/pull/`)) {
+            ref = github.context.sha;
+        }
+        _defaultContext = `${process.env.GITHUB_SERVER_URL || 'https://github.com'}/${github.context.repo.owner}/${github.context.repo.repo}.git#${ref}`;
+    }
+    return _defaultContext;
+}
+exports.defaultContext = defaultContext;
+function tmpDir() {
+    if (!_tmpDir) {
+        _tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'docker-build-push-')).split(path.sep).join(path.posix.sep);
+    }
+    return _tmpDir;
+}
+exports.tmpDir = tmpDir;
+function tmpNameSync(options) {
+    return tmp.tmpNameSync(options);
+}
+exports.tmpNameSync = tmpNameSync;
+function getInputs(defaultContext) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return {
+            allow: yield getInputList('allow'),
+            buildArgs: yield getInputList('build-args', true),
+            builder: core.getInput('builder'),
+            cacheFrom: yield getInputList('cache-from', true),
+            cacheTo: yield getInputList('cache-to', true),
+            context: core.getInput('context') || defaultContext,
+            file: core.getInput('file'),
+            labels: yield getInputList('labels', true),
+            load: core.getBooleanInput('load'),
+            network: core.getInput('network'),
+            noCache: core.getBooleanInput('no-cache'),
+            outputs: yield getInputList('outputs', true),
+            platforms: yield getInputList('platforms'),
+            pull: core.getBooleanInput('pull'),
+            push: core.getBooleanInput('push'),
+            secrets: yield getInputList('secrets', true),
+            secretFiles: yield getInputList('secret-files', true),
+            ssh: yield getInputList('ssh'),
+            tags: yield getInputList('tags'),
+            target: core.getInput('target'),
+            githubToken: core.getInput('github-token')
+        };
+    });
+}
+exports.getInputs = getInputs;
+function getArgs(inputs, defaultContext, buildxVersion) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let args = ['buildx'];
+        args.push.apply(args, yield getBuildArgs(inputs, defaultContext, buildxVersion));
+        args.push.apply(args, yield getCommonArgs(inputs));
+        args.push(inputs.context);
+        return args;
+    });
+}
+exports.getArgs = getArgs;
+function getBuildArgs(inputs, defaultContext, buildxVersion) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let args = ['build'];
+        yield exports.asyncForEach(inputs.buildArgs, (buildArg) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--build-arg', buildArg);
+        }));
+        yield exports.asyncForEach(inputs.labels, (label) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--label', label);
+        }));
+        yield exports.asyncForEach(inputs.tags, (tag) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--tag', tag);
+        }));
+        if (inputs.target) {
+            args.push('--target', inputs.target);
+        }
+        if (inputs.allow.length > 0) {
+            args.push('--allow', inputs.allow.join(','));
+        }
+        if (inputs.platforms.length > 0) {
+            args.push('--platform', inputs.platforms.join(','));
+        }
+        yield exports.asyncForEach(inputs.outputs, (output) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--output', output);
+        }));
+        if (!buildx.isLocalOrTarExporter(inputs.outputs) && (inputs.platforms.length == 0 || buildx.satisfies(buildxVersion, '>=0.4.2'))) {
+            args.push('--iidfile', yield buildx.getImageIDFile());
+        }
+        yield exports.asyncForEach(inputs.cacheFrom, (cacheFrom) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--cache-from', cacheFrom);
+        }));
+        yield exports.asyncForEach(inputs.cacheTo, (cacheTo) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--cache-to', cacheTo);
+        }));
+        yield exports.asyncForEach(inputs.secrets, (secret) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                args.push('--secret', yield buildx.getSecretString(secret));
+            }
+            catch (err) {
+                core.warning(err.message);
+            }
+        }));
+        yield exports.asyncForEach(inputs.secretFiles, (secretFile) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                args.push('--secret', yield buildx.getSecretFile(secretFile));
+            }
+            catch (err) {
+                core.warning(err.message);
+            }
+        }));
+        if (inputs.githubToken && !buildx.hasGitAuthToken(inputs.secrets) && inputs.context == defaultContext) {
+            args.push('--secret', yield buildx.getSecretString(`GIT_AUTH_TOKEN=${inputs.githubToken}`));
+        }
+        yield exports.asyncForEach(inputs.ssh, (ssh) => __awaiter(this, void 0, void 0, function* () {
+            args.push('--ssh', ssh);
+        }));
+        if (inputs.file) {
+            args.push('--file', inputs.file);
+        }
+        return args;
+    });
+}
+function getCommonArgs(inputs) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let args = [];
+        if (inputs.noCache) {
+            args.push('--no-cache');
+        }
+        if (inputs.builder) {
+            args.push('--builder', inputs.builder);
+        }
+        if (inputs.pull) {
+            args.push('--pull');
+        }
+        if (inputs.load) {
+            args.push('--load');
+        }
+        if (inputs.network) {
+            args.push('--network', inputs.network);
+        }
+        if (inputs.push) {
+            args.push('--push');
+        }
+        return args;
+    });
+}
+function getInputList(name, ignoreComma) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let res = [];
+        const items = core.getInput(name);
+        if (items == '') {
+            return res;
+        }
+        for (let output of (yield sync_1.default(items, {
+            columns: false,
+            relax: true,
+            relaxColumnCount: true,
+            skipLinesWithEmptyValues: true
+        }))) {
+            if (output.length == 1) {
+                res.push(output[0]);
+                continue;
+            }
+            else if (!ignoreComma) {
+                res.push(...output);
+                continue;
+            }
+            res.push(output.join(','));
+        }
+        return res.filter(item => item).map(pat => pat.trim());
+    });
+}
+exports.getInputList = getInputList;
+const asyncForEach = (array, callback) => __awaiter(void 0, void 0, void 0, function* () {
+    for (let index = 0; index < array.length; index++) {
+        yield callback(array[index], index, array);
+    }
+});
+exports.asyncForEach = asyncForEach;
+// FIXME: Temp fix https://github.com/actions/toolkit/issues/777
+function setOutput(name, value) {
+    command_1.issueCommand('set-output', { name }, value);
+}
+exports.setOutput = setOutput;
+//# sourceMappingURL=context.js.map
+
+/***/ }),
+
+/***/ 3109:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const fs = __importStar(__nccwpck_require__(5747));
+const buildx = __importStar(__nccwpck_require__(9295));
+const context = __importStar(__nccwpck_require__(3842));
+const stateHelper = __importStar(__nccwpck_require__(8647));
+const core = __importStar(__nccwpck_require__(2186));
+const exec = __importStar(__nccwpck_require__(1514));
+function run() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            core.startGroup(`Docker info`);
+            yield exec.exec('docker', ['version']);
+            yield exec.exec('docker', ['info']);
+            core.endGroup();
+            if (!(yield buildx.isAvailable())) {
+                core.setFailed(`Docker buildx is required. See https://github.com/docker/setup-buildx-action to set up buildx.`);
+                return;
+            }
+            stateHelper.setTmpDir(context.tmpDir());
+            const buildxVersion = yield buildx.getVersion();
+            const defContext = context.defaultContext();
+            let inputs = yield context.getInputs(defContext);
+            const args = yield context.getArgs(inputs, defContext, buildxVersion);
+            yield exec
+                .getExecOutput('docker', args, {
+                ignoreReturnCode: true
+            })
+                .then(res => {
+                if (res.stderr.length > 0 && res.exitCode != 0) {
+                    throw new Error(`buildx failed with: ${res.stderr.match(/(.*)\s*$/)[0].trim()}`);
+                }
+            });
+            const imageID = yield buildx.getImageID();
+            if (imageID) {
+                core.startGroup(`Extracting digest`);
+                core.info(`${imageID}`);
+                context.setOutput('digest', imageID);
+                core.endGroup();
+            }
+        }
+        catch (error) {
+            core.setFailed(error.message);
+        }
+    });
+}
+function cleanup() {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (stateHelper.tmpDir.length > 0) {
+            core.startGroup(`Removing temp folder ${stateHelper.tmpDir}`);
+            fs.rmdirSync(stateHelper.tmpDir, { recursive: true });
+            core.endGroup();
+        }
+    });
+}
+if (!stateHelper.IsPost) {
+    run();
+}
+else {
+    cleanup();
+}
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 8647:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.setTmpDir = exports.tmpDir = exports.IsPost = void 0;
+const core = __importStar(__nccwpck_require__(2186));
+exports.IsPost = !!process.env['STATE_isPost'];
+exports.tmpDir = process.env['STATE_tmpDir'] || '';
+function setTmpDir(tmpDir) {
+    core.saveState('tmpDir', tmpDir);
+}
+exports.setTmpDir = setTmpDir;
+if (!exports.IsPost) {
+    core.saveState('isPost', 'true');
+}
+//# sourceMappingURL=state-helper.js.map
+
+/***/ }),
+
+/***/ 5241:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.issue = exports.issueCommand = void 0;
+const os = __importStar(__nccwpck_require__(2087));
+const utils_1 = __nccwpck_require__(5278);
+/**
+ * Commands
+ *
+ * Command Format:
+ *   ::name key=value,key=value::message
+ *
+ * Examples:
+ *   ::warning::This is the message
+ *   ::set-env name=MY_VAR::some value
+ */
+function issueCommand(command, properties, message) {
+    const cmd = new Command(command, properties, message);
+    process.stdout.write(cmd.toString() + os.EOL);
+}
+exports.issueCommand = issueCommand;
+function issue(name, message = '') {
+    issueCommand(name, {}, message);
+}
+exports.issue = issue;
+const CMD_STRING = '::';
+class Command {
+    constructor(command, properties, message) {
+        if (!command) {
+            command = 'missing.command';
+        }
+        this.command = command;
+        this.properties = properties;
+        this.message = message;
+    }
+    toString() {
+        let cmdStr = CMD_STRING + this.command;
+        if (this.properties && Object.keys(this.properties).length > 0) {
+            cmdStr += ' ';
+            let first = true;
+            for (const key in this.properties) {
+                if (this.properties.hasOwnProperty(key)) {
+                    const val = this.properties[key];
+                    if (val) {
+                        if (first) {
+                            first = false;
+                        }
+                        else {
+                            cmdStr += ',';
+                        }
+                        cmdStr += `${key}=${escapeProperty(val)}`;
+                    }
+                }
+            }
+        }
+        cmdStr += `${CMD_STRING}${escapeData(this.message)}`;
+        return cmdStr;
+    }
+}
+function escapeData(s) {
+    return utils_1.toCommandValue(s)
+        .replace(/%/g, '%25')
+        .replace(/\r/g, '%0D')
+        .replace(/\n/g, '%0A');
+}
+function escapeProperty(s) {
+    return utils_1.toCommandValue(s)
+        .replace(/%/g, '%25')
+        .replace(/\r/g, '%0D')
+        .replace(/\n/g, '%0A')
+        .replace(/:/g, '%3A')
+        .replace(/,/g, '%2C');
+}
+//# sourceMappingURL=command.js.map
+
+/***/ }),
+
+/***/ 2186:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
+const command_1 = __nccwpck_require__(5241);
+const file_command_1 = __nccwpck_require__(717);
+const utils_1 = __nccwpck_require__(5278);
+const os = __importStar(__nccwpck_require__(2087));
+const path = __importStar(__nccwpck_require__(5622));
+/**
+ * The code to exit an action
+ */
+var ExitCode;
+(function (ExitCode) {
+    /**
+     * A code indicating that the action was successful
+     */
+    ExitCode[ExitCode["Success"] = 0] = "Success";
+    /**
+     * A code indicating that the action was a failure
+     */
+    ExitCode[ExitCode["Failure"] = 1] = "Failure";
+})(ExitCode = exports.ExitCode || (exports.ExitCode = {}));
+//-----------------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------------
+/**
+ * Sets env variable for this action and future actions in the job
+ * @param name the name of the variable to set
+ * @param val the value of the variable. Non-string values will be converted to a string via JSON.stringify
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function exportVariable(name, val) {
+    const convertedVal = utils_1.toCommandValue(val);
+    process.env[name] = convertedVal;
+    const filePath = process.env['GITHUB_ENV'] || '';
+    if (filePath) {
+        const delimiter = '_GitHubActionsFileCommandDelimeter_';
+        const commandValue = `${name}<<${delimiter}${os.EOL}${convertedVal}${os.EOL}${delimiter}`;
+        file_command_1.issueCommand('ENV', commandValue);
+    }
+    else {
+        command_1.issueCommand('set-env', { name }, convertedVal);
+    }
+}
+exports.exportVariable = exportVariable;
+/**
+ * Registers a secret which will get masked from logs
+ * @param secret value of the secret
+ */
+function setSecret(secret) {
+    command_1.issueCommand('add-mask', {}, secret);
+}
+exports.setSecret = setSecret;
+/**
+ * Prepends inputPath to the PATH (for this action and future actions)
+ * @param inputPath
+ */
+function addPath(inputPath) {
+    const filePath = process.env['GITHUB_PATH'] || '';
+    if (filePath) {
+        file_command_1.issueCommand('PATH', inputPath);
+    }
+    else {
+        command_1.issueCommand('add-path', {}, inputPath);
+    }
+    process.env['PATH'] = `${inputPath}${path.delimiter}${process.env['PATH']}`;
+}
+exports.addPath = addPath;
+/**
+ * Gets the value of an input.
+ * Unless trimWhitespace is set to false in InputOptions, the value is also trimmed.
+ * Returns an empty string if the value is not defined.
+ *
+ * @param     name     name of the input to get
+ * @param     options  optional. See InputOptions.
+ * @returns   string
+ */
+function getInput(name, options) {
+    const val = process.env[`INPUT_${name.replace(/ /g, '_').toUpperCase()}`] || '';
+    if (options && options.required && !val) {
+        throw new Error(`Input required and not supplied: ${name}`);
+    }
+    if (options && options.trimWhitespace === false) {
+        return val;
+    }
+    return val.trim();
+}
+exports.getInput = getInput;
+/**
+ * Gets the values of an multiline input.  Each value is also trimmed.
+ *
+ * @param     name     name of the input to get
+ * @param     options  optional. See InputOptions.
+ * @returns   string[]
+ *
+ */
+function getMultilineInput(name, options) {
+    const inputs = getInput(name, options)
+        .split('\n')
+        .filter(x => x !== '');
+    return inputs;
+}
+exports.getMultilineInput = getMultilineInput;
+/**
+ * Gets the input value of the boolean type in the YAML 1.2 "core schema" specification.
+ * Support boolean input list: `true | True | TRUE | false | False | FALSE` .
+ * The return value is also in boolean type.
+ * ref: https://yaml.org/spec/1.2/spec.html#id2804923
+ *
+ * @param     name     name of the input to get
+ * @param     options  optional. See InputOptions.
+ * @returns   boolean
+ */
+function getBooleanInput(name, options) {
+    const trueValue = ['true', 'True', 'TRUE'];
+    const falseValue = ['false', 'False', 'FALSE'];
+    const val = getInput(name, options);
+    if (trueValue.includes(val))
+        return true;
+    if (falseValue.includes(val))
+        return false;
+    throw new TypeError(`Input does not meet YAML 1.2 "Core Schema" specification: ${name}\n` +
+        `Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
+}
+exports.getBooleanInput = getBooleanInput;
+/**
+ * Sets the value of an output.
+ *
+ * @param     name     name of the output to set
+ * @param     value    value to store. Non-string values will be converted to a string via JSON.stringify
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function setOutput(name, value) {
+    process.stdout.write(os.EOL);
+    command_1.issueCommand('set-output', { name }, value);
+}
+exports.setOutput = setOutput;
+/**
+ * Enables or disables the echoing of commands into stdout for the rest of the step.
+ * Echoing is disabled by default if ACTIONS_STEP_DEBUG is not set.
+ *
+ */
+function setCommandEcho(enabled) {
+    command_1.issue('echo', enabled ? 'on' : 'off');
+}
+exports.setCommandEcho = setCommandEcho;
+//-----------------------------------------------------------------------
+// Results
+//-----------------------------------------------------------------------
+/**
+ * Sets the action status to failed.
+ * When the action exits it will be with an exit code of 1
+ * @param message add error issue message
+ */
+function setFailed(message) {
+    process.exitCode = ExitCode.Failure;
+    error(message);
+}
+exports.setFailed = setFailed;
+//-----------------------------------------------------------------------
+// Logging Commands
+//-----------------------------------------------------------------------
+/**
+ * Gets whether Actions Step Debug is on or not
+ */
+function isDebug() {
+    return process.env['RUNNER_DEBUG'] === '1';
+}
+exports.isDebug = isDebug;
+/**
+ * Writes debug message to user log
+ * @param message debug message
+ */
+function debug(message) {
+    command_1.issueCommand('debug', {}, message);
+}
+exports.debug = debug;
+/**
+ * Adds an error issue
+ * @param message error issue message. Errors will be converted to string via toString()
+ */
+function error(message) {
+    command_1.issue('error', message instanceof Error ? message.toString() : message);
+}
+exports.error = error;
+/**
+ * Adds an warning issue
+ * @param message warning issue message. Errors will be converted to string via toString()
+ */
+function warning(message) {
+    command_1.issue('warning', message instanceof Error ? message.toString() : message);
+}
+exports.warning = warning;
+/**
+ * Writes info to log with console.log.
+ * @param message info message
+ */
+function info(message) {
+    process.stdout.write(message + os.EOL);
+}
+exports.info = info;
+/**
+ * Begin an output group.
+ *
+ * Output until the next `groupEnd` will be foldable in this group
+ *
+ * @param name The name of the output group
+ */
+function startGroup(name) {
+    command_1.issue('group', name);
+}
+exports.startGroup = startGroup;
+/**
+ * End an output group.
+ */
+function endGroup() {
+    command_1.issue('endgroup');
+}
+exports.endGroup = endGroup;
+/**
+ * Wrap an asynchronous function call in a group.
+ *
+ * Returns the same type as the function itself.
+ *
+ * @param name The name of the group
+ * @param fn The function to wrap in the group
+ */
+function group(name, fn) {
+    return __awaiter(this, void 0, void 0, function* () {
+        startGroup(name);
+        let result;
+        try {
+            result = yield fn();
+        }
+        finally {
+            endGroup();
+        }
+        return result;
+    });
+}
+exports.group = group;
+//-----------------------------------------------------------------------
+// Wrapper action state
+//-----------------------------------------------------------------------
+/**
+ * Saves state for current action, the state can only be retrieved by this action's post job execution.
+ *
+ * @param     name     name of the state to store
+ * @param     value    value to store. Non-string values will be converted to a string via JSON.stringify
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function saveState(name, value) {
+    command_1.issueCommand('save-state', { name }, value);
+}
+exports.saveState = saveState;
+/**
+ * Gets the value of an state set by this action's main execution.
+ *
+ * @param     name     name of the state to get
+ * @returns   string
+ */
+function getState(name) {
+    return process.env[`STATE_${name}`] || '';
+}
+exports.getState = getState;
+//# sourceMappingURL=core.js.map
+
+/***/ }),
+
+/***/ 717:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+// For internal use, subject to change.
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.issueCommand = void 0;
+// We use any as a valid input type
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const fs = __importStar(__nccwpck_require__(5747));
+const os = __importStar(__nccwpck_require__(2087));
+const utils_1 = __nccwpck_require__(5278);
+function issueCommand(command, message) {
+    const filePath = process.env[`GITHUB_${command}`];
+    if (!filePath) {
+        throw new Error(`Unable to find environment variable for file command ${command}`);
+    }
+    if (!fs.existsSync(filePath)) {
+        throw new Error(`Missing file at path: ${filePath}`);
+    }
+    fs.appendFileSync(filePath, `${utils_1.toCommandValue(message)}${os.EOL}`, {
+        encoding: 'utf8'
+    });
+}
+exports.issueCommand = issueCommand;
+//# sourceMappingURL=file-command.js.map
+
+/***/ }),
+
+/***/ 5278:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+// We use any as a valid input type
+/* eslint-disable @typescript-eslint/no-explicit-any */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toCommandValue = void 0;
+/**
+ * Sanitizes an input into a string so it can be passed into issueCommand safely
+ * @param input input to sanitize into a string
+ */
+function toCommandValue(input) {
+    if (input === null || input === undefined) {
+        return '';
+    }
+    else if (typeof input === 'string' || input instanceof String) {
+        return input;
+    }
+    return JSON.stringify(input);
+}
+exports.toCommandValue = toCommandValue;
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 1514:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getExecOutput = exports.exec = void 0;
+const string_decoder_1 = __nccwpck_require__(4304);
+const tr = __importStar(__nccwpck_require__(8159));
+/**
+ * Exec a command.
+ * Output will be streamed to the live console.
+ * Returns promise with return code
+ *
+ * @param     commandLine        command to execute (can include additional args). Must be correctly escaped.
+ * @param     args               optional arguments for tool. Escaping is handled by the lib.
+ * @param     options            optional exec options.  See ExecOptions
+ * @returns   Promise<number>    exit code
+ */
+function exec(commandLine, args, options) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const commandArgs = tr.argStringToArray(commandLine);
+        if (commandArgs.length === 0) {
+            throw new Error(`Parameter 'commandLine' cannot be null or empty.`);
+        }
+        // Path to tool to execute should be first arg
+        const toolPath = commandArgs[0];
+        args = commandArgs.slice(1).concat(args || []);
+        const runner = new tr.ToolRunner(toolPath, args, options);
+        return runner.exec();
+    });
+}
+exports.exec = exec;
+/**
+ * Exec a command and get the output.
+ * Output will be streamed to the live console.
+ * Returns promise with the exit code and collected stdout and stderr
+ *
+ * @param     commandLine           command to execute (can include additional args). Must be correctly escaped.
+ * @param     args                  optional arguments for tool. Escaping is handled by the lib.
+ * @param     options               optional exec options.  See ExecOptions
+ * @returns   Promise<ExecOutput>   exit code, stdout, and stderr
+ */
+function getExecOutput(commandLine, args, options) {
+    var _a, _b;
+    return __awaiter(this, void 0, void 0, function* () {
+        let stdout = '';
+        let stderr = '';
+        //Using string decoder covers the case where a mult-byte character is split
+        const stdoutDecoder = new string_decoder_1.StringDecoder('utf8');
+        const stderrDecoder = new string_decoder_1.StringDecoder('utf8');
+        const originalStdoutListener = (_a = options === null || options === void 0 ? void 0 : options.listeners) === null || _a === void 0 ? void 0 : _a.stdout;
+        const originalStdErrListener = (_b = options === null || options === void 0 ? void 0 : options.listeners) === null || _b === void 0 ? void 0 : _b.stderr;
+        const stdErrListener = (data) => {
+            stderr += stderrDecoder.write(data);
+            if (originalStdErrListener) {
+                originalStdErrListener(data);
+            }
+        };
+        const stdOutListener = (data) => {
+            stdout += stdoutDecoder.write(data);
+            if (originalStdoutListener) {
+                originalStdoutListener(data);
+            }
+        };
+        const listeners = Object.assign(Object.assign({}, options === null || options === void 0 ? void 0 : options.listeners), { stdout: stdOutListener, stderr: stdErrListener });
+        const exitCode = yield exec(commandLine, args, Object.assign(Object.assign({}, options), { listeners }));
+        //flush any remaining characters
+        stdout += stdoutDecoder.end();
+        stderr += stderrDecoder.end();
+        return {
+            exitCode,
+            stdout,
+            stderr
+        };
+    });
+}
+exports.getExecOutput = getExecOutput;
+//# sourceMappingURL=exec.js.map
+
+/***/ }),
+
+/***/ 8159:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.argStringToArray = exports.ToolRunner = void 0;
+const os = __importStar(__nccwpck_require__(2087));
+const events = __importStar(__nccwpck_require__(8614));
+const child = __importStar(__nccwpck_require__(3129));
+const path = __importStar(__nccwpck_require__(5622));
+const io = __importStar(__nccwpck_require__(7351));
+const ioUtil = __importStar(__nccwpck_require__(1962));
+const timers_1 = __nccwpck_require__(8213);
+/* eslint-disable @typescript-eslint/unbound-method */
+const IS_WINDOWS = process.platform === 'win32';
+/*
+ * Class for running command line tools. Handles quoting and arg parsing in a platform agnostic way.
+ */
+class ToolRunner extends events.EventEmitter {
+    constructor(toolPath, args, options) {
+        super();
+        if (!toolPath) {
+            throw new Error("Parameter 'toolPath' cannot be null or empty.");
+        }
+        this.toolPath = toolPath;
+        this.args = args || [];
+        this.options = options || {};
+    }
+    _debug(message) {
+        if (this.options.listeners && this.options.listeners.debug) {
+            this.options.listeners.debug(message);
+        }
+    }
+    _getCommandString(options, noPrefix) {
+        const toolPath = this._getSpawnFileName();
+        const args = this._getSpawnArgs(options);
+        let cmd = noPrefix ? '' : '[command]'; // omit prefix when piped to a second tool
+        if (IS_WINDOWS) {
+            // Windows + cmd file
+            if (this._isCmdFile()) {
+                cmd += toolPath;
+                for (const a of args) {
+                    cmd += ` ${a}`;
+                }
+            }
+            // Windows + verbatim
+            else if (options.windowsVerbatimArguments) {
+                cmd += `"${toolPath}"`;
+                for (const a of args) {
+                    cmd += ` ${a}`;
+                }
+            }
+            // Windows (regular)
+            else {
+                cmd += this._windowsQuoteCmdArg(toolPath);
+                for (const a of args) {
+                    cmd += ` ${this._windowsQuoteCmdArg(a)}`;
+                }
+            }
+        }
+        else {
+            // OSX/Linux - this can likely be improved with some form of quoting.
+            // creating processes on Unix is fundamentally different than Windows.
+            // on Unix, execvp() takes an arg array.
+            cmd += toolPath;
+            for (const a of args) {
+                cmd += ` ${a}`;
+            }
+        }
+        return cmd;
+    }
+    _processLineBuffer(data, strBuffer, onLine) {
+        try {
+            let s = strBuffer + data.toString();
+            let n = s.indexOf(os.EOL);
+            while (n > -1) {
+                const line = s.substring(0, n);
+                onLine(line);
+                // the rest of the string ...
+                s = s.substring(n + os.EOL.length);
+                n = s.indexOf(os.EOL);
+            }
+            return s;
+        }
+        catch (err) {
+            // streaming lines to console is best effort.  Don't fail a build.
+            this._debug(`error processing line. Failed with error ${err}`);
+            return '';
+        }
+    }
+    _getSpawnFileName() {
+        if (IS_WINDOWS) {
+            if (this._isCmdFile()) {
+                return process.env['COMSPEC'] || 'cmd.exe';
+            }
+        }
+        return this.toolPath;
+    }
+    _getSpawnArgs(options) {
+        if (IS_WINDOWS) {
+            if (this._isCmdFile()) {
+                let argline = `/D /S /C "${this._windowsQuoteCmdArg(this.toolPath)}`;
+                for (const a of this.args) {
+                    argline += ' ';
+                    argline += options.windowsVerbatimArguments
+                        ? a
+                        : this._windowsQuoteCmdArg(a);
+                }
+                argline += '"';
+                return [argline];
+            }
+        }
+        return this.args;
+    }
+    _endsWith(str, end) {
+        return str.endsWith(end);
+    }
+    _isCmdFile() {
+        const upperToolPath = this.toolPath.toUpperCase();
+        return (this._endsWith(upperToolPath, '.CMD') ||
+            this._endsWith(upperToolPath, '.BAT'));
+    }
+    _windowsQuoteCmdArg(arg) {
+        // for .exe, apply the normal quoting rules that libuv applies
+        if (!this._isCmdFile()) {
+            return this._uvQuoteCmdArg(arg);
+        }
+        // otherwise apply quoting rules specific to the cmd.exe command line parser.
+        // the libuv rules are generic and are not designed specifically for cmd.exe
+        // command line parser.
+        //
+        // for a detailed description of the cmd.exe command line parser, refer to
+        // http://stackoverflow.com/questions/4094699/how-does-the-windows-command-interpreter-cmd-exe-parse-scripts/7970912#7970912
+        // need quotes for empty arg
+        if (!arg) {
+            return '""';
+        }
+        // determine whether the arg needs to be quoted
+        const cmdSpecialChars = [
+            ' ',
+            '\t',
+            '&',
+            '(',
+            ')',
+            '[',
+            ']',
+            '{',
+            '}',
+            '^',
+            '=',
+            ';',
+            '!',
+            "'",
+            '+',
+            ',',
+            '`',
+            '~',
+            '|',
+            '<',
+            '>',
+            '"'
+        ];
+        let needsQuotes = false;
+        for (const char of arg) {
+            if (cmdSpecialChars.some(x => x === char)) {
+                needsQuotes = true;
+                break;
+            }
+        }
+        // short-circuit if quotes not needed
+        if (!needsQuotes) {
+            return arg;
+        }
+        // the following quoting rules are very similar to the rules that by libuv applies.
+        //
+        // 1) wrap the string in quotes
+        //
+        // 2) double-up quotes - i.e. " => ""
+        //
+        //    this is different from the libuv quoting rules. libuv replaces " with \", which unfortunately
+        //    doesn't work well with a cmd.exe command line.
+        //
+        //    note, replacing " with "" also works well if the arg is passed to a downstream .NET console app.
+        //    for example, the command line:
+        //          foo.exe "myarg:""my val"""
+        //    is parsed by a .NET console app into an arg array:
+        //          [ "myarg:\"my val\"" ]
+        //    which is the same end result when applying libuv quoting rules. although the actual
+        //    command line from libuv quoting rules would look like:
+        //          foo.exe "myarg:\"my val\""
+        //
+        // 3) double-up slashes that precede a quote,
+        //    e.g.  hello \world    => "hello \world"
+        //          hello\"world    => "hello\\""world"
+        //          hello\\"world   => "hello\\\\""world"
+        //          hello world\    => "hello world\\"
+        //
+        //    technically this is not required for a cmd.exe command line, or the batch argument parser.
+        //    the reasons for including this as a .cmd quoting rule are:
+        //
+        //    a) this is optimized for the scenario where the argument is passed from the .cmd file to an
+        //       external program. many programs (e.g. .NET console apps) rely on the slash-doubling rule.
+        //
+        //    b) it's what we've been doing previously (by deferring to node default behavior) and we
+        //       haven't heard any complaints about that aspect.
+        //
+        // note, a weakness of the quoting rules chosen here, is that % is not escaped. in fact, % cannot be
+        // escaped when used on the command line directly - even though within a .cmd file % can be escaped
+        // by using %%.
+        //
+        // the saving grace is, on the command line, %var% is left as-is if var is not defined. this contrasts
+        // the line parsing rules within a .cmd file, where if var is not defined it is replaced with nothing.
+        //
+        // one option that was explored was replacing % with ^% - i.e. %var% => ^%var^%. this hack would
+        // often work, since it is unlikely that var^ would exist, and the ^ character is removed when the
+        // variable is used. the problem, however, is that ^ is not removed when %* is used to pass the args
+        // to an external program.
+        //
+        // an unexplored potential solution for the % escaping problem, is to create a wrapper .cmd file.
+        // % can be escaped within a .cmd file.
+        let reverse = '"';
+        let quoteHit = true;
+        for (let i = arg.length; i > 0; i--) {
+            // walk the string in reverse
+            reverse += arg[i - 1];
+            if (quoteHit && arg[i - 1] === '\\') {
+                reverse += '\\'; // double the slash
+            }
+            else if (arg[i - 1] === '"') {
+                quoteHit = true;
+                reverse += '"'; // double the quote
+            }
+            else {
+                quoteHit = false;
+            }
+        }
+        reverse += '"';
+        return reverse
+            .split('')
+            .reverse()
+            .join('');
+    }
+    _uvQuoteCmdArg(arg) {
+        // Tool runner wraps child_process.spawn() and needs to apply the same quoting as
+        // Node in certain cases where the undocumented spawn option windowsVerbatimArguments
+        // is used.
+        //
+        // Since this function is a port of quote_cmd_arg from Node 4.x (technically, lib UV,
+        // see https://github.com/nodejs/node/blob/v4.x/deps/uv/src/win/process.c for details),
+        // pasting copyright notice from Node within this function:
+        //
+        //      Copyright Joyent, Inc. and other Node contributors. All rights reserved.
+        //
+        //      Permission is hereby granted, free of charge, to any person obtaining a copy
+        //      of this software and associated documentation files (the "Software"), to
+        //      deal in the Software without restriction, including without limitation the
+        //      rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+        //      sell copies of the Software, and to permit persons to whom the Software is
+        //      furnished to do so, subject to the following conditions:
+        //
+        //      The above copyright notice and this permission notice shall be included in
+        //      all copies or substantial portions of the Software.
+        //
+        //      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        //      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        //      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        //      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        //      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+        //      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+        //      IN THE SOFTWARE.
+        if (!arg) {
+            // Need double quotation for empty argument
+            return '""';
+        }
+        if (!arg.includes(' ') && !arg.includes('\t') && !arg.includes('"')) {
+            // No quotation needed
+            return arg;
+        }
+        if (!arg.includes('"') && !arg.includes('\\')) {
+            // No embedded double quotes or backslashes, so I can just wrap
+            // quote marks around the whole thing.
+            return `"${arg}"`;
+        }
+        // Expected input/output:
+        //   input : hello"world
+        //   output: "hello\"world"
+        //   input : hello""world
+        //   output: "hello\"\"world"
+        //   input : hello\world
+        //   output: hello\world
+        //   input : hello\\world
+        //   output: hello\\world
+        //   input : hello\"world
+        //   output: "hello\\\"world"
+        //   input : hello\\"world
+        //   output: "hello\\\\\"world"
+        //   input : hello world\
+        //   output: "hello world\\" - note the comment in libuv actually reads "hello world\"
+        //                             but it appears the comment is wrong, it should be "hello world\\"
+        let reverse = '"';
+        let quoteHit = true;
+        for (let i = arg.length; i > 0; i--) {
+            // walk the string in reverse
+            reverse += arg[i - 1];
+            if (quoteHit && arg[i - 1] === '\\') {
+                reverse += '\\';
+            }
+            else if (arg[i - 1] === '"') {
+                quoteHit = true;
+                reverse += '\\';
+            }
+            else {
+                quoteHit = false;
+            }
+        }
+        reverse += '"';
+        return reverse
+            .split('')
+            .reverse()
+            .join('');
+    }
+    _cloneExecOptions(options) {
+        options = options || {};
+        const result = {
+            cwd: options.cwd || process.cwd(),
+            env: options.env || process.env,
+            silent: options.silent || false,
+            windowsVerbatimArguments: options.windowsVerbatimArguments || false,
+            failOnStdErr: options.failOnStdErr || false,
+            ignoreReturnCode: options.ignoreReturnCode || false,
+            delay: options.delay || 10000
+        };
+        result.outStream = options.outStream || process.stdout;
+        result.errStream = options.errStream || process.stderr;
+        return result;
+    }
+    _getSpawnOptions(options, toolPath) {
+        options = options || {};
+        const result = {};
+        result.cwd = options.cwd;
+        result.env = options.env;
+        result['windowsVerbatimArguments'] =
+            options.windowsVerbatimArguments || this._isCmdFile();
+        if (options.windowsVerbatimArguments) {
+            result.argv0 = `"${toolPath}"`;
+        }
+        return result;
+    }
+    /**
+     * Exec a tool.
+     * Output will be streamed to the live console.
+     * Returns promise with return code
+     *
+     * @param     tool     path to tool to exec
+     * @param     options  optional exec options.  See ExecOptions
+     * @returns   number
+     */
+    exec() {
+        return __awaiter(this, void 0, void 0, function* () {
+            // root the tool path if it is unrooted and contains relative pathing
+            if (!ioUtil.isRooted(this.toolPath) &&
+                (this.toolPath.includes('/') ||
+                    (IS_WINDOWS && this.toolPath.includes('\\')))) {
+                // prefer options.cwd if it is specified, however options.cwd may also need to be rooted
+                this.toolPath = path.resolve(process.cwd(), this.options.cwd || process.cwd(), this.toolPath);
+            }
+            // if the tool is only a file name, then resolve it from the PATH
+            // otherwise verify it exists (add extension on Windows if necessary)
+            this.toolPath = yield io.which(this.toolPath, true);
+            return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+                this._debug(`exec tool: ${this.toolPath}`);
+                this._debug('arguments:');
+                for (const arg of this.args) {
+                    this._debug(`   ${arg}`);
+                }
+                const optionsNonNull = this._cloneExecOptions(this.options);
+                if (!optionsNonNull.silent && optionsNonNull.outStream) {
+                    optionsNonNull.outStream.write(this._getCommandString(optionsNonNull) + os.EOL);
+                }
+                const state = new ExecState(optionsNonNull, this.toolPath);
+                state.on('debug', (message) => {
+                    this._debug(message);
+                });
+                if (this.options.cwd && !(yield ioUtil.exists(this.options.cwd))) {
+                    return reject(new Error(`The cwd: ${this.options.cwd} does not exist!`));
+                }
+                const fileName = this._getSpawnFileName();
+                const cp = child.spawn(fileName, this._getSpawnArgs(optionsNonNull), this._getSpawnOptions(this.options, fileName));
+                let stdbuffer = '';
+                if (cp.stdout) {
+                    cp.stdout.on('data', (data) => {
+                        if (this.options.listeners && this.options.listeners.stdout) {
+                            this.options.listeners.stdout(data);
+                        }
+                        if (!optionsNonNull.silent && optionsNonNull.outStream) {
+                            optionsNonNull.outStream.write(data);
+                        }
+                        stdbuffer = this._processLineBuffer(data, stdbuffer, (line) => {
+                            if (this.options.listeners && this.options.listeners.stdline) {
+                                this.options.listeners.stdline(line);
+                            }
+                        });
+                    });
+                }
+                let errbuffer = '';
+                if (cp.stderr) {
+                    cp.stderr.on('data', (data) => {
+                        state.processStderr = true;
+                        if (this.options.listeners && this.options.listeners.stderr) {
+                            this.options.listeners.stderr(data);
+                        }
+                        if (!optionsNonNull.silent &&
+                            optionsNonNull.errStream &&
+                            optionsNonNull.outStream) {
+                            const s = optionsNonNull.failOnStdErr
+                                ? optionsNonNull.errStream
+                                : optionsNonNull.outStream;
+                            s.write(data);
+                        }
+                        errbuffer = this._processLineBuffer(data, errbuffer, (line) => {
+                            if (this.options.listeners && this.options.listeners.errline) {
+                                this.options.listeners.errline(line);
+                            }
+                        });
+                    });
+                }
+                cp.on('error', (err) => {
+                    state.processError = err.message;
+                    state.processExited = true;
+                    state.processClosed = true;
+                    state.CheckComplete();
+                });
+                cp.on('exit', (code) => {
+                    state.processExitCode = code;
+                    state.processExited = true;
+                    this._debug(`Exit code ${code} received from tool '${this.toolPath}'`);
+                    state.CheckComplete();
+                });
+                cp.on('close', (code) => {
+                    state.processExitCode = code;
+                    state.processExited = true;
+                    state.processClosed = true;
+                    this._debug(`STDIO streams have closed for tool '${this.toolPath}'`);
+                    state.CheckComplete();
+                });
+                state.on('done', (error, exitCode) => {
+                    if (stdbuffer.length > 0) {
+                        this.emit('stdline', stdbuffer);
+                    }
+                    if (errbuffer.length > 0) {
+                        this.emit('errline', errbuffer);
+                    }
+                    cp.removeAllListeners();
+                    if (error) {
+                        reject(error);
+                    }
+                    else {
+                        resolve(exitCode);
+                    }
+                });
+                if (this.options.input) {
+                    if (!cp.stdin) {
+                        throw new Error('child process missing stdin');
+                    }
+                    cp.stdin.end(this.options.input);
+                }
+            }));
+        });
+    }
+}
+exports.ToolRunner = ToolRunner;
+/**
+ * Convert an arg string to an array of args. Handles escaping
+ *
+ * @param    argString   string of arguments
+ * @returns  string[]    array of arguments
+ */
+function argStringToArray(argString) {
+    const args = [];
+    let inQuotes = false;
+    let escaped = false;
+    let arg = '';
+    function append(c) {
+        // we only escape double quotes.
+        if (escaped && c !== '"') {
+            arg += '\\';
+        }
+        arg += c;
+        escaped = false;
+    }
+    for (let i = 0; i < argString.length; i++) {
+        const c = argString.charAt(i);
+        if (c === '"') {
+            if (!escaped) {
+                inQuotes = !inQuotes;
+            }
+            else {
+                append(c);
+            }
+            continue;
+        }
+        if (c === '\\' && escaped) {
+            append(c);
+            continue;
+        }
+        if (c === '\\' && inQuotes) {
+            escaped = true;
+            continue;
+        }
+        if (c === ' ' && !inQuotes) {
+            if (arg.length > 0) {
+                args.push(arg);
+                arg = '';
+            }
+            continue;
+        }
+        append(c);
+    }
+    if (arg.length > 0) {
+        args.push(arg.trim());
+    }
+    return args;
+}
+exports.argStringToArray = argStringToArray;
+class ExecState extends events.EventEmitter {
+    constructor(options, toolPath) {
+        super();
+        this.processClosed = false; // tracks whether the process has exited and stdio is closed
+        this.processError = '';
+        this.processExitCode = 0;
+        this.processExited = false; // tracks whether the process has exited
+        this.processStderr = false; // tracks whether stderr was written to
+        this.delay = 10000; // 10 seconds
+        this.done = false;
+        this.timeout = null;
+        if (!toolPath) {
+            throw new Error('toolPath must not be empty');
+        }
+        this.options = options;
+        this.toolPath = toolPath;
+        if (options.delay) {
+            this.delay = options.delay;
+        }
+    }
+    CheckComplete() {
+        if (this.done) {
+            return;
+        }
+        if (this.processClosed) {
+            this._setResult();
+        }
+        else if (this.processExited) {
+            this.timeout = timers_1.setTimeout(ExecState.HandleTimeout, this.delay, this);
+        }
+    }
+    _debug(message) {
+        this.emit('debug', message);
+    }
+    _setResult() {
+        // determine whether there is an error
+        let error;
+        if (this.processExited) {
+            if (this.processError) {
+                error = new Error(`There was an error when attempting to execute the process '${this.toolPath}'. This may indicate the process failed to start. Error: ${this.processError}`);
+            }
+            else if (this.processExitCode !== 0 && !this.options.ignoreReturnCode) {
+                error = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
+            }
+            else if (this.processStderr && this.options.failOnStdErr) {
+                error = new Error(`The process '${this.toolPath}' failed because one or more lines were written to the STDERR stream`);
+            }
+        }
+        // clear the timeout
+        if (this.timeout) {
+            clearTimeout(this.timeout);
+            this.timeout = null;
+        }
+        this.done = true;
+        this.emit('done', error, this.processExitCode);
+    }
+    static HandleTimeout(state) {
+        if (state.done) {
+            return;
+        }
+        if (!state.processClosed && state.processExited) {
+            const message = `The STDIO streams did not close within ${state.delay /
+                1000} seconds of the exit event from process '${state.toolPath}'. This may indicate a child process inherited the STDIO streams and has not yet exited.`;
+            state._debug(message);
+        }
+        state._setResult();
+    }
+}
+//# sourceMappingURL=toolrunner.js.map
+
+/***/ }),
+
+/***/ 4087:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Context = void 0;
+const fs_1 = __nccwpck_require__(5747);
+const os_1 = __nccwpck_require__(2087);
+class Context {
+    /**
+     * Hydrate the context from the environment
+     */
+    constructor() {
+        var _a, _b, _c;
+        this.payload = {};
+        if (process.env.GITHUB_EVENT_PATH) {
+            if (fs_1.existsSync(process.env.GITHUB_EVENT_PATH)) {
+                this.payload = JSON.parse(fs_1.readFileSync(process.env.GITHUB_EVENT_PATH, { encoding: 'utf8' }));
+            }
+            else {
+                const path = process.env.GITHUB_EVENT_PATH;
+                process.stdout.write(`GITHUB_EVENT_PATH ${path} does not exist${os_1.EOL}`);
+            }
+        }
+        this.eventName = process.env.GITHUB_EVENT_NAME;
+        this.sha = process.env.GITHUB_SHA;
+        this.ref = process.env.GITHUB_REF;
+        this.workflow = process.env.GITHUB_WORKFLOW;
+        this.action = process.env.GITHUB_ACTION;
+        this.actor = process.env.GITHUB_ACTOR;
+        this.job = process.env.GITHUB_JOB;
+        this.runNumber = parseInt(process.env.GITHUB_RUN_NUMBER, 10);
+        this.runId = parseInt(process.env.GITHUB_RUN_ID, 10);
+        this.apiUrl = (_a = process.env.GITHUB_API_URL) !== null && _a !== void 0 ? _a : `https://api.github.com`;
+        this.serverUrl = (_b = process.env.GITHUB_SERVER_URL) !== null && _b !== void 0 ? _b : `https://github.com`;
+        this.graphqlUrl = (_c = process.env.GITHUB_GRAPHQL_URL) !== null && _c !== void 0 ? _c : `https://api.github.com/graphql`;
+    }
+    get issue() {
+        const payload = this.payload;
+        return Object.assign(Object.assign({}, this.repo), { number: (payload.issue || payload.pull_request || payload).number });
+    }
+    get repo() {
+        if (process.env.GITHUB_REPOSITORY) {
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            return { owner, repo };
+        }
+        if (this.payload.repository) {
+            return {
+                owner: this.payload.repository.owner.login,
+                repo: this.payload.repository.name
+            };
+        }
+        throw new Error("context.repo requires a GITHUB_REPOSITORY environment variable like 'owner/repo'");
+    }
+}
+exports.Context = Context;
+//# sourceMappingURL=context.js.map
+
+/***/ }),
+
+/***/ 5438:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getOctokit = exports.context = void 0;
+const Context = __importStar(__nccwpck_require__(4087));
+const utils_1 = __nccwpck_require__(3030);
+exports.context = new Context.Context();
+/**
+ * Returns a hydrated octokit ready to use for GitHub Actions
+ *
+ * @param     token    the repo PAT or GITHUB_TOKEN
+ * @param     options  other options to set
+ */
+function getOctokit(token, options) {
+    return new utils_1.GitHub(utils_1.getOctokitOptions(token, options));
+}
+exports.getOctokit = getOctokit;
+//# sourceMappingURL=github.js.map
+
+/***/ }),
+
+/***/ 7914:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getApiBaseUrl = exports.getProxyAgent = exports.getAuthString = void 0;
+const httpClient = __importStar(__nccwpck_require__(9925));
+function getAuthString(token, options) {
+    if (!token && !options.auth) {
+        throw new Error('Parameter token or opts.auth is required');
+    }
+    else if (token && options.auth) {
+        throw new Error('Parameters token and opts.auth may not both be specified');
+    }
+    return typeof options.auth === 'string' ? options.auth : `token ${token}`;
+}
+exports.getAuthString = getAuthString;
+function getProxyAgent(destinationUrl) {
+    const hc = new httpClient.HttpClient();
+    return hc.getAgent(destinationUrl);
+}
+exports.getProxyAgent = getProxyAgent;
+function getApiBaseUrl() {
+    return process.env['GITHUB_API_URL'] || 'https://api.github.com';
+}
+exports.getApiBaseUrl = getApiBaseUrl;
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 3030:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getOctokitOptions = exports.GitHub = exports.context = void 0;
+const Context = __importStar(__nccwpck_require__(4087));
+const Utils = __importStar(__nccwpck_require__(7914));
+// octokit + plugins
+const core_1 = __nccwpck_require__(6762);
+const plugin_rest_endpoint_methods_1 = __nccwpck_require__(3044);
+const plugin_paginate_rest_1 = __nccwpck_require__(4193);
+exports.context = new Context.Context();
+const baseUrl = Utils.getApiBaseUrl();
+const defaults = {
+    baseUrl,
+    request: {
+        agent: Utils.getProxyAgent(baseUrl)
+    }
+};
+exports.GitHub = core_1.Octokit.plugin(plugin_rest_endpoint_methods_1.restEndpointMethods, plugin_paginate_rest_1.paginateRest).defaults(defaults);
+/**
+ * Convience function to correctly format Octokit Options to pass into the constructor.
+ *
+ * @param     token    the repo PAT or GITHUB_TOKEN
+ * @param     options  other options to set
+ */
+function getOctokitOptions(token, options) {
+    const opts = Object.assign({}, options || {}); // Shallow clone - don't mutate the object provided by the caller
+    // Auth
+    const auth = Utils.getAuthString(token, opts);
+    if (auth) {
+        opts.auth = auth;
+    }
+    return opts;
+}
+exports.getOctokitOptions = getOctokitOptions;
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 9925:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const http = __nccwpck_require__(8605);
+const https = __nccwpck_require__(7211);
+const pm = __nccwpck_require__(6443);
+let tunnel;
+var HttpCodes;
+(function (HttpCodes) {
+    HttpCodes[HttpCodes["OK"] = 200] = "OK";
+    HttpCodes[HttpCodes["MultipleChoices"] = 300] = "MultipleChoices";
+    HttpCodes[HttpCodes["MovedPermanently"] = 301] = "MovedPermanently";
+    HttpCodes[HttpCodes["ResourceMoved"] = 302] = "ResourceMoved";
+    HttpCodes[HttpCodes["SeeOther"] = 303] = "SeeOther";
+    HttpCodes[HttpCodes["NotModified"] = 304] = "NotModified";
+    HttpCodes[HttpCodes["UseProxy"] = 305] = "UseProxy";
+    HttpCodes[HttpCodes["SwitchProxy"] = 306] = "SwitchProxy";
+    HttpCodes[HttpCodes["TemporaryRedirect"] = 307] = "TemporaryRedirect";
+    HttpCodes[HttpCodes["PermanentRedirect"] = 308] = "PermanentRedirect";
+    HttpCodes[HttpCodes["BadRequest"] = 400] = "BadRequest";
+    HttpCodes[HttpCodes["Unauthorized"] = 401] = "Unauthorized";
+    HttpCodes[HttpCodes["PaymentRequired"] = 402] = "PaymentRequired";
+    HttpCodes[HttpCodes["Forbidden"] = 403] = "Forbidden";
+    HttpCodes[HttpCodes["NotFound"] = 404] = "NotFound";
+    HttpCodes[HttpCodes["MethodNotAllowed"] = 405] = "MethodNotAllowed";
+    HttpCodes[HttpCodes["NotAcceptable"] = 406] = "NotAcceptable";
+    HttpCodes[HttpCodes["ProxyAuthenticationRequired"] = 407] = "ProxyAuthenticationRequired";
+    HttpCodes[HttpCodes["RequestTimeout"] = 408] = "RequestTimeout";
+    HttpCodes[HttpCodes["Conflict"] = 409] = "Conflict";
+    HttpCodes[HttpCodes["Gone"] = 410] = "Gone";
+    HttpCodes[HttpCodes["TooManyRequests"] = 429] = "TooManyRequests";
+    HttpCodes[HttpCodes["InternalServerError"] = 500] = "InternalServerError";
+    HttpCodes[HttpCodes["NotImplemented"] = 501] = "NotImplemented";
+    HttpCodes[HttpCodes["BadGateway"] = 502] = "BadGateway";
+    HttpCodes[HttpCodes["ServiceUnavailable"] = 503] = "ServiceUnavailable";
+    HttpCodes[HttpCodes["GatewayTimeout"] = 504] = "GatewayTimeout";
+})(HttpCodes = exports.HttpCodes || (exports.HttpCodes = {}));
+var Headers;
+(function (Headers) {
+    Headers["Accept"] = "accept";
+    Headers["ContentType"] = "content-type";
+})(Headers = exports.Headers || (exports.Headers = {}));
+var MediaTypes;
+(function (MediaTypes) {
+    MediaTypes["ApplicationJson"] = "application/json";
+})(MediaTypes = exports.MediaTypes || (exports.MediaTypes = {}));
+/**
+ * Returns the proxy URL, depending upon the supplied url and proxy environment variables.
+ * @param serverUrl  The server URL where the request will be sent. For example, https://api.github.com
+ */
+function getProxyUrl(serverUrl) {
+    let proxyUrl = pm.getProxyUrl(new URL(serverUrl));
+    return proxyUrl ? proxyUrl.href : '';
+}
+exports.getProxyUrl = getProxyUrl;
+const HttpRedirectCodes = [
+    HttpCodes.MovedPermanently,
+    HttpCodes.ResourceMoved,
+    HttpCodes.SeeOther,
+    HttpCodes.TemporaryRedirect,
+    HttpCodes.PermanentRedirect
+];
+const HttpResponseRetryCodes = [
+    HttpCodes.BadGateway,
+    HttpCodes.ServiceUnavailable,
+    HttpCodes.GatewayTimeout
+];
+const RetryableHttpVerbs = ['OPTIONS', 'GET', 'DELETE', 'HEAD'];
+const ExponentialBackoffCeiling = 10;
+const ExponentialBackoffTimeSlice = 5;
+class HttpClientError extends Error {
+    constructor(message, statusCode) {
+        super(message);
+        this.name = 'HttpClientError';
+        this.statusCode = statusCode;
+        Object.setPrototypeOf(this, HttpClientError.prototype);
+    }
+}
+exports.HttpClientError = HttpClientError;
+class HttpClientResponse {
+    constructor(message) {
+        this.message = message;
+    }
+    readBody() {
+        return new Promise(async (resolve, reject) => {
+            let output = Buffer.alloc(0);
+            this.message.on('data', (chunk) => {
+                output = Buffer.concat([output, chunk]);
+            });
+            this.message.on('end', () => {
+                resolve(output.toString());
+            });
+        });
+    }
+}
+exports.HttpClientResponse = HttpClientResponse;
+function isHttps(requestUrl) {
+    let parsedUrl = new URL(requestUrl);
+    return parsedUrl.protocol === 'https:';
+}
+exports.isHttps = isHttps;
+class HttpClient {
+    constructor(userAgent, handlers, requestOptions) {
+        this._ignoreSslError = false;
+        this._allowRedirects = true;
+        this._allowRedirectDowngrade = false;
+        this._maxRedirects = 50;
+        this._allowRetries = false;
+        this._maxRetries = 1;
+        this._keepAlive = false;
+        this._disposed = false;
+        this.userAgent = userAgent;
+        this.handlers = handlers || [];
+        this.requestOptions = requestOptions;
+        if (requestOptions) {
+            if (requestOptions.ignoreSslError != null) {
+                this._ignoreSslError = requestOptions.ignoreSslError;
+            }
+            this._socketTimeout = requestOptions.socketTimeout;
+            if (requestOptions.allowRedirects != null) {
+                this._allowRedirects = requestOptions.allowRedirects;
+            }
+            if (requestOptions.allowRedirectDowngrade != null) {
+                this._allowRedirectDowngrade = requestOptions.allowRedirectDowngrade;
+            }
+            if (requestOptions.maxRedirects != null) {
+                this._maxRedirects = Math.max(requestOptions.maxRedirects, 0);
+            }
+            if (requestOptions.keepAlive != null) {
+                this._keepAlive = requestOptions.keepAlive;
+            }
+            if (requestOptions.allowRetries != null) {
+                this._allowRetries = requestOptions.allowRetries;
+            }
+            if (requestOptions.maxRetries != null) {
+                this._maxRetries = requestOptions.maxRetries;
+            }
+        }
+    }
+    options(requestUrl, additionalHeaders) {
+        return this.request('OPTIONS', requestUrl, null, additionalHeaders || {});
+    }
+    get(requestUrl, additionalHeaders) {
+        return this.request('GET', requestUrl, null, additionalHeaders || {});
+    }
+    del(requestUrl, additionalHeaders) {
+        return this.request('DELETE', requestUrl, null, additionalHeaders || {});
+    }
+    post(requestUrl, data, additionalHeaders) {
+        return this.request('POST', requestUrl, data, additionalHeaders || {});
+    }
+    patch(requestUrl, data, additionalHeaders) {
+        return this.request('PATCH', requestUrl, data, additionalHeaders || {});
+    }
+    put(requestUrl, data, additionalHeaders) {
+        return this.request('PUT', requestUrl, data, additionalHeaders || {});
+    }
+    head(requestUrl, additionalHeaders) {
+        return this.request('HEAD', requestUrl, null, additionalHeaders || {});
+    }
+    sendStream(verb, requestUrl, stream, additionalHeaders) {
+        return this.request(verb, requestUrl, stream, additionalHeaders);
+    }
+    /**
+     * Gets a typed object from an endpoint
+     * Be aware that not found returns a null.  Other errors (4xx, 5xx) reject the promise
+     */
+    async getJson(requestUrl, additionalHeaders = {}) {
+        additionalHeaders[Headers.Accept] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.Accept, MediaTypes.ApplicationJson);
+        let res = await this.get(requestUrl, additionalHeaders);
+        return this._processResponse(res, this.requestOptions);
+    }
+    async postJson(requestUrl, obj, additionalHeaders = {}) {
+        let data = JSON.stringify(obj, null, 2);
+        additionalHeaders[Headers.Accept] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.Accept, MediaTypes.ApplicationJson);
+        additionalHeaders[Headers.ContentType] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.ContentType, MediaTypes.ApplicationJson);
+        let res = await this.post(requestUrl, data, additionalHeaders);
+        return this._processResponse(res, this.requestOptions);
+    }
+    async putJson(requestUrl, obj, additionalHeaders = {}) {
+        let data = JSON.stringify(obj, null, 2);
+        additionalHeaders[Headers.Accept] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.Accept, MediaTypes.ApplicationJson);
+        additionalHeaders[Headers.ContentType] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.ContentType, MediaTypes.ApplicationJson);
+        let res = await this.put(requestUrl, data, additionalHeaders);
+        return this._processResponse(res, this.requestOptions);
+    }
+    async patchJson(requestUrl, obj, additionalHeaders = {}) {
+        let data = JSON.stringify(obj, null, 2);
+        additionalHeaders[Headers.Accept] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.Accept, MediaTypes.ApplicationJson);
+        additionalHeaders[Headers.ContentType] = this._getExistingOrDefaultHeader(additionalHeaders, Headers.ContentType, MediaTypes.ApplicationJson);
+        let res = await this.patch(requestUrl, data, additionalHeaders);
+        return this._processResponse(res, this.requestOptions);
+    }
+    /**
+     * Makes a raw http request.
+     * All other methods such as get, post, patch, and request ultimately call this.
+     * Prefer get, del, post and patch
+     */
+    async request(verb, requestUrl, data, headers) {
+        if (this._disposed) {
+            throw new Error('Client has already been disposed.');
+        }
+        let parsedUrl = new URL(requestUrl);
+        let info = this._prepareRequest(verb, parsedUrl, headers);
+        // Only perform retries on reads since writes may not be idempotent.
+        let maxTries = this._allowRetries && RetryableHttpVerbs.indexOf(verb) != -1
+            ? this._maxRetries + 1
+            : 1;
+        let numTries = 0;
+        let response;
+        while (numTries < maxTries) {
+            response = await this.requestRaw(info, data);
+            // Check if it's an authentication challenge
+            if (response &&
+                response.message &&
+                response.message.statusCode === HttpCodes.Unauthorized) {
+                let authenticationHandler;
+                for (let i = 0; i < this.handlers.length; i++) {
+                    if (this.handlers[i].canHandleAuthentication(response)) {
+                        authenticationHandler = this.handlers[i];
+                        break;
+                    }
+                }
+                if (authenticationHandler) {
+                    return authenticationHandler.handleAuthentication(this, info, data);
+                }
+                else {
+                    // We have received an unauthorized response but have no handlers to handle it.
+                    // Let the response return to the caller.
+                    return response;
+                }
+            }
+            let redirectsRemaining = this._maxRedirects;
+            while (HttpRedirectCodes.indexOf(response.message.statusCode) != -1 &&
+                this._allowRedirects &&
+                redirectsRemaining > 0) {
+                const redirectUrl = response.message.headers['location'];
+                if (!redirectUrl) {
+                    // if there's no location to redirect to, we won't
+                    break;
+                }
+                let parsedRedirectUrl = new URL(redirectUrl);
+                if (parsedUrl.protocol == 'https:' &&
+                    parsedUrl.protocol != parsedRedirectUrl.protocol &&
+                    !this._allowRedirectDowngrade) {
+                    throw new Error('Redirect from HTTPS to HTTP protocol. This downgrade is not allowed for security reasons. If you want to allow this behavior, set the allowRedirectDowngrade option to true.');
+                }
+                // we need to finish reading the response before reassigning response
+                // which will leak the open socket.
+                await response.readBody();
+                // strip authorization header if redirected to a different hostname
+                if (parsedRedirectUrl.hostname !== parsedUrl.hostname) {
+                    for (let header in headers) {
+                        // header names are case insensitive
+                        if (header.toLowerCase() === 'authorization') {
+                            delete headers[header];
+                        }
+                    }
+                }
+                // let's make the request with the new redirectUrl
+                info = this._prepareRequest(verb, parsedRedirectUrl, headers);
+                response = await this.requestRaw(info, data);
+                redirectsRemaining--;
+            }
+            if (HttpResponseRetryCodes.indexOf(response.message.statusCode) == -1) {
+                // If not a retry code, return immediately instead of retrying
+                return response;
+            }
+            numTries += 1;
+            if (numTries < maxTries) {
+                await response.readBody();
+                await this._performExponentialBackoff(numTries);
+            }
+        }
+        return response;
+    }
+    /**
+     * Needs to be called if keepAlive is set to true in request options.
+     */
+    dispose() {
+        if (this._agent) {
+            this._agent.destroy();
+        }
+        this._disposed = true;
+    }
+    /**
+     * Raw request.
+     * @param info
+     * @param data
+     */
+    requestRaw(info, data) {
+        return new Promise((resolve, reject) => {
+            let callbackForResult = function (err, res) {
+                if (err) {
+                    reject(err);
+                }
+                resolve(res);
+            };
+            this.requestRawWithCallback(info, data, callbackForResult);
+        });
+    }
+    /**
+     * Raw request with callback.
+     * @param info
+     * @param data
+     * @param onResult
+     */
+    requestRawWithCallback(info, data, onResult) {
+        let socket;
+        if (typeof data === 'string') {
+            info.options.headers['Content-Length'] = Buffer.byteLength(data, 'utf8');
+        }
+        let callbackCalled = false;
+        let handleResult = (err, res) => {
+            if (!callbackCalled) {
+                callbackCalled = true;
+                onResult(err, res);
+            }
+        };
+        let req = info.httpModule.request(info.options, (msg) => {
+            let res = new HttpClientResponse(msg);
+            handleResult(null, res);
+        });
+        req.on('socket', sock => {
+            socket = sock;
+        });
+        // If we ever get disconnected, we want the socket to timeout eventually
+        req.setTimeout(this._socketTimeout || 3 * 60000, () => {
+            if (socket) {
+                socket.end();
+            }
+            handleResult(new Error('Request timeout: ' + info.options.path), null);
+        });
+        req.on('error', function (err) {
+            // err has statusCode property
+            // res should have headers
+            handleResult(err, null);
+        });
+        if (data && typeof data === 'string') {
+            req.write(data, 'utf8');
+        }
+        if (data && typeof data !== 'string') {
+            data.on('close', function () {
+                req.end();
+            });
+            data.pipe(req);
+        }
+        else {
+            req.end();
+        }
+    }
+    /**
+     * Gets an http agent. This function is useful when you need an http agent that handles
+     * routing through a proxy server - depending upon the url and proxy environment variables.
+     * @param serverUrl  The server URL where the request will be sent. For example, https://api.github.com
+     */
+    getAgent(serverUrl) {
+        let parsedUrl = new URL(serverUrl);
+        return this._getAgent(parsedUrl);
+    }
+    _prepareRequest(method, requestUrl, headers) {
+        const info = {};
+        info.parsedUrl = requestUrl;
+        const usingSsl = info.parsedUrl.protocol === 'https:';
+        info.httpModule = usingSsl ? https : http;
+        const defaultPort = usingSsl ? 443 : 80;
+        info.options = {};
+        info.options.host = info.parsedUrl.hostname;
+        info.options.port = info.parsedUrl.port
+            ? parseInt(info.parsedUrl.port)
+            : defaultPort;
+        info.options.path =
+            (info.parsedUrl.pathname || '') + (info.parsedUrl.search || '');
+        info.options.method = method;
+        info.options.headers = this._mergeHeaders(headers);
+        if (this.userAgent != null) {
+            info.options.headers['user-agent'] = this.userAgent;
+        }
+        info.options.agent = this._getAgent(info.parsedUrl);
+        // gives handlers an opportunity to participate
+        if (this.handlers) {
+            this.handlers.forEach(handler => {
+                handler.prepareRequest(info.options);
+            });
+        }
+        return info;
+    }
+    _mergeHeaders(headers) {
+        const lowercaseKeys = obj => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCase()] = obj[k]), c), {});
+        if (this.requestOptions && this.requestOptions.headers) {
+            return Object.assign({}, lowercaseKeys(this.requestOptions.headers), lowercaseKeys(headers));
+        }
+        return lowercaseKeys(headers || {});
+    }
+    _getExistingOrDefaultHeader(additionalHeaders, header, _default) {
+        const lowercaseKeys = obj => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCase()] = obj[k]), c), {});
+        let clientHeader;
+        if (this.requestOptions && this.requestOptions.headers) {
+            clientHeader = lowercaseKeys(this.requestOptions.headers)[header];
+        }
+        return additionalHeaders[header] || clientHeader || _default;
+    }
+    _getAgent(parsedUrl) {
+        let agent;
+        let proxyUrl = pm.getProxyUrl(parsedUrl);
+        let useProxy = proxyUrl && proxyUrl.hostname;
+        if (this._keepAlive && useProxy) {
+            agent = this._proxyAgent;
+        }
+        if (this._keepAlive && !useProxy) {
+            agent = this._agent;
+        }
+        // if agent is already assigned use that agent.
+        if (!!agent) {
+            return agent;
+        }
+        const usingSsl = parsedUrl.protocol === 'https:';
+        let maxSockets = 100;
+        if (!!this.requestOptions) {
+            maxSockets = this.requestOptions.maxSockets || http.globalAgent.maxSockets;
+        }
+        if (useProxy) {
+            // If using proxy, need tunnel
+            if (!tunnel) {
+                tunnel = __nccwpck_require__(4294);
+            }
+            const agentOptions = {
+                maxSockets: maxSockets,
+                keepAlive: this._keepAlive,
+                proxy: {
+                    ...((proxyUrl.username || proxyUrl.password) && {
+                        proxyAuth: `${proxyUrl.username}:${proxyUrl.password}`
+                    }),
+                    host: proxyUrl.hostname,
+                    port: proxyUrl.port
+                }
+            };
+            let tunnelAgent;
+            const overHttps = proxyUrl.protocol === 'https:';
+            if (usingSsl) {
+                tunnelAgent = overHttps ? tunnel.httpsOverHttps : tunnel.httpsOverHttp;
+            }
+            else {
+                tunnelAgent = overHttps ? tunnel.httpOverHttps : tunnel.httpOverHttp;
+            }
+            agent = tunnelAgent(agentOptions);
+            this._proxyAgent = agent;
+        }
+        // if reusing agent across request and tunneling agent isn't assigned create a new agent
+        if (this._keepAlive && !agent) {
+            const options = { keepAlive: this._keepAlive, maxSockets: maxSockets };
+            agent = usingSsl ? new https.Agent(options) : new http.Agent(options);
+            this._agent = agent;
+        }
+        // if not using private agent and tunnel agent isn't setup then use global agent
+        if (!agent) {
+            agent = usingSsl ? https.globalAgent : http.globalAgent;
+        }
+        if (usingSsl && this._ignoreSslError) {
+            // we don't want to set NODE_TLS_REJECT_UNAUTHORIZED=0 since that will affect request for entire process
+            // http.RequestOptions doesn't expose a way to modify RequestOptions.agent.options
+            // we have to cast it to any and change it directly
+            agent.options = Object.assign(agent.options || {}, {
+                rejectUnauthorized: false
+            });
+        }
+        return agent;
+    }
+    _performExponentialBackoff(retryNumber) {
+        retryNumber = Math.min(ExponentialBackoffCeiling, retryNumber);
+        const ms = ExponentialBackoffTimeSlice * Math.pow(2, retryNumber);
+        return new Promise(resolve => setTimeout(() => resolve(), ms));
+    }
+    static dateTimeDeserializer(key, value) {
+        if (typeof value === 'string') {
+            let a = new Date(value);
+            if (!isNaN(a.valueOf())) {
+                return a;
+            }
+        }
+        return value;
+    }
+    async _processResponse(res, options) {
+        return new Promise(async (resolve, reject) => {
+            const statusCode = res.message.statusCode;
+            const response = {
+                statusCode: statusCode,
+                result: null,
+                headers: {}
+            };
+            // not found leads to null obj returned
+            if (statusCode == HttpCodes.NotFound) {
+                resolve(response);
+            }
+            let obj;
+            let contents;
+            // get the result from the body
+            try {
+                contents = await res.readBody();
+                if (contents && contents.length > 0) {
+                    if (options && options.deserializeDates) {
+                        obj = JSON.parse(contents, HttpClient.dateTimeDeserializer);
+                    }
+                    else {
+                        obj = JSON.parse(contents);
+                    }
+                    response.result = obj;
+                }
+                response.headers = res.message.headers;
+            }
+            catch (err) {
+                // Invalid resource (contents not json);  leaving result obj null
+            }
+            // note that 3xx redirects are handled by the http layer.
+            if (statusCode > 299) {
+                let msg;
+                // if exception/error in body, attempt to get better error
+                if (obj && obj.message) {
+                    msg = obj.message;
+                }
+                else if (contents && contents.length > 0) {
+                    // it may be the case that the exception is in the body message as string
+                    msg = contents;
+                }
+                else {
+                    msg = 'Failed request: (' + statusCode + ')';
+                }
+                let err = new HttpClientError(msg, statusCode);
+                err.result = response.result;
+                reject(err);
+            }
+            else {
+                resolve(response);
+            }
+        });
+    }
+}
+exports.HttpClient = HttpClient;
+
+
+/***/ }),
+
+/***/ 6443:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function getProxyUrl(reqUrl) {
+    let usingSsl = reqUrl.protocol === 'https:';
+    let proxyUrl;
+    if (checkBypass(reqUrl)) {
+        return proxyUrl;
+    }
+    let proxyVar;
+    if (usingSsl) {
+        proxyVar = process.env['https_proxy'] || process.env['HTTPS_PROXY'];
+    }
+    else {
+        proxyVar = process.env['http_proxy'] || process.env['HTTP_PROXY'];
+    }
+    if (proxyVar) {
+        proxyUrl = new URL(proxyVar);
+    }
+    return proxyUrl;
+}
+exports.getProxyUrl = getProxyUrl;
+function checkBypass(reqUrl) {
+    if (!reqUrl.hostname) {
+        return false;
+    }
+    let noProxy = process.env['no_proxy'] || process.env['NO_PROXY'] || '';
+    if (!noProxy) {
+        return false;
+    }
+    // Determine the request port
+    let reqPort;
+    if (reqUrl.port) {
+        reqPort = Number(reqUrl.port);
+    }
+    else if (reqUrl.protocol === 'http:') {
+        reqPort = 80;
+    }
+    else if (reqUrl.protocol === 'https:') {
+        reqPort = 443;
+    }
+    // Format the request hostname and hostname with port
+    let upperReqHosts = [reqUrl.hostname.toUpperCase()];
+    if (typeof reqPort === 'number') {
+        upperReqHosts.push(`${upperReqHosts[0]}:${reqPort}`);
+    }
+    // Compare request host against noproxy
+    for (let upperNoProxyItem of noProxy
+        .split(',')
+        .map(x => x.trim().toUpperCase())
+        .filter(x => x)) {
+        if (upperReqHosts.some(x => x === upperNoProxyItem)) {
+            return true;
+        }
+    }
+    return false;
+}
+exports.checkBypass = checkBypass;
+
+
+/***/ }),
+
+/***/ 1962:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const assert_1 = __nccwpck_require__(2357);
+const fs = __nccwpck_require__(5747);
+const path = __nccwpck_require__(5622);
+_a = fs.promises, exports.chmod = _a.chmod, exports.copyFile = _a.copyFile, exports.lstat = _a.lstat, exports.mkdir = _a.mkdir, exports.readdir = _a.readdir, exports.readlink = _a.readlink, exports.rename = _a.rename, exports.rmdir = _a.rmdir, exports.stat = _a.stat, exports.symlink = _a.symlink, exports.unlink = _a.unlink;
+exports.IS_WINDOWS = process.platform === 'win32';
+function exists(fsPath) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield exports.stat(fsPath);
+        }
+        catch (err) {
+            if (err.code === 'ENOENT') {
+                return false;
+            }
+            throw err;
+        }
+        return true;
+    });
+}
+exports.exists = exists;
+function isDirectory(fsPath, useStat = false) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const stats = useStat ? yield exports.stat(fsPath) : yield exports.lstat(fsPath);
+        return stats.isDirectory();
+    });
+}
+exports.isDirectory = isDirectory;
+/**
+ * On OSX/Linux, true if path starts with '/'. On Windows, true for paths like:
+ * \, \hello, \\hello\share, C:, and C:\hello (and corresponding alternate separator cases).
+ */
+function isRooted(p) {
+    p = normalizeSeparators(p);
+    if (!p) {
+        throw new Error('isRooted() parameter "p" cannot be empty');
+    }
+    if (exports.IS_WINDOWS) {
+        return (p.startsWith('\\') || /^[A-Z]:/i.test(p) // e.g. \ or \hello or \\hello
+        ); // e.g. C: or C:\hello
+    }
+    return p.startsWith('/');
+}
+exports.isRooted = isRooted;
+/**
+ * Recursively create a directory at `fsPath`.
+ *
+ * This implementation is optimistic, meaning it attempts to create the full
+ * path first, and backs up the path stack from there.
+ *
+ * @param fsPath The path to create
+ * @param maxDepth The maximum recursion depth
+ * @param depth The current recursion depth
+ */
+function mkdirP(fsPath, maxDepth = 1000, depth = 1) {
+    return __awaiter(this, void 0, void 0, function* () {
+        assert_1.ok(fsPath, 'a path argument must be provided');
+        fsPath = path.resolve(fsPath);
+        if (depth >= maxDepth)
+            return exports.mkdir(fsPath);
+        try {
+            yield exports.mkdir(fsPath);
+            return;
+        }
+        catch (err) {
+            switch (err.code) {
+                case 'ENOENT': {
+                    yield mkdirP(path.dirname(fsPath), maxDepth, depth + 1);
+                    yield exports.mkdir(fsPath);
+                    return;
+                }
+                default: {
+                    let stats;
+                    try {
+                        stats = yield exports.stat(fsPath);
+                    }
+                    catch (err2) {
+                        throw err;
+                    }
+                    if (!stats.isDirectory())
+                        throw err;
+                }
+            }
+        }
+    });
+}
+exports.mkdirP = mkdirP;
+/**
+ * Best effort attempt to determine whether a file exists and is executable.
+ * @param filePath    file path to check
+ * @param extensions  additional file extensions to try
+ * @return if file exists and is executable, returns the file path. otherwise empty string.
+ */
+function tryGetExecutablePath(filePath, extensions) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let stats = undefined;
+        try {
+            // test file exists
+            stats = yield exports.stat(filePath);
+        }
+        catch (err) {
+            if (err.code !== 'ENOENT') {
+                // eslint-disable-next-line no-console
+                console.log(`Unexpected error attempting to determine if executable file exists '${filePath}': ${err}`);
+            }
+        }
+        if (stats && stats.isFile()) {
+            if (exports.IS_WINDOWS) {
+                // on Windows, test for valid extension
+                const upperExt = path.extname(filePath).toUpperCase();
+                if (extensions.some(validExt => validExt.toUpperCase() === upperExt)) {
+                    return filePath;
+                }
+            }
+            else {
+                if (isUnixExecutable(stats)) {
+                    return filePath;
+                }
+            }
+        }
+        // try each extension
+        const originalFilePath = filePath;
+        for (const extension of extensions) {
+            filePath = originalFilePath + extension;
+            stats = undefined;
+            try {
+                stats = yield exports.stat(filePath);
+            }
+            catch (err) {
+                if (err.code !== 'ENOENT') {
+                    // eslint-disable-next-line no-console
+                    console.log(`Unexpected error attempting to determine if executable file exists '${filePath}': ${err}`);
+                }
+            }
+            if (stats && stats.isFile()) {
+                if (exports.IS_WINDOWS) {
+                    // preserve the case of the actual file (since an extension was appended)
+                    try {
+                        const directory = path.dirname(filePath);
+                        const upperName = path.basename(filePath).toUpperCase();
+                        for (const actualName of yield exports.readdir(directory)) {
+                            if (upperName === actualName.toUpperCase()) {
+                                filePath = path.join(directory, actualName);
+                                break;
+                            }
+                        }
+                    }
+                    catch (err) {
+                        // eslint-disable-next-line no-console
+                        console.log(`Unexpected error attempting to determine the actual case of the file '${filePath}': ${err}`);
+                    }
+                    return filePath;
+                }
+                else {
+                    if (isUnixExecutable(stats)) {
+                        return filePath;
+                    }
+                }
+            }
+        }
+        return '';
+    });
+}
+exports.tryGetExecutablePath = tryGetExecutablePath;
+function normalizeSeparators(p) {
+    p = p || '';
+    if (exports.IS_WINDOWS) {
+        // convert slashes on Windows
+        p = p.replace(/\//g, '\\');
+        // remove redundant slashes
+        return p.replace(/\\\\+/g, '\\');
+    }
+    // remove redundant slashes
+    return p.replace(/\/\/+/g, '/');
+}
+// on Mac/Linux, test the execute bit
+//     R   W  X  R  W X R W X
+//   256 128 64 32 16 8 4 2 1
+function isUnixExecutable(stats) {
+    return ((stats.mode & 1) > 0 ||
+        ((stats.mode & 8) > 0 && stats.gid === process.getgid()) ||
+        ((stats.mode & 64) > 0 && stats.uid === process.getuid()));
+}
+//# sourceMappingURL=io-util.js.map
+
+/***/ }),
+
+/***/ 7351:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const childProcess = __nccwpck_require__(3129);
+const path = __nccwpck_require__(5622);
+const util_1 = __nccwpck_require__(1669);
+const ioUtil = __nccwpck_require__(1962);
+const exec = util_1.promisify(childProcess.exec);
+/**
+ * Copies a file or folder.
+ * Based off of shelljs - https://github.com/shelljs/shelljs/blob/9237f66c52e5daa40458f94f9565e18e8132f5a6/src/cp.js
+ *
+ * @param     source    source path
+ * @param     dest      destination path
+ * @param     options   optional. See CopyOptions.
+ */
+function cp(source, dest, options = {}) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const { force, recursive } = readCopyOptions(options);
+        const destStat = (yield ioUtil.exists(dest)) ? yield ioUtil.stat(dest) : null;
+        // Dest is an existing file, but not forcing
+        if (destStat && destStat.isFile() && !force) {
+            return;
+        }
+        // If dest is an existing directory, should copy inside.
+        const newDest = destStat && destStat.isDirectory()
+            ? path.join(dest, path.basename(source))
+            : dest;
+        if (!(yield ioUtil.exists(source))) {
+            throw new Error(`no such file or directory: ${source}`);
+        }
+        const sourceStat = yield ioUtil.stat(source);
+        if (sourceStat.isDirectory()) {
+            if (!recursive) {
+                throw new Error(`Failed to copy. ${source} is a directory, but tried to copy without recursive flag.`);
+            }
+            else {
+                yield cpDirRecursive(source, newDest, 0, force);
+            }
+        }
+        else {
+            if (path.relative(source, newDest) === '') {
+                // a file cannot be copied to itself
+                throw new Error(`'${newDest}' and '${source}' are the same file`);
+            }
+            yield copyFile(source, newDest, force);
+        }
+    });
+}
+exports.cp = cp;
+/**
+ * Moves a path.
+ *
+ * @param     source    source path
+ * @param     dest      destination path
+ * @param     options   optional. See MoveOptions.
+ */
+function mv(source, dest, options = {}) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (yield ioUtil.exists(dest)) {
+            let destExists = true;
+            if (yield ioUtil.isDirectory(dest)) {
+                // If dest is directory copy src into dest
+                dest = path.join(dest, path.basename(source));
+                destExists = yield ioUtil.exists(dest);
+            }
+            if (destExists) {
+                if (options.force == null || options.force) {
+                    yield rmRF(dest);
+                }
+                else {
+                    throw new Error('Destination already exists');
+                }
+            }
+        }
+        yield mkdirP(path.dirname(dest));
+        yield ioUtil.rename(source, dest);
+    });
+}
+exports.mv = mv;
+/**
+ * Remove a path recursively with force
+ *
+ * @param inputPath path to remove
+ */
+function rmRF(inputPath) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (ioUtil.IS_WINDOWS) {
+            // Node doesn't provide a delete operation, only an unlink function. This means that if the file is being used by another
+            // program (e.g. antivirus), it won't be deleted. To address this, we shell out the work to rd/del.
+            try {
+                if (yield ioUtil.isDirectory(inputPath, true)) {
+                    yield exec(`rd /s /q "${inputPath}"`);
+                }
+                else {
+                    yield exec(`del /f /a "${inputPath}"`);
+                }
+            }
+            catch (err) {
+                // if you try to delete a file that doesn't exist, desired result is achieved
+                // other errors are valid
+                if (err.code !== 'ENOENT')
+                    throw err;
+            }
+            // Shelling out fails to remove a symlink folder with missing source, this unlink catches that
+            try {
+                yield ioUtil.unlink(inputPath);
+            }
+            catch (err) {
+                // if you try to delete a file that doesn't exist, desired result is achieved
+                // other errors are valid
+                if (err.code !== 'ENOENT')
+                    throw err;
+            }
+        }
+        else {
+            let isDir = false;
+            try {
+                isDir = yield ioUtil.isDirectory(inputPath);
+            }
+            catch (err) {
+                // if you try to delete a file that doesn't exist, desired result is achieved
+                // other errors are valid
+                if (err.code !== 'ENOENT')
+                    throw err;
+                return;
+            }
+            if (isDir) {
+                yield exec(`rm -rf "${inputPath}"`);
+            }
+            else {
+                yield ioUtil.unlink(inputPath);
+            }
+        }
+    });
+}
+exports.rmRF = rmRF;
+/**
+ * Make a directory.  Creates the full path with folders in between
+ * Will throw if it fails
+ *
+ * @param   fsPath        path to create
+ * @returns Promise<void>
+ */
+function mkdirP(fsPath) {
+    return __awaiter(this, void 0, void 0, function* () {
+        yield ioUtil.mkdirP(fsPath);
+    });
+}
+exports.mkdirP = mkdirP;
+/**
+ * Returns path of a tool had the tool actually been invoked.  Resolves via paths.
+ * If you check and the tool does not exist, it will throw.
+ *
+ * @param     tool              name of the tool
+ * @param     check             whether to check if tool exists
+ * @returns   Promise<string>   path to tool
+ */
+function which(tool, check) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (!tool) {
+            throw new Error("parameter 'tool' is required");
+        }
+        // recursive when check=true
+        if (check) {
+            const result = yield which(tool, false);
+            if (!result) {
+                if (ioUtil.IS_WINDOWS) {
+                    throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also verify the file has a valid extension for an executable file.`);
+                }
+                else {
+                    throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also check the file mode to verify the file is executable.`);
+                }
+            }
+        }
+        try {
+            // build the list of extensions to try
+            const extensions = [];
+            if (ioUtil.IS_WINDOWS && process.env.PATHEXT) {
+                for (const extension of process.env.PATHEXT.split(path.delimiter)) {
+                    if (extension) {
+                        extensions.push(extension);
+                    }
+                }
+            }
+            // if it's rooted, return it if exists. otherwise return empty.
+            if (ioUtil.isRooted(tool)) {
+                const filePath = yield ioUtil.tryGetExecutablePath(tool, extensions);
+                if (filePath) {
+                    return filePath;
+                }
+                return '';
+            }
+            // if any path separators, return empty
+            if (tool.includes('/') || (ioUtil.IS_WINDOWS && tool.includes('\\'))) {
+                return '';
+            }
+            // build the list of directories
+            //
+            // Note, technically "where" checks the current directory on Windows. From a toolkit perspective,
+            // it feels like we should not do this. Checking the current directory seems like more of a use
+            // case of a shell, and the which() function exposed by the toolkit should strive for consistency
+            // across platforms.
+            const directories = [];
+            if (process.env.PATH) {
+                for (const p of process.env.PATH.split(path.delimiter)) {
+                    if (p) {
+                        directories.push(p);
+                    }
+                }
+            }
+            // return the first match
+            for (const directory of directories) {
+                const filePath = yield ioUtil.tryGetExecutablePath(directory + path.sep + tool, extensions);
+                if (filePath) {
+                    return filePath;
+                }
+            }
+            return '';
+        }
+        catch (err) {
+            throw new Error(`which failed with message ${err.message}`);
+        }
+    });
+}
+exports.which = which;
+function readCopyOptions(options) {
+    const force = options.force == null ? true : options.force;
+    const recursive = Boolean(options.recursive);
+    return { force, recursive };
+}
+function cpDirRecursive(sourceDir, destDir, currentDepth, force) {
+    return __awaiter(this, void 0, void 0, function* () {
+        // Ensure there is not a run away recursive copy
+        if (currentDepth >= 255)
+            return;
+        currentDepth++;
+        yield mkdirP(destDir);
+        const files = yield ioUtil.readdir(sourceDir);
+        for (const fileName of files) {
+            const srcFile = `${sourceDir}/${fileName}`;
+            const destFile = `${destDir}/${fileName}`;
+            const srcFileStat = yield ioUtil.lstat(srcFile);
+            if (srcFileStat.isDirectory()) {
+                // Recurse
+                yield cpDirRecursive(srcFile, destFile, currentDepth, force);
+            }
+            else {
+                yield copyFile(srcFile, destFile, force);
+            }
+        }
+        // Change the mode for the newly created directory
+        yield ioUtil.chmod(destDir, (yield ioUtil.stat(sourceDir)).mode);
+    });
+}
+// Buffered file copy
+function copyFile(srcFile, destFile, force) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if ((yield ioUtil.lstat(srcFile)).isSymbolicLink()) {
+            // unlink/re-link it
+            try {
+                yield ioUtil.lstat(destFile);
+                yield ioUtil.unlink(destFile);
+            }
+            catch (e) {
+                // Try to override file permission
+                if (e.code === 'EPERM') {
+                    yield ioUtil.chmod(destFile, '0666');
+                    yield ioUtil.unlink(destFile);
+                }
+                // other errors = it doesn't exist, no work to do
+            }
+            // Copy over symlink
+            const symlinkFull = yield ioUtil.readlink(srcFile);
+            yield ioUtil.symlink(symlinkFull, destFile, ioUtil.IS_WINDOWS ? 'junction' : null);
+        }
+        else if (!(yield ioUtil.exists(destFile)) || force) {
+            yield ioUtil.copyFile(srcFile, destFile);
+        }
+    });
+}
+//# sourceMappingURL=io.js.map
+
+/***/ }),
+
+/***/ 334:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+async function auth(token) {
+  const tokenType = token.split(/\./).length === 3 ? "app" : /^v\d+\./.test(token) ? "installation" : "oauth";
+  return {
+    type: "token",
+    token: token,
+    tokenType
+  };
+}
+
+/**
+ * Prefix token for usage in the Authorization header
+ *
+ * @param token OAuth token or JSON Web Token
+ */
+function withAuthorizationPrefix(token) {
+  if (token.split(/\./).length === 3) {
+    return `bearer ${token}`;
+  }
+
+  return `token ${token}`;
+}
+
+async function hook(token, request, route, parameters) {
+  const endpoint = request.endpoint.merge(route, parameters);
+  endpoint.headers.authorization = withAuthorizationPrefix(token);
+  return request(endpoint);
+}
+
+const createTokenAuth = function createTokenAuth(token) {
+  if (!token) {
+    throw new Error("[@octokit/auth-token] No token passed to createTokenAuth");
+  }
+
+  if (typeof token !== "string") {
+    throw new Error("[@octokit/auth-token] Token passed to createTokenAuth is not a string");
+  }
+
+  token = token.replace(/^(token|bearer) +/i, "");
+  return Object.assign(auth.bind(null, token), {
+    hook: hook.bind(null, token)
+  });
+};
+
+exports.createTokenAuth = createTokenAuth;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 6762:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var universalUserAgent = __nccwpck_require__(5030);
+var beforeAfterHook = __nccwpck_require__(3682);
+var request = __nccwpck_require__(6234);
+var graphql = __nccwpck_require__(8467);
+var authToken = __nccwpck_require__(334);
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+const VERSION = "3.4.0";
+
+class Octokit {
+  constructor(options = {}) {
+    const hook = new beforeAfterHook.Collection();
+    const requestDefaults = {
+      baseUrl: request.request.endpoint.DEFAULTS.baseUrl,
+      headers: {},
+      request: Object.assign({}, options.request, {
+        // @ts-ignore internal usage only, no need to type
+        hook: hook.bind(null, "request")
+      }),
+      mediaType: {
+        previews: [],
+        format: ""
+      }
+    }; // prepend default user agent with `options.userAgent` if set
+
+    requestDefaults.headers["user-agent"] = [options.userAgent, `octokit-core.js/${VERSION} ${universalUserAgent.getUserAgent()}`].filter(Boolean).join(" ");
+
+    if (options.baseUrl) {
+      requestDefaults.baseUrl = options.baseUrl;
+    }
+
+    if (options.previews) {
+      requestDefaults.mediaType.previews = options.previews;
+    }
+
+    if (options.timeZone) {
+      requestDefaults.headers["time-zone"] = options.timeZone;
+    }
+
+    this.request = request.request.defaults(requestDefaults);
+    this.graphql = graphql.withCustomRequest(this.request).defaults(requestDefaults);
+    this.log = Object.assign({
+      debug: () => {},
+      info: () => {},
+      warn: console.warn.bind(console),
+      error: console.error.bind(console)
+    }, options.log);
+    this.hook = hook; // (1) If neither `options.authStrategy` nor `options.auth` are set, the `octokit` instance
+    //     is unauthenticated. The `this.auth()` method is a no-op and no request hook is registered.
+    // (2) If only `options.auth` is set, use the default token authentication strategy.
+    // (3) If `options.authStrategy` is set then use it and pass in `options.auth`. Always pass own request as many strategies accept a custom request instance.
+    // TODO: type `options.auth` based on `options.authStrategy`.
+
+    if (!options.authStrategy) {
+      if (!options.auth) {
+        // (1)
+        this.auth = async () => ({
+          type: "unauthenticated"
+        });
+      } else {
+        // (2)
+        const auth = authToken.createTokenAuth(options.auth); // @ts-ignore  ¯\_(ツ)_/¯
+
+        hook.wrap("request", auth.hook);
+        this.auth = auth;
+      }
+    } else {
+      const {
+        authStrategy
+      } = options,
+            otherOptions = _objectWithoutProperties(options, ["authStrategy"]);
+
+      const auth = authStrategy(Object.assign({
+        request: this.request,
+        log: this.log,
+        // we pass the current octokit instance as well as its constructor options
+        // to allow for authentication strategies that return a new octokit instance
+        // that shares the same internal state as the current one. The original
+        // requirement for this was the "event-octokit" authentication strategy
+        // of https://github.com/probot/octokit-auth-probot.
+        octokit: this,
+        octokitOptions: otherOptions
+      }, options.auth)); // @ts-ignore  ¯\_(ツ)_/¯
+
+      hook.wrap("request", auth.hook);
+      this.auth = auth;
+    } // apply plugins
+    // https://stackoverflow.com/a/16345172
+
+
+    const classConstructor = this.constructor;
+    classConstructor.plugins.forEach(plugin => {
+      Object.assign(this, plugin(this, options));
+    });
+  }
+
+  static defaults(defaults) {
+    const OctokitWithDefaults = class extends this {
+      constructor(...args) {
+        const options = args[0] || {};
+
+        if (typeof defaults === "function") {
+          super(defaults(options));
+          return;
+        }
+
+        super(Object.assign({}, defaults, options, options.userAgent && defaults.userAgent ? {
+          userAgent: `${options.userAgent} ${defaults.userAgent}`
+        } : null));
+      }
+
+    };
+    return OctokitWithDefaults;
+  }
+  /**
+   * Attach a plugin (or many) to your Octokit instance.
+   *
+   * @example
+   * const API = Octokit.plugin(plugin1, plugin2, plugin3, ...)
+   */
+
+
+  static plugin(...newPlugins) {
+    var _a;
+
+    const currentPlugins = this.plugins;
+    const NewOctokit = (_a = class extends this {}, _a.plugins = currentPlugins.concat(newPlugins.filter(plugin => !currentPlugins.includes(plugin))), _a);
+    return NewOctokit;
+  }
+
+}
+Octokit.VERSION = VERSION;
+Octokit.plugins = [];
+
+exports.Octokit = Octokit;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 9440:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var isPlainObject = _interopDefault(__nccwpck_require__(4038));
+var universalUserAgent = __nccwpck_require__(5030);
+
+function lowercaseKeys(object) {
+  if (!object) {
+    return {};
+  }
+
+  return Object.keys(object).reduce((newObj, key) => {
+    newObj[key.toLowerCase()] = object[key];
+    return newObj;
+  }, {});
+}
+
+function mergeDeep(defaults, options) {
+  const result = Object.assign({}, defaults);
+  Object.keys(options).forEach(key => {
+    if (isPlainObject(options[key])) {
+      if (!(key in defaults)) Object.assign(result, {
+        [key]: options[key]
+      });else result[key] = mergeDeep(defaults[key], options[key]);
+    } else {
+      Object.assign(result, {
+        [key]: options[key]
+      });
+    }
+  });
+  return result;
+}
+
+function merge(defaults, route, options) {
+  if (typeof route === "string") {
+    let [method, url] = route.split(" ");
+    options = Object.assign(url ? {
+      method,
+      url
+    } : {
+      url: method
+    }, options);
+  } else {
+    options = Object.assign({}, route);
+  } // lowercase header names before merging with defaults to avoid duplicates
+
+
+  options.headers = lowercaseKeys(options.headers);
+  const mergedOptions = mergeDeep(defaults || {}, options); // mediaType.previews arrays are merged, instead of overwritten
+
+  if (defaults && defaults.mediaType.previews.length) {
+    mergedOptions.mediaType.previews = defaults.mediaType.previews.filter(preview => !mergedOptions.mediaType.previews.includes(preview)).concat(mergedOptions.mediaType.previews);
+  }
+
+  mergedOptions.mediaType.previews = mergedOptions.mediaType.previews.map(preview => preview.replace(/-preview/, ""));
+  return mergedOptions;
+}
+
+function addQueryParameters(url, parameters) {
+  const separator = /\?/.test(url) ? "&" : "?";
+  const names = Object.keys(parameters);
+
+  if (names.length === 0) {
+    return url;
+  }
+
+  return url + separator + names.map(name => {
+    if (name === "q") {
+      return "q=" + parameters.q.split("+").map(encodeURIComponent).join("+");
+    }
+
+    return `${name}=${encodeURIComponent(parameters[name])}`;
+  }).join("&");
+}
+
+const urlVariableRegex = /\{[^}]+\}/g;
+
+function removeNonChars(variableName) {
+  return variableName.replace(/^\W+|\W+$/g, "").split(/,/);
+}
+
+function extractUrlVariableNames(url) {
+  const matches = url.match(urlVariableRegex);
+
+  if (!matches) {
+    return [];
+  }
+
+  return matches.map(removeNonChars).reduce((a, b) => a.concat(b), []);
+}
+
+function omit(object, keysToOmit) {
+  return Object.keys(object).filter(option => !keysToOmit.includes(option)).reduce((obj, key) => {
+    obj[key] = object[key];
+    return obj;
+  }, {});
+}
+
+// Based on https://github.com/bramstein/url-template, licensed under BSD
+// TODO: create separate package.
+//
+// Copyright (c) 2012-2014, Bram Stein
+// All rights reserved.
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions
+// are met:
+//  1. Redistributions of source code must retain the above copyright
+//     notice, this list of conditions and the following disclaimer.
+//  2. Redistributions in binary form must reproduce the above copyright
+//     notice, this list of conditions and the following disclaimer in the
+//     documentation and/or other materials provided with the distribution.
+//  3. The name of the author may not be used to endorse or promote products
+//     derived from this software without specific prior written permission.
+// THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+// WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+// EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+// INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+// BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+// OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+// NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+// EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/* istanbul ignore file */
+function encodeReserved(str) {
+  return str.split(/(%[0-9A-Fa-f]{2})/g).map(function (part) {
+    if (!/%[0-9A-Fa-f]/.test(part)) {
+      part = encodeURI(part).replace(/%5B/g, "[").replace(/%5D/g, "]");
+    }
+
+    return part;
+  }).join("");
+}
+
+function encodeUnreserved(str) {
+  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+    return "%" + c.charCodeAt(0).toString(16).toUpperCase();
+  });
+}
+
+function encodeValue(operator, value, key) {
+  value = operator === "+" || operator === "#" ? encodeReserved(value) : encodeUnreserved(value);
+
+  if (key) {
+    return encodeUnreserved(key) + "=" + value;
+  } else {
+    return value;
+  }
+}
+
+function isDefined(value) {
+  return value !== undefined && value !== null;
+}
+
+function isKeyOperator(operator) {
+  return operator === ";" || operator === "&" || operator === "?";
+}
+
+function getValues(context, operator, key, modifier) {
+  var value = context[key],
+      result = [];
+
+  if (isDefined(value) && value !== "") {
+    if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+      value = value.toString();
+
+      if (modifier && modifier !== "*") {
+        value = value.substring(0, parseInt(modifier, 10));
+      }
+
+      result.push(encodeValue(operator, value, isKeyOperator(operator) ? key : ""));
+    } else {
+      if (modifier === "*") {
+        if (Array.isArray(value)) {
+          value.filter(isDefined).forEach(function (value) {
+            result.push(encodeValue(operator, value, isKeyOperator(operator) ? key : ""));
+          });
+        } else {
+          Object.keys(value).forEach(function (k) {
+            if (isDefined(value[k])) {
+              result.push(encodeValue(operator, value[k], k));
+            }
+          });
+        }
+      } else {
+        const tmp = [];
+
+        if (Array.isArray(value)) {
+          value.filter(isDefined).forEach(function (value) {
+            tmp.push(encodeValue(operator, value));
+          });
+        } else {
+          Object.keys(value).forEach(function (k) {
+            if (isDefined(value[k])) {
+              tmp.push(encodeUnreserved(k));
+              tmp.push(encodeValue(operator, value[k].toString()));
+            }
+          });
+        }
+
+        if (isKeyOperator(operator)) {
+          result.push(encodeUnreserved(key) + "=" + tmp.join(","));
+        } else if (tmp.length !== 0) {
+          result.push(tmp.join(","));
+        }
+      }
+    }
+  } else {
+    if (operator === ";") {
+      if (isDefined(value)) {
+        result.push(encodeUnreserved(key));
+      }
+    } else if (value === "" && (operator === "&" || operator === "?")) {
+      result.push(encodeUnreserved(key) + "=");
+    } else if (value === "") {
+      result.push("");
+    }
+  }
+
+  return result;
+}
+
+function parseUrl(template) {
+  return {
+    expand: expand.bind(null, template)
+  };
+}
+
+function expand(template, context) {
+  var operators = ["+", "#", ".", "/", ";", "?", "&"];
+  return template.replace(/\{([^\{\}]+)\}|([^\{\}]+)/g, function (_, expression, literal) {
+    if (expression) {
+      let operator = "";
+      const values = [];
+
+      if (operators.indexOf(expression.charAt(0)) !== -1) {
+        operator = expression.charAt(0);
+        expression = expression.substr(1);
+      }
+
+      expression.split(/,/g).forEach(function (variable) {
+        var tmp = /([^:\*]*)(?::(\d+)|(\*))?/.exec(variable);
+        values.push(getValues(context, operator, tmp[1], tmp[2] || tmp[3]));
+      });
+
+      if (operator && operator !== "+") {
+        var separator = ",";
+
+        if (operator === "?") {
+          separator = "&";
+        } else if (operator !== "#") {
+          separator = operator;
+        }
+
+        return (values.length !== 0 ? operator : "") + values.join(separator);
+      } else {
+        return values.join(",");
+      }
+    } else {
+      return encodeReserved(literal);
+    }
+  });
+}
+
+function parse(options) {
+  // https://fetch.spec.whatwg.org/#methods
+  let method = options.method.toUpperCase(); // replace :varname with {varname} to make it RFC 6570 compatible
+
+  let url = (options.url || "/").replace(/:([a-z]\w+)/g, "{+$1}");
+  let headers = Object.assign({}, options.headers);
+  let body;
+  let parameters = omit(options, ["method", "baseUrl", "url", "headers", "request", "mediaType"]); // extract variable names from URL to calculate remaining variables later
+
+  const urlVariableNames = extractUrlVariableNames(url);
+  url = parseUrl(url).expand(parameters);
+
+  if (!/^http/.test(url)) {
+    url = options.baseUrl + url;
+  }
+
+  const omittedParameters = Object.keys(options).filter(option => urlVariableNames.includes(option)).concat("baseUrl");
+  const remainingParameters = omit(parameters, omittedParameters);
+  const isBinaryRequset = /application\/octet-stream/i.test(headers.accept);
+
+  if (!isBinaryRequset) {
+    if (options.mediaType.format) {
+      // e.g. application/vnd.github.v3+json => application/vnd.github.v3.raw
+      headers.accept = headers.accept.split(/,/).map(preview => preview.replace(/application\/vnd(\.\w+)(\.v3)?(\.\w+)?(\+json)?$/, `application/vnd$1$2.${options.mediaType.format}`)).join(",");
+    }
+
+    if (options.mediaType.previews.length) {
+      const previewsFromAcceptHeader = headers.accept.match(/[\w-]+(?=-preview)/g) || [];
+      headers.accept = previewsFromAcceptHeader.concat(options.mediaType.previews).map(preview => {
+        const format = options.mediaType.format ? `.${options.mediaType.format}` : "+json";
+        return `application/vnd.github.${preview}-preview${format}`;
+      }).join(",");
+    }
+  } // for GET/HEAD requests, set URL query parameters from remaining parameters
+  // for PATCH/POST/PUT/DELETE requests, set request body from remaining parameters
+
+
+  if (["GET", "HEAD"].includes(method)) {
+    url = addQueryParameters(url, remainingParameters);
+  } else {
+    if ("data" in remainingParameters) {
+      body = remainingParameters.data;
+    } else {
+      if (Object.keys(remainingParameters).length) {
+        body = remainingParameters;
+      } else {
+        headers["content-length"] = 0;
+      }
+    }
+  } // default content-type for JSON if body is set
+
+
+  if (!headers["content-type"] && typeof body !== "undefined") {
+    headers["content-type"] = "application/json; charset=utf-8";
+  } // GitHub expects 'content-length: 0' header for PUT/PATCH requests without body.
+  // fetch does not allow to set `content-length` header, but we can set body to an empty string
+
+
+  if (["PATCH", "PUT"].includes(method) && typeof body === "undefined") {
+    body = "";
+  } // Only return body/request keys if present
+
+
+  return Object.assign({
+    method,
+    url,
+    headers
+  }, typeof body !== "undefined" ? {
+    body
+  } : null, options.request ? {
+    request: options.request
+  } : null);
+}
+
+function endpointWithDefaults(defaults, route, options) {
+  return parse(merge(defaults, route, options));
+}
+
+function withDefaults(oldDefaults, newDefaults) {
+  const DEFAULTS = merge(oldDefaults, newDefaults);
+  const endpoint = endpointWithDefaults.bind(null, DEFAULTS);
+  return Object.assign(endpoint, {
+    DEFAULTS,
+    defaults: withDefaults.bind(null, DEFAULTS),
+    merge: merge.bind(null, DEFAULTS),
+    parse
+  });
+}
+
+const VERSION = "6.0.5";
+
+const userAgent = `octokit-endpoint.js/${VERSION} ${universalUserAgent.getUserAgent()}`; // DEFAULTS has all properties set that EndpointOptions has, except url.
+// So we use RequestParameters and add method as additional required property.
+
+const DEFAULTS = {
+  method: "GET",
+  baseUrl: "https://api.github.com",
+  headers: {
+    accept: "application/vnd.github.v3+json",
+    "user-agent": userAgent
+  },
+  mediaType: {
+    format: "",
+    previews: []
+  }
+};
+
+const endpoint = withDefaults(null, DEFAULTS);
+
+exports.endpoint = endpoint;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 4038:
+/***/ ((module) => {
+
+"use strict";
+
+
+/*!
+ * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+function isObject(o) {
+  return Object.prototype.toString.call(o) === '[object Object]';
+}
+
+function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (ctor === undefined) return true;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty('isPrototypeOf') === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+}
+
+module.exports = isPlainObject;
+
+
+/***/ }),
+
+/***/ 8467:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var request = __nccwpck_require__(3758);
+var universalUserAgent = __nccwpck_require__(5030);
+
+const VERSION = "4.6.1";
+
+class GraphqlError extends Error {
+  constructor(request, response) {
+    const message = response.data.errors[0].message;
+    super(message);
+    Object.assign(this, response.data);
+    Object.assign(this, {
+      headers: response.headers
+    });
+    this.name = "GraphqlError";
+    this.request = request; // Maintains proper stack trace (only available on V8)
+
+    /* istanbul ignore next */
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+
+}
+
+const NON_VARIABLE_OPTIONS = ["method", "baseUrl", "url", "headers", "request", "query", "mediaType"];
+const FORBIDDEN_VARIABLE_OPTIONS = ["query", "method", "url"];
+const GHES_V3_SUFFIX_REGEX = /\/api\/v3\/?$/;
+function graphql(request, query, options) {
+  if (options) {
+    if (typeof query === "string" && "query" in options) {
+      return Promise.reject(new Error(`[@octokit/graphql] "query" cannot be used as variable name`));
+    }
+
+    for (const key in options) {
+      if (!FORBIDDEN_VARIABLE_OPTIONS.includes(key)) continue;
+      return Promise.reject(new Error(`[@octokit/graphql] "${key}" cannot be used as variable name`));
+    }
+  }
+
+  const parsedOptions = typeof query === "string" ? Object.assign({
+    query
+  }, options) : query;
+  const requestOptions = Object.keys(parsedOptions).reduce((result, key) => {
+    if (NON_VARIABLE_OPTIONS.includes(key)) {
+      result[key] = parsedOptions[key];
+      return result;
+    }
+
+    if (!result.variables) {
+      result.variables = {};
+    }
+
+    result.variables[key] = parsedOptions[key];
+    return result;
+  }, {}); // workaround for GitHub Enterprise baseUrl set with /api/v3 suffix
+  // https://github.com/octokit/auth-app.js/issues/111#issuecomment-657610451
+
+  const baseUrl = parsedOptions.baseUrl || request.endpoint.DEFAULTS.baseUrl;
+
+  if (GHES_V3_SUFFIX_REGEX.test(baseUrl)) {
+    requestOptions.url = baseUrl.replace(GHES_V3_SUFFIX_REGEX, "/api/graphql");
+  }
+
+  return request(requestOptions).then(response => {
+    if (response.data.errors) {
+      const headers = {};
+
+      for (const key of Object.keys(response.headers)) {
+        headers[key] = response.headers[key];
+      }
+
+      throw new GraphqlError(requestOptions, {
+        headers,
+        data: response.data
+      });
+    }
+
+    return response.data.data;
+  });
+}
+
+function withDefaults(request$1, newDefaults) {
+  const newRequest = request$1.defaults(newDefaults);
+
+  const newApi = (query, options) => {
+    return graphql(newRequest, query, options);
+  };
+
+  return Object.assign(newApi, {
+    defaults: withDefaults.bind(null, newRequest),
+    endpoint: request.request.endpoint
+  });
+}
+
+const graphql$1 = withDefaults(request.request, {
+  headers: {
+    "user-agent": `octokit-graphql.js/${VERSION} ${universalUserAgent.getUserAgent()}`
+  },
+  method: "POST",
+  url: "/graphql"
+});
+function withCustomRequest(customRequest) {
+  return withDefaults(customRequest, {
+    method: "POST",
+    url: "/graphql"
+  });
+}
+
+exports.graphql = graphql$1;
+exports.withCustomRequest = withCustomRequest;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 3758:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var endpoint = __nccwpck_require__(9440);
+var universalUserAgent = __nccwpck_require__(5030);
+var isPlainObject = _interopDefault(__nccwpck_require__(8034));
+var nodeFetch = _interopDefault(__nccwpck_require__(467));
+var requestError = __nccwpck_require__(537);
+
+const VERSION = "5.4.7";
+
+function getBufferResponse(response) {
+  return response.arrayBuffer();
+}
+
+function fetchWrapper(requestOptions) {
+  if (isPlainObject(requestOptions.body) || Array.isArray(requestOptions.body)) {
+    requestOptions.body = JSON.stringify(requestOptions.body);
+  }
+
+  let headers = {};
+  let status;
+  let url;
+  const fetch = requestOptions.request && requestOptions.request.fetch || nodeFetch;
+  return fetch(requestOptions.url, Object.assign({
+    method: requestOptions.method,
+    body: requestOptions.body,
+    headers: requestOptions.headers,
+    redirect: requestOptions.redirect
+  }, requestOptions.request)).then(response => {
+    url = response.url;
+    status = response.status;
+
+    for (const keyAndValue of response.headers) {
+      headers[keyAndValue[0]] = keyAndValue[1];
+    }
+
+    if (status === 204 || status === 205) {
+      return;
+    } // GitHub API returns 200 for HEAD requests
+
+
+    if (requestOptions.method === "HEAD") {
+      if (status < 400) {
+        return;
+      }
+
+      throw new requestError.RequestError(response.statusText, status, {
+        headers,
+        request: requestOptions
+      });
+    }
+
+    if (status === 304) {
+      throw new requestError.RequestError("Not modified", status, {
+        headers,
+        request: requestOptions
+      });
+    }
+
+    if (status >= 400) {
+      return response.text().then(message => {
+        const error = new requestError.RequestError(message, status, {
+          headers,
+          request: requestOptions
+        });
+
+        try {
+          let responseBody = JSON.parse(error.message);
+          Object.assign(error, responseBody);
+          let errors = responseBody.errors; // Assumption `errors` would always be in Array format
+
+          error.message = error.message + ": " + errors.map(JSON.stringify).join(", ");
+        } catch (e) {// ignore, see octokit/rest.js#684
+        }
+
+        throw error;
+      });
+    }
+
+    const contentType = response.headers.get("content-type");
+
+    if (/application\/json/.test(contentType)) {
+      return response.json();
+    }
+
+    if (!contentType || /^text\/|charset=utf-8$/.test(contentType)) {
+      return response.text();
+    }
+
+    return getBufferResponse(response);
+  }).then(data => {
+    return {
+      status,
+      url,
+      headers,
+      data
+    };
+  }).catch(error => {
+    if (error instanceof requestError.RequestError) {
+      throw error;
+    }
+
+    throw new requestError.RequestError(error.message, 500, {
+      headers,
+      request: requestOptions
+    });
+  });
+}
+
+function withDefaults(oldEndpoint, newDefaults) {
+  const endpoint = oldEndpoint.defaults(newDefaults);
+
+  const newApi = function (route, parameters) {
+    const endpointOptions = endpoint.merge(route, parameters);
+
+    if (!endpointOptions.request || !endpointOptions.request.hook) {
+      return fetchWrapper(endpoint.parse(endpointOptions));
+    }
+
+    const request = (route, parameters) => {
+      return fetchWrapper(endpoint.parse(endpoint.merge(route, parameters)));
+    };
+
+    Object.assign(request, {
+      endpoint,
+      defaults: withDefaults.bind(null, endpoint)
+    });
+    return endpointOptions.request.hook(request, endpointOptions);
+  };
+
+  return Object.assign(newApi, {
+    endpoint,
+    defaults: withDefaults.bind(null, endpoint)
+  });
+}
+
+const request = withDefaults(endpoint.endpoint, {
+  headers: {
+    "user-agent": `octokit-request.js/${VERSION} ${universalUserAgent.getUserAgent()}`
+  }
+});
+
+exports.request = request;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 8034:
+/***/ ((module) => {
+
+"use strict";
+
+
+/*!
+ * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+function isObject(o) {
+  return Object.prototype.toString.call(o) === '[object Object]';
+}
+
+function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (ctor === undefined) return true;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty('isPrototypeOf') === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+}
+
+module.exports = isPlainObject;
+
+
+/***/ }),
+
+/***/ 4193:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+const VERSION = "2.13.3";
+
+/**
+ * Some “list” response that can be paginated have a different response structure
+ *
+ * They have a `total_count` key in the response (search also has `incomplete_results`,
+ * /installation/repositories also has `repository_selection`), as well as a key with
+ * the list of the items which name varies from endpoint to endpoint.
+ *
+ * Octokit normalizes these responses so that paginated results are always returned following
+ * the same structure. One challenge is that if the list response has only one page, no Link
+ * header is provided, so this header alone is not sufficient to check wether a response is
+ * paginated or not.
+ *
+ * We check if a "total_count" key is present in the response data, but also make sure that
+ * a "url" property is not, as the "Get the combined status for a specific ref" endpoint would
+ * otherwise match: https://developer.github.com/v3/repos/statuses/#get-the-combined-status-for-a-specific-ref
+ */
+function normalizePaginatedListResponse(response) {
+  const responseNeedsNormalization = "total_count" in response.data && !("url" in response.data);
+  if (!responseNeedsNormalization) return response; // keep the additional properties intact as there is currently no other way
+  // to retrieve the same information.
+
+  const incompleteResults = response.data.incomplete_results;
+  const repositorySelection = response.data.repository_selection;
+  const totalCount = response.data.total_count;
+  delete response.data.incomplete_results;
+  delete response.data.repository_selection;
+  delete response.data.total_count;
+  const namespaceKey = Object.keys(response.data)[0];
+  const data = response.data[namespaceKey];
+  response.data = data;
+
+  if (typeof incompleteResults !== "undefined") {
+    response.data.incomplete_results = incompleteResults;
+  }
+
+  if (typeof repositorySelection !== "undefined") {
+    response.data.repository_selection = repositorySelection;
+  }
+
+  response.data.total_count = totalCount;
+  return response;
+}
+
+function iterator(octokit, route, parameters) {
+  const options = typeof route === "function" ? route.endpoint(parameters) : octokit.request.endpoint(route, parameters);
+  const requestMethod = typeof route === "function" ? route : octokit.request;
+  const method = options.method;
+  const headers = options.headers;
+  let url = options.url;
+  return {
+    [Symbol.asyncIterator]: () => ({
+      async next() {
+        if (!url) return {
+          done: true
+        };
+        const response = await requestMethod({
+          method,
+          url,
+          headers
+        });
+        const normalizedResponse = normalizePaginatedListResponse(response); // `response.headers.link` format:
+        // '<https://api.github.com/users/aseemk/followers?page=2>; rel="next", <https://api.github.com/users/aseemk/followers?page=2>; rel="last"'
+        // sets `url` to undefined if "next" URL is not present or `link` header is not set
+
+        url = ((normalizedResponse.headers.link || "").match(/<([^>]+)>;\s*rel="next"/) || [])[1];
+        return {
+          value: normalizedResponse
+        };
+      }
+
+    })
+  };
+}
+
+function paginate(octokit, route, parameters, mapFn) {
+  if (typeof parameters === "function") {
+    mapFn = parameters;
+    parameters = undefined;
+  }
+
+  return gather(octokit, [], iterator(octokit, route, parameters)[Symbol.asyncIterator](), mapFn);
+}
+
+function gather(octokit, results, iterator, mapFn) {
+  return iterator.next().then(result => {
+    if (result.done) {
+      return results;
+    }
+
+    let earlyExit = false;
+
+    function done() {
+      earlyExit = true;
+    }
+
+    results = results.concat(mapFn ? mapFn(result.value, done) : result.value.data);
+
+    if (earlyExit) {
+      return results;
+    }
+
+    return gather(octokit, results, iterator, mapFn);
+  });
+}
+
+const composePaginateRest = Object.assign(paginate, {
+  iterator
+});
+
+const paginatingEndpoints = ["GET /app/installations", "GET /applications/grants", "GET /authorizations", "GET /enterprises/{enterprise}/actions/permissions/organizations", "GET /enterprises/{enterprise}/actions/runner-groups", "GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations", "GET /enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners", "GET /enterprises/{enterprise}/actions/runners", "GET /enterprises/{enterprise}/actions/runners/downloads", "GET /events", "GET /gists", "GET /gists/public", "GET /gists/starred", "GET /gists/{gist_id}/comments", "GET /gists/{gist_id}/commits", "GET /gists/{gist_id}/forks", "GET /installation/repositories", "GET /issues", "GET /marketplace_listing/plans", "GET /marketplace_listing/plans/{plan_id}/accounts", "GET /marketplace_listing/stubbed/plans", "GET /marketplace_listing/stubbed/plans/{plan_id}/accounts", "GET /networks/{owner}/{repo}/events", "GET /notifications", "GET /organizations", "GET /orgs/{org}/actions/permissions/repositories", "GET /orgs/{org}/actions/runner-groups", "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", "GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners", "GET /orgs/{org}/actions/runners", "GET /orgs/{org}/actions/runners/downloads", "GET /orgs/{org}/actions/secrets", "GET /orgs/{org}/actions/secrets/{secret_name}/repositories", "GET /orgs/{org}/blocks", "GET /orgs/{org}/credential-authorizations", "GET /orgs/{org}/events", "GET /orgs/{org}/failed_invitations", "GET /orgs/{org}/hooks", "GET /orgs/{org}/installations", "GET /orgs/{org}/invitations", "GET /orgs/{org}/invitations/{invitation_id}/teams", "GET /orgs/{org}/issues", "GET /orgs/{org}/members", "GET /orgs/{org}/migrations", "GET /orgs/{org}/migrations/{migration_id}/repositories", "GET /orgs/{org}/outside_collaborators", "GET /orgs/{org}/projects", "GET /orgs/{org}/public_members", "GET /orgs/{org}/repos", "GET /orgs/{org}/team-sync/groups", "GET /orgs/{org}/teams", "GET /orgs/{org}/teams/{team_slug}/discussions", "GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", "GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", "GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", "GET /orgs/{org}/teams/{team_slug}/invitations", "GET /orgs/{org}/teams/{team_slug}/members", "GET /orgs/{org}/teams/{team_slug}/projects", "GET /orgs/{org}/teams/{team_slug}/repos", "GET /orgs/{org}/teams/{team_slug}/team-sync/group-mappings", "GET /orgs/{org}/teams/{team_slug}/teams", "GET /projects/columns/{column_id}/cards", "GET /projects/{project_id}/collaborators", "GET /projects/{project_id}/columns", "GET /repos/{owner}/{repo}/actions/artifacts", "GET /repos/{owner}/{repo}/actions/runners", "GET /repos/{owner}/{repo}/actions/runners/downloads", "GET /repos/{owner}/{repo}/actions/runs", "GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts", "GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs", "GET /repos/{owner}/{repo}/actions/secrets", "GET /repos/{owner}/{repo}/actions/workflows", "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs", "GET /repos/{owner}/{repo}/assignees", "GET /repos/{owner}/{repo}/branches", "GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations", "GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs", "GET /repos/{owner}/{repo}/code-scanning/alerts", "GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances", "GET /repos/{owner}/{repo}/code-scanning/analyses", "GET /repos/{owner}/{repo}/collaborators", "GET /repos/{owner}/{repo}/comments", "GET /repos/{owner}/{repo}/comments/{comment_id}/reactions", "GET /repos/{owner}/{repo}/commits", "GET /repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head", "GET /repos/{owner}/{repo}/commits/{commit_sha}/comments", "GET /repos/{owner}/{repo}/commits/{commit_sha}/pulls", "GET /repos/{owner}/{repo}/commits/{ref}/check-runs", "GET /repos/{owner}/{repo}/commits/{ref}/check-suites", "GET /repos/{owner}/{repo}/commits/{ref}/statuses", "GET /repos/{owner}/{repo}/contributors", "GET /repos/{owner}/{repo}/deployments", "GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses", "GET /repos/{owner}/{repo}/events", "GET /repos/{owner}/{repo}/forks", "GET /repos/{owner}/{repo}/git/matching-refs/{ref}", "GET /repos/{owner}/{repo}/hooks", "GET /repos/{owner}/{repo}/invitations", "GET /repos/{owner}/{repo}/issues", "GET /repos/{owner}/{repo}/issues/comments", "GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", "GET /repos/{owner}/{repo}/issues/events", "GET /repos/{owner}/{repo}/issues/{issue_number}/comments", "GET /repos/{owner}/{repo}/issues/{issue_number}/events", "GET /repos/{owner}/{repo}/issues/{issue_number}/labels", "GET /repos/{owner}/{repo}/issues/{issue_number}/reactions", "GET /repos/{owner}/{repo}/issues/{issue_number}/timeline", "GET /repos/{owner}/{repo}/keys", "GET /repos/{owner}/{repo}/labels", "GET /repos/{owner}/{repo}/milestones", "GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels", "GET /repos/{owner}/{repo}/notifications", "GET /repos/{owner}/{repo}/pages/builds", "GET /repos/{owner}/{repo}/projects", "GET /repos/{owner}/{repo}/pulls", "GET /repos/{owner}/{repo}/pulls/comments", "GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", "GET /repos/{owner}/{repo}/pulls/{pull_number}/comments", "GET /repos/{owner}/{repo}/pulls/{pull_number}/commits", "GET /repos/{owner}/{repo}/pulls/{pull_number}/files", "GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews", "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments", "GET /repos/{owner}/{repo}/releases", "GET /repos/{owner}/{repo}/releases/{release_id}/assets", "GET /repos/{owner}/{repo}/secret-scanning/alerts", "GET /repos/{owner}/{repo}/stargazers", "GET /repos/{owner}/{repo}/subscribers", "GET /repos/{owner}/{repo}/tags", "GET /repos/{owner}/{repo}/teams", "GET /repositories", "GET /repositories/{repository_id}/environments/{environment_name}/secrets", "GET /scim/v2/enterprises/{enterprise}/Groups", "GET /scim/v2/enterprises/{enterprise}/Users", "GET /scim/v2/organizations/{org}/Users", "GET /search/code", "GET /search/commits", "GET /search/issues", "GET /search/labels", "GET /search/repositories", "GET /search/topics", "GET /search/users", "GET /teams/{team_id}/discussions", "GET /teams/{team_id}/discussions/{discussion_number}/comments", "GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", "GET /teams/{team_id}/discussions/{discussion_number}/reactions", "GET /teams/{team_id}/invitations", "GET /teams/{team_id}/members", "GET /teams/{team_id}/projects", "GET /teams/{team_id}/repos", "GET /teams/{team_id}/team-sync/group-mappings", "GET /teams/{team_id}/teams", "GET /user/blocks", "GET /user/emails", "GET /user/followers", "GET /user/following", "GET /user/gpg_keys", "GET /user/installations", "GET /user/installations/{installation_id}/repositories", "GET /user/issues", "GET /user/keys", "GET /user/marketplace_purchases", "GET /user/marketplace_purchases/stubbed", "GET /user/memberships/orgs", "GET /user/migrations", "GET /user/migrations/{migration_id}/repositories", "GET /user/orgs", "GET /user/public_emails", "GET /user/repos", "GET /user/repository_invitations", "GET /user/starred", "GET /user/subscriptions", "GET /user/teams", "GET /users", "GET /users/{username}/events", "GET /users/{username}/events/orgs/{org}", "GET /users/{username}/events/public", "GET /users/{username}/followers", "GET /users/{username}/following", "GET /users/{username}/gists", "GET /users/{username}/gpg_keys", "GET /users/{username}/keys", "GET /users/{username}/orgs", "GET /users/{username}/projects", "GET /users/{username}/received_events", "GET /users/{username}/received_events/public", "GET /users/{username}/repos", "GET /users/{username}/starred", "GET /users/{username}/subscriptions"];
+
+function isPaginatingEndpoint(arg) {
+  if (typeof arg === "string") {
+    return paginatingEndpoints.includes(arg);
+  } else {
+    return false;
+  }
+}
+
+/**
+ * @param octokit Octokit instance
+ * @param options Options passed to Octokit constructor
+ */
+
+function paginateRest(octokit) {
+  return {
+    paginate: Object.assign(paginate.bind(null, octokit), {
+      iterator: iterator.bind(null, octokit)
+    })
+  };
+}
+paginateRest.VERSION = VERSION;
+
+exports.composePaginateRest = composePaginateRest;
+exports.isPaginatingEndpoint = isPaginatingEndpoint;
+exports.paginateRest = paginateRest;
+exports.paginatingEndpoints = paginatingEndpoints;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 3044:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+const Endpoints = {
+  actions: {
+    addSelectedRepoToOrgSecret: ["PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}"],
+    cancelWorkflowRun: ["POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel"],
+    createOrUpdateEnvironmentSecret: ["PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}"],
+    createOrUpdateOrgSecret: ["PUT /orgs/{org}/actions/secrets/{secret_name}"],
+    createOrUpdateRepoSecret: ["PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}"],
+    createRegistrationTokenForOrg: ["POST /orgs/{org}/actions/runners/registration-token"],
+    createRegistrationTokenForRepo: ["POST /repos/{owner}/{repo}/actions/runners/registration-token"],
+    createRemoveTokenForOrg: ["POST /orgs/{org}/actions/runners/remove-token"],
+    createRemoveTokenForRepo: ["POST /repos/{owner}/{repo}/actions/runners/remove-token"],
+    createWorkflowDispatch: ["POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches"],
+    deleteArtifact: ["DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}"],
+    deleteEnvironmentSecret: ["DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}"],
+    deleteOrgSecret: ["DELETE /orgs/{org}/actions/secrets/{secret_name}"],
+    deleteRepoSecret: ["DELETE /repos/{owner}/{repo}/actions/secrets/{secret_name}"],
+    deleteSelfHostedRunnerFromOrg: ["DELETE /orgs/{org}/actions/runners/{runner_id}"],
+    deleteSelfHostedRunnerFromRepo: ["DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}"],
+    deleteWorkflowRun: ["DELETE /repos/{owner}/{repo}/actions/runs/{run_id}"],
+    deleteWorkflowRunLogs: ["DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs"],
+    disableSelectedRepositoryGithubActionsOrganization: ["DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}"],
+    disableWorkflow: ["PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable"],
+    downloadArtifact: ["GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}"],
+    downloadJobLogsForWorkflowRun: ["GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs"],
+    downloadWorkflowRunLogs: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs"],
+    enableSelectedRepositoryGithubActionsOrganization: ["PUT /orgs/{org}/actions/permissions/repositories/{repository_id}"],
+    enableWorkflow: ["PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable"],
+    getAllowedActionsOrganization: ["GET /orgs/{org}/actions/permissions/selected-actions"],
+    getAllowedActionsRepository: ["GET /repos/{owner}/{repo}/actions/permissions/selected-actions"],
+    getArtifact: ["GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}"],
+    getEnvironmentPublicKey: ["GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key"],
+    getEnvironmentSecret: ["GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}"],
+    getGithubActionsPermissionsOrganization: ["GET /orgs/{org}/actions/permissions"],
+    getGithubActionsPermissionsRepository: ["GET /repos/{owner}/{repo}/actions/permissions"],
+    getJobForWorkflowRun: ["GET /repos/{owner}/{repo}/actions/jobs/{job_id}"],
+    getOrgPublicKey: ["GET /orgs/{org}/actions/secrets/public-key"],
+    getOrgSecret: ["GET /orgs/{org}/actions/secrets/{secret_name}"],
+    getPendingDeploymentsForRun: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments"],
+    getRepoPermissions: ["GET /repos/{owner}/{repo}/actions/permissions", {}, {
+      renamed: ["actions", "getGithubActionsPermissionsRepository"]
+    }],
+    getRepoPublicKey: ["GET /repos/{owner}/{repo}/actions/secrets/public-key"],
+    getRepoSecret: ["GET /repos/{owner}/{repo}/actions/secrets/{secret_name}"],
+    getReviewsForRun: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals"],
+    getSelfHostedRunnerForOrg: ["GET /orgs/{org}/actions/runners/{runner_id}"],
+    getSelfHostedRunnerForRepo: ["GET /repos/{owner}/{repo}/actions/runners/{runner_id}"],
+    getWorkflow: ["GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}"],
+    getWorkflowRun: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}"],
+    getWorkflowRunUsage: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing"],
+    getWorkflowUsage: ["GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing"],
+    listArtifactsForRepo: ["GET /repos/{owner}/{repo}/actions/artifacts"],
+    listEnvironmentSecrets: ["GET /repositories/{repository_id}/environments/{environment_name}/secrets"],
+    listJobsForWorkflowRun: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs"],
+    listOrgSecrets: ["GET /orgs/{org}/actions/secrets"],
+    listRepoSecrets: ["GET /repos/{owner}/{repo}/actions/secrets"],
+    listRepoWorkflows: ["GET /repos/{owner}/{repo}/actions/workflows"],
+    listRunnerApplicationsForOrg: ["GET /orgs/{org}/actions/runners/downloads"],
+    listRunnerApplicationsForRepo: ["GET /repos/{owner}/{repo}/actions/runners/downloads"],
+    listSelectedReposForOrgSecret: ["GET /orgs/{org}/actions/secrets/{secret_name}/repositories"],
+    listSelectedRepositoriesEnabledGithubActionsOrganization: ["GET /orgs/{org}/actions/permissions/repositories"],
+    listSelfHostedRunnersForOrg: ["GET /orgs/{org}/actions/runners"],
+    listSelfHostedRunnersForRepo: ["GET /repos/{owner}/{repo}/actions/runners"],
+    listWorkflowRunArtifacts: ["GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts"],
+    listWorkflowRuns: ["GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs"],
+    listWorkflowRunsForRepo: ["GET /repos/{owner}/{repo}/actions/runs"],
+    reRunWorkflow: ["POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"],
+    removeSelectedRepoFromOrgSecret: ["DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}"],
+    reviewPendingDeploymentsForRun: ["POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments"],
+    setAllowedActionsOrganization: ["PUT /orgs/{org}/actions/permissions/selected-actions"],
+    setAllowedActionsRepository: ["PUT /repos/{owner}/{repo}/actions/permissions/selected-actions"],
+    setGithubActionsPermissionsOrganization: ["PUT /orgs/{org}/actions/permissions"],
+    setGithubActionsPermissionsRepository: ["PUT /repos/{owner}/{repo}/actions/permissions"],
+    setSelectedReposForOrgSecret: ["PUT /orgs/{org}/actions/secrets/{secret_name}/repositories"],
+    setSelectedRepositoriesEnabledGithubActionsOrganization: ["PUT /orgs/{org}/actions/permissions/repositories"]
+  },
+  activity: {
+    checkRepoIsStarredByAuthenticatedUser: ["GET /user/starred/{owner}/{repo}"],
+    deleteRepoSubscription: ["DELETE /repos/{owner}/{repo}/subscription"],
+    deleteThreadSubscription: ["DELETE /notifications/threads/{thread_id}/subscription"],
+    getFeeds: ["GET /feeds"],
+    getRepoSubscription: ["GET /repos/{owner}/{repo}/subscription"],
+    getThread: ["GET /notifications/threads/{thread_id}"],
+    getThreadSubscriptionForAuthenticatedUser: ["GET /notifications/threads/{thread_id}/subscription"],
+    listEventsForAuthenticatedUser: ["GET /users/{username}/events"],
+    listNotificationsForAuthenticatedUser: ["GET /notifications"],
+    listOrgEventsForAuthenticatedUser: ["GET /users/{username}/events/orgs/{org}"],
+    listPublicEvents: ["GET /events"],
+    listPublicEventsForRepoNetwork: ["GET /networks/{owner}/{repo}/events"],
+    listPublicEventsForUser: ["GET /users/{username}/events/public"],
+    listPublicOrgEvents: ["GET /orgs/{org}/events"],
+    listReceivedEventsForUser: ["GET /users/{username}/received_events"],
+    listReceivedPublicEventsForUser: ["GET /users/{username}/received_events/public"],
+    listRepoEvents: ["GET /repos/{owner}/{repo}/events"],
+    listRepoNotificationsForAuthenticatedUser: ["GET /repos/{owner}/{repo}/notifications"],
+    listReposStarredByAuthenticatedUser: ["GET /user/starred"],
+    listReposStarredByUser: ["GET /users/{username}/starred"],
+    listReposWatchedByUser: ["GET /users/{username}/subscriptions"],
+    listStargazersForRepo: ["GET /repos/{owner}/{repo}/stargazers"],
+    listWatchedReposForAuthenticatedUser: ["GET /user/subscriptions"],
+    listWatchersForRepo: ["GET /repos/{owner}/{repo}/subscribers"],
+    markNotificationsAsRead: ["PUT /notifications"],
+    markRepoNotificationsAsRead: ["PUT /repos/{owner}/{repo}/notifications"],
+    markThreadAsRead: ["PATCH /notifications/threads/{thread_id}"],
+    setRepoSubscription: ["PUT /repos/{owner}/{repo}/subscription"],
+    setThreadSubscription: ["PUT /notifications/threads/{thread_id}/subscription"],
+    starRepoForAuthenticatedUser: ["PUT /user/starred/{owner}/{repo}"],
+    unstarRepoForAuthenticatedUser: ["DELETE /user/starred/{owner}/{repo}"]
+  },
+  apps: {
+    addRepoToInstallation: ["PUT /user/installations/{installation_id}/repositories/{repository_id}"],
+    checkToken: ["POST /applications/{client_id}/token"],
+    createContentAttachment: ["POST /content_references/{content_reference_id}/attachments", {
+      mediaType: {
+        previews: ["corsair"]
+      }
+    }],
+    createFromManifest: ["POST /app-manifests/{code}/conversions"],
+    createInstallationAccessToken: ["POST /app/installations/{installation_id}/access_tokens"],
+    deleteAuthorization: ["DELETE /applications/{client_id}/grant"],
+    deleteInstallation: ["DELETE /app/installations/{installation_id}"],
+    deleteToken: ["DELETE /applications/{client_id}/token"],
+    getAuthenticated: ["GET /app"],
+    getBySlug: ["GET /apps/{app_slug}"],
+    getInstallation: ["GET /app/installations/{installation_id}"],
+    getOrgInstallation: ["GET /orgs/{org}/installation"],
+    getRepoInstallation: ["GET /repos/{owner}/{repo}/installation"],
+    getSubscriptionPlanForAccount: ["GET /marketplace_listing/accounts/{account_id}"],
+    getSubscriptionPlanForAccountStubbed: ["GET /marketplace_listing/stubbed/accounts/{account_id}"],
+    getUserInstallation: ["GET /users/{username}/installation"],
+    getWebhookConfigForApp: ["GET /app/hook/config"],
+    listAccountsForPlan: ["GET /marketplace_listing/plans/{plan_id}/accounts"],
+    listAccountsForPlanStubbed: ["GET /marketplace_listing/stubbed/plans/{plan_id}/accounts"],
+    listInstallationReposForAuthenticatedUser: ["GET /user/installations/{installation_id}/repositories"],
+    listInstallations: ["GET /app/installations"],
+    listInstallationsForAuthenticatedUser: ["GET /user/installations"],
+    listPlans: ["GET /marketplace_listing/plans"],
+    listPlansStubbed: ["GET /marketplace_listing/stubbed/plans"],
+    listReposAccessibleToInstallation: ["GET /installation/repositories"],
+    listSubscriptionsForAuthenticatedUser: ["GET /user/marketplace_purchases"],
+    listSubscriptionsForAuthenticatedUserStubbed: ["GET /user/marketplace_purchases/stubbed"],
+    removeRepoFromInstallation: ["DELETE /user/installations/{installation_id}/repositories/{repository_id}"],
+    resetToken: ["PATCH /applications/{client_id}/token"],
+    revokeInstallationAccessToken: ["DELETE /installation/token"],
+    scopeToken: ["POST /applications/{client_id}/token/scoped"],
+    suspendInstallation: ["PUT /app/installations/{installation_id}/suspended"],
+    unsuspendInstallation: ["DELETE /app/installations/{installation_id}/suspended"],
+    updateWebhookConfigForApp: ["PATCH /app/hook/config"]
+  },
+  billing: {
+    getGithubActionsBillingOrg: ["GET /orgs/{org}/settings/billing/actions"],
+    getGithubActionsBillingUser: ["GET /users/{username}/settings/billing/actions"],
+    getGithubPackagesBillingOrg: ["GET /orgs/{org}/settings/billing/packages"],
+    getGithubPackagesBillingUser: ["GET /users/{username}/settings/billing/packages"],
+    getSharedStorageBillingOrg: ["GET /orgs/{org}/settings/billing/shared-storage"],
+    getSharedStorageBillingUser: ["GET /users/{username}/settings/billing/shared-storage"]
+  },
+  checks: {
+    create: ["POST /repos/{owner}/{repo}/check-runs"],
+    createSuite: ["POST /repos/{owner}/{repo}/check-suites"],
+    get: ["GET /repos/{owner}/{repo}/check-runs/{check_run_id}"],
+    getSuite: ["GET /repos/{owner}/{repo}/check-suites/{check_suite_id}"],
+    listAnnotations: ["GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations"],
+    listForRef: ["GET /repos/{owner}/{repo}/commits/{ref}/check-runs"],
+    listForSuite: ["GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs"],
+    listSuitesForRef: ["GET /repos/{owner}/{repo}/commits/{ref}/check-suites"],
+    rerequestSuite: ["POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest"],
+    setSuitesPreferences: ["PATCH /repos/{owner}/{repo}/check-suites/preferences"],
+    update: ["PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}"]
+  },
+  codeScanning: {
+    deleteAnalysis: ["DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}{?confirm_delete}"],
+    getAlert: ["GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", {}, {
+      renamedParameters: {
+        alert_id: "alert_number"
+      }
+    }],
+    getAnalysis: ["GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}"],
+    getSarif: ["GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}"],
+    listAlertsForRepo: ["GET /repos/{owner}/{repo}/code-scanning/alerts"],
+    listAlertsInstances: ["GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances"],
+    listRecentAnalyses: ["GET /repos/{owner}/{repo}/code-scanning/analyses"],
+    updateAlert: ["PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}"],
+    uploadSarif: ["POST /repos/{owner}/{repo}/code-scanning/sarifs"]
+  },
+  codesOfConduct: {
+    getAllCodesOfConduct: ["GET /codes_of_conduct", {
+      mediaType: {
+        previews: ["scarlet-witch"]
+      }
+    }],
+    getConductCode: ["GET /codes_of_conduct/{key}", {
+      mediaType: {
+        previews: ["scarlet-witch"]
+      }
+    }],
+    getForRepo: ["GET /repos/{owner}/{repo}/community/code_of_conduct", {
+      mediaType: {
+        previews: ["scarlet-witch"]
+      }
+    }]
+  },
+  emojis: {
+    get: ["GET /emojis"]
+  },
+  enterpriseAdmin: {
+    disableSelectedOrganizationGithubActionsEnterprise: ["DELETE /enterprises/{enterprise}/actions/permissions/organizations/{org_id}"],
+    enableSelectedOrganizationGithubActionsEnterprise: ["PUT /enterprises/{enterprise}/actions/permissions/organizations/{org_id}"],
+    getAllowedActionsEnterprise: ["GET /enterprises/{enterprise}/actions/permissions/selected-actions"],
+    getGithubActionsPermissionsEnterprise: ["GET /enterprises/{enterprise}/actions/permissions"],
+    listSelectedOrganizationsEnabledGithubActionsEnterprise: ["GET /enterprises/{enterprise}/actions/permissions/organizations"],
+    setAllowedActionsEnterprise: ["PUT /enterprises/{enterprise}/actions/permissions/selected-actions"],
+    setGithubActionsPermissionsEnterprise: ["PUT /enterprises/{enterprise}/actions/permissions"],
+    setSelectedOrganizationsEnabledGithubActionsEnterprise: ["PUT /enterprises/{enterprise}/actions/permissions/organizations"]
+  },
+  gists: {
+    checkIsStarred: ["GET /gists/{gist_id}/star"],
+    create: ["POST /gists"],
+    createComment: ["POST /gists/{gist_id}/comments"],
+    delete: ["DELETE /gists/{gist_id}"],
+    deleteComment: ["DELETE /gists/{gist_id}/comments/{comment_id}"],
+    fork: ["POST /gists/{gist_id}/forks"],
+    get: ["GET /gists/{gist_id}"],
+    getComment: ["GET /gists/{gist_id}/comments/{comment_id}"],
+    getRevision: ["GET /gists/{gist_id}/{sha}"],
+    list: ["GET /gists"],
+    listComments: ["GET /gists/{gist_id}/comments"],
+    listCommits: ["GET /gists/{gist_id}/commits"],
+    listForUser: ["GET /users/{username}/gists"],
+    listForks: ["GET /gists/{gist_id}/forks"],
+    listPublic: ["GET /gists/public"],
+    listStarred: ["GET /gists/starred"],
+    star: ["PUT /gists/{gist_id}/star"],
+    unstar: ["DELETE /gists/{gist_id}/star"],
+    update: ["PATCH /gists/{gist_id}"],
+    updateComment: ["PATCH /gists/{gist_id}/comments/{comment_id}"]
+  },
+  git: {
+    createBlob: ["POST /repos/{owner}/{repo}/git/blobs"],
+    createCommit: ["POST /repos/{owner}/{repo}/git/commits"],
+    createRef: ["POST /repos/{owner}/{repo}/git/refs"],
+    createTag: ["POST /repos/{owner}/{repo}/git/tags"],
+    createTree: ["POST /repos/{owner}/{repo}/git/trees"],
+    deleteRef: ["DELETE /repos/{owner}/{repo}/git/refs/{ref}"],
+    getBlob: ["GET /repos/{owner}/{repo}/git/blobs/{file_sha}"],
+    getCommit: ["GET /repos/{owner}/{repo}/git/commits/{commit_sha}"],
+    getRef: ["GET /repos/{owner}/{repo}/git/ref/{ref}"],
+    getTag: ["GET /repos/{owner}/{repo}/git/tags/{tag_sha}"],
+    getTree: ["GET /repos/{owner}/{repo}/git/trees/{tree_sha}"],
+    listMatchingRefs: ["GET /repos/{owner}/{repo}/git/matching-refs/{ref}"],
+    updateRef: ["PATCH /repos/{owner}/{repo}/git/refs/{ref}"]
+  },
+  gitignore: {
+    getAllTemplates: ["GET /gitignore/templates"],
+    getTemplate: ["GET /gitignore/templates/{name}"]
+  },
+  interactions: {
+    getRestrictionsForAuthenticatedUser: ["GET /user/interaction-limits"],
+    getRestrictionsForOrg: ["GET /orgs/{org}/interaction-limits"],
+    getRestrictionsForRepo: ["GET /repos/{owner}/{repo}/interaction-limits"],
+    getRestrictionsForYourPublicRepos: ["GET /user/interaction-limits", {}, {
+      renamed: ["interactions", "getRestrictionsForAuthenticatedUser"]
+    }],
+    removeRestrictionsForAuthenticatedUser: ["DELETE /user/interaction-limits"],
+    removeRestrictionsForOrg: ["DELETE /orgs/{org}/interaction-limits"],
+    removeRestrictionsForRepo: ["DELETE /repos/{owner}/{repo}/interaction-limits"],
+    removeRestrictionsForYourPublicRepos: ["DELETE /user/interaction-limits", {}, {
+      renamed: ["interactions", "removeRestrictionsForAuthenticatedUser"]
+    }],
+    setRestrictionsForAuthenticatedUser: ["PUT /user/interaction-limits"],
+    setRestrictionsForOrg: ["PUT /orgs/{org}/interaction-limits"],
+    setRestrictionsForRepo: ["PUT /repos/{owner}/{repo}/interaction-limits"],
+    setRestrictionsForYourPublicRepos: ["PUT /user/interaction-limits", {}, {
+      renamed: ["interactions", "setRestrictionsForAuthenticatedUser"]
+    }]
+  },
+  issues: {
+    addAssignees: ["POST /repos/{owner}/{repo}/issues/{issue_number}/assignees"],
+    addLabels: ["POST /repos/{owner}/{repo}/issues/{issue_number}/labels"],
+    checkUserCanBeAssigned: ["GET /repos/{owner}/{repo}/assignees/{assignee}"],
+    create: ["POST /repos/{owner}/{repo}/issues"],
+    createComment: ["POST /repos/{owner}/{repo}/issues/{issue_number}/comments"],
+    createLabel: ["POST /repos/{owner}/{repo}/labels"],
+    createMilestone: ["POST /repos/{owner}/{repo}/milestones"],
+    deleteComment: ["DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}"],
+    deleteLabel: ["DELETE /repos/{owner}/{repo}/labels/{name}"],
+    deleteMilestone: ["DELETE /repos/{owner}/{repo}/milestones/{milestone_number}"],
+    get: ["GET /repos/{owner}/{repo}/issues/{issue_number}"],
+    getComment: ["GET /repos/{owner}/{repo}/issues/comments/{comment_id}"],
+    getEvent: ["GET /repos/{owner}/{repo}/issues/events/{event_id}"],
+    getLabel: ["GET /repos/{owner}/{repo}/labels/{name}"],
+    getMilestone: ["GET /repos/{owner}/{repo}/milestones/{milestone_number}"],
+    list: ["GET /issues"],
+    listAssignees: ["GET /repos/{owner}/{repo}/assignees"],
+    listComments: ["GET /repos/{owner}/{repo}/issues/{issue_number}/comments"],
+    listCommentsForRepo: ["GET /repos/{owner}/{repo}/issues/comments"],
+    listEvents: ["GET /repos/{owner}/{repo}/issues/{issue_number}/events"],
+    listEventsForRepo: ["GET /repos/{owner}/{repo}/issues/events"],
+    listEventsForTimeline: ["GET /repos/{owner}/{repo}/issues/{issue_number}/timeline", {
+      mediaType: {
+        previews: ["mockingbird"]
+      }
+    }],
+    listForAuthenticatedUser: ["GET /user/issues"],
+    listForOrg: ["GET /orgs/{org}/issues"],
+    listForRepo: ["GET /repos/{owner}/{repo}/issues"],
+    listLabelsForMilestone: ["GET /repos/{owner}/{repo}/milestones/{milestone_number}/labels"],
+    listLabelsForRepo: ["GET /repos/{owner}/{repo}/labels"],
+    listLabelsOnIssue: ["GET /repos/{owner}/{repo}/issues/{issue_number}/labels"],
+    listMilestones: ["GET /repos/{owner}/{repo}/milestones"],
+    lock: ["PUT /repos/{owner}/{repo}/issues/{issue_number}/lock"],
+    removeAllLabels: ["DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels"],
+    removeAssignees: ["DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees"],
+    removeLabel: ["DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}"],
+    setLabels: ["PUT /repos/{owner}/{repo}/issues/{issue_number}/labels"],
+    unlock: ["DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock"],
+    update: ["PATCH /repos/{owner}/{repo}/issues/{issue_number}"],
+    updateComment: ["PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}"],
+    updateLabel: ["PATCH /repos/{owner}/{repo}/labels/{name}"],
+    updateMilestone: ["PATCH /repos/{owner}/{repo}/milestones/{milestone_number}"]
+  },
+  licenses: {
+    get: ["GET /licenses/{license}"],
+    getAllCommonlyUsed: ["GET /licenses"],
+    getForRepo: ["GET /repos/{owner}/{repo}/license"]
+  },
+  markdown: {
+    render: ["POST /markdown"],
+    renderRaw: ["POST /markdown/raw", {
+      headers: {
+        "content-type": "text/plain; charset=utf-8"
+      }
+    }]
+  },
+  meta: {
+    get: ["GET /meta"],
+    getOctocat: ["GET /octocat"],
+    getZen: ["GET /zen"],
+    root: ["GET /"]
+  },
+  migrations: {
+    cancelImport: ["DELETE /repos/{owner}/{repo}/import"],
+    deleteArchiveForAuthenticatedUser: ["DELETE /user/migrations/{migration_id}/archive", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    deleteArchiveForOrg: ["DELETE /orgs/{org}/migrations/{migration_id}/archive", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    downloadArchiveForOrg: ["GET /orgs/{org}/migrations/{migration_id}/archive", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    getArchiveForAuthenticatedUser: ["GET /user/migrations/{migration_id}/archive", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    getCommitAuthors: ["GET /repos/{owner}/{repo}/import/authors"],
+    getImportStatus: ["GET /repos/{owner}/{repo}/import"],
+    getLargeFiles: ["GET /repos/{owner}/{repo}/import/large_files"],
+    getStatusForAuthenticatedUser: ["GET /user/migrations/{migration_id}", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    getStatusForOrg: ["GET /orgs/{org}/migrations/{migration_id}", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    listForAuthenticatedUser: ["GET /user/migrations", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    listForOrg: ["GET /orgs/{org}/migrations", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    listReposForOrg: ["GET /orgs/{org}/migrations/{migration_id}/repositories", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    listReposForUser: ["GET /user/migrations/{migration_id}/repositories", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    mapCommitAuthor: ["PATCH /repos/{owner}/{repo}/import/authors/{author_id}"],
+    setLfsPreference: ["PATCH /repos/{owner}/{repo}/import/lfs"],
+    startForAuthenticatedUser: ["POST /user/migrations"],
+    startForOrg: ["POST /orgs/{org}/migrations"],
+    startImport: ["PUT /repos/{owner}/{repo}/import"],
+    unlockRepoForAuthenticatedUser: ["DELETE /user/migrations/{migration_id}/repos/{repo_name}/lock", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    unlockRepoForOrg: ["DELETE /orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", {
+      mediaType: {
+        previews: ["wyandotte"]
+      }
+    }],
+    updateImport: ["PATCH /repos/{owner}/{repo}/import"]
+  },
+  orgs: {
+    blockUser: ["PUT /orgs/{org}/blocks/{username}"],
+    cancelInvitation: ["DELETE /orgs/{org}/invitations/{invitation_id}"],
+    checkBlockedUser: ["GET /orgs/{org}/blocks/{username}"],
+    checkMembershipForUser: ["GET /orgs/{org}/members/{username}"],
+    checkPublicMembershipForUser: ["GET /orgs/{org}/public_members/{username}"],
+    convertMemberToOutsideCollaborator: ["PUT /orgs/{org}/outside_collaborators/{username}"],
+    createInvitation: ["POST /orgs/{org}/invitations"],
+    createWebhook: ["POST /orgs/{org}/hooks"],
+    deleteWebhook: ["DELETE /orgs/{org}/hooks/{hook_id}"],
+    get: ["GET /orgs/{org}"],
+    getMembershipForAuthenticatedUser: ["GET /user/memberships/orgs/{org}"],
+    getMembershipForUser: ["GET /orgs/{org}/memberships/{username}"],
+    getWebhook: ["GET /orgs/{org}/hooks/{hook_id}"],
+    getWebhookConfigForOrg: ["GET /orgs/{org}/hooks/{hook_id}/config"],
+    list: ["GET /organizations"],
+    listAppInstallations: ["GET /orgs/{org}/installations"],
+    listBlockedUsers: ["GET /orgs/{org}/blocks"],
+    listFailedInvitations: ["GET /orgs/{org}/failed_invitations"],
+    listForAuthenticatedUser: ["GET /user/orgs"],
+    listForUser: ["GET /users/{username}/orgs"],
+    listInvitationTeams: ["GET /orgs/{org}/invitations/{invitation_id}/teams"],
+    listMembers: ["GET /orgs/{org}/members"],
+    listMembershipsForAuthenticatedUser: ["GET /user/memberships/orgs"],
+    listOutsideCollaborators: ["GET /orgs/{org}/outside_collaborators"],
+    listPendingInvitations: ["GET /orgs/{org}/invitations"],
+    listPublicMembers: ["GET /orgs/{org}/public_members"],
+    listWebhooks: ["GET /orgs/{org}/hooks"],
+    pingWebhook: ["POST /orgs/{org}/hooks/{hook_id}/pings"],
+    removeMember: ["DELETE /orgs/{org}/members/{username}"],
+    removeMembershipForUser: ["DELETE /orgs/{org}/memberships/{username}"],
+    removeOutsideCollaborator: ["DELETE /orgs/{org}/outside_collaborators/{username}"],
+    removePublicMembershipForAuthenticatedUser: ["DELETE /orgs/{org}/public_members/{username}"],
+    setMembershipForUser: ["PUT /orgs/{org}/memberships/{username}"],
+    setPublicMembershipForAuthenticatedUser: ["PUT /orgs/{org}/public_members/{username}"],
+    unblockUser: ["DELETE /orgs/{org}/blocks/{username}"],
+    update: ["PATCH /orgs/{org}"],
+    updateMembershipForAuthenticatedUser: ["PATCH /user/memberships/orgs/{org}"],
+    updateWebhook: ["PATCH /orgs/{org}/hooks/{hook_id}"],
+    updateWebhookConfigForOrg: ["PATCH /orgs/{org}/hooks/{hook_id}/config"]
+  },
+  packages: {
+    deletePackageForAuthenticatedUser: ["DELETE /user/packages/{package_type}/{package_name}"],
+    deletePackageForOrg: ["DELETE /orgs/{org}/packages/{package_type}/{package_name}"],
+    deletePackageVersionForAuthenticatedUser: ["DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}"],
+    deletePackageVersionForOrg: ["DELETE /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}"],
+    getAllPackageVersionsForAPackageOwnedByAnOrg: ["GET /orgs/{org}/packages/{package_type}/{package_name}/versions", {}, {
+      renamed: ["packages", "getAllPackageVersionsForPackageOwnedByOrg"]
+    }],
+    getAllPackageVersionsForAPackageOwnedByTheAuthenticatedUser: ["GET /user/packages/{package_type}/{package_name}/versions", {}, {
+      renamed: ["packages", "getAllPackageVersionsForPackageOwnedByAuthenticatedUser"]
+    }],
+    getAllPackageVersionsForPackageOwnedByAuthenticatedUser: ["GET /user/packages/{package_type}/{package_name}/versions"],
+    getAllPackageVersionsForPackageOwnedByOrg: ["GET /orgs/{org}/packages/{package_type}/{package_name}/versions"],
+    getAllPackageVersionsForPackageOwnedByUser: ["GET /users/{username}/packages/{package_type}/{package_name}/versions"],
+    getPackageForAuthenticatedUser: ["GET /user/packages/{package_type}/{package_name}"],
+    getPackageForOrganization: ["GET /orgs/{org}/packages/{package_type}/{package_name}"],
+    getPackageForUser: ["GET /users/{username}/packages/{package_type}/{package_name}"],
+    getPackageVersionForAuthenticatedUser: ["GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}"],
+    getPackageVersionForOrganization: ["GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}"],
+    getPackageVersionForUser: ["GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}"],
+    restorePackageForAuthenticatedUser: ["POST /user/packages/{package_type}/{package_name}/restore{?token}"],
+    restorePackageForOrg: ["POST /orgs/{org}/packages/{package_type}/{package_name}/restore{?token}"],
+    restorePackageVersionForAuthenticatedUser: ["POST /user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore"],
+    restorePackageVersionForOrg: ["POST /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore"]
+  },
+  projects: {
+    addCollaborator: ["PUT /projects/{project_id}/collaborators/{username}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    createCard: ["POST /projects/columns/{column_id}/cards", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    createColumn: ["POST /projects/{project_id}/columns", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    createForAuthenticatedUser: ["POST /user/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    createForOrg: ["POST /orgs/{org}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    createForRepo: ["POST /repos/{owner}/{repo}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    delete: ["DELETE /projects/{project_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    deleteCard: ["DELETE /projects/columns/cards/{card_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    deleteColumn: ["DELETE /projects/columns/{column_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    get: ["GET /projects/{project_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    getCard: ["GET /projects/columns/cards/{card_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    getColumn: ["GET /projects/columns/{column_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    getPermissionForUser: ["GET /projects/{project_id}/collaborators/{username}/permission", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listCards: ["GET /projects/columns/{column_id}/cards", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listCollaborators: ["GET /projects/{project_id}/collaborators", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listColumns: ["GET /projects/{project_id}/columns", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listForOrg: ["GET /orgs/{org}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listForRepo: ["GET /repos/{owner}/{repo}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listForUser: ["GET /users/{username}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    moveCard: ["POST /projects/columns/cards/{card_id}/moves", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    moveColumn: ["POST /projects/columns/{column_id}/moves", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    removeCollaborator: ["DELETE /projects/{project_id}/collaborators/{username}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    update: ["PATCH /projects/{project_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    updateCard: ["PATCH /projects/columns/cards/{card_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    updateColumn: ["PATCH /projects/columns/{column_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }]
+  },
+  pulls: {
+    checkIfMerged: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/merge"],
+    create: ["POST /repos/{owner}/{repo}/pulls"],
+    createReplyForReviewComment: ["POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies"],
+    createReview: ["POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews"],
+    createReviewComment: ["POST /repos/{owner}/{repo}/pulls/{pull_number}/comments"],
+    deletePendingReview: ["DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}"],
+    deleteReviewComment: ["DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}"],
+    dismissReview: ["PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals"],
+    get: ["GET /repos/{owner}/{repo}/pulls/{pull_number}"],
+    getReview: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}"],
+    getReviewComment: ["GET /repos/{owner}/{repo}/pulls/comments/{comment_id}"],
+    list: ["GET /repos/{owner}/{repo}/pulls"],
+    listCommentsForReview: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments"],
+    listCommits: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/commits"],
+    listFiles: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/files"],
+    listRequestedReviewers: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers"],
+    listReviewComments: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/comments"],
+    listReviewCommentsForRepo: ["GET /repos/{owner}/{repo}/pulls/comments"],
+    listReviews: ["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"],
+    merge: ["PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"],
+    removeRequestedReviewers: ["DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers"],
+    requestReviewers: ["POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers"],
+    submitReview: ["POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events"],
+    update: ["PATCH /repos/{owner}/{repo}/pulls/{pull_number}"],
+    updateBranch: ["PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch", {
+      mediaType: {
+        previews: ["lydian"]
+      }
+    }],
+    updateReview: ["PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}"],
+    updateReviewComment: ["PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}"]
+  },
+  rateLimit: {
+    get: ["GET /rate_limit"]
+  },
+  reactions: {
+    createForCommitComment: ["POST /repos/{owner}/{repo}/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    createForIssue: ["POST /repos/{owner}/{repo}/issues/{issue_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    createForIssueComment: ["POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    createForPullRequestReviewComment: ["POST /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    createForTeamDiscussionCommentInOrg: ["POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    createForTeamDiscussionInOrg: ["POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForCommitComment: ["DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForIssue: ["DELETE /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForIssueComment: ["DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForPullRequestComment: ["DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForTeamDiscussion: ["DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteForTeamDiscussionComment: ["DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    deleteLegacy: ["DELETE /reactions/{reaction_id}", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }, {
+      deprecated: "octokit.rest.reactions.deleteLegacy() is deprecated, see https://docs.github.com/rest/reference/reactions/#delete-a-reaction-legacy"
+    }],
+    listForCommitComment: ["GET /repos/{owner}/{repo}/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    listForIssue: ["GET /repos/{owner}/{repo}/issues/{issue_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    listForIssueComment: ["GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    listForPullRequestReviewComment: ["GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    listForTeamDiscussionCommentInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }],
+    listForTeamDiscussionInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions", {
+      mediaType: {
+        previews: ["squirrel-girl"]
+      }
+    }]
+  },
+  repos: {
+    acceptInvitation: ["PATCH /user/repository_invitations/{invitation_id}"],
+    addAppAccessRestrictions: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", {}, {
+      mapToData: "apps"
+    }],
+    addCollaborator: ["PUT /repos/{owner}/{repo}/collaborators/{username}"],
+    addStatusCheckContexts: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", {}, {
+      mapToData: "contexts"
+    }],
+    addTeamAccessRestrictions: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", {}, {
+      mapToData: "teams"
+    }],
+    addUserAccessRestrictions: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", {}, {
+      mapToData: "users"
+    }],
+    checkCollaborator: ["GET /repos/{owner}/{repo}/collaborators/{username}"],
+    checkVulnerabilityAlerts: ["GET /repos/{owner}/{repo}/vulnerability-alerts", {
+      mediaType: {
+        previews: ["dorian"]
+      }
+    }],
+    compareCommits: ["GET /repos/{owner}/{repo}/compare/{base}...{head}"],
+    createCommitComment: ["POST /repos/{owner}/{repo}/commits/{commit_sha}/comments"],
+    createCommitSignatureProtection: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", {
+      mediaType: {
+        previews: ["zzzax"]
+      }
+    }],
+    createCommitStatus: ["POST /repos/{owner}/{repo}/statuses/{sha}"],
+    createDeployKey: ["POST /repos/{owner}/{repo}/keys"],
+    createDeployment: ["POST /repos/{owner}/{repo}/deployments"],
+    createDeploymentStatus: ["POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses"],
+    createDispatchEvent: ["POST /repos/{owner}/{repo}/dispatches"],
+    createForAuthenticatedUser: ["POST /user/repos"],
+    createFork: ["POST /repos/{owner}/{repo}/forks"],
+    createInOrg: ["POST /orgs/{org}/repos"],
+    createOrUpdateEnvironment: ["PUT /repos/{owner}/{repo}/environments/{environment_name}"],
+    createOrUpdateFileContents: ["PUT /repos/{owner}/{repo}/contents/{path}"],
+    createPagesSite: ["POST /repos/{owner}/{repo}/pages", {
+      mediaType: {
+        previews: ["switcheroo"]
+      }
+    }],
+    createRelease: ["POST /repos/{owner}/{repo}/releases"],
+    createUsingTemplate: ["POST /repos/{template_owner}/{template_repo}/generate", {
+      mediaType: {
+        previews: ["baptiste"]
+      }
+    }],
+    createWebhook: ["POST /repos/{owner}/{repo}/hooks"],
+    declineInvitation: ["DELETE /user/repository_invitations/{invitation_id}"],
+    delete: ["DELETE /repos/{owner}/{repo}"],
+    deleteAccessRestrictions: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions"],
+    deleteAdminBranchProtection: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins"],
+    deleteAnEnvironment: ["DELETE /repos/{owner}/{repo}/environments/{environment_name}"],
+    deleteBranchProtection: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection"],
+    deleteCommitComment: ["DELETE /repos/{owner}/{repo}/comments/{comment_id}"],
+    deleteCommitSignatureProtection: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", {
+      mediaType: {
+        previews: ["zzzax"]
+      }
+    }],
+    deleteDeployKey: ["DELETE /repos/{owner}/{repo}/keys/{key_id}"],
+    deleteDeployment: ["DELETE /repos/{owner}/{repo}/deployments/{deployment_id}"],
+    deleteFile: ["DELETE /repos/{owner}/{repo}/contents/{path}"],
+    deleteInvitation: ["DELETE /repos/{owner}/{repo}/invitations/{invitation_id}"],
+    deletePagesSite: ["DELETE /repos/{owner}/{repo}/pages", {
+      mediaType: {
+        previews: ["switcheroo"]
+      }
+    }],
+    deletePullRequestReviewProtection: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews"],
+    deleteRelease: ["DELETE /repos/{owner}/{repo}/releases/{release_id}"],
+    deleteReleaseAsset: ["DELETE /repos/{owner}/{repo}/releases/assets/{asset_id}"],
+    deleteWebhook: ["DELETE /repos/{owner}/{repo}/hooks/{hook_id}"],
+    disableAutomatedSecurityFixes: ["DELETE /repos/{owner}/{repo}/automated-security-fixes", {
+      mediaType: {
+        previews: ["london"]
+      }
+    }],
+    disableVulnerabilityAlerts: ["DELETE /repos/{owner}/{repo}/vulnerability-alerts", {
+      mediaType: {
+        previews: ["dorian"]
+      }
+    }],
+    downloadArchive: ["GET /repos/{owner}/{repo}/zipball/{ref}", {}, {
+      renamed: ["repos", "downloadZipballArchive"]
+    }],
+    downloadTarballArchive: ["GET /repos/{owner}/{repo}/tarball/{ref}"],
+    downloadZipballArchive: ["GET /repos/{owner}/{repo}/zipball/{ref}"],
+    enableAutomatedSecurityFixes: ["PUT /repos/{owner}/{repo}/automated-security-fixes", {
+      mediaType: {
+        previews: ["london"]
+      }
+    }],
+    enableVulnerabilityAlerts: ["PUT /repos/{owner}/{repo}/vulnerability-alerts", {
+      mediaType: {
+        previews: ["dorian"]
+      }
+    }],
+    get: ["GET /repos/{owner}/{repo}"],
+    getAccessRestrictions: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions"],
+    getAdminBranchProtection: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins"],
+    getAllEnvironments: ["GET /repos/{owner}/{repo}/environments"],
+    getAllStatusCheckContexts: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts"],
+    getAllTopics: ["GET /repos/{owner}/{repo}/topics", {
+      mediaType: {
+        previews: ["mercy"]
+      }
+    }],
+    getAppsWithAccessToProtectedBranch: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps"],
+    getBranch: ["GET /repos/{owner}/{repo}/branches/{branch}"],
+    getBranchProtection: ["GET /repos/{owner}/{repo}/branches/{branch}/protection"],
+    getClones: ["GET /repos/{owner}/{repo}/traffic/clones"],
+    getCodeFrequencyStats: ["GET /repos/{owner}/{repo}/stats/code_frequency"],
+    getCollaboratorPermissionLevel: ["GET /repos/{owner}/{repo}/collaborators/{username}/permission"],
+    getCombinedStatusForRef: ["GET /repos/{owner}/{repo}/commits/{ref}/status"],
+    getCommit: ["GET /repos/{owner}/{repo}/commits/{ref}"],
+    getCommitActivityStats: ["GET /repos/{owner}/{repo}/stats/commit_activity"],
+    getCommitComment: ["GET /repos/{owner}/{repo}/comments/{comment_id}"],
+    getCommitSignatureProtection: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", {
+      mediaType: {
+        previews: ["zzzax"]
+      }
+    }],
+    getCommunityProfileMetrics: ["GET /repos/{owner}/{repo}/community/profile"],
+    getContent: ["GET /repos/{owner}/{repo}/contents/{path}"],
+    getContributorsStats: ["GET /repos/{owner}/{repo}/stats/contributors"],
+    getDeployKey: ["GET /repos/{owner}/{repo}/keys/{key_id}"],
+    getDeployment: ["GET /repos/{owner}/{repo}/deployments/{deployment_id}"],
+    getDeploymentStatus: ["GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}"],
+    getEnvironment: ["GET /repos/{owner}/{repo}/environments/{environment_name}"],
+    getLatestPagesBuild: ["GET /repos/{owner}/{repo}/pages/builds/latest"],
+    getLatestRelease: ["GET /repos/{owner}/{repo}/releases/latest"],
+    getPages: ["GET /repos/{owner}/{repo}/pages"],
+    getPagesBuild: ["GET /repos/{owner}/{repo}/pages/builds/{build_id}"],
+    getPagesHealthCheck: ["GET /repos/{owner}/{repo}/pages/health"],
+    getParticipationStats: ["GET /repos/{owner}/{repo}/stats/participation"],
+    getPullRequestReviewProtection: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews"],
+    getPunchCardStats: ["GET /repos/{owner}/{repo}/stats/punch_card"],
+    getReadme: ["GET /repos/{owner}/{repo}/readme"],
+    getReadmeInDirectory: ["GET /repos/{owner}/{repo}/readme/{dir}"],
+    getRelease: ["GET /repos/{owner}/{repo}/releases/{release_id}"],
+    getReleaseAsset: ["GET /repos/{owner}/{repo}/releases/assets/{asset_id}"],
+    getReleaseByTag: ["GET /repos/{owner}/{repo}/releases/tags/{tag}"],
+    getStatusChecksProtection: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks"],
+    getTeamsWithAccessToProtectedBranch: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams"],
+    getTopPaths: ["GET /repos/{owner}/{repo}/traffic/popular/paths"],
+    getTopReferrers: ["GET /repos/{owner}/{repo}/traffic/popular/referrers"],
+    getUsersWithAccessToProtectedBranch: ["GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users"],
+    getViews: ["GET /repos/{owner}/{repo}/traffic/views"],
+    getWebhook: ["GET /repos/{owner}/{repo}/hooks/{hook_id}"],
+    getWebhookConfigForRepo: ["GET /repos/{owner}/{repo}/hooks/{hook_id}/config"],
+    listBranches: ["GET /repos/{owner}/{repo}/branches"],
+    listBranchesForHeadCommit: ["GET /repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head", {
+      mediaType: {
+        previews: ["groot"]
+      }
+    }],
+    listCollaborators: ["GET /repos/{owner}/{repo}/collaborators"],
+    listCommentsForCommit: ["GET /repos/{owner}/{repo}/commits/{commit_sha}/comments"],
+    listCommitCommentsForRepo: ["GET /repos/{owner}/{repo}/comments"],
+    listCommitStatusesForRef: ["GET /repos/{owner}/{repo}/commits/{ref}/statuses"],
+    listCommits: ["GET /repos/{owner}/{repo}/commits"],
+    listContributors: ["GET /repos/{owner}/{repo}/contributors"],
+    listDeployKeys: ["GET /repos/{owner}/{repo}/keys"],
+    listDeploymentStatuses: ["GET /repos/{owner}/{repo}/deployments/{deployment_id}/statuses"],
+    listDeployments: ["GET /repos/{owner}/{repo}/deployments"],
+    listForAuthenticatedUser: ["GET /user/repos"],
+    listForOrg: ["GET /orgs/{org}/repos"],
+    listForUser: ["GET /users/{username}/repos"],
+    listForks: ["GET /repos/{owner}/{repo}/forks"],
+    listInvitations: ["GET /repos/{owner}/{repo}/invitations"],
+    listInvitationsForAuthenticatedUser: ["GET /user/repository_invitations"],
+    listLanguages: ["GET /repos/{owner}/{repo}/languages"],
+    listPagesBuilds: ["GET /repos/{owner}/{repo}/pages/builds"],
+    listPublic: ["GET /repositories"],
+    listPullRequestsAssociatedWithCommit: ["GET /repos/{owner}/{repo}/commits/{commit_sha}/pulls", {
+      mediaType: {
+        previews: ["groot"]
+      }
+    }],
+    listReleaseAssets: ["GET /repos/{owner}/{repo}/releases/{release_id}/assets"],
+    listReleases: ["GET /repos/{owner}/{repo}/releases"],
+    listTags: ["GET /repos/{owner}/{repo}/tags"],
+    listTeams: ["GET /repos/{owner}/{repo}/teams"],
+    listWebhooks: ["GET /repos/{owner}/{repo}/hooks"],
+    merge: ["POST /repos/{owner}/{repo}/merges"],
+    pingWebhook: ["POST /repos/{owner}/{repo}/hooks/{hook_id}/pings"],
+    removeAppAccessRestrictions: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", {}, {
+      mapToData: "apps"
+    }],
+    removeCollaborator: ["DELETE /repos/{owner}/{repo}/collaborators/{username}"],
+    removeStatusCheckContexts: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", {}, {
+      mapToData: "contexts"
+    }],
+    removeStatusCheckProtection: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks"],
+    removeTeamAccessRestrictions: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", {}, {
+      mapToData: "teams"
+    }],
+    removeUserAccessRestrictions: ["DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", {}, {
+      mapToData: "users"
+    }],
+    renameBranch: ["POST /repos/{owner}/{repo}/branches/{branch}/rename"],
+    replaceAllTopics: ["PUT /repos/{owner}/{repo}/topics", {
+      mediaType: {
+        previews: ["mercy"]
+      }
+    }],
+    requestPagesBuild: ["POST /repos/{owner}/{repo}/pages/builds"],
+    setAdminBranchProtection: ["POST /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins"],
+    setAppAccessRestrictions: ["PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", {}, {
+      mapToData: "apps"
+    }],
+    setStatusCheckContexts: ["PUT /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", {}, {
+      mapToData: "contexts"
+    }],
+    setTeamAccessRestrictions: ["PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", {}, {
+      mapToData: "teams"
+    }],
+    setUserAccessRestrictions: ["PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", {}, {
+      mapToData: "users"
+    }],
+    testPushWebhook: ["POST /repos/{owner}/{repo}/hooks/{hook_id}/tests"],
+    transfer: ["POST /repos/{owner}/{repo}/transfer"],
+    update: ["PATCH /repos/{owner}/{repo}"],
+    updateBranchProtection: ["PUT /repos/{owner}/{repo}/branches/{branch}/protection"],
+    updateCommitComment: ["PATCH /repos/{owner}/{repo}/comments/{comment_id}"],
+    updateInformationAboutPagesSite: ["PUT /repos/{owner}/{repo}/pages"],
+    updateInvitation: ["PATCH /repos/{owner}/{repo}/invitations/{invitation_id}"],
+    updatePullRequestReviewProtection: ["PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews"],
+    updateRelease: ["PATCH /repos/{owner}/{repo}/releases/{release_id}"],
+    updateReleaseAsset: ["PATCH /repos/{owner}/{repo}/releases/assets/{asset_id}"],
+    updateStatusCheckPotection: ["PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", {}, {
+      renamed: ["repos", "updateStatusCheckProtection"]
+    }],
+    updateStatusCheckProtection: ["PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks"],
+    updateWebhook: ["PATCH /repos/{owner}/{repo}/hooks/{hook_id}"],
+    updateWebhookConfigForRepo: ["PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config"],
+    uploadReleaseAsset: ["POST /repos/{owner}/{repo}/releases/{release_id}/assets{?name,label}", {
+      baseUrl: "https://uploads.github.com"
+    }]
+  },
+  search: {
+    code: ["GET /search/code"],
+    commits: ["GET /search/commits", {
+      mediaType: {
+        previews: ["cloak"]
+      }
+    }],
+    issuesAndPullRequests: ["GET /search/issues"],
+    labels: ["GET /search/labels"],
+    repos: ["GET /search/repositories"],
+    topics: ["GET /search/topics", {
+      mediaType: {
+        previews: ["mercy"]
+      }
+    }],
+    users: ["GET /search/users"]
+  },
+  secretScanning: {
+    getAlert: ["GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"],
+    listAlertsForRepo: ["GET /repos/{owner}/{repo}/secret-scanning/alerts"],
+    updateAlert: ["PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}"]
+  },
+  teams: {
+    addOrUpdateMembershipForUserInOrg: ["PUT /orgs/{org}/teams/{team_slug}/memberships/{username}"],
+    addOrUpdateProjectPermissionsInOrg: ["PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    addOrUpdateRepoPermissionsInOrg: ["PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}"],
+    checkPermissionsForProjectInOrg: ["GET /orgs/{org}/teams/{team_slug}/projects/{project_id}", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    checkPermissionsForRepoInOrg: ["GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}"],
+    create: ["POST /orgs/{org}/teams"],
+    createDiscussionCommentInOrg: ["POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments"],
+    createDiscussionInOrg: ["POST /orgs/{org}/teams/{team_slug}/discussions"],
+    deleteDiscussionCommentInOrg: ["DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}"],
+    deleteDiscussionInOrg: ["DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}"],
+    deleteInOrg: ["DELETE /orgs/{org}/teams/{team_slug}"],
+    getByName: ["GET /orgs/{org}/teams/{team_slug}"],
+    getDiscussionCommentInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}"],
+    getDiscussionInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}"],
+    getMembershipForUserInOrg: ["GET /orgs/{org}/teams/{team_slug}/memberships/{username}"],
+    list: ["GET /orgs/{org}/teams"],
+    listChildInOrg: ["GET /orgs/{org}/teams/{team_slug}/teams"],
+    listDiscussionCommentsInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments"],
+    listDiscussionsInOrg: ["GET /orgs/{org}/teams/{team_slug}/discussions"],
+    listForAuthenticatedUser: ["GET /user/teams"],
+    listMembersInOrg: ["GET /orgs/{org}/teams/{team_slug}/members"],
+    listPendingInvitationsInOrg: ["GET /orgs/{org}/teams/{team_slug}/invitations"],
+    listProjectsInOrg: ["GET /orgs/{org}/teams/{team_slug}/projects", {
+      mediaType: {
+        previews: ["inertia"]
+      }
+    }],
+    listReposInOrg: ["GET /orgs/{org}/teams/{team_slug}/repos"],
+    removeMembershipForUserInOrg: ["DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}"],
+    removeProjectInOrg: ["DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}"],
+    removeRepoInOrg: ["DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}"],
+    updateDiscussionCommentInOrg: ["PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}"],
+    updateDiscussionInOrg: ["PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}"],
+    updateInOrg: ["PATCH /orgs/{org}/teams/{team_slug}"]
+  },
+  users: {
+    addEmailForAuthenticated: ["POST /user/emails"],
+    block: ["PUT /user/blocks/{username}"],
+    checkBlocked: ["GET /user/blocks/{username}"],
+    checkFollowingForUser: ["GET /users/{username}/following/{target_user}"],
+    checkPersonIsFollowedByAuthenticated: ["GET /user/following/{username}"],
+    createGpgKeyForAuthenticated: ["POST /user/gpg_keys"],
+    createPublicSshKeyForAuthenticated: ["POST /user/keys"],
+    deleteEmailForAuthenticated: ["DELETE /user/emails"],
+    deleteGpgKeyForAuthenticated: ["DELETE /user/gpg_keys/{gpg_key_id}"],
+    deletePublicSshKeyForAuthenticated: ["DELETE /user/keys/{key_id}"],
+    follow: ["PUT /user/following/{username}"],
+    getAuthenticated: ["GET /user"],
+    getByUsername: ["GET /users/{username}"],
+    getContextForUser: ["GET /users/{username}/hovercard"],
+    getGpgKeyForAuthenticated: ["GET /user/gpg_keys/{gpg_key_id}"],
+    getPublicSshKeyForAuthenticated: ["GET /user/keys/{key_id}"],
+    list: ["GET /users"],
+    listBlockedByAuthenticated: ["GET /user/blocks"],
+    listEmailsForAuthenticated: ["GET /user/emails"],
+    listFollowedByAuthenticated: ["GET /user/following"],
+    listFollowersForAuthenticatedUser: ["GET /user/followers"],
+    listFollowersForUser: ["GET /users/{username}/followers"],
+    listFollowingForUser: ["GET /users/{username}/following"],
+    listGpgKeysForAuthenticated: ["GET /user/gpg_keys"],
+    listGpgKeysForUser: ["GET /users/{username}/gpg_keys"],
+    listPublicEmailsForAuthenticated: ["GET /user/public_emails"],
+    listPublicKeysForUser: ["GET /users/{username}/keys"],
+    listPublicSshKeysForAuthenticated: ["GET /user/keys"],
+    setPrimaryEmailVisibilityForAuthenticated: ["PATCH /user/email/visibility"],
+    unblock: ["DELETE /user/blocks/{username}"],
+    unfollow: ["DELETE /user/following/{username}"],
+    updateAuthenticated: ["PATCH /user"]
+  }
+};
+
+const VERSION = "5.1.1";
+
+function endpointsToMethods(octokit, endpointsMap) {
+  const newMethods = {};
+
+  for (const [scope, endpoints] of Object.entries(endpointsMap)) {
+    for (const [methodName, endpoint] of Object.entries(endpoints)) {
+      const [route, defaults, decorations] = endpoint;
+      const [method, url] = route.split(/ /);
+      const endpointDefaults = Object.assign({
+        method,
+        url
+      }, defaults);
+
+      if (!newMethods[scope]) {
+        newMethods[scope] = {};
+      }
+
+      const scopeMethods = newMethods[scope];
+
+      if (decorations) {
+        scopeMethods[methodName] = decorate(octokit, scope, methodName, endpointDefaults, decorations);
+        continue;
+      }
+
+      scopeMethods[methodName] = octokit.request.defaults(endpointDefaults);
+    }
+  }
+
+  return newMethods;
+}
+
+function decorate(octokit, scope, methodName, defaults, decorations) {
+  const requestWithDefaults = octokit.request.defaults(defaults);
+  /* istanbul ignore next */
+
+  function withDecorations(...args) {
+    // @ts-ignore https://github.com/microsoft/TypeScript/issues/25488
+    let options = requestWithDefaults.endpoint.merge(...args); // There are currently no other decorations than `.mapToData`
+
+    if (decorations.mapToData) {
+      options = Object.assign({}, options, {
+        data: options[decorations.mapToData],
+        [decorations.mapToData]: undefined
+      });
+      return requestWithDefaults(options);
+    }
+
+    if (decorations.renamed) {
+      const [newScope, newMethodName] = decorations.renamed;
+      octokit.log.warn(`octokit.${scope}.${methodName}() has been renamed to octokit.${newScope}.${newMethodName}()`);
+    }
+
+    if (decorations.deprecated) {
+      octokit.log.warn(decorations.deprecated);
+    }
+
+    if (decorations.renamedParameters) {
+      // @ts-ignore https://github.com/microsoft/TypeScript/issues/25488
+      const options = requestWithDefaults.endpoint.merge(...args);
+
+      for (const [name, alias] of Object.entries(decorations.renamedParameters)) {
+        if (name in options) {
+          octokit.log.warn(`"${name}" parameter is deprecated for "octokit.${scope}.${methodName}()". Use "${alias}" instead`);
+
+          if (!(alias in options)) {
+            options[alias] = options[name];
+          }
+
+          delete options[name];
+        }
+      }
+
+      return requestWithDefaults(options);
+    } // @ts-ignore https://github.com/microsoft/TypeScript/issues/25488
+
+
+    return requestWithDefaults(...args);
+  }
+
+  return Object.assign(withDecorations, requestWithDefaults);
+}
+
+function restEndpointMethods(octokit) {
+  const api = endpointsToMethods(octokit, Endpoints);
+  return {
+    rest: api
+  };
+}
+restEndpointMethods.VERSION = VERSION;
+function legacyRestEndpointMethods(octokit) {
+  const api = endpointsToMethods(octokit, Endpoints);
+  return _objectSpread2(_objectSpread2({}, api), {}, {
+    rest: api
+  });
+}
+legacyRestEndpointMethods.VERSION = VERSION;
+
+exports.legacyRestEndpointMethods = legacyRestEndpointMethods;
+exports.restEndpointMethods = restEndpointMethods;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 537:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var deprecation = __nccwpck_require__(8932);
+var once = _interopDefault(__nccwpck_require__(1223));
+
+const logOnce = once(deprecation => console.warn(deprecation));
+/**
+ * Error with extra properties to help with debugging
+ */
+
+class RequestError extends Error {
+  constructor(message, statusCode, options) {
+    super(message); // Maintains proper stack trace (only available on V8)
+
+    /* istanbul ignore next */
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+
+    this.name = "HttpError";
+    this.status = statusCode;
+    Object.defineProperty(this, "code", {
+      get() {
+        logOnce(new deprecation.Deprecation("[@octokit/request-error] `error.code` is deprecated, use `error.status`."));
+        return statusCode;
+      }
+
+    });
+    this.headers = options.headers || {}; // redact request credentials without mutating original request options
+
+    const requestCopy = Object.assign({}, options.request);
+
+    if (options.request.headers.authorization) {
+      requestCopy.headers = Object.assign({}, options.request.headers, {
+        authorization: options.request.headers.authorization.replace(/ .*$/, " [REDACTED]")
+      });
+    }
+
+    requestCopy.url = requestCopy.url // client_id & client_secret can be passed as URL query parameters to increase rate limit
+    // see https://developer.github.com/v3/#increasing-the-unauthenticated-rate-limit-for-oauth-applications
+    .replace(/\bclient_secret=\w+/g, "client_secret=[REDACTED]") // OAuth tokens can be passed as URL query parameters, although it is not recommended
+    // see https://developer.github.com/v3/#oauth2-token-sent-in-a-header
+    .replace(/\baccess_token=\w+/g, "access_token=[REDACTED]");
+    this.request = requestCopy;
+  }
+
+}
+
+exports.RequestError = RequestError;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 6234:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var endpoint = __nccwpck_require__(9440);
+var universalUserAgent = __nccwpck_require__(5030);
+var isPlainObject = __nccwpck_require__(9062);
+var nodeFetch = _interopDefault(__nccwpck_require__(467));
+var requestError = __nccwpck_require__(537);
+
+const VERSION = "5.4.15";
+
+function getBufferResponse(response) {
+  return response.arrayBuffer();
+}
+
+function fetchWrapper(requestOptions) {
+  if (isPlainObject.isPlainObject(requestOptions.body) || Array.isArray(requestOptions.body)) {
+    requestOptions.body = JSON.stringify(requestOptions.body);
+  }
+
+  let headers = {};
+  let status;
+  let url;
+  const fetch = requestOptions.request && requestOptions.request.fetch || nodeFetch;
+  return fetch(requestOptions.url, Object.assign({
+    method: requestOptions.method,
+    body: requestOptions.body,
+    headers: requestOptions.headers,
+    redirect: requestOptions.redirect
+  }, // `requestOptions.request.agent` type is incompatible
+  // see https://github.com/octokit/types.ts/pull/264
+  requestOptions.request)).then(response => {
+    url = response.url;
+    status = response.status;
+
+    for (const keyAndValue of response.headers) {
+      headers[keyAndValue[0]] = keyAndValue[1];
+    }
+
+    if (status === 204 || status === 205) {
+      return;
+    } // GitHub API returns 200 for HEAD requests
+
+
+    if (requestOptions.method === "HEAD") {
+      if (status < 400) {
+        return;
+      }
+
+      throw new requestError.RequestError(response.statusText, status, {
+        headers,
+        request: requestOptions
+      });
+    }
+
+    if (status === 304) {
+      throw new requestError.RequestError("Not modified", status, {
+        headers,
+        request: requestOptions
+      });
+    }
+
+    if (status >= 400) {
+      return response.text().then(message => {
+        const error = new requestError.RequestError(message, status, {
+          headers,
+          request: requestOptions
+        });
+
+        try {
+          let responseBody = JSON.parse(error.message);
+          Object.assign(error, responseBody);
+          let errors = responseBody.errors; // Assumption `errors` would always be in Array format
+
+          error.message = error.message + ": " + errors.map(JSON.stringify).join(", ");
+        } catch (e) {// ignore, see octokit/rest.js#684
+        }
+
+        throw error;
+      });
+    }
+
+    const contentType = response.headers.get("content-type");
+
+    if (/application\/json/.test(contentType)) {
+      return response.json();
+    }
+
+    if (!contentType || /^text\/|charset=utf-8$/.test(contentType)) {
+      return response.text();
+    }
+
+    return getBufferResponse(response);
+  }).then(data => {
+    return {
+      status,
+      url,
+      headers,
+      data
+    };
+  }).catch(error => {
+    if (error instanceof requestError.RequestError) {
+      throw error;
+    }
+
+    throw new requestError.RequestError(error.message, 500, {
+      headers,
+      request: requestOptions
+    });
+  });
+}
+
+function withDefaults(oldEndpoint, newDefaults) {
+  const endpoint = oldEndpoint.defaults(newDefaults);
+
+  const newApi = function (route, parameters) {
+    const endpointOptions = endpoint.merge(route, parameters);
+
+    if (!endpointOptions.request || !endpointOptions.request.hook) {
+      return fetchWrapper(endpoint.parse(endpointOptions));
+    }
+
+    const request = (route, parameters) => {
+      return fetchWrapper(endpoint.parse(endpoint.merge(route, parameters)));
+    };
+
+    Object.assign(request, {
+      endpoint,
+      defaults: withDefaults.bind(null, endpoint)
+    });
+    return endpointOptions.request.hook(request, endpointOptions);
+  };
+
+  return Object.assign(newApi, {
+    endpoint,
+    defaults: withDefaults.bind(null, endpoint)
+  });
+}
+
+const request = withDefaults(endpoint.endpoint, {
+  headers: {
+    "user-agent": `octokit-request.js/${VERSION} ${universalUserAgent.getUserAgent()}`
+  }
+});
+
+exports.request = request;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 9062:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+/*!
+ * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+function isObject(o) {
+  return Object.prototype.toString.call(o) === '[object Object]';
+}
+
+function isPlainObject(o) {
+  var ctor,prot;
+
+  if (isObject(o) === false) return false;
+
+  // If has modified constructor
+  ctor = o.constructor;
+  if (ctor === undefined) return true;
+
+  // If has modified prototype
+  prot = ctor.prototype;
+  if (isObject(prot) === false) return false;
+
+  // If constructor does not have an Object-specific method
+  if (prot.hasOwnProperty('isPrototypeOf') === false) {
+    return false;
+  }
+
+  // Most likely a plain Object
+  return true;
+}
+
+exports.isPlainObject = isPlainObject;
+
+
+/***/ }),
+
+/***/ 9417:
+/***/ ((module) => {
+
+"use strict";
+
+module.exports = balanced;
+function balanced(a, b, str) {
+  if (a instanceof RegExp) a = maybeMatch(a, str);
+  if (b instanceof RegExp) b = maybeMatch(b, str);
+
+  var r = range(a, b, str);
+
+  return r && {
+    start: r[0],
+    end: r[1],
+    pre: str.slice(0, r[0]),
+    body: str.slice(r[0] + a.length, r[1]),
+    post: str.slice(r[1] + b.length)
+  };
+}
+
+function maybeMatch(reg, str) {
+  var m = str.match(reg);
+  return m ? m[0] : null;
+}
+
+balanced.range = range;
+function range(a, b, str) {
+  var begs, beg, left, right, result;
+  var ai = str.indexOf(a);
+  var bi = str.indexOf(b, ai + 1);
+  var i = ai;
+
+  if (ai >= 0 && bi > 0) {
+    if(a===b) {
+      return [ai, bi];
+    }
+    begs = [];
+    left = str.length;
+
+    while (i >= 0 && !result) {
+      if (i == ai) {
+        begs.push(i);
+        ai = str.indexOf(a, i + 1);
+      } else if (begs.length == 1) {
+        result = [ begs.pop(), bi ];
+      } else {
+        beg = begs.pop();
+        if (beg < left) {
+          left = beg;
+          right = bi;
+        }
+
+        bi = str.indexOf(b, i + 1);
+      }
+
+      i = ai < bi && ai >= 0 ? ai : bi;
+    }
+
+    if (begs.length) {
+      result = [ left, right ];
+    }
+  }
+
+  return result;
+}
+
+
+/***/ }),
+
+/***/ 3682:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+var register = __nccwpck_require__(4670)
+var addHook = __nccwpck_require__(5549)
+var removeHook = __nccwpck_require__(6819)
+
+// bind with array of arguments: https://stackoverflow.com/a/21792913
+var bind = Function.bind
+var bindable = bind.bind(bind)
+
+function bindApi (hook, state, name) {
+  var removeHookRef = bindable(removeHook, null).apply(null, name ? [state, name] : [state])
+  hook.api = { remove: removeHookRef }
+  hook.remove = removeHookRef
+
+  ;['before', 'error', 'after', 'wrap'].forEach(function (kind) {
+    var args = name ? [state, kind, name] : [state, kind]
+    hook[kind] = hook.api[kind] = bindable(addHook, null).apply(null, args)
+  })
+}
+
+function HookSingular () {
+  var singularHookName = 'h'
+  var singularHookState = {
+    registry: {}
+  }
+  var singularHook = register.bind(null, singularHookState, singularHookName)
+  bindApi(singularHook, singularHookState, singularHookName)
+  return singularHook
+}
+
+function HookCollection () {
+  var state = {
+    registry: {}
+  }
+
+  var hook = register.bind(null, state)
+  bindApi(hook, state)
+
+  return hook
+}
+
+var collectionHookDeprecationMessageDisplayed = false
+function Hook () {
+  if (!collectionHookDeprecationMessageDisplayed) {
+    console.warn('[before-after-hook]: "Hook()" repurposing warning, use "Hook.Collection()". Read more: https://git.io/upgrade-before-after-hook-to-1.4')
+    collectionHookDeprecationMessageDisplayed = true
+  }
+  return HookCollection()
+}
+
+Hook.Singular = HookSingular.bind()
+Hook.Collection = HookCollection.bind()
+
+module.exports = Hook
+// expose constructors as a named property for TypeScript
+module.exports.Hook = Hook
+module.exports.Singular = Hook.Singular
+module.exports.Collection = Hook.Collection
+
+
+/***/ }),
+
+/***/ 5549:
+/***/ ((module) => {
+
+module.exports = addHook;
+
+function addHook(state, kind, name, hook) {
+  var orig = hook;
+  if (!state.registry[name]) {
+    state.registry[name] = [];
+  }
+
+  if (kind === "before") {
+    hook = function (method, options) {
+      return Promise.resolve()
+        .then(orig.bind(null, options))
+        .then(method.bind(null, options));
+    };
+  }
+
+  if (kind === "after") {
+    hook = function (method, options) {
+      var result;
+      return Promise.resolve()
+        .then(method.bind(null, options))
+        .then(function (result_) {
+          result = result_;
+          return orig(result, options);
+        })
+        .then(function () {
+          return result;
+        });
+    };
+  }
+
+  if (kind === "error") {
+    hook = function (method, options) {
+      return Promise.resolve()
+        .then(method.bind(null, options))
+        .catch(function (error) {
+          return orig(error, options);
+        });
+    };
+  }
+
+  state.registry[name].push({
+    hook: hook,
+    orig: orig,
+  });
+}
+
+
+/***/ }),
+
+/***/ 4670:
+/***/ ((module) => {
+
+module.exports = register;
+
+function register(state, name, method, options) {
+  if (typeof method !== "function") {
+    throw new Error("method for before hook must be a function");
+  }
+
+  if (!options) {
+    options = {};
+  }
+
+  if (Array.isArray(name)) {
+    return name.reverse().reduce(function (callback, name) {
+      return register.bind(null, state, name, callback, options);
+    }, method)();
+  }
+
+  return Promise.resolve().then(function () {
+    if (!state.registry[name]) {
+      return method(options);
+    }
+
+    return state.registry[name].reduce(function (method, registered) {
+      return registered.hook.bind(null, method, options);
+    }, method)();
+  });
+}
+
+
+/***/ }),
+
+/***/ 6819:
+/***/ ((module) => {
+
+module.exports = removeHook;
+
+function removeHook(state, name, method) {
+  if (!state.registry[name]) {
+    return;
+  }
+
+  var index = state.registry[name]
+    .map(function (registered) {
+      return registered.orig;
+    })
+    .indexOf(method);
+
+  if (index === -1) {
+    return;
+  }
+
+  state.registry[name].splice(index, 1);
+}
+
+
+/***/ }),
+
+/***/ 3717:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+var concatMap = __nccwpck_require__(6891);
+var balanced = __nccwpck_require__(9417);
+
+module.exports = expandTop;
+
+var escSlash = '\0SLASH'+Math.random()+'\0';
+var escOpen = '\0OPEN'+Math.random()+'\0';
+var escClose = '\0CLOSE'+Math.random()+'\0';
+var escComma = '\0COMMA'+Math.random()+'\0';
+var escPeriod = '\0PERIOD'+Math.random()+'\0';
+
+function numeric(str) {
+  return parseInt(str, 10) == str
+    ? parseInt(str, 10)
+    : str.charCodeAt(0);
+}
+
+function escapeBraces(str) {
+  return str.split('\\\\').join(escSlash)
+            .split('\\{').join(escOpen)
+            .split('\\}').join(escClose)
+            .split('\\,').join(escComma)
+            .split('\\.').join(escPeriod);
+}
+
+function unescapeBraces(str) {
+  return str.split(escSlash).join('\\')
+            .split(escOpen).join('{')
+            .split(escClose).join('}')
+            .split(escComma).join(',')
+            .split(escPeriod).join('.');
+}
+
+
+// Basically just str.split(","), but handling cases
+// where we have nested braced sections, which should be
+// treated as individual members, like {a,{b,c},d}
+function parseCommaParts(str) {
+  if (!str)
+    return [''];
+
+  var parts = [];
+  var m = balanced('{', '}', str);
+
+  if (!m)
+    return str.split(',');
+
+  var pre = m.pre;
+  var body = m.body;
+  var post = m.post;
+  var p = pre.split(',');
+
+  p[p.length-1] += '{' + body + '}';
+  var postParts = parseCommaParts(post);
+  if (post.length) {
+    p[p.length-1] += postParts.shift();
+    p.push.apply(p, postParts);
+  }
+
+  parts.push.apply(parts, p);
+
+  return parts;
+}
+
+function expandTop(str) {
+  if (!str)
+    return [];
+
+  // I don't know why Bash 4.3 does this, but it does.
+  // Anything starting with {} will have the first two bytes preserved
+  // but *only* at the top level, so {},a}b will not expand to anything,
+  // but a{},b}c will be expanded to [a}c,abc].
+  // One could argue that this is a bug in Bash, but since the goal of
+  // this module is to match Bash's rules, we escape a leading {}
+  if (str.substr(0, 2) === '{}') {
+    str = '\\{\\}' + str.substr(2);
+  }
+
+  return expand(escapeBraces(str), true).map(unescapeBraces);
+}
+
+function identity(e) {
+  return e;
+}
+
+function embrace(str) {
+  return '{' + str + '}';
+}
+function isPadded(el) {
+  return /^-?0\d/.test(el);
+}
+
+function lte(i, y) {
+  return i <= y;
+}
+function gte(i, y) {
+  return i >= y;
+}
+
+function expand(str, isTop) {
+  var expansions = [];
+
+  var m = balanced('{', '}', str);
+  if (!m || /\$$/.test(m.pre)) return [str];
+
+  var isNumericSequence = /^-?\d+\.\.-?\d+(?:\.\.-?\d+)?$/.test(m.body);
+  var isAlphaSequence = /^[a-zA-Z]\.\.[a-zA-Z](?:\.\.-?\d+)?$/.test(m.body);
+  var isSequence = isNumericSequence || isAlphaSequence;
+  var isOptions = m.body.indexOf(',') >= 0;
+  if (!isSequence && !isOptions) {
+    // {a},b}
+    if (m.post.match(/,.*\}/)) {
+      str = m.pre + '{' + m.body + escClose + m.post;
+      return expand(str);
+    }
+    return [str];
+  }
+
+  var n;
+  if (isSequence) {
+    n = m.body.split(/\.\./);
+  } else {
+    n = parseCommaParts(m.body);
+    if (n.length === 1) {
+      // x{{a,b}}y ==> x{a}y x{b}y
+      n = expand(n[0], false).map(embrace);
+      if (n.length === 1) {
+        var post = m.post.length
+          ? expand(m.post, false)
+          : [''];
+        return post.map(function(p) {
+          return m.pre + n[0] + p;
+        });
+      }
+    }
+  }
+
+  // at this point, n is the parts, and we know it's not a comma set
+  // with a single entry.
+
+  // no need to expand pre, since it is guaranteed to be free of brace-sets
+  var pre = m.pre;
+  var post = m.post.length
+    ? expand(m.post, false)
+    : [''];
+
+  var N;
+
+  if (isSequence) {
+    var x = numeric(n[0]);
+    var y = numeric(n[1]);
+    var width = Math.max(n[0].length, n[1].length)
+    var incr = n.length == 3
+      ? Math.abs(numeric(n[2]))
+      : 1;
+    var test = lte;
+    var reverse = y < x;
+    if (reverse) {
+      incr *= -1;
+      test = gte;
+    }
+    var pad = n.some(isPadded);
+
+    N = [];
+
+    for (var i = x; test(i, y); i += incr) {
+      var c;
+      if (isAlphaSequence) {
+        c = String.fromCharCode(i);
+        if (c === '\\')
+          c = '';
+      } else {
+        c = String(i);
+        if (pad) {
+          var need = width - c.length;
+          if (need > 0) {
+            var z = new Array(need + 1).join('0');
+            if (i < 0)
+              c = '-' + z + c.slice(1);
+            else
+              c = z + c;
+          }
+        }
+      }
+      N.push(c);
+    }
+  } else {
+    N = concatMap(n, function(el) { return expand(el, false) });
+  }
+
+  for (var j = 0; j < N.length; j++) {
+    for (var k = 0; k < post.length; k++) {
+      var expansion = pre + N[j] + post[k];
+      if (!isTop || isSequence || expansion)
+        expansions.push(expansion);
+    }
+  }
+
+  return expansions;
+}
+
+
+
+/***/ }),
+
+/***/ 6891:
+/***/ ((module) => {
+
+module.exports = function (xs, fn) {
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        var x = fn(xs[i], i);
+        if (isArray(x)) res.push.apply(res, x);
+        else res.push(x);
+    }
+    return res;
+};
+
+var isArray = Array.isArray || function (xs) {
+    return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+
+/***/ }),
+
+/***/ 6942:
+/***/ ((module) => {
+
+
+
+class ResizeableBuffer{
+  constructor(size=100){
+    this.size = size
+    this.length = 0
+    this.buf = Buffer.alloc(size)
+  }
+  prepend(val){
+    if(Buffer.isBuffer(val)){
+      const length = this.length + val.length
+      if(length >= this.size){
+        this.resize()
+        if(length >= this.size){
+          throw Error('INVALID_BUFFER_STATE')
+        }
+      }
+      const buf = this.buf
+      this.buf = Buffer.alloc(this.size)
+      val.copy(this.buf, 0)
+      buf.copy(this.buf, val.length)
+      this.length += val.length
+    }else{
+      const length = this.length++
+      if(length === this.size){
+        this.resize()
+      }
+      const buf = this.clone()
+      this.buf[0] = val
+      buf.copy(this.buf,1, 0, length)
+    }
+  }
+  append(val){
+    const length = this.length++
+    if(length === this.size){
+      this.resize()
+    }
+    this.buf[length] = val
+  }
+  clone(){
+    return Buffer.from(this.buf.slice(0, this.length))
+  }
+  resize(){
+    const length = this.length
+    this.size = this.size * 2
+    const buf = Buffer.alloc(this.size)
+    this.buf.copy(buf,0, 0, length)
+    this.buf = buf
+  }
+  toString(encoding){
+    if(encoding){
+      return this.buf.slice(0, this.length).toString(encoding)
+    }else{
+      return Uint8Array.prototype.slice.call(this.buf.slice(0, this.length))
+    }
+  }
+  toJSON(){
+    return this.toString('utf8')
+  }
+  reset(){
+    this.length = 0
+  }
+}
+
+module.exports = ResizeableBuffer
+
+
+/***/ }),
+
+/***/ 2830:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+
+/*
+CSV Parse
+
+Please look at the [project documentation](https://csv.js.org/parse/) for
+additional information.
+*/
+
+const { Transform } = __nccwpck_require__(2413)
+const ResizeableBuffer = __nccwpck_require__(6942)
+
+// white space characters
+// https://en.wikipedia.org/wiki/Whitespace_character
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes#Types
+// \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff
+const tab = 9
+const nl = 10 // \n, 0x0A in hexadecimal, 10 in decimal
+const np = 12
+const cr = 13 // \r, 0x0D in hexadécimal, 13 in decimal
+const space = 32
+const boms = {
+  // Note, the following are equals:
+  // Buffer.from("\ufeff")
+  // Buffer.from([239, 187, 191])
+  // Buffer.from('EFBBBF', 'hex')
+  'utf8': Buffer.from([239, 187, 191]),
+  // Note, the following are equals:
+  // Buffer.from "\ufeff", 'utf16le
+  // Buffer.from([255, 254])
+  'utf16le': Buffer.from([255, 254])
+}
+
+class Parser extends Transform {
+  constructor(opts = {}){
+    super({...{readableObjectMode: true}, ...opts, encoding: null})
+    this.__originalOptions = opts
+    this.__normalizeOptions(opts)
+  }
+  __normalizeOptions(opts){
+    const options = {}
+    // Merge with user options
+    for(let opt in opts){
+      options[underscore(opt)] = opts[opt]
+    }
+    // Normalize option `encoding`
+    // Note: defined first because other options depends on it
+    // to convert chars/strings into buffers.
+    if(options.encoding === undefined || options.encoding === true){
+      options.encoding = 'utf8'
+    }else if(options.encoding === null || options.encoding === false){
+      options.encoding = null
+    }else if(typeof options.encoding !== 'string' && options.encoding !== null){
+      throw new CsvError('CSV_INVALID_OPTION_ENCODING', [
+        'Invalid option encoding:',
+        'encoding must be a string or null to return a buffer,',
+        `got ${JSON.stringify(options.encoding)}`
+      ], options)
+    }
+    // Normalize option `bom`
+    if(options.bom === undefined || options.bom === null || options.bom === false){
+      options.bom = false
+    }else if(options.bom !== true){
+      throw new CsvError('CSV_INVALID_OPTION_BOM', [
+        'Invalid option bom:', 'bom must be true,',
+        `got ${JSON.stringify(options.bom)}`
+      ], options)
+    }
+    // Normalize option `cast`
+    let fnCastField = null
+    if(options.cast === undefined || options.cast === null || options.cast === false || options.cast === ''){
+      options.cast = undefined
+    }else if(typeof options.cast === 'function'){
+      fnCastField = options.cast
+      options.cast = true
+    }else if(options.cast !== true){
+      throw new CsvError('CSV_INVALID_OPTION_CAST', [
+        'Invalid option cast:', 'cast must be true or a function,',
+        `got ${JSON.stringify(options.cast)}`
+      ], options)
+    }
+    // Normalize option `cast_date`
+    if(options.cast_date === undefined || options.cast_date === null || options.cast_date === false || options.cast_date === ''){
+      options.cast_date = false
+    }else if(options.cast_date === true){
+      options.cast_date = function(value){
+        const date = Date.parse(value)
+        return !isNaN(date) ? new Date(date) : value
+      }
+    }else if(typeof options.cast_date !== 'function'){
+      throw new CsvError('CSV_INVALID_OPTION_CAST_DATE', [
+        'Invalid option cast_date:', 'cast_date must be true or a function,',
+        `got ${JSON.stringify(options.cast_date)}`
+      ], options)
+    }
+    // Normalize option `columns`
+    let fnFirstLineToHeaders = null
+    if(options.columns === true){
+      // Fields in the first line are converted as-is to columns
+      fnFirstLineToHeaders = undefined
+    }else if(typeof options.columns === 'function'){
+      fnFirstLineToHeaders = options.columns
+      options.columns = true
+    }else if(Array.isArray(options.columns)){
+      options.columns = normalizeColumnsArray(options.columns)
+    }else if(options.columns === undefined || options.columns === null || options.columns === false){
+      options.columns = false
+    }else{
+      throw new CsvError('CSV_INVALID_OPTION_COLUMNS', [
+        'Invalid option columns:',
+        'expect an array, a function or true,',
+        `got ${JSON.stringify(options.columns)}`
+      ], options)
+    }
+    // Normalize option `columns_duplicates_to_array`
+    if(options.columns_duplicates_to_array === undefined || options.columns_duplicates_to_array === null || options.columns_duplicates_to_array === false){
+      options.columns_duplicates_to_array = false
+    }else if(options.columns_duplicates_to_array !== true){
+      throw new CsvError('CSV_INVALID_OPTION_COLUMNS_DUPLICATES_TO_ARRAY', [
+        'Invalid option columns_duplicates_to_array:',
+        'expect an boolean,',
+        `got ${JSON.stringify(options.columns_duplicates_to_array)}`
+      ], options)
+    }else if(options.columns === false){
+      throw new CsvError('CSV_INVALID_OPTION_COLUMNS_DUPLICATES_TO_ARRAY', [
+        'Invalid option columns_duplicates_to_array:',
+        'the `columns` mode must be activated.'
+      ], options)
+    }
+    // Normalize option `comment`
+    if(options.comment === undefined || options.comment === null || options.comment === false || options.comment === ''){
+      options.comment = null
+    }else{
+      if(typeof options.comment === 'string'){
+        options.comment = Buffer.from(options.comment, options.encoding)
+      }
+      if(!Buffer.isBuffer(options.comment)){
+        throw new CsvError('CSV_INVALID_OPTION_COMMENT', [
+          'Invalid option comment:',
+          'comment must be a buffer or a string,',
+          `got ${JSON.stringify(options.comment)}`
+        ], options)
+      }
+    }
+    // Normalize option `delimiter`
+    const delimiter_json = JSON.stringify(options.delimiter)
+    if(!Array.isArray(options.delimiter)) options.delimiter = [options.delimiter]
+    if(options.delimiter.length === 0){
+      throw new CsvError('CSV_INVALID_OPTION_DELIMITER', [
+        'Invalid option delimiter:',
+        'delimiter must be a non empty string or buffer or array of string|buffer,',
+        `got ${delimiter_json}`
+      ], options)
+    }
+    options.delimiter = options.delimiter.map(function(delimiter){
+      if(delimiter === undefined || delimiter === null || delimiter === false){
+        return Buffer.from(',', options.encoding)
+      }
+      if(typeof delimiter === 'string'){
+        delimiter = Buffer.from(delimiter, options.encoding)
+      }
+      if( !Buffer.isBuffer(delimiter) || delimiter.length === 0){
+        throw new CsvError('CSV_INVALID_OPTION_DELIMITER', [
+          'Invalid option delimiter:',
+          'delimiter must be a non empty string or buffer or array of string|buffer,',
+          `got ${delimiter_json}`
+        ], options)
+      }
+      return delimiter
+    })
+    // Normalize option `escape`
+    if(options.escape === undefined || options.escape === true){
+      options.escape = Buffer.from('"', options.encoding)
+    }else if(typeof options.escape === 'string'){
+      options.escape = Buffer.from(options.escape, options.encoding)
+    }else if (options.escape === null || options.escape === false){
+      options.escape = null
+    }
+    if(options.escape !== null){
+      if(!Buffer.isBuffer(options.escape)){
+        throw new Error(`Invalid Option: escape must be a buffer, a string or a boolean, got ${JSON.stringify(options.escape)}`)
+      }
+    }
+    // Normalize option `from`
+    if(options.from === undefined || options.from === null){
+      options.from = 1
+    }else{
+      if(typeof options.from === 'string' && /\d+/.test(options.from)){
+        options.from = parseInt(options.from)
+      }
+      if(Number.isInteger(options.from)){
+        if(options.from < 0){
+          throw new Error(`Invalid Option: from must be a positive integer, got ${JSON.stringify(opts.from)}`)
+        }
+      }else{
+        throw new Error(`Invalid Option: from must be an integer, got ${JSON.stringify(options.from)}`)
+      }
+    }
+    // Normalize option `from_line`
+    if(options.from_line === undefined || options.from_line === null){
+      options.from_line = 1
+    }else{
+      if(typeof options.from_line === 'string' && /\d+/.test(options.from_line)){
+        options.from_line = parseInt(options.from_line)
+      }
+      if(Number.isInteger(options.from_line)){
+        if(options.from_line <= 0){
+          throw new Error(`Invalid Option: from_line must be a positive integer greater than 0, got ${JSON.stringify(opts.from_line)}`)
+        }
+      }else{
+        throw new Error(`Invalid Option: from_line must be an integer, got ${JSON.stringify(opts.from_line)}`)
+      }
+    }
+    // Normalize options `ignore_last_delimiters`
+    if(options.ignore_last_delimiters === undefined || options.ignore_last_delimiters === null){
+      options.ignore_last_delimiters = false
+    }else if(typeof options.ignore_last_delimiters === 'number'){
+      options.ignore_last_delimiters = Math.floor(options.ignore_last_delimiters)
+      if(options.ignore_last_delimiters === 0){
+        options.ignore_last_delimiters = false
+      }
+    }else if(typeof options.ignore_last_delimiters !== 'boolean'){
+      throw new CsvError('CSV_INVALID_OPTION_IGNORE_LAST_DELIMITERS', [
+        'Invalid option `ignore_last_delimiters`:',
+        'the value must be a boolean value or an integer,',
+        `got ${JSON.stringify(options.ignore_last_delimiters)}`
+      ], options)
+    }
+    if(options.ignore_last_delimiters === true && options.columns === false){
+      throw new CsvError('CSV_IGNORE_LAST_DELIMITERS_REQUIRES_COLUMNS', [
+        'The option `ignore_last_delimiters`',
+        'requires the activation of the `columns` option'
+      ], options)
+    }
+    // Normalize option `info`
+    if(options.info === undefined || options.info === null || options.info === false){
+      options.info = false
+    }else if(options.info !== true){
+      throw new Error(`Invalid Option: info must be true, got ${JSON.stringify(options.info)}`)
+    }
+    // Normalize option `max_record_size`
+    if(options.max_record_size === undefined || options.max_record_size === null || options.max_record_size === false){
+      options.max_record_size = 0
+    }else if(Number.isInteger(options.max_record_size) && options.max_record_size >= 0){
+      // Great, nothing to do
+    }else if(typeof options.max_record_size === 'string' && /\d+/.test(options.max_record_size)){
+      options.max_record_size = parseInt(options.max_record_size)
+    }else{
+      throw new Error(`Invalid Option: max_record_size must be a positive integer, got ${JSON.stringify(options.max_record_size)}`)
+    }
+    // Normalize option `objname`
+    if(options.objname === undefined || options.objname === null || options.objname === false){
+      options.objname = undefined
+    }else if(Buffer.isBuffer(options.objname)){
+      if(options.objname.length === 0){
+        throw new Error(`Invalid Option: objname must be a non empty buffer`)
+      }
+      if(options.encoding === null){
+        // Don't call `toString`, leave objname as a buffer
+      }else{
+        options.objname = options.objname.toString(options.encoding)
+      }
+    }else if(typeof options.objname === 'string'){
+      if(options.objname.length === 0){
+        throw new Error(`Invalid Option: objname must be a non empty string`)
+      }
+      // Great, nothing to do
+    }else{
+      throw new Error(`Invalid Option: objname must be a string or a buffer, got ${options.objname}`)
+    }
+    // Normalize option `on_record`
+    if(options.on_record === undefined || options.on_record === null){
+      options.on_record = undefined
+    }else if(typeof options.on_record !== 'function'){
+      throw new CsvError('CSV_INVALID_OPTION_ON_RECORD', [
+        'Invalid option `on_record`:',
+        'expect a function,',
+        `got ${JSON.stringify(options.on_record)}`
+      ], options)
+    }
+    // Normalize option `quote`
+    if(options.quote === null || options.quote === false || options.quote === ''){
+      options.quote = null
+    }else{
+      if(options.quote === undefined || options.quote === true){
+        options.quote = Buffer.from('"', options.encoding)
+      }else if(typeof options.quote === 'string'){
+        options.quote = Buffer.from(options.quote, options.encoding)
+      }
+      if(!Buffer.isBuffer(options.quote)){
+        throw new Error(`Invalid Option: quote must be a buffer or a string, got ${JSON.stringify(options.quote)}`)
+      }
+    }
+    // Normalize option `raw`
+    if(options.raw === undefined || options.raw === null || options.raw === false){
+      options.raw = false
+    }else if(options.raw !== true){
+      throw new Error(`Invalid Option: raw must be true, got ${JSON.stringify(options.raw)}`)
+    }
+    // Normalize option `record_delimiter`
+    if(!options.record_delimiter){
+      options.record_delimiter = []
+    }else if(!Array.isArray(options.record_delimiter)){
+      options.record_delimiter = [options.record_delimiter]
+    }
+    options.record_delimiter = options.record_delimiter.map( function(rd){
+      if(typeof rd === 'string'){
+        rd = Buffer.from(rd, options.encoding)
+      }
+      return rd
+    })
+    // Normalize option `relax`
+    if(typeof options.relax === 'boolean'){
+      // Great, nothing to do
+    }else if(options.relax === undefined || options.relax === null){
+      options.relax = false
+    }else{
+      throw new Error(`Invalid Option: relax must be a boolean, got ${JSON.stringify(options.relax)}`)
+    }
+    // Normalize option `relax_column_count`
+    if(typeof options.relax_column_count === 'boolean'){
+      // Great, nothing to do
+    }else if(options.relax_column_count === undefined || options.relax_column_count === null){
+      options.relax_column_count = false
+    }else{
+      throw new Error(`Invalid Option: relax_column_count must be a boolean, got ${JSON.stringify(options.relax_column_count)}`)
+    }
+    if(typeof options.relax_column_count_less === 'boolean'){
+      // Great, nothing to do
+    }else if(options.relax_column_count_less === undefined || options.relax_column_count_less === null){
+      options.relax_column_count_less = false
+    }else{
+      throw new Error(`Invalid Option: relax_column_count_less must be a boolean, got ${JSON.stringify(options.relax_column_count_less)}`)
+    }
+    if(typeof options.relax_column_count_more === 'boolean'){
+      // Great, nothing to do
+    }else if(options.relax_column_count_more === undefined || options.relax_column_count_more === null){
+      options.relax_column_count_more = false
+    }else{
+      throw new Error(`Invalid Option: relax_column_count_more must be a boolean, got ${JSON.stringify(options.relax_column_count_more)}`)
+    }
+    // Normalize option `skip_empty_lines`
+    if(typeof options.skip_empty_lines === 'boolean'){
+      // Great, nothing to do
+    }else if(options.skip_empty_lines === undefined || options.skip_empty_lines === null){
+      options.skip_empty_lines = false
+    }else{
+      throw new Error(`Invalid Option: skip_empty_lines must be a boolean, got ${JSON.stringify(options.skip_empty_lines)}`)
+    }
+    // Normalize option `skip_lines_with_empty_values`
+    if(typeof options.skip_lines_with_empty_values === 'boolean'){
+      // Great, nothing to do
+    }else if(options.skip_lines_with_empty_values === undefined || options.skip_lines_with_empty_values === null){
+      options.skip_lines_with_empty_values = false
+    }else{
+      throw new Error(`Invalid Option: skip_lines_with_empty_values must be a boolean, got ${JSON.stringify(options.skip_lines_with_empty_values)}`)
+    }
+    // Normalize option `skip_lines_with_error`
+    if(typeof options.skip_lines_with_error === 'boolean'){
+      // Great, nothing to do
+    }else if(options.skip_lines_with_error === undefined || options.skip_lines_with_error === null){
+      options.skip_lines_with_error = false
+    }else{
+      throw new Error(`Invalid Option: skip_lines_with_error must be a boolean, got ${JSON.stringify(options.skip_lines_with_error)}`)
+    }
+    // Normalize option `rtrim`
+    if(options.rtrim === undefined || options.rtrim === null || options.rtrim === false){
+      options.rtrim = false
+    }else if(options.rtrim !== true){
+      throw new Error(`Invalid Option: rtrim must be a boolean, got ${JSON.stringify(options.rtrim)}`)
+    }
+    // Normalize option `ltrim`
+    if(options.ltrim === undefined || options.ltrim === null || options.ltrim === false){
+      options.ltrim = false
+    }else if(options.ltrim !== true){
+      throw new Error(`Invalid Option: ltrim must be a boolean, got ${JSON.stringify(options.ltrim)}`)
+    }
+    // Normalize option `trim`
+    if(options.trim === undefined || options.trim === null || options.trim === false){
+      options.trim = false
+    }else if(options.trim !== true){
+      throw new Error(`Invalid Option: trim must be a boolean, got ${JSON.stringify(options.trim)}`)
+    }
+    // Normalize options `trim`, `ltrim` and `rtrim`
+    if(options.trim === true && opts.ltrim !== false){
+      options.ltrim = true
+    }else if(options.ltrim !== true){
+      options.ltrim = false
+    }
+    if(options.trim === true && opts.rtrim !== false){
+      options.rtrim = true
+    }else if(options.rtrim !== true){
+      options.rtrim = false
+    }
+    // Normalize option `to`
+    if(options.to === undefined || options.to === null){
+      options.to = -1
+    }else{
+      if(typeof options.to === 'string' && /\d+/.test(options.to)){
+        options.to = parseInt(options.to)
+      }
+      if(Number.isInteger(options.to)){
+        if(options.to <= 0){
+          throw new Error(`Invalid Option: to must be a positive integer greater than 0, got ${JSON.stringify(opts.to)}`)
+        }
+      }else{
+        throw new Error(`Invalid Option: to must be an integer, got ${JSON.stringify(opts.to)}`)
+      }
+    }
+    // Normalize option `to_line`
+    if(options.to_line === undefined || options.to_line === null){
+      options.to_line = -1
+    }else{
+      if(typeof options.to_line === 'string' && /\d+/.test(options.to_line)){
+        options.to_line = parseInt(options.to_line)
+      }
+      if(Number.isInteger(options.to_line)){
+        if(options.to_line <= 0){
+          throw new Error(`Invalid Option: to_line must be a positive integer greater than 0, got ${JSON.stringify(opts.to_line)}`)
+        }
+      }else{
+        throw new Error(`Invalid Option: to_line must be an integer, got ${JSON.stringify(opts.to_line)}`)
+      }
+    }
+    this.info = {
+      comment_lines: 0,
+      empty_lines: 0,
+      invalid_field_length: 0,
+      lines: 1,
+      records: 0
+    }
+    this.options = options
+    this.state = {
+      bomSkipped: false,
+      castField: fnCastField,
+      commenting: false,
+      // Current error encountered by a record
+      error: undefined,
+      enabled: options.from_line === 1,
+      escaping: false,
+      // escapeIsQuote: options.escape === options.quote,
+      escapeIsQuote: Buffer.isBuffer(options.escape) && Buffer.isBuffer(options.quote) && Buffer.compare(options.escape, options.quote) === 0,
+      // columns can be `false`, `true`, `Array`
+      expectedRecordLength: Array.isArray(options.columns) ? options.columns.length : undefined,
+      field: new ResizeableBuffer(20),
+      firstLineToHeaders: fnFirstLineToHeaders,
+      needMoreDataSize: Math.max(
+        // Skip if the remaining buffer smaller than comment
+        options.comment !== null ? options.comment.length : 0,
+        // Skip if the remaining buffer can be delimiter
+        ...options.delimiter.map( (delimiter) => delimiter.length),
+        // Skip if the remaining buffer can be escape sequence
+        options.quote !== null ? options.quote.length : 0,
+      ),
+      previousBuf: undefined,
+      quoting: false,
+      stop: false,
+      rawBuffer: new ResizeableBuffer(100),
+      record: [],
+      recordHasError: false,
+      record_length: 0,
+      recordDelimiterMaxLength: options.record_delimiter.length === 0 ? 2 : Math.max(...options.record_delimiter.map( (v) => v.length)),
+      trimChars: [Buffer.from(' ', options.encoding)[0], Buffer.from('\t', options.encoding)[0]],
+      wasQuoting: false,
+      wasRowDelimiter: false
+    }
+  }
+  // Implementation of `Transform._transform`
+  _transform(buf, encoding, callback){
+    if(this.state.stop === true){
+      return
+    }
+    const err = this.__parse(buf, false)
+    if(err !== undefined){
+      this.state.stop = true
+    }
+    callback(err)
+  }
+  // Implementation of `Transform._flush`
+  _flush(callback){
+    if(this.state.stop === true){
+      return
+    }
+    const err = this.__parse(undefined, true)
+    callback(err)
+  }
+  // Central parser implementation
+  __parse(nextBuf, end){
+    const {bom, comment, escape, from_line, ltrim, max_record_size, quote, raw, relax, rtrim, skip_empty_lines, to, to_line} = this.options
+    let {record_delimiter} = this.options
+    const {bomSkipped, previousBuf, rawBuffer, escapeIsQuote} = this.state
+    let buf
+    if(previousBuf === undefined){
+      if(nextBuf === undefined){
+        // Handle empty string
+        this.push(null)
+        return
+      }else{
+        buf = nextBuf
+      }
+    }else if(previousBuf !== undefined && nextBuf === undefined){
+      buf = previousBuf
+    }else{
+      buf = Buffer.concat([previousBuf, nextBuf])
+    }
+    // Handle UTF BOM
+    if(bomSkipped === false){
+      if(bom === false){
+        this.state.bomSkipped = true
+      }else if(buf.length < 3){
+        // No enough data
+        if(end === false){
+          // Wait for more data
+          this.state.previousBuf = buf
+          return
+        }
+      }else{
+        for(let encoding in boms){
+          if(boms[encoding].compare(buf, 0, boms[encoding].length) === 0){
+            // Skip BOM
+            buf = buf.slice(boms[encoding].length)
+            // Renormalize original options with the new encoding
+            this.__normalizeOptions({...this.__originalOptions, encoding: encoding})
+            break
+          }
+        }
+        this.state.bomSkipped = true
+      }
+    }
+    const bufLen = buf.length
+    let pos
+    for(pos = 0; pos < bufLen; pos++){
+      // Ensure we get enough space to look ahead
+      // There should be a way to move this out of the loop
+      if(this.__needMoreData(pos, bufLen, end)){
+        break
+      }
+      if(this.state.wasRowDelimiter === true){
+        this.info.lines++
+        this.state.wasRowDelimiter = false
+      }
+      if(to_line !== -1 && this.info.lines > to_line){
+        this.state.stop = true
+        this.push(null)
+        return
+      }
+      // Auto discovery of record_delimiter, unix, mac and windows supported
+      if(this.state.quoting === false && record_delimiter.length === 0){
+        const record_delimiterCount = this.__autoDiscoverRecordDelimiter(buf, pos)
+        if(record_delimiterCount){
+          record_delimiter = this.options.record_delimiter
+        }
+      }
+      const chr = buf[pos]
+      if(raw === true){
+        rawBuffer.append(chr)
+      }
+      if((chr === cr || chr === nl) && this.state.wasRowDelimiter === false ){
+        this.state.wasRowDelimiter = true
+      }
+      // Previous char was a valid escape char
+      // treat the current char as a regular char
+      if(this.state.escaping === true){
+        this.state.escaping = false
+      }else{
+        // Escape is only active inside quoted fields
+        // We are quoting, the char is an escape chr and there is a chr to escape
+        // if(escape !== null && this.state.quoting === true && chr === escape && pos + 1 < bufLen){
+        if(escape !== null && this.state.quoting === true && this.__isEscape(buf, pos, chr) && pos + escape.length < bufLen){
+          if(escapeIsQuote){
+            if(this.__isQuote(buf, pos+escape.length)){
+              this.state.escaping = true
+              pos += escape.length - 1
+              continue
+            }
+          }else{
+            this.state.escaping = true
+            pos += escape.length - 1
+            continue
+          }
+        }
+        // Not currently escaping and chr is a quote
+        // TODO: need to compare bytes instead of single char
+        if(this.state.commenting === false && this.__isQuote(buf, pos)){
+          if(this.state.quoting === true){
+            const nextChr = buf[pos+quote.length]
+            const isNextChrTrimable = rtrim && this.__isCharTrimable(nextChr)
+            const isNextChrComment = comment !== null && this.__compareBytes(comment, buf, pos+quote.length, nextChr)
+            const isNextChrDelimiter = this.__isDelimiter(buf, pos+quote.length, nextChr)
+            const isNextChrRecordDelimiter = record_delimiter.length === 0 ? this.__autoDiscoverRecordDelimiter(buf, pos+quote.length) : this.__isRecordDelimiter(nextChr, buf, pos+quote.length)
+            // Escape a quote
+            // Treat next char as a regular character
+            if(escape !== null && this.__isEscape(buf, pos, chr) && this.__isQuote(buf, pos + escape.length)){
+              pos += escape.length - 1
+            }else if(!nextChr || isNextChrDelimiter || isNextChrRecordDelimiter || isNextChrComment || isNextChrTrimable){
+              this.state.quoting = false
+              this.state.wasQuoting = true
+              pos += quote.length - 1
+              continue
+            }else if(relax === false){
+              const err = this.__error(
+                new CsvError('CSV_INVALID_CLOSING_QUOTE', [
+                  'Invalid Closing Quote:',
+                  `got "${String.fromCharCode(nextChr)}"`,
+                  `at line ${this.info.lines}`,
+                  'instead of delimiter, record delimiter, trimable character',
+                  '(if activated) or comment',
+                ], this.options, this.__infoField())
+              )
+              if(err !== undefined) return err
+            }else{
+              this.state.quoting = false
+              this.state.wasQuoting = true
+              this.state.field.prepend(quote)
+              pos += quote.length - 1
+            }
+          }else{
+            if(this.state.field.length !== 0){
+              // In relax mode, treat opening quote preceded by chrs as regular
+              if( relax === false ){
+                const err = this.__error(
+                  new CsvError('INVALID_OPENING_QUOTE', [
+                    'Invalid Opening Quote:',
+                    `a quote is found inside a field at line ${this.info.lines}`,
+                  ], this.options, this.__infoField(), {
+                    field: this.state.field,
+                  })
+                )
+                if(err !== undefined) return err
+              }
+            }else{
+              this.state.quoting = true
+              pos += quote.length - 1
+              continue
+            }
+          }
+        }
+        if(this.state.quoting === false){
+          let recordDelimiterLength = this.__isRecordDelimiter(chr, buf, pos)
+          if(recordDelimiterLength !== 0){
+            // Do not emit comments which take a full line
+            const skipCommentLine = this.state.commenting && (this.state.wasQuoting === false && this.state.record.length === 0 && this.state.field.length === 0)
+            if(skipCommentLine){
+              this.info.comment_lines++
+              // Skip full comment line
+            }else{
+              // Activate records emition if above from_line
+              if(this.state.enabled === false && this.info.lines + (this.state.wasRowDelimiter === true ? 1: 0) >= from_line){
+                this.state.enabled = true
+                this.__resetField()
+                this.__resetRecord()
+                pos += recordDelimiterLength - 1
+                continue
+              }
+              // Skip if line is empty and skip_empty_lines activated
+              if(skip_empty_lines === true && this.state.wasQuoting === false && this.state.record.length === 0 && this.state.field.length === 0){
+                this.info.empty_lines++
+                pos += recordDelimiterLength - 1
+                continue
+              }
+              const errField = this.__onField()
+              if(errField !== undefined) return errField
+              const errRecord = this.__onRecord()
+              if(errRecord !== undefined) return errRecord
+              if(to !== -1 && this.info.records >= to){
+                this.state.stop = true
+                this.push(null)
+                return
+              }
+            }
+            this.state.commenting = false
+            pos += recordDelimiterLength - 1
+            continue
+          }
+          if(this.state.commenting){
+            continue
+          }
+          const commentCount = comment === null ? 0 : this.__compareBytes(comment, buf, pos, chr)
+          if(commentCount !== 0){
+            this.state.commenting = true
+            continue
+          }
+          let delimiterLength = this.__isDelimiter(buf, pos, chr)
+          if(delimiterLength !== 0){
+            const errField = this.__onField()
+            if(errField !== undefined) return errField
+            pos += delimiterLength - 1
+            continue
+          }
+        }
+      }
+      if(this.state.commenting === false){
+        if(max_record_size !== 0 && this.state.record_length + this.state.field.length > max_record_size){
+          const err = this.__error(
+            new CsvError('CSV_MAX_RECORD_SIZE', [
+              'Max Record Size:',
+              'record exceed the maximum number of tolerated bytes',
+              `of ${max_record_size}`,
+              `at line ${this.info.lines}`,
+            ], this.options, this.__infoField())
+          )
+          if(err !== undefined) return err
+        }
+      }
+      const lappend = ltrim === false || this.state.quoting === true || this.state.field.length !== 0 || !this.__isCharTrimable(chr)
+      // rtrim in non quoting is handle in __onField
+      const rappend = rtrim === false || this.state.wasQuoting === false
+      if( lappend === true && rappend === true ){
+        this.state.field.append(chr)
+      }else if(rtrim === true && !this.__isCharTrimable(chr)){
+        const err = this.__error(
+          new CsvError('CSV_NON_TRIMABLE_CHAR_AFTER_CLOSING_QUOTE', [
+            'Invalid Closing Quote:',
+            'found non trimable byte after quote',
+            `at line ${this.info.lines}`,
+          ], this.options, this.__infoField())
+        )
+        if(err !== undefined) return err
+      }
+    }
+    if(end === true){
+      // Ensure we are not ending in a quoting state
+      if(this.state.quoting === true){
+        const err = this.__error(
+          new CsvError('CSV_QUOTE_NOT_CLOSED', [
+            'Quote Not Closed:',
+            `the parsing is finished with an opening quote at line ${this.info.lines}`,
+          ], this.options, this.__infoField())
+        )
+        if(err !== undefined) return err
+      }else{
+        // Skip last line if it has no characters
+        if(this.state.wasQuoting === true || this.state.record.length !== 0 || this.state.field.length !== 0){
+          const errField = this.__onField()
+          if(errField !== undefined) return errField
+          const errRecord = this.__onRecord()
+          if(errRecord !== undefined) return errRecord
+        }else if(this.state.wasRowDelimiter === true){
+          this.info.empty_lines++
+        }else if(this.state.commenting === true){
+          this.info.comment_lines++
+        }
+      }
+    }else{
+      this.state.previousBuf = buf.slice(pos)
+    }
+    if(this.state.wasRowDelimiter === true){
+      this.info.lines++
+      this.state.wasRowDelimiter = false
+    }
+  }
+  __onRecord(){
+    const {columns, columns_duplicates_to_array, encoding, info, from, relax_column_count, relax_column_count_less, relax_column_count_more, raw, skip_lines_with_empty_values} = this.options
+    const {enabled, record} = this.state
+    if(enabled === false){
+      return this.__resetRecord()
+    }
+    // Convert the first line into column names
+    const recordLength = record.length
+    if(columns === true){
+      if(skip_lines_with_empty_values === true && isRecordEmpty(record)){
+        this.__resetRecord()
+        return
+      }
+      return this.__firstLineToColumns(record)
+    }
+    if(columns === false && this.info.records === 0){
+      this.state.expectedRecordLength = recordLength
+    }
+    if(recordLength !== this.state.expectedRecordLength){
+      const err = columns === false ?
+        // Todo: rename CSV_INCONSISTENT_RECORD_LENGTH to
+        // CSV_RECORD_INCONSISTENT_FIELDS_LENGTH
+        new CsvError('CSV_INCONSISTENT_RECORD_LENGTH', [
+          'Invalid Record Length:',
+          `expect ${this.state.expectedRecordLength},`,
+          `got ${recordLength} on line ${this.info.lines}`,
+        ], this.options, this.__infoField(), {
+          record: record,
+        })
+      :
+        // Todo: rename CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH to
+        // CSV_RECORD_INCONSISTENT_COLUMNS
+        new CsvError('CSV_RECORD_DONT_MATCH_COLUMNS_LENGTH', [
+          'Invalid Record Length:',
+          `columns length is ${columns.length},`, // rename columns
+          `got ${recordLength} on line ${this.info.lines}`,
+        ], this.options, this.__infoField(), {
+          record: record,
+        })
+      if(relax_column_count === true ||
+        (relax_column_count_less === true && recordLength < this.state.expectedRecordLength) ||
+        (relax_column_count_more === true && recordLength > this.state.expectedRecordLength) ){
+        this.info.invalid_field_length++
+        this.state.error = err
+      // Error is undefined with skip_lines_with_error
+      }else{
+        const finalErr = this.__error(err)
+        if(finalErr) return finalErr
+      }
+    }
+    if(skip_lines_with_empty_values === true && isRecordEmpty(record)){
+      this.__resetRecord()
+      return
+    }
+    if(this.state.recordHasError === true){
+      this.__resetRecord()
+      this.state.recordHasError = false
+      return
+    }
+    this.info.records++
+    if(from === 1 || this.info.records >= from){
+      // With columns, records are object
+      if(columns !== false){
+        const obj = {}
+        // Transform record array to an object
+        for(let i = 0, l = record.length; i < l; i++){
+          if(columns[i] === undefined || columns[i].disabled) continue
+          // Turn duplicate columns into an array
+          if (columns_duplicates_to_array === true && obj[columns[i].name] !== undefined) {
+            if (Array.isArray(obj[columns[i].name])) {
+              obj[columns[i].name] = obj[columns[i].name].concat(record[i])
+            } else {
+              obj[columns[i].name] = [obj[columns[i].name], record[i]]
+            }
+          } else {
+            obj[columns[i].name] = record[i]
+          }
+        }
+        const {objname} = this.options
+        // Without objname (default)
+        if(objname === undefined){
+          if(raw === true || info === true){
+            const err = this.__push(Object.assign(
+              {record: obj},
+              (raw === true ? {raw: this.state.rawBuffer.toString(encoding)}: {}),
+              (info === true ? {info: this.__infoRecord()}: {})
+            ))
+            if(err){
+              return err
+            }
+          }else{
+            const err = this.__push(obj)
+            if(err){
+              return err
+            }
+          }
+        // With objname (default)
+        }else{
+          if(raw === true || info === true){
+            const err = this.__push(Object.assign(
+              {record: [obj[objname], obj]},
+              raw === true ? {raw: this.state.rawBuffer.toString(encoding)}: {},
+              info === true ? {info: this.__infoRecord()}: {}
+            ))
+            if(err){
+              return err
+            }
+          }else{
+            const err = this.__push([obj[objname], obj])
+            if(err){
+              return err
+            }
+          }
+        }
+      // Without columns, records are array
+      }else{
+        if(raw === true || info === true){
+          const err = this.__push(Object.assign(
+            {record: record},
+            raw === true ? {raw: this.state.rawBuffer.toString(encoding)}: {},
+            info === true ? {info: this.__infoRecord()}: {}
+          ))
+          if(err){
+            return err
+          }
+        }else{
+          const err = this.__push(record)
+          if(err){
+            return err
+          }
+        }
+      }
+    }
+    this.__resetRecord()
+  }
+  __firstLineToColumns(record){
+    const {firstLineToHeaders} = this.state
+    try{
+      const headers = firstLineToHeaders === undefined ? record : firstLineToHeaders.call(null, record)
+      if(!Array.isArray(headers)){
+        return this.__error(
+          new CsvError('CSV_INVALID_COLUMN_MAPPING', [
+            'Invalid Column Mapping:',
+            'expect an array from column function,',
+            `got ${JSON.stringify(headers)}`
+          ], this.options, this.__infoField(), {
+            headers: headers,
+          })
+        )
+      }
+      const normalizedHeaders = normalizeColumnsArray(headers)
+      this.state.expectedRecordLength = normalizedHeaders.length
+      this.options.columns = normalizedHeaders
+      this.__resetRecord()
+      return
+    }catch(err){
+      return err
+    }
+  }
+  __resetRecord(){
+    if(this.options.raw === true){
+      this.state.rawBuffer.reset()
+    }
+    this.state.error = undefined
+    this.state.record = []
+    this.state.record_length = 0
+  }
+  __onField(){
+    const {cast, encoding, rtrim, max_record_size} = this.options
+    const {enabled, wasQuoting} = this.state
+    // Short circuit for the from_line options
+    if(enabled === false){
+      return this.__resetField()
+    }
+    let field = this.state.field.toString(encoding)
+    if(rtrim === true && wasQuoting === false){
+      field = field.trimRight()
+    }
+    if(cast === true){
+      const [err, f] = this.__cast(field)
+      if(err !== undefined) return err
+      field = f
+    }
+    this.state.record.push(field)
+    // Increment record length if record size must not exceed a limit
+    if(max_record_size !== 0 && typeof field === 'string'){
+      this.state.record_length += field.length
+    }
+    this.__resetField()
+  }
+  __resetField(){
+    this.state.field.reset()
+    this.state.wasQuoting = false
+  }
+  __push(record){
+    const {on_record} = this.options
+    if(on_record !== undefined){
+      const info = this.__infoRecord()
+      try{
+        record = on_record.call(null, record, info)
+      }catch(err){
+        return err
+      }
+      if(record === undefined || record === null){ return }
+    }
+    this.push(record)
+  }
+  // Return a tuple with the error and the casted value
+  __cast(field){
+    const {columns, relax_column_count} = this.options
+    const isColumns = Array.isArray(columns)
+    // Dont loose time calling cast
+    // because the final record is an object
+    // and this field can't be associated to a key present in columns
+    if( isColumns === true && relax_column_count && this.options.columns.length <= this.state.record.length ){
+      return [undefined, undefined]
+    }
+    if(this.state.castField !== null){
+      try{
+        const info = this.__infoField()
+        return [undefined, this.state.castField.call(null, field, info)]
+      }catch(err){
+        return [err]
+      }
+    }
+    if(this.__isFloat(field)){
+      return [undefined, parseFloat(field)]
+    }else if(this.options.cast_date !== false){
+      const info = this.__infoField()
+      return [undefined, this.options.cast_date.call(null, field, info)]
+    }
+    return [undefined, field]
+  }
+  // Helper to test if a character is a space or a line delimiter
+  __isCharTrimable(chr){
+    return chr === space || chr === tab || chr === cr || chr === nl || chr === np
+  }
+  // Keep it in case we implement the `cast_int` option
+  // __isInt(value){
+  //   // return Number.isInteger(parseInt(value))
+  //   // return !isNaN( parseInt( obj ) );
+  //   return /^(\-|\+)?[1-9][0-9]*$/.test(value)
+  // }
+  __isFloat(value){
+    return (value - parseFloat( value ) + 1) >= 0 // Borrowed from jquery
+  }
+  __compareBytes(sourceBuf, targetBuf, targetPos, firstByte){
+    if(sourceBuf[0] !== firstByte) return 0
+    const sourceLength = sourceBuf.length
+    for(let i = 1; i < sourceLength; i++){
+      if(sourceBuf[i] !== targetBuf[targetPos+i]) return 0
+    }
+    return sourceLength
+  }
+  __needMoreData(i, bufLen, end){
+    if(end) return false
+    const {quote} = this.options
+    const {quoting, needMoreDataSize, recordDelimiterMaxLength} = this.state
+    const numOfCharLeft = bufLen - i - 1
+    const requiredLength = Math.max(
+      needMoreDataSize,
+      // Skip if the remaining buffer smaller than record delimiter
+      recordDelimiterMaxLength,
+      // Skip if the remaining buffer can be record delimiter following the closing quote
+      // 1 is for quote.length
+      quoting ? (quote.length + recordDelimiterMaxLength) : 0,
+    )
+    return numOfCharLeft < requiredLength
+  }
+  __isDelimiter(buf, pos, chr){
+    const {delimiter, ignore_last_delimiters} = this.options
+    if(ignore_last_delimiters === true && this.state.record.length === this.options.columns.length - 1){
+      return 0
+    }else if(ignore_last_delimiters !== false && typeof ignore_last_delimiters === 'number' && this.state.record.length === ignore_last_delimiters - 1){
+      return 0
+    }
+    loop1: for(let i = 0; i < delimiter.length; i++){
+      const del = delimiter[i]
+      if(del[0] === chr){
+        for(let j = 1; j < del.length; j++){
+          if(del[j] !== buf[pos+j]) continue loop1
+        }
+        return del.length
+      }
+    }
+    return 0
+  }
+  __isRecordDelimiter(chr, buf, pos){
+    const {record_delimiter} = this.options
+    const recordDelimiterLength = record_delimiter.length
+    loop1: for(let i = 0; i < recordDelimiterLength; i++){
+      const rd = record_delimiter[i]
+      const rdLength = rd.length
+      if(rd[0] !== chr){
+        continue
+      }
+      for(let j = 1; j < rdLength; j++){
+        if(rd[j] !== buf[pos+j]){
+          continue loop1
+        }
+      }
+      return rd.length
+    }
+    return 0
+  }
+  __isEscape(buf, pos, chr){
+    const {escape} = this.options
+    if(escape === null) return false
+    const l = escape.length
+    if(escape[0] === chr){
+      for(let i = 0; i < l; i++){
+        if(escape[i] !== buf[pos+i]){
+          return false
+        }
+      }
+      return true
+    }
+    return false
+  }
+  __isQuote(buf, pos){
+    const {quote} = this.options
+    if(quote === null) return false
+    const l = quote.length
+    for(let i = 0; i < l; i++){
+      if(quote[i] !== buf[pos+i]){
+        return false
+      }
+    }
+    return true
+  }
+  __autoDiscoverRecordDelimiter(buf, pos){
+    const {encoding} = this.options
+    const chr = buf[pos]
+    if(chr === cr){
+      if(buf[pos+1] === nl){
+        this.options.record_delimiter.push(Buffer.from('\r\n', encoding))
+        this.state.recordDelimiterMaxLength = 2
+        return 2
+      }else{
+        this.options.record_delimiter.push(Buffer.from('\r', encoding))
+        this.state.recordDelimiterMaxLength = 1
+        return 1
+      }
+    }else if(chr === nl){
+      this.options.record_delimiter.push(Buffer.from('\n', encoding))
+      this.state.recordDelimiterMaxLength = 1
+      return 1
+    }
+    return 0
+  }
+  __error(msg){
+    const {skip_lines_with_error} = this.options
+    const err = typeof msg === 'string' ? new Error(msg) : msg
+    if(skip_lines_with_error){
+      this.state.recordHasError = true
+      this.emit('skip', err)
+      return undefined
+    }else{
+      return err
+    }
+  }
+  __infoDataSet(){
+    return {
+      ...this.info,
+      columns: this.options.columns
+    }
+  }
+  __infoRecord(){
+    const {columns} = this.options
+    return {
+      ...this.__infoDataSet(),
+      error: this.state.error,
+      header: columns === true,
+      index: this.state.record.length,
+    }
+  }
+  __infoField(){
+    const {columns} = this.options
+    const isColumns = Array.isArray(columns)
+    return {
+      ...this.__infoRecord(),
+      column: isColumns === true ?
+        ( columns.length > this.state.record.length ?
+          columns[this.state.record.length].name :
+          null
+        ) :
+        this.state.record.length,
+      quoting: this.state.wasQuoting,
+    }
+  }
+}
+
+const parse = function(){
+  let data, options, callback
+  for(let i in arguments){
+    const argument = arguments[i]
+    const type = typeof argument
+    if(data === undefined && (typeof argument === 'string' || Buffer.isBuffer(argument))){
+      data = argument
+    }else if(options === undefined && isObject(argument)){
+      options = argument
+    }else if(callback === undefined && type === 'function'){
+      callback = argument
+    }else{
+      throw new CsvError('CSV_INVALID_ARGUMENT', [
+        'Invalid argument:',
+        `got ${JSON.stringify(argument)} at index ${i}`
+      ], this.options)
+    }
+  }
+  const parser = new Parser(options)
+  if(callback){
+    const records = options === undefined || options.objname === undefined ? [] : {}
+    parser.on('readable', function(){
+      let record
+      while((record = this.read()) !== null){
+        if(options === undefined || options.objname === undefined){
+          records.push(record)
+        }else{
+          records[record[0]] = record[1]
+        }
+      }
+    })
+    parser.on('error', function(err){
+      callback(err, undefined, parser.__infoDataSet())
+    })
+    parser.on('end', function(){
+      callback(undefined, records, parser.__infoDataSet())
+    })
+  }
+  if(data !== undefined){
+    // Give a chance for events to be registered later
+    if(typeof setImmediate === 'function'){
+      setImmediate(function(){
+        parser.write(data)
+        parser.end()
+      })
+    }else{
+      parser.write(data)
+      parser.end()
+    }
+  }
+  return parser
+}
+
+class CsvError extends Error {
+  constructor(code, message, options, ...contexts) {
+    if(Array.isArray(message)) message = message.join(' ')
+    super(message)
+    if(Error.captureStackTrace !== undefined){
+      Error.captureStackTrace(this, CsvError)
+    }
+    this.code = code
+    for(const context of contexts){
+      for(const key in context){
+        const value = context[key]
+        this[key] = Buffer.isBuffer(value) ? value.toString(options.encoding) : value == null ? value : JSON.parse(JSON.stringify(value))
+      }
+    }
+  }
+}
+
+parse.Parser = Parser
+
+parse.CsvError = CsvError
+
+module.exports = parse
+
+const underscore = function(str){
+  return str.replace(/([A-Z])/g, function(_, match){
+    return '_' + match.toLowerCase()
+  })
+}
+
+const isObject = function(obj){
+  return (typeof obj === 'object' && obj !== null && !Array.isArray(obj))
+}
+
+const isRecordEmpty = function(record){
+  return record.every( (field) => field == null || field.toString && field.toString().trim() === '' )
+}
+
+const normalizeColumnsArray = function(columns){
+  const normalizedColumns = [];
+  for(let i = 0, l = columns.length; i < l; i++){
+    const column = columns[i]
+    if(column === undefined || column === null || column === false){
+      normalizedColumns[i] = { disabled: true }
+    }else if(typeof column === 'string'){
+      normalizedColumns[i] = { name: column }
+    }else if(isObject(column)){
+      if(typeof column.name !== 'string'){
+        throw new CsvError('CSV_OPTION_COLUMNS_MISSING_NAME', [
+          'Option columns missing name:',
+          `property "name" is required at position ${i}`,
+          'when column is an object literal'
+        ])
+      }
+      normalizedColumns[i] = column
+    }else{
+      throw new CsvError('CSV_INVALID_COLUMN_DEFINITION', [
+        'Invalid column definition:',
+        'expect a string or a literal object,',
+        `got ${JSON.stringify(column)} at position ${i}`
+      ])
+    }
+  }
+  return normalizedColumns;
+}
+
+
+/***/ }),
+
+/***/ 8750:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+
+const parse = __nccwpck_require__(2830)
+
+module.exports = function(data, options={}){
+  if(typeof data === 'string'){
+    data = Buffer.from(data)
+  }
+  const records = options && options.objname ? {} : []
+  const parser = new parse.Parser(options)
+  parser.push = function(record){
+    if(record === null){
+      return
+    }
+    if(options.objname === undefined)
+      records.push(record)
+    else{
+      records[record[0]] = record[1]
+    }
+  }
+  const err1 = parser.__parse(data, false)
+  if(err1 !== undefined) throw err1
+  const err2 = parser.__parse(undefined, true)
+  if(err2 !== undefined) throw err2
+  return records
+}
+
+
+/***/ }),
+
+/***/ 8932:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+class Deprecation extends Error {
+  constructor(message) {
+    super(message); // Maintains proper stack trace (only available on V8)
+
+    /* istanbul ignore next */
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+
+    this.name = 'Deprecation';
+  }
+
+}
+
+exports.Deprecation = Deprecation;
+
+
+/***/ }),
+
+/***/ 6863:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = realpath
+realpath.realpath = realpath
+realpath.sync = realpathSync
+realpath.realpathSync = realpathSync
+realpath.monkeypatch = monkeypatch
+realpath.unmonkeypatch = unmonkeypatch
+
+var fs = __nccwpck_require__(5747)
+var origRealpath = fs.realpath
+var origRealpathSync = fs.realpathSync
+
+var version = process.version
+var ok = /^v[0-5]\./.test(version)
+var old = __nccwpck_require__(1734)
+
+function newError (er) {
+  return er && er.syscall === 'realpath' && (
+    er.code === 'ELOOP' ||
+    er.code === 'ENOMEM' ||
+    er.code === 'ENAMETOOLONG'
+  )
+}
+
+function realpath (p, cache, cb) {
+  if (ok) {
+    return origRealpath(p, cache, cb)
+  }
+
+  if (typeof cache === 'function') {
+    cb = cache
+    cache = null
+  }
+  origRealpath(p, cache, function (er, result) {
+    if (newError(er)) {
+      old.realpath(p, cache, cb)
+    } else {
+      cb(er, result)
+    }
+  })
+}
+
+function realpathSync (p, cache) {
+  if (ok) {
+    return origRealpathSync(p, cache)
+  }
+
+  try {
+    return origRealpathSync(p, cache)
+  } catch (er) {
+    if (newError(er)) {
+      return old.realpathSync(p, cache)
+    } else {
+      throw er
+    }
+  }
+}
+
+function monkeypatch () {
+  fs.realpath = realpath
+  fs.realpathSync = realpathSync
+}
+
+function unmonkeypatch () {
+  fs.realpath = origRealpath
+  fs.realpathSync = origRealpathSync
+}
+
+
+/***/ }),
+
+/***/ 1734:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var pathModule = __nccwpck_require__(5622);
+var isWindows = process.platform === 'win32';
+var fs = __nccwpck_require__(5747);
+
+// JavaScript implementation of realpath, ported from node pre-v6
+
+var DEBUG = process.env.NODE_DEBUG && /fs/.test(process.env.NODE_DEBUG);
+
+function rethrow() {
+  // Only enable in debug mode. A backtrace uses ~1000 bytes of heap space and
+  // is fairly slow to generate.
+  var callback;
+  if (DEBUG) {
+    var backtrace = new Error;
+    callback = debugCallback;
+  } else
+    callback = missingCallback;
+
+  return callback;
+
+  function debugCallback(err) {
+    if (err) {
+      backtrace.message = err.message;
+      err = backtrace;
+      missingCallback(err);
+    }
+  }
+
+  function missingCallback(err) {
+    if (err) {
+      if (process.throwDeprecation)
+        throw err;  // Forgot a callback but don't know where? Use NODE_DEBUG=fs
+      else if (!process.noDeprecation) {
+        var msg = 'fs: missing callback ' + (err.stack || err.message);
+        if (process.traceDeprecation)
+          console.trace(msg);
+        else
+          console.error(msg);
+      }
+    }
+  }
+}
+
+function maybeCallback(cb) {
+  return typeof cb === 'function' ? cb : rethrow();
+}
+
+var normalize = pathModule.normalize;
+
+// Regexp that finds the next partion of a (partial) path
+// result is [base_with_slash, base], e.g. ['somedir/', 'somedir']
+if (isWindows) {
+  var nextPartRe = /(.*?)(?:[\/\\]+|$)/g;
+} else {
+  var nextPartRe = /(.*?)(?:[\/]+|$)/g;
+}
+
+// Regex to find the device root, including trailing slash. E.g. 'c:\\'.
+if (isWindows) {
+  var splitRootRe = /^(?:[a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/][^\\\/]+)?[\\\/]*/;
+} else {
+  var splitRootRe = /^[\/]*/;
+}
+
+exports.realpathSync = function realpathSync(p, cache) {
+  // make p is absolute
+  p = pathModule.resolve(p);
+
+  if (cache && Object.prototype.hasOwnProperty.call(cache, p)) {
+    return cache[p];
+  }
+
+  var original = p,
+      seenLinks = {},
+      knownHard = {};
+
+  // current character position in p
+  var pos;
+  // the partial path so far, including a trailing slash if any
+  var current;
+  // the partial path without a trailing slash (except when pointing at a root)
+  var base;
+  // the partial path scanned in the previous round, with slash
+  var previous;
+
+  start();
+
+  function start() {
+    // Skip over roots
+    var m = splitRootRe.exec(p);
+    pos = m[0].length;
+    current = m[0];
+    base = m[0];
+    previous = '';
+
+    // On windows, check that the root exists. On unix there is no need.
+    if (isWindows && !knownHard[base]) {
+      fs.lstatSync(base);
+      knownHard[base] = true;
+    }
+  }
+
+  // walk down the path, swapping out linked pathparts for their real
+  // values
+  // NB: p.length changes.
+  while (pos < p.length) {
+    // find the next part
+    nextPartRe.lastIndex = pos;
+    var result = nextPartRe.exec(p);
+    previous = current;
+    current += result[0];
+    base = previous + result[1];
+    pos = nextPartRe.lastIndex;
+
+    // continue if not a symlink
+    if (knownHard[base] || (cache && cache[base] === base)) {
+      continue;
+    }
+
+    var resolvedLink;
+    if (cache && Object.prototype.hasOwnProperty.call(cache, base)) {
+      // some known symbolic link.  no need to stat again.
+      resolvedLink = cache[base];
+    } else {
+      var stat = fs.lstatSync(base);
+      if (!stat.isSymbolicLink()) {
+        knownHard[base] = true;
+        if (cache) cache[base] = base;
+        continue;
+      }
+
+      // read the link if it wasn't read before
+      // dev/ino always return 0 on windows, so skip the check.
+      var linkTarget = null;
+      if (!isWindows) {
+        var id = stat.dev.toString(32) + ':' + stat.ino.toString(32);
+        if (seenLinks.hasOwnProperty(id)) {
+          linkTarget = seenLinks[id];
+        }
+      }
+      if (linkTarget === null) {
+        fs.statSync(base);
+        linkTarget = fs.readlinkSync(base);
+      }
+      resolvedLink = pathModule.resolve(previous, linkTarget);
+      // track this, if given a cache.
+      if (cache) cache[base] = resolvedLink;
+      if (!isWindows) seenLinks[id] = linkTarget;
+    }
+
+    // resolve the link, then start over
+    p = pathModule.resolve(resolvedLink, p.slice(pos));
+    start();
+  }
+
+  if (cache) cache[original] = p;
+
+  return p;
+};
+
+
+exports.realpath = function realpath(p, cache, cb) {
+  if (typeof cb !== 'function') {
+    cb = maybeCallback(cache);
+    cache = null;
+  }
+
+  // make p is absolute
+  p = pathModule.resolve(p);
+
+  if (cache && Object.prototype.hasOwnProperty.call(cache, p)) {
+    return process.nextTick(cb.bind(null, null, cache[p]));
+  }
+
+  var original = p,
+      seenLinks = {},
+      knownHard = {};
+
+  // current character position in p
+  var pos;
+  // the partial path so far, including a trailing slash if any
+  var current;
+  // the partial path without a trailing slash (except when pointing at a root)
+  var base;
+  // the partial path scanned in the previous round, with slash
+  var previous;
+
+  start();
+
+  function start() {
+    // Skip over roots
+    var m = splitRootRe.exec(p);
+    pos = m[0].length;
+    current = m[0];
+    base = m[0];
+    previous = '';
+
+    // On windows, check that the root exists. On unix there is no need.
+    if (isWindows && !knownHard[base]) {
+      fs.lstat(base, function(err) {
+        if (err) return cb(err);
+        knownHard[base] = true;
+        LOOP();
+      });
+    } else {
+      process.nextTick(LOOP);
+    }
+  }
+
+  // walk down the path, swapping out linked pathparts for their real
+  // values
+  function LOOP() {
+    // stop if scanned past end of path
+    if (pos >= p.length) {
+      if (cache) cache[original] = p;
+      return cb(null, p);
+    }
+
+    // find the next part
+    nextPartRe.lastIndex = pos;
+    var result = nextPartRe.exec(p);
+    previous = current;
+    current += result[0];
+    base = previous + result[1];
+    pos = nextPartRe.lastIndex;
+
+    // continue if not a symlink
+    if (knownHard[base] || (cache && cache[base] === base)) {
+      return process.nextTick(LOOP);
+    }
+
+    if (cache && Object.prototype.hasOwnProperty.call(cache, base)) {
+      // known symbolic link.  no need to stat again.
+      return gotResolvedLink(cache[base]);
+    }
+
+    return fs.lstat(base, gotStat);
+  }
+
+  function gotStat(err, stat) {
+    if (err) return cb(err);
+
+    // if not a symlink, skip to the next path part
+    if (!stat.isSymbolicLink()) {
+      knownHard[base] = true;
+      if (cache) cache[base] = base;
+      return process.nextTick(LOOP);
+    }
+
+    // stat & read the link if not read before
+    // call gotTarget as soon as the link target is known
+    // dev/ino always return 0 on windows, so skip the check.
+    if (!isWindows) {
+      var id = stat.dev.toString(32) + ':' + stat.ino.toString(32);
+      if (seenLinks.hasOwnProperty(id)) {
+        return gotTarget(null, seenLinks[id], base);
+      }
+    }
+    fs.stat(base, function(err) {
+      if (err) return cb(err);
+
+      fs.readlink(base, function(err, target) {
+        if (!isWindows) seenLinks[id] = target;
+        gotTarget(err, target);
+      });
+    });
+  }
+
+  function gotTarget(err, target, base) {
+    if (err) return cb(err);
+
+    var resolvedLink = pathModule.resolve(previous, target);
+    if (cache) cache[base] = resolvedLink;
+    gotResolvedLink(resolvedLink);
+  }
+
+  function gotResolvedLink(resolvedLink) {
+    // resolve the link, then start over
+    p = pathModule.resolve(resolvedLink, p.slice(pos));
+    start();
+  }
+};
+
+
+/***/ }),
+
+/***/ 7625:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+exports.setopts = setopts
+exports.ownProp = ownProp
+exports.makeAbs = makeAbs
+exports.finish = finish
+exports.mark = mark
+exports.isIgnored = isIgnored
+exports.childrenIgnored = childrenIgnored
+
+function ownProp (obj, field) {
+  return Object.prototype.hasOwnProperty.call(obj, field)
+}
+
+var path = __nccwpck_require__(5622)
+var minimatch = __nccwpck_require__(3973)
+var isAbsolute = __nccwpck_require__(8714)
+var Minimatch = minimatch.Minimatch
+
+function alphasort (a, b) {
+  return a.localeCompare(b, 'en')
+}
+
+function setupIgnores (self, options) {
+  self.ignore = options.ignore || []
+
+  if (!Array.isArray(self.ignore))
+    self.ignore = [self.ignore]
+
+  if (self.ignore.length) {
+    self.ignore = self.ignore.map(ignoreMap)
+  }
+}
+
+// ignore patterns are always in dot:true mode.
+function ignoreMap (pattern) {
+  var gmatcher = null
+  if (pattern.slice(-3) === '/**') {
+    var gpattern = pattern.replace(/(\/\*\*)+$/, '')
+    gmatcher = new Minimatch(gpattern, { dot: true })
+  }
+
+  return {
+    matcher: new Minimatch(pattern, { dot: true }),
+    gmatcher: gmatcher
+  }
+}
+
+function setopts (self, pattern, options) {
+  if (!options)
+    options = {}
+
+  // base-matching: just use globstar for that.
+  if (options.matchBase && -1 === pattern.indexOf("/")) {
+    if (options.noglobstar) {
+      throw new Error("base matching requires globstar")
+    }
+    pattern = "**/" + pattern
+  }
+
+  self.silent = !!options.silent
+  self.pattern = pattern
+  self.strict = options.strict !== false
+  self.realpath = !!options.realpath
+  self.realpathCache = options.realpathCache || Object.create(null)
+  self.follow = !!options.follow
+  self.dot = !!options.dot
+  self.mark = !!options.mark
+  self.nodir = !!options.nodir
+  if (self.nodir)
+    self.mark = true
+  self.sync = !!options.sync
+  self.nounique = !!options.nounique
+  self.nonull = !!options.nonull
+  self.nosort = !!options.nosort
+  self.nocase = !!options.nocase
+  self.stat = !!options.stat
+  self.noprocess = !!options.noprocess
+  self.absolute = !!options.absolute
+
+  self.maxLength = options.maxLength || Infinity
+  self.cache = options.cache || Object.create(null)
+  self.statCache = options.statCache || Object.create(null)
+  self.symlinks = options.symlinks || Object.create(null)
+
+  setupIgnores(self, options)
+
+  self.changedCwd = false
+  var cwd = process.cwd()
+  if (!ownProp(options, "cwd"))
+    self.cwd = cwd
+  else {
+    self.cwd = path.resolve(options.cwd)
+    self.changedCwd = self.cwd !== cwd
+  }
+
+  self.root = options.root || path.resolve(self.cwd, "/")
+  self.root = path.resolve(self.root)
+  if (process.platform === "win32")
+    self.root = self.root.replace(/\\/g, "/")
+
+  // TODO: is an absolute `cwd` supposed to be resolved against `root`?
+  // e.g. { cwd: '/test', root: __dirname } === path.join(__dirname, '/test')
+  self.cwdAbs = isAbsolute(self.cwd) ? self.cwd : makeAbs(self, self.cwd)
+  if (process.platform === "win32")
+    self.cwdAbs = self.cwdAbs.replace(/\\/g, "/")
+  self.nomount = !!options.nomount
+
+  // disable comments and negation in Minimatch.
+  // Note that they are not supported in Glob itself anyway.
+  options.nonegate = true
+  options.nocomment = true
+
+  self.minimatch = new Minimatch(pattern, options)
+  self.options = self.minimatch.options
+}
+
+function finish (self) {
+  var nou = self.nounique
+  var all = nou ? [] : Object.create(null)
+
+  for (var i = 0, l = self.matches.length; i < l; i ++) {
+    var matches = self.matches[i]
+    if (!matches || Object.keys(matches).length === 0) {
+      if (self.nonull) {
+        // do like the shell, and spit out the literal glob
+        var literal = self.minimatch.globSet[i]
+        if (nou)
+          all.push(literal)
+        else
+          all[literal] = true
+      }
+    } else {
+      // had matches
+      var m = Object.keys(matches)
+      if (nou)
+        all.push.apply(all, m)
+      else
+        m.forEach(function (m) {
+          all[m] = true
+        })
+    }
+  }
+
+  if (!nou)
+    all = Object.keys(all)
+
+  if (!self.nosort)
+    all = all.sort(alphasort)
+
+  // at *some* point we statted all of these
+  if (self.mark) {
+    for (var i = 0; i < all.length; i++) {
+      all[i] = self._mark(all[i])
+    }
+    if (self.nodir) {
+      all = all.filter(function (e) {
+        var notDir = !(/\/$/.test(e))
+        var c = self.cache[e] || self.cache[makeAbs(self, e)]
+        if (notDir && c)
+          notDir = c !== 'DIR' && !Array.isArray(c)
+        return notDir
+      })
+    }
+  }
+
+  if (self.ignore.length)
+    all = all.filter(function(m) {
+      return !isIgnored(self, m)
+    })
+
+  self.found = all
+}
+
+function mark (self, p) {
+  var abs = makeAbs(self, p)
+  var c = self.cache[abs]
+  var m = p
+  if (c) {
+    var isDir = c === 'DIR' || Array.isArray(c)
+    var slash = p.slice(-1) === '/'
+
+    if (isDir && !slash)
+      m += '/'
+    else if (!isDir && slash)
+      m = m.slice(0, -1)
+
+    if (m !== p) {
+      var mabs = makeAbs(self, m)
+      self.statCache[mabs] = self.statCache[abs]
+      self.cache[mabs] = self.cache[abs]
+    }
+  }
+
+  return m
+}
+
+// lotta situps...
+function makeAbs (self, f) {
+  var abs = f
+  if (f.charAt(0) === '/') {
+    abs = path.join(self.root, f)
+  } else if (isAbsolute(f) || f === '') {
+    abs = f
+  } else if (self.changedCwd) {
+    abs = path.resolve(self.cwd, f)
+  } else {
+    abs = path.resolve(f)
+  }
+
+  if (process.platform === 'win32')
+    abs = abs.replace(/\\/g, '/')
+
+  return abs
+}
+
+
+// Return true, if pattern ends with globstar '**', for the accompanying parent directory.
+// Ex:- If node_modules/** is the pattern, add 'node_modules' to ignore list along with it's contents
+function isIgnored (self, path) {
+  if (!self.ignore.length)
+    return false
+
+  return self.ignore.some(function(item) {
+    return item.matcher.match(path) || !!(item.gmatcher && item.gmatcher.match(path))
+  })
+}
+
+function childrenIgnored (self, path) {
+  if (!self.ignore.length)
+    return false
+
+  return self.ignore.some(function(item) {
+    return !!(item.gmatcher && item.gmatcher.match(path))
+  })
+}
+
+
+/***/ }),
+
+/***/ 1957:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+// Approach:
+//
+// 1. Get the minimatch set
+// 2. For each pattern in the set, PROCESS(pattern, false)
+// 3. Store matches per-set, then uniq them
+//
+// PROCESS(pattern, inGlobStar)
+// Get the first [n] items from pattern that are all strings
+// Join these together.  This is PREFIX.
+//   If there is no more remaining, then stat(PREFIX) and
+//   add to matches if it succeeds.  END.
+//
+// If inGlobStar and PREFIX is symlink and points to dir
+//   set ENTRIES = []
+// else readdir(PREFIX) as ENTRIES
+//   If fail, END
+//
+// with ENTRIES
+//   If pattern[n] is GLOBSTAR
+//     // handle the case where the globstar match is empty
+//     // by pruning it out, and testing the resulting pattern
+//     PROCESS(pattern[0..n] + pattern[n+1 .. $], false)
+//     // handle other cases.
+//     for ENTRY in ENTRIES (not dotfiles)
+//       // attach globstar + tail onto the entry
+//       // Mark that this entry is a globstar match
+//       PROCESS(pattern[0..n] + ENTRY + pattern[n .. $], true)
+//
+//   else // not globstar
+//     for ENTRY in ENTRIES (not dotfiles, unless pattern[n] is dot)
+//       Test ENTRY against pattern[n]
+//       If fails, continue
+//       If passes, PROCESS(pattern[0..n] + item + pattern[n+1 .. $])
+//
+// Caveat:
+//   Cache all stats and readdirs results to minimize syscall.  Since all
+//   we ever care about is existence and directory-ness, we can just keep
+//   `true` for files, and [children,...] for directories, or `false` for
+//   things that don't exist.
+
+module.exports = glob
+
+var fs = __nccwpck_require__(5747)
+var rp = __nccwpck_require__(6863)
+var minimatch = __nccwpck_require__(3973)
+var Minimatch = minimatch.Minimatch
+var inherits = __nccwpck_require__(4124)
+var EE = __nccwpck_require__(8614).EventEmitter
+var path = __nccwpck_require__(5622)
+var assert = __nccwpck_require__(2357)
+var isAbsolute = __nccwpck_require__(8714)
+var globSync = __nccwpck_require__(9010)
+var common = __nccwpck_require__(7625)
+var setopts = common.setopts
+var ownProp = common.ownProp
+var inflight = __nccwpck_require__(2492)
+var util = __nccwpck_require__(1669)
+var childrenIgnored = common.childrenIgnored
+var isIgnored = common.isIgnored
+
+var once = __nccwpck_require__(1223)
+
+function glob (pattern, options, cb) {
+  if (typeof options === 'function') cb = options, options = {}
+  if (!options) options = {}
+
+  if (options.sync) {
+    if (cb)
+      throw new TypeError('callback provided to sync glob')
+    return globSync(pattern, options)
+  }
+
+  return new Glob(pattern, options, cb)
+}
+
+glob.sync = globSync
+var GlobSync = glob.GlobSync = globSync.GlobSync
+
+// old api surface
+glob.glob = glob
+
+function extend (origin, add) {
+  if (add === null || typeof add !== 'object') {
+    return origin
+  }
+
+  var keys = Object.keys(add)
+  var i = keys.length
+  while (i--) {
+    origin[keys[i]] = add[keys[i]]
+  }
+  return origin
+}
+
+glob.hasMagic = function (pattern, options_) {
+  var options = extend({}, options_)
+  options.noprocess = true
+
+  var g = new Glob(pattern, options)
+  var set = g.minimatch.set
+
+  if (!pattern)
+    return false
+
+  if (set.length > 1)
+    return true
+
+  for (var j = 0; j < set[0].length; j++) {
+    if (typeof set[0][j] !== 'string')
+      return true
+  }
+
+  return false
+}
+
+glob.Glob = Glob
+inherits(Glob, EE)
+function Glob (pattern, options, cb) {
+  if (typeof options === 'function') {
+    cb = options
+    options = null
+  }
+
+  if (options && options.sync) {
+    if (cb)
+      throw new TypeError('callback provided to sync glob')
+    return new GlobSync(pattern, options)
+  }
+
+  if (!(this instanceof Glob))
+    return new Glob(pattern, options, cb)
+
+  setopts(this, pattern, options)
+  this._didRealPath = false
+
+  // process each pattern in the minimatch set
+  var n = this.minimatch.set.length
+
+  // The matches are stored as {<filename>: true,...} so that
+  // duplicates are automagically pruned.
+  // Later, we do an Object.keys() on these.
+  // Keep them as a list so we can fill in when nonull is set.
+  this.matches = new Array(n)
+
+  if (typeof cb === 'function') {
+    cb = once(cb)
+    this.on('error', cb)
+    this.on('end', function (matches) {
+      cb(null, matches)
+    })
+  }
+
+  var self = this
+  this._processing = 0
+
+  this._emitQueue = []
+  this._processQueue = []
+  this.paused = false
+
+  if (this.noprocess)
+    return this
+
+  if (n === 0)
+    return done()
+
+  var sync = true
+  for (var i = 0; i < n; i ++) {
+    this._process(this.minimatch.set[i], i, false, done)
+  }
+  sync = false
+
+  function done () {
+    --self._processing
+    if (self._processing <= 0) {
+      if (sync) {
+        process.nextTick(function () {
+          self._finish()
+        })
+      } else {
+        self._finish()
+      }
+    }
+  }
+}
+
+Glob.prototype._finish = function () {
+  assert(this instanceof Glob)
+  if (this.aborted)
+    return
+
+  if (this.realpath && !this._didRealpath)
+    return this._realpath()
+
+  common.finish(this)
+  this.emit('end', this.found)
+}
+
+Glob.prototype._realpath = function () {
+  if (this._didRealpath)
+    return
+
+  this._didRealpath = true
+
+  var n = this.matches.length
+  if (n === 0)
+    return this._finish()
+
+  var self = this
+  for (var i = 0; i < this.matches.length; i++)
+    this._realpathSet(i, next)
+
+  function next () {
+    if (--n === 0)
+      self._finish()
+  }
+}
+
+Glob.prototype._realpathSet = function (index, cb) {
+  var matchset = this.matches[index]
+  if (!matchset)
+    return cb()
+
+  var found = Object.keys(matchset)
+  var self = this
+  var n = found.length
+
+  if (n === 0)
+    return cb()
+
+  var set = this.matches[index] = Object.create(null)
+  found.forEach(function (p, i) {
+    // If there's a problem with the stat, then it means that
+    // one or more of the links in the realpath couldn't be
+    // resolved.  just return the abs value in that case.
+    p = self._makeAbs(p)
+    rp.realpath(p, self.realpathCache, function (er, real) {
+      if (!er)
+        set[real] = true
+      else if (er.syscall === 'stat')
+        set[p] = true
+      else
+        self.emit('error', er) // srsly wtf right here
+
+      if (--n === 0) {
+        self.matches[index] = set
+        cb()
+      }
+    })
+  })
+}
+
+Glob.prototype._mark = function (p) {
+  return common.mark(this, p)
+}
+
+Glob.prototype._makeAbs = function (f) {
+  return common.makeAbs(this, f)
+}
+
+Glob.prototype.abort = function () {
+  this.aborted = true
+  this.emit('abort')
+}
+
+Glob.prototype.pause = function () {
+  if (!this.paused) {
+    this.paused = true
+    this.emit('pause')
+  }
+}
+
+Glob.prototype.resume = function () {
+  if (this.paused) {
+    this.emit('resume')
+    this.paused = false
+    if (this._emitQueue.length) {
+      var eq = this._emitQueue.slice(0)
+      this._emitQueue.length = 0
+      for (var i = 0; i < eq.length; i ++) {
+        var e = eq[i]
+        this._emitMatch(e[0], e[1])
+      }
+    }
+    if (this._processQueue.length) {
+      var pq = this._processQueue.slice(0)
+      this._processQueue.length = 0
+      for (var i = 0; i < pq.length; i ++) {
+        var p = pq[i]
+        this._processing--
+        this._process(p[0], p[1], p[2], p[3])
+      }
+    }
+  }
+}
+
+Glob.prototype._process = function (pattern, index, inGlobStar, cb) {
+  assert(this instanceof Glob)
+  assert(typeof cb === 'function')
+
+  if (this.aborted)
+    return
+
+  this._processing++
+  if (this.paused) {
+    this._processQueue.push([pattern, index, inGlobStar, cb])
+    return
+  }
+
+  //console.error('PROCESS %d', this._processing, pattern)
+
+  // Get the first [n] parts of pattern that are all strings.
+  var n = 0
+  while (typeof pattern[n] === 'string') {
+    n ++
+  }
+  // now n is the index of the first one that is *not* a string.
+
+  // see if there's anything else
+  var prefix
+  switch (n) {
+    // if not, then this is rather simple
+    case pattern.length:
+      this._processSimple(pattern.join('/'), index, cb)
+      return
+
+    case 0:
+      // pattern *starts* with some non-trivial item.
+      // going to readdir(cwd), but not include the prefix in matches.
+      prefix = null
+      break
+
+    default:
+      // pattern has some string bits in the front.
+      // whatever it starts with, whether that's 'absolute' like /foo/bar,
+      // or 'relative' like '../baz'
+      prefix = pattern.slice(0, n).join('/')
+      break
+  }
+
+  var remain = pattern.slice(n)
+
+  // get the list of entries.
+  var read
+  if (prefix === null)
+    read = '.'
+  else if (isAbsolute(prefix) || isAbsolute(pattern.join('/'))) {
+    if (!prefix || !isAbsolute(prefix))
+      prefix = '/' + prefix
+    read = prefix
+  } else
+    read = prefix
+
+  var abs = this._makeAbs(read)
+
+  //if ignored, skip _processing
+  if (childrenIgnored(this, read))
+    return cb()
+
+  var isGlobStar = remain[0] === minimatch.GLOBSTAR
+  if (isGlobStar)
+    this._processGlobStar(prefix, read, abs, remain, index, inGlobStar, cb)
+  else
+    this._processReaddir(prefix, read, abs, remain, index, inGlobStar, cb)
+}
+
+Glob.prototype._processReaddir = function (prefix, read, abs, remain, index, inGlobStar, cb) {
+  var self = this
+  this._readdir(abs, inGlobStar, function (er, entries) {
+    return self._processReaddir2(prefix, read, abs, remain, index, inGlobStar, entries, cb)
+  })
+}
+
+Glob.prototype._processReaddir2 = function (prefix, read, abs, remain, index, inGlobStar, entries, cb) {
+
+  // if the abs isn't a dir, then nothing can match!
+  if (!entries)
+    return cb()
+
+  // It will only match dot entries if it starts with a dot, or if
+  // dot is set.  Stuff like @(.foo|.bar) isn't allowed.
+  var pn = remain[0]
+  var negate = !!this.minimatch.negate
+  var rawGlob = pn._glob
+  var dotOk = this.dot || rawGlob.charAt(0) === '.'
+
+  var matchedEntries = []
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i]
+    if (e.charAt(0) !== '.' || dotOk) {
+      var m
+      if (negate && !prefix) {
+        m = !e.match(pn)
+      } else {
+        m = e.match(pn)
+      }
+      if (m)
+        matchedEntries.push(e)
+    }
+  }
+
+  //console.error('prd2', prefix, entries, remain[0]._glob, matchedEntries)
+
+  var len = matchedEntries.length
+  // If there are no matched entries, then nothing matches.
+  if (len === 0)
+    return cb()
+
+  // if this is the last remaining pattern bit, then no need for
+  // an additional stat *unless* the user has specified mark or
+  // stat explicitly.  We know they exist, since readdir returned
+  // them.
+
+  if (remain.length === 1 && !this.mark && !this.stat) {
+    if (!this.matches[index])
+      this.matches[index] = Object.create(null)
+
+    for (var i = 0; i < len; i ++) {
+      var e = matchedEntries[i]
+      if (prefix) {
+        if (prefix !== '/')
+          e = prefix + '/' + e
+        else
+          e = prefix + e
+      }
+
+      if (e.charAt(0) === '/' && !this.nomount) {
+        e = path.join(this.root, e)
+      }
+      this._emitMatch(index, e)
+    }
+    // This was the last one, and no stats were needed
+    return cb()
+  }
+
+  // now test all matched entries as stand-ins for that part
+  // of the pattern.
+  remain.shift()
+  for (var i = 0; i < len; i ++) {
+    var e = matchedEntries[i]
+    var newPattern
+    if (prefix) {
+      if (prefix !== '/')
+        e = prefix + '/' + e
+      else
+        e = prefix + e
+    }
+    this._process([e].concat(remain), index, inGlobStar, cb)
+  }
+  cb()
+}
+
+Glob.prototype._emitMatch = function (index, e) {
+  if (this.aborted)
+    return
+
+  if (isIgnored(this, e))
+    return
+
+  if (this.paused) {
+    this._emitQueue.push([index, e])
+    return
+  }
+
+  var abs = isAbsolute(e) ? e : this._makeAbs(e)
+
+  if (this.mark)
+    e = this._mark(e)
+
+  if (this.absolute)
+    e = abs
+
+  if (this.matches[index][e])
+    return
+
+  if (this.nodir) {
+    var c = this.cache[abs]
+    if (c === 'DIR' || Array.isArray(c))
+      return
+  }
+
+  this.matches[index][e] = true
+
+  var st = this.statCache[abs]
+  if (st)
+    this.emit('stat', e, st)
+
+  this.emit('match', e)
+}
+
+Glob.prototype._readdirInGlobStar = function (abs, cb) {
+  if (this.aborted)
+    return
+
+  // follow all symlinked directories forever
+  // just proceed as if this is a non-globstar situation
+  if (this.follow)
+    return this._readdir(abs, false, cb)
+
+  var lstatkey = 'lstat\0' + abs
+  var self = this
+  var lstatcb = inflight(lstatkey, lstatcb_)
+
+  if (lstatcb)
+    fs.lstat(abs, lstatcb)
+
+  function lstatcb_ (er, lstat) {
+    if (er && er.code === 'ENOENT')
+      return cb()
+
+    var isSym = lstat && lstat.isSymbolicLink()
+    self.symlinks[abs] = isSym
+
+    // If it's not a symlink or a dir, then it's definitely a regular file.
+    // don't bother doing a readdir in that case.
+    if (!isSym && lstat && !lstat.isDirectory()) {
+      self.cache[abs] = 'FILE'
+      cb()
+    } else
+      self._readdir(abs, false, cb)
+  }
+}
+
+Glob.prototype._readdir = function (abs, inGlobStar, cb) {
+  if (this.aborted)
+    return
+
+  cb = inflight('readdir\0'+abs+'\0'+inGlobStar, cb)
+  if (!cb)
+    return
+
+  //console.error('RD %j %j', +inGlobStar, abs)
+  if (inGlobStar && !ownProp(this.symlinks, abs))
+    return this._readdirInGlobStar(abs, cb)
+
+  if (ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+    if (!c || c === 'FILE')
+      return cb()
+
+    if (Array.isArray(c))
+      return cb(null, c)
+  }
+
+  var self = this
+  fs.readdir(abs, readdirCb(this, abs, cb))
+}
+
+function readdirCb (self, abs, cb) {
+  return function (er, entries) {
+    if (er)
+      self._readdirError(abs, er, cb)
+    else
+      self._readdirEntries(abs, entries, cb)
+  }
+}
+
+Glob.prototype._readdirEntries = function (abs, entries, cb) {
+  if (this.aborted)
+    return
+
+  // if we haven't asked to stat everything, then just
+  // assume that everything in there exists, so we can avoid
+  // having to stat it a second time.
+  if (!this.mark && !this.stat) {
+    for (var i = 0; i < entries.length; i ++) {
+      var e = entries[i]
+      if (abs === '/')
+        e = abs + e
+      else
+        e = abs + '/' + e
+      this.cache[e] = true
+    }
+  }
+
+  this.cache[abs] = entries
+  return cb(null, entries)
+}
+
+Glob.prototype._readdirError = function (f, er, cb) {
+  if (this.aborted)
+    return
+
+  // handle errors, and cache the information
+  switch (er.code) {
+    case 'ENOTSUP': // https://github.com/isaacs/node-glob/issues/205
+    case 'ENOTDIR': // totally normal. means it *does* exist.
+      var abs = this._makeAbs(f)
+      this.cache[abs] = 'FILE'
+      if (abs === this.cwdAbs) {
+        var error = new Error(er.code + ' invalid cwd ' + this.cwd)
+        error.path = this.cwd
+        error.code = er.code
+        this.emit('error', error)
+        this.abort()
+      }
+      break
+
+    case 'ENOENT': // not terribly unusual
+    case 'ELOOP':
+    case 'ENAMETOOLONG':
+    case 'UNKNOWN':
+      this.cache[this._makeAbs(f)] = false
+      break
+
+    default: // some unusual error.  Treat as failure.
+      this.cache[this._makeAbs(f)] = false
+      if (this.strict) {
+        this.emit('error', er)
+        // If the error is handled, then we abort
+        // if not, we threw out of here
+        this.abort()
+      }
+      if (!this.silent)
+        console.error('glob error', er)
+      break
+  }
+
+  return cb()
+}
+
+Glob.prototype._processGlobStar = function (prefix, read, abs, remain, index, inGlobStar, cb) {
+  var self = this
+  this._readdir(abs, inGlobStar, function (er, entries) {
+    self._processGlobStar2(prefix, read, abs, remain, index, inGlobStar, entries, cb)
+  })
+}
+
+
+Glob.prototype._processGlobStar2 = function (prefix, read, abs, remain, index, inGlobStar, entries, cb) {
+  //console.error('pgs2', prefix, remain[0], entries)
+
+  // no entries means not a dir, so it can never have matches
+  // foo.txt/** doesn't match foo.txt
+  if (!entries)
+    return cb()
+
+  // test without the globstar, and with every child both below
+  // and replacing the globstar.
+  var remainWithoutGlobStar = remain.slice(1)
+  var gspref = prefix ? [ prefix ] : []
+  var noGlobStar = gspref.concat(remainWithoutGlobStar)
+
+  // the noGlobStar pattern exits the inGlobStar state
+  this._process(noGlobStar, index, false, cb)
+
+  var isSym = this.symlinks[abs]
+  var len = entries.length
+
+  // If it's a symlink, and we're in a globstar, then stop
+  if (isSym && inGlobStar)
+    return cb()
+
+  for (var i = 0; i < len; i++) {
+    var e = entries[i]
+    if (e.charAt(0) === '.' && !this.dot)
+      continue
+
+    // these two cases enter the inGlobStar state
+    var instead = gspref.concat(entries[i], remainWithoutGlobStar)
+    this._process(instead, index, true, cb)
+
+    var below = gspref.concat(entries[i], remain)
+    this._process(below, index, true, cb)
+  }
+
+  cb()
+}
+
+Glob.prototype._processSimple = function (prefix, index, cb) {
+  // XXX review this.  Shouldn't it be doing the mounting etc
+  // before doing stat?  kinda weird?
+  var self = this
+  this._stat(prefix, function (er, exists) {
+    self._processSimple2(prefix, index, er, exists, cb)
+  })
+}
+Glob.prototype._processSimple2 = function (prefix, index, er, exists, cb) {
+
+  //console.error('ps2', prefix, exists)
+
+  if (!this.matches[index])
+    this.matches[index] = Object.create(null)
+
+  // If it doesn't exist, then just mark the lack of results
+  if (!exists)
+    return cb()
+
+  if (prefix && isAbsolute(prefix) && !this.nomount) {
+    var trail = /[\/\\]$/.test(prefix)
+    if (prefix.charAt(0) === '/') {
+      prefix = path.join(this.root, prefix)
+    } else {
+      prefix = path.resolve(this.root, prefix)
+      if (trail)
+        prefix += '/'
+    }
+  }
+
+  if (process.platform === 'win32')
+    prefix = prefix.replace(/\\/g, '/')
+
+  // Mark this as a match
+  this._emitMatch(index, prefix)
+  cb()
+}
+
+// Returns either 'DIR', 'FILE', or false
+Glob.prototype._stat = function (f, cb) {
+  var abs = this._makeAbs(f)
+  var needDir = f.slice(-1) === '/'
+
+  if (f.length > this.maxLength)
+    return cb()
+
+  if (!this.stat && ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+
+    if (Array.isArray(c))
+      c = 'DIR'
+
+    // It exists, but maybe not how we need it
+    if (!needDir || c === 'DIR')
+      return cb(null, c)
+
+    if (needDir && c === 'FILE')
+      return cb()
+
+    // otherwise we have to stat, because maybe c=true
+    // if we know it exists, but not what it is.
+  }
+
+  var exists
+  var stat = this.statCache[abs]
+  if (stat !== undefined) {
+    if (stat === false)
+      return cb(null, stat)
+    else {
+      var type = stat.isDirectory() ? 'DIR' : 'FILE'
+      if (needDir && type === 'FILE')
+        return cb()
+      else
+        return cb(null, type, stat)
+    }
+  }
+
+  var self = this
+  var statcb = inflight('stat\0' + abs, lstatcb_)
+  if (statcb)
+    fs.lstat(abs, statcb)
+
+  function lstatcb_ (er, lstat) {
+    if (lstat && lstat.isSymbolicLink()) {
+      // If it's a symlink, then treat it as the target, unless
+      // the target does not exist, then treat it as a file.
+      return fs.stat(abs, function (er, stat) {
+        if (er)
+          self._stat2(f, abs, null, lstat, cb)
+        else
+          self._stat2(f, abs, er, stat, cb)
+      })
+    } else {
+      self._stat2(f, abs, er, lstat, cb)
+    }
+  }
+}
+
+Glob.prototype._stat2 = function (f, abs, er, stat, cb) {
+  if (er && (er.code === 'ENOENT' || er.code === 'ENOTDIR')) {
+    this.statCache[abs] = false
+    return cb()
+  }
+
+  var needDir = f.slice(-1) === '/'
+  this.statCache[abs] = stat
+
+  if (abs.slice(-1) === '/' && stat && !stat.isDirectory())
+    return cb(null, false, stat)
+
+  var c = true
+  if (stat)
+    c = stat.isDirectory() ? 'DIR' : 'FILE'
+  this.cache[abs] = this.cache[abs] || c
+
+  if (needDir && c === 'FILE')
+    return cb()
+
+  return cb(null, c, stat)
+}
+
+
+/***/ }),
+
+/***/ 9010:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = globSync
+globSync.GlobSync = GlobSync
+
+var fs = __nccwpck_require__(5747)
+var rp = __nccwpck_require__(6863)
+var minimatch = __nccwpck_require__(3973)
+var Minimatch = minimatch.Minimatch
+var Glob = __nccwpck_require__(1957).Glob
+var util = __nccwpck_require__(1669)
+var path = __nccwpck_require__(5622)
+var assert = __nccwpck_require__(2357)
+var isAbsolute = __nccwpck_require__(8714)
+var common = __nccwpck_require__(7625)
+var setopts = common.setopts
+var ownProp = common.ownProp
+var childrenIgnored = common.childrenIgnored
+var isIgnored = common.isIgnored
+
+function globSync (pattern, options) {
+  if (typeof options === 'function' || arguments.length === 3)
+    throw new TypeError('callback provided to sync glob\n'+
+                        'See: https://github.com/isaacs/node-glob/issues/167')
+
+  return new GlobSync(pattern, options).found
+}
+
+function GlobSync (pattern, options) {
+  if (!pattern)
+    throw new Error('must provide pattern')
+
+  if (typeof options === 'function' || arguments.length === 3)
+    throw new TypeError('callback provided to sync glob\n'+
+                        'See: https://github.com/isaacs/node-glob/issues/167')
+
+  if (!(this instanceof GlobSync))
+    return new GlobSync(pattern, options)
+
+  setopts(this, pattern, options)
+
+  if (this.noprocess)
+    return this
+
+  var n = this.minimatch.set.length
+  this.matches = new Array(n)
+  for (var i = 0; i < n; i ++) {
+    this._process(this.minimatch.set[i], i, false)
+  }
+  this._finish()
+}
+
+GlobSync.prototype._finish = function () {
+  assert(this instanceof GlobSync)
+  if (this.realpath) {
+    var self = this
+    this.matches.forEach(function (matchset, index) {
+      var set = self.matches[index] = Object.create(null)
+      for (var p in matchset) {
+        try {
+          p = self._makeAbs(p)
+          var real = rp.realpathSync(p, self.realpathCache)
+          set[real] = true
+        } catch (er) {
+          if (er.syscall === 'stat')
+            set[self._makeAbs(p)] = true
+          else
+            throw er
+        }
+      }
+    })
+  }
+  common.finish(this)
+}
+
+
+GlobSync.prototype._process = function (pattern, index, inGlobStar) {
+  assert(this instanceof GlobSync)
+
+  // Get the first [n] parts of pattern that are all strings.
+  var n = 0
+  while (typeof pattern[n] === 'string') {
+    n ++
+  }
+  // now n is the index of the first one that is *not* a string.
+
+  // See if there's anything else
+  var prefix
+  switch (n) {
+    // if not, then this is rather simple
+    case pattern.length:
+      this._processSimple(pattern.join('/'), index)
+      return
+
+    case 0:
+      // pattern *starts* with some non-trivial item.
+      // going to readdir(cwd), but not include the prefix in matches.
+      prefix = null
+      break
+
+    default:
+      // pattern has some string bits in the front.
+      // whatever it starts with, whether that's 'absolute' like /foo/bar,
+      // or 'relative' like '../baz'
+      prefix = pattern.slice(0, n).join('/')
+      break
+  }
+
+  var remain = pattern.slice(n)
+
+  // get the list of entries.
+  var read
+  if (prefix === null)
+    read = '.'
+  else if (isAbsolute(prefix) || isAbsolute(pattern.join('/'))) {
+    if (!prefix || !isAbsolute(prefix))
+      prefix = '/' + prefix
+    read = prefix
+  } else
+    read = prefix
+
+  var abs = this._makeAbs(read)
+
+  //if ignored, skip processing
+  if (childrenIgnored(this, read))
+    return
+
+  var isGlobStar = remain[0] === minimatch.GLOBSTAR
+  if (isGlobStar)
+    this._processGlobStar(prefix, read, abs, remain, index, inGlobStar)
+  else
+    this._processReaddir(prefix, read, abs, remain, index, inGlobStar)
+}
+
+
+GlobSync.prototype._processReaddir = function (prefix, read, abs, remain, index, inGlobStar) {
+  var entries = this._readdir(abs, inGlobStar)
+
+  // if the abs isn't a dir, then nothing can match!
+  if (!entries)
+    return
+
+  // It will only match dot entries if it starts with a dot, or if
+  // dot is set.  Stuff like @(.foo|.bar) isn't allowed.
+  var pn = remain[0]
+  var negate = !!this.minimatch.negate
+  var rawGlob = pn._glob
+  var dotOk = this.dot || rawGlob.charAt(0) === '.'
+
+  var matchedEntries = []
+  for (var i = 0; i < entries.length; i++) {
+    var e = entries[i]
+    if (e.charAt(0) !== '.' || dotOk) {
+      var m
+      if (negate && !prefix) {
+        m = !e.match(pn)
+      } else {
+        m = e.match(pn)
+      }
+      if (m)
+        matchedEntries.push(e)
+    }
+  }
+
+  var len = matchedEntries.length
+  // If there are no matched entries, then nothing matches.
+  if (len === 0)
+    return
+
+  // if this is the last remaining pattern bit, then no need for
+  // an additional stat *unless* the user has specified mark or
+  // stat explicitly.  We know they exist, since readdir returned
+  // them.
+
+  if (remain.length === 1 && !this.mark && !this.stat) {
+    if (!this.matches[index])
+      this.matches[index] = Object.create(null)
+
+    for (var i = 0; i < len; i ++) {
+      var e = matchedEntries[i]
+      if (prefix) {
+        if (prefix.slice(-1) !== '/')
+          e = prefix + '/' + e
+        else
+          e = prefix + e
+      }
+
+      if (e.charAt(0) === '/' && !this.nomount) {
+        e = path.join(this.root, e)
+      }
+      this._emitMatch(index, e)
+    }
+    // This was the last one, and no stats were needed
+    return
+  }
+
+  // now test all matched entries as stand-ins for that part
+  // of the pattern.
+  remain.shift()
+  for (var i = 0; i < len; i ++) {
+    var e = matchedEntries[i]
+    var newPattern
+    if (prefix)
+      newPattern = [prefix, e]
+    else
+      newPattern = [e]
+    this._process(newPattern.concat(remain), index, inGlobStar)
+  }
+}
+
+
+GlobSync.prototype._emitMatch = function (index, e) {
+  if (isIgnored(this, e))
+    return
+
+  var abs = this._makeAbs(e)
+
+  if (this.mark)
+    e = this._mark(e)
+
+  if (this.absolute) {
+    e = abs
+  }
+
+  if (this.matches[index][e])
+    return
+
+  if (this.nodir) {
+    var c = this.cache[abs]
+    if (c === 'DIR' || Array.isArray(c))
+      return
+  }
+
+  this.matches[index][e] = true
+
+  if (this.stat)
+    this._stat(e)
+}
+
+
+GlobSync.prototype._readdirInGlobStar = function (abs) {
+  // follow all symlinked directories forever
+  // just proceed as if this is a non-globstar situation
+  if (this.follow)
+    return this._readdir(abs, false)
+
+  var entries
+  var lstat
+  var stat
+  try {
+    lstat = fs.lstatSync(abs)
+  } catch (er) {
+    if (er.code === 'ENOENT') {
+      // lstat failed, doesn't exist
+      return null
+    }
+  }
+
+  var isSym = lstat && lstat.isSymbolicLink()
+  this.symlinks[abs] = isSym
+
+  // If it's not a symlink or a dir, then it's definitely a regular file.
+  // don't bother doing a readdir in that case.
+  if (!isSym && lstat && !lstat.isDirectory())
+    this.cache[abs] = 'FILE'
+  else
+    entries = this._readdir(abs, false)
+
+  return entries
+}
+
+GlobSync.prototype._readdir = function (abs, inGlobStar) {
+  var entries
+
+  if (inGlobStar && !ownProp(this.symlinks, abs))
+    return this._readdirInGlobStar(abs)
+
+  if (ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+    if (!c || c === 'FILE')
+      return null
+
+    if (Array.isArray(c))
+      return c
+  }
+
+  try {
+    return this._readdirEntries(abs, fs.readdirSync(abs))
+  } catch (er) {
+    this._readdirError(abs, er)
+    return null
+  }
+}
+
+GlobSync.prototype._readdirEntries = function (abs, entries) {
+  // if we haven't asked to stat everything, then just
+  // assume that everything in there exists, so we can avoid
+  // having to stat it a second time.
+  if (!this.mark && !this.stat) {
+    for (var i = 0; i < entries.length; i ++) {
+      var e = entries[i]
+      if (abs === '/')
+        e = abs + e
+      else
+        e = abs + '/' + e
+      this.cache[e] = true
+    }
+  }
+
+  this.cache[abs] = entries
+
+  // mark and cache dir-ness
+  return entries
+}
+
+GlobSync.prototype._readdirError = function (f, er) {
+  // handle errors, and cache the information
+  switch (er.code) {
+    case 'ENOTSUP': // https://github.com/isaacs/node-glob/issues/205
+    case 'ENOTDIR': // totally normal. means it *does* exist.
+      var abs = this._makeAbs(f)
+      this.cache[abs] = 'FILE'
+      if (abs === this.cwdAbs) {
+        var error = new Error(er.code + ' invalid cwd ' + this.cwd)
+        error.path = this.cwd
+        error.code = er.code
+        throw error
+      }
+      break
+
+    case 'ENOENT': // not terribly unusual
+    case 'ELOOP':
+    case 'ENAMETOOLONG':
+    case 'UNKNOWN':
+      this.cache[this._makeAbs(f)] = false
+      break
+
+    default: // some unusual error.  Treat as failure.
+      this.cache[this._makeAbs(f)] = false
+      if (this.strict)
+        throw er
+      if (!this.silent)
+        console.error('glob error', er)
+      break
+  }
+}
+
+GlobSync.prototype._processGlobStar = function (prefix, read, abs, remain, index, inGlobStar) {
+
+  var entries = this._readdir(abs, inGlobStar)
+
+  // no entries means not a dir, so it can never have matches
+  // foo.txt/** doesn't match foo.txt
+  if (!entries)
+    return
+
+  // test without the globstar, and with every child both below
+  // and replacing the globstar.
+  var remainWithoutGlobStar = remain.slice(1)
+  var gspref = prefix ? [ prefix ] : []
+  var noGlobStar = gspref.concat(remainWithoutGlobStar)
+
+  // the noGlobStar pattern exits the inGlobStar state
+  this._process(noGlobStar, index, false)
+
+  var len = entries.length
+  var isSym = this.symlinks[abs]
+
+  // If it's a symlink, and we're in a globstar, then stop
+  if (isSym && inGlobStar)
+    return
+
+  for (var i = 0; i < len; i++) {
+    var e = entries[i]
+    if (e.charAt(0) === '.' && !this.dot)
+      continue
+
+    // these two cases enter the inGlobStar state
+    var instead = gspref.concat(entries[i], remainWithoutGlobStar)
+    this._process(instead, index, true)
+
+    var below = gspref.concat(entries[i], remain)
+    this._process(below, index, true)
+  }
+}
+
+GlobSync.prototype._processSimple = function (prefix, index) {
+  // XXX review this.  Shouldn't it be doing the mounting etc
+  // before doing stat?  kinda weird?
+  var exists = this._stat(prefix)
+
+  if (!this.matches[index])
+    this.matches[index] = Object.create(null)
+
+  // If it doesn't exist, then just mark the lack of results
+  if (!exists)
+    return
+
+  if (prefix && isAbsolute(prefix) && !this.nomount) {
+    var trail = /[\/\\]$/.test(prefix)
+    if (prefix.charAt(0) === '/') {
+      prefix = path.join(this.root, prefix)
+    } else {
+      prefix = path.resolve(this.root, prefix)
+      if (trail)
+        prefix += '/'
+    }
+  }
+
+  if (process.platform === 'win32')
+    prefix = prefix.replace(/\\/g, '/')
+
+  // Mark this as a match
+  this._emitMatch(index, prefix)
+}
+
+// Returns either 'DIR', 'FILE', or false
+GlobSync.prototype._stat = function (f) {
+  var abs = this._makeAbs(f)
+  var needDir = f.slice(-1) === '/'
+
+  if (f.length > this.maxLength)
+    return false
+
+  if (!this.stat && ownProp(this.cache, abs)) {
+    var c = this.cache[abs]
+
+    if (Array.isArray(c))
+      c = 'DIR'
+
+    // It exists, but maybe not how we need it
+    if (!needDir || c === 'DIR')
+      return c
+
+    if (needDir && c === 'FILE')
+      return false
+
+    // otherwise we have to stat, because maybe c=true
+    // if we know it exists, but not what it is.
+  }
+
+  var exists
+  var stat = this.statCache[abs]
+  if (!stat) {
+    var lstat
+    try {
+      lstat = fs.lstatSync(abs)
+    } catch (er) {
+      if (er && (er.code === 'ENOENT' || er.code === 'ENOTDIR')) {
+        this.statCache[abs] = false
+        return false
+      }
+    }
+
+    if (lstat && lstat.isSymbolicLink()) {
+      try {
+        stat = fs.statSync(abs)
+      } catch (er) {
+        stat = lstat
+      }
+    } else {
+      stat = lstat
+    }
+  }
+
+  this.statCache[abs] = stat
+
+  var c = true
+  if (stat)
+    c = stat.isDirectory() ? 'DIR' : 'FILE'
+
+  this.cache[abs] = this.cache[abs] || c
+
+  if (needDir && c === 'FILE')
+    return false
+
+  return c
+}
+
+GlobSync.prototype._mark = function (p) {
+  return common.mark(this, p)
+}
+
+GlobSync.prototype._makeAbs = function (f) {
+  return common.makeAbs(this, f)
+}
+
+
+/***/ }),
+
+/***/ 2492:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+var wrappy = __nccwpck_require__(2940)
+var reqs = Object.create(null)
+var once = __nccwpck_require__(1223)
+
+module.exports = wrappy(inflight)
+
+function inflight (key, cb) {
+  if (reqs[key]) {
+    reqs[key].push(cb)
+    return null
+  } else {
+    reqs[key] = [cb]
+    return makeres(key)
+  }
+}
+
+function makeres (key) {
+  return once(function RES () {
+    var cbs = reqs[key]
+    var len = cbs.length
+    var args = slice(arguments)
+
+    // XXX It's somewhat ambiguous whether a new callback added in this
+    // pass should be queued for later execution if something in the
+    // list of callbacks throws, or if it should just be discarded.
+    // However, it's such an edge case that it hardly matters, and either
+    // choice is likely as surprising as the other.
+    // As it happens, we do go ahead and schedule it for later execution.
+    try {
+      for (var i = 0; i < len; i++) {
+        cbs[i].apply(null, args)
+      }
+    } finally {
+      if (cbs.length > len) {
+        // added more in the interim.
+        // de-zalgo, just in case, but don't call again.
+        cbs.splice(0, len)
+        process.nextTick(function () {
+          RES.apply(null, args)
+        })
+      } else {
+        delete reqs[key]
+      }
+    }
+  })
+}
+
+function slice (args) {
+  var length = args.length
+  var array = []
+
+  for (var i = 0; i < length; i++) array[i] = args[i]
+  return array
+}
+
+
+/***/ }),
+
+/***/ 4124:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+try {
+  var util = __nccwpck_require__(1669);
+  /* istanbul ignore next */
+  if (typeof util.inherits !== 'function') throw '';
+  module.exports = util.inherits;
+} catch (e) {
+  /* istanbul ignore next */
+  module.exports = __nccwpck_require__(8544);
+}
+
+
+/***/ }),
+
+/***/ 8544:
+/***/ ((module) => {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      ctor.prototype = Object.create(superCtor.prototype, {
+        constructor: {
+          value: ctor,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      })
+    }
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      var TempCtor = function () {}
+      TempCtor.prototype = superCtor.prototype
+      ctor.prototype = new TempCtor()
+      ctor.prototype.constructor = ctor
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ 7129:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+// A linked list to keep track of recently-used-ness
+const Yallist = __nccwpck_require__(665)
+
+const MAX = Symbol('max')
+const LENGTH = Symbol('length')
+const LENGTH_CALCULATOR = Symbol('lengthCalculator')
+const ALLOW_STALE = Symbol('allowStale')
+const MAX_AGE = Symbol('maxAge')
+const DISPOSE = Symbol('dispose')
+const NO_DISPOSE_ON_SET = Symbol('noDisposeOnSet')
+const LRU_LIST = Symbol('lruList')
+const CACHE = Symbol('cache')
+const UPDATE_AGE_ON_GET = Symbol('updateAgeOnGet')
+
+const naiveLength = () => 1
+
+// lruList is a yallist where the head is the youngest
+// item, and the tail is the oldest.  the list contains the Hit
+// objects as the entries.
+// Each Hit object has a reference to its Yallist.Node.  This
+// never changes.
+//
+// cache is a Map (or PseudoMap) that matches the keys to
+// the Yallist.Node object.
+class LRUCache {
+  constructor (options) {
+    if (typeof options === 'number')
+      options = { max: options }
+
+    if (!options)
+      options = {}
+
+    if (options.max && (typeof options.max !== 'number' || options.max < 0))
+      throw new TypeError('max must be a non-negative number')
+    // Kind of weird to have a default max of Infinity, but oh well.
+    const max = this[MAX] = options.max || Infinity
+
+    const lc = options.length || naiveLength
+    this[LENGTH_CALCULATOR] = (typeof lc !== 'function') ? naiveLength : lc
+    this[ALLOW_STALE] = options.stale || false
+    if (options.maxAge && typeof options.maxAge !== 'number')
+      throw new TypeError('maxAge must be a number')
+    this[MAX_AGE] = options.maxAge || 0
+    this[DISPOSE] = options.dispose
+    this[NO_DISPOSE_ON_SET] = options.noDisposeOnSet || false
+    this[UPDATE_AGE_ON_GET] = options.updateAgeOnGet || false
+    this.reset()
+  }
+
+  // resize the cache when the max changes.
+  set max (mL) {
+    if (typeof mL !== 'number' || mL < 0)
+      throw new TypeError('max must be a non-negative number')
+
+    this[MAX] = mL || Infinity
+    trim(this)
+  }
+  get max () {
+    return this[MAX]
+  }
+
+  set allowStale (allowStale) {
+    this[ALLOW_STALE] = !!allowStale
+  }
+  get allowStale () {
+    return this[ALLOW_STALE]
+  }
+
+  set maxAge (mA) {
+    if (typeof mA !== 'number')
+      throw new TypeError('maxAge must be a non-negative number')
+
+    this[MAX_AGE] = mA
+    trim(this)
+  }
+  get maxAge () {
+    return this[MAX_AGE]
+  }
+
+  // resize the cache when the lengthCalculator changes.
+  set lengthCalculator (lC) {
+    if (typeof lC !== 'function')
+      lC = naiveLength
+
+    if (lC !== this[LENGTH_CALCULATOR]) {
+      this[LENGTH_CALCULATOR] = lC
+      this[LENGTH] = 0
+      this[LRU_LIST].forEach(hit => {
+        hit.length = this[LENGTH_CALCULATOR](hit.value, hit.key)
+        this[LENGTH] += hit.length
+      })
+    }
+    trim(this)
+  }
+  get lengthCalculator () { return this[LENGTH_CALCULATOR] }
+
+  get length () { return this[LENGTH] }
+  get itemCount () { return this[LRU_LIST].length }
+
+  rforEach (fn, thisp) {
+    thisp = thisp || this
+    for (let walker = this[LRU_LIST].tail; walker !== null;) {
+      const prev = walker.prev
+      forEachStep(this, fn, walker, thisp)
+      walker = prev
+    }
+  }
+
+  forEach (fn, thisp) {
+    thisp = thisp || this
+    for (let walker = this[LRU_LIST].head; walker !== null;) {
+      const next = walker.next
+      forEachStep(this, fn, walker, thisp)
+      walker = next
+    }
+  }
+
+  keys () {
+    return this[LRU_LIST].toArray().map(k => k.key)
+  }
+
+  values () {
+    return this[LRU_LIST].toArray().map(k => k.value)
+  }
+
+  reset () {
+    if (this[DISPOSE] &&
+        this[LRU_LIST] &&
+        this[LRU_LIST].length) {
+      this[LRU_LIST].forEach(hit => this[DISPOSE](hit.key, hit.value))
+    }
+
+    this[CACHE] = new Map() // hash of items by key
+    this[LRU_LIST] = new Yallist() // list of items in order of use recency
+    this[LENGTH] = 0 // length of items in the list
+  }
+
+  dump () {
+    return this[LRU_LIST].map(hit =>
+      isStale(this, hit) ? false : {
+        k: hit.key,
+        v: hit.value,
+        e: hit.now + (hit.maxAge || 0)
+      }).toArray().filter(h => h)
+  }
+
+  dumpLru () {
+    return this[LRU_LIST]
+  }
+
+  set (key, value, maxAge) {
+    maxAge = maxAge || this[MAX_AGE]
+
+    if (maxAge && typeof maxAge !== 'number')
+      throw new TypeError('maxAge must be a number')
+
+    const now = maxAge ? Date.now() : 0
+    const len = this[LENGTH_CALCULATOR](value, key)
+
+    if (this[CACHE].has(key)) {
+      if (len > this[MAX]) {
+        del(this, this[CACHE].get(key))
+        return false
+      }
+
+      const node = this[CACHE].get(key)
+      const item = node.value
+
+      // dispose of the old one before overwriting
+      // split out into 2 ifs for better coverage tracking
+      if (this[DISPOSE]) {
+        if (!this[NO_DISPOSE_ON_SET])
+          this[DISPOSE](key, item.value)
+      }
+
+      item.now = now
+      item.maxAge = maxAge
+      item.value = value
+      this[LENGTH] += len - item.length
+      item.length = len
+      this.get(key)
+      trim(this)
+      return true
+    }
+
+    const hit = new Entry(key, value, len, now, maxAge)
+
+    // oversized objects fall out of cache automatically.
+    if (hit.length > this[MAX]) {
+      if (this[DISPOSE])
+        this[DISPOSE](key, value)
+
+      return false
+    }
+
+    this[LENGTH] += hit.length
+    this[LRU_LIST].unshift(hit)
+    this[CACHE].set(key, this[LRU_LIST].head)
+    trim(this)
+    return true
+  }
+
+  has (key) {
+    if (!this[CACHE].has(key)) return false
+    const hit = this[CACHE].get(key).value
+    return !isStale(this, hit)
+  }
+
+  get (key) {
+    return get(this, key, true)
+  }
+
+  peek (key) {
+    return get(this, key, false)
+  }
+
+  pop () {
+    const node = this[LRU_LIST].tail
+    if (!node)
+      return null
+
+    del(this, node)
+    return node.value
+  }
+
+  del (key) {
+    del(this, this[CACHE].get(key))
+  }
+
+  load (arr) {
+    // reset the cache
+    this.reset()
+
+    const now = Date.now()
+    // A previous serialized cache has the most recent items first
+    for (let l = arr.length - 1; l >= 0; l--) {
+      const hit = arr[l]
+      const expiresAt = hit.e || 0
+      if (expiresAt === 0)
+        // the item was created without expiration in a non aged cache
+        this.set(hit.k, hit.v)
+      else {
+        const maxAge = expiresAt - now
+        // dont add already expired items
+        if (maxAge > 0) {
+          this.set(hit.k, hit.v, maxAge)
+        }
+      }
+    }
+  }
+
+  prune () {
+    this[CACHE].forEach((value, key) => get(this, key, false))
+  }
+}
+
+const get = (self, key, doUse) => {
+  const node = self[CACHE].get(key)
+  if (node) {
+    const hit = node.value
+    if (isStale(self, hit)) {
+      del(self, node)
+      if (!self[ALLOW_STALE])
+        return undefined
+    } else {
+      if (doUse) {
+        if (self[UPDATE_AGE_ON_GET])
+          node.value.now = Date.now()
+        self[LRU_LIST].unshiftNode(node)
+      }
+    }
+    return hit.value
+  }
+}
+
+const isStale = (self, hit) => {
+  if (!hit || (!hit.maxAge && !self[MAX_AGE]))
+    return false
+
+  const diff = Date.now() - hit.now
+  return hit.maxAge ? diff > hit.maxAge
+    : self[MAX_AGE] && (diff > self[MAX_AGE])
+}
+
+const trim = self => {
+  if (self[LENGTH] > self[MAX]) {
+    for (let walker = self[LRU_LIST].tail;
+      self[LENGTH] > self[MAX] && walker !== null;) {
+      // We know that we're about to delete this one, and also
+      // what the next least recently used key will be, so just
+      // go ahead and set it now.
+      const prev = walker.prev
+      del(self, walker)
+      walker = prev
+    }
+  }
+}
+
+const del = (self, node) => {
+  if (node) {
+    const hit = node.value
+    if (self[DISPOSE])
+      self[DISPOSE](hit.key, hit.value)
+
+    self[LENGTH] -= hit.length
+    self[CACHE].delete(hit.key)
+    self[LRU_LIST].removeNode(node)
+  }
+}
+
+class Entry {
+  constructor (key, value, length, now, maxAge) {
+    this.key = key
+    this.value = value
+    this.length = length
+    this.now = now
+    this.maxAge = maxAge || 0
+  }
+}
+
+const forEachStep = (self, fn, node, thisp) => {
+  let hit = node.value
+  if (isStale(self, hit)) {
+    del(self, node)
+    if (!self[ALLOW_STALE])
+      hit = undefined
+  }
+  if (hit)
+    fn.call(thisp, hit.value, hit.key, self)
+}
+
+module.exports = LRUCache
+
+
+/***/ }),
+
+/***/ 3973:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = minimatch
+minimatch.Minimatch = Minimatch
+
+var path = { sep: '/' }
+try {
+  path = __nccwpck_require__(5622)
+} catch (er) {}
+
+var GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {}
+var expand = __nccwpck_require__(3717)
+
+var plTypes = {
+  '!': { open: '(?:(?!(?:', close: '))[^/]*?)'},
+  '?': { open: '(?:', close: ')?' },
+  '+': { open: '(?:', close: ')+' },
+  '*': { open: '(?:', close: ')*' },
+  '@': { open: '(?:', close: ')' }
+}
+
+// any single thing other than /
+// don't need to escape / when using new RegExp()
+var qmark = '[^/]'
+
+// * => any number of characters
+var star = qmark + '*?'
+
+// ** when dots are allowed.  Anything goes, except .. and .
+// not (^ or / followed by one or two dots followed by $ or /),
+// followed by anything, any number of times.
+var twoStarDot = '(?:(?!(?:\\\/|^)(?:\\.{1,2})($|\\\/)).)*?'
+
+// not a ^ or / followed by a dot,
+// followed by anything, any number of times.
+var twoStarNoDot = '(?:(?!(?:\\\/|^)\\.).)*?'
+
+// characters that need to be escaped in RegExp.
+var reSpecials = charSet('().*{}+?[]^$\\!')
+
+// "abc" -> { a:true, b:true, c:true }
+function charSet (s) {
+  return s.split('').reduce(function (set, c) {
+    set[c] = true
+    return set
+  }, {})
+}
+
+// normalizes slashes.
+var slashSplit = /\/+/
+
+minimatch.filter = filter
+function filter (pattern, options) {
+  options = options || {}
+  return function (p, i, list) {
+    return minimatch(p, pattern, options)
+  }
+}
+
+function ext (a, b) {
+  a = a || {}
+  b = b || {}
+  var t = {}
+  Object.keys(b).forEach(function (k) {
+    t[k] = b[k]
+  })
+  Object.keys(a).forEach(function (k) {
+    t[k] = a[k]
+  })
+  return t
+}
+
+minimatch.defaults = function (def) {
+  if (!def || !Object.keys(def).length) return minimatch
+
+  var orig = minimatch
+
+  var m = function minimatch (p, pattern, options) {
+    return orig.minimatch(p, pattern, ext(def, options))
+  }
+
+  m.Minimatch = function Minimatch (pattern, options) {
+    return new orig.Minimatch(pattern, ext(def, options))
+  }
+
+  return m
+}
+
+Minimatch.defaults = function (def) {
+  if (!def || !Object.keys(def).length) return Minimatch
+  return minimatch.defaults(def).Minimatch
+}
+
+function minimatch (p, pattern, options) {
+  if (typeof pattern !== 'string') {
+    throw new TypeError('glob pattern string required')
+  }
+
+  if (!options) options = {}
+
+  // shortcut: comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    return false
+  }
+
+  // "" only matches ""
+  if (pattern.trim() === '') return p === ''
+
+  return new Minimatch(pattern, options).match(p)
+}
+
+function Minimatch (pattern, options) {
+  if (!(this instanceof Minimatch)) {
+    return new Minimatch(pattern, options)
+  }
+
+  if (typeof pattern !== 'string') {
+    throw new TypeError('glob pattern string required')
+  }
+
+  if (!options) options = {}
+  pattern = pattern.trim()
+
+  // windows support: need to use /, not \
+  if (path.sep !== '/') {
+    pattern = pattern.split(path.sep).join('/')
+  }
+
+  this.options = options
+  this.set = []
+  this.pattern = pattern
+  this.regexp = null
+  this.negate = false
+  this.comment = false
+  this.empty = false
+
+  // make the set of regexps etc.
+  this.make()
+}
+
+Minimatch.prototype.debug = function () {}
+
+Minimatch.prototype.make = make
+function make () {
+  // don't do it more than once.
+  if (this._made) return
+
+  var pattern = this.pattern
+  var options = this.options
+
+  // empty patterns and comments match nothing.
+  if (!options.nocomment && pattern.charAt(0) === '#') {
+    this.comment = true
+    return
+  }
+  if (!pattern) {
+    this.empty = true
+    return
+  }
+
+  // step 1: figure out negation, etc.
+  this.parseNegate()
+
+  // step 2: expand braces
+  var set = this.globSet = this.braceExpand()
+
+  if (options.debug) this.debug = console.error
+
+  this.debug(this.pattern, set)
+
+  // step 3: now we have a set, so turn each one into a series of path-portion
+  // matching patterns.
+  // These will be regexps, except in the case of "**", which is
+  // set to the GLOBSTAR object for globstar behavior,
+  // and will not contain any / characters
+  set = this.globParts = set.map(function (s) {
+    return s.split(slashSplit)
+  })
+
+  this.debug(this.pattern, set)
+
+  // glob --> regexps
+  set = set.map(function (s, si, set) {
+    return s.map(this.parse, this)
+  }, this)
+
+  this.debug(this.pattern, set)
+
+  // filter out everything that didn't compile properly.
+  set = set.filter(function (s) {
+    return s.indexOf(false) === -1
+  })
+
+  this.debug(this.pattern, set)
+
+  this.set = set
+}
+
+Minimatch.prototype.parseNegate = parseNegate
+function parseNegate () {
+  var pattern = this.pattern
+  var negate = false
+  var options = this.options
+  var negateOffset = 0
+
+  if (options.nonegate) return
+
+  for (var i = 0, l = pattern.length
+    ; i < l && pattern.charAt(i) === '!'
+    ; i++) {
+    negate = !negate
+    negateOffset++
+  }
+
+  if (negateOffset) this.pattern = pattern.substr(negateOffset)
+  this.negate = negate
+}
+
+// Brace expansion:
+// a{b,c}d -> abd acd
+// a{b,}c -> abc ac
+// a{0..3}d -> a0d a1d a2d a3d
+// a{b,c{d,e}f}g -> abg acdfg acefg
+// a{b,c}d{e,f}g -> abdeg acdeg abdeg abdfg
+//
+// Invalid sets are not expanded.
+// a{2..}b -> a{2..}b
+// a{b}c -> a{b}c
+minimatch.braceExpand = function (pattern, options) {
+  return braceExpand(pattern, options)
+}
+
+Minimatch.prototype.braceExpand = braceExpand
+
+function braceExpand (pattern, options) {
+  if (!options) {
+    if (this instanceof Minimatch) {
+      options = this.options
+    } else {
+      options = {}
+    }
+  }
+
+  pattern = typeof pattern === 'undefined'
+    ? this.pattern : pattern
+
+  if (typeof pattern === 'undefined') {
+    throw new TypeError('undefined pattern')
+  }
+
+  if (options.nobrace ||
+    !pattern.match(/\{.*\}/)) {
+    // shortcut. no need to expand.
+    return [pattern]
+  }
+
+  return expand(pattern)
+}
+
+// parse a component of the expanded set.
+// At this point, no pattern may contain "/" in it
+// so we're going to return a 2d array, where each entry is the full
+// pattern, split on '/', and then turned into a regular expression.
+// A regexp is made at the end which joins each array with an
+// escaped /, and another full one which joins each regexp with |.
+//
+// Following the lead of Bash 4.1, note that "**" only has special meaning
+// when it is the *only* thing in a path portion.  Otherwise, any series
+// of * is equivalent to a single *.  Globstar behavior is enabled by
+// default, and can be disabled by setting options.noglobstar.
+Minimatch.prototype.parse = parse
+var SUBPARSE = {}
+function parse (pattern, isSub) {
+  if (pattern.length > 1024 * 64) {
+    throw new TypeError('pattern is too long')
+  }
+
+  var options = this.options
+
+  // shortcuts
+  if (!options.noglobstar && pattern === '**') return GLOBSTAR
+  if (pattern === '') return ''
+
+  var re = ''
+  var hasMagic = !!options.nocase
+  var escaping = false
+  // ? => one single character
+  var patternListStack = []
+  var negativeLists = []
+  var stateChar
+  var inClass = false
+  var reClassStart = -1
+  var classStart = -1
+  // . and .. never match anything that doesn't start with .,
+  // even when options.dot is set.
+  var patternStart = pattern.charAt(0) === '.' ? '' // anything
+  // not (start or / followed by . or .. followed by / or end)
+  : options.dot ? '(?!(?:^|\\\/)\\.{1,2}(?:$|\\\/))'
+  : '(?!\\.)'
+  var self = this
+
+  function clearStateChar () {
+    if (stateChar) {
+      // we had some state-tracking character
+      // that wasn't consumed by this pass.
+      switch (stateChar) {
+        case '*':
+          re += star
+          hasMagic = true
+        break
+        case '?':
+          re += qmark
+          hasMagic = true
+        break
+        default:
+          re += '\\' + stateChar
+        break
+      }
+      self.debug('clearStateChar %j %j', stateChar, re)
+      stateChar = false
+    }
+  }
+
+  for (var i = 0, len = pattern.length, c
+    ; (i < len) && (c = pattern.charAt(i))
+    ; i++) {
+    this.debug('%s\t%s %s %j', pattern, i, re, c)
+
+    // skip over any that are escaped.
+    if (escaping && reSpecials[c]) {
+      re += '\\' + c
+      escaping = false
+      continue
+    }
+
+    switch (c) {
+      case '/':
+        // completely not allowed, even escaped.
+        // Should already be path-split by now.
+        return false
+
+      case '\\':
+        clearStateChar()
+        escaping = true
+      continue
+
+      // the various stateChar values
+      // for the "extglob" stuff.
+      case '?':
+      case '*':
+      case '+':
+      case '@':
+      case '!':
+        this.debug('%s\t%s %s %j <-- stateChar', pattern, i, re, c)
+
+        // all of those are literals inside a class, except that
+        // the glob [!a] means [^a] in regexp
+        if (inClass) {
+          this.debug('  in class')
+          if (c === '!' && i === classStart + 1) c = '^'
+          re += c
+          continue
+        }
+
+        // if we already have a stateChar, then it means
+        // that there was something like ** or +? in there.
+        // Handle the stateChar, then proceed with this one.
+        self.debug('call clearStateChar %j', stateChar)
+        clearStateChar()
+        stateChar = c
+        // if extglob is disabled, then +(asdf|foo) isn't a thing.
+        // just clear the statechar *now*, rather than even diving into
+        // the patternList stuff.
+        if (options.noext) clearStateChar()
+      continue
+
+      case '(':
+        if (inClass) {
+          re += '('
+          continue
+        }
+
+        if (!stateChar) {
+          re += '\\('
+          continue
+        }
+
+        patternListStack.push({
+          type: stateChar,
+          start: i - 1,
+          reStart: re.length,
+          open: plTypes[stateChar].open,
+          close: plTypes[stateChar].close
+        })
+        // negation is (?:(?!js)[^/]*)
+        re += stateChar === '!' ? '(?:(?!(?:' : '(?:'
+        this.debug('plType %j %j', stateChar, re)
+        stateChar = false
+      continue
+
+      case ')':
+        if (inClass || !patternListStack.length) {
+          re += '\\)'
+          continue
+        }
+
+        clearStateChar()
+        hasMagic = true
+        var pl = patternListStack.pop()
+        // negation is (?:(?!js)[^/]*)
+        // The others are (?:<pattern>)<type>
+        re += pl.close
+        if (pl.type === '!') {
+          negativeLists.push(pl)
+        }
+        pl.reEnd = re.length
+      continue
+
+      case '|':
+        if (inClass || !patternListStack.length || escaping) {
+          re += '\\|'
+          escaping = false
+          continue
+        }
+
+        clearStateChar()
+        re += '|'
+      continue
+
+      // these are mostly the same in regexp and glob
+      case '[':
+        // swallow any state-tracking char before the [
+        clearStateChar()
+
+        if (inClass) {
+          re += '\\' + c
+          continue
+        }
+
+        inClass = true
+        classStart = i
+        reClassStart = re.length
+        re += c
+      continue
+
+      case ']':
+        //  a right bracket shall lose its special
+        //  meaning and represent itself in
+        //  a bracket expression if it occurs
+        //  first in the list.  -- POSIX.2 2.8.3.2
+        if (i === classStart + 1 || !inClass) {
+          re += '\\' + c
+          escaping = false
+          continue
+        }
+
+        // handle the case where we left a class open.
+        // "[z-a]" is valid, equivalent to "\[z-a\]"
+        if (inClass) {
+          // split where the last [ was, make sure we don't have
+          // an invalid re. if so, re-walk the contents of the
+          // would-be class to re-translate any characters that
+          // were passed through as-is
+          // TODO: It would probably be faster to determine this
+          // without a try/catch and a new RegExp, but it's tricky
+          // to do safely.  For now, this is safe and works.
+          var cs = pattern.substring(classStart + 1, i)
+          try {
+            RegExp('[' + cs + ']')
+          } catch (er) {
+            // not a valid class!
+            var sp = this.parse(cs, SUBPARSE)
+            re = re.substr(0, reClassStart) + '\\[' + sp[0] + '\\]'
+            hasMagic = hasMagic || sp[1]
+            inClass = false
+            continue
+          }
+        }
+
+        // finish up the class.
+        hasMagic = true
+        inClass = false
+        re += c
+      continue
+
+      default:
+        // swallow any state char that wasn't consumed
+        clearStateChar()
+
+        if (escaping) {
+          // no need
+          escaping = false
+        } else if (reSpecials[c]
+          && !(c === '^' && inClass)) {
+          re += '\\'
+        }
+
+        re += c
+
+    } // switch
+  } // for
+
+  // handle the case where we left a class open.
+  // "[abc" is valid, equivalent to "\[abc"
+  if (inClass) {
+    // split where the last [ was, and escape it
+    // this is a huge pita.  We now have to re-walk
+    // the contents of the would-be class to re-translate
+    // any characters that were passed through as-is
+    cs = pattern.substr(classStart + 1)
+    sp = this.parse(cs, SUBPARSE)
+    re = re.substr(0, reClassStart) + '\\[' + sp[0]
+    hasMagic = hasMagic || sp[1]
+  }
+
+  // handle the case where we had a +( thing at the *end*
+  // of the pattern.
+  // each pattern list stack adds 3 chars, and we need to go through
+  // and escape any | chars that were passed through as-is for the regexp.
+  // Go through and escape them, taking care not to double-escape any
+  // | chars that were already escaped.
+  for (pl = patternListStack.pop(); pl; pl = patternListStack.pop()) {
+    var tail = re.slice(pl.reStart + pl.open.length)
+    this.debug('setting tail', re, pl)
+    // maybe some even number of \, then maybe 1 \, followed by a |
+    tail = tail.replace(/((?:\\{2}){0,64})(\\?)\|/g, function (_, $1, $2) {
+      if (!$2) {
+        // the | isn't already escaped, so escape it.
+        $2 = '\\'
+      }
+
+      // need to escape all those slashes *again*, without escaping the
+      // one that we need for escaping the | character.  As it works out,
+      // escaping an even number of slashes can be done by simply repeating
+      // it exactly after itself.  That's why this trick works.
+      //
+      // I am sorry that you have to see this.
+      return $1 + $1 + $2 + '|'
+    })
+
+    this.debug('tail=%j\n   %s', tail, tail, pl, re)
+    var t = pl.type === '*' ? star
+      : pl.type === '?' ? qmark
+      : '\\' + pl.type
+
+    hasMagic = true
+    re = re.slice(0, pl.reStart) + t + '\\(' + tail
+  }
+
+  // handle trailing things that only matter at the very end.
+  clearStateChar()
+  if (escaping) {
+    // trailing \\
+    re += '\\\\'
+  }
+
+  // only need to apply the nodot start if the re starts with
+  // something that could conceivably capture a dot
+  var addPatternStart = false
+  switch (re.charAt(0)) {
+    case '.':
+    case '[':
+    case '(': addPatternStart = true
+  }
+
+  // Hack to work around lack of negative lookbehind in JS
+  // A pattern like: *.!(x).!(y|z) needs to ensure that a name
+  // like 'a.xyz.yz' doesn't match.  So, the first negative
+  // lookahead, has to look ALL the way ahead, to the end of
+  // the pattern.
+  for (var n = negativeLists.length - 1; n > -1; n--) {
+    var nl = negativeLists[n]
+
+    var nlBefore = re.slice(0, nl.reStart)
+    var nlFirst = re.slice(nl.reStart, nl.reEnd - 8)
+    var nlLast = re.slice(nl.reEnd - 8, nl.reEnd)
+    var nlAfter = re.slice(nl.reEnd)
+
+    nlLast += nlAfter
+
+    // Handle nested stuff like *(*.js|!(*.json)), where open parens
+    // mean that we should *not* include the ) in the bit that is considered
+    // "after" the negated section.
+    var openParensBefore = nlBefore.split('(').length - 1
+    var cleanAfter = nlAfter
+    for (i = 0; i < openParensBefore; i++) {
+      cleanAfter = cleanAfter.replace(/\)[+*?]?/, '')
+    }
+    nlAfter = cleanAfter
+
+    var dollar = ''
+    if (nlAfter === '' && isSub !== SUBPARSE) {
+      dollar = '$'
+    }
+    var newRe = nlBefore + nlFirst + nlAfter + dollar + nlLast
+    re = newRe
+  }
+
+  // if the re is not "" at this point, then we need to make sure
+  // it doesn't match against an empty path part.
+  // Otherwise a/* will match a/, which it should not.
+  if (re !== '' && hasMagic) {
+    re = '(?=.)' + re
+  }
+
+  if (addPatternStart) {
+    re = patternStart + re
+  }
+
+  // parsing just a piece of a larger pattern.
+  if (isSub === SUBPARSE) {
+    return [re, hasMagic]
+  }
+
+  // skip the regexp for non-magical patterns
+  // unescape anything in it, though, so that it'll be
+  // an exact match against a file etc.
+  if (!hasMagic) {
+    return globUnescape(pattern)
+  }
+
+  var flags = options.nocase ? 'i' : ''
+  try {
+    var regExp = new RegExp('^' + re + '$', flags)
+  } catch (er) {
+    // If it was an invalid regular expression, then it can't match
+    // anything.  This trick looks for a character after the end of
+    // the string, which is of course impossible, except in multi-line
+    // mode, but it's not a /m regex.
+    return new RegExp('$.')
+  }
+
+  regExp._glob = pattern
+  regExp._src = re
+
+  return regExp
+}
+
+minimatch.makeRe = function (pattern, options) {
+  return new Minimatch(pattern, options || {}).makeRe()
+}
+
+Minimatch.prototype.makeRe = makeRe
+function makeRe () {
+  if (this.regexp || this.regexp === false) return this.regexp
+
+  // at this point, this.set is a 2d array of partial
+  // pattern strings, or "**".
+  //
+  // It's better to use .match().  This function shouldn't
+  // be used, really, but it's pretty convenient sometimes,
+  // when you just want to work with a regex.
+  var set = this.set
+
+  if (!set.length) {
+    this.regexp = false
+    return this.regexp
+  }
+  var options = this.options
+
+  var twoStar = options.noglobstar ? star
+    : options.dot ? twoStarDot
+    : twoStarNoDot
+  var flags = options.nocase ? 'i' : ''
+
+  var re = set.map(function (pattern) {
+    return pattern.map(function (p) {
+      return (p === GLOBSTAR) ? twoStar
+      : (typeof p === 'string') ? regExpEscape(p)
+      : p._src
+    }).join('\\\/')
+  }).join('|')
+
+  // must match entire pattern
+  // ending in a * or ** will make it less strict.
+  re = '^(?:' + re + ')$'
+
+  // can match anything, as long as it's not this.
+  if (this.negate) re = '^(?!' + re + ').*$'
+
+  try {
+    this.regexp = new RegExp(re, flags)
+  } catch (ex) {
+    this.regexp = false
+  }
+  return this.regexp
+}
+
+minimatch.match = function (list, pattern, options) {
+  options = options || {}
+  var mm = new Minimatch(pattern, options)
+  list = list.filter(function (f) {
+    return mm.match(f)
+  })
+  if (mm.options.nonull && !list.length) {
+    list.push(pattern)
+  }
+  return list
+}
+
+Minimatch.prototype.match = match
+function match (f, partial) {
+  this.debug('match', f, this.pattern)
+  // short-circuit in the case of busted things.
+  // comments, etc.
+  if (this.comment) return false
+  if (this.empty) return f === ''
+
+  if (f === '/' && partial) return true
+
+  var options = this.options
+
+  // windows: need to use /, not \
+  if (path.sep !== '/') {
+    f = f.split(path.sep).join('/')
+  }
+
+  // treat the test path as a set of pathparts.
+  f = f.split(slashSplit)
+  this.debug(this.pattern, 'split', f)
+
+  // just ONE of the pattern sets in this.set needs to match
+  // in order for it to be valid.  If negating, then just one
+  // match means that we have failed.
+  // Either way, return on the first hit.
+
+  var set = this.set
+  this.debug(this.pattern, 'set', set)
+
+  // Find the basename of the path by looking for the last non-empty segment
+  var filename
+  var i
+  for (i = f.length - 1; i >= 0; i--) {
+    filename = f[i]
+    if (filename) break
+  }
+
+  for (i = 0; i < set.length; i++) {
+    var pattern = set[i]
+    var file = f
+    if (options.matchBase && pattern.length === 1) {
+      file = [filename]
+    }
+    var hit = this.matchOne(file, pattern, partial)
+    if (hit) {
+      if (options.flipNegate) return true
+      return !this.negate
+    }
+  }
+
+  // didn't get any hits.  this is success if it's a negative
+  // pattern, failure otherwise.
+  if (options.flipNegate) return false
+  return this.negate
+}
+
+// set partial to true to test if, for example,
+// "/a/b" matches the start of "/*/b/*/d"
+// Partial means, if you run out of file before you run
+// out of pattern, then that's fine, as long as all
+// the parts match.
+Minimatch.prototype.matchOne = function (file, pattern, partial) {
+  var options = this.options
+
+  this.debug('matchOne',
+    { 'this': this, file: file, pattern: pattern })
+
+  this.debug('matchOne', file.length, pattern.length)
+
+  for (var fi = 0,
+      pi = 0,
+      fl = file.length,
+      pl = pattern.length
+      ; (fi < fl) && (pi < pl)
+      ; fi++, pi++) {
+    this.debug('matchOne loop')
+    var p = pattern[pi]
+    var f = file[fi]
+
+    this.debug(pattern, p, f)
+
+    // should be impossible.
+    // some invalid regexp stuff in the set.
+    if (p === false) return false
+
+    if (p === GLOBSTAR) {
+      this.debug('GLOBSTAR', [pattern, p, f])
+
+      // "**"
+      // a/**/b/**/c would match the following:
+      // a/b/x/y/z/c
+      // a/x/y/z/b/c
+      // a/b/x/b/x/c
+      // a/b/c
+      // To do this, take the rest of the pattern after
+      // the **, and see if it would match the file remainder.
+      // If so, return success.
+      // If not, the ** "swallows" a segment, and try again.
+      // This is recursively awful.
+      //
+      // a/**/b/**/c matching a/b/x/y/z/c
+      // - a matches a
+      // - doublestar
+      //   - matchOne(b/x/y/z/c, b/**/c)
+      //     - b matches b
+      //     - doublestar
+      //       - matchOne(x/y/z/c, c) -> no
+      //       - matchOne(y/z/c, c) -> no
+      //       - matchOne(z/c, c) -> no
+      //       - matchOne(c, c) yes, hit
+      var fr = fi
+      var pr = pi + 1
+      if (pr === pl) {
+        this.debug('** at the end')
+        // a ** at the end will just swallow the rest.
+        // We have found a match.
+        // however, it will not swallow /.x, unless
+        // options.dot is set.
+        // . and .. are *never* matched by **, for explosively
+        // exponential reasons.
+        for (; fi < fl; fi++) {
+          if (file[fi] === '.' || file[fi] === '..' ||
+            (!options.dot && file[fi].charAt(0) === '.')) return false
+        }
+        return true
+      }
+
+      // ok, let's see if we can swallow whatever we can.
+      while (fr < fl) {
+        var swallowee = file[fr]
+
+        this.debug('\nglobstar while', file, fr, pattern, pr, swallowee)
+
+        // XXX remove this slice.  Just pass the start index.
+        if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
+          this.debug('globstar found match!', fr, fl, swallowee)
+          // found a match.
+          return true
+        } else {
+          // can't swallow "." or ".." ever.
+          // can only swallow ".foo" when explicitly asked.
+          if (swallowee === '.' || swallowee === '..' ||
+            (!options.dot && swallowee.charAt(0) === '.')) {
+            this.debug('dot detected!', file, fr, pattern, pr)
+            break
+          }
+
+          // ** swallows a segment, and continue.
+          this.debug('globstar swallow a segment, and continue')
+          fr++
+        }
+      }
+
+      // no match was found.
+      // However, in partial mode, we can't say this is necessarily over.
+      // If there's more *pattern* left, then
+      if (partial) {
+        // ran out of file
+        this.debug('\n>>> no match, partial?', file, fr, pattern, pr)
+        if (fr === fl) return true
+      }
+      return false
+    }
+
+    // something other than **
+    // non-magic patterns just have to match exactly
+    // patterns with magic have been turned into regexps.
+    var hit
+    if (typeof p === 'string') {
+      if (options.nocase) {
+        hit = f.toLowerCase() === p.toLowerCase()
+      } else {
+        hit = f === p
+      }
+      this.debug('string match', p, f, hit)
+    } else {
+      hit = f.match(p)
+      this.debug('pattern match', p, f, hit)
+    }
+
+    if (!hit) return false
+  }
+
+  // Note: ending in / means that we'll get a final ""
+  // at the end of the pattern.  This can only match a
+  // corresponding "" at the end of the file.
+  // If the file ends in /, then it can only match a
+  // a pattern that ends in /, unless the pattern just
+  // doesn't have any more for it. But, a/b/ should *not*
+  // match "a/b/*", even though "" matches against the
+  // [^/]*? pattern, except in partial mode, where it might
+  // simply not be reached yet.
+  // However, a/b/ should still satisfy a/*
+
+  // now either we fell off the end of the pattern, or we're done.
+  if (fi === fl && pi === pl) {
+    // ran out of pattern and filename at the same time.
+    // an exact hit!
+    return true
+  } else if (fi === fl) {
+    // ran out of file, but still had pattern left.
+    // this is ok if we're doing the match as part of
+    // a glob fs traversal.
+    return partial
+  } else if (pi === pl) {
+    // ran out of pattern, still have file left.
+    // this is only acceptable if we're on the very last
+    // empty segment of a file with a trailing slash.
+    // a/* should match a/b/
+    var emptyFileEnd = (fi === fl - 1) && (file[fi] === '')
+    return emptyFileEnd
+  }
+
+  // should be unreachable.
+  throw new Error('wtf?')
+}
+
+// replace stuff like \* with *
+function globUnescape (s) {
+  return s.replace(/\\(.)/g, '$1')
+}
+
+function regExpEscape (s) {
+  return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+}
+
+
+/***/ }),
+
+/***/ 467:
+/***/ ((module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var Stream = _interopDefault(__nccwpck_require__(2413));
+var http = _interopDefault(__nccwpck_require__(8605));
+var Url = _interopDefault(__nccwpck_require__(8835));
+var https = _interopDefault(__nccwpck_require__(7211));
+var zlib = _interopDefault(__nccwpck_require__(8761));
+
+// Based on https://github.com/tmpvar/jsdom/blob/aa85b2abf07766ff7bf5c1f6daafb3726f2f2db5/lib/jsdom/living/blob.js
+
+// fix for "Readable" isn't a named export issue
+const Readable = Stream.Readable;
+
+const BUFFER = Symbol('buffer');
+const TYPE = Symbol('type');
+
+class Blob {
+	constructor() {
+		this[TYPE] = '';
+
+		const blobParts = arguments[0];
+		const options = arguments[1];
+
+		const buffers = [];
+		let size = 0;
+
+		if (blobParts) {
+			const a = blobParts;
+			const length = Number(a.length);
+			for (let i = 0; i < length; i++) {
+				const element = a[i];
+				let buffer;
+				if (element instanceof Buffer) {
+					buffer = element;
+				} else if (ArrayBuffer.isView(element)) {
+					buffer = Buffer.from(element.buffer, element.byteOffset, element.byteLength);
+				} else if (element instanceof ArrayBuffer) {
+					buffer = Buffer.from(element);
+				} else if (element instanceof Blob) {
+					buffer = element[BUFFER];
+				} else {
+					buffer = Buffer.from(typeof element === 'string' ? element : String(element));
+				}
+				size += buffer.length;
+				buffers.push(buffer);
+			}
+		}
+
+		this[BUFFER] = Buffer.concat(buffers);
+
+		let type = options && options.type !== undefined && String(options.type).toLowerCase();
+		if (type && !/[^\u0020-\u007E]/.test(type)) {
+			this[TYPE] = type;
+		}
+	}
+	get size() {
+		return this[BUFFER].length;
+	}
+	get type() {
+		return this[TYPE];
+	}
+	text() {
+		return Promise.resolve(this[BUFFER].toString());
+	}
+	arrayBuffer() {
+		const buf = this[BUFFER];
+		const ab = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+		return Promise.resolve(ab);
+	}
+	stream() {
+		const readable = new Readable();
+		readable._read = function () {};
+		readable.push(this[BUFFER]);
+		readable.push(null);
+		return readable;
+	}
+	toString() {
+		return '[object Blob]';
+	}
+	slice() {
+		const size = this.size;
+
+		const start = arguments[0];
+		const end = arguments[1];
+		let relativeStart, relativeEnd;
+		if (start === undefined) {
+			relativeStart = 0;
+		} else if (start < 0) {
+			relativeStart = Math.max(size + start, 0);
+		} else {
+			relativeStart = Math.min(start, size);
+		}
+		if (end === undefined) {
+			relativeEnd = size;
+		} else if (end < 0) {
+			relativeEnd = Math.max(size + end, 0);
+		} else {
+			relativeEnd = Math.min(end, size);
+		}
+		const span = Math.max(relativeEnd - relativeStart, 0);
+
+		const buffer = this[BUFFER];
+		const slicedBuffer = buffer.slice(relativeStart, relativeStart + span);
+		const blob = new Blob([], { type: arguments[2] });
+		blob[BUFFER] = slicedBuffer;
+		return blob;
+	}
+}
+
+Object.defineProperties(Blob.prototype, {
+	size: { enumerable: true },
+	type: { enumerable: true },
+	slice: { enumerable: true }
+});
+
+Object.defineProperty(Blob.prototype, Symbol.toStringTag, {
+	value: 'Blob',
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+/**
+ * fetch-error.js
+ *
+ * FetchError interface for operational errors
+ */
+
+/**
+ * Create FetchError instance
+ *
+ * @param   String      message      Error message for human
+ * @param   String      type         Error type for machine
+ * @param   String      systemError  For Node.js system error
+ * @return  FetchError
+ */
+function FetchError(message, type, systemError) {
+  Error.call(this, message);
+
+  this.message = message;
+  this.type = type;
+
+  // when err.type is `system`, err.code contains system error code
+  if (systemError) {
+    this.code = this.errno = systemError.code;
+  }
+
+  // hide custom error implementation details from end-users
+  Error.captureStackTrace(this, this.constructor);
+}
+
+FetchError.prototype = Object.create(Error.prototype);
+FetchError.prototype.constructor = FetchError;
+FetchError.prototype.name = 'FetchError';
+
+let convert;
+try {
+	convert = __nccwpck_require__(2877).convert;
+} catch (e) {}
+
+const INTERNALS = Symbol('Body internals');
+
+// fix an issue where "PassThrough" isn't a named export for node <10
+const PassThrough = Stream.PassThrough;
+
+/**
+ * Body mixin
+ *
+ * Ref: https://fetch.spec.whatwg.org/#body
+ *
+ * @param   Stream  body  Readable stream
+ * @param   Object  opts  Response options
+ * @return  Void
+ */
+function Body(body) {
+	var _this = this;
+
+	var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+	    _ref$size = _ref.size;
+
+	let size = _ref$size === undefined ? 0 : _ref$size;
+	var _ref$timeout = _ref.timeout;
+	let timeout = _ref$timeout === undefined ? 0 : _ref$timeout;
+
+	if (body == null) {
+		// body is undefined or null
+		body = null;
+	} else if (isURLSearchParams(body)) {
+		// body is a URLSearchParams
+		body = Buffer.from(body.toString());
+	} else if (isBlob(body)) ; else if (Buffer.isBuffer(body)) ; else if (Object.prototype.toString.call(body) === '[object ArrayBuffer]') {
+		// body is ArrayBuffer
+		body = Buffer.from(body);
+	} else if (ArrayBuffer.isView(body)) {
+		// body is ArrayBufferView
+		body = Buffer.from(body.buffer, body.byteOffset, body.byteLength);
+	} else if (body instanceof Stream) ; else {
+		// none of the above
+		// coerce to string then buffer
+		body = Buffer.from(String(body));
+	}
+	this[INTERNALS] = {
+		body,
+		disturbed: false,
+		error: null
+	};
+	this.size = size;
+	this.timeout = timeout;
+
+	if (body instanceof Stream) {
+		body.on('error', function (err) {
+			const error = err.name === 'AbortError' ? err : new FetchError(`Invalid response body while trying to fetch ${_this.url}: ${err.message}`, 'system', err);
+			_this[INTERNALS].error = error;
+		});
+	}
+}
+
+Body.prototype = {
+	get body() {
+		return this[INTERNALS].body;
+	},
+
+	get bodyUsed() {
+		return this[INTERNALS].disturbed;
+	},
+
+	/**
+  * Decode response as ArrayBuffer
+  *
+  * @return  Promise
+  */
+	arrayBuffer() {
+		return consumeBody.call(this).then(function (buf) {
+			return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+		});
+	},
+
+	/**
+  * Return raw response as Blob
+  *
+  * @return Promise
+  */
+	blob() {
+		let ct = this.headers && this.headers.get('content-type') || '';
+		return consumeBody.call(this).then(function (buf) {
+			return Object.assign(
+			// Prevent copying
+			new Blob([], {
+				type: ct.toLowerCase()
+			}), {
+				[BUFFER]: buf
+			});
+		});
+	},
+
+	/**
+  * Decode response as json
+  *
+  * @return  Promise
+  */
+	json() {
+		var _this2 = this;
+
+		return consumeBody.call(this).then(function (buffer) {
+			try {
+				return JSON.parse(buffer.toString());
+			} catch (err) {
+				return Body.Promise.reject(new FetchError(`invalid json response body at ${_this2.url} reason: ${err.message}`, 'invalid-json'));
+			}
+		});
+	},
+
+	/**
+  * Decode response as text
+  *
+  * @return  Promise
+  */
+	text() {
+		return consumeBody.call(this).then(function (buffer) {
+			return buffer.toString();
+		});
+	},
+
+	/**
+  * Decode response as buffer (non-spec api)
+  *
+  * @return  Promise
+  */
+	buffer() {
+		return consumeBody.call(this);
+	},
+
+	/**
+  * Decode response as text, while automatically detecting the encoding and
+  * trying to decode to UTF-8 (non-spec api)
+  *
+  * @return  Promise
+  */
+	textConverted() {
+		var _this3 = this;
+
+		return consumeBody.call(this).then(function (buffer) {
+			return convertBody(buffer, _this3.headers);
+		});
+	}
+};
+
+// In browsers, all properties are enumerable.
+Object.defineProperties(Body.prototype, {
+	body: { enumerable: true },
+	bodyUsed: { enumerable: true },
+	arrayBuffer: { enumerable: true },
+	blob: { enumerable: true },
+	json: { enumerable: true },
+	text: { enumerable: true }
+});
+
+Body.mixIn = function (proto) {
+	for (const name of Object.getOwnPropertyNames(Body.prototype)) {
+		// istanbul ignore else: future proof
+		if (!(name in proto)) {
+			const desc = Object.getOwnPropertyDescriptor(Body.prototype, name);
+			Object.defineProperty(proto, name, desc);
+		}
+	}
+};
+
+/**
+ * Consume and convert an entire Body to a Buffer.
+ *
+ * Ref: https://fetch.spec.whatwg.org/#concept-body-consume-body
+ *
+ * @return  Promise
+ */
+function consumeBody() {
+	var _this4 = this;
+
+	if (this[INTERNALS].disturbed) {
+		return Body.Promise.reject(new TypeError(`body used already for: ${this.url}`));
+	}
+
+	this[INTERNALS].disturbed = true;
+
+	if (this[INTERNALS].error) {
+		return Body.Promise.reject(this[INTERNALS].error);
+	}
+
+	let body = this.body;
+
+	// body is null
+	if (body === null) {
+		return Body.Promise.resolve(Buffer.alloc(0));
+	}
+
+	// body is blob
+	if (isBlob(body)) {
+		body = body.stream();
+	}
+
+	// body is buffer
+	if (Buffer.isBuffer(body)) {
+		return Body.Promise.resolve(body);
+	}
+
+	// istanbul ignore if: should never happen
+	if (!(body instanceof Stream)) {
+		return Body.Promise.resolve(Buffer.alloc(0));
+	}
+
+	// body is stream
+	// get ready to actually consume the body
+	let accum = [];
+	let accumBytes = 0;
+	let abort = false;
+
+	return new Body.Promise(function (resolve, reject) {
+		let resTimeout;
+
+		// allow timeout on slow response body
+		if (_this4.timeout) {
+			resTimeout = setTimeout(function () {
+				abort = true;
+				reject(new FetchError(`Response timeout while trying to fetch ${_this4.url} (over ${_this4.timeout}ms)`, 'body-timeout'));
+			}, _this4.timeout);
+		}
+
+		// handle stream errors
+		body.on('error', function (err) {
+			if (err.name === 'AbortError') {
+				// if the request was aborted, reject with this Error
+				abort = true;
+				reject(err);
+			} else {
+				// other errors, such as incorrect content-encoding
+				reject(new FetchError(`Invalid response body while trying to fetch ${_this4.url}: ${err.message}`, 'system', err));
+			}
+		});
+
+		body.on('data', function (chunk) {
+			if (abort || chunk === null) {
+				return;
+			}
+
+			if (_this4.size && accumBytes + chunk.length > _this4.size) {
+				abort = true;
+				reject(new FetchError(`content size at ${_this4.url} over limit: ${_this4.size}`, 'max-size'));
+				return;
+			}
+
+			accumBytes += chunk.length;
+			accum.push(chunk);
+		});
+
+		body.on('end', function () {
+			if (abort) {
+				return;
+			}
+
+			clearTimeout(resTimeout);
+
+			try {
+				resolve(Buffer.concat(accum, accumBytes));
+			} catch (err) {
+				// handle streams that have accumulated too much data (issue #414)
+				reject(new FetchError(`Could not create Buffer from response body for ${_this4.url}: ${err.message}`, 'system', err));
+			}
+		});
+	});
+}
+
+/**
+ * Detect buffer encoding and convert to target encoding
+ * ref: http://www.w3.org/TR/2011/WD-html5-20110113/parsing.html#determining-the-character-encoding
+ *
+ * @param   Buffer  buffer    Incoming buffer
+ * @param   String  encoding  Target encoding
+ * @return  String
+ */
+function convertBody(buffer, headers) {
+	if (typeof convert !== 'function') {
+		throw new Error('The package `encoding` must be installed to use the textConverted() function');
+	}
+
+	const ct = headers.get('content-type');
+	let charset = 'utf-8';
+	let res, str;
+
+	// header
+	if (ct) {
+		res = /charset=([^;]*)/i.exec(ct);
+	}
+
+	// no charset in content type, peek at response body for at most 1024 bytes
+	str = buffer.slice(0, 1024).toString();
+
+	// html5
+	if (!res && str) {
+		res = /<meta.+?charset=(['"])(.+?)\1/i.exec(str);
+	}
+
+	// html4
+	if (!res && str) {
+		res = /<meta[\s]+?http-equiv=(['"])content-type\1[\s]+?content=(['"])(.+?)\2/i.exec(str);
+		if (!res) {
+			res = /<meta[\s]+?content=(['"])(.+?)\1[\s]+?http-equiv=(['"])content-type\3/i.exec(str);
+			if (res) {
+				res.pop(); // drop last quote
+			}
+		}
+
+		if (res) {
+			res = /charset=(.*)/i.exec(res.pop());
+		}
+	}
+
+	// xml
+	if (!res && str) {
+		res = /<\?xml.+?encoding=(['"])(.+?)\1/i.exec(str);
+	}
+
+	// found charset
+	if (res) {
+		charset = res.pop();
+
+		// prevent decode issues when sites use incorrect encoding
+		// ref: https://hsivonen.fi/encoding-menu/
+		if (charset === 'gb2312' || charset === 'gbk') {
+			charset = 'gb18030';
+		}
+	}
+
+	// turn raw buffers into a single utf-8 buffer
+	return convert(buffer, 'UTF-8', charset).toString();
+}
+
+/**
+ * Detect a URLSearchParams object
+ * ref: https://github.com/bitinn/node-fetch/issues/296#issuecomment-307598143
+ *
+ * @param   Object  obj     Object to detect by type or brand
+ * @return  String
+ */
+function isURLSearchParams(obj) {
+	// Duck-typing as a necessary condition.
+	if (typeof obj !== 'object' || typeof obj.append !== 'function' || typeof obj.delete !== 'function' || typeof obj.get !== 'function' || typeof obj.getAll !== 'function' || typeof obj.has !== 'function' || typeof obj.set !== 'function') {
+		return false;
+	}
+
+	// Brand-checking and more duck-typing as optional condition.
+	return obj.constructor.name === 'URLSearchParams' || Object.prototype.toString.call(obj) === '[object URLSearchParams]' || typeof obj.sort === 'function';
+}
+
+/**
+ * Check if `obj` is a W3C `Blob` object (which `File` inherits from)
+ * @param  {*} obj
+ * @return {boolean}
+ */
+function isBlob(obj) {
+	return typeof obj === 'object' && typeof obj.arrayBuffer === 'function' && typeof obj.type === 'string' && typeof obj.stream === 'function' && typeof obj.constructor === 'function' && typeof obj.constructor.name === 'string' && /^(Blob|File)$/.test(obj.constructor.name) && /^(Blob|File)$/.test(obj[Symbol.toStringTag]);
+}
+
+/**
+ * Clone body given Res/Req instance
+ *
+ * @param   Mixed  instance  Response or Request instance
+ * @return  Mixed
+ */
+function clone(instance) {
+	let p1, p2;
+	let body = instance.body;
+
+	// don't allow cloning a used body
+	if (instance.bodyUsed) {
+		throw new Error('cannot clone body after it is used');
+	}
+
+	// check that body is a stream and not form-data object
+	// note: we can't clone the form-data object without having it as a dependency
+	if (body instanceof Stream && typeof body.getBoundary !== 'function') {
+		// tee instance body
+		p1 = new PassThrough();
+		p2 = new PassThrough();
+		body.pipe(p1);
+		body.pipe(p2);
+		// set instance body to teed body and return the other teed body
+		instance[INTERNALS].body = p1;
+		body = p2;
+	}
+
+	return body;
+}
+
+/**
+ * Performs the operation "extract a `Content-Type` value from |object|" as
+ * specified in the specification:
+ * https://fetch.spec.whatwg.org/#concept-bodyinit-extract
+ *
+ * This function assumes that instance.body is present.
+ *
+ * @param   Mixed  instance  Any options.body input
+ */
+function extractContentType(body) {
+	if (body === null) {
+		// body is null
+		return null;
+	} else if (typeof body === 'string') {
+		// body is string
+		return 'text/plain;charset=UTF-8';
+	} else if (isURLSearchParams(body)) {
+		// body is a URLSearchParams
+		return 'application/x-www-form-urlencoded;charset=UTF-8';
+	} else if (isBlob(body)) {
+		// body is blob
+		return body.type || null;
+	} else if (Buffer.isBuffer(body)) {
+		// body is buffer
+		return null;
+	} else if (Object.prototype.toString.call(body) === '[object ArrayBuffer]') {
+		// body is ArrayBuffer
+		return null;
+	} else if (ArrayBuffer.isView(body)) {
+		// body is ArrayBufferView
+		return null;
+	} else if (typeof body.getBoundary === 'function') {
+		// detect form data input from form-data module
+		return `multipart/form-data;boundary=${body.getBoundary()}`;
+	} else if (body instanceof Stream) {
+		// body is stream
+		// can't really do much about this
+		return null;
+	} else {
+		// Body constructor defaults other things to string
+		return 'text/plain;charset=UTF-8';
+	}
+}
+
+/**
+ * The Fetch Standard treats this as if "total bytes" is a property on the body.
+ * For us, we have to explicitly get it with a function.
+ *
+ * ref: https://fetch.spec.whatwg.org/#concept-body-total-bytes
+ *
+ * @param   Body    instance   Instance of Body
+ * @return  Number?            Number of bytes, or null if not possible
+ */
+function getTotalBytes(instance) {
+	const body = instance.body;
+
+
+	if (body === null) {
+		// body is null
+		return 0;
+	} else if (isBlob(body)) {
+		return body.size;
+	} else if (Buffer.isBuffer(body)) {
+		// body is buffer
+		return body.length;
+	} else if (body && typeof body.getLengthSync === 'function') {
+		// detect form data input from form-data module
+		if (body._lengthRetrievers && body._lengthRetrievers.length == 0 || // 1.x
+		body.hasKnownLength && body.hasKnownLength()) {
+			// 2.x
+			return body.getLengthSync();
+		}
+		return null;
+	} else {
+		// body is stream
+		return null;
+	}
+}
+
+/**
+ * Write a Body to a Node.js WritableStream (e.g. http.Request) object.
+ *
+ * @param   Body    instance   Instance of Body
+ * @return  Void
+ */
+function writeToStream(dest, instance) {
+	const body = instance.body;
+
+
+	if (body === null) {
+		// body is null
+		dest.end();
+	} else if (isBlob(body)) {
+		body.stream().pipe(dest);
+	} else if (Buffer.isBuffer(body)) {
+		// body is buffer
+		dest.write(body);
+		dest.end();
+	} else {
+		// body is stream
+		body.pipe(dest);
+	}
+}
+
+// expose Promise
+Body.Promise = global.Promise;
+
+/**
+ * headers.js
+ *
+ * Headers class offers convenient helpers
+ */
+
+const invalidTokenRegex = /[^\^_`a-zA-Z\-0-9!#$%&'*+.|~]/;
+const invalidHeaderCharRegex = /[^\t\x20-\x7e\x80-\xff]/;
+
+function validateName(name) {
+	name = `${name}`;
+	if (invalidTokenRegex.test(name) || name === '') {
+		throw new TypeError(`${name} is not a legal HTTP header name`);
+	}
+}
+
+function validateValue(value) {
+	value = `${value}`;
+	if (invalidHeaderCharRegex.test(value)) {
+		throw new TypeError(`${value} is not a legal HTTP header value`);
+	}
+}
+
+/**
+ * Find the key in the map object given a header name.
+ *
+ * Returns undefined if not found.
+ *
+ * @param   String  name  Header name
+ * @return  String|Undefined
+ */
+function find(map, name) {
+	name = name.toLowerCase();
+	for (const key in map) {
+		if (key.toLowerCase() === name) {
+			return key;
+		}
+	}
+	return undefined;
+}
+
+const MAP = Symbol('map');
+class Headers {
+	/**
+  * Headers class
+  *
+  * @param   Object  headers  Response headers
+  * @return  Void
+  */
+	constructor() {
+		let init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+
+		this[MAP] = Object.create(null);
+
+		if (init instanceof Headers) {
+			const rawHeaders = init.raw();
+			const headerNames = Object.keys(rawHeaders);
+
+			for (const headerName of headerNames) {
+				for (const value of rawHeaders[headerName]) {
+					this.append(headerName, value);
+				}
+			}
+
+			return;
+		}
+
+		// We don't worry about converting prop to ByteString here as append()
+		// will handle it.
+		if (init == null) ; else if (typeof init === 'object') {
+			const method = init[Symbol.iterator];
+			if (method != null) {
+				if (typeof method !== 'function') {
+					throw new TypeError('Header pairs must be iterable');
+				}
+
+				// sequence<sequence<ByteString>>
+				// Note: per spec we have to first exhaust the lists then process them
+				const pairs = [];
+				for (const pair of init) {
+					if (typeof pair !== 'object' || typeof pair[Symbol.iterator] !== 'function') {
+						throw new TypeError('Each header pair must be iterable');
+					}
+					pairs.push(Array.from(pair));
+				}
+
+				for (const pair of pairs) {
+					if (pair.length !== 2) {
+						throw new TypeError('Each header pair must be a name/value tuple');
+					}
+					this.append(pair[0], pair[1]);
+				}
+			} else {
+				// record<ByteString, ByteString>
+				for (const key of Object.keys(init)) {
+					const value = init[key];
+					this.append(key, value);
+				}
+			}
+		} else {
+			throw new TypeError('Provided initializer must be an object');
+		}
+	}
+
+	/**
+  * Return combined header value given name
+  *
+  * @param   String  name  Header name
+  * @return  Mixed
+  */
+	get(name) {
+		name = `${name}`;
+		validateName(name);
+		const key = find(this[MAP], name);
+		if (key === undefined) {
+			return null;
+		}
+
+		return this[MAP][key].join(', ');
+	}
+
+	/**
+  * Iterate over all headers
+  *
+  * @param   Function  callback  Executed for each item with parameters (value, name, thisArg)
+  * @param   Boolean   thisArg   `this` context for callback function
+  * @return  Void
+  */
+	forEach(callback) {
+		let thisArg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+
+		let pairs = getHeaders(this);
+		let i = 0;
+		while (i < pairs.length) {
+			var _pairs$i = pairs[i];
+			const name = _pairs$i[0],
+			      value = _pairs$i[1];
+
+			callback.call(thisArg, value, name, this);
+			pairs = getHeaders(this);
+			i++;
+		}
+	}
+
+	/**
+  * Overwrite header values given name
+  *
+  * @param   String  name   Header name
+  * @param   String  value  Header value
+  * @return  Void
+  */
+	set(name, value) {
+		name = `${name}`;
+		value = `${value}`;
+		validateName(name);
+		validateValue(value);
+		const key = find(this[MAP], name);
+		this[MAP][key !== undefined ? key : name] = [value];
+	}
+
+	/**
+  * Append a value onto existing header
+  *
+  * @param   String  name   Header name
+  * @param   String  value  Header value
+  * @return  Void
+  */
+	append(name, value) {
+		name = `${name}`;
+		value = `${value}`;
+		validateName(name);
+		validateValue(value);
+		const key = find(this[MAP], name);
+		if (key !== undefined) {
+			this[MAP][key].push(value);
+		} else {
+			this[MAP][name] = [value];
+		}
+	}
+
+	/**
+  * Check for header name existence
+  *
+  * @param   String   name  Header name
+  * @return  Boolean
+  */
+	has(name) {
+		name = `${name}`;
+		validateName(name);
+		return find(this[MAP], name) !== undefined;
+	}
+
+	/**
+  * Delete all header values given name
+  *
+  * @param   String  name  Header name
+  * @return  Void
+  */
+	delete(name) {
+		name = `${name}`;
+		validateName(name);
+		const key = find(this[MAP], name);
+		if (key !== undefined) {
+			delete this[MAP][key];
+		}
+	}
+
+	/**
+  * Return raw headers (non-spec api)
+  *
+  * @return  Object
+  */
+	raw() {
+		return this[MAP];
+	}
+
+	/**
+  * Get an iterator on keys.
+  *
+  * @return  Iterator
+  */
+	keys() {
+		return createHeadersIterator(this, 'key');
+	}
+
+	/**
+  * Get an iterator on values.
+  *
+  * @return  Iterator
+  */
+	values() {
+		return createHeadersIterator(this, 'value');
+	}
+
+	/**
+  * Get an iterator on entries.
+  *
+  * This is the default iterator of the Headers object.
+  *
+  * @return  Iterator
+  */
+	[Symbol.iterator]() {
+		return createHeadersIterator(this, 'key+value');
+	}
+}
+Headers.prototype.entries = Headers.prototype[Symbol.iterator];
+
+Object.defineProperty(Headers.prototype, Symbol.toStringTag, {
+	value: 'Headers',
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+Object.defineProperties(Headers.prototype, {
+	get: { enumerable: true },
+	forEach: { enumerable: true },
+	set: { enumerable: true },
+	append: { enumerable: true },
+	has: { enumerable: true },
+	delete: { enumerable: true },
+	keys: { enumerable: true },
+	values: { enumerable: true },
+	entries: { enumerable: true }
+});
+
+function getHeaders(headers) {
+	let kind = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'key+value';
+
+	const keys = Object.keys(headers[MAP]).sort();
+	return keys.map(kind === 'key' ? function (k) {
+		return k.toLowerCase();
+	} : kind === 'value' ? function (k) {
+		return headers[MAP][k].join(', ');
+	} : function (k) {
+		return [k.toLowerCase(), headers[MAP][k].join(', ')];
+	});
+}
+
+const INTERNAL = Symbol('internal');
+
+function createHeadersIterator(target, kind) {
+	const iterator = Object.create(HeadersIteratorPrototype);
+	iterator[INTERNAL] = {
+		target,
+		kind,
+		index: 0
+	};
+	return iterator;
+}
+
+const HeadersIteratorPrototype = Object.setPrototypeOf({
+	next() {
+		// istanbul ignore if
+		if (!this || Object.getPrototypeOf(this) !== HeadersIteratorPrototype) {
+			throw new TypeError('Value of `this` is not a HeadersIterator');
+		}
+
+		var _INTERNAL = this[INTERNAL];
+		const target = _INTERNAL.target,
+		      kind = _INTERNAL.kind,
+		      index = _INTERNAL.index;
+
+		const values = getHeaders(target, kind);
+		const len = values.length;
+		if (index >= len) {
+			return {
+				value: undefined,
+				done: true
+			};
+		}
+
+		this[INTERNAL].index = index + 1;
+
+		return {
+			value: values[index],
+			done: false
+		};
+	}
+}, Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]())));
+
+Object.defineProperty(HeadersIteratorPrototype, Symbol.toStringTag, {
+	value: 'HeadersIterator',
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+/**
+ * Export the Headers object in a form that Node.js can consume.
+ *
+ * @param   Headers  headers
+ * @return  Object
+ */
+function exportNodeCompatibleHeaders(headers) {
+	const obj = Object.assign({ __proto__: null }, headers[MAP]);
+
+	// http.request() only supports string as Host header. This hack makes
+	// specifying custom Host header possible.
+	const hostHeaderKey = find(headers[MAP], 'Host');
+	if (hostHeaderKey !== undefined) {
+		obj[hostHeaderKey] = obj[hostHeaderKey][0];
+	}
+
+	return obj;
+}
+
+/**
+ * Create a Headers object from an object of headers, ignoring those that do
+ * not conform to HTTP grammar productions.
+ *
+ * @param   Object  obj  Object of headers
+ * @return  Headers
+ */
+function createHeadersLenient(obj) {
+	const headers = new Headers();
+	for (const name of Object.keys(obj)) {
+		if (invalidTokenRegex.test(name)) {
+			continue;
+		}
+		if (Array.isArray(obj[name])) {
+			for (const val of obj[name]) {
+				if (invalidHeaderCharRegex.test(val)) {
+					continue;
+				}
+				if (headers[MAP][name] === undefined) {
+					headers[MAP][name] = [val];
+				} else {
+					headers[MAP][name].push(val);
+				}
+			}
+		} else if (!invalidHeaderCharRegex.test(obj[name])) {
+			headers[MAP][name] = [obj[name]];
+		}
+	}
+	return headers;
+}
+
+const INTERNALS$1 = Symbol('Response internals');
+
+// fix an issue where "STATUS_CODES" aren't a named export for node <10
+const STATUS_CODES = http.STATUS_CODES;
+
+/**
+ * Response class
+ *
+ * @param   Stream  body  Readable stream
+ * @param   Object  opts  Response options
+ * @return  Void
+ */
+class Response {
+	constructor() {
+		let body = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+		let opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+		Body.call(this, body, opts);
+
+		const status = opts.status || 200;
+		const headers = new Headers(opts.headers);
+
+		if (body != null && !headers.has('Content-Type')) {
+			const contentType = extractContentType(body);
+			if (contentType) {
+				headers.append('Content-Type', contentType);
+			}
+		}
+
+		this[INTERNALS$1] = {
+			url: opts.url,
+			status,
+			statusText: opts.statusText || STATUS_CODES[status],
+			headers,
+			counter: opts.counter
+		};
+	}
+
+	get url() {
+		return this[INTERNALS$1].url || '';
+	}
+
+	get status() {
+		return this[INTERNALS$1].status;
+	}
+
+	/**
+  * Convenience property representing if the request ended normally
+  */
+	get ok() {
+		return this[INTERNALS$1].status >= 200 && this[INTERNALS$1].status < 300;
+	}
+
+	get redirected() {
+		return this[INTERNALS$1].counter > 0;
+	}
+
+	get statusText() {
+		return this[INTERNALS$1].statusText;
+	}
+
+	get headers() {
+		return this[INTERNALS$1].headers;
+	}
+
+	/**
+  * Clone this response
+  *
+  * @return  Response
+  */
+	clone() {
+		return new Response(clone(this), {
+			url: this.url,
+			status: this.status,
+			statusText: this.statusText,
+			headers: this.headers,
+			ok: this.ok,
+			redirected: this.redirected
+		});
+	}
+}
+
+Body.mixIn(Response.prototype);
+
+Object.defineProperties(Response.prototype, {
+	url: { enumerable: true },
+	status: { enumerable: true },
+	ok: { enumerable: true },
+	redirected: { enumerable: true },
+	statusText: { enumerable: true },
+	headers: { enumerable: true },
+	clone: { enumerable: true }
+});
+
+Object.defineProperty(Response.prototype, Symbol.toStringTag, {
+	value: 'Response',
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+const INTERNALS$2 = Symbol('Request internals');
+
+// fix an issue where "format", "parse" aren't a named export for node <10
+const parse_url = Url.parse;
+const format_url = Url.format;
+
+const streamDestructionSupported = 'destroy' in Stream.Readable.prototype;
+
+/**
+ * Check if a value is an instance of Request.
+ *
+ * @param   Mixed   input
+ * @return  Boolean
+ */
+function isRequest(input) {
+	return typeof input === 'object' && typeof input[INTERNALS$2] === 'object';
+}
+
+function isAbortSignal(signal) {
+	const proto = signal && typeof signal === 'object' && Object.getPrototypeOf(signal);
+	return !!(proto && proto.constructor.name === 'AbortSignal');
+}
+
+/**
+ * Request class
+ *
+ * @param   Mixed   input  Url or Request instance
+ * @param   Object  init   Custom options
+ * @return  Void
+ */
+class Request {
+	constructor(input) {
+		let init = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+		let parsedURL;
+
+		// normalize input
+		if (!isRequest(input)) {
+			if (input && input.href) {
+				// in order to support Node.js' Url objects; though WHATWG's URL objects
+				// will fall into this branch also (since their `toString()` will return
+				// `href` property anyway)
+				parsedURL = parse_url(input.href);
+			} else {
+				// coerce input to a string before attempting to parse
+				parsedURL = parse_url(`${input}`);
+			}
+			input = {};
+		} else {
+			parsedURL = parse_url(input.url);
+		}
+
+		let method = init.method || input.method || 'GET';
+		method = method.toUpperCase();
+
+		if ((init.body != null || isRequest(input) && input.body !== null) && (method === 'GET' || method === 'HEAD')) {
+			throw new TypeError('Request with GET/HEAD method cannot have body');
+		}
+
+		let inputBody = init.body != null ? init.body : isRequest(input) && input.body !== null ? clone(input) : null;
+
+		Body.call(this, inputBody, {
+			timeout: init.timeout || input.timeout || 0,
+			size: init.size || input.size || 0
+		});
+
+		const headers = new Headers(init.headers || input.headers || {});
+
+		if (inputBody != null && !headers.has('Content-Type')) {
+			const contentType = extractContentType(inputBody);
+			if (contentType) {
+				headers.append('Content-Type', contentType);
+			}
+		}
+
+		let signal = isRequest(input) ? input.signal : null;
+		if ('signal' in init) signal = init.signal;
+
+		if (signal != null && !isAbortSignal(signal)) {
+			throw new TypeError('Expected signal to be an instanceof AbortSignal');
+		}
+
+		this[INTERNALS$2] = {
+			method,
+			redirect: init.redirect || input.redirect || 'follow',
+			headers,
+			parsedURL,
+			signal
+		};
+
+		// node-fetch-only options
+		this.follow = init.follow !== undefined ? init.follow : input.follow !== undefined ? input.follow : 20;
+		this.compress = init.compress !== undefined ? init.compress : input.compress !== undefined ? input.compress : true;
+		this.counter = init.counter || input.counter || 0;
+		this.agent = init.agent || input.agent;
+	}
+
+	get method() {
+		return this[INTERNALS$2].method;
+	}
+
+	get url() {
+		return format_url(this[INTERNALS$2].parsedURL);
+	}
+
+	get headers() {
+		return this[INTERNALS$2].headers;
+	}
+
+	get redirect() {
+		return this[INTERNALS$2].redirect;
+	}
+
+	get signal() {
+		return this[INTERNALS$2].signal;
+	}
+
+	/**
+  * Clone this request
+  *
+  * @return  Request
+  */
+	clone() {
+		return new Request(this);
+	}
+}
+
+Body.mixIn(Request.prototype);
+
+Object.defineProperty(Request.prototype, Symbol.toStringTag, {
+	value: 'Request',
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+Object.defineProperties(Request.prototype, {
+	method: { enumerable: true },
+	url: { enumerable: true },
+	headers: { enumerable: true },
+	redirect: { enumerable: true },
+	clone: { enumerable: true },
+	signal: { enumerable: true }
+});
+
+/**
+ * Convert a Request to Node.js http request options.
+ *
+ * @param   Request  A Request instance
+ * @return  Object   The options object to be passed to http.request
+ */
+function getNodeRequestOptions(request) {
+	const parsedURL = request[INTERNALS$2].parsedURL;
+	const headers = new Headers(request[INTERNALS$2].headers);
+
+	// fetch step 1.3
+	if (!headers.has('Accept')) {
+		headers.set('Accept', '*/*');
+	}
+
+	// Basic fetch
+	if (!parsedURL.protocol || !parsedURL.hostname) {
+		throw new TypeError('Only absolute URLs are supported');
+	}
+
+	if (!/^https?:$/.test(parsedURL.protocol)) {
+		throw new TypeError('Only HTTP(S) protocols are supported');
+	}
+
+	if (request.signal && request.body instanceof Stream.Readable && !streamDestructionSupported) {
+		throw new Error('Cancellation of streamed requests with AbortSignal is not supported in node < 8');
+	}
+
+	// HTTP-network-or-cache fetch steps 2.4-2.7
+	let contentLengthValue = null;
+	if (request.body == null && /^(POST|PUT)$/i.test(request.method)) {
+		contentLengthValue = '0';
+	}
+	if (request.body != null) {
+		const totalBytes = getTotalBytes(request);
+		if (typeof totalBytes === 'number') {
+			contentLengthValue = String(totalBytes);
+		}
+	}
+	if (contentLengthValue) {
+		headers.set('Content-Length', contentLengthValue);
+	}
+
+	// HTTP-network-or-cache fetch step 2.11
+	if (!headers.has('User-Agent')) {
+		headers.set('User-Agent', 'node-fetch/1.0 (+https://github.com/bitinn/node-fetch)');
+	}
+
+	// HTTP-network-or-cache fetch step 2.15
+	if (request.compress && !headers.has('Accept-Encoding')) {
+		headers.set('Accept-Encoding', 'gzip,deflate');
+	}
+
+	let agent = request.agent;
+	if (typeof agent === 'function') {
+		agent = agent(parsedURL);
+	}
+
+	if (!headers.has('Connection') && !agent) {
+		headers.set('Connection', 'close');
+	}
+
+	// HTTP-network fetch step 4.2
+	// chunked encoding is handled by Node.js
+
+	return Object.assign({}, parsedURL, {
+		method: request.method,
+		headers: exportNodeCompatibleHeaders(headers),
+		agent
+	});
+}
+
+/**
+ * abort-error.js
+ *
+ * AbortError interface for cancelled requests
+ */
+
+/**
+ * Create AbortError instance
+ *
+ * @param   String      message      Error message for human
+ * @return  AbortError
+ */
+function AbortError(message) {
+  Error.call(this, message);
+
+  this.type = 'aborted';
+  this.message = message;
+
+  // hide custom error implementation details from end-users
+  Error.captureStackTrace(this, this.constructor);
+}
+
+AbortError.prototype = Object.create(Error.prototype);
+AbortError.prototype.constructor = AbortError;
+AbortError.prototype.name = 'AbortError';
+
+// fix an issue where "PassThrough", "resolve" aren't a named export for node <10
+const PassThrough$1 = Stream.PassThrough;
+const resolve_url = Url.resolve;
+
+/**
+ * Fetch function
+ *
+ * @param   Mixed    url   Absolute url or Request instance
+ * @param   Object   opts  Fetch options
+ * @return  Promise
+ */
+function fetch(url, opts) {
+
+	// allow custom promise
+	if (!fetch.Promise) {
+		throw new Error('native promise missing, set fetch.Promise to your favorite alternative');
+	}
+
+	Body.Promise = fetch.Promise;
+
+	// wrap http.request into fetch
+	return new fetch.Promise(function (resolve, reject) {
+		// build request object
+		const request = new Request(url, opts);
+		const options = getNodeRequestOptions(request);
+
+		const send = (options.protocol === 'https:' ? https : http).request;
+		const signal = request.signal;
+
+		let response = null;
+
+		const abort = function abort() {
+			let error = new AbortError('The user aborted a request.');
+			reject(error);
+			if (request.body && request.body instanceof Stream.Readable) {
+				request.body.destroy(error);
+			}
+			if (!response || !response.body) return;
+			response.body.emit('error', error);
+		};
+
+		if (signal && signal.aborted) {
+			abort();
+			return;
+		}
+
+		const abortAndFinalize = function abortAndFinalize() {
+			abort();
+			finalize();
+		};
+
+		// send request
+		const req = send(options);
+		let reqTimeout;
+
+		if (signal) {
+			signal.addEventListener('abort', abortAndFinalize);
+		}
+
+		function finalize() {
+			req.abort();
+			if (signal) signal.removeEventListener('abort', abortAndFinalize);
+			clearTimeout(reqTimeout);
+		}
+
+		if (request.timeout) {
+			req.once('socket', function (socket) {
+				reqTimeout = setTimeout(function () {
+					reject(new FetchError(`network timeout at: ${request.url}`, 'request-timeout'));
+					finalize();
+				}, request.timeout);
+			});
+		}
+
+		req.on('error', function (err) {
+			reject(new FetchError(`request to ${request.url} failed, reason: ${err.message}`, 'system', err));
+			finalize();
+		});
+
+		req.on('response', function (res) {
+			clearTimeout(reqTimeout);
+
+			const headers = createHeadersLenient(res.headers);
+
+			// HTTP fetch step 5
+			if (fetch.isRedirect(res.statusCode)) {
+				// HTTP fetch step 5.2
+				const location = headers.get('Location');
+
+				// HTTP fetch step 5.3
+				const locationURL = location === null ? null : resolve_url(request.url, location);
+
+				// HTTP fetch step 5.5
+				switch (request.redirect) {
+					case 'error':
+						reject(new FetchError(`uri requested responds with a redirect, redirect mode is set to error: ${request.url}`, 'no-redirect'));
+						finalize();
+						return;
+					case 'manual':
+						// node-fetch-specific step: make manual redirect a bit easier to use by setting the Location header value to the resolved URL.
+						if (locationURL !== null) {
+							// handle corrupted header
+							try {
+								headers.set('Location', locationURL);
+							} catch (err) {
+								// istanbul ignore next: nodejs server prevent invalid response headers, we can't test this through normal request
+								reject(err);
+							}
+						}
+						break;
+					case 'follow':
+						// HTTP-redirect fetch step 2
+						if (locationURL === null) {
+							break;
+						}
+
+						// HTTP-redirect fetch step 5
+						if (request.counter >= request.follow) {
+							reject(new FetchError(`maximum redirect reached at: ${request.url}`, 'max-redirect'));
+							finalize();
+							return;
+						}
+
+						// HTTP-redirect fetch step 6 (counter increment)
+						// Create a new Request object.
+						const requestOpts = {
+							headers: new Headers(request.headers),
+							follow: request.follow,
+							counter: request.counter + 1,
+							agent: request.agent,
+							compress: request.compress,
+							method: request.method,
+							body: request.body,
+							signal: request.signal,
+							timeout: request.timeout,
+							size: request.size
+						};
+
+						// HTTP-redirect fetch step 9
+						if (res.statusCode !== 303 && request.body && getTotalBytes(request) === null) {
+							reject(new FetchError('Cannot follow redirect with body being a readable stream', 'unsupported-redirect'));
+							finalize();
+							return;
+						}
+
+						// HTTP-redirect fetch step 11
+						if (res.statusCode === 303 || (res.statusCode === 301 || res.statusCode === 302) && request.method === 'POST') {
+							requestOpts.method = 'GET';
+							requestOpts.body = undefined;
+							requestOpts.headers.delete('content-length');
+						}
+
+						// HTTP-redirect fetch step 15
+						resolve(fetch(new Request(locationURL, requestOpts)));
+						finalize();
+						return;
+				}
+			}
+
+			// prepare response
+			res.once('end', function () {
+				if (signal) signal.removeEventListener('abort', abortAndFinalize);
+			});
+			let body = res.pipe(new PassThrough$1());
+
+			const response_options = {
+				url: request.url,
+				status: res.statusCode,
+				statusText: res.statusMessage,
+				headers: headers,
+				size: request.size,
+				timeout: request.timeout,
+				counter: request.counter
+			};
+
+			// HTTP-network fetch step 12.1.1.3
+			const codings = headers.get('Content-Encoding');
+
+			// HTTP-network fetch step 12.1.1.4: handle content codings
+
+			// in following scenarios we ignore compression support
+			// 1. compression support is disabled
+			// 2. HEAD request
+			// 3. no Content-Encoding header
+			// 4. no content response (204)
+			// 5. content not modified response (304)
+			if (!request.compress || request.method === 'HEAD' || codings === null || res.statusCode === 204 || res.statusCode === 304) {
+				response = new Response(body, response_options);
+				resolve(response);
+				return;
+			}
+
+			// For Node v6+
+			// Be less strict when decoding compressed responses, since sometimes
+			// servers send slightly invalid responses that are still accepted
+			// by common browsers.
+			// Always using Z_SYNC_FLUSH is what cURL does.
+			const zlibOptions = {
+				flush: zlib.Z_SYNC_FLUSH,
+				finishFlush: zlib.Z_SYNC_FLUSH
+			};
+
+			// for gzip
+			if (codings == 'gzip' || codings == 'x-gzip') {
+				body = body.pipe(zlib.createGunzip(zlibOptions));
+				response = new Response(body, response_options);
+				resolve(response);
+				return;
+			}
+
+			// for deflate
+			if (codings == 'deflate' || codings == 'x-deflate') {
+				// handle the infamous raw deflate response from old servers
+				// a hack for old IIS and Apache servers
+				const raw = res.pipe(new PassThrough$1());
+				raw.once('data', function (chunk) {
+					// see http://stackoverflow.com/questions/37519828
+					if ((chunk[0] & 0x0F) === 0x08) {
+						body = body.pipe(zlib.createInflate());
+					} else {
+						body = body.pipe(zlib.createInflateRaw());
+					}
+					response = new Response(body, response_options);
+					resolve(response);
+				});
+				return;
+			}
+
+			// for br
+			if (codings == 'br' && typeof zlib.createBrotliDecompress === 'function') {
+				body = body.pipe(zlib.createBrotliDecompress());
+				response = new Response(body, response_options);
+				resolve(response);
+				return;
+			}
+
+			// otherwise, use response as-is
+			response = new Response(body, response_options);
+			resolve(response);
+		});
+
+		writeToStream(req, request);
+	});
+}
+/**
+ * Redirect code matching
+ *
+ * @param   Number   code  Status code
+ * @return  Boolean
+ */
+fetch.isRedirect = function (code) {
+	return code === 301 || code === 302 || code === 303 || code === 307 || code === 308;
+};
+
+// expose Promise
+fetch.Promise = global.Promise;
+
+module.exports = exports = fetch;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.default = exports;
+exports.Headers = Headers;
+exports.Request = Request;
+exports.Response = Response;
+exports.FetchError = FetchError;
+
+
+/***/ }),
+
+/***/ 1223:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+var wrappy = __nccwpck_require__(2940)
+module.exports = wrappy(once)
+module.exports.strict = wrappy(onceStrict)
+
+once.proto = once(function () {
+  Object.defineProperty(Function.prototype, 'once', {
+    value: function () {
+      return once(this)
+    },
+    configurable: true
+  })
+
+  Object.defineProperty(Function.prototype, 'onceStrict', {
+    value: function () {
+      return onceStrict(this)
+    },
+    configurable: true
+  })
+})
+
+function once (fn) {
+  var f = function () {
+    if (f.called) return f.value
+    f.called = true
+    return f.value = fn.apply(this, arguments)
+  }
+  f.called = false
+  return f
+}
+
+function onceStrict (fn) {
+  var f = function () {
+    if (f.called)
+      throw new Error(f.onceError)
+    f.called = true
+    return f.value = fn.apply(this, arguments)
+  }
+  var name = fn.name || 'Function wrapped with `once`'
+  f.onceError = name + " shouldn't be called more than once"
+  f.called = false
+  return f
+}
+
+
+/***/ }),
+
+/***/ 8714:
+/***/ ((module) => {
+
+"use strict";
+
+
+function posix(path) {
+	return path.charAt(0) === '/';
+}
+
+function win32(path) {
+	// https://github.com/nodejs/node/blob/b3fcc245fb25539909ef1d5eaa01dbf92e168633/lib/path.js#L56
+	var splitDeviceRe = /^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$/;
+	var result = splitDeviceRe.exec(path);
+	var device = result[1] || '';
+	var isUnc = Boolean(device && device.charAt(1) !== ':');
+
+	// UNC paths are always absolute
+	return Boolean(result[2] || isUnc);
+}
+
+module.exports = process.platform === 'win32' ? win32 : posix;
+module.exports.posix = posix;
+module.exports.win32 = win32;
+
+
+/***/ }),
+
+/***/ 4959:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const assert = __nccwpck_require__(2357)
+const path = __nccwpck_require__(5622)
+const fs = __nccwpck_require__(5747)
+let glob = undefined
+try {
+  glob = __nccwpck_require__(1957)
+} catch (_err) {
+  // treat glob as optional.
+}
+
+const defaultGlobOpts = {
+  nosort: true,
+  silent: true
+}
+
+// for EMFILE handling
+let timeout = 0
+
+const isWindows = (process.platform === "win32")
+
+const defaults = options => {
+  const methods = [
+    'unlink',
+    'chmod',
+    'stat',
+    'lstat',
+    'rmdir',
+    'readdir'
+  ]
+  methods.forEach(m => {
+    options[m] = options[m] || fs[m]
+    m = m + 'Sync'
+    options[m] = options[m] || fs[m]
+  })
+
+  options.maxBusyTries = options.maxBusyTries || 3
+  options.emfileWait = options.emfileWait || 1000
+  if (options.glob === false) {
+    options.disableGlob = true
+  }
+  if (options.disableGlob !== true && glob === undefined) {
+    throw Error('glob dependency not found, set `options.disableGlob = true` if intentional')
+  }
+  options.disableGlob = options.disableGlob || false
+  options.glob = options.glob || defaultGlobOpts
+}
+
+const rimraf = (p, options, cb) => {
+  if (typeof options === 'function') {
+    cb = options
+    options = {}
+  }
+
+  assert(p, 'rimraf: missing path')
+  assert.equal(typeof p, 'string', 'rimraf: path should be a string')
+  assert.equal(typeof cb, 'function', 'rimraf: callback function required')
+  assert(options, 'rimraf: invalid options argument provided')
+  assert.equal(typeof options, 'object', 'rimraf: options should be object')
+
+  defaults(options)
+
+  let busyTries = 0
+  let errState = null
+  let n = 0
+
+  const next = (er) => {
+    errState = errState || er
+    if (--n === 0)
+      cb(errState)
+  }
+
+  const afterGlob = (er, results) => {
+    if (er)
+      return cb(er)
+
+    n = results.length
+    if (n === 0)
+      return cb()
+
+    results.forEach(p => {
+      const CB = (er) => {
+        if (er) {
+          if ((er.code === "EBUSY" || er.code === "ENOTEMPTY" || er.code === "EPERM") &&
+              busyTries < options.maxBusyTries) {
+            busyTries ++
+            // try again, with the same exact callback as this one.
+            return setTimeout(() => rimraf_(p, options, CB), busyTries * 100)
+          }
+
+          // this one won't happen if graceful-fs is used.
+          if (er.code === "EMFILE" && timeout < options.emfileWait) {
+            return setTimeout(() => rimraf_(p, options, CB), timeout ++)
+          }
+
+          // already gone
+          if (er.code === "ENOENT") er = null
+        }
+
+        timeout = 0
+        next(er)
+      }
+      rimraf_(p, options, CB)
+    })
+  }
+
+  if (options.disableGlob || !glob.hasMagic(p))
+    return afterGlob(null, [p])
+
+  options.lstat(p, (er, stat) => {
+    if (!er)
+      return afterGlob(null, [p])
+
+    glob(p, options.glob, afterGlob)
+  })
+
+}
+
+// Two possible strategies.
+// 1. Assume it's a file.  unlink it, then do the dir stuff on EPERM or EISDIR
+// 2. Assume it's a directory.  readdir, then do the file stuff on ENOTDIR
+//
+// Both result in an extra syscall when you guess wrong.  However, there
+// are likely far more normal files in the world than directories.  This
+// is based on the assumption that a the average number of files per
+// directory is >= 1.
+//
+// If anyone ever complains about this, then I guess the strategy could
+// be made configurable somehow.  But until then, YAGNI.
+const rimraf_ = (p, options, cb) => {
+  assert(p)
+  assert(options)
+  assert(typeof cb === 'function')
+
+  // sunos lets the root user unlink directories, which is... weird.
+  // so we have to lstat here and make sure it's not a dir.
+  options.lstat(p, (er, st) => {
+    if (er && er.code === "ENOENT")
+      return cb(null)
+
+    // Windows can EPERM on stat.  Life is suffering.
+    if (er && er.code === "EPERM" && isWindows)
+      fixWinEPERM(p, options, er, cb)
+
+    if (st && st.isDirectory())
+      return rmdir(p, options, er, cb)
+
+    options.unlink(p, er => {
+      if (er) {
+        if (er.code === "ENOENT")
+          return cb(null)
+        if (er.code === "EPERM")
+          return (isWindows)
+            ? fixWinEPERM(p, options, er, cb)
+            : rmdir(p, options, er, cb)
+        if (er.code === "EISDIR")
+          return rmdir(p, options, er, cb)
+      }
+      return cb(er)
+    })
+  })
+}
+
+const fixWinEPERM = (p, options, er, cb) => {
+  assert(p)
+  assert(options)
+  assert(typeof cb === 'function')
+
+  options.chmod(p, 0o666, er2 => {
+    if (er2)
+      cb(er2.code === "ENOENT" ? null : er)
+    else
+      options.stat(p, (er3, stats) => {
+        if (er3)
+          cb(er3.code === "ENOENT" ? null : er)
+        else if (stats.isDirectory())
+          rmdir(p, options, er, cb)
+        else
+          options.unlink(p, cb)
+      })
+  })
+}
+
+const fixWinEPERMSync = (p, options, er) => {
+  assert(p)
+  assert(options)
+
+  try {
+    options.chmodSync(p, 0o666)
+  } catch (er2) {
+    if (er2.code === "ENOENT")
+      return
+    else
+      throw er
+  }
+
+  let stats
+  try {
+    stats = options.statSync(p)
+  } catch (er3) {
+    if (er3.code === "ENOENT")
+      return
+    else
+      throw er
+  }
+
+  if (stats.isDirectory())
+    rmdirSync(p, options, er)
+  else
+    options.unlinkSync(p)
+}
+
+const rmdir = (p, options, originalEr, cb) => {
+  assert(p)
+  assert(options)
+  assert(typeof cb === 'function')
+
+  // try to rmdir first, and only readdir on ENOTEMPTY or EEXIST (SunOS)
+  // if we guessed wrong, and it's not a directory, then
+  // raise the original error.
+  options.rmdir(p, er => {
+    if (er && (er.code === "ENOTEMPTY" || er.code === "EEXIST" || er.code === "EPERM"))
+      rmkids(p, options, cb)
+    else if (er && er.code === "ENOTDIR")
+      cb(originalEr)
+    else
+      cb(er)
+  })
+}
+
+const rmkids = (p, options, cb) => {
+  assert(p)
+  assert(options)
+  assert(typeof cb === 'function')
+
+  options.readdir(p, (er, files) => {
+    if (er)
+      return cb(er)
+    let n = files.length
+    if (n === 0)
+      return options.rmdir(p, cb)
+    let errState
+    files.forEach(f => {
+      rimraf(path.join(p, f), options, er => {
+        if (errState)
+          return
+        if (er)
+          return cb(errState = er)
+        if (--n === 0)
+          options.rmdir(p, cb)
+      })
+    })
+  })
+}
+
+// this looks simpler, and is strictly *faster*, but will
+// tie up the JavaScript thread and fail on excessively
+// deep directory trees.
+const rimrafSync = (p, options) => {
+  options = options || {}
+  defaults(options)
+
+  assert(p, 'rimraf: missing path')
+  assert.equal(typeof p, 'string', 'rimraf: path should be a string')
+  assert(options, 'rimraf: missing options')
+  assert.equal(typeof options, 'object', 'rimraf: options should be object')
+
+  let results
+
+  if (options.disableGlob || !glob.hasMagic(p)) {
+    results = [p]
+  } else {
+    try {
+      options.lstatSync(p)
+      results = [p]
+    } catch (er) {
+      results = glob.sync(p, options.glob)
+    }
+  }
+
+  if (!results.length)
+    return
+
+  for (let i = 0; i < results.length; i++) {
+    const p = results[i]
+
+    let st
+    try {
+      st = options.lstatSync(p)
+    } catch (er) {
+      if (er.code === "ENOENT")
+        return
+
+      // Windows can EPERM on stat.  Life is suffering.
+      if (er.code === "EPERM" && isWindows)
+        fixWinEPERMSync(p, options, er)
+    }
+
+    try {
+      // sunos lets the root user unlink directories, which is... weird.
+      if (st && st.isDirectory())
+        rmdirSync(p, options, null)
+      else
+        options.unlinkSync(p)
+    } catch (er) {
+      if (er.code === "ENOENT")
+        return
+      if (er.code === "EPERM")
+        return isWindows ? fixWinEPERMSync(p, options, er) : rmdirSync(p, options, er)
+      if (er.code !== "EISDIR")
+        throw er
+
+      rmdirSync(p, options, er)
+    }
+  }
+}
+
+const rmdirSync = (p, options, originalEr) => {
+  assert(p)
+  assert(options)
+
+  try {
+    options.rmdirSync(p)
+  } catch (er) {
+    if (er.code === "ENOENT")
+      return
+    if (er.code === "ENOTDIR")
+      throw originalEr
+    if (er.code === "ENOTEMPTY" || er.code === "EEXIST" || er.code === "EPERM")
+      rmkidsSync(p, options)
+  }
+}
+
+const rmkidsSync = (p, options) => {
+  assert(p)
+  assert(options)
+  options.readdirSync(p).forEach(f => rimrafSync(path.join(p, f), options))
+
+  // We only end up here once we got ENOTEMPTY at least once, and
+  // at this point, we are guaranteed to have removed all the kids.
+  // So, we know that it won't be ENOENT or ENOTDIR or anything else.
+  // try really hard to delete stuff on windows, because it has a
+  // PROFOUNDLY annoying habit of not closing handles promptly when
+  // files are deleted, resulting in spurious ENOTEMPTY errors.
+  const retries = isWindows ? 100 : 1
+  let i = 0
+  do {
+    let threw = true
+    try {
+      const ret = options.rmdirSync(p, options)
+      threw = false
+      return ret
+    } finally {
+      if (++i < retries && threw)
+        continue
+    }
+  } while (true)
+}
+
+module.exports = rimraf
+rimraf.sync = rimrafSync
+
+
+/***/ }),
+
+/***/ 1532:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const ANY = Symbol('SemVer ANY')
+// hoisted class for cyclic dependency
+class Comparator {
+  static get ANY () {
+    return ANY
+  }
+  constructor (comp, options) {
+    options = parseOptions(options)
+
+    if (comp instanceof Comparator) {
+      if (comp.loose === !!options.loose) {
+        return comp
+      } else {
+        comp = comp.value
+      }
+    }
+
+    debug('comparator', comp, options)
+    this.options = options
+    this.loose = !!options.loose
+    this.parse(comp)
+
+    if (this.semver === ANY) {
+      this.value = ''
+    } else {
+      this.value = this.operator + this.semver.version
+    }
+
+    debug('comp', this)
+  }
+
+  parse (comp) {
+    const r = this.options.loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR]
+    const m = comp.match(r)
+
+    if (!m) {
+      throw new TypeError(`Invalid comparator: ${comp}`)
+    }
+
+    this.operator = m[1] !== undefined ? m[1] : ''
+    if (this.operator === '=') {
+      this.operator = ''
+    }
+
+    // if it literally is just '>' or '' then allow anything.
+    if (!m[2]) {
+      this.semver = ANY
+    } else {
+      this.semver = new SemVer(m[2], this.options.loose)
+    }
+  }
+
+  toString () {
+    return this.value
+  }
+
+  test (version) {
+    debug('Comparator.test', version, this.options.loose)
+
+    if (this.semver === ANY || version === ANY) {
+      return true
+    }
+
+    if (typeof version === 'string') {
+      try {
+        version = new SemVer(version, this.options)
+      } catch (er) {
+        return false
+      }
+    }
+
+    return cmp(version, this.operator, this.semver, this.options)
+  }
+
+  intersects (comp, options) {
+    if (!(comp instanceof Comparator)) {
+      throw new TypeError('a Comparator is required')
+    }
+
+    if (!options || typeof options !== 'object') {
+      options = {
+        loose: !!options,
+        includePrerelease: false
+      }
+    }
+
+    if (this.operator === '') {
+      if (this.value === '') {
+        return true
+      }
+      return new Range(comp.value, options).test(this.value)
+    } else if (comp.operator === '') {
+      if (comp.value === '') {
+        return true
+      }
+      return new Range(this.value, options).test(comp.semver)
+    }
+
+    const sameDirectionIncreasing =
+      (this.operator === '>=' || this.operator === '>') &&
+      (comp.operator === '>=' || comp.operator === '>')
+    const sameDirectionDecreasing =
+      (this.operator === '<=' || this.operator === '<') &&
+      (comp.operator === '<=' || comp.operator === '<')
+    const sameSemVer = this.semver.version === comp.semver.version
+    const differentDirectionsInclusive =
+      (this.operator === '>=' || this.operator === '<=') &&
+      (comp.operator === '>=' || comp.operator === '<=')
+    const oppositeDirectionsLessThan =
+      cmp(this.semver, '<', comp.semver, options) &&
+      (this.operator === '>=' || this.operator === '>') &&
+        (comp.operator === '<=' || comp.operator === '<')
+    const oppositeDirectionsGreaterThan =
+      cmp(this.semver, '>', comp.semver, options) &&
+      (this.operator === '<=' || this.operator === '<') &&
+        (comp.operator === '>=' || comp.operator === '>')
+
+    return (
+      sameDirectionIncreasing ||
+      sameDirectionDecreasing ||
+      (sameSemVer && differentDirectionsInclusive) ||
+      oppositeDirectionsLessThan ||
+      oppositeDirectionsGreaterThan
+    )
+  }
+}
+
+module.exports = Comparator
+
+const parseOptions = __nccwpck_require__(785)
+const {re, t} = __nccwpck_require__(9523)
+const cmp = __nccwpck_require__(5098)
+const debug = __nccwpck_require__(427)
+const SemVer = __nccwpck_require__(8088)
+const Range = __nccwpck_require__(9828)
+
+
+/***/ }),
+
+/***/ 9828:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+// hoisted class for cyclic dependency
+class Range {
+  constructor (range, options) {
+    options = parseOptions(options)
+
+    if (range instanceof Range) {
+      if (
+        range.loose === !!options.loose &&
+        range.includePrerelease === !!options.includePrerelease
+      ) {
+        return range
+      } else {
+        return new Range(range.raw, options)
+      }
+    }
+
+    if (range instanceof Comparator) {
+      // just put it in the set and return
+      this.raw = range.value
+      this.set = [[range]]
+      this.format()
+      return this
+    }
+
+    this.options = options
+    this.loose = !!options.loose
+    this.includePrerelease = !!options.includePrerelease
+
+    // First, split based on boolean or ||
+    this.raw = range
+    this.set = range
+      .split(/\s*\|\|\s*/)
+      // map the range to a 2d array of comparators
+      .map(range => this.parseRange(range.trim()))
+      // throw out any comparator lists that are empty
+      // this generally means that it was not a valid range, which is allowed
+      // in loose mode, but will still throw if the WHOLE range is invalid.
+      .filter(c => c.length)
+
+    if (!this.set.length) {
+      throw new TypeError(`Invalid SemVer Range: ${range}`)
+    }
+
+    // if we have any that are not the null set, throw out null sets.
+    if (this.set.length > 1) {
+      // keep the first one, in case they're all null sets
+      const first = this.set[0]
+      this.set = this.set.filter(c => !isNullSet(c[0]))
+      if (this.set.length === 0)
+        this.set = [first]
+      else if (this.set.length > 1) {
+        // if we have any that are *, then the range is just *
+        for (const c of this.set) {
+          if (c.length === 1 && isAny(c[0])) {
+            this.set = [c]
+            break
+          }
+        }
+      }
+    }
+
+    this.format()
+  }
+
+  format () {
+    this.range = this.set
+      .map((comps) => {
+        return comps.join(' ').trim()
+      })
+      .join('||')
+      .trim()
+    return this.range
+  }
+
+  toString () {
+    return this.range
+  }
+
+  parseRange (range) {
+    range = range.trim()
+
+    // memoize range parsing for performance.
+    // this is a very hot path, and fully deterministic.
+    const memoOpts = Object.keys(this.options).join(',')
+    const memoKey = `parseRange:${memoOpts}:${range}`
+    const cached = cache.get(memoKey)
+    if (cached)
+      return cached
+
+    const loose = this.options.loose
+    // `1.2.3 - 1.2.4` => `>=1.2.3 <=1.2.4`
+    const hr = loose ? re[t.HYPHENRANGELOOSE] : re[t.HYPHENRANGE]
+    range = range.replace(hr, hyphenReplace(this.options.includePrerelease))
+    debug('hyphen replace', range)
+    // `> 1.2.3 < 1.2.5` => `>1.2.3 <1.2.5`
+    range = range.replace(re[t.COMPARATORTRIM], comparatorTrimReplace)
+    debug('comparator trim', range, re[t.COMPARATORTRIM])
+
+    // `~ 1.2.3` => `~1.2.3`
+    range = range.replace(re[t.TILDETRIM], tildeTrimReplace)
+
+    // `^ 1.2.3` => `^1.2.3`
+    range = range.replace(re[t.CARETTRIM], caretTrimReplace)
+
+    // normalize spaces
+    range = range.split(/\s+/).join(' ')
+
+    // At this point, the range is completely trimmed and
+    // ready to be split into comparators.
+
+    const compRe = loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR]
+    const rangeList = range
+      .split(' ')
+      .map(comp => parseComparator(comp, this.options))
+      .join(' ')
+      .split(/\s+/)
+      // >=0.0.0 is equivalent to *
+      .map(comp => replaceGTE0(comp, this.options))
+      // in loose mode, throw out any that are not valid comparators
+      .filter(this.options.loose ? comp => !!comp.match(compRe) : () => true)
+      .map(comp => new Comparator(comp, this.options))
+
+    // if any comparators are the null set, then replace with JUST null set
+    // if more than one comparator, remove any * comparators
+    // also, don't include the same comparator more than once
+    const l = rangeList.length
+    const rangeMap = new Map()
+    for (const comp of rangeList) {
+      if (isNullSet(comp))
+        return [comp]
+      rangeMap.set(comp.value, comp)
+    }
+    if (rangeMap.size > 1 && rangeMap.has(''))
+      rangeMap.delete('')
+
+    const result = [...rangeMap.values()]
+    cache.set(memoKey, result)
+    return result
+  }
+
+  intersects (range, options) {
+    if (!(range instanceof Range)) {
+      throw new TypeError('a Range is required')
+    }
+
+    return this.set.some((thisComparators) => {
+      return (
+        isSatisfiable(thisComparators, options) &&
+        range.set.some((rangeComparators) => {
+          return (
+            isSatisfiable(rangeComparators, options) &&
+            thisComparators.every((thisComparator) => {
+              return rangeComparators.every((rangeComparator) => {
+                return thisComparator.intersects(rangeComparator, options)
+              })
+            })
+          )
+        })
+      )
+    })
+  }
+
+  // if ANY of the sets match ALL of its comparators, then pass
+  test (version) {
+    if (!version) {
+      return false
+    }
+
+    if (typeof version === 'string') {
+      try {
+        version = new SemVer(version, this.options)
+      } catch (er) {
+        return false
+      }
+    }
+
+    for (let i = 0; i < this.set.length; i++) {
+      if (testSet(this.set[i], version, this.options)) {
+        return true
+      }
+    }
+    return false
+  }
+}
+module.exports = Range
+
+const LRU = __nccwpck_require__(7129)
+const cache = new LRU({ max: 1000 })
+
+const parseOptions = __nccwpck_require__(785)
+const Comparator = __nccwpck_require__(1532)
+const debug = __nccwpck_require__(427)
+const SemVer = __nccwpck_require__(8088)
+const {
+  re,
+  t,
+  comparatorTrimReplace,
+  tildeTrimReplace,
+  caretTrimReplace
+} = __nccwpck_require__(9523)
+
+const isNullSet = c => c.value === '<0.0.0-0'
+const isAny = c => c.value === ''
+
+// take a set of comparators and determine whether there
+// exists a version which can satisfy it
+const isSatisfiable = (comparators, options) => {
+  let result = true
+  const remainingComparators = comparators.slice()
+  let testComparator = remainingComparators.pop()
+
+  while (result && remainingComparators.length) {
+    result = remainingComparators.every((otherComparator) => {
+      return testComparator.intersects(otherComparator, options)
+    })
+
+    testComparator = remainingComparators.pop()
+  }
+
+  return result
+}
+
+// comprised of xranges, tildes, stars, and gtlt's at this point.
+// already replaced the hyphen ranges
+// turn into a set of JUST comparators.
+const parseComparator = (comp, options) => {
+  debug('comp', comp, options)
+  comp = replaceCarets(comp, options)
+  debug('caret', comp)
+  comp = replaceTildes(comp, options)
+  debug('tildes', comp)
+  comp = replaceXRanges(comp, options)
+  debug('xrange', comp)
+  comp = replaceStars(comp, options)
+  debug('stars', comp)
+  return comp
+}
+
+const isX = id => !id || id.toLowerCase() === 'x' || id === '*'
+
+// ~, ~> --> * (any, kinda silly)
+// ~2, ~2.x, ~2.x.x, ~>2, ~>2.x ~>2.x.x --> >=2.0.0 <3.0.0-0
+// ~2.0, ~2.0.x, ~>2.0, ~>2.0.x --> >=2.0.0 <2.1.0-0
+// ~1.2, ~1.2.x, ~>1.2, ~>1.2.x --> >=1.2.0 <1.3.0-0
+// ~1.2.3, ~>1.2.3 --> >=1.2.3 <1.3.0-0
+// ~1.2.0, ~>1.2.0 --> >=1.2.0 <1.3.0-0
+const replaceTildes = (comp, options) =>
+  comp.trim().split(/\s+/).map((comp) => {
+    return replaceTilde(comp, options)
+  }).join(' ')
+
+const replaceTilde = (comp, options) => {
+  const r = options.loose ? re[t.TILDELOOSE] : re[t.TILDE]
+  return comp.replace(r, (_, M, m, p, pr) => {
+    debug('tilde', comp, _, M, m, p, pr)
+    let ret
+
+    if (isX(M)) {
+      ret = ''
+    } else if (isX(m)) {
+      ret = `>=${M}.0.0 <${+M + 1}.0.0-0`
+    } else if (isX(p)) {
+      // ~1.2 == >=1.2.0 <1.3.0-0
+      ret = `>=${M}.${m}.0 <${M}.${+m + 1}.0-0`
+    } else if (pr) {
+      debug('replaceTilde pr', pr)
+      ret = `>=${M}.${m}.${p}-${pr
+      } <${M}.${+m + 1}.0-0`
+    } else {
+      // ~1.2.3 == >=1.2.3 <1.3.0-0
+      ret = `>=${M}.${m}.${p
+      } <${M}.${+m + 1}.0-0`
+    }
+
+    debug('tilde return', ret)
+    return ret
+  })
+}
+
+// ^ --> * (any, kinda silly)
+// ^2, ^2.x, ^2.x.x --> >=2.0.0 <3.0.0-0
+// ^2.0, ^2.0.x --> >=2.0.0 <3.0.0-0
+// ^1.2, ^1.2.x --> >=1.2.0 <2.0.0-0
+// ^1.2.3 --> >=1.2.3 <2.0.0-0
+// ^1.2.0 --> >=1.2.0 <2.0.0-0
+const replaceCarets = (comp, options) =>
+  comp.trim().split(/\s+/).map((comp) => {
+    return replaceCaret(comp, options)
+  }).join(' ')
+
+const replaceCaret = (comp, options) => {
+  debug('caret', comp, options)
+  const r = options.loose ? re[t.CARETLOOSE] : re[t.CARET]
+  const z = options.includePrerelease ? '-0' : ''
+  return comp.replace(r, (_, M, m, p, pr) => {
+    debug('caret', comp, _, M, m, p, pr)
+    let ret
+
+    if (isX(M)) {
+      ret = ''
+    } else if (isX(m)) {
+      ret = `>=${M}.0.0${z} <${+M + 1}.0.0-0`
+    } else if (isX(p)) {
+      if (M === '0') {
+        ret = `>=${M}.${m}.0${z} <${M}.${+m + 1}.0-0`
+      } else {
+        ret = `>=${M}.${m}.0${z} <${+M + 1}.0.0-0`
+      }
+    } else if (pr) {
+      debug('replaceCaret pr', pr)
+      if (M === '0') {
+        if (m === '0') {
+          ret = `>=${M}.${m}.${p}-${pr
+          } <${M}.${m}.${+p + 1}-0`
+        } else {
+          ret = `>=${M}.${m}.${p}-${pr
+          } <${M}.${+m + 1}.0-0`
+        }
+      } else {
+        ret = `>=${M}.${m}.${p}-${pr
+        } <${+M + 1}.0.0-0`
+      }
+    } else {
+      debug('no pr')
+      if (M === '0') {
+        if (m === '0') {
+          ret = `>=${M}.${m}.${p
+          }${z} <${M}.${m}.${+p + 1}-0`
+        } else {
+          ret = `>=${M}.${m}.${p
+          }${z} <${M}.${+m + 1}.0-0`
+        }
+      } else {
+        ret = `>=${M}.${m}.${p
+        } <${+M + 1}.0.0-0`
+      }
+    }
+
+    debug('caret return', ret)
+    return ret
+  })
+}
+
+const replaceXRanges = (comp, options) => {
+  debug('replaceXRanges', comp, options)
+  return comp.split(/\s+/).map((comp) => {
+    return replaceXRange(comp, options)
+  }).join(' ')
+}
+
+const replaceXRange = (comp, options) => {
+  comp = comp.trim()
+  const r = options.loose ? re[t.XRANGELOOSE] : re[t.XRANGE]
+  return comp.replace(r, (ret, gtlt, M, m, p, pr) => {
+    debug('xRange', comp, ret, gtlt, M, m, p, pr)
+    const xM = isX(M)
+    const xm = xM || isX(m)
+    const xp = xm || isX(p)
+    const anyX = xp
+
+    if (gtlt === '=' && anyX) {
+      gtlt = ''
+    }
+
+    // if we're including prereleases in the match, then we need
+    // to fix this to -0, the lowest possible prerelease value
+    pr = options.includePrerelease ? '-0' : ''
+
+    if (xM) {
+      if (gtlt === '>' || gtlt === '<') {
+        // nothing is allowed
+        ret = '<0.0.0-0'
+      } else {
+        // nothing is forbidden
+        ret = '*'
+      }
+    } else if (gtlt && anyX) {
+      // we know patch is an x, because we have any x at all.
+      // replace X with 0
+      if (xm) {
+        m = 0
+      }
+      p = 0
+
+      if (gtlt === '>') {
+        // >1 => >=2.0.0
+        // >1.2 => >=1.3.0
+        gtlt = '>='
+        if (xm) {
+          M = +M + 1
+          m = 0
+          p = 0
+        } else {
+          m = +m + 1
+          p = 0
+        }
+      } else if (gtlt === '<=') {
+        // <=0.7.x is actually <0.8.0, since any 0.7.x should
+        // pass.  Similarly, <=7.x is actually <8.0.0, etc.
+        gtlt = '<'
+        if (xm) {
+          M = +M + 1
+        } else {
+          m = +m + 1
+        }
+      }
+
+      if (gtlt === '<')
+        pr = '-0'
+
+      ret = `${gtlt + M}.${m}.${p}${pr}`
+    } else if (xm) {
+      ret = `>=${M}.0.0${pr} <${+M + 1}.0.0-0`
+    } else if (xp) {
+      ret = `>=${M}.${m}.0${pr
+      } <${M}.${+m + 1}.0-0`
+    }
+
+    debug('xRange return', ret)
+
+    return ret
+  })
+}
+
+// Because * is AND-ed with everything else in the comparator,
+// and '' means "any version", just remove the *s entirely.
+const replaceStars = (comp, options) => {
+  debug('replaceStars', comp, options)
+  // Looseness is ignored here.  star is always as loose as it gets!
+  return comp.trim().replace(re[t.STAR], '')
+}
+
+const replaceGTE0 = (comp, options) => {
+  debug('replaceGTE0', comp, options)
+  return comp.trim()
+    .replace(re[options.includePrerelease ? t.GTE0PRE : t.GTE0], '')
+}
+
+// This function is passed to string.replace(re[t.HYPHENRANGE])
+// M, m, patch, prerelease, build
+// 1.2 - 3.4.5 => >=1.2.0 <=3.4.5
+// 1.2.3 - 3.4 => >=1.2.0 <3.5.0-0 Any 3.4.x will do
+// 1.2 - 3.4 => >=1.2.0 <3.5.0-0
+const hyphenReplace = incPr => ($0,
+  from, fM, fm, fp, fpr, fb,
+  to, tM, tm, tp, tpr, tb) => {
+  if (isX(fM)) {
+    from = ''
+  } else if (isX(fm)) {
+    from = `>=${fM}.0.0${incPr ? '-0' : ''}`
+  } else if (isX(fp)) {
+    from = `>=${fM}.${fm}.0${incPr ? '-0' : ''}`
+  } else if (fpr) {
+    from = `>=${from}`
+  } else {
+    from = `>=${from}${incPr ? '-0' : ''}`
+  }
+
+  if (isX(tM)) {
+    to = ''
+  } else if (isX(tm)) {
+    to = `<${+tM + 1}.0.0-0`
+  } else if (isX(tp)) {
+    to = `<${tM}.${+tm + 1}.0-0`
+  } else if (tpr) {
+    to = `<=${tM}.${tm}.${tp}-${tpr}`
+  } else if (incPr) {
+    to = `<${tM}.${tm}.${+tp + 1}-0`
+  } else {
+    to = `<=${to}`
+  }
+
+  return (`${from} ${to}`).trim()
+}
+
+const testSet = (set, version, options) => {
+  for (let i = 0; i < set.length; i++) {
+    if (!set[i].test(version)) {
+      return false
+    }
+  }
+
+  if (version.prerelease.length && !options.includePrerelease) {
+    // Find the set of versions that are allowed to have prereleases
+    // For example, ^1.2.3-pr.1 desugars to >=1.2.3-pr.1 <2.0.0
+    // That should allow `1.2.3-pr.2` to pass.
+    // However, `1.2.4-alpha.notready` should NOT be allowed,
+    // even though it's within the range set by the comparators.
+    for (let i = 0; i < set.length; i++) {
+      debug(set[i].semver)
+      if (set[i].semver === Comparator.ANY) {
+        continue
+      }
+
+      if (set[i].semver.prerelease.length > 0) {
+        const allowed = set[i].semver
+        if (allowed.major === version.major &&
+            allowed.minor === version.minor &&
+            allowed.patch === version.patch) {
+          return true
+        }
+      }
+    }
+
+    // Version has a -pre, but it's not one of the ones we like.
+    return false
+  }
+
+  return true
+}
+
+
+/***/ }),
+
+/***/ 8088:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const debug = __nccwpck_require__(427)
+const { MAX_LENGTH, MAX_SAFE_INTEGER } = __nccwpck_require__(2293)
+const { re, t } = __nccwpck_require__(9523)
+
+const parseOptions = __nccwpck_require__(785)
+const { compareIdentifiers } = __nccwpck_require__(2463)
+class SemVer {
+  constructor (version, options) {
+    options = parseOptions(options)
+
+    if (version instanceof SemVer) {
+      if (version.loose === !!options.loose &&
+          version.includePrerelease === !!options.includePrerelease) {
+        return version
+      } else {
+        version = version.version
+      }
+    } else if (typeof version !== 'string') {
+      throw new TypeError(`Invalid Version: ${version}`)
+    }
+
+    if (version.length > MAX_LENGTH) {
+      throw new TypeError(
+        `version is longer than ${MAX_LENGTH} characters`
+      )
+    }
+
+    debug('SemVer', version, options)
+    this.options = options
+    this.loose = !!options.loose
+    // this isn't actually relevant for versions, but keep it so that we
+    // don't run into trouble passing this.options around.
+    this.includePrerelease = !!options.includePrerelease
+
+    const m = version.trim().match(options.loose ? re[t.LOOSE] : re[t.FULL])
+
+    if (!m) {
+      throw new TypeError(`Invalid Version: ${version}`)
+    }
+
+    this.raw = version
+
+    // these are actually numbers
+    this.major = +m[1]
+    this.minor = +m[2]
+    this.patch = +m[3]
+
+    if (this.major > MAX_SAFE_INTEGER || this.major < 0) {
+      throw new TypeError('Invalid major version')
+    }
+
+    if (this.minor > MAX_SAFE_INTEGER || this.minor < 0) {
+      throw new TypeError('Invalid minor version')
+    }
+
+    if (this.patch > MAX_SAFE_INTEGER || this.patch < 0) {
+      throw new TypeError('Invalid patch version')
+    }
+
+    // numberify any prerelease numeric ids
+    if (!m[4]) {
+      this.prerelease = []
+    } else {
+      this.prerelease = m[4].split('.').map((id) => {
+        if (/^[0-9]+$/.test(id)) {
+          const num = +id
+          if (num >= 0 && num < MAX_SAFE_INTEGER) {
+            return num
+          }
+        }
+        return id
+      })
+    }
+
+    this.build = m[5] ? m[5].split('.') : []
+    this.format()
+  }
+
+  format () {
+    this.version = `${this.major}.${this.minor}.${this.patch}`
+    if (this.prerelease.length) {
+      this.version += `-${this.prerelease.join('.')}`
+    }
+    return this.version
+  }
+
+  toString () {
+    return this.version
+  }
+
+  compare (other) {
+    debug('SemVer.compare', this.version, this.options, other)
+    if (!(other instanceof SemVer)) {
+      if (typeof other === 'string' && other === this.version) {
+        return 0
+      }
+      other = new SemVer(other, this.options)
+    }
+
+    if (other.version === this.version) {
+      return 0
+    }
+
+    return this.compareMain(other) || this.comparePre(other)
+  }
+
+  compareMain (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    return (
+      compareIdentifiers(this.major, other.major) ||
+      compareIdentifiers(this.minor, other.minor) ||
+      compareIdentifiers(this.patch, other.patch)
+    )
+  }
+
+  comparePre (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    // NOT having a prerelease is > having one
+    if (this.prerelease.length && !other.prerelease.length) {
+      return -1
+    } else if (!this.prerelease.length && other.prerelease.length) {
+      return 1
+    } else if (!this.prerelease.length && !other.prerelease.length) {
+      return 0
+    }
+
+    let i = 0
+    do {
+      const a = this.prerelease[i]
+      const b = other.prerelease[i]
+      debug('prerelease compare', i, a, b)
+      if (a === undefined && b === undefined) {
+        return 0
+      } else if (b === undefined) {
+        return 1
+      } else if (a === undefined) {
+        return -1
+      } else if (a === b) {
+        continue
+      } else {
+        return compareIdentifiers(a, b)
+      }
+    } while (++i)
+  }
+
+  compareBuild (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    let i = 0
+    do {
+      const a = this.build[i]
+      const b = other.build[i]
+      debug('prerelease compare', i, a, b)
+      if (a === undefined && b === undefined) {
+        return 0
+      } else if (b === undefined) {
+        return 1
+      } else if (a === undefined) {
+        return -1
+      } else if (a === b) {
+        continue
+      } else {
+        return compareIdentifiers(a, b)
+      }
+    } while (++i)
+  }
+
+  // preminor will bump the version up to the next minor release, and immediately
+  // down to pre-release. premajor and prepatch work the same way.
+  inc (release, identifier) {
+    switch (release) {
+      case 'premajor':
+        this.prerelease.length = 0
+        this.patch = 0
+        this.minor = 0
+        this.major++
+        this.inc('pre', identifier)
+        break
+      case 'preminor':
+        this.prerelease.length = 0
+        this.patch = 0
+        this.minor++
+        this.inc('pre', identifier)
+        break
+      case 'prepatch':
+        // If this is already a prerelease, it will bump to the next version
+        // drop any prereleases that might already exist, since they are not
+        // relevant at this point.
+        this.prerelease.length = 0
+        this.inc('patch', identifier)
+        this.inc('pre', identifier)
+        break
+      // If the input is a non-prerelease version, this acts the same as
+      // prepatch.
+      case 'prerelease':
+        if (this.prerelease.length === 0) {
+          this.inc('patch', identifier)
+        }
+        this.inc('pre', identifier)
+        break
+
+      case 'major':
+        // If this is a pre-major version, bump up to the same major version.
+        // Otherwise increment major.
+        // 1.0.0-5 bumps to 1.0.0
+        // 1.1.0 bumps to 2.0.0
+        if (
+          this.minor !== 0 ||
+          this.patch !== 0 ||
+          this.prerelease.length === 0
+        ) {
+          this.major++
+        }
+        this.minor = 0
+        this.patch = 0
+        this.prerelease = []
+        break
+      case 'minor':
+        // If this is a pre-minor version, bump up to the same minor version.
+        // Otherwise increment minor.
+        // 1.2.0-5 bumps to 1.2.0
+        // 1.2.1 bumps to 1.3.0
+        if (this.patch !== 0 || this.prerelease.length === 0) {
+          this.minor++
+        }
+        this.patch = 0
+        this.prerelease = []
+        break
+      case 'patch':
+        // If this is not a pre-release version, it will increment the patch.
+        // If it is a pre-release it will bump up to the same patch version.
+        // 1.2.0-5 patches to 1.2.0
+        // 1.2.0 patches to 1.2.1
+        if (this.prerelease.length === 0) {
+          this.patch++
+        }
+        this.prerelease = []
+        break
+      // This probably shouldn't be used publicly.
+      // 1.0.0 'pre' would become 1.0.0-0 which is the wrong direction.
+      case 'pre':
+        if (this.prerelease.length === 0) {
+          this.prerelease = [0]
+        } else {
+          let i = this.prerelease.length
+          while (--i >= 0) {
+            if (typeof this.prerelease[i] === 'number') {
+              this.prerelease[i]++
+              i = -2
+            }
+          }
+          if (i === -1) {
+            // didn't increment anything
+            this.prerelease.push(0)
+          }
+        }
+        if (identifier) {
+          // 1.2.0-beta.1 bumps to 1.2.0-beta.2,
+          // 1.2.0-beta.fooblz or 1.2.0-beta bumps to 1.2.0-beta.0
+          if (this.prerelease[0] === identifier) {
+            if (isNaN(this.prerelease[1])) {
+              this.prerelease = [identifier, 0]
+            }
+          } else {
+            this.prerelease = [identifier, 0]
+          }
+        }
+        break
+
+      default:
+        throw new Error(`invalid increment argument: ${release}`)
+    }
+    this.format()
+    this.raw = this.version
+    return this
+  }
+}
+
+module.exports = SemVer
+
+
+/***/ }),
+
+/***/ 8848:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const parse = __nccwpck_require__(5925)
+const clean = (version, options) => {
+  const s = parse(version.trim().replace(/^[=v]+/, ''), options)
+  return s ? s.version : null
+}
+module.exports = clean
+
+
+/***/ }),
+
+/***/ 5098:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const eq = __nccwpck_require__(1898)
+const neq = __nccwpck_require__(6017)
+const gt = __nccwpck_require__(4123)
+const gte = __nccwpck_require__(5522)
+const lt = __nccwpck_require__(194)
+const lte = __nccwpck_require__(7520)
+
+const cmp = (a, op, b, loose) => {
+  switch (op) {
+    case '===':
+      if (typeof a === 'object')
+        a = a.version
+      if (typeof b === 'object')
+        b = b.version
+      return a === b
+
+    case '!==':
+      if (typeof a === 'object')
+        a = a.version
+      if (typeof b === 'object')
+        b = b.version
+      return a !== b
+
+    case '':
+    case '=':
+    case '==':
+      return eq(a, b, loose)
+
+    case '!=':
+      return neq(a, b, loose)
+
+    case '>':
+      return gt(a, b, loose)
+
+    case '>=':
+      return gte(a, b, loose)
+
+    case '<':
+      return lt(a, b, loose)
+
+    case '<=':
+      return lte(a, b, loose)
+
+    default:
+      throw new TypeError(`Invalid operator: ${op}`)
+  }
+}
+module.exports = cmp
+
+
+/***/ }),
+
+/***/ 3466:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const parse = __nccwpck_require__(5925)
+const {re, t} = __nccwpck_require__(9523)
+
+const coerce = (version, options) => {
+  if (version instanceof SemVer) {
+    return version
+  }
+
+  if (typeof version === 'number') {
+    version = String(version)
+  }
+
+  if (typeof version !== 'string') {
+    return null
+  }
+
+  options = options || {}
+
+  let match = null
+  if (!options.rtl) {
+    match = version.match(re[t.COERCE])
+  } else {
+    // Find the right-most coercible string that does not share
+    // a terminus with a more left-ward coercible string.
+    // Eg, '1.2.3.4' wants to coerce '2.3.4', not '3.4' or '4'
+    //
+    // Walk through the string checking with a /g regexp
+    // Manually set the index so as to pick up overlapping matches.
+    // Stop when we get a match that ends at the string end, since no
+    // coercible string can be more right-ward without the same terminus.
+    let next
+    while ((next = re[t.COERCERTL].exec(version)) &&
+        (!match || match.index + match[0].length !== version.length)
+    ) {
+      if (!match ||
+            next.index + next[0].length !== match.index + match[0].length) {
+        match = next
+      }
+      re[t.COERCERTL].lastIndex = next.index + next[1].length + next[2].length
+    }
+    // leave it in a clean state
+    re[t.COERCERTL].lastIndex = -1
+  }
+
+  if (match === null)
+    return null
+
+  return parse(`${match[2]}.${match[3] || '0'}.${match[4] || '0'}`, options)
+}
+module.exports = coerce
+
+
+/***/ }),
+
+/***/ 2156:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const compareBuild = (a, b, loose) => {
+  const versionA = new SemVer(a, loose)
+  const versionB = new SemVer(b, loose)
+  return versionA.compare(versionB) || versionA.compareBuild(versionB)
+}
+module.exports = compareBuild
+
+
+/***/ }),
+
+/***/ 2804:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const compareLoose = (a, b) => compare(a, b, true)
+module.exports = compareLoose
+
+
+/***/ }),
+
+/***/ 4309:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const compare = (a, b, loose) =>
+  new SemVer(a, loose).compare(new SemVer(b, loose))
+
+module.exports = compare
+
+
+/***/ }),
+
+/***/ 4297:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const parse = __nccwpck_require__(5925)
+const eq = __nccwpck_require__(1898)
+
+const diff = (version1, version2) => {
+  if (eq(version1, version2)) {
+    return null
+  } else {
+    const v1 = parse(version1)
+    const v2 = parse(version2)
+    const hasPre = v1.prerelease.length || v2.prerelease.length
+    const prefix = hasPre ? 'pre' : ''
+    const defaultResult = hasPre ? 'prerelease' : ''
+    for (const key in v1) {
+      if (key === 'major' || key === 'minor' || key === 'patch') {
+        if (v1[key] !== v2[key]) {
+          return prefix + key
+        }
+      }
+    }
+    return defaultResult // may be undefined
+  }
+}
+module.exports = diff
+
+
+/***/ }),
+
+/***/ 1898:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const eq = (a, b, loose) => compare(a, b, loose) === 0
+module.exports = eq
+
+
+/***/ }),
+
+/***/ 4123:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const gt = (a, b, loose) => compare(a, b, loose) > 0
+module.exports = gt
+
+
+/***/ }),
+
+/***/ 5522:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const gte = (a, b, loose) => compare(a, b, loose) >= 0
+module.exports = gte
+
+
+/***/ }),
+
+/***/ 900:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+
+const inc = (version, release, options, identifier) => {
+  if (typeof (options) === 'string') {
+    identifier = options
+    options = undefined
+  }
+
+  try {
+    return new SemVer(version, options).inc(release, identifier).version
+  } catch (er) {
+    return null
+  }
+}
+module.exports = inc
+
+
+/***/ }),
+
+/***/ 194:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const lt = (a, b, loose) => compare(a, b, loose) < 0
+module.exports = lt
+
+
+/***/ }),
+
+/***/ 7520:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const lte = (a, b, loose) => compare(a, b, loose) <= 0
+module.exports = lte
+
+
+/***/ }),
+
+/***/ 6688:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const major = (a, loose) => new SemVer(a, loose).major
+module.exports = major
+
+
+/***/ }),
+
+/***/ 8447:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const minor = (a, loose) => new SemVer(a, loose).minor
+module.exports = minor
+
+
+/***/ }),
+
+/***/ 6017:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const neq = (a, b, loose) => compare(a, b, loose) !== 0
+module.exports = neq
+
+
+/***/ }),
+
+/***/ 5925:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const {MAX_LENGTH} = __nccwpck_require__(2293)
+const { re, t } = __nccwpck_require__(9523)
+const SemVer = __nccwpck_require__(8088)
+
+const parseOptions = __nccwpck_require__(785)
+const parse = (version, options) => {
+  options = parseOptions(options)
+
+  if (version instanceof SemVer) {
+    return version
+  }
+
+  if (typeof version !== 'string') {
+    return null
+  }
+
+  if (version.length > MAX_LENGTH) {
+    return null
+  }
+
+  const r = options.loose ? re[t.LOOSE] : re[t.FULL]
+  if (!r.test(version)) {
+    return null
+  }
+
+  try {
+    return new SemVer(version, options)
+  } catch (er) {
+    return null
+  }
+}
+
+module.exports = parse
+
+
+/***/ }),
+
+/***/ 2866:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const patch = (a, loose) => new SemVer(a, loose).patch
+module.exports = patch
+
+
+/***/ }),
+
+/***/ 4016:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const parse = __nccwpck_require__(5925)
+const prerelease = (version, options) => {
+  const parsed = parse(version, options)
+  return (parsed && parsed.prerelease.length) ? parsed.prerelease : null
+}
+module.exports = prerelease
+
+
+/***/ }),
+
+/***/ 6417:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compare = __nccwpck_require__(4309)
+const rcompare = (a, b, loose) => compare(b, a, loose)
+module.exports = rcompare
+
+
+/***/ }),
+
+/***/ 8701:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compareBuild = __nccwpck_require__(2156)
+const rsort = (list, loose) => list.sort((a, b) => compareBuild(b, a, loose))
+module.exports = rsort
+
+
+/***/ }),
+
+/***/ 6055:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const Range = __nccwpck_require__(9828)
+const satisfies = (version, range, options) => {
+  try {
+    range = new Range(range, options)
+  } catch (er) {
+    return false
+  }
+  return range.test(version)
+}
+module.exports = satisfies
+
+
+/***/ }),
+
+/***/ 1426:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const compareBuild = __nccwpck_require__(2156)
+const sort = (list, loose) => list.sort((a, b) => compareBuild(a, b, loose))
+module.exports = sort
+
+
+/***/ }),
+
+/***/ 9601:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const parse = __nccwpck_require__(5925)
+const valid = (version, options) => {
+  const v = parse(version, options)
+  return v ? v.version : null
+}
+module.exports = valid
+
+
+/***/ }),
+
+/***/ 1383:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+// just pre-load all the stuff that index.js lazily exports
+const internalRe = __nccwpck_require__(9523)
+module.exports = {
+  re: internalRe.re,
+  src: internalRe.src,
+  tokens: internalRe.t,
+  SEMVER_SPEC_VERSION: __nccwpck_require__(2293).SEMVER_SPEC_VERSION,
+  SemVer: __nccwpck_require__(8088),
+  compareIdentifiers: __nccwpck_require__(2463).compareIdentifiers,
+  rcompareIdentifiers: __nccwpck_require__(2463).rcompareIdentifiers,
+  parse: __nccwpck_require__(5925),
+  valid: __nccwpck_require__(9601),
+  clean: __nccwpck_require__(8848),
+  inc: __nccwpck_require__(900),
+  diff: __nccwpck_require__(4297),
+  major: __nccwpck_require__(6688),
+  minor: __nccwpck_require__(8447),
+  patch: __nccwpck_require__(2866),
+  prerelease: __nccwpck_require__(4016),
+  compare: __nccwpck_require__(4309),
+  rcompare: __nccwpck_require__(6417),
+  compareLoose: __nccwpck_require__(2804),
+  compareBuild: __nccwpck_require__(2156),
+  sort: __nccwpck_require__(1426),
+  rsort: __nccwpck_require__(8701),
+  gt: __nccwpck_require__(4123),
+  lt: __nccwpck_require__(194),
+  eq: __nccwpck_require__(1898),
+  neq: __nccwpck_require__(6017),
+  gte: __nccwpck_require__(5522),
+  lte: __nccwpck_require__(7520),
+  cmp: __nccwpck_require__(5098),
+  coerce: __nccwpck_require__(3466),
+  Comparator: __nccwpck_require__(1532),
+  Range: __nccwpck_require__(9828),
+  satisfies: __nccwpck_require__(6055),
+  toComparators: __nccwpck_require__(2706),
+  maxSatisfying: __nccwpck_require__(579),
+  minSatisfying: __nccwpck_require__(832),
+  minVersion: __nccwpck_require__(4179),
+  validRange: __nccwpck_require__(2098),
+  outside: __nccwpck_require__(420),
+  gtr: __nccwpck_require__(9380),
+  ltr: __nccwpck_require__(3323),
+  intersects: __nccwpck_require__(7008),
+  simplifyRange: __nccwpck_require__(5297),
+  subset: __nccwpck_require__(7863),
+}
+
+
+/***/ }),
+
+/***/ 2293:
+/***/ ((module) => {
+
+// Note: this is the semver.org version of the spec that it implements
+// Not necessarily the package version of this code.
+const SEMVER_SPEC_VERSION = '2.0.0'
+
+const MAX_LENGTH = 256
+const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER ||
+  /* istanbul ignore next */ 9007199254740991
+
+// Max safe segment length for coercion.
+const MAX_SAFE_COMPONENT_LENGTH = 16
+
+module.exports = {
+  SEMVER_SPEC_VERSION,
+  MAX_LENGTH,
+  MAX_SAFE_INTEGER,
+  MAX_SAFE_COMPONENT_LENGTH
+}
+
+
+/***/ }),
+
+/***/ 427:
+/***/ ((module) => {
+
+const debug = (
+  typeof process === 'object' &&
+  process.env &&
+  process.env.NODE_DEBUG &&
+  /\bsemver\b/i.test(process.env.NODE_DEBUG)
+) ? (...args) => console.error('SEMVER', ...args)
+  : () => {}
+
+module.exports = debug
+
+
+/***/ }),
+
+/***/ 2463:
+/***/ ((module) => {
+
+const numeric = /^[0-9]+$/
+const compareIdentifiers = (a, b) => {
+  const anum = numeric.test(a)
+  const bnum = numeric.test(b)
+
+  if (anum && bnum) {
+    a = +a
+    b = +b
+  }
+
+  return a === b ? 0
+    : (anum && !bnum) ? -1
+    : (bnum && !anum) ? 1
+    : a < b ? -1
+    : 1
+}
+
+const rcompareIdentifiers = (a, b) => compareIdentifiers(b, a)
+
+module.exports = {
+  compareIdentifiers,
+  rcompareIdentifiers
+}
+
+
+/***/ }),
+
+/***/ 785:
+/***/ ((module) => {
+
+// parse out just the options we care about so we always get a consistent
+// obj with keys in a consistent order.
+const opts = ['includePrerelease', 'loose', 'rtl']
+const parseOptions = options =>
+  !options ? {}
+  : typeof options !== 'object' ? { loose: true }
+  : opts.filter(k => options[k]).reduce((options, k) => {
+    options[k] = true
+    return options
+  }, {})
+module.exports = parseOptions
+
+
+/***/ }),
+
+/***/ 9523:
+/***/ ((module, exports, __nccwpck_require__) => {
+
+const { MAX_SAFE_COMPONENT_LENGTH } = __nccwpck_require__(2293)
+const debug = __nccwpck_require__(427)
+exports = module.exports = {}
+
+// The actual regexps go on exports.re
+const re = exports.re = []
+const src = exports.src = []
+const t = exports.t = {}
+let R = 0
+
+const createToken = (name, value, isGlobal) => {
+  const index = R++
+  debug(index, value)
+  t[name] = index
+  src[index] = value
+  re[index] = new RegExp(value, isGlobal ? 'g' : undefined)
+}
+
+// The following Regular Expressions can be used for tokenizing,
+// validating, and parsing SemVer version strings.
+
+// ## Numeric Identifier
+// A single `0`, or a non-zero digit followed by zero or more digits.
+
+createToken('NUMERICIDENTIFIER', '0|[1-9]\\d*')
+createToken('NUMERICIDENTIFIERLOOSE', '[0-9]+')
+
+// ## Non-numeric Identifier
+// Zero or more digits, followed by a letter or hyphen, and then zero or
+// more letters, digits, or hyphens.
+
+createToken('NONNUMERICIDENTIFIER', '\\d*[a-zA-Z-][a-zA-Z0-9-]*')
+
+// ## Main Version
+// Three dot-separated numeric identifiers.
+
+createToken('MAINVERSION', `(${src[t.NUMERICIDENTIFIER]})\\.` +
+                   `(${src[t.NUMERICIDENTIFIER]})\\.` +
+                   `(${src[t.NUMERICIDENTIFIER]})`)
+
+createToken('MAINVERSIONLOOSE', `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
+                        `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
+                        `(${src[t.NUMERICIDENTIFIERLOOSE]})`)
+
+// ## Pre-release Version Identifier
+// A numeric identifier, or a non-numeric identifier.
+
+createToken('PRERELEASEIDENTIFIER', `(?:${src[t.NUMERICIDENTIFIER]
+}|${src[t.NONNUMERICIDENTIFIER]})`)
+
+createToken('PRERELEASEIDENTIFIERLOOSE', `(?:${src[t.NUMERICIDENTIFIERLOOSE]
+}|${src[t.NONNUMERICIDENTIFIER]})`)
+
+// ## Pre-release Version
+// Hyphen, followed by one or more dot-separated pre-release version
+// identifiers.
+
+createToken('PRERELEASE', `(?:-(${src[t.PRERELEASEIDENTIFIER]
+}(?:\\.${src[t.PRERELEASEIDENTIFIER]})*))`)
+
+createToken('PRERELEASELOOSE', `(?:-?(${src[t.PRERELEASEIDENTIFIERLOOSE]
+}(?:\\.${src[t.PRERELEASEIDENTIFIERLOOSE]})*))`)
+
+// ## Build Metadata Identifier
+// Any combination of digits, letters, or hyphens.
+
+createToken('BUILDIDENTIFIER', '[0-9A-Za-z-]+')
+
+// ## Build Metadata
+// Plus sign, followed by one or more period-separated build metadata
+// identifiers.
+
+createToken('BUILD', `(?:\\+(${src[t.BUILDIDENTIFIER]
+}(?:\\.${src[t.BUILDIDENTIFIER]})*))`)
+
+// ## Full Version String
+// A main version, followed optionally by a pre-release version and
+// build metadata.
+
+// Note that the only major, minor, patch, and pre-release sections of
+// the version string are capturing groups.  The build metadata is not a
+// capturing group, because it should not ever be used in version
+// comparison.
+
+createToken('FULLPLAIN', `v?${src[t.MAINVERSION]
+}${src[t.PRERELEASE]}?${
+  src[t.BUILD]}?`)
+
+createToken('FULL', `^${src[t.FULLPLAIN]}$`)
+
+// like full, but allows v1.2.3 and =1.2.3, which people do sometimes.
+// also, 1.0.0alpha1 (prerelease without the hyphen) which is pretty
+// common in the npm registry.
+createToken('LOOSEPLAIN', `[v=\\s]*${src[t.MAINVERSIONLOOSE]
+}${src[t.PRERELEASELOOSE]}?${
+  src[t.BUILD]}?`)
+
+createToken('LOOSE', `^${src[t.LOOSEPLAIN]}$`)
+
+createToken('GTLT', '((?:<|>)?=?)')
+
+// Something like "2.*" or "1.2.x".
+// Note that "x.x" is a valid xRange identifer, meaning "any version"
+// Only the first item is strictly required.
+createToken('XRANGEIDENTIFIERLOOSE', `${src[t.NUMERICIDENTIFIERLOOSE]}|x|X|\\*`)
+createToken('XRANGEIDENTIFIER', `${src[t.NUMERICIDENTIFIER]}|x|X|\\*`)
+
+createToken('XRANGEPLAIN', `[v=\\s]*(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:\\.(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:\\.(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:${src[t.PRERELEASE]})?${
+                     src[t.BUILD]}?` +
+                   `)?)?`)
+
+createToken('XRANGEPLAINLOOSE', `[v=\\s]*(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:\\.(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:\\.(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:${src[t.PRERELEASELOOSE]})?${
+                          src[t.BUILD]}?` +
+                        `)?)?`)
+
+createToken('XRANGE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAIN]}$`)
+createToken('XRANGELOOSE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAINLOOSE]}$`)
+
+// Coercion.
+// Extract anything that could conceivably be a part of a valid semver
+createToken('COERCE', `${'(^|[^\\d])' +
+              '(\\d{1,'}${MAX_SAFE_COMPONENT_LENGTH}})` +
+              `(?:\\.(\\d{1,${MAX_SAFE_COMPONENT_LENGTH}}))?` +
+              `(?:\\.(\\d{1,${MAX_SAFE_COMPONENT_LENGTH}}))?` +
+              `(?:$|[^\\d])`)
+createToken('COERCERTL', src[t.COERCE], true)
+
+// Tilde ranges.
+// Meaning is "reasonably at or greater than"
+createToken('LONETILDE', '(?:~>?)')
+
+createToken('TILDETRIM', `(\\s*)${src[t.LONETILDE]}\\s+`, true)
+exports.tildeTrimReplace = '$1~'
+
+createToken('TILDE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAIN]}$`)
+createToken('TILDELOOSE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAINLOOSE]}$`)
+
+// Caret ranges.
+// Meaning is "at least and backwards compatible with"
+createToken('LONECARET', '(?:\\^)')
+
+createToken('CARETTRIM', `(\\s*)${src[t.LONECARET]}\\s+`, true)
+exports.caretTrimReplace = '$1^'
+
+createToken('CARET', `^${src[t.LONECARET]}${src[t.XRANGEPLAIN]}$`)
+createToken('CARETLOOSE', `^${src[t.LONECARET]}${src[t.XRANGEPLAINLOOSE]}$`)
+
+// A simple gt/lt/eq thing, or just "" to indicate "any version"
+createToken('COMPARATORLOOSE', `^${src[t.GTLT]}\\s*(${src[t.LOOSEPLAIN]})$|^$`)
+createToken('COMPARATOR', `^${src[t.GTLT]}\\s*(${src[t.FULLPLAIN]})$|^$`)
+
+// An expression to strip any whitespace between the gtlt and the thing
+// it modifies, so that `> 1.2.3` ==> `>1.2.3`
+createToken('COMPARATORTRIM', `(\\s*)${src[t.GTLT]
+}\\s*(${src[t.LOOSEPLAIN]}|${src[t.XRANGEPLAIN]})`, true)
+exports.comparatorTrimReplace = '$1$2$3'
+
+// Something like `1.2.3 - 1.2.4`
+// Note that these all use the loose form, because they'll be
+// checked against either the strict or loose comparator form
+// later.
+createToken('HYPHENRANGE', `^\\s*(${src[t.XRANGEPLAIN]})` +
+                   `\\s+-\\s+` +
+                   `(${src[t.XRANGEPLAIN]})` +
+                   `\\s*$`)
+
+createToken('HYPHENRANGELOOSE', `^\\s*(${src[t.XRANGEPLAINLOOSE]})` +
+                        `\\s+-\\s+` +
+                        `(${src[t.XRANGEPLAINLOOSE]})` +
+                        `\\s*$`)
+
+// Star ranges basically just allow anything at all.
+createToken('STAR', '(<|>)?=?\\s*\\*')
+// >=0.0.0 is like a star
+createToken('GTE0', '^\\s*>=\\s*0\.0\.0\\s*$')
+createToken('GTE0PRE', '^\\s*>=\\s*0\.0\.0-0\\s*$')
+
+
+/***/ }),
+
+/***/ 9380:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+// Determine if version is greater than all the versions possible in the range.
+const outside = __nccwpck_require__(420)
+const gtr = (version, range, options) => outside(version, range, '>', options)
+module.exports = gtr
+
+
+/***/ }),
+
+/***/ 7008:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const Range = __nccwpck_require__(9828)
+const intersects = (r1, r2, options) => {
+  r1 = new Range(r1, options)
+  r2 = new Range(r2, options)
+  return r1.intersects(r2)
+}
+module.exports = intersects
+
+
+/***/ }),
+
+/***/ 3323:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const outside = __nccwpck_require__(420)
+// Determine if version is less than all the versions possible in the range
+const ltr = (version, range, options) => outside(version, range, '<', options)
+module.exports = ltr
+
+
+/***/ }),
+
+/***/ 579:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const Range = __nccwpck_require__(9828)
+
+const maxSatisfying = (versions, range, options) => {
+  let max = null
+  let maxSV = null
+  let rangeObj = null
+  try {
+    rangeObj = new Range(range, options)
+  } catch (er) {
+    return null
+  }
+  versions.forEach((v) => {
+    if (rangeObj.test(v)) {
+      // satisfies(v, range, options)
+      if (!max || maxSV.compare(v) === -1) {
+        // compare(max, v, true)
+        max = v
+        maxSV = new SemVer(max, options)
+      }
+    }
+  })
+  return max
+}
+module.exports = maxSatisfying
+
+
+/***/ }),
+
+/***/ 832:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const Range = __nccwpck_require__(9828)
+const minSatisfying = (versions, range, options) => {
+  let min = null
+  let minSV = null
+  let rangeObj = null
+  try {
+    rangeObj = new Range(range, options)
+  } catch (er) {
+    return null
+  }
+  versions.forEach((v) => {
+    if (rangeObj.test(v)) {
+      // satisfies(v, range, options)
+      if (!min || minSV.compare(v) === 1) {
+        // compare(min, v, true)
+        min = v
+        minSV = new SemVer(min, options)
+      }
+    }
+  })
+  return min
+}
+module.exports = minSatisfying
+
+
+/***/ }),
+
+/***/ 4179:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const Range = __nccwpck_require__(9828)
+const gt = __nccwpck_require__(4123)
+
+const minVersion = (range, loose) => {
+  range = new Range(range, loose)
+
+  let minver = new SemVer('0.0.0')
+  if (range.test(minver)) {
+    return minver
+  }
+
+  minver = new SemVer('0.0.0-0')
+  if (range.test(minver)) {
+    return minver
+  }
+
+  minver = null
+  for (let i = 0; i < range.set.length; ++i) {
+    const comparators = range.set[i]
+
+    let setMin = null
+    comparators.forEach((comparator) => {
+      // Clone to avoid manipulating the comparator's semver object.
+      const compver = new SemVer(comparator.semver.version)
+      switch (comparator.operator) {
+        case '>':
+          if (compver.prerelease.length === 0) {
+            compver.patch++
+          } else {
+            compver.prerelease.push(0)
+          }
+          compver.raw = compver.format()
+          /* fallthrough */
+        case '':
+        case '>=':
+          if (!setMin || gt(compver, setMin)) {
+            setMin = compver
+          }
+          break
+        case '<':
+        case '<=':
+          /* Ignore maximum versions */
+          break
+        /* istanbul ignore next */
+        default:
+          throw new Error(`Unexpected operation: ${comparator.operator}`)
+      }
+    })
+    if (setMin && (!minver || gt(minver, setMin)))
+      minver = setMin
+  }
+
+  if (minver && range.test(minver)) {
+    return minver
+  }
+
+  return null
+}
+module.exports = minVersion
+
+
+/***/ }),
+
+/***/ 420:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const SemVer = __nccwpck_require__(8088)
+const Comparator = __nccwpck_require__(1532)
+const {ANY} = Comparator
+const Range = __nccwpck_require__(9828)
+const satisfies = __nccwpck_require__(6055)
+const gt = __nccwpck_require__(4123)
+const lt = __nccwpck_require__(194)
+const lte = __nccwpck_require__(7520)
+const gte = __nccwpck_require__(5522)
+
+const outside = (version, range, hilo, options) => {
+  version = new SemVer(version, options)
+  range = new Range(range, options)
+
+  let gtfn, ltefn, ltfn, comp, ecomp
+  switch (hilo) {
+    case '>':
+      gtfn = gt
+      ltefn = lte
+      ltfn = lt
+      comp = '>'
+      ecomp = '>='
+      break
+    case '<':
+      gtfn = lt
+      ltefn = gte
+      ltfn = gt
+      comp = '<'
+      ecomp = '<='
+      break
+    default:
+      throw new TypeError('Must provide a hilo val of "<" or ">"')
+  }
+
+  // If it satisfies the range it is not outside
+  if (satisfies(version, range, options)) {
+    return false
+  }
+
+  // From now on, variable terms are as if we're in "gtr" mode.
+  // but note that everything is flipped for the "ltr" function.
+
+  for (let i = 0; i < range.set.length; ++i) {
+    const comparators = range.set[i]
+
+    let high = null
+    let low = null
+
+    comparators.forEach((comparator) => {
+      if (comparator.semver === ANY) {
+        comparator = new Comparator('>=0.0.0')
+      }
+      high = high || comparator
+      low = low || comparator
+      if (gtfn(comparator.semver, high.semver, options)) {
+        high = comparator
+      } else if (ltfn(comparator.semver, low.semver, options)) {
+        low = comparator
+      }
+    })
+
+    // If the edge version comparator has a operator then our version
+    // isn't outside it
+    if (high.operator === comp || high.operator === ecomp) {
+      return false
+    }
+
+    // If the lowest version comparator has an operator and our version
+    // is less than it then it isn't higher than the range
+    if ((!low.operator || low.operator === comp) &&
+        ltefn(version, low.semver)) {
+      return false
+    } else if (low.operator === ecomp && ltfn(version, low.semver)) {
+      return false
+    }
+  }
+  return true
+}
+
+module.exports = outside
+
+
+/***/ }),
+
+/***/ 5297:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+// given a set of versions and a range, create a "simplified" range
+// that includes the same versions that the original range does
+// If the original range is shorter than the simplified one, return that.
+const satisfies = __nccwpck_require__(6055)
+const compare = __nccwpck_require__(4309)
+module.exports = (versions, range, options) => {
+  const set = []
+  let min = null
+  let prev = null
+  const v = versions.sort((a, b) => compare(a, b, options))
+  for (const version of v) {
+    const included = satisfies(version, range, options)
+    if (included) {
+      prev = version
+      if (!min)
+        min = version
+    } else {
+      if (prev) {
+        set.push([min, prev])
+      }
+      prev = null
+      min = null
+    }
+  }
+  if (min)
+    set.push([min, null])
+
+  const ranges = []
+  for (const [min, max] of set) {
+    if (min === max)
+      ranges.push(min)
+    else if (!max && min === v[0])
+      ranges.push('*')
+    else if (!max)
+      ranges.push(`>=${min}`)
+    else if (min === v[0])
+      ranges.push(`<=${max}`)
+    else
+      ranges.push(`${min} - ${max}`)
+  }
+  const simplified = ranges.join(' || ')
+  const original = typeof range.raw === 'string' ? range.raw : String(range)
+  return simplified.length < original.length ? simplified : range
+}
+
+
+/***/ }),
+
+/***/ 7863:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const Range = __nccwpck_require__(9828)
+const Comparator = __nccwpck_require__(1532)
+const { ANY } = Comparator
+const satisfies = __nccwpck_require__(6055)
+const compare = __nccwpck_require__(4309)
+
+// Complex range `r1 || r2 || ...` is a subset of `R1 || R2 || ...` iff:
+// - Every simple range `r1, r2, ...` is a null set, OR
+// - Every simple range `r1, r2, ...` which is not a null set is a subset of
+//   some `R1, R2, ...`
+//
+// Simple range `c1 c2 ...` is a subset of simple range `C1 C2 ...` iff:
+// - If c is only the ANY comparator
+//   - If C is only the ANY comparator, return true
+//   - Else if in prerelease mode, return false
+//   - else replace c with `[>=0.0.0]`
+// - If C is only the ANY comparator
+//   - if in prerelease mode, return true
+//   - else replace C with `[>=0.0.0]`
+// - Let EQ be the set of = comparators in c
+// - If EQ is more than one, return true (null set)
+// - Let GT be the highest > or >= comparator in c
+// - Let LT be the lowest < or <= comparator in c
+// - If GT and LT, and GT.semver > LT.semver, return true (null set)
+// - If any C is a = range, and GT or LT are set, return false
+// - If EQ
+//   - If GT, and EQ does not satisfy GT, return true (null set)
+//   - If LT, and EQ does not satisfy LT, return true (null set)
+//   - If EQ satisfies every C, return true
+//   - Else return false
+// - If GT
+//   - If GT.semver is lower than any > or >= comp in C, return false
+//   - If GT is >=, and GT.semver does not satisfy every C, return false
+//   - If GT.semver has a prerelease, and not in prerelease mode
+//     - If no C has a prerelease and the GT.semver tuple, return false
+// - If LT
+//   - If LT.semver is greater than any < or <= comp in C, return false
+//   - If LT is <=, and LT.semver does not satisfy every C, return false
+//   - If GT.semver has a prerelease, and not in prerelease mode
+//     - If no C has a prerelease and the LT.semver tuple, return false
+// - Else return true
+
+const subset = (sub, dom, options = {}) => {
+  if (sub === dom)
+    return true
+
+  sub = new Range(sub, options)
+  dom = new Range(dom, options)
+  let sawNonNull = false
+
+  OUTER: for (const simpleSub of sub.set) {
+    for (const simpleDom of dom.set) {
+      const isSub = simpleSubset(simpleSub, simpleDom, options)
+      sawNonNull = sawNonNull || isSub !== null
+      if (isSub)
+        continue OUTER
+    }
+    // the null set is a subset of everything, but null simple ranges in
+    // a complex range should be ignored.  so if we saw a non-null range,
+    // then we know this isn't a subset, but if EVERY simple range was null,
+    // then it is a subset.
+    if (sawNonNull)
+      return false
+  }
+  return true
+}
+
+const simpleSubset = (sub, dom, options) => {
+  if (sub === dom)
+    return true
+
+  if (sub.length === 1 && sub[0].semver === ANY) {
+    if (dom.length === 1 && dom[0].semver === ANY)
+      return true
+    else if (options.includePrerelease)
+      sub = [ new Comparator('>=0.0.0-0') ]
+    else
+      sub = [ new Comparator('>=0.0.0') ]
+  }
+
+  if (dom.length === 1 && dom[0].semver === ANY) {
+    if (options.includePrerelease)
+      return true
+    else
+      dom = [ new Comparator('>=0.0.0') ]
+  }
+
+  const eqSet = new Set()
+  let gt, lt
+  for (const c of sub) {
+    if (c.operator === '>' || c.operator === '>=')
+      gt = higherGT(gt, c, options)
+    else if (c.operator === '<' || c.operator === '<=')
+      lt = lowerLT(lt, c, options)
+    else
+      eqSet.add(c.semver)
+  }
+
+  if (eqSet.size > 1)
+    return null
+
+  let gtltComp
+  if (gt && lt) {
+    gtltComp = compare(gt.semver, lt.semver, options)
+    if (gtltComp > 0)
+      return null
+    else if (gtltComp === 0 && (gt.operator !== '>=' || lt.operator !== '<='))
+      return null
+  }
+
+  // will iterate one or zero times
+  for (const eq of eqSet) {
+    if (gt && !satisfies(eq, String(gt), options))
+      return null
+
+    if (lt && !satisfies(eq, String(lt), options))
+      return null
+
+    for (const c of dom) {
+      if (!satisfies(eq, String(c), options))
+        return false
+    }
+
+    return true
+  }
+
+  let higher, lower
+  let hasDomLT, hasDomGT
+  // if the subset has a prerelease, we need a comparator in the superset
+  // with the same tuple and a prerelease, or it's not a subset
+  let needDomLTPre = lt &&
+    !options.includePrerelease &&
+    lt.semver.prerelease.length ? lt.semver : false
+  let needDomGTPre = gt &&
+    !options.includePrerelease &&
+    gt.semver.prerelease.length ? gt.semver : false
+  // exception: <1.2.3-0 is the same as <1.2.3
+  if (needDomLTPre && needDomLTPre.prerelease.length === 1 &&
+      lt.operator === '<' && needDomLTPre.prerelease[0] === 0) {
+    needDomLTPre = false
+  }
+
+  for (const c of dom) {
+    hasDomGT = hasDomGT || c.operator === '>' || c.operator === '>='
+    hasDomLT = hasDomLT || c.operator === '<' || c.operator === '<='
+    if (gt) {
+      if (needDomGTPre) {
+        if (c.semver.prerelease && c.semver.prerelease.length &&
+            c.semver.major === needDomGTPre.major &&
+            c.semver.minor === needDomGTPre.minor &&
+            c.semver.patch === needDomGTPre.patch) {
+          needDomGTPre = false
+        }
+      }
+      if (c.operator === '>' || c.operator === '>=') {
+        higher = higherGT(gt, c, options)
+        if (higher === c && higher !== gt)
+          return false
+      } else if (gt.operator === '>=' && !satisfies(gt.semver, String(c), options))
+        return false
+    }
+    if (lt) {
+      if (needDomLTPre) {
+        if (c.semver.prerelease && c.semver.prerelease.length &&
+            c.semver.major === needDomLTPre.major &&
+            c.semver.minor === needDomLTPre.minor &&
+            c.semver.patch === needDomLTPre.patch) {
+          needDomLTPre = false
+        }
+      }
+      if (c.operator === '<' || c.operator === '<=') {
+        lower = lowerLT(lt, c, options)
+        if (lower === c && lower !== lt)
+          return false
+      } else if (lt.operator === '<=' && !satisfies(lt.semver, String(c), options))
+        return false
+    }
+    if (!c.operator && (lt || gt) && gtltComp !== 0)
+      return false
+  }
+
+  // if there was a < or >, and nothing in the dom, then must be false
+  // UNLESS it was limited by another range in the other direction.
+  // Eg, >1.0.0 <1.0.1 is still a subset of <2.0.0
+  if (gt && hasDomLT && !lt && gtltComp !== 0)
+    return false
+
+  if (lt && hasDomGT && !gt && gtltComp !== 0)
+    return false
+
+  // we needed a prerelease range in a specific tuple, but didn't get one
+  // then this isn't a subset.  eg >=1.2.3-pre is not a subset of >=1.0.0,
+  // because it includes prereleases in the 1.2.3 tuple
+  if (needDomGTPre || needDomLTPre)
+    return false
+
+  return true
+}
+
+// >=1.2.3 is lower than >1.2.3
+const higherGT = (a, b, options) => {
+  if (!a)
+    return b
+  const comp = compare(a.semver, b.semver, options)
+  return comp > 0 ? a
+    : comp < 0 ? b
+    : b.operator === '>' && a.operator === '>=' ? b
+    : a
+}
+
+// <=1.2.3 is higher than <1.2.3
+const lowerLT = (a, b, options) => {
+  if (!a)
+    return b
+  const comp = compare(a.semver, b.semver, options)
+  return comp < 0 ? a
+    : comp > 0 ? b
+    : b.operator === '<' && a.operator === '<=' ? b
+    : a
+}
+
+module.exports = subset
+
+
+/***/ }),
+
+/***/ 2706:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const Range = __nccwpck_require__(9828)
+
+// Mostly just for testing and legacy API reasons
+const toComparators = (range, options) =>
+  new Range(range, options).set
+    .map(comp => comp.map(c => c.value).join(' ').trim().split(' '))
+
+module.exports = toComparators
+
+
+/***/ }),
+
+/***/ 2098:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const Range = __nccwpck_require__(9828)
+const validRange = (range, options) => {
+  try {
+    // Return '*' instead of '' so that truthiness works.
+    // This will throw if it's invalid anyway
+    return new Range(range, options).range || '*'
+  } catch (er) {
+    return null
+  }
+}
+module.exports = validRange
+
+
+/***/ }),
+
+/***/ 8517:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+/*!
+ * Tmp
+ *
+ * Copyright (c) 2011-2017 KARASZI Istvan <github@spam.raszi.hu>
+ *
+ * MIT Licensed
+ */
+
+/*
+ * Module dependencies.
+ */
+const fs = __nccwpck_require__(5747);
+const os = __nccwpck_require__(2087);
+const path = __nccwpck_require__(5622);
+const crypto = __nccwpck_require__(3373);
+const _c = { fs: fs.constants, os: os.constants };
+const rimraf = __nccwpck_require__(4959);
+
+/*
+ * The working inner variables.
+ */
+const
+  // the random characters to choose from
+  RANDOM_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+
+  TEMPLATE_PATTERN = /XXXXXX/,
+
+  DEFAULT_TRIES = 3,
+
+  CREATE_FLAGS = (_c.O_CREAT || _c.fs.O_CREAT) | (_c.O_EXCL || _c.fs.O_EXCL) | (_c.O_RDWR || _c.fs.O_RDWR),
+
+  // constants are off on the windows platform and will not match the actual errno codes
+  IS_WIN32 = os.platform() === 'win32',
+  EBADF = _c.EBADF || _c.os.errno.EBADF,
+  ENOENT = _c.ENOENT || _c.os.errno.ENOENT,
+
+  DIR_MODE = 0o700 /* 448 */,
+  FILE_MODE = 0o600 /* 384 */,
+
+  EXIT = 'exit',
+
+  // this will hold the objects need to be removed on exit
+  _removeObjects = [],
+
+  // API change in fs.rmdirSync leads to error when passing in a second parameter, e.g. the callback
+  FN_RMDIR_SYNC = fs.rmdirSync.bind(fs),
+  FN_RIMRAF_SYNC = rimraf.sync;
+
+let
+  _gracefulCleanup = false;
+
+/**
+ * Gets a temporary file name.
+ *
+ * @param {(Options|tmpNameCallback)} options options or callback
+ * @param {?tmpNameCallback} callback the callback function
+ */
+function tmpName(options, callback) {
+  const
+    args = _parseArguments(options, callback),
+    opts = args[0],
+    cb = args[1];
+
+  try {
+    _assertAndSanitizeOptions(opts);
+  } catch (err) {
+    return cb(err);
+  }
+
+  let tries = opts.tries;
+  (function _getUniqueName() {
+    try {
+      const name = _generateTmpName(opts);
+
+      // check whether the path exists then retry if needed
+      fs.stat(name, function (err) {
+        /* istanbul ignore else */
+        if (!err) {
+          /* istanbul ignore else */
+          if (tries-- > 0) return _getUniqueName();
+
+          return cb(new Error('Could not get a unique tmp filename, max tries reached ' + name));
+        }
+
+        cb(null, name);
+      });
+    } catch (err) {
+      cb(err);
+    }
+  }());
+}
+
+/**
+ * Synchronous version of tmpName.
+ *
+ * @param {Object} options
+ * @returns {string} the generated random name
+ * @throws {Error} if the options are invalid or could not generate a filename
+ */
+function tmpNameSync(options) {
+  const
+    args = _parseArguments(options),
+    opts = args[0];
+
+  _assertAndSanitizeOptions(opts);
+
+  let tries = opts.tries;
+  do {
+    const name = _generateTmpName(opts);
+    try {
+      fs.statSync(name);
+    } catch (e) {
+      return name;
+    }
+  } while (tries-- > 0);
+
+  throw new Error('Could not get a unique tmp filename, max tries reached');
+}
+
+/**
+ * Creates and opens a temporary file.
+ *
+ * @param {(Options|null|undefined|fileCallback)} options the config options or the callback function or null or undefined
+ * @param {?fileCallback} callback
+ */
+function file(options, callback) {
+  const
+    args = _parseArguments(options, callback),
+    opts = args[0],
+    cb = args[1];
+
+  // gets a temporary filename
+  tmpName(opts, function _tmpNameCreated(err, name) {
+    /* istanbul ignore else */
+    if (err) return cb(err);
+
+    // create and open the file
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err, fd) {
+      /* istanbu ignore else */
+      if (err) return cb(err);
+
+      if (opts.discardDescriptor) {
+        return fs.close(fd, function _discardCallback(possibleErr) {
+          // the chance of getting an error on close here is rather low and might occur in the most edgiest cases only
+          return cb(possibleErr, name, undefined, _prepareTmpFileRemoveCallback(name, -1, opts, false));
+        });
+      } else {
+        // detachDescriptor passes the descriptor whereas discardDescriptor closes it, either way, we no longer care
+        // about the descriptor
+        const discardOrDetachDescriptor = opts.discardDescriptor || opts.detachDescriptor;
+        cb(null, name, fd, _prepareTmpFileRemoveCallback(name, discardOrDetachDescriptor ? -1 : fd, opts, false));
+      }
+    });
+  });
+}
+
+/**
+ * Synchronous version of file.
+ *
+ * @param {Options} options
+ * @returns {FileSyncObject} object consists of name, fd and removeCallback
+ * @throws {Error} if cannot create a file
+ */
+function fileSync(options) {
+  const
+    args = _parseArguments(options),
+    opts = args[0];
+
+  const discardOrDetachDescriptor = opts.discardDescriptor || opts.detachDescriptor;
+  const name = tmpNameSync(opts);
+  var fd = fs.openSync(name, CREATE_FLAGS, opts.mode || FILE_MODE);
+  /* istanbul ignore else */
+  if (opts.discardDescriptor) {
+    fs.closeSync(fd);
+    fd = undefined;
+  }
+
+  return {
+    name: name,
+    fd: fd,
+    removeCallback: _prepareTmpFileRemoveCallback(name, discardOrDetachDescriptor ? -1 : fd, opts, true)
+  };
+}
+
+/**
+ * Creates a temporary directory.
+ *
+ * @param {(Options|dirCallback)} options the options or the callback function
+ * @param {?dirCallback} callback
+ */
+function dir(options, callback) {
+  const
+    args = _parseArguments(options, callback),
+    opts = args[0],
+    cb = args[1];
+
+  // gets a temporary filename
+  tmpName(opts, function _tmpNameCreated(err, name) {
+    /* istanbul ignore else */
+    if (err) return cb(err);
+
+    // create the directory
+    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err) {
+      /* istanbul ignore else */
+      if (err) return cb(err);
+
+      cb(null, name, _prepareTmpDirRemoveCallback(name, opts, false));
+    });
+  });
+}
+
+/**
+ * Synchronous version of dir.
+ *
+ * @param {Options} options
+ * @returns {DirSyncObject} object consists of name and removeCallback
+ * @throws {Error} if it cannot create a directory
+ */
+function dirSync(options) {
+  const
+    args = _parseArguments(options),
+    opts = args[0];
+
+  const name = tmpNameSync(opts);
+  fs.mkdirSync(name, opts.mode || DIR_MODE);
+
+  return {
+    name: name,
+    removeCallback: _prepareTmpDirRemoveCallback(name, opts, true)
+  };
+}
+
+/**
+ * Removes files asynchronously.
+ *
+ * @param {Object} fdPath
+ * @param {Function} next
+ * @private
+ */
+function _removeFileAsync(fdPath, next) {
+  const _handler = function (err) {
+    if (err && !_isENOENT(err)) {
+      // reraise any unanticipated error
+      return next(err);
+    }
+    next();
+  };
+
+  if (0 <= fdPath[0])
+    fs.close(fdPath[0], function () {
+      fs.unlink(fdPath[1], _handler);
+    });
+  else fs.unlink(fdPath[1], _handler);
+}
+
+/**
+ * Removes files synchronously.
+ *
+ * @param {Object} fdPath
+ * @private
+ */
+function _removeFileSync(fdPath) {
+  let rethrownException = null;
+  try {
+    if (0 <= fdPath[0]) fs.closeSync(fdPath[0]);
+  } catch (e) {
+    // reraise any unanticipated error
+    if (!_isEBADF(e) && !_isENOENT(e)) throw e;
+  } finally {
+    try {
+      fs.unlinkSync(fdPath[1]);
+    }
+    catch (e) {
+      // reraise any unanticipated error
+      if (!_isENOENT(e)) rethrownException = e;
+    }
+  }
+  if (rethrownException !== null) {
+    throw rethrownException;
+  }
+}
+
+/**
+ * Prepares the callback for removal of the temporary file.
+ *
+ * Returns either a sync callback or a async callback depending on whether
+ * fileSync or file was called, which is expressed by the sync parameter.
+ *
+ * @param {string} name the path of the file
+ * @param {number} fd file descriptor
+ * @param {Object} opts
+ * @param {boolean} sync
+ * @returns {fileCallback | fileCallbackSync}
+ * @private
+ */
+function _prepareTmpFileRemoveCallback(name, fd, opts, sync) {
+  const removeCallbackSync = _prepareRemoveCallback(_removeFileSync, [fd, name], sync);
+  const removeCallback = _prepareRemoveCallback(_removeFileAsync, [fd, name], sync, removeCallbackSync);
+
+  if (!opts.keep) _removeObjects.unshift(removeCallbackSync);
+
+  return sync ? removeCallbackSync : removeCallback;
+}
+
+/**
+ * Prepares the callback for removal of the temporary directory.
+ *
+ * Returns either a sync callback or a async callback depending on whether
+ * tmpFileSync or tmpFile was called, which is expressed by the sync parameter.
+ *
+ * @param {string} name
+ * @param {Object} opts
+ * @param {boolean} sync
+ * @returns {Function} the callback
+ * @private
+ */
+function _prepareTmpDirRemoveCallback(name, opts, sync) {
+  const removeFunction = opts.unsafeCleanup ? rimraf : fs.rmdir.bind(fs);
+  const removeFunctionSync = opts.unsafeCleanup ? FN_RIMRAF_SYNC : FN_RMDIR_SYNC;
+  const removeCallbackSync = _prepareRemoveCallback(removeFunctionSync, name, sync);
+  const removeCallback = _prepareRemoveCallback(removeFunction, name, sync, removeCallbackSync);
+  if (!opts.keep) _removeObjects.unshift(removeCallbackSync);
+
+  return sync ? removeCallbackSync : removeCallback;
+}
+
+/**
+ * Creates a guarded function wrapping the removeFunction call.
+ *
+ * The cleanup callback is save to be called multiple times.
+ * Subsequent invocations will be ignored.
+ *
+ * @param {Function} removeFunction
+ * @param {string} fileOrDirName
+ * @param {boolean} sync
+ * @param {cleanupCallbackSync?} cleanupCallbackSync
+ * @returns {cleanupCallback | cleanupCallbackSync}
+ * @private
+ */
+function _prepareRemoveCallback(removeFunction, fileOrDirName, sync, cleanupCallbackSync) {
+  let called = false;
+
+  // if sync is true, the next parameter will be ignored
+  return function _cleanupCallback(next) {
+
+    /* istanbul ignore else */
+    if (!called) {
+      // remove cleanupCallback from cache
+      const toRemove = cleanupCallbackSync || _cleanupCallback;
+      const index = _removeObjects.indexOf(toRemove);
+      /* istanbul ignore else */
+      if (index >= 0) _removeObjects.splice(index, 1);
+
+      called = true;
+      if (sync || removeFunction === FN_RMDIR_SYNC || removeFunction === FN_RIMRAF_SYNC) {
+        return removeFunction(fileOrDirName);
+      } else {
+        return removeFunction(fileOrDirName, next || function() {});
+      }
+    }
+  };
+}
+
+/**
+ * The garbage collector.
+ *
+ * @private
+ */
+function _garbageCollector() {
+  /* istanbul ignore else */
+  if (!_gracefulCleanup) return;
+
+  // the function being called removes itself from _removeObjects,
+  // loop until _removeObjects is empty
+  while (_removeObjects.length) {
+    try {
+      _removeObjects[0]();
+    } catch (e) {
+      // already removed?
+    }
+  }
+}
+
+/**
+ * Random name generator based on crypto.
+ * Adapted from http://blog.tompawlak.org/how-to-generate-random-values-nodejs-javascript
+ *
+ * @param {number} howMany
+ * @returns {string} the generated random name
+ * @private
+ */
+function _randomChars(howMany) {
+  let
+    value = [],
+    rnd = null;
+
+  // make sure that we do not fail because we ran out of entropy
+  try {
+    rnd = crypto.randomBytes(howMany);
+  } catch (e) {
+    rnd = crypto.pseudoRandomBytes(howMany);
+  }
+
+  for (var i = 0; i < howMany; i++) {
+    value.push(RANDOM_CHARS[rnd[i] % RANDOM_CHARS.length]);
+  }
+
+  return value.join('');
+}
+
+/**
+ * Helper which determines whether a string s is blank, that is undefined, or empty or null.
+ *
+ * @private
+ * @param {string} s
+ * @returns {Boolean} true whether the string s is blank, false otherwise
+ */
+function _isBlank(s) {
+  return s === null || _isUndefined(s) || !s.trim();
+}
+
+/**
+ * Checks whether the `obj` parameter is defined or not.
+ *
+ * @param {Object} obj
+ * @returns {boolean} true if the object is undefined
+ * @private
+ */
+function _isUndefined(obj) {
+  return typeof obj === 'undefined';
+}
+
+/**
+ * Parses the function arguments.
+ *
+ * This function helps to have optional arguments.
+ *
+ * @param {(Options|null|undefined|Function)} options
+ * @param {?Function} callback
+ * @returns {Array} parsed arguments
+ * @private
+ */
+function _parseArguments(options, callback) {
+  /* istanbul ignore else */
+  if (typeof options === 'function') {
+    return [{}, options];
+  }
+
+  /* istanbul ignore else */
+  if (_isUndefined(options)) {
+    return [{}, callback];
+  }
+
+  // copy options so we do not leak the changes we make internally
+  const actualOptions = {};
+  for (const key of Object.getOwnPropertyNames(options)) {
+    actualOptions[key] = options[key];
+  }
+
+  return [actualOptions, callback];
+}
+
+/**
+ * Generates a new temporary name.
+ *
+ * @param {Object} opts
+ * @returns {string} the new random name according to opts
+ * @private
+ */
+function _generateTmpName(opts) {
+
+  const tmpDir = opts.tmpdir;
+
+  /* istanbul ignore else */
+  if (!_isUndefined(opts.name))
+    return path.join(tmpDir, opts.dir, opts.name);
+
+  /* istanbul ignore else */
+  if (!_isUndefined(opts.template))
+    return path.join(tmpDir, opts.dir, opts.template).replace(TEMPLATE_PATTERN, _randomChars(6));
+
+  // prefix and postfix
+  const name = [
+    opts.prefix ? opts.prefix : 'tmp',
+    '-',
+    process.pid,
+    '-',
+    _randomChars(12),
+    opts.postfix ? '-' + opts.postfix : ''
+  ].join('');
+
+  return path.join(tmpDir, opts.dir, name);
+}
+
+/**
+ * Asserts whether the specified options are valid, also sanitizes options and provides sane defaults for missing
+ * options.
+ *
+ * @param {Options} options
+ * @private
+ */
+function _assertAndSanitizeOptions(options) {
+
+  options.tmpdir = _getTmpDir(options);
+
+  const tmpDir = options.tmpdir;
+
+  /* istanbul ignore else */
+  if (!_isUndefined(options.name))
+    _assertIsRelative(options.name, 'name', tmpDir);
+  /* istanbul ignore else */
+  if (!_isUndefined(options.dir))
+    _assertIsRelative(options.dir, 'dir', tmpDir);
+  /* istanbul ignore else */
+  if (!_isUndefined(options.template)) {
+    _assertIsRelative(options.template, 'template', tmpDir);
+    if (!options.template.match(TEMPLATE_PATTERN))
+      throw new Error(`Invalid template, found "${options.template}".`);
+  }
+  /* istanbul ignore else */
+  if (!_isUndefined(options.tries) && isNaN(options.tries) || options.tries < 0)
+    throw new Error(`Invalid tries, found "${options.tries}".`);
+
+  // if a name was specified we will try once
+  options.tries = _isUndefined(options.name) ? options.tries || DEFAULT_TRIES : 1;
+  options.keep = !!options.keep;
+  options.detachDescriptor = !!options.detachDescriptor;
+  options.discardDescriptor = !!options.discardDescriptor;
+  options.unsafeCleanup = !!options.unsafeCleanup;
+
+  // sanitize dir, also keep (multiple) blanks if the user, purportedly sane, requests us to
+  options.dir = _isUndefined(options.dir) ? '' : path.relative(tmpDir, _resolvePath(options.dir, tmpDir));
+  options.template = _isUndefined(options.template) ? undefined : path.relative(tmpDir, _resolvePath(options.template, tmpDir));
+  // sanitize further if template is relative to options.dir
+  options.template = _isBlank(options.template) ? undefined : path.relative(options.dir, options.template);
+
+  // for completeness' sake only, also keep (multiple) blanks if the user, purportedly sane, requests us to
+  options.name = _isUndefined(options.name) ? undefined : _sanitizeName(options.name);
+  options.prefix = _isUndefined(options.prefix) ? '' : options.prefix;
+  options.postfix = _isUndefined(options.postfix) ? '' : options.postfix;
+}
+
+/**
+ * Resolve the specified path name in respect to tmpDir.
+ *
+ * The specified name might include relative path components, e.g. ../
+ * so we need to resolve in order to be sure that is is located inside tmpDir
+ *
+ * @param name
+ * @param tmpDir
+ * @returns {string}
+ * @private
+ */
+function _resolvePath(name, tmpDir) {
+  const sanitizedName = _sanitizeName(name);
+  if (sanitizedName.startsWith(tmpDir)) {
+    return path.resolve(sanitizedName);
+  } else {
+    return path.resolve(path.join(tmpDir, sanitizedName));
+  }
+}
+
+/**
+ * Sanitize the specified path name by removing all quote characters.
+ *
+ * @param name
+ * @returns {string}
+ * @private
+ */
+function _sanitizeName(name) {
+  if (_isBlank(name)) {
+    return name;
+  }
+  return name.replace(/["']/g, '');
+}
+
+/**
+ * Asserts whether specified name is relative to the specified tmpDir.
+ *
+ * @param {string} name
+ * @param {string} option
+ * @param {string} tmpDir
+ * @throws {Error}
+ * @private
+ */
+function _assertIsRelative(name, option, tmpDir) {
+  if (option === 'name') {
+    // assert that name is not absolute and does not contain a path
+    if (path.isAbsolute(name))
+      throw new Error(`${option} option must not contain an absolute path, found "${name}".`);
+    // must not fail on valid .<name> or ..<name> or similar such constructs
+    let basename = path.basename(name);
+    if (basename === '..' || basename === '.' || basename !== name)
+      throw new Error(`${option} option must not contain a path, found "${name}".`);
+  }
+  else { // if (option === 'dir' || option === 'template') {
+    // assert that dir or template are relative to tmpDir
+    if (path.isAbsolute(name) && !name.startsWith(tmpDir)) {
+      throw new Error(`${option} option must be relative to "${tmpDir}", found "${name}".`);
+    }
+    let resolvedPath = _resolvePath(name, tmpDir);
+    if (!resolvedPath.startsWith(tmpDir))
+      throw new Error(`${option} option must be relative to "${tmpDir}", found "${resolvedPath}".`);
+  }
+}
+
+/**
+ * Helper for testing against EBADF to compensate changes made to Node 7.x under Windows.
+ *
+ * @private
+ */
+function _isEBADF(error) {
+  return _isExpectedError(error, -EBADF, 'EBADF');
+}
+
+/**
+ * Helper for testing against ENOENT to compensate changes made to Node 7.x under Windows.
+ *
+ * @private
+ */
+function _isENOENT(error) {
+  return _isExpectedError(error, -ENOENT, 'ENOENT');
+}
+
+/**
+ * Helper to determine whether the expected error code matches the actual code and errno,
+ * which will differ between the supported node versions.
+ *
+ * - Node >= 7.0:
+ *   error.code {string}
+ *   error.errno {number} any numerical value will be negated
+ *
+ * CAVEAT
+ *
+ * On windows, the errno for EBADF is -4083 but os.constants.errno.EBADF is different and we must assume that ENOENT
+ * is no different here.
+ *
+ * @param {SystemError} error
+ * @param {number} errno
+ * @param {string} code
+ * @private
+ */
+function _isExpectedError(error, errno, code) {
+  return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
+}
+
+/**
+ * Sets the graceful cleanup.
+ *
+ * If graceful cleanup is set, tmp will remove all controlled temporary objects on process exit, otherwise the
+ * temporary objects will remain in place, waiting to be cleaned up on system restart or otherwise scheduled temporary
+ * object removals.
+ */
+function setGracefulCleanup() {
+  _gracefulCleanup = true;
+}
+
+/**
+ * Returns the currently configured tmp dir from os.tmpdir().
+ *
+ * @private
+ * @param {?Options} options
+ * @returns {string} the currently configured tmp dir
+ */
+function _getTmpDir(options) {
+  return path.resolve(_sanitizeName(options && options.tmpdir || os.tmpdir()));
+}
+
+// Install process exit listener
+process.addListener(EXIT, _garbageCollector);
+
+/**
+ * Configuration options.
+ *
+ * @typedef {Object} Options
+ * @property {?boolean} keep the temporary object (file or dir) will not be garbage collected
+ * @property {?number} tries the number of tries before give up the name generation
+ * @property (?int) mode the access mode, defaults are 0o700 for directories and 0o600 for files
+ * @property {?string} template the "mkstemp" like filename template
+ * @property {?string} name fixed name relative to tmpdir or the specified dir option
+ * @property {?string} dir tmp directory relative to the root tmp directory in use
+ * @property {?string} prefix prefix for the generated name
+ * @property {?string} postfix postfix for the generated name
+ * @property {?string} tmpdir the root tmp directory which overrides the os tmpdir
+ * @property {?boolean} unsafeCleanup recursively removes the created temporary directory, even when it's not empty
+ * @property {?boolean} detachDescriptor detaches the file descriptor, caller is responsible for closing the file, tmp will no longer try closing the file during garbage collection
+ * @property {?boolean} discardDescriptor discards the file descriptor (closes file, fd is -1), tmp will no longer try closing the file during garbage collection
+ */
+
+/**
+ * @typedef {Object} FileSyncObject
+ * @property {string} name the name of the file
+ * @property {string} fd the file descriptor or -1 if the fd has been discarded
+ * @property {fileCallback} removeCallback the callback function to remove the file
+ */
+
+/**
+ * @typedef {Object} DirSyncObject
+ * @property {string} name the name of the directory
+ * @property {fileCallback} removeCallback the callback function to remove the directory
+ */
+
+/**
+ * @callback tmpNameCallback
+ * @param {?Error} err the error object if anything goes wrong
+ * @param {string} name the temporary file name
+ */
+
+/**
+ * @callback fileCallback
+ * @param {?Error} err the error object if anything goes wrong
+ * @param {string} name the temporary file name
+ * @param {number} fd the file descriptor or -1 if the fd had been discarded
+ * @param {cleanupCallback} fn the cleanup callback function
+ */
+
+/**
+ * @callback fileCallbackSync
+ * @param {?Error} err the error object if anything goes wrong
+ * @param {string} name the temporary file name
+ * @param {number} fd the file descriptor or -1 if the fd had been discarded
+ * @param {cleanupCallbackSync} fn the cleanup callback function
+ */
+
+/**
+ * @callback dirCallback
+ * @param {?Error} err the error object if anything goes wrong
+ * @param {string} name the temporary file name
+ * @param {cleanupCallback} fn the cleanup callback function
+ */
+
+/**
+ * @callback dirCallbackSync
+ * @param {?Error} err the error object if anything goes wrong
+ * @param {string} name the temporary file name
+ * @param {cleanupCallbackSync} fn the cleanup callback function
+ */
+
+/**
+ * Removes the temporary created file or directory.
+ *
+ * @callback cleanupCallback
+ * @param {simpleCallback} [next] function to call whenever the tmp object needs to be removed
+ */
+
+/**
+ * Removes the temporary created file or directory.
+ *
+ * @callback cleanupCallbackSync
+ */
+
+/**
+ * Callback function for function composition.
+ * @see {@link https://github.com/raszi/node-tmp/issues/57|raszi/node-tmp#57}
+ *
+ * @callback simpleCallback
+ */
+
+// exporting all the needed methods
+
+// evaluate _getTmpDir() lazily, mainly for simplifying testing but it also will
+// allow users to reconfigure the temporary directory
+Object.defineProperty(module.exports, "tmpdir", ({
+  enumerable: true,
+  configurable: false,
+  get: function () {
+    return _getTmpDir();
+  }
+}));
+
+module.exports.dir = dir;
+module.exports.dirSync = dirSync;
+
+module.exports.file = file;
+module.exports.fileSync = fileSync;
+
+module.exports.tmpName = tmpName;
+module.exports.tmpNameSync = tmpNameSync;
+
+module.exports.setGracefulCleanup = setGracefulCleanup;
+
+
+/***/ }),
+
+/***/ 4294:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = __nccwpck_require__(4219);
+
+
+/***/ }),
+
+/***/ 4219:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+var net = __nccwpck_require__(1631);
+var tls = __nccwpck_require__(8818);
+var http = __nccwpck_require__(8605);
+var https = __nccwpck_require__(7211);
+var events = __nccwpck_require__(8614);
+var assert = __nccwpck_require__(2357);
+var util = __nccwpck_require__(1669);
+
+
+exports.httpOverHttp = httpOverHttp;
+exports.httpsOverHttp = httpsOverHttp;
+exports.httpOverHttps = httpOverHttps;
+exports.httpsOverHttps = httpsOverHttps;
+
+
+function httpOverHttp(options) {
+  var agent = new TunnelingAgent(options);
+  agent.request = http.request;
+  return agent;
+}
+
+function httpsOverHttp(options) {
+  var agent = new TunnelingAgent(options);
+  agent.request = http.request;
+  agent.createSocket = createSecureSocket;
+  agent.defaultPort = 443;
+  return agent;
+}
+
+function httpOverHttps(options) {
+  var agent = new TunnelingAgent(options);
+  agent.request = https.request;
+  return agent;
+}
+
+function httpsOverHttps(options) {
+  var agent = new TunnelingAgent(options);
+  agent.request = https.request;
+  agent.createSocket = createSecureSocket;
+  agent.defaultPort = 443;
+  return agent;
+}
+
+
+function TunnelingAgent(options) {
+  var self = this;
+  self.options = options || {};
+  self.proxyOptions = self.options.proxy || {};
+  self.maxSockets = self.options.maxSockets || http.Agent.defaultMaxSockets;
+  self.requests = [];
+  self.sockets = [];
+
+  self.on('free', function onFree(socket, host, port, localAddress) {
+    var options = toOptions(host, port, localAddress);
+    for (var i = 0, len = self.requests.length; i < len; ++i) {
+      var pending = self.requests[i];
+      if (pending.host === options.host && pending.port === options.port) {
+        // Detect the request to connect same origin server,
+        // reuse the connection.
+        self.requests.splice(i, 1);
+        pending.request.onSocket(socket);
+        return;
+      }
+    }
+    socket.destroy();
+    self.removeSocket(socket);
+  });
+}
+util.inherits(TunnelingAgent, events.EventEmitter);
+
+TunnelingAgent.prototype.addRequest = function addRequest(req, host, port, localAddress) {
+  var self = this;
+  var options = mergeOptions({request: req}, self.options, toOptions(host, port, localAddress));
+
+  if (self.sockets.length >= this.maxSockets) {
+    // We are over limit so we'll add it to the queue.
+    self.requests.push(options);
+    return;
+  }
+
+  // If we are under maxSockets create a new one.
+  self.createSocket(options, function(socket) {
+    socket.on('free', onFree);
+    socket.on('close', onCloseOrRemove);
+    socket.on('agentRemove', onCloseOrRemove);
+    req.onSocket(socket);
+
+    function onFree() {
+      self.emit('free', socket, options);
+    }
+
+    function onCloseOrRemove(err) {
+      self.removeSocket(socket);
+      socket.removeListener('free', onFree);
+      socket.removeListener('close', onCloseOrRemove);
+      socket.removeListener('agentRemove', onCloseOrRemove);
+    }
+  });
+};
+
+TunnelingAgent.prototype.createSocket = function createSocket(options, cb) {
+  var self = this;
+  var placeholder = {};
+  self.sockets.push(placeholder);
+
+  var connectOptions = mergeOptions({}, self.proxyOptions, {
+    method: 'CONNECT',
+    path: options.host + ':' + options.port,
+    agent: false,
+    headers: {
+      host: options.host + ':' + options.port
+    }
+  });
+  if (options.localAddress) {
+    connectOptions.localAddress = options.localAddress;
+  }
+  if (connectOptions.proxyAuth) {
+    connectOptions.headers = connectOptions.headers || {};
+    connectOptions.headers['Proxy-Authorization'] = 'Basic ' +
+        new Buffer(connectOptions.proxyAuth).toString('base64');
+  }
+
+  debug('making CONNECT request');
+  var connectReq = self.request(connectOptions);
+  connectReq.useChunkedEncodingByDefault = false; // for v0.6
+  connectReq.once('response', onResponse); // for v0.6
+  connectReq.once('upgrade', onUpgrade);   // for v0.6
+  connectReq.once('connect', onConnect);   // for v0.7 or later
+  connectReq.once('error', onError);
+  connectReq.end();
+
+  function onResponse(res) {
+    // Very hacky. This is necessary to avoid http-parser leaks.
+    res.upgrade = true;
+  }
+
+  function onUpgrade(res, socket, head) {
+    // Hacky.
+    process.nextTick(function() {
+      onConnect(res, socket, head);
+    });
+  }
+
+  function onConnect(res, socket, head) {
+    connectReq.removeAllListeners();
+    socket.removeAllListeners();
+
+    if (res.statusCode !== 200) {
+      debug('tunneling socket could not be established, statusCode=%d',
+        res.statusCode);
+      socket.destroy();
+      var error = new Error('tunneling socket could not be established, ' +
+        'statusCode=' + res.statusCode);
+      error.code = 'ECONNRESET';
+      options.request.emit('error', error);
+      self.removeSocket(placeholder);
+      return;
+    }
+    if (head.length > 0) {
+      debug('got illegal response body from proxy');
+      socket.destroy();
+      var error = new Error('got illegal response body from proxy');
+      error.code = 'ECONNRESET';
+      options.request.emit('error', error);
+      self.removeSocket(placeholder);
+      return;
+    }
+    debug('tunneling connection has established');
+    self.sockets[self.sockets.indexOf(placeholder)] = socket;
+    return cb(socket);
+  }
+
+  function onError(cause) {
+    connectReq.removeAllListeners();
+
+    debug('tunneling socket could not be established, cause=%s\n',
+          cause.message, cause.stack);
+    var error = new Error('tunneling socket could not be established, ' +
+                          'cause=' + cause.message);
+    error.code = 'ECONNRESET';
+    options.request.emit('error', error);
+    self.removeSocket(placeholder);
+  }
+};
+
+TunnelingAgent.prototype.removeSocket = function removeSocket(socket) {
+  var pos = this.sockets.indexOf(socket)
+  if (pos === -1) {
+    return;
+  }
+  this.sockets.splice(pos, 1);
+
+  var pending = this.requests.shift();
+  if (pending) {
+    // If we have pending requests and a socket gets closed a new one
+    // needs to be created to take over in the pool for the one that closed.
+    this.createSocket(pending, function(socket) {
+      pending.request.onSocket(socket);
+    });
+  }
+};
+
+function createSecureSocket(options, cb) {
+  var self = this;
+  TunnelingAgent.prototype.createSocket.call(self, options, function(socket) {
+    var hostHeader = options.request.getHeader('host');
+    var tlsOptions = mergeOptions({}, self.options, {
+      socket: socket,
+      servername: hostHeader ? hostHeader.replace(/:.*$/, '') : options.host
+    });
+
+    // 0 is dummy port for v0.6
+    var secureSocket = tls.connect(0, tlsOptions);
+    self.sockets[self.sockets.indexOf(socket)] = secureSocket;
+    cb(secureSocket);
+  });
+}
+
+
+function toOptions(host, port, localAddress) {
+  if (typeof host === 'string') { // since v0.10
+    return {
+      host: host,
+      port: port,
+      localAddress: localAddress
+    };
+  }
+  return host; // for v0.11 or later
+}
+
+function mergeOptions(target) {
+  for (var i = 1, len = arguments.length; i < len; ++i) {
+    var overrides = arguments[i];
+    if (typeof overrides === 'object') {
+      var keys = Object.keys(overrides);
+      for (var j = 0, keyLen = keys.length; j < keyLen; ++j) {
+        var k = keys[j];
+        if (overrides[k] !== undefined) {
+          target[k] = overrides[k];
+        }
+      }
+    }
+  }
+  return target;
+}
+
+
+var debug;
+if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) {
+  debug = function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (typeof args[0] === 'string') {
+      args[0] = 'TUNNEL: ' + args[0];
+    } else {
+      args.unshift('TUNNEL:');
+    }
+    console.error.apply(console, args);
+  }
+} else {
+  debug = function() {};
+}
+exports.debug = debug; // for test
+
+
+/***/ }),
+
+/***/ 5030:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function getUserAgent() {
+  if (typeof navigator === "object" && "userAgent" in navigator) {
+    return navigator.userAgent;
+  }
+
+  if (typeof process === "object" && "version" in process) {
+    return `Node.js/${process.version.substr(1)} (${process.platform}; ${process.arch})`;
+  }
+
+  return "<environment undetectable>";
+}
+
+exports.getUserAgent = getUserAgent;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 2940:
+/***/ ((module) => {
+
+// Returns a wrapper function that returns a wrapped callback
+// The wrapper function should do some stuff, and return a
+// presumably different callback function.
+// This makes sure that own properties are retained, so that
+// decorations and such are not lost along the way.
+module.exports = wrappy
+function wrappy (fn, cb) {
+  if (fn && cb) return wrappy(fn)(cb)
+
+  if (typeof fn !== 'function')
+    throw new TypeError('need wrapper function')
+
+  Object.keys(fn).forEach(function (k) {
+    wrapper[k] = fn[k]
+  })
+
+  return wrapper
+
+  function wrapper() {
+    var args = new Array(arguments.length)
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i]
+    }
+    var ret = fn.apply(this, args)
+    var cb = args[args.length-1]
+    if (typeof ret === 'function' && ret !== cb) {
+      Object.keys(cb).forEach(function (k) {
+        ret[k] = cb[k]
+      })
+    }
+    return ret
+  }
+}
+
+
+/***/ }),
+
+/***/ 4091:
+/***/ ((module) => {
+
+"use strict";
+
+module.exports = function (Yallist) {
+  Yallist.prototype[Symbol.iterator] = function* () {
+    for (let walker = this.head; walker; walker = walker.next) {
+      yield walker.value
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ 665:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+module.exports = Yallist
+
+Yallist.Node = Node
+Yallist.create = Yallist
+
+function Yallist (list) {
+  var self = this
+  if (!(self instanceof Yallist)) {
+    self = new Yallist()
+  }
+
+  self.tail = null
+  self.head = null
+  self.length = 0
+
+  if (list && typeof list.forEach === 'function') {
+    list.forEach(function (item) {
+      self.push(item)
+    })
+  } else if (arguments.length > 0) {
+    for (var i = 0, l = arguments.length; i < l; i++) {
+      self.push(arguments[i])
+    }
+  }
+
+  return self
+}
+
+Yallist.prototype.removeNode = function (node) {
+  if (node.list !== this) {
+    throw new Error('removing node which does not belong to this list')
+  }
+
+  var next = node.next
+  var prev = node.prev
+
+  if (next) {
+    next.prev = prev
+  }
+
+  if (prev) {
+    prev.next = next
+  }
+
+  if (node === this.head) {
+    this.head = next
+  }
+  if (node === this.tail) {
+    this.tail = prev
+  }
+
+  node.list.length--
+  node.next = null
+  node.prev = null
+  node.list = null
+
+  return next
+}
+
+Yallist.prototype.unshiftNode = function (node) {
+  if (node === this.head) {
+    return
+  }
+
+  if (node.list) {
+    node.list.removeNode(node)
+  }
+
+  var head = this.head
+  node.list = this
+  node.next = head
+  if (head) {
+    head.prev = node
+  }
+
+  this.head = node
+  if (!this.tail) {
+    this.tail = node
+  }
+  this.length++
+}
+
+Yallist.prototype.pushNode = function (node) {
+  if (node === this.tail) {
+    return
+  }
+
+  if (node.list) {
+    node.list.removeNode(node)
+  }
+
+  var tail = this.tail
+  node.list = this
+  node.prev = tail
+  if (tail) {
+    tail.next = node
+  }
+
+  this.tail = node
+  if (!this.head) {
+    this.head = node
+  }
+  this.length++
+}
+
+Yallist.prototype.push = function () {
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    push(this, arguments[i])
+  }
+  return this.length
+}
+
+Yallist.prototype.unshift = function () {
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    unshift(this, arguments[i])
+  }
+  return this.length
+}
+
+Yallist.prototype.pop = function () {
+  if (!this.tail) {
+    return undefined
+  }
+
+  var res = this.tail.value
+  this.tail = this.tail.prev
+  if (this.tail) {
+    this.tail.next = null
+  } else {
+    this.head = null
+  }
+  this.length--
+  return res
+}
+
+Yallist.prototype.shift = function () {
+  if (!this.head) {
+    return undefined
+  }
+
+  var res = this.head.value
+  this.head = this.head.next
+  if (this.head) {
+    this.head.prev = null
+  } else {
+    this.tail = null
+  }
+  this.length--
+  return res
+}
+
+Yallist.prototype.forEach = function (fn, thisp) {
+  thisp = thisp || this
+  for (var walker = this.head, i = 0; walker !== null; i++) {
+    fn.call(thisp, walker.value, i, this)
+    walker = walker.next
+  }
+}
+
+Yallist.prototype.forEachReverse = function (fn, thisp) {
+  thisp = thisp || this
+  for (var walker = this.tail, i = this.length - 1; walker !== null; i--) {
+    fn.call(thisp, walker.value, i, this)
+    walker = walker.prev
+  }
+}
+
+Yallist.prototype.get = function (n) {
+  for (var i = 0, walker = this.head; walker !== null && i < n; i++) {
+    // abort out of the list early if we hit a cycle
+    walker = walker.next
+  }
+  if (i === n && walker !== null) {
+    return walker.value
+  }
+}
+
+Yallist.prototype.getReverse = function (n) {
+  for (var i = 0, walker = this.tail; walker !== null && i < n; i++) {
+    // abort out of the list early if we hit a cycle
+    walker = walker.prev
+  }
+  if (i === n && walker !== null) {
+    return walker.value
+  }
+}
+
+Yallist.prototype.map = function (fn, thisp) {
+  thisp = thisp || this
+  var res = new Yallist()
+  for (var walker = this.head; walker !== null;) {
+    res.push(fn.call(thisp, walker.value, this))
+    walker = walker.next
+  }
+  return res
+}
+
+Yallist.prototype.mapReverse = function (fn, thisp) {
+  thisp = thisp || this
+  var res = new Yallist()
+  for (var walker = this.tail; walker !== null;) {
+    res.push(fn.call(thisp, walker.value, this))
+    walker = walker.prev
+  }
+  return res
+}
+
+Yallist.prototype.reduce = function (fn, initial) {
+  var acc
+  var walker = this.head
+  if (arguments.length > 1) {
+    acc = initial
+  } else if (this.head) {
+    walker = this.head.next
+    acc = this.head.value
+  } else {
+    throw new TypeError('Reduce of empty list with no initial value')
+  }
+
+  for (var i = 0; walker !== null; i++) {
+    acc = fn(acc, walker.value, i)
+    walker = walker.next
+  }
+
+  return acc
+}
+
+Yallist.prototype.reduceReverse = function (fn, initial) {
+  var acc
+  var walker = this.tail
+  if (arguments.length > 1) {
+    acc = initial
+  } else if (this.tail) {
+    walker = this.tail.prev
+    acc = this.tail.value
+  } else {
+    throw new TypeError('Reduce of empty list with no initial value')
+  }
+
+  for (var i = this.length - 1; walker !== null; i--) {
+    acc = fn(acc, walker.value, i)
+    walker = walker.prev
+  }
+
+  return acc
+}
+
+Yallist.prototype.toArray = function () {
+  var arr = new Array(this.length)
+  for (var i = 0, walker = this.head; walker !== null; i++) {
+    arr[i] = walker.value
+    walker = walker.next
+  }
+  return arr
+}
+
+Yallist.prototype.toArrayReverse = function () {
+  var arr = new Array(this.length)
+  for (var i = 0, walker = this.tail; walker !== null; i++) {
+    arr[i] = walker.value
+    walker = walker.prev
+  }
+  return arr
+}
+
+Yallist.prototype.slice = function (from, to) {
+  to = to || this.length
+  if (to < 0) {
+    to += this.length
+  }
+  from = from || 0
+  if (from < 0) {
+    from += this.length
+  }
+  var ret = new Yallist()
+  if (to < from || to < 0) {
+    return ret
+  }
+  if (from < 0) {
+    from = 0
+  }
+  if (to > this.length) {
+    to = this.length
+  }
+  for (var i = 0, walker = this.head; walker !== null && i < from; i++) {
+    walker = walker.next
+  }
+  for (; walker !== null && i < to; i++, walker = walker.next) {
+    ret.push(walker.value)
+  }
+  return ret
+}
+
+Yallist.prototype.sliceReverse = function (from, to) {
+  to = to || this.length
+  if (to < 0) {
+    to += this.length
+  }
+  from = from || 0
+  if (from < 0) {
+    from += this.length
+  }
+  var ret = new Yallist()
+  if (to < from || to < 0) {
+    return ret
+  }
+  if (from < 0) {
+    from = 0
+  }
+  if (to > this.length) {
+    to = this.length
+  }
+  for (var i = this.length, walker = this.tail; walker !== null && i > to; i--) {
+    walker = walker.prev
+  }
+  for (; walker !== null && i > from; i--, walker = walker.prev) {
+    ret.push(walker.value)
+  }
+  return ret
+}
+
+Yallist.prototype.splice = function (start, deleteCount, ...nodes) {
+  if (start > this.length) {
+    start = this.length - 1
+  }
+  if (start < 0) {
+    start = this.length + start;
+  }
+
+  for (var i = 0, walker = this.head; walker !== null && i < start; i++) {
+    walker = walker.next
+  }
+
+  var ret = []
+  for (var i = 0; walker && i < deleteCount; i++) {
+    ret.push(walker.value)
+    walker = this.removeNode(walker)
+  }
+  if (walker === null) {
+    walker = this.tail
+  }
+
+  if (walker !== this.head && walker !== this.tail) {
+    walker = walker.prev
+  }
+
+  for (var i = 0; i < nodes.length; i++) {
+    walker = insert(this, walker, nodes[i])
+  }
+  return ret;
+}
+
+Yallist.prototype.reverse = function () {
+  var head = this.head
+  var tail = this.tail
+  for (var walker = head; walker !== null; walker = walker.prev) {
+    var p = walker.prev
+    walker.prev = walker.next
+    walker.next = p
+  }
+  this.head = tail
+  this.tail = head
+  return this
+}
+
+function insert (self, node, value) {
+  var inserted = node === self.head ?
+    new Node(value, null, node, self) :
+    new Node(value, node, node.next, self)
+
+  if (inserted.next === null) {
+    self.tail = inserted
+  }
+  if (inserted.prev === null) {
+    self.head = inserted
+  }
+
+  self.length++
+
+  return inserted
+}
+
+function push (self, item) {
+  self.tail = new Node(item, self.tail, null, self)
+  if (!self.head) {
+    self.head = self.tail
+  }
+  self.length++
+}
+
+function unshift (self, item) {
+  self.head = new Node(item, null, self.head, self)
+  if (!self.tail) {
+    self.tail = self.head
+  }
+  self.length++
+}
+
+function Node (value, prev, next, list) {
+  if (!(this instanceof Node)) {
+    return new Node(value, prev, next, list)
+  }
+
+  this.list = list
+  this.value = value
+
+  if (prev) {
+    prev.next = this
+    this.prev = prev
+  } else {
+    this.prev = null
+  }
+
+  if (next) {
+    next.prev = this
+    this.next = next
+  } else {
+    this.next = null
+  }
+}
+
+try {
+  // add if support for Symbol.iterator is present
+  __nccwpck_require__(4091)(Yallist)
+} catch (er) {}
+
+
+/***/ }),
+
+/***/ 2877:
+/***/ ((module) => {
+
+module.exports = eval("require")("encoding");
+
+
+/***/ }),
+
+/***/ 2357:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");;
+
+/***/ }),
+
+/***/ 3129:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");;
+
+/***/ }),
+
+/***/ 3373:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");;
+
+/***/ }),
+
+/***/ 8614:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("events");;
+
+/***/ }),
+
+/***/ 5747:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");;
+
+/***/ }),
+
+/***/ 8605:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");;
+
+/***/ }),
+
+/***/ 7211:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");;
+
+/***/ }),
+
+/***/ 1631:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("net");;
+
+/***/ }),
+
+/***/ 2087:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");;
+
+/***/ }),
+
+/***/ 5622:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");;
+
+/***/ }),
+
+/***/ 2413:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");;
+
+/***/ }),
+
+/***/ 4304:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("string_decoder");;
+
+/***/ }),
+
+/***/ 8213:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("timers");;
+
+/***/ }),
+
+/***/ 8818:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tls");;
+
+/***/ }),
+
+/***/ 8835:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");;
+
+/***/ }),
+
+/***/ 1669:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");;
+
+/***/ }),
+
+/***/ 8761:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __nccwpck_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		var threw = true;
+/******/ 		try {
+/******/ 			__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nccwpck_require__);
+/******/ 			threw = false;
+/******/ 		} finally {
+/******/ 			if(threw) delete __webpack_module_cache__[moduleId];
+/******/ 		}
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat */
+/******/ 	
+/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __nccwpck_require__(3109);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
+/******/ })()
+;

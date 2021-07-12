@@ -1,0 +1,38 @@
+name: virtual-env
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *' # everyday at 10am
+
+jobs:
+  os:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-20.04
+          - ubuntu-18.04
+          - ubuntu-16.04
+    steps:
+      -
+        name: List install packages
+        run: apt list --installed
+      -
+        name: Docker info
+        run: docker info
+      -
+        name: Docker version
+        run: docker version
+      -
+        name: buildx version
+        run: docker buildx version
+      -
+        name: containerd version
+        run: containerd --version
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1

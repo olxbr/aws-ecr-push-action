@@ -1,27 +1,102 @@
-name: Push to Amazon ECR
-description: Create the repository, if it doesn't exist, and push a docker image to Amazon ECR.
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: Build and Push to Amazon ECR
+description: Build and push Docker images with Buildx
+author: olxbr
+branding:
+  icon: 'anchor'
+  color: 'blue'
+
 inputs:
+  allow:
+    description: "List of extra privileged entitlement (eg. network.host,security.insecure)"
+    required: false
+  build-args:
+    description: "List of build-time variables"
+    required: false
+  builder:
+    description: "Builder instance"
+    required: false
+  cache-from:
+    description: "List of external cache sources for buildx (eg. user/app:cache, type=local,src=path/to/dir)"
+    required: false
+  cache-to:
+    description: "List of cache export destinations for buildx (eg. user/app:cache, type=local,dest=path/to/dir)"
+    required: false
+  context:
+    description: "Build's context is the set of files located in the specified PATH or URL"
+    required: false
   ecr_repository:
     description: The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
     required: true
-  tags:
-    description: Comma-separated string of ECR image tags (ex. latest, 1.0.0).
-    required: true
-  x9_container_distro:
-    description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from https://github.com/olxbr/X9Containers with a preferred distro and tools (ex. debian.clamav.trivy).
+  file:
+    description: "Path to the Dockerfile"
     required: false
-    default: distroless.clamav.trivy
-  minimal_severity:
-    description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
-    required: false
-    default: CRITICAL
   ignore_threats:
     description: If true, don't interrupt workflow if has security findings, during security scan.
     required: false
     default: 'false'
+  labels:
+    description: "List of metadata for an image"
+    required: false
+  load:
+    description: "Load is a shorthand for --output=type=docker"
+    required: false
+    default: 'false'
+  minimal_severity:
+    description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
+    required: false
+    default: CRITICAL
+  network:
+    description: "Set the networking mode for the RUN instructions during build"
+    required: false
+  no-cache:
+    description: "Do not use cache when building the image"
+    required: false
+    default: 'false'
+  outputs:
+    description: "List of output destinations (format: type=local,dest=path)"
+    required: false
+  platforms:
+    description: "List of target platforms for build"
+    required: false
+  pull:
+    description: "Always attempt to pull a newer version of the image"
+    required: false
+    default: 'false'
+  push:
+    description: "Push is a shorthand for --output=type=registry"
+    required: false
+    default: 'false'
+  secrets:
+    description: "List of secrets to expose to the build (eg. key=string, GIT_AUTH_TOKEN=mytoken)"
+    required: false
+  secret-files:
+    description: "List of secret files to expose to the build (eg. key=filename, MY_SECRET=./secret.txt)"
+    required: false
+  ssh:
+    description: "List of SSH agent socket or keys to expose to the build"
+    required: false
+  tags:
+    description: "List of tags"
+    required: false
+  target:
+    description: "Sets the target stage to build"
+    required: false
+  github-token:
+    description: "GitHub Token used to authenticate against a repository for Git context"
+    default: ${{ github.token }}
+    required: false
+  x9_container_distro:
+    description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from https://github.com/olxbr/X9Containers with a preferred distro and tools (ex. debian.clamav.trivy).
+    required: false
+    default: distroless.clamav.trivy
+
 outputs:
+  digest:
+    description: 'Image content-addressable identifier also called a digest'
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
+
 runs:
   using: 'node12'
   pre: 'dist/index.js'

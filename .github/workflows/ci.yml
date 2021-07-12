@@ -1,0 +1,649 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  minimal:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: action
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Build
+        uses: ./action
+        with:
+          file: ./test/Dockerfile
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  git-context:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: action
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+          driver-opts: network=host
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./action
+        with:
+          file: ./test/Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  git-context-secret:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: action
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          driver-opts: network=host
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./action
+        with:
+          file: ./test/Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+          secrets: |
+            GIT_AUTH_TOKEN=${{ github.token }}
+            "MYSECRET=aaaaaaaa
+            bbbbbbb
+            ccccccccc"
+            FOO=bar
+            "EMPTYLINE=aaaa
+
+            bbbb
+            ccc"
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  path-context:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildx-version:
+          - ""
+          - latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: ${{ matrix.buildx-version }}
+          driver-opts: network=host
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  error:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Stop docker
+        run: |
+          sudo systemctl stop docker
+      -
+        name: Build
+        id: docker_build
+        continue-on-error: true
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/Dockerfile
+      -
+        name: Check
+        run: |
+          echo "${{ toJson(steps.docker_build) }}"
+          if [ "${{ steps.docker_build.outcome }}" != "failure" ] || [ "${{ steps.docker_build.conclusion }}" != "success" ]; then
+            echo "::error::Should have failed"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  error-buildx:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Build
+        id: docker_build
+        continue-on-error: true
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/Dockerfile
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          push: true
+          tags: localhost:5000/name/app:latest
+      -
+        name: Check
+        run: |
+          echo "${{ toJson(steps.docker_build) }}"
+          if [ "${{ steps.docker_build.outcome }}" != "failure" ] || [ "${{ steps.docker_build.conclusion }}" != "success" ]; then
+            echo "::error::Should have failed"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  docker-driver:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Build
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/Dockerfile
+          push: true
+          tags: localhost:5000/name/app:latest
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  export-docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/Dockerfile
+          load: true
+          tags: myimage:latest
+      -
+        name: Inspect
+        run: |
+          docker image inspect myimage:latest
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  network:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: List networks
+        run: docker network ls
+      -
+        name: Build
+        uses: ./
+        with:
+          context: ./test
+          tags: name/app:latest
+          network: host
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  multi:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        buildx-version:
+          - ""
+          - latest
+        dockerfile:
+          - multi
+          - multi-sudo
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: ${{ matrix.buildx-version }}
+          driver-opts: network=host
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/${{ matrix.dockerfile }}.Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  registry-cache:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          driver-opts: |
+            network=host
+      -
+        name: Build and push (1)
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/multi.Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+          cache-from: type=registry,ref=localhost:5000/name/app
+          cache-to: type=inline
+      -
+        name: Inspect (1)
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:latest
+      -
+        name: Image digest (1)
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest (1)
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Prune
+        run: |
+          docker buildx prune -a -f --verbose
+      -
+        name: Build and push (2)
+        id: docker_build2
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/multi.Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+          cache-from: type=registry,ref=localhost:5000/name/app
+          cache-to: type=inline
+      -
+        name: Inspect (2)
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:latest
+      -
+        name: Image digest (2)
+        run: echo ${{ steps.docker_build2.outputs.digest }}
+      -
+        name: Check digest (2)
+        run: |
+          if [ -z "${{ steps.docker_build2.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Compare digests
+        run: |
+          echo Compare "${{ steps.docker_build.outputs.digest }}" with "${{ steps.docker_build2.outputs.digest }}"
+          if [ "${{ steps.docker_build.outputs.digest }}" != "${{ steps.docker_build2.outputs.digest }}" ]; then
+            echo "::error::Digests should be identical"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  github-cache-first:
+    runs-on: ubuntu-latest
+    outputs:
+      digest: ${{ steps.docker_build.outputs.digest }}
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          driver-opts: |
+            network=host
+      -
+        name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-ghcache-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-ghcache-
+      -
+        name: Erase cache
+        run: |
+          rm -rf /tmp/.buildx-cache/*
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/multi.Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
+
+  github-cache-hit:
+    runs-on: ubuntu-latest
+    needs: github-cache-first
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          driver-opts: |
+            network=host
+      -
+        name: Cache Docker layers
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-ghcache-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-ghcache-
+      -
+        name: Build and push
+        id: docker_build
+        uses: ./
+        with:
+          context: ./test
+          file: ./test/multi.Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            localhost:5000/name/app:latest
+            localhost:5000/name/app:1.0.0
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+      -
+        name: Inspect
+        run: |
+          docker buildx imagetools inspect localhost:5000/name/app:1.0.0
+      -
+        name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      -
+        name: Check digest
+        run: |
+          if [ -z "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digest should not be empty"
+            exit 1
+          fi
+      -
+        name: Compare digests
+        run: |
+          echo Compare "${{ needs.github-cache-first.outputs.digest }}" with "${{ steps.docker_build.outputs.digest }}"
+          if [ "${{ needs.github-cache-first.outputs.digest }}" != "${{ steps.docker_build.outputs.digest }}" ]; then
+            echo "::error::Digests should be identical"
+            exit 1
+          fi
+      -
+        name: Cache hit
+        run: echo ${{ steps.cache.outputs.cache-hit }}
+      -
+        name: Dump context
+        if: always()
+        uses: crazy-max/ghaction-dump-context@v1
