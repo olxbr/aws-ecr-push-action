@@ -1,10 +1,25 @@
 const { executeSyncCmd } = require('./utils')
 
-const containerIds = executeSyncCmd('docker', ['ps', '-aq']).trim().split('\n')
+const filterEmpty = x => x
+
+console.log('Listing running containers...')
+const containerIds = executeSyncCmd('docker', ['ps', '-aq']).split('\n').filter(filterEmpty)
+
 /*
- *const imageIds = executeSyncCmd('docker', ['images', '-aq']).trim().split('\n')
- *const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).trim().split('\n')
+ *console.log('Listing docker images...')
+ *const imageIds = executeSyncCmd('docker', ['images', '-aq']).split('\n').filter(filterEmpty)
+ *
+ *console.log('Listing docker volumes...')
+ *const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).split('\n').filter(filterEmpty)
  */
+
+console.log('============================================')
+console.log(`Running containers: ${containerIds.length}`)
+/*
+ *console.log(`Total images: ${imageIds.length}`)
+ *console.log(`Total volumes: ${volumeIds.length}`)
+ */
+console.log('============================================\n')
 
 for (let id of containerIds) {
   console.log(`Stopping container ${id}`)
@@ -25,3 +40,5 @@ for (let id of containerIds) {
  *}
  *
  */
+
+ console.log('Finished docker cleanup.')
