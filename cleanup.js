@@ -1,9 +1,13 @@
 const { executeSyncCmd } = require('./utils')
 
-const containerIds = executeSyncCmd('docker', ['ps', '-aq']).trim().split('\n')
+const filterEmpty = x => x
+
+const containerIds = executeSyncCmd('docker', ['ps', '-aq']).split('\n').filter(filterEmpty)
+
 /*
- *const imageIds = executeSyncCmd('docker', ['images', '-aq']).trim().split('\n')
- *const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).trim().split('\n')
+ *const imageIds = executeSyncCmd('docker', ['images', '-aq']).split('\n').filter(filterEmpty)
+ *
+ *const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).split('\n').filter(filterEmpty)
  */
 
 for (let id of containerIds) {
