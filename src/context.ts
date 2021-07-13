@@ -35,6 +35,10 @@ export interface Inputs {
   tags: string[];
   target: string;
   githubToken: string;
+  ecrRepository: string;
+  minimalSeverity: string;
+  ignoreThreats: boolean;
+  x9ContainerDistro: string;
 }
 
 export function defaultContext(): string {
@@ -84,7 +88,11 @@ export async function getInputs(defaultContext: string): Promise<Inputs> {
     ssh: await getInputList('ssh'),
     tags: await getInputList('tags'),
     target: core.getInput('target'),
-    githubToken: core.getInput('github-token')
+    githubToken: core.getInput('github-token'),
+    ecrRepository: core.getInput('ecr_repository'),
+    minimalSeverity: core.getInput('minimal_severity'),
+    ignoreThreats: core.getBooleanInput('ignore_threats'),
+    x9ContainerDistro: core.getInput('x9_container_distro')
   };
 }
 

@@ -4,6 +4,8 @@ import * as context from './context';
 import * as stateHelper from './state-helper';
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
+import { checkImageThreats }  from './x9';
+import { dockerLoginOnECR, getRepositoryUri } from './ecr';
 
 async function run(): Promise<void> {
   try {
@@ -11,6 +13,8 @@ async function run(): Promise<void> {
     await exec.exec('docker', ['version']);
     await exec.exec('docker', ['info']);
     core.endGroup();
+
+    await dockerLoginOnECR()
 
     if (!(await buildx.isAvailable())) {
       core.setFailed(`Docker buildx is required. See https://github.com/docker/setup-buildx-action to set up buildx.`);
@@ -21,6 +25,8 @@ async function run(): Promise<void> {
     const buildxVersion = await buildx.getVersion();
     const defContext = context.defaultContext();
     let inputs: context.Inputs = await context.getInputs(defContext);
+
+    const repository = await getRepositoryUri(inputs.ecrRepository)
 
     const args: string[] = await context.getArgs(inputs, defContext, buildxVersion);
     await exec
@@ -34,6 +40,14 @@ async function run(): Promise<void> {
       });
 
     const imageID = await buildx.getImageID();
+
+    await checkImageThreats({
+      image: "",
+      ignoreThreats: inputs.ignoreThreats,
+      minimalSeverity: inputs.minimalSeverity,
+      x9ContainerDistro: inputs.x9ContainerDistro,
+    })
+
     if (imageID) {
       core.startGroup(`Extracting digest`);
       core.info(`${imageID}`);
