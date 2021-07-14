@@ -26,7 +26,12 @@ async function run(): Promise<void> {
     const defContext = context.defaultContext();
     let inputs: context.Inputs = await context.getInputs(defContext);
 
-    const repository = await getRepositoryUri(inputs.ecrRepository)
+    const repository = await getRepositoryUri(inputs.ecrRepository);
+    if (repository.repositoryUri === undefined) {
+      throw new Error(`failed to get repositoryUri`)
+    }
+    const ecrTags = await context.generateECRTags(repository.repositoryUri, inputs.tags);
+    inputs.tags = ecrTags;
 
     const args: string[] = await context.getArgs(inputs, defContext, buildxVersion);
     await exec
@@ -42,7 +47,7 @@ async function run(): Promise<void> {
     const imageID = await buildx.getImageID();
 
     await checkImageThreats({
-      image: "",
+      image: inputs.tags[0],
       ignoreThreats: inputs.ignoreThreats,
       minimalSeverity: inputs.minimalSeverity,
       x9ContainerDistro: inputs.x9ContainerDistro,

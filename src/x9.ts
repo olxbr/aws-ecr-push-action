@@ -86,11 +86,20 @@ async function scanImage(image: string, severity: string): Promise<ScanResults> 
 
     const scansFolder = './scans';
     await exec
-        .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
+        .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
+            ignoreReturnCode: true,
+            silent: true
+        });
     await exec
-        .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+        .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
+            ignoreReturnCode: true,
+            silent: true
+        });
     await exec
-        .getExecOutput('docker', ['stop', 'suspectcontainer'])
+        .getExecOutput('docker', ['stop', 'suspectcontainer'], {
+            ignoreReturnCode: true,
+            silent: true
+        })
 
     var results: ScanResults = {
         clamReport: null,

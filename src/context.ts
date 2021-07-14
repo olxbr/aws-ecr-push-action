@@ -104,6 +104,17 @@ export async function getArgs(inputs: Inputs, defaultContext: string, buildxVers
   return args;
 }
 
+export async function generateECRTags(ecrRepository: string, tags: Array<string>): Promise<Array<string>> {
+  let ecrTags: Array<string> = [];
+  if (!tags.some(t => t === 'latest')) {
+    ecrTags.push(`${ecrRepository}:latest`)
+  }
+  await asyncForEach(tags, async tag => {
+    ecrTags.push(`${ecrRepository}:${tag}`)
+  })
+  return ecrTags
+}
+
 async function getBuildArgs(inputs: Inputs, defaultContext: string, buildxVersion: string): Promise<Array<string>> {
   let args: Array<string> = ['build'];
   await asyncForEach(inputs.buildArgs, async buildArg => {

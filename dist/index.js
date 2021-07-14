@@ -234,7 +234,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setOutput = exports.asyncForEach = exports.getInputList = exports.getArgs = exports.getInputs = exports.tmpNameSync = exports.tmpDir = exports.defaultContext = void 0;
+exports.setOutput = exports.asyncForEach = exports.getInputList = exports.generateECRTags = exports.getArgs = exports.getInputs = exports.tmpNameSync = exports.tmpDir = exports.defaultContext = void 0;
 const sync_1 = __importDefault(__nccwpck_require__(8750));
 const fs = __importStar(__nccwpck_require__(5747));
 const os = __importStar(__nccwpck_require__(2087));
@@ -312,6 +312,19 @@ function getArgs(inputs, defaultContext, buildxVersion) {
     });
 }
 exports.getArgs = getArgs;
+function generateECRTags(ecrRepository, tags) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let ecrTags = [];
+        if (!tags.some(t => t === 'latest')) {
+            ecrTags.push(`${ecrRepository}:latest`);
+        }
+        yield exports.asyncForEach(tags, (tag) => __awaiter(this, void 0, void 0, function* () {
+            ecrTags.push(`${ecrRepository}:${tag}`);
+        }));
+        return ecrTags;
+    });
+}
+exports.generateECRTags = generateECRTags;
 function getBuildArgs(inputs, defaultContext, buildxVersion) {
     return __awaiter(this, void 0, void 0, function* () {
         let args = ['build'];
@@ -651,6 +664,11 @@ function run() {
             const defContext = context.defaultContext();
             let inputs = yield context.getInputs(defContext);
             const repository = yield ecr_1.getRepositoryUri(inputs.ecrRepository);
+            if (repository.repositoryUri === undefined) {
+                throw new Error(`failed to get repositoryUri`);
+            }
+            const ecrTags = yield context.generateECRTags(repository.repositoryUri, inputs.tags);
+            inputs.tags = ecrTags;
             const args = yield context.getArgs(inputs, defContext, buildxVersion);
             yield exec
                 .getExecOutput('docker', args, {
@@ -663,7 +681,7 @@ function run() {
             });
             const imageID = yield buildx.getImageID();
             yield x9_1.checkImageThreats({
-                image: "",
+                image: inputs.tags[0],
                 ignoreThreats: inputs.ignoreThreats,
                 minimalSeverity: inputs.minimalSeverity,
                 x9ContainerDistro: inputs.x9ContainerDistro,
@@ -844,11 +862,20 @@ function scanImage(image, severity) {
         });
         const scansFolder = './scans';
         yield exec
-            .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
+            .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
+            ignoreReturnCode: true,
+            silent: true
+        });
         yield exec
-            .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+            .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
+            ignoreReturnCode: true,
+            silent: true
+        });
         yield exec
-            .getExecOutput('docker', ['stop', 'suspectcontainer']);
+            .getExecOutput('docker', ['stop', 'suspectcontainer'], {
+            ignoreReturnCode: true,
+            silent: true
+        });
         var results = {
             clamReport: null,
             trivyReport: null,
