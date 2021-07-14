@@ -81,19 +81,24 @@ async function parseAuthToken() : Promise<AuthInfo> {
 export async function dockerLoginOnECR() {
     core.startGroup('Login on ECR...');
     const loginData = await parseAuthToken()
+    const loginArgs = [
+        'login',
+        '--password-stdin',
+        '--username',
+        loginData.username,
+        loginData.proxyEndpoint,
+    ]
     await exec
-        .getExecOutput('docker', [
-            'login',
-            '-u',
-            loginData.username,
-            '-p',
-            loginData.password,
-            loginData.proxyEndpoint,
-        ]).then(res => {
+        .getExecOutput('docker', loginArgs, {
+            ignoreReturnCode: true,
+            silent: true,
+            input: Buffer.from(loginData.password)
+        }).then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
                 throw new Error(`failed to login: ${res.stderr.match(/(.*)\s*$/)![0].trim()}`);
             }
         });
+    core.info('Login succeeded');
     core.endGroup();
 }
 

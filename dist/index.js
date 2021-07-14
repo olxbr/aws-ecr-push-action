@@ -538,19 +538,24 @@ function dockerLoginOnECR() {
     return __awaiter(this, void 0, void 0, function* () {
         core.startGroup('Login on ECR...');
         const loginData = yield parseAuthToken();
-        yield exec
-            .getExecOutput('docker', [
+        const loginArgs = [
             'login',
-            '-u',
+            '--password-stdin',
+            '--username',
             loginData.username,
-            '-p',
-            loginData.password,
             loginData.proxyEndpoint,
-        ]).then(res => {
+        ];
+        yield exec
+            .getExecOutput('docker', loginArgs, {
+            ignoreReturnCode: true,
+            silent: true,
+            input: Buffer.from(loginData.password)
+        }).then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
                 throw new Error(`failed to login: ${res.stderr.match(/(.*)\s*$/)[0].trim()}`);
             }
         });
+        core.info('Login succeeded');
         core.endGroup();
     });
 }
