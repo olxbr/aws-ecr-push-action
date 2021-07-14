@@ -89,6 +89,8 @@ async function scanImage(image: string, severity: string): Promise<ScanResults> 
         .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
     await exec
         .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+    await exec
+        .getExecOutput('docker', ['stop', 'suspectcontainer'])
 
     var results: ScanResults = {
         clamReport: null,
