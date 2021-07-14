@@ -684,10 +684,10 @@ function cleanup() {
         }
     });
 }
-if (!stateHelper.IsPost) {
+if (stateHelper.IsPre && !stateHelper.IsPost) {
     run();
 }
-else {
+else if (!stateHelper.IsPre || stateHelper.IsPost) {
     cleanup();
 }
 //# sourceMappingURL=main.js.map
@@ -719,15 +719,19 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setTmpDir = exports.tmpDir = exports.IsPost = void 0;
+exports.setTmpDir = exports.tmpDir = exports.IsPost = exports.IsPre = void 0;
 const core = __importStar(__nccwpck_require__(2186));
+exports.IsPre = !!process.env['STATE_isPre'];
 exports.IsPost = !!process.env['STATE_isPost'];
 exports.tmpDir = process.env['STATE_tmpDir'] || '';
 function setTmpDir(tmpDir) {
     core.saveState('tmpDir', tmpDir);
 }
 exports.setTmpDir = setTmpDir;
-if (!exports.IsPost) {
+if (!exports.IsPre) {
+    core.saveState('isPre', 'true');
+}
+else if (exports.IsPre && !exports.IsPost) {
     core.saveState('isPost', 'true');
 }
 //# sourceMappingURL=state-helper.js.map
@@ -838,6 +842,8 @@ function scanImage(image, severity) {
             .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
         yield exec
             .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+        yield exec
+            .getExecOutput('docker', ['stop', 'suspectcontainer']);
         var results = {
             clamReport: null,
             trivyReport: null,
