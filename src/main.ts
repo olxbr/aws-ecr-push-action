@@ -86,8 +86,8 @@ async function cleanup(): Promise<void> {
   }
 }
 
-if (stateHelper.IsPre && !stateHelper.IsPost) {
+if (!stateHelper.IsPost) {
   run();
-} else if (!stateHelper.IsPre || stateHelper.IsPost) {
+} else {
   cleanup();
 }

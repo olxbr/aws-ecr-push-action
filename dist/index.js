@@ -490,44 +490,36 @@ const client_ecr_1 = __nccwpck_require__(4180);
 const credential_provider_node_1 = __nccwpck_require__(8030);
 const core = __importStar(__nccwpck_require__(2186));
 const exec = __importStar(__nccwpck_require__(1514));
-const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID || "";
+const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID || '';
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 const credentialsProvider = (input) => credential_provider_node_1.defaultProvider(Object.assign(Object.assign({}, input), { timeout: 20000 }));
 const client = new client_ecr_1.ECRClient({
-    region: "us-east-1",
-    credentialDefaultProvider: credentialsProvider,
+    region: 'us-east-1',
+    credentialDefaultProvider: credentialsProvider
 });
 function buildPolicy(accountId) {
-    if (accountId === "") {
+    if (accountId === '') {
         throw new Error('missing AWS_ACCOUNT_ID env var');
     }
     return JSON.stringify({
-        "Version": "2008-10-17",
-        "Statement": [
+        Version: '2008-10-17',
+        Statement: [
             {
-                "Sid": "AllowPushPull",
-                "Effect": "Allow",
-                "Principal": {
-                    "AWS": `arn:aws:iam::${accountId}:root`
+                Sid: 'AllowPushPull',
+                Effect: 'Allow',
+                Principal: {
+                    AWS: `arn:aws:iam::${accountId}:root`
                 },
-                "Action": [
-                    "ecr:GetDownloadUrlForLayer",
-                    "ecr:BatchGetImage",
-                    "ecr:BatchCheckLayerAvailability",
-                    "ecr:PutImage",
-                    "ecr:InitiateLayerUpload",
-                    "ecr:UploadLayerPart",
-                    "ecr:CompleteLayerUpload"
-                ]
+                Action: ['ecr:GetDownloadUrlForLayer', 'ecr:BatchGetImage', 'ecr:BatchCheckLayerAvailability', 'ecr:PutImage', 'ecr:InitiateLayerUpload', 'ecr:UploadLayerPart', 'ecr:CompleteLayerUpload']
             }
         ]
     });
 }
 exports.buildPolicy = buildPolicy;
-const getAuthorizationToken = (params) => client.send(new client_ecr_1.GetAuthorizationTokenCommand(params));
-const setRepositoryPolicy = (params) => client.send(new client_ecr_1.SetRepositoryPolicyCommand(params));
-const describeRepo = (params) => client.send(new client_ecr_1.DescribeRepositoriesCommand(params));
-const createRepo = (params) => client.send(new client_ecr_1.CreateRepositoryCommand(params));
+const getAuthorizationToken = params => client.send(new client_ecr_1.GetAuthorizationTokenCommand(params));
+const setRepositoryPolicy = params => client.send(new client_ecr_1.SetRepositoryPolicyCommand(params));
+const describeRepo = params => client.send(new client_ecr_1.DescribeRepositoriesCommand(params));
+const createRepo = params => client.send(new client_ecr_1.CreateRepositoryCommand(params));
 function parseAuthToken() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('Getting ECR auth token...');
@@ -548,7 +540,7 @@ function parseAuthToken() {
         return {
             username: authArray[0],
             password: authArray[1],
-            proxyEndpoint: proxyEndpoint,
+            proxyEndpoint: proxyEndpoint
         };
     });
 }
@@ -556,19 +548,14 @@ function dockerLoginOnECR() {
     return __awaiter(this, void 0, void 0, function* () {
         core.startGroup('Login on ECR...');
         const loginData = yield parseAuthToken();
-        const loginArgs = [
-            'login',
-            '--password-stdin',
-            '--username',
-            loginData.username,
-            loginData.proxyEndpoint,
-        ];
+        const loginArgs = ['login', '--password-stdin', '--username', loginData.username, loginData.proxyEndpoint];
         yield exec
             .getExecOutput('docker', loginArgs, {
             ignoreReturnCode: true,
             silent: true,
             input: Buffer.from(loginData.password)
-        }).then(res => {
+        })
+            .then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
                 throw new Error(`failed to login: ${res.stderr.match(/(.*)\s*$/)[0].trim()}`);
             }
@@ -599,7 +586,7 @@ function getRepositoryUri(repositoryName) {
             }
             yield setRepositoryPolicy({
                 repositoryName,
-                policyText: policy,
+                policyText: policy
             });
             return repoData.repository;
         }
@@ -689,14 +676,14 @@ function run() {
                 image: inputs.tags[0],
                 ignoreThreats: inputs.ignoreThreats,
                 minimalSeverity: inputs.minimalSeverity,
-                x9ContainerDistro: inputs.x9ContainerDistro,
+                x9ContainerDistro: inputs.x9ContainerDistro
             });
             if (inputs.push) {
-                const imgName = ecrTags[0].replace(":latest", "");
+                const imgName = ecrTags[0].replace(':latest', '');
                 const pushArgs = ['push', '-a', imgName];
                 yield exec
                     .getExecOutput('docker', pushArgs, {
-                    ignoreReturnCode: true,
+                    ignoreReturnCode: true
                 })
                     .then(res => {
                     if (res.stderr.length > 0 && res.exitCode != 0) {
@@ -725,10 +712,10 @@ function cleanup() {
         }
     });
 }
-if (stateHelper.IsPre && !stateHelper.IsPost) {
+if (!stateHelper.IsPost) {
     run();
 }
-else if (!stateHelper.IsPre || stateHelper.IsPost) {
+else {
     cleanup();
 }
 //# sourceMappingURL=main.js.map
@@ -760,19 +747,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setTmpDir = exports.tmpDir = exports.IsPost = exports.IsPre = void 0;
+exports.setTmpDir = exports.tmpDir = exports.IsPost = void 0;
 const core = __importStar(__nccwpck_require__(2186));
-exports.IsPre = !!process.env['STATE_isPre'];
 exports.IsPost = !!process.env['STATE_isPost'];
 exports.tmpDir = process.env['STATE_tmpDir'] || '';
 function setTmpDir(tmpDir) {
     core.saveState('tmpDir', tmpDir);
 }
 exports.setTmpDir = setTmpDir;
-if (!exports.IsPre) {
-    core.saveState('isPre', 'true');
-}
-else if (exports.IsPre && !exports.IsPost) {
+if (!exports.IsPost) {
     core.saveState('isPost', 'true');
 }
 //# sourceMappingURL=state-helper.js.map
@@ -831,7 +814,6 @@ const LOW_VULNS_THRESHOLD = 250;
 const UNKNOWN_VULNS_THRESHOLD = 1000;
 const TRIVY_SCAN_FILENAME = 'image-vulnerabilities-trivy.txt';
 const CLAM_SCAN_FILENAME = 'recursive-root-dir-clamscan.txt';
-;
 function fetchX9Dockerfile(distro) {
     return __awaiter(this, void 0, void 0, function* () {
         const streamPipeline = util_1.promisify(stream_1.pipeline);
@@ -860,22 +842,11 @@ function minimalSeverity(config) {
 exports.minimalSeverity = minimalSeverity;
 function scanImage(image, severity) {
     return __awaiter(this, void 0, void 0, function* () {
-        const args = [
-            'build',
-            '-f',
-            'X9.Dockerfile',
-            '-t',
-            'suspectimage',
-            '--build-arg',
-            `IMAGE=${image}`,
-            '--build-arg',
-            `TRIVY_SEVERITY=${severity}`,
-            '.'
-        ];
+        const args = ['build', '-f', 'X9.Dockerfile', '-t', 'suspectimage', '--build-arg', `IMAGE=${image}`, '--build-arg', `TRIVY_SEVERITY=${severity}`, '.'];
         yield exec
             .getExecOutput('docker', args, {
             ignoreReturnCode: true,
-            silent: true,
+            silent: true
         })
             .then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
@@ -883,34 +854,30 @@ function scanImage(image, severity) {
             }
         });
         const scansFolder = './scans';
-        yield exec
-            .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
+        yield exec.getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
             ignoreReturnCode: true,
-            silent: true,
+            silent: true
         });
-        yield exec
-            .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
+        yield exec.getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
             ignoreReturnCode: true,
-            silent: true,
+            silent: true
         });
         // Cleanup
-        yield exec
-            .getExecOutput('docker', ['stop', 'suspectcontainer'], {
+        yield exec.getExecOutput('docker', ['stop', 'suspectcontainer'], {
             ignoreReturnCode: true,
-            silent: true,
+            silent: true
         });
-        yield exec
-            .getExecOutput('docker', ['rm', 'suspectcontainer'], {
+        yield exec.getExecOutput('docker', ['rm', 'suspectcontainer'], {
             ignoreReturnCode: true,
-            silent: true,
+            silent: true
         });
         var results = {
             clamReport: null,
-            trivyReport: null,
+            trivyReport: null
         };
         fs_1.readdirSync(scansFolder).forEach(report => {
             const file = `${scansFolder}/${report}`;
-            const content = fs_1.readFileSync(file, "utf8");
+            const content = fs_1.readFileSync(file, 'utf8');
             const result = { file, content };
             if (report === TRIVY_SCAN_FILENAME) {
                 results.trivyReport = result;
@@ -932,7 +899,7 @@ function processClamReport(result) {
         throw new Error(`missing totals: ${CLAM_SCAN_FILENAME}`);
     }
     const totals = summary[0].match(/\d+/);
-    if (totals === null || totals.some((value) => (isNaN(+value)))) {
+    if (totals === null || totals.some(value => isNaN(+value))) {
         throw new Error(`missing totals: ${CLAM_SCAN_FILENAME}`);
     }
     core.info(`ClamAV	${totals[0]}`);
@@ -950,30 +917,15 @@ function processTrivyReport(severity, result) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
     const totals = summary[0].match(/(\d+)/g);
-    if (totals === null || totals.some((value) => (isNaN(+value)))) {
+    if (totals === null || totals.some(value => isNaN(+value))) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
     core.info(`Trivy	${summary}`);
-    if (((severity === 'CRITICAL') &&
-        (+totals[1] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'HIGH') &&
-            (+totals[1] > HIGH_VULNS_THRESHOLD ||
-                +totals[2] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'MEDIUM') &&
-            (+totals[1] > MEDIUM_VULNS_THRESHOLD ||
-                +totals[2] > HIGH_VULNS_THRESHOLD ||
-                +totals[3] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'LOW') &&
-            (+totals[1] > LOW_VULNS_THRESHOLD ||
-                +totals[2] > MEDIUM_VULNS_THRESHOLD ||
-                +totals[3] > HIGH_VULNS_THRESHOLD ||
-                +totals[4] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'UNKNOWN') &&
-            (+totals[1] > UNKNOWN_VULNS_THRESHOLD ||
-                +totals[2] > LOW_VULNS_THRESHOLD ||
-                +totals[3] > MEDIUM_VULNS_THRESHOLD ||
-                +totals[4] > HIGH_VULNS_THRESHOLD ||
-                +totals[5] > CRITICAL_VULNS_THRESHOLD))) {
+    if ((severity === 'CRITICAL' && +totals[1] > CRITICAL_VULNS_THRESHOLD) ||
+        (severity === 'HIGH' && (+totals[1] > HIGH_VULNS_THRESHOLD || +totals[2] > CRITICAL_VULNS_THRESHOLD)) ||
+        (severity === 'MEDIUM' && (+totals[1] > MEDIUM_VULNS_THRESHOLD || +totals[2] > HIGH_VULNS_THRESHOLD || +totals[3] > CRITICAL_VULNS_THRESHOLD)) ||
+        (severity === 'LOW' && (+totals[1] > LOW_VULNS_THRESHOLD || +totals[2] > MEDIUM_VULNS_THRESHOLD || +totals[3] > HIGH_VULNS_THRESHOLD || +totals[4] > CRITICAL_VULNS_THRESHOLD)) ||
+        (severity === 'UNKNOWN' && (+totals[1] > UNKNOWN_VULNS_THRESHOLD || +totals[2] > LOW_VULNS_THRESHOLD || +totals[3] > MEDIUM_VULNS_THRESHOLD || +totals[4] > HIGH_VULNS_THRESHOLD || +totals[5] > CRITICAL_VULNS_THRESHOLD))) {
         throw new Error(`Trivy threat threshold exceeded, total vulnerabilities found: ${+totals[0]}`);
     }
 }
@@ -995,7 +947,6 @@ function checkImageThreats(config) {
     });
 }
 exports.checkImageThreats = checkImageThreats;
-;
 //# sourceMappingURL=x9.js.map
 
 /***/ }),
