@@ -105,10 +105,14 @@ export async function getArgs(inputs: Inputs, defaultContext: string, buildxVers
 }
 
 export async function generateECRTags(ecrRepository: string, tags: Array<string>): Promise<Array<string>> {
-  let ecrTags: Array<string> = [];
-  if (!tags.some(t => t === 'latest')) {
-    ecrTags.push(`${ecrRepository}:latest`)
+  let ecrTags: Array<string> = [`${ecrRepository}:latest`];
+
+  // Remove latest from tags
+  const index = tags.indexOf('latest')
+  if (index > -1) {
+    tags.splice(index, 1)
   }
+
   await asyncForEach(tags, async tag => {
     ecrTags.push(`${ecrRepository}:${tag}`)
   })
@@ -189,9 +193,6 @@ async function getCommonArgs(inputs: Inputs): Promise<Array<string>> {
   }
   if (inputs.network) {
     args.push('--network', inputs.network);
-  }
-  if (inputs.push) {
-    args.push('--push');
   }
   return args;
 }

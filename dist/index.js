@@ -314,9 +314,11 @@ function getArgs(inputs, defaultContext, buildxVersion) {
 exports.getArgs = getArgs;
 function generateECRTags(ecrRepository, tags) {
     return __awaiter(this, void 0, void 0, function* () {
-        let ecrTags = [];
-        if (!tags.some(t => t === 'latest')) {
-            ecrTags.push(`${ecrRepository}:latest`);
+        let ecrTags = [`${ecrRepository}:latest`];
+        // Remove latest from tags
+        const index = tags.indexOf('latest');
+        if (index > -1) {
+            tags.splice(index, 1);
         }
         yield exports.asyncForEach(tags, (tag) => __awaiter(this, void 0, void 0, function* () {
             ecrTags.push(`${ecrRepository}:${tag}`);
@@ -404,9 +406,6 @@ function getCommonArgs(inputs) {
         if (inputs.network) {
             args.push('--network', inputs.network);
         }
-        if (inputs.push) {
-            args.push('--push');
-        }
         return args;
     });
 }
@@ -486,39 +485,45 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.getRepositoryUri = exports.dockerLoginOnECR = void 0;
+exports.getRepositoryUri = exports.dockerLoginOnECR = exports.buildPolicy = void 0;
 const client_ecr_1 = __nccwpck_require__(4180);
 const credential_provider_node_1 = __nccwpck_require__(8030);
 const core = __importStar(__nccwpck_require__(2186));
 const exec = __importStar(__nccwpck_require__(1514));
-const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
+const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID || "";
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 const credentialsProvider = (input) => credential_provider_node_1.defaultProvider(Object.assign(Object.assign({}, input), { timeout: 20000 }));
 const client = new client_ecr_1.ECRClient({
     region: "us-east-1",
     credentialDefaultProvider: credentialsProvider,
 });
-const buildPolicy = ({ accountId }) => JSON.stringify({
-    "Version": "2008-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowPushPull",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": `arn:aws:iam::${accountId}:root`
-            },
-            "Action": [
-                "ecr:GetDownloadUrlForLayer",
-                "ecr:BatchGetImage",
-                "ecr:BatchCheckLayerAvailability",
-                "ecr:PutImage",
-                "ecr:InitiateLayerUpload",
-                "ecr:UploadLayerPart",
-                "ecr:CompleteLayerUpload"
-            ]
-        }
-    ]
-});
+function buildPolicy(accountId) {
+    if (accountId === "") {
+        throw new Error('missing AWS_ACCOUNT_ID env var');
+    }
+    return JSON.stringify({
+        "Version": "2008-10-17",
+        "Statement": [
+            {
+                "Sid": "AllowPushPull",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": `arn:aws:iam::${accountId}:root`
+                },
+                "Action": [
+                    "ecr:GetDownloadUrlForLayer",
+                    "ecr:BatchGetImage",
+                    "ecr:BatchCheckLayerAvailability",
+                    "ecr:PutImage",
+                    "ecr:InitiateLayerUpload",
+                    "ecr:UploadLayerPart",
+                    "ecr:CompleteLayerUpload"
+                ]
+            }
+        ]
+    });
+}
+exports.buildPolicy = buildPolicy;
 const getAuthorizationToken = (params) => client.send(new client_ecr_1.GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new client_ecr_1.SetRepositoryPolicyCommand(params));
 const describeRepo = (params) => client.send(new client_ecr_1.DescribeRepositoriesCommand(params));
@@ -585,7 +590,7 @@ function getRepositoryUri(repositoryName) {
         catch (error) {
             if (error.name !== 'RepositoryNotFoundException')
                 throw error;
-            const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID });
+            const policy = buildPolicy(AWS_ACCOUNT_ID);
             core.info(`Creating repository ${repositoryName}...`);
             core.info(`Policy: ${policy}`);
             const repoData = yield createRepo({ repositoryName });
@@ -686,6 +691,19 @@ function run() {
                 minimalSeverity: inputs.minimalSeverity,
                 x9ContainerDistro: inputs.x9ContainerDistro,
             });
+            if (inputs.push) {
+                const imgName = ecrTags[0].replace(":latest", "");
+                const pushArgs = ['push', '-a', imgName];
+                yield exec
+                    .getExecOutput('docker', pushArgs, {
+                    ignoreReturnCode: true,
+                })
+                    .then(res => {
+                    if (res.stderr.length > 0 && res.exitCode != 0) {
+                        throw new Error(`push failed with: ${res.stderr.match(/(.*)\s*$/)[0].trim()}`);
+                    }
+                });
+            }
             if (imageID) {
                 core.startGroup(`Extracting digest`);
                 core.info(`${imageID}`);
@@ -798,7 +816,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.checkImageThreats = void 0;
+exports.checkImageThreats = exports.processTrivyReport = exports.processClamReport = exports.scanImage = exports.minimalSeverity = exports.fetchX9Dockerfile = void 0;
 const fs_1 = __nccwpck_require__(5747);
 const stream_1 = __nccwpck_require__(2413);
 const util_1 = __nccwpck_require__(1669);
@@ -824,6 +842,7 @@ function fetchX9Dockerfile(distro) {
         yield streamPipeline(response.body, fs_1.createWriteStream('./X9.Dockerfile'));
     });
 }
+exports.fetchX9Dockerfile = fetchX9Dockerfile;
 function minimalSeverity(config) {
     switch (config) {
         case 'CRITICAL':
@@ -838,6 +857,7 @@ function minimalSeverity(config) {
             return 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
     }
 }
+exports.minimalSeverity = minimalSeverity;
 function scanImage(image, severity) {
     return __awaiter(this, void 0, void 0, function* () {
         const args = [
@@ -850,11 +870,13 @@ function scanImage(image, severity) {
             `IMAGE=${image}`,
             '--build-arg',
             `TRIVY_SEVERITY=${severity}`,
-            '--quiet',
             '.'
         ];
         yield exec
-            .getExecOutput('docker', args, { ignoreReturnCode: true })
+            .getExecOutput('docker', args, {
+            ignoreReturnCode: true,
+            silent: true,
+        })
             .then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
                 throw new Error(`buildx failed with: ${res.stderr.match(/(.*)\s*$/)[0].trim()}`);
@@ -864,17 +886,23 @@ function scanImage(image, severity) {
         yield exec
             .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
         });
         yield exec
             .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
         });
+        // Cleanup
         yield exec
             .getExecOutput('docker', ['stop', 'suspectcontainer'], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
+        });
+        yield exec
+            .getExecOutput('docker', ['rm', 'suspectcontainer'], {
+            ignoreReturnCode: true,
+            silent: true,
         });
         var results = {
             clamReport: null,
@@ -894,11 +922,12 @@ function scanImage(image, severity) {
         return results;
     });
 }
+exports.scanImage = scanImage;
 function processClamReport(result) {
     if (result === null) {
         throw new Error(`failed to read file: ${CLAM_SCAN_FILENAME}`);
     }
-    const summary = result.content.match(/^Infected files:.*/);
+    const summary = result.content.match(/^Infected files:.*/m);
     if (summary === null || summary.length === 0) {
         throw new Error(`missing totals: ${CLAM_SCAN_FILENAME}`);
     }
@@ -911,42 +940,44 @@ function processClamReport(result) {
         throw new Error(`ClamAV threat threshold exceeded: ${totals[0]}`);
     }
 }
+exports.processClamReport = processClamReport;
 function processTrivyReport(severity, result) {
     if (result === null) {
         throw new Error(`failed to read file: ${TRIVY_SCAN_FILENAME}`);
     }
-    const summary = result.content.match(/^Total:.*/);
+    const summary = result.content.match(/^Total:.*/m);
     if (summary === null || summary.length === 0) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
-    const totals = summary[0].match(/\d+/);
+    const totals = summary[0].match(/(\d+)/g);
     if (totals === null || totals.some((value) => (isNaN(+value)))) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
     core.info(`Trivy	${summary}`);
     if (((severity === 'CRITICAL') &&
-        (+totals[0] > CRITICAL_VULNS_THRESHOLD)) ||
+        (+totals[1] > CRITICAL_VULNS_THRESHOLD)) ||
         ((severity === 'HIGH') &&
-            (+totals[0] > HIGH_VULNS_THRESHOLD ||
-                +totals[1] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'MEDIUM') &&
-            (+totals[0] > MEDIUM_VULNS_THRESHOLD ||
-                +totals[1] > HIGH_VULNS_THRESHOLD ||
+            (+totals[1] > HIGH_VULNS_THRESHOLD ||
                 +totals[2] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'LOW') &&
-            (+totals[0] > LOW_VULNS_THRESHOLD ||
-                +totals[1] > MEDIUM_VULNS_THRESHOLD ||
+        ((severity === 'MEDIUM') &&
+            (+totals[1] > MEDIUM_VULNS_THRESHOLD ||
                 +totals[2] > HIGH_VULNS_THRESHOLD ||
                 +totals[3] > CRITICAL_VULNS_THRESHOLD)) ||
-        ((severity === 'UNKNOWN') &&
-            (+totals[0] > UNKNOWN_VULNS_THRESHOLD ||
-                +totals[1] > LOW_VULNS_THRESHOLD ||
+        ((severity === 'LOW') &&
+            (+totals[1] > LOW_VULNS_THRESHOLD ||
                 +totals[2] > MEDIUM_VULNS_THRESHOLD ||
                 +totals[3] > HIGH_VULNS_THRESHOLD ||
-                +totals[4] > CRITICAL_VULNS_THRESHOLD))) {
-        throw new Error(`report image threats file ${TRIVY_SCAN_FILENAME} threat threshold exceeded`);
+                +totals[4] > CRITICAL_VULNS_THRESHOLD)) ||
+        ((severity === 'UNKNOWN') &&
+            (+totals[1] > UNKNOWN_VULNS_THRESHOLD ||
+                +totals[2] > LOW_VULNS_THRESHOLD ||
+                +totals[3] > MEDIUM_VULNS_THRESHOLD ||
+                +totals[4] > HIGH_VULNS_THRESHOLD ||
+                +totals[5] > CRITICAL_VULNS_THRESHOLD))) {
+        throw new Error(`Trivy threat threshold exceeded, total vulnerabilities found: ${+totals[0]}`);
     }
 }
+exports.processTrivyReport = processTrivyReport;
 function checkImageThreats(config) {
     return __awaiter(this, void 0, void 0, function* () {
         core.startGroup('X9 will find something to blame now...');

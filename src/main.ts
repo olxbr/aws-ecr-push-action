@@ -53,6 +53,20 @@ async function run(): Promise<void> {
       x9ContainerDistro: inputs.x9ContainerDistro,
     })
 
+    if (inputs.push) {
+      const imgName = ecrTags[0].replace(":latest", "");
+      const pushArgs = ['push', '-a', imgName]
+      await exec
+        .getExecOutput('docker', pushArgs, {
+          ignoreReturnCode: true,
+        })
+        .then(res => {
+          if (res.stderr.length > 0 && res.exitCode != 0) {
+            throw new Error(`push failed with: ${res.stderr.match(/(.*)\s*$/)![0].trim()}`);
+          }
+        });
+    }
+
     if (imageID) {
       core.startGroup(`Extracting digest`);
       core.info(`${imageID}`);
