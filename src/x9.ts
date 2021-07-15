@@ -1,5 +1,3 @@
-
-import { spawn, spawnSync } from 'child_process';
 import { createWriteStream, readdirSync, readFileSync } from 'fs';
 import { pipeline } from 'stream';
 import { promisify } from 'util';
@@ -7,7 +5,6 @@ import fetch from 'node-fetch';
 
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
-import { file } from 'tmp';
 
 const VIRUS_THRESHOLD = 0;
 const CRITICAL_VULNS_THRESHOLD = 10;
@@ -35,7 +32,7 @@ export interface ScanResults {
     trivyReport: ScanResult | null,
 };
 
-async function fetchX9Dockerfile(distro: string): Promise<void> {
+export async function fetchX9Dockerfile(distro: string): Promise<void> {
     const streamPipeline = promisify(pipeline);
 
     const response = await fetch(`https://raw.githubusercontent.com/olxbr/X9Containers/main/${distro}.X9.Dockerfile`);
@@ -47,7 +44,7 @@ async function fetchX9Dockerfile(distro: string): Promise<void> {
     await streamPipeline(response.body, createWriteStream('./X9.Dockerfile'));
 }
 
-function minimalSeverity(config: string): string {
+export function minimalSeverity(config: string): string {
     switch (config) {
         case 'CRITICAL':
             return 'CRITICAL';
@@ -62,7 +59,7 @@ function minimalSeverity(config: string): string {
     }
 }
 
-async function scanImage(image: string, severity: string): Promise<ScanResults> {
+export async function scanImage(image: string, severity: string): Promise<ScanResults> {
     const args = [
         'build',
         '-f',
@@ -73,11 +70,13 @@ async function scanImage(image: string, severity: string): Promise<ScanResults> 
         `IMAGE=${image}`,
         '--build-arg',
         `TRIVY_SEVERITY=${severity}`,
-        '--quiet',
         '.'
     ]
     await exec
-        .getExecOutput('docker', args, { ignoreReturnCode: true })
+        .getExecOutput('docker', args, {
+            ignoreReturnCode: true,
+            silent: true,
+        })
         .then(res => {
             if (res.stderr.length > 0 && res.exitCode != 0) {
                 throw new Error(`buildx failed with: ${res.stderr.match(/(.*)\s*$/)![0].trim()}`);
@@ -88,17 +87,24 @@ async function scanImage(image: string, severity: string): Promise<ScanResults> 
     await exec
         .getExecOutput('docker', ['create', '--name', 'suspectcontainer', 'suspectimage'], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
         });
     await exec
         .getExecOutput('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
         });
+
+    // Cleanup
     await exec
         .getExecOutput('docker', ['stop', 'suspectcontainer'], {
             ignoreReturnCode: true,
-            silent: true
+            silent: true,
+        })
+    await exec
+        .getExecOutput('docker', ['rm', 'suspectcontainer'], {
+            ignoreReturnCode: true,
+            silent: true,
         })
 
     var results: ScanResults = {
@@ -119,11 +125,11 @@ async function scanImage(image: string, severity: string): Promise<ScanResults> 
     return results
 }
 
-function processClamReport(result: ScanResult | null) {
+export function processClamReport(result: ScanResult | null) {
     if (result === null) {
         throw new Error(`failed to read file: ${CLAM_SCAN_FILENAME}`)
     }
-    const summary = result.content.match(/^Infected files:.*/)
+    const summary = result.content.match(/^Infected files:.*/m)
     if (summary === null || summary.length === 0) {
         throw new Error(`missing totals: ${CLAM_SCAN_FILENAME}`);
     }
@@ -139,17 +145,17 @@ function processClamReport(result: ScanResult | null) {
     }
 }
 
-function processTrivyReport(severity: string, result: ScanResult | null) {
+export function processTrivyReport(severity: string, result: ScanResult | null) {
     if (result === null) {
         throw new Error(`failed to read file: ${TRIVY_SCAN_FILENAME}`)
     }
 
-    const summary = result.content.match(/^Total:.*/)
+    const summary = result.content.match(/^Total:.*/m)
     if (summary === null || summary.length === 0) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
 
-    const totals = summary[0].match(/\d+/)
+    const totals = summary[0].match(/(\d+)/g)
     if (totals === null || totals.some((value) => (isNaN(+value)))) {
         throw new Error(`missing totals: ${TRIVY_SCAN_FILENAME}`);
     }
@@ -158,40 +164,40 @@ function processTrivyReport(severity: string, result: ScanResult | null) {
     if (
         ((severity === 'CRITICAL') &&
             (
-                +totals[0] > CRITICAL_VULNS_THRESHOLD)
+                +totals[1] > CRITICAL_VULNS_THRESHOLD)
         ) ||
 
         ((severity === 'HIGH') &&
             (
-                +totals[0] > HIGH_VULNS_THRESHOLD ||
-                +totals[1] > CRITICAL_VULNS_THRESHOLD)
-        ) ||
-
-        ((severity === 'MEDIUM') &&
-            (
-                +totals[0] > MEDIUM_VULNS_THRESHOLD ||
                 +totals[1] > HIGH_VULNS_THRESHOLD ||
                 +totals[2] > CRITICAL_VULNS_THRESHOLD)
         ) ||
 
-        ((severity === 'LOW') &&
+        ((severity === 'MEDIUM') &&
             (
-                +totals[0] > LOW_VULNS_THRESHOLD ||
                 +totals[1] > MEDIUM_VULNS_THRESHOLD ||
                 +totals[2] > HIGH_VULNS_THRESHOLD ||
                 +totals[3] > CRITICAL_VULNS_THRESHOLD)
         ) ||
 
-        ((severity === 'UNKNOWN') &&
+        ((severity === 'LOW') &&
             (
-                +totals[0] > UNKNOWN_VULNS_THRESHOLD ||
                 +totals[1] > LOW_VULNS_THRESHOLD ||
                 +totals[2] > MEDIUM_VULNS_THRESHOLD ||
                 +totals[3] > HIGH_VULNS_THRESHOLD ||
                 +totals[4] > CRITICAL_VULNS_THRESHOLD)
+        ) ||
+
+        ((severity === 'UNKNOWN') &&
+            (
+                +totals[1] > UNKNOWN_VULNS_THRESHOLD ||
+                +totals[2] > LOW_VULNS_THRESHOLD ||
+                +totals[3] > MEDIUM_VULNS_THRESHOLD ||
+                +totals[4] > HIGH_VULNS_THRESHOLD ||
+                +totals[5] > CRITICAL_VULNS_THRESHOLD)
         )
     ) {
-        throw new Error(`report image threats file ${TRIVY_SCAN_FILENAME} threat threshold exceeded`);
+        throw new Error(`Trivy threat threshold exceeded, total vulnerabilities found: ${+totals[0]}`);
     }
 
 }

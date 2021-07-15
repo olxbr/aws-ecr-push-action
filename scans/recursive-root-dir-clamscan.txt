@@ -1,0 +1,13 @@
+/base-root/eicar.com: Win.Test.EICAR_HDB-1 FOUND
+
+----------- SCAN SUMMARY -----------
+Known viruses: 8545589
+Engine version: 0.103.2
+Scanned directories: 102
+Scanned files: 227
+Infected files: 1
+Data scanned: 28.09 MB
+Data read: 8.87 MB (ratio 3.17:1)
+Time: 37.937 sec (0 m 37 s)
+Start Date: 2021:07:14 19:47:26
+End Date:   2021:07:14 19:48:04

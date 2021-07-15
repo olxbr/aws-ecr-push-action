@@ -1,0 +1,10 @@
+2021-07-14T19:40:58.407Z	[34mINFO[0m	Need to update DB
+2021-07-14T19:40:58.407Z	[34mINFO[0m	Downloading DB...
+2021-07-14T19:41:22.366Z	[34mINFO[0m	Detected OS: alpine
+2021-07-14T19:41:22.366Z	[34mINFO[0m	Detecting Alpine vulnerabilities...
+2021-07-14T19:41:22.370Z	[34mINFO[0m	Number of language-specific files: 0
+
+localhost (alpine 3.14.0)
+=========================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+

@@ -146,7 +146,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -162,7 +163,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -180,7 +182,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -200,7 +203,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -219,7 +223,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -235,7 +240,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -252,7 +258,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -270,7 +277,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -292,7 +300,8 @@ describe('getArgs', () => {
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'true'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -326,7 +335,8 @@ ccc"`],
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'true'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -363,7 +373,8 @@ ccc`],
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'true'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -392,7 +403,8 @@ ccc`],
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'true'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',
@@ -415,7 +427,8 @@ ccc`],
         ['load', 'false'],
         ['no-cache', 'false'],
         ['push', 'false'],
-        ['pull', 'false']
+        ['pull', 'false'],
+        ['ignore_threats', 'false']
       ]),
       [
         'buildx',

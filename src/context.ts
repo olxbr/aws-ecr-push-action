@@ -6,7 +6,7 @@ import * as semver from 'semver';
 import * as tmp from 'tmp';
 
 import * as core from '@actions/core';
-import {issueCommand} from '@actions/core/lib/command';
+import { issueCommand } from '@actions/core/lib/command';
 import * as github from '@actions/github';
 
 import * as buildx from './buildx';
@@ -20,9 +20,12 @@ export interface Inputs {
   cacheFrom: string[];
   cacheTo: string[];
   context: string;
+  ecrRepository: string;
   file: string;
+  ignoreThreats: boolean;
   labels: string[];
   load: boolean;
+  minimalSeverity: string;
   network: string;
   noCache: boolean;
   outputs: string[];
@@ -35,9 +38,6 @@ export interface Inputs {
   tags: string[];
   target: string;
   githubToken: string;
-  ecrRepository: string;
-  minimalSeverity: string;
-  ignoreThreats: boolean;
   x9ContainerDistro: string;
 }
 
@@ -231,5 +231,5 @@ export const asyncForEach = async (array, callback) => {
 
 // FIXME: Temp fix https://github.com/actions/toolkit/issues/777
 export function setOutput(name: string, value: any): void {
-  issueCommand('set-output', {name}, value);
+  issueCommand('set-output', { name }, value);
 }

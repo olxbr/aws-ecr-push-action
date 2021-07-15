@@ -44,11 +44,11 @@
     "@types/tmp": "^0.2.0",
     "@vercel/ncc": "^0.28.6",
     "dotenv": "^8.6.0",
-    "jest": "^26.6.3",
+    "jest": "^27.0.6",
     "jest-circus": "^26.6.3",
     "jest-runtime": "^26.6.3",
     "prettier": "^2.3.1",
-    "ts-jest": "^26.5.6",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.3.4",
     "typescript-formatter": "^7.2.2"
   }
