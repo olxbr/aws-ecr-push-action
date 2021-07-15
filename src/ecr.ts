@@ -11,7 +11,7 @@ import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
 
-const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID
+const AWS_ACCOUNT_ID : string = process.env.AWS_ACCOUNT_ID || ""
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`
 
 const credentialsProvider = (input: any) => defaultProvider({ ...input, timeout: 20000 })
@@ -21,7 +21,11 @@ const client = new ECRClient({
     credentialDefaultProvider: credentialsProvider,
 })
 
-const buildPolicy = ({ accountId }) => JSON.stringify({
+export function buildPolicy(accountId: string): string {
+    if (accountId === "") {
+        throw new Error('missing AWS_ACCOUNT_ID env var')
+    }
+    return JSON.stringify({
     "Version": "2008-10-17",
     "Statement": [
         {
@@ -40,8 +44,8 @@ const buildPolicy = ({ accountId }) => JSON.stringify({
                 "ecr:CompleteLayerUpload"
             ]
         }
-    ]
-})
+    ]});
+}
 
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params))
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params))
@@ -111,7 +115,7 @@ export async function getRepositoryUri(repositoryName: string) : Promise<Reposit
         return repo.repositories[0]
     } catch(error) {
         if (error.name !== 'RepositoryNotFoundException') throw error
-        const policy = buildPolicy({ accountId: AWS_ACCOUNT_ID })
+        const policy = buildPolicy(AWS_ACCOUNT_ID);
 
         core.info(`Creating repository ${repositoryName}...`)
         core.info(`Policy: ${policy}`)
