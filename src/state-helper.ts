@@ -9,7 +9,7 @@ export function setTmpDir(tmpDir: string) {
 }
 
 if (!IsPre) {
-  core.saveState('isPre', 'true')
+  core.saveState('isPre', 'true');
 } else if (IsPre && !IsPost) {
-  core.saveState('isPost', 'true')
+  core.saveState('isPost', 'true');
 }

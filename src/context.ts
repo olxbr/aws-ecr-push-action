@@ -6,7 +6,7 @@ import * as semver from 'semver';
 import * as tmp from 'tmp';
 
 import * as core from '@actions/core';
-import { issueCommand } from '@actions/core/lib/command';
+import {issueCommand} from '@actions/core/lib/command';
 import * as github from '@actions/github';
 
 import * as buildx from './buildx';
@@ -108,15 +108,15 @@ export async function generateECRTags(ecrRepository: string, tags: Array<string>
   let ecrTags: Array<string> = [`${ecrRepository}:latest`];
 
   // Remove latest from tags
-  const index = tags.indexOf('latest')
+  const index = tags.indexOf('latest');
   if (index > -1) {
-    tags.splice(index, 1)
+    tags.splice(index, 1);
   }
 
   await asyncForEach(tags, async tag => {
-    ecrTags.push(`${ecrRepository}:${tag}`)
-  })
-  return ecrTags
+    ecrTags.push(`${ecrRepository}:${tag}`);
+  });
+  return ecrTags;
 }
 
 async function getBuildArgs(inputs: Inputs, defaultContext: string, buildxVersion: string): Promise<Array<string>> {
@@ -232,5 +232,5 @@ export const asyncForEach = async (array, callback) => {
 
 // FIXME: Temp fix https://github.com/actions/toolkit/issues/777
 export function setOutput(name: string, value: any): void {
-  issueCommand('set-output', { name }, value);
+  issueCommand('set-output', {name}, value);
 }

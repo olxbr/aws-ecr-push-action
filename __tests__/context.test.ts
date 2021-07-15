@@ -311,7 +311,6 @@ describe('getArgs', () => {
         '--secret', 'id=GIT_AUTH_TOKEN,src=/tmp/.docker-build-push-jest/.tmpname-jest',
         '--file', './test/Dockerfile',
         '--builder', 'builder-git-context-2',
-        '--push',
         'https://github.com/docker/build-push-action.git#refs/heads/master'
       ]
     ],
@@ -349,7 +348,6 @@ ccc"`],
         '--secret', 'id=EMPTYLINE,src=/tmp/.docker-build-push-jest/.tmpname-jest',
         '--file', './test/Dockerfile',
         '--builder', 'builder-git-context-2',
-        '--push',
         'https://github.com/docker/build-push-action.git#refs/heads/master'
       ]
     ],
@@ -387,7 +385,6 @@ ccc`],
         '--secret', 'id=EMPTYLINE,src=/tmp/.docker-build-push-jest/.tmpname-jest',
         '--file', './test/Dockerfile',
         '--builder', 'builder-git-context-2',
-        '--push',
         'https://github.com/docker/build-push-action.git#refs/heads/master'
       ]
     ],
@@ -414,7 +411,6 @@ ccc`],
         '--file', './test/Dockerfile',
         '--builder', 'builder-git-context-2',
         '--network', 'host',
-        '--push',
         'https://github.com/docker/build-push-action.git#refs/heads/master'
       ]
     ],

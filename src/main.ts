@@ -4,8 +4,8 @@ import * as context from './context';
 import * as stateHelper from './state-helper';
 import * as core from '@actions/core';
 import * as exec from '@actions/exec';
-import { checkImageThreats }  from './x9';
-import { dockerLoginOnECR, getRepositoryUri } from './ecr';
+import {checkImageThreats} from './x9';
+import {dockerLoginOnECR, getRepositoryUri} from './ecr';
 
 async function run(): Promise<void> {
   try {
@@ -14,7 +14,7 @@ async function run(): Promise<void> {
     await exec.exec('docker', ['info']);
     core.endGroup();
 
-    await dockerLoginOnECR()
+    await dockerLoginOnECR();
 
     if (!(await buildx.isAvailable())) {
       core.setFailed(`Docker buildx is required. See https://github.com/docker/setup-buildx-action to set up buildx.`);
@@ -28,7 +28,7 @@ async function run(): Promise<void> {
 
     const repository = await getRepositoryUri(inputs.ecrRepository);
     if (repository.repositoryUri === undefined) {
-      throw new Error(`failed to get repositoryUri`)
+      throw new Error(`failed to get repositoryUri`);
     }
     const ecrTags = await context.generateECRTags(repository.repositoryUri, inputs.tags);
     inputs.tags = ecrTags;
@@ -50,15 +50,15 @@ async function run(): Promise<void> {
       image: inputs.tags[0],
       ignoreThreats: inputs.ignoreThreats,
       minimalSeverity: inputs.minimalSeverity,
-      x9ContainerDistro: inputs.x9ContainerDistro,
-    })
+      x9ContainerDistro: inputs.x9ContainerDistro
+    });
 
     if (inputs.push) {
-      const imgName = ecrTags[0].replace(":latest", "");
-      const pushArgs = ['push', '-a', imgName]
+      const imgName = ecrTags[0].replace(':latest', '');
+      const pushArgs = ['push', '-a', imgName];
       await exec
         .getExecOutput('docker', pushArgs, {
-          ignoreReturnCode: true,
+          ignoreReturnCode: true
         })
         .then(res => {
           if (res.stderr.length > 0 && res.exitCode != 0) {
@@ -88,6 +88,6 @@ async function cleanup(): Promise<void> {
 
 if (stateHelper.IsPre && !stateHelper.IsPost) {
   run();
-} else if (!stateHelper.IsPre || stateHelper.IsPost){
+} else if (!stateHelper.IsPre || stateHelper.IsPost) {
   cleanup();
 }
