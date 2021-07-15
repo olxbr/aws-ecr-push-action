@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   minimal:
@@ -66,6 +66,11 @@ jobs:
           tags: |
             localhost:5000/name/app:latest
             localhost:5000/name/app:1.0.0
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -129,6 +134,11 @@ jobs:
 
             bbbb
             ccc"
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -187,6 +197,11 @@ jobs:
           tags: |
             localhost:5000/name/app:latest
             localhost:5000/name/app:1.0.0
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -224,6 +239,11 @@ jobs:
         with:
           context: ./test
           file: ./test/Dockerfile
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Check
         run: |
@@ -260,6 +280,11 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
           tags: localhost:5000/name/app:latest
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Check
         run: |
@@ -293,6 +318,11 @@ jobs:
           file: ./test/Dockerfile
           push: true
           tags: localhost:5000/name/app:latest
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Dump context
         if: always()
@@ -312,6 +342,11 @@ jobs:
           file: ./test/Dockerfile
           load: true
           tags: myimage:latest
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -340,6 +375,11 @@ jobs:
           context: ./test
           tags: name/app:latest
           network: host
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Dump context
         if: always()
@@ -388,6 +428,11 @@ jobs:
           tags: |
             localhost:5000/name/app:latest
             localhost:5000/name/app:1.0.0
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -443,6 +488,11 @@ jobs:
             localhost:5000/name/app:1.0.0
           cache-from: type=registry,ref=localhost:5000/name/app
           cache-to: type=inline
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect (1)
         run: |
@@ -476,6 +526,11 @@ jobs:
             localhost:5000/name/app:1.0.0
           cache-from: type=registry,ref=localhost:5000/name/app
           cache-to: type=inline
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect (2)
         run: |
@@ -553,6 +608,11 @@ jobs:
             localhost:5000/name/app:1.0.0
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
@@ -618,6 +678,11 @@ jobs:
             localhost:5000/name/app:1.0.0
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+        env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_CROSS_SECRET_ACCESS_KEY }}
+          AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
       -
         name: Inspect
         run: |
