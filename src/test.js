@@ -1,9 +1,7 @@
 const {
   getRepositoryUri,
   dockerLoginOnECR,
-  buildImage,
   reportImageThreats,
-  tagImage,
   pushImage
 } = require('./main');
 
@@ -34,10 +32,8 @@ const test = async () => {
     const output = await getRepositoryUri(params);
 
     await dockerLoginOnECR();
-    buildImage(params);
     reportImageThreats(params);
     tags.forEach((tag) => {
-      tagImage({ ...params, tag });
       pushImage({ ...params, tag });
     });
   } catch(e) {
