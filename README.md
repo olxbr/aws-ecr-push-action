@@ -3,7 +3,7 @@ Action to push images to Amazon's Elastic Container Registry.
 
 ### Usage
 
-Make sure to checkout the repo so the workflow can see your Dockerfile
+Make sure to checkout the repo so the workflow can see your Dockerfile.
 
 ```yaml
 on: [push]
@@ -17,7 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Docker build and push to ECR
+      # Exemple of build using docker
+      - name: Docker Build
+        env:
+            ECR_REPOSITORY: 'cross/devtools/momo'
+        run: |
+            docker build -t ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest
+            docker tag ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:0.2.2
+            docker tag ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:beta
+
+      - name: Push to ECR
         uses: olxbr/aws-ecr-push-action@v0
         id: ecr
         with:
@@ -33,3 +42,6 @@ jobs:
           AWS_PRINCIPAL_RULES: ${{ secrets.AWS_PRINCIPAL_RULES }}
 
 ```
+
+> The image need to be at te format `CONTAINER_REGISTRY_HOST/ECR_REPOSITORY:TAG`
+> For this, you can use the secret `CONTAINER_REGISTRY_HOST` to add this prefix.

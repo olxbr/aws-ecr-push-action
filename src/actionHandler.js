@@ -2,9 +2,7 @@ const core = require('@actions/core');
 const {
   getRepositoryUri,
   dockerLoginOnECR,
-  buildImage,
   reportImageThreats,
-  tagImage,
   pushImage
 } = require('./main');
 const { cleanup } = require('./cleanup');
@@ -39,10 +37,8 @@ const run = async () => {
     core.setOutput('repository_uri', output.repositoryUri);
 
     await dockerLoginOnECR();
-    buildImage(params);
     reportImageThreats(params);
     tags.forEach((tag) => {
-      tagImage({ ...params, tag });
       pushImage({ ...params, tag });
     });
 
