@@ -59,18 +59,6 @@ const getRepositoryUri = async (config) =>
     .then(data => data.repositories[0])
     .catch(describeRepoErrorHandler(config));
 
-const buildImage = (config) => {
-  console.log('Building image...');
-  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`;
-  return executeSyncCmd('docker', [`build`, `-t`, imageName, '.']);
-};
-
-const tagImage = (config) => {
-  console.log(`Tagging image with ${config.tag}...`);
-  const imageName = `${ECR_ENDPOINT}/${config.repositoryNames[0]}`;
-  return executeSyncCmd('docker', [`tag`, imageName, `${imageName}:${config.tag}`]);
-};
-
 const parseAuthToken = async () => {
   console.log('Getting ECR auth token...');
   const response = await getAuthorizationToken({ registryIds: [AWS_ACCOUNT_ID] });
@@ -145,7 +133,7 @@ const reportImageThreats = (config) => {
       '-t',
       'suspectimage',
       '--build-arg',
-      `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`,
+      `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--quiet',
@@ -245,12 +233,14 @@ const reportImageThreats = (config) => {
 
   // End scan
   console.log('report image threats successfully finished');
+
+  // Cleanup suspectcontainer
+  executeSyncCmd('docker', ['rm', 'suspectcontainer']);
+
   return 'report image threats successfully finished';
 };
 
 exports.getRepositoryUri = getRepositoryUri;
 exports.dockerLoginOnECR = dockerLoginOnECR;
-exports.buildImage = buildImage;
 exports.reportImageThreats = reportImageThreats;
-exports.tagImage = tagImage;
 exports.pushImage = pushImage;
