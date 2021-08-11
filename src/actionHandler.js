@@ -5,6 +5,7 @@ const {
   reportImageThreats,
   pushImage
 } = require('./main');
+const { sendMetrics } = require('./metrics');
 const { cleanup } = require('./cleanup');
 
 const IsPre = !!process.env['STATE_isPre'];
@@ -31,6 +32,10 @@ const run = async () => {
       x9ContainerDistro,
       ignoreThreats
     };
+
+    await sendMetrics({
+      "inputs.ignoreThreats": ignoreThreats
+    })
 
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
