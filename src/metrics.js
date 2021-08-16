@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const METRICS_SERVER_ENDPOINT = process.env.METRICS_SERVER_ENDPOINT
+const METRICS_SERVER_ENDPOINT = 'https://gh-hooks.olxbr.io/custom-metrics'
 
 export const sendMetrics = async (customMetrics = {}) => {
   try {
