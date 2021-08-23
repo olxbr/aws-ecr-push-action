@@ -136,7 +136,6 @@ const reportImageThreats = (config) => {
       `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
-      '--quiet',
       '.'
     ],
     'report image threats docker build failed'
