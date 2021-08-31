@@ -103,6 +103,7 @@ const reportImageThreats = (config) => {
     ],
     'report image threats curl failed'
   );
+  console.log('X9 Dockerfile Downloaded...');
 
   // Run image scan
   var minimalSeverity = '';
@@ -124,20 +125,26 @@ const reportImageThreats = (config) => {
       minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
       break;
   }
+  console.log('X9 Dockerfile Downloaded...');
+  const aux = [
+    'build',
+    '-f',
+    'X9.Dockerfile',
+    '-t',
+    'suspectimage',
+    '--build-arg',
+    `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tags[0]}`,
+    '--build-arg',
+    `TRIVY_SEVERITY=${minimalSeverity}`,
+    '.'
+  ]
+
+  console.log(aux);
+  console.log('Docker command running...');
+
   executeSyncCmd(
     'docker',
-    [
-      'build',
-      '-f',
-      'X9.Dockerfile',
-      '-t',
-      'suspectimage',
-      '--build-arg',
-      `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tags[0]}`,
-      '--build-arg',
-      `TRIVY_SEVERITY=${minimalSeverity}`,
-      '.'
-    ],
+    aux,
     'report image threats docker build failed'
   );
 
