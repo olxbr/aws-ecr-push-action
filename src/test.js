@@ -10,6 +10,7 @@ const TAGS = '0.2.2,beta'
 const MINIMAL_SEVERITY = 'UNKNOWN'
 const X9_CONTAINER_DISTRO = 'distroless.clamav.trivy'
 const IGNORE_THREATS = 'true'
+const SKIP_X9_VERIFICATION = 'true'
 
 
 const test = async () => {
@@ -19,6 +20,7 @@ const test = async () => {
     const minimalSeverity = MINIMAL_SEVERITY;
     const x9ContainerDistro = X9_CONTAINER_DISTRO;
     const ignoreThreats = IGNORE_THREATS;
+    const skipX9Verification = SKIP_X9_VERIFICATION;
 
     const params = {
       repositoryNames: [REPO],
@@ -32,7 +34,11 @@ const test = async () => {
     const output = await getRepositoryUri(params);
 
     await dockerLoginOnECR();
-    reportImageThreats(params);
+    if (SKIP_X9_VERIFICATION === 'false') {
+      reportImageThreats(params);
+    } else {
+      console.log('Skipping X9 Verification');
+    }
     tags.forEach((tag) => {
       pushImage({ ...params, tag });
     });
