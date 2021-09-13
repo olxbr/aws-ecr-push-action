@@ -16,12 +16,14 @@ const run = async () => {
     const minimalSeverity = core.getInput('minimal_severity');
     const x9ContainerDistro = core.getInput('x9_container_distro');
     const ignoreThreats = core.getInput('ignore_threats');
+    const skipX9Verification = core.getInput('skip_x9_verification');
     const params = {
       repositoryNames: [REPO],
       tags,
       minimalSeverity,
       x9ContainerDistro,
-      ignoreThreats
+      ignoreThreats,
+      skipX9Verification
     };
 
     console.log(`Looking for repo ${REPO}...`);
@@ -30,7 +32,11 @@ const run = async () => {
 
     await dockerLoginOnECR();
     buildImage(params);
-    reportImageThreats(params);
+    if (skipX9Verification === 'false') {
+      reportImageThreats(params);
+    } else {
+      console.log('Skipping X9 Verification');
+    }
     tags.forEach((tag) => {
       tagImage({ ...params, tag });
       pushImage({ ...params, tag });
