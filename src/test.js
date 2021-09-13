@@ -5,7 +5,7 @@ const {
   pushImage
 } = require('./main');
 
-const ECR_REPO = 'cross/devtools/momo'
+const ECR_REPO = 'cross/dev-tools/momo'
 const TAGS = '0.2.2,beta'
 const MINIMAL_SEVERITY = 'UNKNOWN'
 const X9_CONTAINER_DISTRO = 'distroless.clamav.trivy'
