@@ -145,6 +145,8 @@ const reportImageThreats = (config) => {
       '-t',
       'suspectimage',
       '--build-arg',
+      `BASE_IMAGE=${ECR_ENDPOINT}/base_images/alpine:3.14-base`,
+      '--build-arg',
       `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:latest`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
