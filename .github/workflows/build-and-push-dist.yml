@@ -1,8 +1,6 @@
 name: Build and push dist
 
 on:
-  push:
-    branches-ignore: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -15,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: yarn
         
-      - name: Build dist (test)
+      - name: Build dist
         run: yarn build
 
       - name: Commit dist
