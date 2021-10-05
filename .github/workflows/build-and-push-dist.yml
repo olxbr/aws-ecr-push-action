@@ -19,10 +19,10 @@ jobs:
           key: ${{ runner.os }}-aws-ecr-push-action-node-modules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-aws-ecr-push-action-node-modules
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn install --frozen-lockfile
         
-      - name: Build Dist
+      - name: Build dist
         run: yarn build
 
       - name: Commit dist
