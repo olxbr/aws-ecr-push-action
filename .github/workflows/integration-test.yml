@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Tigger
         run: |
-          curl -X POST https://api.github.com/repos/olxbr/devtools-scripts/dispatches \
+          curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
             -H 'Accept: application/vnd.github.everest-preview+json' \
             -H 'Authorization: token ${{ secrets.PAT }}' \
             --data '{"event_type": "ecr-push", "client_payload": { "version": "${GITHUB_REF#refs/heads/}", "pr_number": "'"${PR_NUMBER}"'" }}'
