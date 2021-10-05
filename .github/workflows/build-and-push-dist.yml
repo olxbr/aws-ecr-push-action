@@ -1,0 +1,33 @@
+name: Build and push dist
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-push-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+            */**/node_modules
+          key: ${{ runner.os }}-aws-ecr-push-action-node-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-aws-ecr-push-action-node-modules
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Build Dist
+        run: yarn build
+
+      - name: Commit dist
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: 'dist/index.js'
+          default_author: github_actions
+          message: 'Build dist'
