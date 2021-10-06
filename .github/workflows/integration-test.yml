@@ -11,7 +11,7 @@ jobs:
       - name: Create Branch
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
-            GITHUB_TOKEN: ${{ github.github_token }}
+            GITHUB_TOKEN: ${{ github.token }}
         with:
             branch: 'v1-beta'
 
