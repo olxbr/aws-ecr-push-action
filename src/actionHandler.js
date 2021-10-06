@@ -19,7 +19,6 @@ if (!IsPre) {
 
 const run = async () => {
   try {
-
     const REPO = core.getInput('ecr_repository');
     const tags = core.getInput('tags').split(',');
     const minimalSeverity = core.getInput('minimal_severity');
