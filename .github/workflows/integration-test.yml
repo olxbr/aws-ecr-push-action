@@ -8,6 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+            GITHUB_TOKEN: ${{ github.github_token }}
+        with:
+            branch: 'v1-beta'
+
       - name: Merge current branch -> v1-beta
         uses: devmasx/merge-branch@1.4.0
         with:
@@ -26,6 +33,7 @@ jobs:
             -H 'Accept: application/vnd.github.everest-preview+json' \
             -H 'Authorization: token ${{ secrets.PAT }}' \
             --data '{"event_type": "ecr-push", "client_payload": { "version": "${GITHUB_REF#refs/heads/}", "pr_number": "'"${PR_NUMBER}"'" }}'
-      - name: Wait 60s
+
+      - name: Wait 2min
         run: |
-          sleep 60s
+          sleep 120s
