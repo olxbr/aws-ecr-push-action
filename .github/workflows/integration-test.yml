@@ -24,6 +24,7 @@ jobs:
 
   trigger:
     runs-on: ubuntu-latest
+    needs: [prepare_branch]
     env:
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
