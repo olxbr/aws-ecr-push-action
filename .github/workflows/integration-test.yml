@@ -27,6 +27,10 @@ jobs:
     env:
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
+      - name: Wait to branch
+        run: |
+          sleep 10s
+
       - name: Tigger
         run: |
           curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
