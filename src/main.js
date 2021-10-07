@@ -176,6 +176,7 @@ const reportImageThreats = (config) => {
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
+  
   console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
   executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
   executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
