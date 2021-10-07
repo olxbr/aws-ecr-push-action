@@ -12,9 +12,9 @@ const IsPre = !!process.env['STATE_isPre'];
 const IsPost = !!process.env['STATE_isPost'];
 
 if (!IsPre) {
-  core.saveState('isPre', 'true')
+  core.saveState('isPre', 'true');
 } else if (IsPre && !IsPost) {
-  core.saveState('isPost', 'true')
+  core.saveState('isPost', 'true');
 }
 
 const run = async () => {
@@ -23,36 +23,26 @@ const run = async () => {
     const REPO = core.getInput('ecr_repository');
     const tags = core.getInput('tags').split(',');
     const minimalSeverity = core.getInput('minimal_severity');
-    const x9ContainerDistro = core.getInput('x9_container_distro');
+    const x9ContainersDistro = core.getInput('x9Containers_distro');
     const ignoreThreats = core.getInput('ignore_threats');
-    const skipX9Verification = core.getInput('skip_x9_verification');
     const params = {
       repositoryNames: [REPO],
       tags,
       minimalSeverity,
-      x9ContainerDistro,
-      ignoreThreats,
-      skipX9Verification
+      x9ContainersDistro,
+      ignoreThreats
     };
 
     await sendMetrics({
-      "inputs.ignoreThreats": ignoreThreats
-    })
-
-    await sendMetrics({
-      "inputs.skipX9Verification": skipX9Verification
-    })
+      "inputs.ignoreThreats": ignoreThreats === 'true'
+    });
 
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
     core.setOutput('repository_uri', output.repositoryUri);
 
     await dockerLoginOnECR();
-    if (skipX9Verification === 'false') {
-      reportImageThreats(params);
-    } else {
-      console.log('Skipping X9 Verification');
-    }
+    reportImageThreats(params);
     tags.forEach((tag) => {
       pushImage({ ...params, tag });
     });
@@ -64,6 +54,6 @@ const run = async () => {
 
 if (IsPre && !IsPost) {
   run();
-} else if (!IsPre || IsPost){
+} else if (!IsPre || IsPost) {
   cleanup();
 }

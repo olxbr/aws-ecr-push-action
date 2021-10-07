@@ -5,12 +5,11 @@ const {
   pushImage
 } = require('./main');
 
-const ECR_REPO = 'cross/dev-tools/momo'
-const TAGS = '0.2.2,beta'
-const MINIMAL_SEVERITY = 'UNKNOWN'
-const X9_CONTAINER_DISTRO = 'distroless.clamav.trivy'
-const IGNORE_THREATS = 'true'
-const SKIP_X9_VERIFICATION = 'true'
+const ECR_REPO = 'cross/dev-tools/momo';
+const TAGS = '0.2.2,beta';
+const MINIMAL_SEVERITY = 'UNKNOWN';
+const X9CONTAINERS_DISTRO = 'distroless.clamav.trivy';
+const IGNORE_THREATS = 'true';
 
 
 const test = async () => {
@@ -18,15 +17,13 @@ const test = async () => {
     const tags = TAGS.split(',');
     const REPO = ECR_REPO;
     const minimalSeverity = MINIMAL_SEVERITY;
-    const x9ContainerDistro = X9_CONTAINER_DISTRO;
+    const x9ContainersDistro = X9CONTAINERS_DISTRO;
     const ignoreThreats = IGNORE_THREATS;
-    const skipX9Verification = SKIP_X9_VERIFICATION;
-
     const params = {
       repositoryNames: [REPO],
       tags,
       minimalSeverity,
-      x9ContainerDistro,
+      x9ContainersDistro,
       ignoreThreats
     };
 
@@ -34,17 +31,13 @@ const test = async () => {
     const output = await getRepositoryUri(params);
 
     await dockerLoginOnECR();
-    if (SKIP_X9_VERIFICATION === 'false') {
-      reportImageThreats(params);
-    } else {
-      console.log('Skipping X9 Verification');
-    }
+    reportImageThreats(params);
     tags.forEach((tag) => {
       pushImage({ ...params, tag });
     });
-  } catch(e) {
+  } catch (e) {
     console.log(e)
   }
 }
 
-test()
+test();
