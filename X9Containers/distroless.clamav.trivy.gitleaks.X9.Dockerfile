@@ -38,3 +38,4 @@ FROM base as final-stage
 WORKDIR /scans
 COPY --from=clamscan-stage /scans/recursive-root-dir-clamscan.txt ./recursive-root-dir-clamscan.txt
 COPY --from=trivy-stage /scans/image-vulnerabilities-trivy.txt ./image-vulnerabilities-trivy.txt
+COPY --from=gitleaks-stage /scans/gitleaks-leaks-result.txt ./gitleaks-leaks-result.txt
