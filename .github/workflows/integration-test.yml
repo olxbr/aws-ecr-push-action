@@ -1,0 +1,44 @@
+name: Trigger Integration Tests
+
+on: [pull_request]
+
+jobs:
+  prepare_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+            GITHUB_TOKEN: ${{ github.token }}
+        with:
+            branch: 'v1-beta'
+
+      - name: Merge current branch -> v1-beta
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: v1-beta
+          github_token: ${{ github.token }}
+
+  trigger:
+    runs-on: ubuntu-latest
+    needs: [prepare_branch]
+    env:
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Wait to branch
+        run: |
+          sleep 10s
+
+      - name: Tigger
+        run: |
+          curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
+            -H 'Accept: application/vnd.github.everest-preview+json' \
+            -H 'Authorization: token ${{ secrets.PAT }}' \
+            --data '{"event_type": "ecr-push", "client_payload": { "version": "${GITHUB_REF#refs/heads/}", "pr_number": "'"${PR_NUMBER}"'" }}'
+
+      - name: Wait 2min
+        run: |
+          sleep 120s
