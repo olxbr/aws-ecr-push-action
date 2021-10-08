@@ -31,11 +31,8 @@ RUN clamscan -ri /base-root >> recursive-root-dir-clamscan.txt
 
 FROM base-stage as gitleaks-stage
 WORKDIR /scans
-CMD ["/bin/sh"]
-RUN /bin/sh -c adduser -D gitleaks && apk add --no-cache bash git openssh-client
-COPY --from=gitleaks /usr/bin/ /usr/bin/
-USER gitleaks
-RUN gitleaks --path="/base-root" --report="/scans/gitleaks-leaks-result.txt" --format=CSV --redact --leaks-exit-code=0 --quiet 
+COPY --from=gitleaks /usr/bin/gitleaks /usr/local/bin/gitleaks
+RUN gitleaks --quiet --path="/base-root" --no-git --report="gitleaks-leaks-result.txt" --format=CSV --redact --leaks-exit-code=0
 
 FROM base as final-stage
 WORKDIR /scans
