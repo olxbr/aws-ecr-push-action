@@ -31,8 +31,8 @@ RUN clamscan -ri /base-root >> recursive-root-dir-clamscan.txt
 
 FROM base-stage as gitleaks-stage
 WORKDIR /scans
-COPY --from=gitleaks /usr/bin/gitleaks /usr/bin/
-RUN gitleaks --path=/base-root --report=gitleaks-leaks-result.txt --format=CSV --leaks-exit-code=0
+COPY --from=gitleaks /usr/bin/* /usr/local/bin/
+RUN gitleaks --path=/base-root --report=/scans/gitleaks-leaks-result.txt --format=CSV --leaks-exit-code=0 --quiet --redact
 
 FROM base as final-stage
 WORKDIR /scans
