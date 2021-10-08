@@ -3,12 +3,14 @@ ARG CLAMAV_IMAGE
 ARG TRIVY_IMAGE
 ARG BASE_IMAGE
 ARG TARGET_IMAGE
+# TRIVY_SEVERITY
+# WKDIR
 
 FROM $REGISTRY/$CLAMAV_IMAGE as clamav
 FROM $REGISTRY/$TRIVY_IMAGE as trivy
+FROM $REGISTRY/$GITLEAKS_IMAGE as gitleaks
 FROM $REGISTRY/$BASE_IMAGE as base
 FROM $REGISTRY/$TARGET_IMAGE as target
-FROM zricethezav/gitleaks:latest as gitleaks
 
 FROM base as base-stage
 COPY --from=target / ../base-root
@@ -30,9 +32,10 @@ RUN freshclam
 RUN clamscan -ri /base-root >> recursive-root-dir-clamscan.txt
 
 FROM base-stage as gitleaks-stage
+ARG WKDIR
 WORKDIR /scans
 COPY --from=gitleaks /usr/bin/gitleaks /usr/local/bin/gitleaks
-RUN gitleaks --quiet --path="/base-root" --no-git --report="gitleaks-leaks-result.txt" --format=CSV --redact --leaks-exit-code=0
+RUN touch gitleaks-leaks-result.txt && gitleaks --quiet --path="/base-root/$WKDIR" --no-git --report="gitleaks-leaks-result.txt" --format=CSV --redact --leaks-exit-code=0
 
 FROM base as final-stage
 WORKDIR /scans
