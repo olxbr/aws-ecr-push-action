@@ -4,11 +4,12 @@ const {
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
   SetRepositoryPolicyCommand
-} = require("@aws-sdk/client-ecr");
+} = require('@aws-sdk/client-ecr');
 const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
 const { executeSyncCmd } = require('./utils');
 const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
 const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
@@ -20,11 +21,12 @@ const HIGH_VULNS_THRESHOLD = 50;
 const MEDIUM_VULNS_THRESHOLD = 100;
 const LOW_VULNS_THRESHOLD = 250;
 const UNKNOWN_VULNS_THRESHOLD = 1000;
+const X9CONTAINERS_UUID = uuidv4();
 
 const credentialsProvider = defaultProvider({ timeout: 20000 });
 
 const client = new ECRClient({
-  region: "us-east-1",
+  region: 'us-east-1',
   credentialDefaultProvider: credentialsProvider
 });
 
@@ -76,7 +78,7 @@ const parseAuthToken = async () => {
     username: authArray[0],
     password: authArray[1],
     proxyEndpoint
-  }
+  };
 };
 
 const dockerLoginOnECR = async () => {
@@ -91,20 +93,33 @@ const pushImage = (config) => {
 };
 
 const reportImageThreats = (config) => {
-  console.log('X9 will find something to blame now...');
+  console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
-  // Obtain a X9Container Dockerfile
+  // Obtain a X9Containers Dockerfile and .trivyignore
+  var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
   executeSyncCmd(
     'curl',
     [
-      `https://raw.githubusercontent.com/olxbr/X9Containers/main/${config.x9ContainerDistro}.X9.Dockerfile`,
+      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/chore/x9containers-stability/X9Containers/.trivyignore`,
       '--output',
-      'X9.Dockerfile'
+      `.trivyignore`
     ],
-    'report image threats curl failed'
+    'report image threats curl .trivyignore failed'
   );
+  console.log('report image threats curl .trivyignore done');
+  executeSyncCmd(
+    'curl',
+    [
+      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/chore/x9containers-stability/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
+      '--output',
+      `${dockerfileName}`
+    ],
+    `report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile failed`
+  );
+  console.log(`report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile done`);
 
   // Run image scan
+  console.log('report image threats analysis will start');
   var minimalSeverity = '';
   switch (`${config.minimalSeverity}`) {
     case 'CRITICAL':
@@ -124,32 +139,47 @@ const reportImageThreats = (config) => {
       minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
       break;
   }
+  var suspectImageName = `${X9CONTAINERS_UUID}_suspectimage`
   executeSyncCmd(
     'docker',
     [
       'build',
       '-f',
-      'X9.Dockerfile',
+      `${dockerfileName}`,
       '-t',
-      'suspectimage',
+      `${suspectImageName}`,
       '--build-arg',
-      `BASE_IMAGE=${ECR_ENDPOINT}/base_images/alpine:3.14-base`,
+      `REGISTRY=${ECR_ENDPOINT}`,
       '--build-arg',
-      `IMAGE=${ECR_ENDPOINT}/${config.repositoryNames[0]}:${config.tags[0]}`,
+      'CLAMAV_IMAGE=cross/devsecops/clamav:latest',
+      '--build-arg',
+      'TRIVY_IMAGE=cross/devsecops/trivy:latest',
+      '--build-arg',
+      'BASE_IMAGE=base_images/alpine:3.14-base',
+      '--build-arg',
+      `TARGET_IMAGE=${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
+      '--quiet',
       '.'
-    ],
-    'report image threats docker build failed'
+    ]
   );
-
-  // Extract scan results from container
-  const scansFolder = './scans';
-  executeSyncCmd('docker', ['create', '--name', 'suspectcontainer', 'suspectimage']);
-  executeSyncCmd('docker', ['cp', 'suspectcontainer:/scans', `${scansFolder}`]);
+  console.log(`report image threats docker build done, removing ${dockerfileName}`);
+  executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
+  
+  // Extract scan results from never started container
+  console.log('report image threats fetching reports');
+  var suspectContainerName = `${X9CONTAINERS_UUID}_suspectcontainer`
+  const scansFolder = `./${X9CONTAINERS_UUID}_scans`;
+  executeSyncCmd('docker', ['create', '--name', `${suspectContainerName}`, `${suspectImageName}`]);
+  executeSyncCmd('docker', ['cp', `${suspectContainerName}:/scans`, `${scansFolder}`]);
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
+  
+  console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
+  executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
+  executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
 
   // Assert the need of threat evaluation
   if (config.ignoreThreats === 'true') {
@@ -233,10 +263,8 @@ const reportImageThreats = (config) => {
   }
 
   // End scan
-  console.log('report image threats successfully finished');
-
-  // Cleanup suspectcontainer
-  executeSyncCmd('docker', ['rm', 'suspectcontainer']);
+  console.log(`report image threats successfully finished. Removing reports folder ${scansFolder}`);
+  executeSyncCmd('rm', ['-rf', `${scansFolder}`]);
 
   return 'report image threats successfully finished';
 };
