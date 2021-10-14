@@ -8,7 +8,7 @@ inputs:
     description: Comma-separated string of ECR image tags (ex. latest, 1.0.0).
     required: true
   x9_container_distro:
-    description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from https://github.com/olxbr/X9Containers with a preferred distro and tools (ex. debian.clamav.trivy).
+    description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from X9Containers local folder with a preferred distro and tools (ex. debian.clamav.trivy).
     required: false
     default: distroless.clamav.trivy
   minimal_severity:
