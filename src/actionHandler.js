@@ -23,7 +23,7 @@ const run = async () => {
     const REPO = core.getInput('ecr_repository');
     const tags = core.getInput('tags').split(',');
     const minimalSeverity = core.getInput('minimal_severity');
-    const x9ContainersDistro = core.getInput('x9Containers_distro');
+    const x9ContainersDistro = core.getInput('x9_container_distro');
     const ignoreThreats = core.getInput('ignore_threats');
     const params = {
       repositoryNames: [REPO],

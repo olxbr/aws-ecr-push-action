@@ -93,7 +93,7 @@ const pushImage = (config) => {
 };
 
 const reportImageThreats = (config) => {
-  console.log(`X9Containers will find something to blame now... on imputation ID: ${X9CONTAINERS_UUID}`);
+  console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
   // Obtain a X9Containers Dockerfile and .trivyignore
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
