@@ -100,7 +100,7 @@ const reportImageThreats = (config) => {
   executeSyncCmd(
     'curl',
     [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/chore/x9containers-stability/X9Containers/.trivyignore`,
+      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/.trivyignore`,
       '--output',
       `.trivyignore`
     ],
@@ -110,7 +110,7 @@ const reportImageThreats = (config) => {
   executeSyncCmd(
     'curl',
     [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/chore/x9containers-stability/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
+      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
       '--output',
       `${dockerfileName}`
     ],

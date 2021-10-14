@@ -1,5 +1,6 @@
 [![Push-to-ECR Test](https://github.com/olxbr/action-tester/actions/workflows/push-to-ecr-test.yml/badge.svg)](https://github.com/olxbr/action-tester/actions/workflows/push-to-ecr-test.yml)
 # AWS ECR Push Action
+
 Action to push images to Amazon's Elastic Container Registry.
 
 ### Usage
