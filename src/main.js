@@ -190,21 +190,20 @@ const reportImageThreats = (config) => {
   // Evaluate findings from ClamAV
   const clamScanFileName = 'recursive-root-dir-clamscan.txt';
   const clamScanFile = `${scansFolder}/${clamScanFileName}`;
-  if (!fs.existsSync(clamScanFile)) {
-    throw new Error(`report image threats file ${clamScanFileName} reading failed`);
-  }
-  process.stdout.write('ClamAV	');
-  const grepClam = executeSyncCmd(
-    'grep',
-    ['^Infected files: ', `${clamScanFile}`],
-    `report image threats file ${clamScanFileName} grep failed`
-  );
-  const totalsClam = grepClam.match(/\d+/);
-  if (totalsClam.some(isNaN)) {
-    throw new Error(`report image threats file ${clamScanFileName} missing totals`);
-  }
-  if (totalsClam[0] > VIRUS_THRESHOLD) {
-    throw new Error(`report image threats file ${clamScanFileName} threat threshold exceeded`);
+  if (fs.existsSync(clamScanFile)) {
+    process.stdout.write('ClamAV	');
+    const grepClam = executeSyncCmd(
+      'grep',
+      ['^Infected files: ', `${clamScanFile}`],
+      `report image threats file ${clamScanFileName} grep failed`
+    );
+    const totalsClam = grepClam.match(/\d+/);
+    if (totalsClam.some(isNaN)) {
+      throw new Error(`report image threats file ${clamScanFileName} missing totals`);
+    }
+    if (totalsClam[0] > VIRUS_THRESHOLD) {
+      throw new Error(`report image threats file ${clamScanFileName} threat threshold exceeded`);
+    }
   }
 
   // Evaluate findings from Trivy
