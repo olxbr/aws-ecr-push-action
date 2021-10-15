@@ -10,7 +10,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ github.ref }}
-          check-name: 'Commit dist'
+          running-workflow-name: 'Build and push dist'
           repo-token: ${{ github.token }}
           wait-interval: 10
 
