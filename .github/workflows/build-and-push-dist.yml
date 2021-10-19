@@ -3,6 +3,9 @@ name: Build and push dist
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches:
+    - main
 
 jobs:
   build-and-push-dist:
