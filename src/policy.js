@@ -16,6 +16,19 @@ const buildPolicy = ({ awsPrincipalRules }) => JSON.stringify({
                 "ecr:UploadLayerPart",
                 "ecr:CompleteLayerUpload"
             ]
+        },
+        {
+            "Sid": "AllowSecImageScanning",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::025517087168:root"
+                ]
+            },
+            "Action": [
+                "ecr:PutImageScanningConfiguration",
+                "ecr:DescribeRepositories"
+            ]
         }
     ]
 })
