@@ -3,7 +3,9 @@ const {
   DescribeRepositoriesCommand,
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
-  SetRepositoryPolicyCommand
+  SetRepositoryPolicyCommand,
+  PutImageScanningConfigurationCommand,
+  ImageScanningConfiguration
 } = require('@aws-sdk/client-ecr');
 const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
@@ -34,6 +36,7 @@ const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(par
 const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
+const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
 
 
 const describeRepoErrorHandler = (config) => async (err) => {
@@ -51,6 +54,11 @@ const describeRepoErrorHandler = (config) => async (err) => {
   await setRepositoryPolicy({
     repositoryName,
     policyText: policy
+  });
+
+  await putImageScanningConfiguration({
+    repositoryName,
+    imageScanningConfiguration: new ImageScanningConfiguration({ scanOnPush: true })
   });
 
   return repoData.repository;
@@ -166,7 +174,7 @@ const reportImageThreats = (config) => {
   );
   console.log(`report image threats docker build done, removing ${dockerfileName}`);
   executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
-  
+
   // Extract scan results from never started container
   console.log('report image threats fetching reports');
   var suspectContainerName = `${X9CONTAINERS_UUID}_suspectcontainer`
@@ -176,7 +184,7 @@ const reportImageThreats = (config) => {
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
-  
+
   console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
   executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
   executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
