@@ -95,17 +95,21 @@ const pushImage = (config) => {
 const reportImageThreats = (config) => {
   console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
-  // Obtain a X9Containers Dockerfile and .trivyignore
+  // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
-  executeSyncCmd(
-    'curl',
-    [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/.trivyignore`,
-      '--output',
-      `.trivyignore`
-    ],
-    'report image threats curl .trivyignore failed'
-  );
+
+  /*
+   *executeSyncCmd(
+   *  'curl',
+   *  [
+   *    `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/.trivyignore`,
+   *    '--output',
+   *    `.trivyignore`
+   *  ],
+   *  'report image threats curl .trivyignore failed'
+   *);
+   */
+
   console.log('report image threats curl .trivyignore done');
   executeSyncCmd(
     'curl',
