@@ -2,6 +2,7 @@ ARG REGISTRY
 ARG TRIVY_IMAGE
 ARG BASE_IMAGE
 ARG TARGET_IMAGE
+ARG TRIVY_IGNORE_URL
 
 FROM $REGISTRY/$TRIVY_IMAGE as trivy
 FROM $REGISTRY/$BASE_IMAGE as base
@@ -13,7 +14,7 @@ COPY --from=target / ../base-root
 FROM base-stage as trivy-stage
 ARG TRIVY_SEVERITY
 WORKDIR /scans
-RUN curl https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/.trivyignore --output .trivyignore
+RUN curl $TRIVY_IGNORE_URL --output .trivyignore
 COPY .trivyignore /scans/
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy filesystem --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress /base-root | tee image-vulnerabilities-trivy.txt
