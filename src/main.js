@@ -152,6 +152,8 @@ const reportImageThreats = (config) => {
       `TARGET_IMAGE=${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
+      '--build-arg',
+      `TRIVY_IGNORE=${config.trivyIgnoreURL}`,
       '--quiet',
       '.'
     ]

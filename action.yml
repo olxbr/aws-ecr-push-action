@@ -19,6 +19,10 @@ inputs:
     description: If true, don't interrupt workflow if has security findings, during security scan.
     required: false
     default: 'false'
+  trivy_ignore_url:
+    description: URL of the .trivyignore the action will use during the build (Only valid for Trivy containers).
+    required: false
+    default: https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/.trivyignore
 outputs:
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
