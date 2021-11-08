@@ -11,6 +11,10 @@ inputs:
     description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from X9Containers local folder with a preferred distro and tools (ex. debian.clamav.trivy).
     required: false
     default: distroless.trivy
+  x9_container_branch:
+    description: Branch of the x9 containers to use. Mostly for testing purposes.
+    required: false
+    default: fix/download-trivyignore-in-dockerfile
   minimal_severity:
     description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
     required: false

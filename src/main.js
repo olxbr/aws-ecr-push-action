@@ -102,7 +102,7 @@ const reportImageThreats = (config) => {
   executeSyncCmd(
     'curl',
     [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/main/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
+      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/${config.x9ContainersBranch}/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
       '--output',
       `${dockerfileName}`
     ],
