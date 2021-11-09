@@ -4,7 +4,6 @@ ARG TRIVY_IMAGE
 ARG GITLEAKS_IMAGE
 ARG BASE_IMAGE
 ARG TARGET_IMAGE
-ARG TRIVY_IGNORE_URL
 
 FROM $REGISTRY/$CLAMAV_IMAGE as clamav
 FROM $REGISTRY/$TRIVY_IMAGE as trivy
@@ -17,6 +16,7 @@ COPY --from=target / ../base-root
 
 FROM base-stage as trivy-stage
 ARG TRIVY_SEVERITY
+ARG TRIVY_IGNORE_URL
 WORKDIR /scans
 RUN curl $TRIVY_IGNORE_URL --output .trivyignore
 COPY .trivyignore /scans/
