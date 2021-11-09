@@ -2,7 +2,6 @@ ARG REGISTRY
 ARG TRIVY_IMAGE
 ARG BASE_IMAGE
 ARG TARGET_IMAGE
-ARG TRIVY_IGNORE_URL
 
 FROM $REGISTRY/$TRIVY_IMAGE as trivy
 FROM $REGISTRY/$BASE_IMAGE as base
@@ -13,6 +12,7 @@ COPY --from=target / ../base-root
 
 FROM base-stage as trivy-stage
 ARG TRIVY_SEVERITY
+ARG TRIVY_IGNORE_URL
 WORKDIR /scans
 RUN curl $TRIVY_IGNORE_URL --output .trivyignore
 COPY .trivyignore /scans/
