@@ -13,7 +13,6 @@ ARG TRIVY_SEVERITY
 ARG TRIVY_IGNORE_URL
 WORKDIR /scans
 RUN curl $TRIVY_IGNORE_URL --output .trivyignore
-COPY .trivyignore /scans/
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy filesystem --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress --skip-files usr/local/bin/trivy / | tee image-vulnerabilities-trivy.txt
 
