@@ -12,8 +12,9 @@ COPY --from=target / ../base-root
 
 FROM base-stage as trivy-stage
 ARG TRIVY_SEVERITY
+ARG TRIVY_IGNORE_URL
 WORKDIR /scans
-COPY .trivyignore /scans/
+RUN curl $TRIVY_IGNORE_URL --output .trivyignore
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy filesystem --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress /base-root | tee image-vulnerabilities-trivy.txt
 
