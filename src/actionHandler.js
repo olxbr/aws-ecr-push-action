@@ -24,13 +24,17 @@ const run = async () => {
     const tags = core.getInput('tags').split(',');
     const minimalSeverity = core.getInput('minimal_severity');
     const x9ContainersDistro = core.getInput('x9_container_distro');
+    const x9ContainersBranch = core.getInput('x9_container_branch');
     const ignoreThreats = core.getInput('ignore_threats');
+    const trivyIgnoreURL = core.getInput('trivy_ignore_url');
     const params = {
       repositoryNames: [REPO],
       tags,
       minimalSeverity,
       x9ContainersDistro,
-      ignoreThreats
+      x9ContainersBranch,
+      ignoreThreats,
+      trivyIgnoreURL
     };
 
     await sendMetrics({
