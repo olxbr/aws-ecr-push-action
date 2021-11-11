@@ -18,7 +18,7 @@ jobs:
     name: Runs integration tests
     runs-on: ubuntu-latest
     steps:
-      - name: Tigger
+      - name: Trigger
         run: |
           curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
             -H 'Accept: application/vnd.github.everest-preview+json' \
