@@ -154,7 +154,7 @@ const reportImageThreats = (config) => {
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--build-arg',
       `TRIVY_IGNORE_URL=${config.trivyIgnoreURL}`,
-      '--quiet',
+      '--pull',
       '.'
     ]
   );
