@@ -132,10 +132,6 @@ const reportImageThreats = (config) => {
       break;
   }
   var suspectImageName = `${X9CONTAINERS_UUID}_suspectimage`
-  var pull = ''
-  if (config.tags[0] === 'latest'){
-    pull = '--pull'
-  }
   executeSyncCmd(
     'docker',
     [
@@ -158,7 +154,7 @@ const reportImageThreats = (config) => {
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--build-arg',
       `TRIVY_IGNORE_URL=${config.trivyIgnoreURL}`,
-      `${pull}`,
+      '--no-cache',
       '.'
     ]
   );
