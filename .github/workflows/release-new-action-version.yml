@@ -17,6 +17,12 @@ jobs:
   trigger:
     name: Runs integration tests
     runs-on: ubuntu-latest
+    env: 
+      WAIT_TIMEOUT: 120
+      GITHUB_API_REPO: "https://api.github.com/repos/olxbr/action-tester"
+      CURL_HEADERS: "-H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.PAT }}'"
+      CURL_CMD_ACTIONS_STATUS: "curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=5 | jq '.workflow_runs[] | .name,.conclusion,.status'"
+      
     steps:
       - name: Trigger
         run: |
@@ -24,10 +30,36 @@ jobs:
             -H 'Accept: application/vnd.github.everest-preview+json' \
             -H 'Authorization: token ${{ secrets.PAT }}' \
             --data '{"event_type": "ecr-push-major", "client_payload": { "version": "${GITHUB_REF#refs/heads/}"}}'
+          
+          initTime=$(date +"%Y%m%d%H%M%S")
+          while ! eval ${CURL_CMD_ACTIONS_STATUS} | egrep -q 'in_progress|queue'; do
+            ((elipsedTime=`date +"%Y%m%d%H%M%S"` - ${initTime}))
+            echo "INFO - Waiting to start action. Time spent so far [${elipsedTime}]..."
+            
+            if ((${elipsedTime} > ${WAIT_TIMEOUT})); then
+                echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds]"
+                exit 1
+            fi
+            
+            sleep 10
+          done
+          echo "INFO - Jobs has been started"
             
       - name: Wait 2min
         run: |
-          sleep 120s
+          initTime=$(date +"%Y%m%d%H%M%S")
+          while eval ${CURL_CMD_ACTIONS_STATUS} | egrep 'in_progress|queue'; do
+              ((elipsedTime=`date +"%Y%m%d%H%M%S"` - ${initTime}))
+              echo "INFO - Waiting to start action. Time spent so far [${elipsedTime}]..."
+              
+              if (($(elipsedTime}>${WAIT_TIMEOUT})); then
+                  echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds]"
+                  exit 1
+              fi
+              
+              sleep 10
+          done
+          echo "INFO - Jobs has been finished"
           
   update_tag:
     name: Update the major tag to include the ${{ github.event.inputs.TAG_NAME || github.event.release.tag_name }} changes
