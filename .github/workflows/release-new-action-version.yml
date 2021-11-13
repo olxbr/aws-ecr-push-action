@@ -18,48 +18,54 @@ jobs:
     name: Runs integration tests
     runs-on: ubuntu-latest
     env: 
-      WAIT_TIMEOUT: 120
+      WAIT_TIMEOUT: 300
       GITHUB_API_REPO: "https://api.github.com/repos/olxbr/action-tester"
       CURL_HEADERS: "-H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.PAT }}'"
-      CURL_CMD_ACTIONS_STATUS: "curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=5 | jq '.workflow_runs[] | .name,.conclusion,.status'"
       
     steps:
-      - name: Trigger
+      - name: Trigger repo olxbr/action-tester
         run: |
-          curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
+          curl -X POST ${GITHUB_API_REPO}/dispatches \
             -H 'Accept: application/vnd.github.everest-preview+json' \
             -H 'Authorization: token ${{ secrets.PAT }}' \
             --data '{"event_type": "ecr-push-major", "client_payload": { "version": "${GITHUB_REF#refs/heads/}"}}'
-          
-          initTime=$(date +"%Y%m%d%H%M%S")
-          while ! eval ${CURL_CMD_ACTIONS_STATUS} | egrep -q 'in_progress|queue'; do
-            ((elipsedTime=`date +"%Y%m%d%H%M%S"` - ${initTime}))
-            echo "INFO - Waiting to start action. Time spent so far [${elipsedTime}]..."
-            
-            if ((${elipsedTime} > ${WAIT_TIMEOUT})); then
-                echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds]"
-                exit 1
-            fi
-            
-            sleep 10
-          done
-          echo "INFO - Jobs has been started"
-            
-      - name: Wait 2min
+                      
+      - name: Wait repo olxbr/action-tester finish
         run: |
-          initTime=$(date +"%Y%m%d%H%M%S")
-          while eval ${CURL_CMD_ACTIONS_STATUS} | egrep 'in_progress|queue'; do
-              ((elipsedTime=`date +"%Y%m%d%H%M%S"` - ${initTime}))
-              echo "INFO - Waiting to start action. Time spent so far [${elipsedTime}]..."
+          function hasTimedOut() {
+              actionType=$1
+              initTime=$2
+          
+              echo "INFO - Waiting action ${actionType} on olxbr/action-tester..."
+              elipsedTime=$(($(date +'%Y%m%d%H%M%S')-${initTime}))
               
-              if (($(elipsedTime}>${WAIT_TIMEOUT})); then
-                  echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds]"
+              echo "INFO - Time spent so far [${elipsedTime}]..."
+              if ((${elipsedTime}>${WAIT_TIMEOUT})); then
+                  echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds] :("
                   exit 1
               fi
               
-              sleep 10
+              echo "INFO - Sleeping for 3 seconds to check again..."
+              sleep 3
+          }
+          
+          initTime=$(date +"%Y%m%d%H%M%S")
+          CURL_CMD_ACTIONS_STATUS="curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=5 | jq '.workflow_runs[] | .status' | egrep 'in_progress|queue'"
+                    
+          ## Has been started
+          while ! status=$(eval ${CURL_CMD_ACTIONS_STATUS}); do
+              echo "INFO - Payload status [${status}]"
+              hasTimedOut START ${initTime}
           done
-          echo "INFO - Jobs has been finished"
+          echo "INFO - Jobs has been started :)"
+          echo "INFO - ========================"
+                    
+          ## Has been finished
+          while status=$(eval ${CURL_CMD_ACTIONS_STATUS}); do
+              echo "INFO - Payload status [${status}]"
+              hasTimedOut FINISH ${initTime}
+          done
+          echo "INFO - Jobs finished"
           
   update_tag:
     name: Update the major tag to include the ${{ github.event.inputs.TAG_NAME || github.event.release.tag_name }} changes
