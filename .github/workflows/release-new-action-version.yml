@@ -67,6 +67,22 @@ jobs:
           done
           echo "INFO - Jobs finished"
           
+          CURL_CMD_ACTIONS_CONCLUSION=$(eval curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=1 | jq '.workflow_runs[] | .name,.conclusion,.status')
+          echo "INFO - Status of last execution"
+          echo "================================"
+          echo ${CURL_CMD_ACTIONS_CONCLUSION}
+          echo "================================"
+          
+          if [[ ${CURL_CMD_ACTIONS_CONCLUSION} =~ success ]]; then
+              echo "INFO - Workflow finished successfully"
+              echo "INFO - Proceed with tag (Major Released)"
+          else
+              echo "ERRO - Something went wrong on olxbr/action-test action."
+              echo "ERRO - Major will NOT be tagged!"
+              exit 1
+          fi
+          
+          
   update_tag:
     name: Update the major tag to include the ${{ github.event.inputs.TAG_NAME || github.event.release.tag_name }} changes
     runs-on: ubuntu-latest
