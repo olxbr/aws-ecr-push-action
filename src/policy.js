@@ -1,5 +1,6 @@
 const AWS_REGION = 'us-east-1';
 
+// Expects a rule in the format arn:aws:iam::aws_account_id:root
 const buildLambdaPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(rule => rule.split(':')[4])
   .map(id => `arn:aws:lambda:${AWS_REGION}:${id}:function:*`);
