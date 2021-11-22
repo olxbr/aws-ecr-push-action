@@ -14,7 +14,7 @@ inputs:
   x9_container_branch:
     description: Branch of the x9 containers to use. Mostly for testing purposes.
     required: false
-    default: main
+    default: julianoborba-patch-1
   minimal_severity:
     description: Minimal threat detection level, for security scan (ex. CRITICAL / HIGH / MEDIUM / LOW / UNKNOWN).
     required: false
