@@ -10,6 +10,7 @@ const { buildPolicy } = require('./policy');
 const { executeSyncCmd } = require('./utils');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+const process = require('process');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
 const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
@@ -99,11 +100,9 @@ const reportImageThreats = (config) => {
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
 
-  console.log(`Create folder ${workspace}`);
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
-  console.log(`Enter folder ${workspace}`);
-  executeSyncCmd('cd', [`${workspace}`]);
-  console.log(`Do curl`);
+  process.chdir(`${workspace}`);
+
   executeSyncCmd(
     'curl',
     [
@@ -262,7 +261,7 @@ const reportImageThreats = (config) => {
 
   // End scan
   console.log(`report image threats successfully finished. Removing temporary folder ${workspace}`);
-  executeSyncCmd('cd', ['..']);
+  process.chdir('..');
   executeSyncCmd('rm', ['-rf', `${workspace}`]);
 
   return 'report image threats successfully finished';
