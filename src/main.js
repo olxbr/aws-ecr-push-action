@@ -97,8 +97,10 @@ const reportImageThreats = (config) => {
 
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
+  var workspace = `${X9CONTAINERS_UUID}_X9Containers`
 
-  console.log('report image threats curl .trivyignore done');
+  executeSyncCmd('mkdir', ['-p', `${workspace}`]);
+  executeSyncCmd('cd', [`${workspace}`]);
   executeSyncCmd(
     'curl',
     [
@@ -256,8 +258,9 @@ const reportImageThreats = (config) => {
   }
 
   // End scan
-  console.log(`report image threats successfully finished. Removing reports folder ${scansFolder}`);
-  executeSyncCmd('rm', ['-rf', `${scansFolder}`]);
+  console.log(`report image threats successfully finished. Removing temporary folder ${workspace}`);
+  executeSyncCmd('cd', ['..']);
+  executeSyncCmd('rm', ['-rf', `${workspace}`]);
 
   return 'report image threats successfully finished';
 };
