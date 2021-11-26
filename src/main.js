@@ -96,11 +96,14 @@ const reportImageThreats = (config) => {
   console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
   // Obtain a X9Containers Dockerfile
-  var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
-  var workspace = `${X9CONTAINERS_UUID}_X9Containers`
+  var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
+  var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
 
+  console.log(`Create folder ${workspace}`);
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
+  console.log(`Enter folder ${workspace}`);
   executeSyncCmd('cd', [`${workspace}`]);
+  console.log(`Do curl`);
   executeSyncCmd(
     'curl',
     [
