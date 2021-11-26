@@ -10,6 +10,7 @@ const { buildPolicy } = require('./policy');
 const { executeSyncCmd } = require('./utils');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+const process = require('process');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
 const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
@@ -96,9 +97,12 @@ const reportImageThreats = (config) => {
   console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
   // Obtain a X9Containers Dockerfile
-  var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`
+  var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
+  var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
 
-  console.log('report image threats curl .trivyignore done');
+  executeSyncCmd('mkdir', ['-p', `${workspace}`]);
+  process.chdir(`${workspace}`);
+
   executeSyncCmd(
     'curl',
     [
@@ -256,8 +260,9 @@ const reportImageThreats = (config) => {
   }
 
   // End scan
-  console.log(`report image threats successfully finished. Removing reports folder ${scansFolder}`);
-  executeSyncCmd('rm', ['-rf', `${scansFolder}`]);
+  console.log(`report image threats successfully finished. Removing temporary folder ${workspace}`);
+  process.chdir('..');
+  executeSyncCmd('rm', ['-rf', `${workspace}`]);
 
   return 'report image threats successfully finished';
 };
