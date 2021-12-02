@@ -47,8 +47,8 @@ const run = async () => {
     core.setOutput('repository_uri', output.repositoryUri);
 
     console.log(`Setting repo policy ${REPO}...`);
-    const output = await defineRepositoryPolicy(params);
-    core.setOutput('repository_policy', output.repositoryPolicy);
+    const policy_output = await defineRepositoryPolicy(params);
+    core.setOutput('repository_policy', policy_output.repositoryPolicy);
 
     await dockerLoginOnECR();
     reportImageThreats(params);
