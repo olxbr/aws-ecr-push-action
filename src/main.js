@@ -42,17 +42,9 @@ const describeRepoErrorHandler = (config) => async (err) => {
     throw new Error(err.message);
   }
 
-  const repositoryName = config.repositoryNames[0];
-  const policy = buildPolicy({ awsPrincipalRules: AWS_PRINCIPAL_RULES });
-  console.log(`Creating repository ${repositoryName}...`);
-  console.log(`Policy: ${policy}`);
-
   const repoData = await createRepo({ repositoryName });
 
-  await setRepositoryPolicy({
-    repositoryName,
-    policyText: policy
-  });
+  const defineRepo = await defineRepositoryPolicy();
 
   return repoData.repository;
 }
@@ -61,6 +53,19 @@ const getRepositoryUri = async (config) =>
   await describeRepo(config)
     .then(data => data.repositories[0])
     .catch(describeRepoErrorHandler(config));
+
+const defineRepositoryPolicy = async (config) => {
+  console.log('Setting ECR default permissions...');
+  const repositoryName = config.repositoryNames[0];
+  const policy = buildPolicy({ awsPrincipalRules: AWS_PRINCIPAL_RULES });
+  console.log(`Creating repository ${repositoryName}...`);
+  console.log(`Policy: ${policy}`);
+
+  await setRepositoryPolicy({
+    repositoryName,
+    policyText: policy
+  });
+}
 
 const parseAuthToken = async () => {
   console.log('Getting ECR auth token...');
@@ -268,6 +273,7 @@ const reportImageThreats = (config) => {
 };
 
 exports.getRepositoryUri = getRepositoryUri;
+exports.defineRepositoryPolicy = defineRepositoryPolicy;
 exports.dockerLoginOnECR = dockerLoginOnECR;
 exports.reportImageThreats = reportImageThreats;
 exports.pushImage = pushImage;
