@@ -29,10 +29,10 @@ const test = async () => {
     };
 
     console.log(`Looking for repo ${REPO}...`);
-    const output = await getRepositoryUri(params);
+    await getRepositoryUri(params);
 
     console.log(`Setting Permissions ${REPO}...`);
-    const output_permissions = await defineRepositoryPolicy(params);
+    await defineRepositoryPolicy(params);
 
     await dockerLoginOnECR();
     reportImageThreats(params);
