@@ -69,10 +69,11 @@ const defineRepositoryPolicy = async (config) => {
   console.log(`Creating repository ${repositoryName}...`);
   console.log(`Policy: ${policy}`);
 
-  await setRepositoryPolicy({
+  const repositoryPolicy = await setRepositoryPolicy({
     repositoryName,
     policyText: policy
   });
+  return repositoryPolicy
 }
 
 const parseAuthToken = async () => {
