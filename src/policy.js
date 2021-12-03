@@ -2,11 +2,14 @@ const AWS_REGION = 'us-east-1';
 
 // Expects a rule in the format arn:aws:iam::aws_account_id:root
 const buildLambdaPolicy = (awsPrincipalRules) => awsPrincipalRules
-  .map(rule => rule.split(':')[4])
   .map(id => `arn:aws:lambda:${AWS_REGION}:${id}:function:*`);
 
+// Expects a rule in the format [12345678, ... , 87654321] 
+const buildPrinciapalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
+  .map(id => `arn:aws:iam::${id}:root`);
+
 const buildPolicy = ({ awsPrincipalRules }) => {
-  const principalRules = JSON.parse(awsPrincipalRules);
+  const principalRules = buildPrinciapalRulesPolicy(awsPrincipalRules);
   const lambdaPrincipalRules = buildLambdaPolicy(principalRules);
 
   return JSON.stringify({
