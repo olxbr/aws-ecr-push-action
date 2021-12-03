@@ -42,17 +42,24 @@ const describeRepoErrorHandler = (config) => async (err) => {
     throw new Error(err.message);
   }
 
+  const repositoryName = config.repositoryNames[0];
   const repoData = await createRepo({ repositoryName });
 
-  await defineRepositoryPolicy();
+  const repoPolicy = await defineRepositoryPolicy(); // NOSONAR
 
   return repoData.repository;
 }
 
-const getRepositoryUri = async (config) =>
-  await describeRepo(config)
-    .then(data => data.repositories[0])
-    .catch(describeRepoErrorHandler(config));
+const getRepositoryUri = async (config) => {
+
+  try {
+    const describeRepoReturn = await describeRepo(config);
+  }
+  catch (err) {
+    describeRepoErrorHandler(config) (err);
+  }
+
+}
 
 const defineRepositoryPolicy = async (config) => {
   console.log('Setting ECR default permissions...');
