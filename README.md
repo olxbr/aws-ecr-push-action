@@ -48,3 +48,4 @@ jobs:
 
 > The image need to be at te format `CONTAINER_REGISTRY_HOST/ECR_REPOSITORY:TAG`
 > For this, you can use the secret `CONTAINER_REGISTRY_HOST` to add this prefix.
+

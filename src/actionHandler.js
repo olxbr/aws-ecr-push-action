@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const {
   getRepositoryUri,
+  defineRepositoryPolicy,
   dockerLoginOnECR,
   reportImageThreats,
   pushImage
@@ -44,6 +45,10 @@ const run = async () => {
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
     core.setOutput('repository_uri', output.repositoryUri);
+
+    console.log(`Setting repo policy ${REPO}...`);
+    const policy_output = await defineRepositoryPolicy(params);
+    core.setOutput('repository_policy', policy_output.repositoryPolicy);
 
     await dockerLoginOnECR();
     reportImageThreats(params);
