@@ -1,5 +1,6 @@
 const {
   getRepositoryUri,
+  defineRepositoryPolicy,
   dockerLoginOnECR,
   reportImageThreats,
   pushImage
@@ -28,7 +29,10 @@ const test = async () => {
     };
 
     console.log(`Looking for repo ${REPO}...`);
-    const output = await getRepositoryUri(params);
+    const output =  await getRepositoryUri(params); // NOSONAR
+
+    console.log(`Setting Permissions ${REPO}...`);
+    const output_policy = await defineRepositoryPolicy(params); // NOSONAR
 
     await dockerLoginOnECR();
     reportImageThreats(params);
