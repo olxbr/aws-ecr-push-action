@@ -53,7 +53,7 @@ const describeRepoErrorHandler = (config) => async (err) => {
 const getRepositoryUri = async (config) => {
 
   try {
-    const describeRepoReturn = await describeRepo(config);
+    const describeRepoReturn = await describeRepo(config); // NOSONAR
   }
   catch (err) {
     describeRepoErrorHandler(config) (err);
