@@ -9,7 +9,7 @@ const buildPrinciapalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
 
 const buildPolicy = ({ awsPrincipalRules }) => {
-  const strAWSPrincipalRules = JSON.stringify(awsPrincipalRules)
+  const strAWSPrincipalRules = JSON.parse(awsPrincipalRules)
   const principalRules = buildPrinciapalRulesPolicy(strAWSPrincipalRules);
   const lambdaPrincipalRules = buildLambdaPolicy(strAWSPrincipalRules);
 
