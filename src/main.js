@@ -51,13 +51,14 @@ const describeRepoErrorHandler = (config) => async (err) => {
 }
 
 const getRepositoryUri = async (config) => {
-
+  let describeRepoReturn 
   try {
-    const describeRepoReturn = await describeRepo(config); // NOSONAR
+    describeRepoReturn  = await describeRepo(config); // NOSONAR
   }
   catch (err) {
-    describeRepoErrorHandler(config) (err);
+    describeRepoReturn = describeRepoErrorHandler(config) (err);
   }
+  return describeRepoReturn
 
 }
 
