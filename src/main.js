@@ -44,7 +44,7 @@ const describeRepoErrorHandler = (config) => async (err) => {
 
   const repoData = await createRepo({ repositoryName });
 
-  const defineRepo = await defineRepositoryPolicy();
+  await defineRepositoryPolicy();
 
   return repoData.repository;
 }
