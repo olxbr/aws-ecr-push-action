@@ -23,6 +23,11 @@ jobs:
       CURL_HEADERS: "-H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.PAT }}'"
       
     steps:
+      - name: Test semantic versioning
+        run: |
+          echo "${GITHUB_REF#refs/heads/}" | egrep "^v\d*\.\d*\.\d*$" >/dev/null && echo "Semantic Version OK" || echo "Check the semantic version" exit 1
+          
+
       - name: Trigger repo olxbr/action-tester
         run: |
           curl -X POST ${GITHUB_API_REPO}/dispatches \
