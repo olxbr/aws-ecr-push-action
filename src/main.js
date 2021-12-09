@@ -225,7 +225,7 @@ const reportImageThreats = (config) => {
     throw new Error(`report image threats file ${trivyScanFileName} reading failed`);
   }
 
-  fs.readFile(trivyScanFile, function (err, data) {
+  fs.readFileSync(trivyScanFile, function (err, data) {
     if(data.includes('Detected OS: unknown')){
       console.log('warn, os not supported by Trivy');
       return 'warn, os not supported by Trivy';
