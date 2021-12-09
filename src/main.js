@@ -225,12 +225,11 @@ const reportImageThreats = (config) => {
     throw new Error(`report image threats file ${trivyScanFileName} reading failed`);
   }
 
-  fs.readFileSync(trivyScanFile, function (err, data) {
-    if(data.includes('Detected OS: unknown')){
-      console.log('warn, os not supported by Trivy');
-      return 'warn, os not supported by Trivy';
-    }
-  });
+  const reportContent = fs.readFileSync(trivyScanFile);
+  if(reportContent.includes('Detected OS: unknown')){
+    console.log('os not supported by Trivy, skipping workflow interruption');
+    return 'os not supported by Trivy, skipping workflow interruption';
+  }
 
   process.stdout.write('Trivy	');
   const grepTrivy = executeSyncCmd(
