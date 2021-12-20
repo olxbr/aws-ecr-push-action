@@ -25,6 +25,7 @@ const MEDIUM_VULNS_THRESHOLD = 100;
 const LOW_VULNS_THRESHOLD = 250;
 const UNKNOWN_VULNS_THRESHOLD = 1000;
 const X9CONTAINERS_UUID = uuidv4();
+const enforced = require('./enforcedCVEs.js');
 
 const credentialsProvider = defaultProvider({ timeout: 20000 });
 
@@ -59,12 +60,12 @@ const describeRepoErrorHandler = (config) => async (err) => {
 }
 
 const getRepositoryUri = async (config) => {
-  let describeRepoReturn 
+  let describeRepoReturn
   try {
-    describeRepoReturn  = await describeRepo(config); // NOSONAR
+    describeRepoReturn = await describeRepo(config); // NOSONAR
   }
   catch (err) {
-    describeRepoReturn = describeRepoErrorHandler(config) (err);
+    describeRepoReturn = describeRepoErrorHandler(config)(err);
   }
   return describeRepoReturn
 
@@ -186,7 +187,7 @@ const reportImageThreats = (config) => {
   );
   console.log(`report image threats docker build done, removing ${dockerfileName}`);
   executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
-  
+
   // Extract scan results from never started container
   console.log('report image threats fetching reports');
   var suspectContainerName = `${X9CONTAINERS_UUID}_suspectcontainer`
@@ -196,7 +197,7 @@ const reportImageThreats = (config) => {
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
-  
+
   console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
   executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
   executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
@@ -234,7 +235,8 @@ const reportImageThreats = (config) => {
   }
 
   const reportContent = fs.readFileSync(trivyScanFile);
-  if(reportContent.includes('Detected OS: unknown')){
+
+  if (reportContent.includes('Detected OS: unknown')) {
     console.log('os not supported by Trivy, skipping workflow interruption');
     return 'os not supported by Trivy, skipping workflow interruption';
   }
@@ -286,6 +288,19 @@ const reportImageThreats = (config) => {
     )
   ) {
     throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
+  }
+
+  const critical_cves = enforced.CVES;
+  if (critical_cves.some(
+    function (cve) {
+      if (reportContent.includes(cve)) {
+        console.log(`the CVE ${cve} is listed as an enforced CVE`);
+        return true;
+      }
+      return false;
+    }
+  )) {
+    throw new Error(`enforced cve found. Please, fix it right now!`);
   }
 
   // End scan
