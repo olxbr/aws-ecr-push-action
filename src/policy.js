@@ -11,7 +11,6 @@ const buildSecPolicy = (awsPrincipalRules) => awsPrincipalRules
 const buildPrincipalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
 
-
 const buildPolicy = ({ awsPrincipalRules }) => {
   const strAWSPrincipalRules = JSON.parse(awsPrincipalRules)
   const principalRules = buildPrincipalRulesPolicy(strAWSPrincipalRules);
