@@ -4,15 +4,19 @@ const AWS_REGION = 'us-east-1';
 const buildLambdaPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:lambda:${AWS_REGION}:${id}:function:*`);
 
+const buildSecPolicy = (awsPrincipalRules) => awsPrincipalRules
+  .map(id => `arn:aws:iam::${id}:role/*security-role`);
+
 // Expects a rule in the format [12345678, ... , 87654321] 
-const buildPrinciapalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
+const buildPrincipalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
+
 
 const buildPolicy = ({ awsPrincipalRules }) => {
   const strAWSPrincipalRules = JSON.parse(awsPrincipalRules)
-  const principalRules = buildPrinciapalRulesPolicy(strAWSPrincipalRules);
+  const principalRules = buildPrincipalRulesPolicy(strAWSPrincipalRules);
   const lambdaPrincipalRules = buildLambdaPolicy(strAWSPrincipalRules);
-  const principalSecRules = buildPrinciapalSecRulesPolicy(strAWSPrincipalRules);
+  const secPrincipalRules = buildSecPolicy(strAWSPrincipalRules);
 
   return JSON.stringify({
     "Version": "2008-10-17",
@@ -63,9 +67,6 @@ const buildPolicy = ({ awsPrincipalRules }) => {
         {
             "Sid": "AllowSecImageScanning",
             "Effect": "Allow",
-            "Principal": {
-                "AWS": principalSecRules 
-            },
             "Action": [
                 "ecr:DescribeRepositories",
                 "ecr:PutImageScanningConfiguration",
@@ -74,7 +75,12 @@ const buildPolicy = ({ awsPrincipalRules }) => {
                 "ecr:DescribeImageScanFindings",
                 "ecr:PutRegistryScanningConfiguration",
                 "ecr:GetRegistryScanningConfiguration"
-            ]
+            ],
+            "Condition": {
+                "StringLike": {
+                    "aws:sourceARN": secPrincipalRules
+                }
+            }
         }
     ]
   })
