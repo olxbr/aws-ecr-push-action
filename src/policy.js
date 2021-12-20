@@ -12,6 +12,7 @@ const buildPolicy = ({ awsPrincipalRules }) => {
   const strAWSPrincipalRules = JSON.parse(awsPrincipalRules)
   const principalRules = buildPrinciapalRulesPolicy(strAWSPrincipalRules);
   const lambdaPrincipalRules = buildLambdaPolicy(strAWSPrincipalRules);
+  const principalSecRules = buildPrinciapalSecRulesPolicy(strAWSPrincipalRules);
 
   return JSON.stringify({
     "Version": "2008-10-17",
@@ -58,6 +59,22 @@ const buildPolicy = ({ awsPrincipalRules }) => {
                     "aws:sourceARN": lambdaPrincipalRules 
                 } 
             }
+        },
+        {
+            "Sid": "AllowSecImageScanning",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": principalSecRules 
+            },
+            "Action": [
+                "ecr:DescribeRepositories",
+                "ecr:PutImageScanningConfiguration",
+                "ecr:BatchGetRepositoryScanningConfiguration",
+                "ecr:StartImageScan",
+                "ecr:DescribeImageScanFindings",
+                "ecr:PutRegistryScanningConfiguration",
+                "ecr:GetRegistryScanningConfiguration"
+            ]
         }
     ]
   })
