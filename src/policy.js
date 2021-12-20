@@ -87,4 +87,3 @@ const buildPolicy = ({ awsPrincipalRules }) => {
 }
 
 exports.buildPolicy = buildPolicy
-

@@ -48,19 +48,15 @@ const describeRepoErrorHandler = (config) => async (err) => {
   const repositoryName = config.repositoryNames[0];
   const repoData = await createRepo({ repositoryName });
 
-  const repoPolicy = await defineRepositoryPolicy(); // NOSONAR
+  await defineRepositoryPolicy(); // NOSONAR
 
   await putImageScanningConfiguration({
-    repositoryName
+    repositoryName,
+    imageScanningConfiguration: new ImageScanningConfiguration({ scanOnPush: true })
   });
 
   return repoData.repository;
 }
-
-await putImageScanningConfiguration({
-  repositoryName,
-  imageScanningConfiguration: new ImageScanningConfiguration({ scanOnPush: true })
-});
 
 const getRepositoryUri = async (config) => {
   let describeRepoReturn 
