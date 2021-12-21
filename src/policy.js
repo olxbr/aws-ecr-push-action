@@ -66,6 +66,9 @@ const buildPolicy = ({ awsPrincipalRules }) => {
         {
             "Sid": "AllowSecImageScanning",
             "Effect": "Allow",
+            "Principal": {
+                "AWS": principalRules 
+            },
             "Action": [
                 "ecr:DescribeRepositories",
                 "ecr:PutImageScanningConfiguration",
