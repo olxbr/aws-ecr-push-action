@@ -19,7 +19,7 @@ const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 const VIRUS_THRESHOLD = 0;
-const CRITICAL_VULNS_THRESHOLD = 10;
+const CRITICAL_VULNS_THRESHOLD = 20; // back to 10 after test
 const HIGH_VULNS_THRESHOLD = 50;
 const MEDIUM_VULNS_THRESHOLD = 100;
 const LOW_VULNS_THRESHOLD = 250;
