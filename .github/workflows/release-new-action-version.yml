@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Test semantic versioning
         run: |
-          echo "${GITHUB_REF#refs/heads/}" | egrep "^v\d*\.\d*\.\d*$" >/dev/null && echo "Semantic Version OK" || (echo "Check the semantic version"; exit 1)
+          echo "${{ env.TAG_NAME }}" | egrep "^v\d*\.\d*\.\d*$" >/dev/null && echo "Semantic Version OK" || (echo "Check the semantic version"; exit 1)
 
       - name: Trigger repo olxbr/action-tester
         run: |
