@@ -25,27 +25,5 @@ export const cleanup = () => {
   } else {
     console.log('INFO - No need to clean. Not Self-hosted')
   }
-
-  /*
-  console.log('Listing docker images...')
-  const imageIds = executeSyncCmd('docker', ['images', '-aq']).split('\n').filter(filterEmpty)
-
-  console.log(`Total images: ${imageIds.length}`)
-  for (let id of imageIds) {
-    console.log(`Removing image ${id}`)
-    executeSyncCmd('docker', ['rmi', '-f', id])
-  }
-
-
-  console.log('Listing docker volumes...')
-  const volumeIds = executeSyncCmd('docker', ['volume', 'ls', '-q']).split('\n').filter(filterEmpty)
-
-  console.log(`Total volumes: ${volumeIds.length}`)
-  for (let id of volumeIds) {
-    console.log(`Removing volume ${id}`)
-    executeSyncCmd('docker', ['volume', 'rm', id])
-  }
-  */
-
   console.log('INFO ================ Finished docker cleanup ================')
 }
