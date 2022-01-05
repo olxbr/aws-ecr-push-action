@@ -3,7 +3,9 @@ const {
   DescribeRepositoriesCommand,
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
-  SetRepositoryPolicyCommand
+  SetRepositoryPolicyCommand,
+  PutImageScanningConfigurationCommand,
+  ImageScanningConfiguration
 } = require('@aws-sdk/client-ecr');
 const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
@@ -23,6 +25,7 @@ const MEDIUM_VULNS_THRESHOLD = 100;
 const LOW_VULNS_THRESHOLD = 250;
 const UNKNOWN_VULNS_THRESHOLD = 1000;
 const X9CONTAINERS_UUID = uuidv4();
+const enforced = require('./enforcedCVEs.js');
 
 const credentialsProvider = defaultProvider({ timeout: 20000 });
 
@@ -35,6 +38,7 @@ const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(par
 const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
+const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
 
 
 const describeRepoErrorHandler = (config) => async (err) => {
@@ -45,18 +49,23 @@ const describeRepoErrorHandler = (config) => async (err) => {
   const repositoryName = config.repositoryNames[0];
   const repoData = await createRepo({ repositoryName });
 
-  const repoPolicy = await defineRepositoryPolicy(); // NOSONAR
+  await defineRepositoryPolicy(); // NOSONAR
+
+  await putImageScanningConfiguration({
+    repositoryName,
+    imageScanningConfiguration: new ImageScanningConfiguration({ scanOnPush: true })
+  });
 
   return repoData.repository;
 }
 
 const getRepositoryUri = async (config) => {
-  let describeRepoReturn 
+  let describeRepoReturn
   try {
-    describeRepoReturn  = await describeRepo(config); // NOSONAR
+    describeRepoReturn = await describeRepo(config); // NOSONAR
   }
   catch (err) {
-    describeRepoReturn = describeRepoErrorHandler(config) (err);
+    describeRepoReturn = describeRepoErrorHandler(config)(err);
   }
   return describeRepoReturn
 
@@ -178,7 +187,7 @@ const reportImageThreats = (config) => {
   );
   console.log(`report image threats docker build done, removing ${dockerfileName}`);
   executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
-  
+
   // Extract scan results from never started container
   console.log('report image threats fetching reports');
   var suspectContainerName = `${X9CONTAINERS_UUID}_suspectcontainer`
@@ -188,7 +197,7 @@ const reportImageThreats = (config) => {
   fs.readdirSync(scansFolder).forEach(report => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
-  
+
   console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
   executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
   executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
@@ -226,7 +235,8 @@ const reportImageThreats = (config) => {
   }
 
   const reportContent = fs.readFileSync(trivyScanFile);
-  if(reportContent.includes('Detected OS: unknown')){
+
+  if (reportContent.includes('Detected OS: unknown')) {
     console.log('os not supported by Trivy, skipping workflow interruption');
     return 'os not supported by Trivy, skipping workflow interruption';
   }
@@ -278,6 +288,19 @@ const reportImageThreats = (config) => {
     )
   ) {
     throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
+  }
+
+  const critical_cves = enforced.CVES;
+  if (critical_cves.some(
+    function (cve) {
+      if (reportContent.includes(cve)) {
+        console.log(`the CVE ${cve} is listed as an enforced CVE`);
+        return true;
+      }
+      return false;
+    }
+  )) {
+    throw new Error(`enforced cve found. Please, fix it right now!`);
   }
 
   // End scan
