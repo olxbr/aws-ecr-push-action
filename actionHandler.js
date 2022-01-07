@@ -27,11 +27,10 @@ const run = async () => {
       skipX9Verification
     };
 
-    console.log('Setting up...');
-    console.log('[WARN] v0 of this action is deprecated! We highly encourage you to upgrade it to the v1');
+    console.log('setting up...');
+    console.log('[warn] v0 of this action is deprecated! We highly encourage you to upgrade it to the v1');
 
-		await sleep(1000 * 60 * 1);
-
+		await sleep(1000 * 60 * 10);
 
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
