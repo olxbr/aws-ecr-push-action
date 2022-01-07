@@ -1,3 +1,4 @@
+const { sleep } = require('./utils');
 const core = require('@actions/core');
 const {
   getRepositoryUri,
@@ -25,6 +26,12 @@ const run = async () => {
       ignoreThreats,
       skipX9Verification
     };
+
+    console.log('Setting up...');
+    console.log('[WARN] v0 of this action is deprecated! We highly encourage you to upgrade it to the v1');
+
+		await sleep(1000 * 60 * 1);
+
 
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);

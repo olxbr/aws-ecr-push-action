@@ -12,4 +12,10 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
   return cmd.stdout.toString();
 };
 
+const sleep = (ms) =>	new Promise((resolve) => {
+	setTimeout(resolve, ms);
+});
+
+
 exports.executeSyncCmd = executeSyncCmd;
+exports.sleep = sleep;
