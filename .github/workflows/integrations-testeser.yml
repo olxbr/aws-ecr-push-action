@@ -30,7 +30,7 @@ jobs:
         with:
             branch: 'integration-test-tester'
 
-      - name: Merge current branch -> v1-beta
+      - name: Merge current branch -> integration-test-tester
         uses: devmasx/merge-branch@1.4.0
         with:
           type: now
@@ -41,11 +41,25 @@ jobs:
     if: ${{ inputs.action == 'run' }}
     runs-on: ubuntu-latest
     env:
-      PR_NUMBER: 59 # existing PR
+      PR_NUMBER: '59' # existing PR
     steps:
-      - name: Wait to branch
-        run: |
-          sleep 10s
+      - uses: actions/checkout@v2
+        with:
+          ref: 'integration-test-tester'
+
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+            GITHUB_TOKEN: ${{ github.token }}
+        with:
+            branch: 'v1-beta'
+
+      - name: Merge current branch -> v1-beta
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: v1-beta
+          github_token: ${{ github.token }}
 
       - name: Tigger
         run: |
@@ -106,7 +120,7 @@ jobs:
               exit 1
           fi
 
-  sut_down:
+  shutdown:
     if: ${{ inputs.action == 'down' }}
     runs-on: ubuntu-latest
     steps:
