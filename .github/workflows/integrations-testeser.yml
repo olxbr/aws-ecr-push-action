@@ -1,0 +1,118 @@
+name: Integration tests tester
+
+on:
+  workflow_dispatch:
+     inputs:
+       action:
+         description: 'Action Of this Workflow [start, run, down]'
+         required: true
+         default: 'start'
+
+jobs:
+  prepare_branch:
+    if: ${{ inputs.action == 'start' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait build-dist
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          running-workflow-name: 'Build and push dist'
+          repo-token: ${{ github.token }}
+          wait-interval: 10
+
+      - uses: actions/checkout@v2
+
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+            GITHUB_TOKEN: ${{ github.token }}
+        with:
+            branch: 'integration-test-tester'
+
+      - name: Merge current branch -> v1-beta
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: integration-test-tester
+          github_token: ${{ github.token }}
+
+  trigger:
+    if: ${{ inputs.action == 'run' }}
+    runs-on: ubuntu-latest
+    env:
+      PR_NUMBER: 59 # existing PR
+    steps:
+      - name: Wait to branch
+        run: |
+          sleep 10s
+
+      - name: Tigger
+        run: |
+          curl -X POST https://api.github.com/repos/olxbr/action-tester/dispatches \
+            -H 'Accept: application/vnd.github.everest-preview+json' \
+            -H 'Authorization: token ${{ secrets.PAT }}' \
+            --data '{"event_type": "ecr-push", "client_payload": { "version": "${GITHUB_REF#refs/heads/}", "pr_number": "'"${PR_NUMBER}"'" }}'
+
+      - name: Wait repo olxbr/action-tester finish
+        run: |
+          function hasTimedOut() {
+              actionType=$1
+              initTime=$2
+          
+              echo "INFO - Waiting action ${actionType} on olxbr/action-tester..."
+              elipsedTime=$(($(date +'%Y%m%d%H%M%S')-${initTime}))
+              
+              echo "INFO - Time spent so far [${elipsedTime}]..."
+              if ((${elipsedTime}>${WAIT_TIMEOUT})); then
+                  echo "ERRO - Wait timeout reached [${WAIT_TIMEOUT} seconds] :("
+                  exit 1
+              fi
+              
+              echo "INFO - Sleeping for 3 seconds to check again..."
+              sleep 3
+          }
+          
+          initTime=$(date +"%Y%m%d%H%M%S")
+          CURL_CMD_ACTIONS_STATUS="curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=5 | jq '.workflow_runs[] | .status' | egrep 'in_progress|queue'"
+                    
+          ## Has been started
+          while ! status=$(eval ${CURL_CMD_ACTIONS_STATUS}); do
+              echo "INFO - Payload status [${status}]"
+              hasTimedOut START ${initTime}
+          done
+          echo "INFO - Jobs has been started :)"
+          echo "INFO - ========================"
+                    
+          ## Has been finished
+          while status=$(eval ${CURL_CMD_ACTIONS_STATUS}); do
+              echo "INFO - Payload status [${status}]"
+              hasTimedOut FINISH ${initTime}
+          done
+          echo "INFO - Jobs finished"
+          
+          CURL_CMD_ACTIONS_CONCLUSION=$(eval curl -s ${CURL_HEADERS} ${GITHUB_API_REPO}/actions/runs?per_page=1 | jq '.workflow_runs[] | .name,.conclusion,.status')
+          echo "INFO - Status of last execution"
+          echo "================================"
+          echo ${CURL_CMD_ACTIONS_CONCLUSION}
+          echo "================================"
+          
+          if [[ ${CURL_CMD_ACTIONS_CONCLUSION} =~ success ]]; then
+              echo "INFO - Workflow finished successfully"
+              echo "INFO - Proceed with tag (Major Released)"
+          else
+              echo "ERRO - Something went wrong on olxbr/action-test action."
+              echo "ERRO - Major will NOT be tagged!"
+              exit 1
+          fi
+
+  sut_down:
+    if: ${{ inputs.action == 'down' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete branch
+              uses: dawidd6/action-delete-branch@v3.1.0
+              with:
+                github_token: ${{ secrets.PAT }}
+                repository: aws-ecr-push-action
+                branches: 'integration-test-tester'
