@@ -28,9 +28,13 @@ const run = async () => {
     };
 
     console.log('setting up...');
+    console.log()
+    console.log('=======================================================================================');
     console.log('[warn] v0 of this action is deprecated! We highly encourage you to upgrade it to the v1');
+    console.log('=======================================================================================');
+    console.log()
 
-		await sleep(1000 * 60 * 10);
+    await sleep(1000 * 60 * 10);
 
     console.log(`Looking for repo ${REPO}...`);
     const output = await getRepositoryUri(params);
