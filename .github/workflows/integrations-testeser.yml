@@ -69,6 +69,10 @@ jobs:
             --data '{"event_type": "ecr-push", "client_payload": { "version": "${GITHUB_REF#refs/heads/}", "pr_number": "'"${PR_NUMBER}"'" }}'
 
       - name: Wait repo olxbr/action-tester finish
+        env: 
+          WAIT_TIMEOUT: 300
+          GITHUB_API_REPO: "https://api.github.com/repos/olxbr/action-tester"
+          CURL_HEADERS: "-H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.PAT }}'"
         run: |
           function hasTimedOut() {
               actionType=$1
