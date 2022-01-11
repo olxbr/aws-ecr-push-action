@@ -1,9 +1,16 @@
-name: Trigger Integration Tests
+name: Integration tests tester
 
-on: [pull_request]
+on:
+  workflow_dispatch:
+     inputs:
+       action:
+         description: 'Action Of this Workflow [start, run, down]'
+         required: true
+         default: 'start'
 
 jobs:
   prepare_branch:
+    if: ${{ inputs.action == 'start' }}
     runs-on: ubuntu-latest
     steps:
       - name: Wait build-dist
@@ -21,6 +28,30 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ github.token }}
         with:
+            branch: 'integration-test-tester'
+
+      - name: Merge current branch -> integration-test-tester
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: integration-test-tester
+          github_token: ${{ github.token }}
+
+  trigger:
+    if: ${{ inputs.action == 'run' }}
+    runs-on: ubuntu-latest
+    env:
+      PR_NUMBER: '59' # existing PR
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'integration-test-tester'
+
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+            GITHUB_TOKEN: ${{ github.token }}
+        with:
             branch: 'v1-beta'
 
       - name: Merge current branch -> v1-beta
@@ -29,16 +60,6 @@ jobs:
           type: now
           target_branch: v1-beta
           github_token: ${{ github.token }}
-
-  trigger:
-    runs-on: ubuntu-latest
-    needs: [prepare_branch]
-    env:
-      PR_NUMBER: ${{ github.event.pull_request.number }}
-    steps:
-      - name: Wait to branch
-        run: |
-          sleep 10s
 
       - name: Tigger
         run: |
@@ -102,3 +123,14 @@ jobs:
               echo "ERRO - Major will NOT be tagged!"
               exit 1
           fi
+
+  shutdown:
+    if: ${{ inputs.action == 'down' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete branch
+              uses: dawidd6/action-delete-branch@v3.1.0
+              with:
+                github_token: ${{ secrets.PAT }}
+                repository: aws-ecr-push-action
+                branches: 'integration-test-tester'
