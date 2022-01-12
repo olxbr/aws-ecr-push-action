@@ -129,8 +129,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete branch
-              uses: dawidd6/action-delete-branch@v3.1.0
-              with:
-                github_token: ${{ secrets.PAT }}
-                repository: aws-ecr-push-action
-                branches: 'integration-test-tester'
+        uses: dawidd6/action-delete-branch@v3.1.0
+        with:
+          github_token: ${{ secrets.PAT }}
+          repository: aws-ecr-push-action
+          branches: 'integration-test-tester'
