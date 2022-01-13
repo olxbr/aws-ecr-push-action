@@ -10,7 +10,7 @@ on:
 
 jobs:
   prepare_branch:
-    if: ${{ inputs.action == 'start' }}
+    if: ${{ github.event.inputs.action == 'start' }}
     runs-on: ubuntu-latest
     steps:
       - name: Wait build-dist
@@ -38,7 +38,7 @@ jobs:
           github_token: ${{ github.token }}
 
   trigger:
-    if: ${{ inputs.action == 'run' }}
+    if: ${{ github.event.inputs.action == 'run' }}
     runs-on: ubuntu-latest
     env:
       PR_NUMBER: '59' # existing PR
@@ -125,7 +125,7 @@ jobs:
           fi
 
   shutdown:
-    if: ${{ inputs.action == 'down' }}
+    if: ${{ github.event.inputs.action == 'down' }}
     runs-on: ubuntu-latest
     steps:
       - name: Delete branch
