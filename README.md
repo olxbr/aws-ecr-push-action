@@ -38,6 +38,7 @@ jobs:
           # Comma-separated string of ECR image tags (ex. latest, 1.0.0)
           tags: 'latest,0.2.2,beta'
         # Warning! Don't change this env values!
+        # Just copy and paste this whole block as is in your repo
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_CROSS_ACCOUNT_ID }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_CROSS_ACCESS_KEY_ID }}
