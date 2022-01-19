@@ -4,8 +4,7 @@ const {
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
   SetRepositoryPolicyCommand,
-  PutImageScanningConfigurationCommand,
-  ImageScanningConfiguration
+  PutImageScanningConfigurationCommand
 } = require('@aws-sdk/client-ecr');
 const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
@@ -49,11 +48,12 @@ const describeRepoErrorHandler = (config) => async (err) => {
   const repositoryName = config.repositoryNames[0];
   const repoData = await createRepo({ repositoryName });
 
-  await defineRepositoryPolicy(); // NOSONAR
+  const repoPolicyResult = await defineRepositoryPolicy(config); // NOSONAR
 
-  await putImageScanningConfiguration({
+  console.log('here')
+  const scanConfigResult = await putImageScanningConfiguration({
     repositoryName,
-    imageScanningConfiguration: new ImageScanningConfiguration({ scanOnPush: true })
+    imageScanningConfiguration: { scanOnPush: true }
   });
 
   return repoData.repository;
@@ -65,10 +65,12 @@ const getRepositoryUri = async (config) => {
     describeRepoReturn = await describeRepo(config); // NOSONAR
   }
   catch (err) {
-    describeRepoReturn = describeRepoErrorHandler(config)(err);
+    describeRepoReturn = await describeRepoErrorHandler(config)(err);
   }
-  return describeRepoReturn
 
+  return describeRepoReturn.repositoryUri ?
+    describeRepoReturn.repositoryUri :
+    describeRepoReturn.repositories[0].repositoryUri
 }
 
 const defineRepositoryPolicy = async (config) => {

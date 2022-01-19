@@ -43,8 +43,9 @@ const run = async () => {
     });
 
     console.log(`Looking for repo ${REPO}...`);
-    const output = await getRepositoryUri(params);
-    core.setOutput('repository_uri', output.repositoryUri);
+    const repositoryUri = await getRepositoryUri(params);
+    console.log(repositoryUri)
+    core.setOutput('repository_uri', repositoryUri);
 
     console.log(`Setting repo policy ${REPO}...`);
     const policy_output = await defineRepositoryPolicy(params);
