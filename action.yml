@@ -4,9 +4,11 @@ inputs:
   ecr_repository:
     description: The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
     required: true
+    default: cross/devtools/devtools-scripts
   tags:
     description: Comma-separated string of ECR image tags (ex. latest, 1.0.0).
     required: true
+    default: latest
   x9_container_distro:
     description: Distro of the target Docker image, for security scan. Select a Dockerfile prefix from X9Containers local folder with a preferred distro and tools (ex. debian.clamav.trivy).
     required: false

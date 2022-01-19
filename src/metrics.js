@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const METRICS_SERVER_ENDPOINT = 'https://gh-hooks.olxbr.io/custom-metrics'
 
-export const sendMetrics = async (customMetrics = {}) => {
+const sendMetrics = async (customMetrics = {}) => {
   try {
     const hook = {
       "workflow_job": {
@@ -26,3 +26,5 @@ export const sendMetrics = async (customMetrics = {}) => {
     console.error(e)
   }
 }
+
+exports.sendMetrics = sendMetrics;

@@ -14,7 +14,7 @@ const { v4: uuidv4 } = require('uuid');
 const process = require('process');
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
-const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES;
+const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES || `["${AWS_ACCOUNT_ID}"]`;
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 const VIRUS_THRESHOLD = 0;
@@ -159,6 +159,7 @@ const reportImageThreats = (config) => {
       minimalSeverity = 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL';
       break;
   }
+
   var suspectImageName = `${X9CONTAINERS_UUID}_suspectimage`
   executeSyncCmd(
     'docker',
@@ -186,6 +187,7 @@ const reportImageThreats = (config) => {
       '.'
     ]
   );
+
   console.log(`report image threats docker build done, removing ${dockerfileName}`);
   executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
 

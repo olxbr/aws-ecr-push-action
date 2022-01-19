@@ -2,7 +2,7 @@ const { executeSyncCmd } = require('./utils')
 
 const filterEmpty = x => x
 
-export const cleanup = () => {
+const cleanup = () => {
   console.log('INFO ================ Initializing docker cleanup ================')
   console.log('Listing running containers...')
   const containerIds = executeSyncCmd('docker', ['ps', '-aq']).split('\n').filter(filterEmpty)
@@ -27,3 +27,5 @@ export const cleanup = () => {
   }
   console.log('INFO ================ Finished docker cleanup ================')
 }
+
+exports.cleanup = cleanup;
