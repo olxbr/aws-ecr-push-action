@@ -8,19 +8,12 @@ on:
          required: true
          default: 'start'
 
+
 jobs:
   prepare_branch:
     if: ${{ github.event.inputs.action == 'start' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Wait build-dist
-        uses: lewagon/wait-on-check-action@v1.0.0
-        with:
-          ref: ${{ github.ref }}
-          running-workflow-name: 'Build and push dist'
-          repo-token: ${{ github.token }}
-          wait-interval: 10
-
       - uses: actions/checkout@v2
 
       - name: Create Branch
