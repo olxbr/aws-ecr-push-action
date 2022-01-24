@@ -1,4 +1,4 @@
-const core = require('@actions/core');
+const { core } = require('./local')
 const {
   getRepositoryUri,
   defineRepositoryPolicy,
@@ -11,6 +11,7 @@ const { cleanup } = require('./cleanup');
 
 const IsPre = !!process.env['STATE_isPre'];
 const IsPost = !!process.env['STATE_isPost'];
+const isLocal = !!process.env['isLocal']
 
 if (!IsPre) {
   core.saveState('isPre', 'true');
@@ -28,6 +29,7 @@ const run = async () => {
     const x9ContainersBranch = core.getInput('x9_container_branch');
     const ignoreThreats = core.getInput('ignore_threats');
     const trivyIgnoreURL = core.getInput('trivy_ignore_url');
+
     const params = {
       repositoryNames: [REPO],
       tags,
@@ -38,32 +40,42 @@ const run = async () => {
       trivyIgnoreURL
     };
 
-    await sendMetrics({
-      "inputs.ignoreThreats": ignoreThreats === 'true'
-    });
+    console.log('Action params')
+    console.log(params)
+
+    if(!isLocal) {
+      const metricsResult = await sendMetrics({ //NOSONAR
+        "inputs.ignoreThreats": ignoreThreats === 'true'
+      });
+    }
 
     console.log(`Looking for repo ${REPO}...`);
     const repositoryUri = await getRepositoryUri(params);
-    console.log(repositoryUri)
     core.setOutput('repository_uri', repositoryUri);
 
     console.log(`Setting repo policy ${REPO}...`);
     const policy_output = await defineRepositoryPolicy(params);
-    core.setOutput('repository_policy', policy_output.repositoryPolicy);
+    core.setOutput('repository_policy', policy_output.policyText);
 
-    await dockerLoginOnECR();
+    const ecrLoginResult = await dockerLoginOnECR(); //NOSONAR
     reportImageThreats(params);
     tags.forEach((tag) => {
       pushImage({ ...params, tag });
     });
 
   } catch (err) {
+    if (isLocal) console.error(err)
     core.setFailed(err.message);
   }
 }
 
 if (IsPre && !IsPost) {
-  run();
+  run().then(() => {
+    if(isLocal) {
+      console.log('Outputs')
+      console.log(core.getOutputs())
+    }
+  });
 } else if (!IsPre || IsPost) {
   cleanup();
 }
