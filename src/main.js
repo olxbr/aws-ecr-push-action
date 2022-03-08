@@ -207,7 +207,7 @@ const reportImageThreats = (config) => {
 
   // Assert the need of threat evaluation
   if (config.ignoreThreats === 'true') {
-    console.log("::warning title=DeprecationWarning::Ignoring 'ignore_trheats' configuration, please consider removing this option from action parameters");
+    console.log("::warning title=DeprecationWarning::Ignoring 'ignore_threats' configuration, please consider removing this option from action parameters");
     console.log("ignore_threats was set to true, but the threats won't be ignored");
   }
 
