@@ -74,9 +74,8 @@ const run = async () => {
   } catch (err) {
     if (isLocal) console.error(err)
     core.setFailed(err.message);
-  } finally {
-    console.log('Error During Execution')
-    process.exit(1)
+    console.log('Error During Execution');
+    process.exit(1);
   }
 }
 
