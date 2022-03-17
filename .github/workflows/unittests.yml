@@ -1,0 +1,29 @@
+name: Unittest
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./node_modules
+            */**/node_modules
+          key: ${{ runner.os }}-aws-ecr-push-action-node-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-aws-ecr-push-action-node-modules
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Build dist
+        run: yarn build
+
+      - name: Run tests
+        run: yarn test
