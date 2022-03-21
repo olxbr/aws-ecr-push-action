@@ -10,17 +10,20 @@ const {
 test('Test invalid image name', async () => {
 
     const params = {
-      repositoryNames: 'my_invaid_bu/my_invalid_name'
+      repositoryNames: ['my_invaid_bu/my_invalid_name']
     }
     const repositoryValidation = await validadeImageName(params);
-    expect(await repositoryValidation()).toBe(false);
+    let result = await repositoryValidation()
+    expect(result).toBe(false);
 });
 
 test('Test valid image name', async () => {
 
     const params = {
-      repositoryNames: 'cross/devtools/devtools-scripts'
+      repositoryNames: ['cross/devtools/devtools-scripts']
     }
     const repositoryValidation = await validadeImageName(params);
-    expect(await repositoryValidation()).toBe(false);
+    let result = await repositoryValidation()
+    console.log(result)
+    expect(result).toBe(true);
 });
