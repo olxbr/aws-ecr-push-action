@@ -40,6 +40,29 @@ const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyComma
 const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
 
 
+const validadeImageName = (config) => async (err) => {
+  let validatedBU = false
+  let validatedLen = false
+  const allowedPrefix = ['cross', 'olx', 'zap', 'vivareal', 'base_images']
+
+  const repositoryName = config.repositoryNames[0];
+  const repositoryNameSplited = repositoryName.split('/')
+
+  if (repositoryNameSplited.length >= 3){
+    validatedLen = true
+  }
+
+  for (const element of allowedPrefix) {
+    if(repositoryNameSplited.indexOf(element) == 0){
+      validatedBU = true
+    }
+  }
+
+  const result = validatedBU && validatedLen
+  return result
+}
+
+
 const describeRepoErrorHandler = (config) => async (err) => {
   if (err.name !== 'RepositoryNotFoundException') {
     throw new Error(err.message);
@@ -314,6 +337,7 @@ const reportImageThreats = (config) => {
   return 'report image threats successfully finished';
 };
 
+exports.validadeImageName = validadeImageName;
 exports.getRepositoryUri = getRepositoryUri;
 exports.defineRepositoryPolicy = defineRepositoryPolicy;
 exports.dockerLoginOnECR = dockerLoginOnECR;

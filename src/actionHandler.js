@@ -1,5 +1,6 @@
 const { core } = require('./local')
 const {
+  validadeImageName,
   getRepositoryUri,
   defineRepositoryPolicy,
   dockerLoginOnECR,
@@ -49,6 +50,13 @@ const run = async () => {
       });
     }
 
+    console.log(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
+    const repositoryValidation = await validadeImageName(params);
+    if(!await repositoryValidation(params)){
+      throw `Repo NOT Validaded! Please fix acording with "bu/squad/project"`;
+    }
+    console.log(`Repository name validated!`);
+
     console.log(`Looking for repo ${REPO}...`);
     const repositoryUri = await getRepositoryUri(params);
     core.setOutput('repository_uri', repositoryUri);
@@ -66,6 +74,8 @@ const run = async () => {
   } catch (err) {
     if (isLocal) console.error(err)
     core.setFailed(err.message);
+    console.log('Error During Execution');
+    process.exit(1);
   }
 }
 

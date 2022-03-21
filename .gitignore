@@ -1,3 +1,5 @@
 node_modules
 X9.Dockerfile
 scans/*
+coverage/
+yarn-error.log
