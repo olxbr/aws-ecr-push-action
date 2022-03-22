@@ -53,7 +53,7 @@ const run = async () => {
     console.log(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
     const repositoryValidation = await validadeImageName(params);
     if(!await repositoryValidation(params)){
-      console.log("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'");
+      console.log("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'. Valid BUs are 'cross', 'olx', 'zap', 'vivareal', 'base_images' ");
       throw `Repo NOT Validaded! Please fix acording with "bu/squad/project"`;
     }
     console.log(`Repository name validated!`);
