@@ -7,6 +7,7 @@ const {
   pushImage
 } = require('./main');
 
+const policyFixture = require('./policy.fixture.json')
 
 jest.mock('./AWSClient', () => {
   return {
@@ -83,4 +84,12 @@ test('Create repo when it doesnt exist', async () => {
     }
     const repositoryURI = await getRepositoryUri(params)
     expect(repositoryURI).toBe('http://xpto.registry/cross/devtools/devtools-scripts-fake')
+})
+
+test('Defines repository policy for new repos', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake']
+    }
+    const repositoryPolicy = await defineRepositoryPolicy(params)
+    expect(repositoryPolicy).toBe(JSON.stringify(policyFixture))
 })
