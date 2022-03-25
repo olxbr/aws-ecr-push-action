@@ -1,17 +1,15 @@
-const {
-  ECRClient,
-  DescribeRepositoriesCommand,
-  CreateRepositoryCommand,
-  GetAuthorizationTokenCommand,
-  SetRepositoryPolicyCommand,
-  PutImageScanningConfigurationCommand
-} = require('@aws-sdk/client-ecr');
-const { defaultProvider } = require('@aws-sdk/credential-provider-node');
 const { buildPolicy } = require('./policy');
 const { executeSyncCmd } = require('./utils');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid')
 const process = require('process');
+const {
+  describeRepo,
+  createRepo,
+  getAuthorizationToken,
+  setRepositoryPolicy,
+  putImageScanningConfiguration
+} = require('./AWSClient')
 
 const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
 const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES || `["${AWS_ACCOUNT_ID}"]`;
@@ -25,20 +23,6 @@ const LOW_VULNS_THRESHOLD = 125;
 const UNKNOWN_VULNS_THRESHOLD = 500;
 const X9CONTAINERS_UUID = uuidv4();
 const enforced = require('./enforcedCVEs.js');
-
-const credentialsProvider = defaultProvider({ timeout: 20000 });
-
-const client = new ECRClient({
-  region: 'us-east-1',
-  credentialDefaultProvider: credentialsProvider
-});
-
-const describeRepo = (params) => client.send(new DescribeRepositoriesCommand(params));
-const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
-const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
-const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
-const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
-
 
 const validadeImageName = (config) => async (err) => {
   let validatedBU = false
@@ -89,6 +73,8 @@ const getRepositoryUri = async (config) => {
   catch (err) {
     describeRepoReturn = await describeRepoErrorHandler(config)(err);
   }
+
+  console.log(describeRepoReturn)
 
   return describeRepoReturn.repositoryUri ?
     describeRepoReturn.repositoryUri :
