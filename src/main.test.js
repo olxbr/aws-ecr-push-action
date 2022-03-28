@@ -27,3 +27,25 @@ test('Test valid image name', async () => {
     console.log(result)
     expect(result).toBe(true);
 });
+
+test('Test invalid image name incorrect length', async () => {
+
+    const params = {
+      repositoryNames: ['cross/devtools']
+    }
+    const repositoryValidation = await validadeImageName(params);
+    let result = await repositoryValidation()
+    console.log(result)
+    expect(result).toBe(false);
+});
+
+test('Test valid image name base_images length ignore', async () => {
+
+    const params = {
+      repositoryNames: ['base_images/alpine']
+    }
+    const repositoryValidation = await validadeImageName(params);
+    let result = await repositoryValidation()
+    console.log(result)
+    expect(result).toBe(true);
+});
