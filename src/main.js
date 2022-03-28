@@ -48,7 +48,7 @@ const validadeImageName = (config) => async (err) => {
   const repositoryName = config.repositoryNames[0];
   const repositoryNameSplited = repositoryName.split('/')
 
-  if (repositoryNameSplited.length >= 3){
+  if (repositoryNameSplited.length >= 3 || repositoryNameSplited.indexOf('base_images') == 0){
     validatedLen = true
   }
 
