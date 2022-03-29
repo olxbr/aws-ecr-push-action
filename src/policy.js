@@ -7,7 +7,7 @@ const buildLambdaPolicy = (awsPrincipalRules) => awsPrincipalRules
 const buildSecPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:role/*security-role`);
 
-// Expects a rule in the format [12345678, ... , 87654321] 
+// Expects a rule in the format [12345678, ... , 87654321]
 const buildPrincipalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
 
@@ -24,7 +24,7 @@ const buildPolicy = ({ awsPrincipalRules }) => {
             "Sid": "AllowPushPull",
             "Effect": "Allow",
             "Principal": {
-                "AWS": principalRules 
+                "AWS": principalRules
             },
             "Action": [
                 "ecr:GetDownloadUrlForLayer",
@@ -44,8 +44,8 @@ const buildPolicy = ({ awsPrincipalRules }) => {
                 "ecr:GetDownloadUrlForLayer"
             ],
             "Principal": {
-                "AWS": principalRules 
-            } 
+                "AWS": principalRules
+            }
         },
         {
             "Sid": "LambdaECRImageCrossAccountRetrievalPolicy",
@@ -59,15 +59,15 @@ const buildPolicy = ({ awsPrincipalRules }) => {
             },
             "Condition": {
                 "StringLike": {
-                    "aws:sourceARN": lambdaPrincipalRules 
-                } 
+                    "aws:sourceARN": lambdaPrincipalRules
+                }
             }
         },
         {
             "Sid": "AllowSecImageScanning",
             "Effect": "Allow",
             "Principal": {
-                "AWS": principalRules 
+                "AWS": principalRules
             },
             "Action": [
                 "ecr:DescribeRepositories",

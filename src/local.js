@@ -1,4 +1,4 @@
-const fs = require('fs') 
+const fs = require('fs')
 const core = require('@actions/core')
 const yaml = require('js-yaml')
 
@@ -14,7 +14,7 @@ const readActionFile = () => {
   }
 }
 
-class CoreMock { 
+class CoreMock {
   static STATE = {}
   static ACTION = null
   static OUTPUTS = {}

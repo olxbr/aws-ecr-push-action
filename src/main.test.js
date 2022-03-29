@@ -13,15 +13,15 @@ jest.mock('./AWSClient', () => {
   return {
     describeRepo: jest.fn(async params => {
       if(params.repositoryNames[0] == 'cross/devtools/devtools-scripts')
-        return { repositoryUri: `http://xpto.registry/${params.repositoryNames[0]}` }
+        return { repositoryUri: `http://xpto.registry/${params.repositoryNames[0]}` } // NOSONAR
       throw { name: 'RepositoryNotFoundException', message: 'Repo not found' }
     }),
 
-    createRepo: jest.fn(async params => ({ repository: { repositoryUri: `http://xpto.registry/${params.repositoryName}` }})),
+    createRepo: jest.fn(async params => ({ repository: { repositoryUri: `http://xpto.registry/${params.repositoryName}` }})), // NOSONAR
 
     setRepositoryPolicy: jest.fn(async params => params.policyText),
 
-    putImageScanningConfiguration: jest.fn(async noop => noop), 
+    putImageScanningConfiguration: jest.fn(async noop => noop),
   }
 })
 
@@ -75,7 +75,7 @@ test('Get URI of existing repository', async () => {
       repositoryNames: ['cross/devtools/devtools-scripts']
     }
     const repositoryURI = await getRepositoryUri(params)
-    expect(repositoryURI).toBe('http://xpto.registry/cross/devtools/devtools-scripts')
+    expect(repositoryURI).toBe('http://xpto.registry/cross/devtools/devtools-scripts') // NOSONAR
 });
 
 test('Create repo when it doesnt exist', async () => {
