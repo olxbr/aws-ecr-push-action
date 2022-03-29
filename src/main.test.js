@@ -7,6 +7,7 @@ const {
   pushImage
 } = require('./main');
 
+
 const policyFixture = require('./policy.fixture.json')
 
 jest.mock('./AWSClient', () => {
@@ -14,7 +15,9 @@ jest.mock('./AWSClient', () => {
     describeRepo: jest.fn(async params => {
       if(params.repositoryNames[0] == 'cross/devtools/devtools-scripts')
         return { repositoryUri: `http://xpto.registry/${params.repositoryNames[0]}` } // NOSONAR
-      throw { name: 'RepositoryNotFoundException', message: 'Repo not found' }
+      var error =  new Error('Repo not found')
+      error.name = 'RepositoryNotFoundException'
+      throw error
     }),
 
     createRepo: jest.fn(async params => ({ repository: { repositoryUri: `http://xpto.registry/${params.repositoryName}` }})), // NOSONAR
@@ -85,7 +88,7 @@ test('Create repo when it doesnt exist', async () => {
     const repositoryURI = await getRepositoryUri(params)
     expect(AWSClient.setRepositoryPolicy).toHaveBeenCalled()
     expect(AWSClient.putImageScanningConfiguration).toHaveBeenCalled()
-    expect(repositoryURI).toBe('http://xpto.registry/cross/devtools/devtools-scripts-fake')
+    expect(repositoryURI).toBe('http://xpto.registry/cross/devtools/devtools-scripts-fake') // NOSONAR
 })
 
 test('Defines repository policy for new repos', async() => {

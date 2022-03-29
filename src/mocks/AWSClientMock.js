@@ -1,7 +1,7 @@
 
 
 const describeRepo = params => params.repositoryName == 'cross/devtools/devtools-scripts' ?
-  { repositoryUri: 'http://xpto.registry/cross/devtools/devtools-scripts' } : null
+  { repositoryUri: 'http://xpto.registry/cross/devtools/devtools-scripts' } : null // NOSONAR
 
 const mock = {
   describeRepo
