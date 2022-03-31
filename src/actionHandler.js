@@ -13,6 +13,7 @@ const { cleanup } = require('./cleanup');
 const IsPre = !!process.env['STATE_isPre'];
 const IsPost = !!process.env['STATE_isPost'];
 const isLocal = !!process.env['isLocal']
+const dryRun = !!process.env['dryRun'];
 
 if (!IsPre) {
   core.saveState('isPre', 'true');
@@ -62,15 +63,21 @@ const run = async () => {
     const repositoryUri = await getRepositoryUri(params);
     core.setOutput('repository_uri', repositoryUri);
 
-    console.log(`Setting repo policy ${REPO}...`);
-    const policy_output = await defineRepositoryPolicy(params);
-    core.setOutput('repository_policy', policy_output.policyText);
+    if (!dryRun) {
+      console.log(`Setting repo policy ${REPO}...`);
+      const policy_output = await defineRepositoryPolicy(params);
+      core.setOutput('repository_policy', policy_output.policyText);
 
-    const ecrLoginResult = await dockerLoginOnECR(); //NOSONAR
+      const ecrLoginResult = await dockerLoginOnECR(); //NOSONAR
+    }
+
     reportImageThreats(params);
-    tags.forEach((tag) => {
-      pushImage({ ...params, tag });
-    });
+
+    if (!dryRun) {
+      tags.forEach((tag) => {
+        pushImage({ ...params, tag });
+      });
+    }
 
   } catch (err) {
     if (isLocal) console.error(err)
