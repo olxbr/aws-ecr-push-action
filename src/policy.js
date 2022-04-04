@@ -11,6 +11,9 @@ const buildSecPolicy = (awsPrincipalRules) => awsPrincipalRules
 const buildPrincipalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
 
+const beanstalkPrincipalRules = (awsPrincipalRules) => awsPrincipalRules
+	.map(id => `arn:aws:iam::${id}:role/aws-elasticbeanstalk-service-role`)
+
 const buildPolicy = ({ awsPrincipalRules }) => {
   const strAWSPrincipalRules = JSON.parse(awsPrincipalRules)
   const principalRules = buildPrincipalRulesPolicy(strAWSPrincipalRules);
@@ -83,6 +86,18 @@ const buildPolicy = ({ awsPrincipalRules }) => {
                     "aws:sourceARN": secPrincipalRules
                 }
             }
+        },
+        {
+            "Sid": "ElasticBeanstalkApplicationInstance",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::183337677225:role/aws-elasticbeanstalk-service-role"
+            },
+            "Action": [
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "ecr:BatchCheckLayerAvailability"
+            ]
         }
     ]
   })
