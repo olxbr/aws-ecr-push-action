@@ -79,13 +79,22 @@
          "Sid":"ElasticBeanstalkApplicationInstance",
          "Effect":"Allow",
          "Principal":{
-            "AWS":"arn:aws:iam::183337677225:role/aws-elasticbeanstalk-service-role"
+            "AWS":[
+               "arn:aws:iam::undefined:root"
+            ]
          },
          "Action":[
-            "ecr:GetDownloadUrlForLayer",
+            "ecr:BatchCheckLayerAvailability",
             "ecr:BatchGetImage",
-            "ecr:BatchCheckLayerAvailability"
-         ]
+            "ecr:GetDownloadUrlForLayer"
+         ],
+         "Condition":{
+            "StringLike":{
+               "aws:sourceARN":[
+                  "arn:aws:iam::undefined:role/aws-elasticbeanstalk-service-role"
+               ]
+            }
+         }
       }
    ]
 }
