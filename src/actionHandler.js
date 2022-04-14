@@ -36,7 +36,7 @@ const run = async () => {
     const ignoreThreats = core.getInput('ignore_threats');
     const trivyIgnoreURL = core.getInput('trivy_ignore_url');
 
-    const awsConfig = { 
+    const awsConfig = {
       AWS_ACCOUNT_ID,
       AWS_PRINCIPAL_RULES,
       ECR_ENDPOINT,
