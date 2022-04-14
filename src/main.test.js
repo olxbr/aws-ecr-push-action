@@ -10,6 +10,12 @@ const {
 
 const policyFixture = require('./policy.fixture.json')
 
+const awsConfig = { 
+  AWS_ACCOUNT_ID: 'f4k34cc0un7',
+  AWS_PRINCIPAL_RULES: '["1234","4321"]',
+  ECR_ENDPOINT: 'xpto.registry.aws.com',
+}
+
 jest.mock('./AWSClient', () => {
   return {
     describeRepo: jest.fn(async params => {
@@ -83,7 +89,8 @@ test('Get URI of existing repository', async () => {
 
 test('Create repo when it doesnt exist', async () => {
     const params = {
-      repositoryNames: ['cross/devtools/devtools-scripts-fake']
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      aws: awsConfig,
     }
     const repositoryURI = await getRepositoryUri(params)
     expect(AWSClient.setRepositoryPolicy).toHaveBeenCalled()
@@ -93,7 +100,8 @@ test('Create repo when it doesnt exist', async () => {
 
 test('Defines repository policy for new repos', async() => {
     const params = {
-      repositoryNames: ['cross/devtools/devtools-scripts-fake']
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      aws: awsConfig,
     }
     const repositoryPolicy = await defineRepositoryPolicy(params)
     expect(repositoryPolicy).toBe(JSON.stringify(policyFixture))
