@@ -34,6 +34,8 @@ const validateImageName = (config) => async (err) => {
 
 
 const describeRepoErrorHandler = (config) => async (err) => {
+  // If the error is RepositoryNotFoundException, we proceed to the creation
+  // of the repo instead of halting
   if (err.name !== 'RepositoryNotFoundException') {
     throw new Error(err.message);
   }
