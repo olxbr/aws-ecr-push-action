@@ -53,7 +53,6 @@ test('Test valid image name', async () => {
     }
     const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(true);
 });
 
@@ -64,7 +63,6 @@ test('Test invalid image name incorrect length', async () => {
     }
     const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(false);
 });
 
@@ -75,7 +73,6 @@ test('Test valid image name base_images length ignore', async () => {
     }
     const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(true);
 });
 
