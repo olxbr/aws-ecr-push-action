@@ -10,7 +10,7 @@ const {
 } = require('./AWSClient')
 
 
-const validadeImageName = (config) => async (err) => {
+const validateImageName = (config) => async (err) => {
   let validatedBU = false
   let validatedLen = false
   const allowedPrefix = ['cross', 'olx', 'zap', 'vivareal', 'base_images']
@@ -113,7 +113,7 @@ const pushImage = (config) => {
 };
 
 
-exports.validadeImageName = validadeImageName;
+exports.validateImageName = validateImageName;
 exports.getRepositoryUri = getRepositoryUri;
 exports.defineRepositoryPolicy = defineRepositoryPolicy;
 exports.dockerLoginOnECR = dockerLoginOnECR;

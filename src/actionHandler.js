@@ -1,6 +1,6 @@
 const { core } = require('./local')
 const {
-  validadeImageName,
+  validateImageName,
   getRepositoryUri,
   defineRepositoryPolicy,
   dockerLoginOnECR,
@@ -63,7 +63,7 @@ const run = async () => {
     }
 
     console.log(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     if(!await repositoryValidation(params)){
       console.log("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'. Valid BUs are 'cross', 'olx', 'zap', 'vivareal', 'base_images' ");
       throw `Repo NOT Validaded! Please fix acording with "bu/squad/project"`;
