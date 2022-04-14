@@ -1,19 +1,23 @@
 const { core } = require('./local')
 const {
-  validadeImageName,
+  validateImageName,
   getRepositoryUri,
   defineRepositoryPolicy,
   dockerLoginOnECR,
-  reportImageThreats,
   pushImage
 } = require('./main');
 const { sendMetrics } = require('./metrics');
 const { cleanup } = require('./cleanup');
+const { reportImageThreats } = require('./sec');
 
 const IsPre = !!process.env['STATE_isPre'];
 const IsPost = !!process.env['STATE_isPost'];
 const isLocal = !!process.env['isLocal']
 const dryRun = !!process.env['dryRun'];
+
+const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
+const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES || `["${AWS_ACCOUNT_ID}"]`;
+const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 if (!IsPre) {
   core.saveState('isPre', 'true');
@@ -32,6 +36,12 @@ const run = async () => {
     const ignoreThreats = core.getInput('ignore_threats');
     const trivyIgnoreURL = core.getInput('trivy_ignore_url');
 
+    const awsConfig = {
+      AWS_ACCOUNT_ID,
+      AWS_PRINCIPAL_RULES,
+      ECR_ENDPOINT,
+    }
+
     const params = {
       repositoryNames: [REPO],
       tags,
@@ -39,7 +49,8 @@ const run = async () => {
       x9ContainersDistro,
       x9ContainersBranch,
       ignoreThreats,
-      trivyIgnoreURL
+      trivyIgnoreURL,
+      aws: awsConfig,
     };
 
     console.log('Action params')
@@ -52,7 +63,7 @@ const run = async () => {
     }
 
     console.log(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     if(!await repositoryValidation(params)){
       console.log("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'. Valid BUs are 'cross', 'olx', 'zap', 'vivareal', 'base_images' ");
       throw `Repo NOT Validaded! Please fix acording with "bu/squad/project"`;
@@ -68,7 +79,7 @@ const run = async () => {
       const policy_output = await defineRepositoryPolicy(params);
       core.setOutput('repository_policy', policy_output.policyText);
 
-      const ecrLoginResult = await dockerLoginOnECR(); //NOSONAR
+      const ecrLoginResult = await dockerLoginOnECR(params); //NOSONAR
     }
 
     reportImageThreats(params);
