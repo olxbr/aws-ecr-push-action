@@ -1,5 +1,5 @@
 const {
-  validadeImageName,
+  validateImageName,
   getRepositoryUri,
   defineRepositoryPolicy,
   dockerLoginOnECR,
@@ -9,6 +9,12 @@ const {
 
 
 const policyFixture = require('./policy.fixture.json')
+
+const awsConfig = {
+  AWS_ACCOUNT_ID: 'f4k34cc0un7',
+  AWS_PRINCIPAL_RULES: '["1234","4321"]',
+  ECR_ENDPOINT: 'xpto.registry.aws.com',
+}
 
 jest.mock('./AWSClient', () => {
   return {
@@ -35,7 +41,7 @@ test('Test invalid image name', async () => {
     const params = {
       repositoryNames: ['my_invaid_bu/my_invalid_name']
     }
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
     expect(result).toBe(false);
 });
@@ -45,9 +51,8 @@ test('Test valid image name', async () => {
     const params = {
       repositoryNames: ['cross/devtools/devtools-scripts']
     }
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(true);
 });
 
@@ -56,9 +61,8 @@ test('Test invalid image name incorrect length', async () => {
     const params = {
       repositoryNames: ['cross/devtools']
     }
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(false);
 });
 
@@ -67,9 +71,8 @@ test('Test valid image name base_images length ignore', async () => {
     const params = {
       repositoryNames: ['base_images/alpine']
     }
-    const repositoryValidation = await validadeImageName(params);
+    const repositoryValidation = await validateImageName(params);
     let result = await repositoryValidation()
-    console.log(result)
     expect(result).toBe(true);
 });
 
@@ -83,7 +86,8 @@ test('Get URI of existing repository', async () => {
 
 test('Create repo when it doesnt exist', async () => {
     const params = {
-      repositoryNames: ['cross/devtools/devtools-scripts-fake']
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      aws: awsConfig,
     }
     const repositoryURI = await getRepositoryUri(params)
     expect(AWSClient.setRepositoryPolicy).toHaveBeenCalled()
@@ -93,7 +97,8 @@ test('Create repo when it doesnt exist', async () => {
 
 test('Defines repository policy for new repos', async() => {
     const params = {
-      repositoryNames: ['cross/devtools/devtools-scripts-fake']
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      aws: awsConfig,
     }
     const repositoryPolicy = await defineRepositoryPolicy(params)
     expect(repositoryPolicy).toBe(JSON.stringify(policyFixture))

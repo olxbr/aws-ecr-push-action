@@ -2,6 +2,8 @@
   "scripts": {
     "build": "ncc build src/actionHandler.js -m",
     "start": "STATE_isPre=true isLocal=false AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
+    "start:local": "STATE_isPre=true isLocal=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
+    "start:dry": "STATE_isPre=true isLocal=true dryRun=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "test" : "jest --coverage",
     "test.watch" : "jest --coverage --watch"
   },

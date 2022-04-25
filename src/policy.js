@@ -7,6 +7,9 @@ const buildLambdaPolicy = (awsPrincipalRules) => awsPrincipalRules
 const buildSecPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:role/*security-role`);
 
+const buildEbPolicy = (awsPrincipalRules) => awsPrincipalRules
+  .map(id => `arn:aws:iam::${id}:role/aws-elasticbeanstalk-service-role`);
+
 // Expects a rule in the format [12345678, ... , 87654321]
 const buildPrincipalRulesPolicy = (awsPrincipalRules) => awsPrincipalRules
   .map(id => `arn:aws:iam::${id}:root`);
@@ -16,6 +19,7 @@ const buildPolicy = ({ awsPrincipalRules }) => {
   const principalRules = buildPrincipalRulesPolicy(strAWSPrincipalRules);
   const lambdaPrincipalRules = buildLambdaPolicy(strAWSPrincipalRules);
   const secPrincipalRules = buildSecPolicy(strAWSPrincipalRules);
+  const ebPrincipalRules = buildEbPolicy(strAWSPrincipalRules)
 
   return JSON.stringify({
     "Version": "2008-10-17",
@@ -83,7 +87,24 @@ const buildPolicy = ({ awsPrincipalRules }) => {
                     "aws:sourceARN": secPrincipalRules
                 }
             }
-        }
+        },
+        {
+            "Sid": "ElasticBeanstalkApplicationInstance",
+            "Effect": "Allow",
+            "Principal": {
+              "AWS": principalRules
+            },
+            "Action": [
+              "ecr:BatchCheckLayerAvailability",
+              "ecr:BatchGetImage",
+              "ecr:GetDownloadUrlForLayer"
+            ],
+            "Condition": {
+              "StringLike": {
+                "aws:sourceARN": ebPrincipalRules
+             }
+           }
+         }
     ]
   })
 }
