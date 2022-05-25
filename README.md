@@ -23,6 +23,7 @@ jobs:
       # Exemple of build using docker
       - name: Docker Build
         env:
+            ## Repository must be in the format '<BU>/<SQUAD>/<PROJECT NAME | MY NAME>'
             ECR_REPOSITORY: 'cross/devtools/momo'
         run: |
             docker build --pull -t ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest .
