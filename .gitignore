@@ -3,3 +3,4 @@ X9.Dockerfile
 scans/*
 coverage/
 yarn-error.log
+!.github/*
