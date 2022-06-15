@@ -11,8 +11,13 @@ const UNKNOWN_VULNS_THRESHOLD = 500;
 const X9CONTAINERS_UUID = uuidv4();
 const enforced = require('./enforcedCVEs.js');
 
+// pseudo logger
+function info(msg) {
+  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+}
+
 const reportImageThreats = (config) => {
-  console.log(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
+  info(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
 
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
@@ -30,10 +35,10 @@ const reportImageThreats = (config) => {
     ],
     `report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile failed`
   );
-  console.log(`report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile done`);
+  info(`report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile done`);
 
   // Run image scan
-  console.log('report image threats analysis will start');
+  info('report image threats analysis will start');
   var minimalSeverity = '';
   switch (`${config.minimalSeverity}`) {
     case 'CRITICAL':
@@ -82,11 +87,11 @@ const reportImageThreats = (config) => {
     ]
   );
 
-  console.log(`report image threats docker build done, removing ${dockerfileName}`);
+  info(`report image threats docker build done, removing ${dockerfileName}`);
   executeSyncCmd('rm', ['-rf', `${dockerfileName}`]);
 
   // Extract scan results from never started container
-  console.log('report image threats fetching reports');
+  info('report image threats fetching reports');
   var suspectContainerName = `${X9CONTAINERS_UUID}_suspectcontainer`
   const scansFolder = `./${X9CONTAINERS_UUID}_scans`;
   executeSyncCmd('docker', ['create', '--name', `${suspectContainerName}`, `${suspectImageName}`]);
@@ -95,14 +100,14 @@ const reportImageThreats = (config) => {
     executeSyncCmd('cat', [`${scansFolder}/${report}`]);
   });
 
-  console.log(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
+  info(`report image threats reports got. Removing ${suspectContainerName} and ${suspectImageName}`);
   executeSyncCmd('docker', ['rm', `${suspectContainerName}`]);
   executeSyncCmd('docker', ['rmi', `${suspectImageName}`]);
 
   // Assert the need of threat evaluation
   if (config.ignoreThreats === 'true') {
-    console.log("::warning title=DeprecationWarning::Ignoring 'ignore_threats' configuration, please consider removing this option from action parameters");
-    console.log("ignore_threats was set to true, but the threats won't be ignored");
+    info("::warning title=DeprecationWarning::Ignoring 'ignore_threats' configuration, please consider removing this option from action parameters");
+    info("ignore_threats was set to true, but the threats won't be ignored");
   }
 
   // Evaluate findings from ClamAV
@@ -134,7 +139,7 @@ const reportImageThreats = (config) => {
   const reportContent = fs.readFileSync(trivyScanFile);
 
   if (reportContent.includes('Detected OS: unknown')) {
-    console.log('os not supported by Trivy, skipping workflow interruption');
+    info('os not supported by Trivy, skipping workflow interruption');
     return 'os not supported by Trivy, skipping workflow interruption';
   }
 
@@ -191,7 +196,7 @@ const reportImageThreats = (config) => {
   if (critical_cves.some(
     function (cve) {
       if (reportContent.includes(cve)) {
-        console.log(`the CVE ${cve} is listed as an enforced CVE`);
+        info(`the CVE ${cve} is listed as an enforced CVE`);
         return true;
       }
       return false;
@@ -201,7 +206,7 @@ const reportImageThreats = (config) => {
   }
 
   // End scan
-  console.log(`report image threats successfully finished. Removing temporary folder ${workspace}`);
+  info(`report image threats successfully finished. Removing temporary folder ${workspace}`);
   process.chdir('..');
   executeSyncCmd('rm', ['-rf', `${workspace}`]);
 

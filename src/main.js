@@ -9,6 +9,10 @@ const {
   putImageScanningConfiguration
 } = require('./AWSClient')
 
+// pseudo logger
+function info(msg) {
+  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+}
 
 const validateImageName = (config) => async (err) => {
   let validatedBU = false
@@ -62,7 +66,7 @@ const getRepositoryUri = async (config) => {
     describeRepoReturn = await describeRepoErrorHandler(config)(err);
   }
 
-  console.log(describeRepoReturn)
+  info(JSON.stringify(describeRepoReturn))
 
   return describeRepoReturn.repositoryUri ?
     describeRepoReturn.repositoryUri :
@@ -70,11 +74,11 @@ const getRepositoryUri = async (config) => {
 }
 
 const defineRepositoryPolicy = async (config) => {
-  console.log('Setting ECR default permissions...');
+  info('Setting ECR default permissions...');
   const repositoryName = config.repositoryNames[0];
   const policy = buildPolicy({ awsPrincipalRules: config.aws['AWS_PRINCIPAL_RULES'] });
-  console.log(`Creating repository ${repositoryName}...`);
-  console.log(`Policy: ${policy}`);
+  info(`Creating repository ${repositoryName}...`);
+  info(`Policy: ${policy}`);
 
   const repositoryPolicy = await setRepositoryPolicy({
     repositoryName,
@@ -84,14 +88,14 @@ const defineRepositoryPolicy = async (config) => {
 }
 
 const parseAuthToken = async (config) => {
-  console.log('Getting ECR auth token...');
+  info('Getting ECR auth token...');
   const response = await getAuthorizationToken({ registryIds: [config.aws['AWS_ACCOUNT_ID']] });
   const authData = response.authorizationData[0];
 
   const expires = authData.expiresAt;
   const proxyEndpoint = authData.proxyEndpoint;
-  console.log(`Token will expire at ${expires}`);
-  console.log(`Proxy endpoint: ${proxyEndpoint}`);
+  info(`Token will expire at ${expires}`);
+  info(`Proxy endpoint: ${proxyEndpoint}`);
 
   const decodedTokenData = Buffer.from(authData.authorizationToken, 'base64').toString();
   const authArray = decodedTokenData.split(':');
@@ -104,13 +108,13 @@ const parseAuthToken = async (config) => {
 };
 
 const dockerLoginOnECR = async (config) => {
-  console.log('Login on ECR...');
+  info('Login on ECR...');
   const loginData = await parseAuthToken(config);
   return executeSyncCmd('docker', [`login`, `-u`, loginData.username, '-p', loginData.password, loginData.proxyEndpoint]);
 };
 
 const pushImage = (config) => {
-  console.log(`Pushing tag ${config.tag}...`);
+  info(`Pushing tag ${config.tag}...`);
   return executeSyncCmd('docker', ['push', `${config.aws['ECR_ENDPOINT']}/${config.repositoryNames[0]}:${config.tag}`]);
 };
 

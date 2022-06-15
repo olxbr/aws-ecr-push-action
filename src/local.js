@@ -6,6 +6,11 @@ const isLocal = !!process.env['isLocal']
 
 const actionFilePath = './action.yml'
 
+// pseudo logger
+function info(msg) {
+  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+}
+
 const readActionFile = () => {
   try {
     return actionData = yaml.load(fs.readFileSync(actionFilePath, 'utf8'))
@@ -40,7 +45,7 @@ class CoreMock {
   }
 
   setOutput(key, value) {
-  console.log(key, value)
+    info(`${key}, ${value}`)
     CoreMock.OUTPUTS[key] = value
   }
 

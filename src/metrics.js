@@ -2,6 +2,11 @@ const axios = require('axios');
 
 const METRICS_SERVER_ENDPOINT = 'https://gh-hooks.olxbr.io/custom-metrics'
 
+// pseudo logger
+function info(msg) {
+  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+}
+
 const sendMetrics = async (customMetrics = {}) => {
   try {
     const hook = {
@@ -17,12 +22,12 @@ const sendMetrics = async (customMetrics = {}) => {
       "custom_metrics": customMetrics
     }
 
-    console.log('Sending custom metrics...')
+    info('Sending custom metrics...')
     const res = await axios.post(METRICS_SERVER_ENDPOINT, hook)
     const metricsResponse = res.data
-    console.log(metricsResponse)
+    info(JSON.stringify(metricsResponse))
   } catch(e) {
-    console.log('Custom metrics could not be sent:')
+    info('Custom metrics could not be sent:')
     console.error(e)
   }
 }

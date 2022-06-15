@@ -19,6 +19,11 @@ const AWS_ACCOUNT_ID = process.env.AWS_ACCOUNT_ID;
 const AWS_PRINCIPAL_RULES = process.env.AWS_PRINCIPAL_RULES || `["${AWS_ACCOUNT_ID}"]`;
 const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
+// pseudo logger
+function info(msg) {
+  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+}
+
 if (!IsPre) {
   core.saveState('isPre', 'true');
 } else if (IsPre && !IsPost) {
@@ -53,8 +58,7 @@ const run = async () => {
       aws: awsConfig,
     };
 
-    console.log('Action params')
-    console.log(params)
+    info(`Action params: ${JSON.stringify(params)}`)
 
     if(!isLocal) {
       const metricsResult = await sendMetrics({ //NOSONAR
@@ -62,20 +66,20 @@ const run = async () => {
       });
     }
 
-    console.log(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
+    info(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
     const repositoryValidation = await validateImageName(params);
     if(!await repositoryValidation(params)){
-      console.log("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'. Valid BUs are 'cross', 'olx', 'zap', 'vivareal', 'base_images' ");
+      info("::error title=ImageValidationError:: Image name does not comply with 'bu/squad/project'. Valid BUs are 'cross', 'olx', 'zap', 'vivareal', 'base_images' ");
       throw `Repo NOT Validaded! Please fix acording with "bu/squad/project"`;
     }
-    console.log(`Repository name validated!`);
+    info(`Repository name validated!`);
 
-    console.log(`Looking for repo ${REPO}...`);
+    info(`Looking for repo ${REPO}...`);
     const repositoryUri = await getRepositoryUri(params);
     core.setOutput('repository_uri', repositoryUri);
 
     if (!dryRun) {
-      console.log(`Setting repo policy ${REPO}...`);
+      info(`Setting repo policy ${REPO}...`);
       const policy_output = await defineRepositoryPolicy(params);
       core.setOutput('repository_policy', policy_output.policyText);
 
@@ -93,7 +97,7 @@ const run = async () => {
   } catch (err) {
     if (isLocal) console.error(err)
     core.setFailed(err.message);
-    console.log('Error During Execution');
+    info('Error During Execution');
     process.exit(1);
   }
 }
@@ -101,8 +105,8 @@ const run = async () => {
 if (IsPre && !IsPost) {
   run().then(() => {
     if(isLocal) {
-      console.log('Outputs')
-      console.log(core.getOutputs())
+      info('Outputs')
+      info(core.getOutputs())
     }
   });
 } else if (!IsPre || IsPost) {
