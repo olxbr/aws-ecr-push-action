@@ -2,7 +2,7 @@ const { spawnSync } = require("child_process");
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`utils.js - ${msg}`)
 }
 
 const executeSyncCmd = (command, arrayOfParams, errorMessage) => {

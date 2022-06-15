@@ -13,7 +13,7 @@ const enforced = require('./enforcedCVEs.js');
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`sec.js - ${msg}`)
 }
 
 const reportImageThreats = (config) => {

@@ -4,11 +4,11 @@ const filterEmpty = x => x
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`cleanup.js - ${msg}`)
 }
 
 const cleanup = () => {
-  info('INFO ================ Initializing docker cleanup ================')
+  info('================ Initializing docker cleanup ================')
   info('Listing running containers...')
   const containerIds = executeSyncCmd('docker', ['ps', '-aq']).split('\n').filter(filterEmpty)
 

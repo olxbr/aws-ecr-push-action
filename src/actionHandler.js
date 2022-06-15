@@ -21,7 +21,7 @@ const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`actionHandler.js - ${msg}`)
 }
 
 if (!IsPre) {

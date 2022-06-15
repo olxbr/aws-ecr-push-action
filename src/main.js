@@ -11,7 +11,7 @@ const {
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`local.js - ${msg}`)
 }
 
 const validateImageName = (config) => async (err) => {

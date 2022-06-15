@@ -4,7 +4,7 @@ const METRICS_SERVER_ENDPOINT = 'https://gh-hooks.olxbr.io/custom-metrics'
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`${require('path').basename(__filename)} - ${msg}`)
+  require('./logger').info(`metrics.js - ${msg}`)
 }
 
 const sendMetrics = async (customMetrics = {}) => {
