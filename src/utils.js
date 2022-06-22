@@ -6,7 +6,7 @@ function info(msg) {
 }
 
 const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
-  info(`Executing command: ${command} ${arrayOfParams.toString().replace(/,/g,' ').replace(/\w+==/g,'**TOKEN**')}`);
+  info(`Executing command: ${command} ${arrayOfParams.toString().replace(/,/g,' ').replace(/[0-9a-zA-Z]{200,}(==)?/g,'**TOKEN**')}`);
   const cmd = spawnSync(command, arrayOfParams);
   if (cmd.status !== 0) {
     if (errorMessage) {
