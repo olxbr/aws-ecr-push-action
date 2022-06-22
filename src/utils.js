@@ -19,4 +19,3 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
 };
 
 exports.executeSyncCmd = executeSyncCmd;
-
