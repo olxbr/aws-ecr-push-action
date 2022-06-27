@@ -12,7 +12,7 @@ const policyFixture = require('./policy.fixture.json')
 
 const awsConfig = {
   AWS_ACCOUNT_ID: 'f4k34cc0un7',
-  AWS_PRINCIPAL_RULES: '["1234","4321"]',
+  AWS_PRINCIPAL_RULES: '["XXXXXXXXXX"]',
   ECR_ENDPOINT: 'xpto.registry.aws.com',
 }
 
