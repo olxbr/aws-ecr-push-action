@@ -25,8 +25,10 @@ function info(msg) {
 }
 
 if (!IsPre) {
+  info(`Variable IsPre: ${IsPre}`)
   core.saveState('isPre', 'true');
 } else if (IsPre && !IsPost) {
+  info(`Variable IsPost: ${IsPost}`)
   core.saveState('isPost', 'true');
 }
 
@@ -103,6 +105,8 @@ const run = async () => {
 }
 
 if (IsPre && !IsPost) {
+  info(`Variable IsPost: ${IsPost}, Variable IsPre: ${IsPost}`)
+  info('Outputs')
   run().then(() => {
     if(isLocal) {
       info('Outputs')
@@ -110,5 +114,6 @@ if (IsPre && !IsPost) {
     }
   });
 } else if (!IsPre || IsPost) {
+  info(`Variable IsPost: ${IsPost}, Variable IsPre: ${IsPost}`)
   cleanup();
 }
