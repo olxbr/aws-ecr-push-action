@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "build": "ncc build src/actionHandler.js -m",
+    "build:main": "ncc build src/actionHandler.js -o dist/main -m",
+    "build:pre": "ncc build src/cleanup.js -o dist/pre -m",
+    "build:post": "ncc build src/cleanup.js -o dist/post -m",
+    "build": "npm run build:main && npm run build:pre && npm run build:post",
     "start": "STATE_isPre=true isLocal=false AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "start:local": "STATE_isPre=true isLocal=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "start:dry": "STATE_isPre=true isLocal=true dryRun=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
