@@ -7,11 +7,8 @@ const {
   pushImage
 } = require('./main');
 const { sendMetrics } = require('./metrics');
-const { cleanup } = require('./cleanup');
 const { reportImageThreats } = require('./sec');
 
-const IsPre = !!process.env['STATE_isPre'];
-const IsPost = !!process.env['STATE_isPost'];
 const isLocal = !!process.env['isLocal']
 const dryRun = !!process.env['dryRun'];
 
@@ -22,12 +19,6 @@ const ECR_ENDPOINT = `${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com`;
 // pseudo logger
 function info(msg) {
   require('./logger').info(`actionHandler.js - ${msg}`)
-}
-
-if (!IsPre) {
-  core.saveState('isPre', 'true');
-} else if (IsPre && !IsPost) {
-  core.saveState('isPost', 'true');
 }
 
 const run = async () => {
@@ -102,13 +93,9 @@ const run = async () => {
   }
 }
 
-if (IsPre && !IsPost) {
-  run().then(() => {
-    if(isLocal) {
-      info('Outputs')
-      info(core.getOutputs())
-    }
-  });
-} else if (!IsPre || IsPost) {
-  cleanup();
-}
+run().then(() => {
+  if(isLocal) {
+    info('Outputs')
+    info(core.getOutputs())
+  }
+});

@@ -33,4 +33,6 @@ const cleanup = () => {
   info('================ Finished docker cleanup ================')
 }
 
+cleanup()
+
 exports.cleanup = cleanup;
