@@ -92,8 +92,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [trigger]
     steps:
-    - name: Update the ${{ env.TAG_NAME }} tag
-      id: update-major-tag
-      uses: actions/publish-action@v0.1.0
-      with:
-        source-tag: ${{ env.TAG_NAME }}
+      - name: Update the ${{ env.TAG_NAME }} tag
+        id: update-major-tag
+        uses: actions/publish-action@v0.1.0
+        with:
+          source-tag: ${{ env.TAG_NAME }}
+      - name: Dora Metrics
+        run: true
