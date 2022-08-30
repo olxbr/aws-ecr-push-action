@@ -151,7 +151,7 @@ test('Test -1 flag to skip deletion process', async() => {
     expect(deletedImages).toBe(0)
 })
 
-test('Test delete not a necessary quantity of iamges', async() => {
+test('Test delete not a necessary quantity of images', async() => {
     const params = {
       repositoryNames: ['cross/devtools/devtools-scripts-fake'],
       keepImages: 20,
