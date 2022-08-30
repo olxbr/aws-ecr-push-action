@@ -150,9 +150,11 @@ const deleteImages = async (config) => {
 
   let imagesToDelete = [];
   let imagesSize = 0;
+  let imageDigest;
+  let imageTag;
   for (let i = 0; i < (sortedImageList.length - keepImages); i++){
-    var imageDigest = sortedImageList[i]['imageDigest']; // NOSONAR
-    var imageTag = sortedImageList[i]['imageTags']; // NOSONAR
+    imageDigest = sortedImageList[i]['imageDigest'];
+    imageTag = sortedImageList[i]['imageTags'];
     imagesSize += sortedImageList[i]['imageSizeInBytes'];
     if (imageDigest == null || imageTag == null) {
       imagesToDelete.push({
@@ -173,10 +175,11 @@ const deleteImages = async (config) => {
       }
     } else {
       Error(`Failed to delete response: ${deletedImagesResponse}`);
-      return 1
     }
+    return deletedImagesResponse
   } else {
     info(`Found ${imagesToDelete.length} images to be cleanup, keeping ${keepImages}`);
+    return 0
   }
 };
 
