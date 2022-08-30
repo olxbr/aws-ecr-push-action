@@ -4,7 +4,8 @@ const {
   defineRepositoryPolicy,
   dockerLoginOnECR,
   reportImageThreats,
-  pushImage
+  pushImage,
+  deleteImages
 } = require('./main');
 
 
@@ -31,6 +32,43 @@ jest.mock('./AWSClient', () => {
     setRepositoryPolicy: jest.fn(async params => params.policyText),
 
     putImageScanningConfiguration: jest.fn(async noop => noop),
+
+    batchDeleteImage: jest.fn(async params => {
+      return {
+        '$metadata': {
+            httpStatusCode: 200,
+          },
+        failures: [],
+        imageIds: ['sha256:000c96d427daff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794'] // NOSONAR
+      }
+    }),
+
+    listImagesECR: jest.fn(async params => {
+      return {imageIds: 
+        [{
+        imageDigest: 'sha256:000c96d427daff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794', // NOSONAR
+        imageTag: undefined
+        }]
+      }
+    }),
+
+    describeImages: jest.fn(async params => {
+      return { 
+        imageDetails: [{
+          artifactMediaType: 'application/vnd.docker.container.image.v1+json',
+          imageDigest: 'sha256:000c96d427daff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794', // NOSONAR
+          imageManifestMediaType: 'application/vnd.docker.distribution.manifest.v2+json',
+          imagePushedAt: '2022-01-23T05:30:53.000Z',
+          imageScanFindingsSummary: undefined,
+          imageScanStatus: undefined,
+          imageSizeInBytes: 264556141,
+          imageTags: undefined,
+          registryId: '073521391622',
+          repositoryName: 'cross/action-tester/slow-test'
+        }]
+      }
+    }),
+
   }
 })
 
@@ -102,4 +140,33 @@ test('Defines repository policy for new repos', async() => {
     }
     const repositoryPolicy = await defineRepositoryPolicy(params)
     expect(repositoryPolicy).toBe(JSON.stringify(policyFixture))
+})
+
+test('Test -1 flag to skip deletion process', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: -1,
+    }
+    const deletedImages = await deleteImages(params)
+    expect(deletedImages).toBe(0)
+})
+
+test('Test delete not a necessary quantity of iamges', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: 20,
+    }
+    const deletedImages = await deleteImages(params)
+    expect(AWSClient.listImagesECR).toHaveBeenCalled()
+    expect(AWSClient.describeImages).toHaveBeenCalled()
+})
+
+test('Test delete one image', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: 0,
+    }
+    const deletedImages = await deleteImages(params)
+    expect(AWSClient.listImagesECR).toHaveBeenCalled()
+    expect(AWSClient.describeImages).toHaveBeenCalled()
 })

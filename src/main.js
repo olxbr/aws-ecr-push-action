@@ -1,12 +1,18 @@
 const { buildPolicy } = require('./policy');
-const { executeSyncCmd } = require('./utils');
+const {
+  executeSyncCmd,
+  sortByKey
+} = require('./utils');
 const process = require('process');
 const {
   describeRepo,
   createRepo,
   getAuthorizationToken,
   setRepositoryPolicy,
-  putImageScanningConfiguration
+  putImageScanningConfiguration,
+  batchDeleteImage,
+  listImagesECR,
+  describeImages
 } = require('./AWSClient')
 
 // pseudo logger
@@ -118,9 +124,65 @@ const pushImage = (config) => {
   return executeSyncCmd('docker', ['push', `${config.aws['ECR_ENDPOINT']}/${config.repositoryNames[0]}:${config.tag}`]);
 };
 
+const deleteImages = async (config) => {
+  const keepImages = config.keepImages;
+  
+  if (keepImages == -1) {
+    info(`The keepImages is set to ${keepImages} so no image will be deleted`);
+    return 0
+  }
+
+  const repositoryName = config.repositoryNames[0];
+  const maxResults = 1000;
+  const filter = {tagStatus: 'ANY'};
+  info(`Deleting images form ${repositoryName}... Keeping ${keepImages}`);
+
+  var joinedImg = [];
+  const imagesList = await listImagesECR({repositoryName, maxResults, filter}); // NOSONAR
+  const imageQuantity = imagesList['imageIds'].length;
+  info(`Found ${imageQuantity} in th repo`);
+  for (var i = 0; i < imageQuantity; i += 100){
+    var describedImageList = await describeImages({repositoryName,  imageIds: imagesList['imageIds'].slice(i, i+100)}); // NOSONAR
+    joinedImg.push(...describedImageList['imageDetails']);
+  }
+
+  const sortedImageList = sortByKey(joinedImg, 'imagePushedAt');
+
+  var imagesToDelete = [];
+  var imagesSize = 0;
+  for (var i = 0; i < (sortedImageList.length - keepImages); i++){
+    var imageDigest = sortedImageList[i]['imageDigest'];
+    var imageTag = sortedImageList[i]['imageTags'];
+    imagesSize += sortedImageList[i]['imageSizeInBytes'];
+    if (imageDigest == null || imageTag == null) {
+      imagesToDelete.push({
+        imageDigest: imageDigest,
+        imageTag: imageTag
+      });
+    } else {
+      Error('Image information Error');
+    }
+  }
+  if (imagesToDelete.length > 0){
+    info(`Will be deleted ${imagesToDelete.length} images and clean ${imagesSize} bytes`);
+    const deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR
+    if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
+      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length}`);
+      if (deletedImagesResponse['failures'].length != 0){
+        info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
+      }
+    } else {
+      Error(`Failed to delete response: ${deletedImagesResponse}`);
+      return 1
+    }
+  } else {
+    info(`Found ${imagesToDelete.length} images to be cleanup, keeping ${keepImages}`);
+  }
+};
 
 exports.validateImageName = validateImageName;
 exports.getRepositoryUri = getRepositoryUri;
 exports.defineRepositoryPolicy = defineRepositoryPolicy;
 exports.dockerLoginOnECR = dockerLoginOnECR;
 exports.pushImage = pushImage;
+exports.deleteImages = deleteImages;
