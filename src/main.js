@@ -135,7 +135,7 @@ const deleteImages = async (config) => {
   const repositoryName = config.repositoryNames[0];
   const maxResults = 1000;
   const filter = {tagStatus: 'ANY'};
-  info(`Searching images to delete form ${repositoryName}... Will be kept ${keepImages} images`);
+  info(`Searching images to delete from ${repositoryName}... Will be kept ${keepImages} images`);
 
   let joinedImg = [];
   const imagesList = await listImagesECR({repositoryName, maxResults, filter}); // NOSONAR
