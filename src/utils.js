@@ -20,8 +20,8 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
 
 const sortByKey = (array, key) => {
     return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key];
-        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        var x = a[key]; var y = b[key]; // NOSONAR
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0)); // NOSONAR
     });
 }
 

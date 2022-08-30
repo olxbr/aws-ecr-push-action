@@ -156,7 +156,7 @@ test('Test delete not a necessary quantity of iamges', async() => {
       repositoryNames: ['cross/devtools/devtools-scripts-fake'],
       keepImages: 20,
     }
-    const deletedImages = await deleteImages(params)
+    await deleteImages(params)
     expect(AWSClient.listImagesECR).toHaveBeenCalled()
     expect(AWSClient.describeImages).toHaveBeenCalled()
 })
@@ -166,7 +166,7 @@ test('Test delete one image', async() => {
       repositoryNames: ['cross/devtools/devtools-scripts-fake'],
       keepImages: 0,
     }
-    const deletedImages = await deleteImages(params)
+    await deleteImages(params)
     expect(AWSClient.listImagesECR).toHaveBeenCalled()
     expect(AWSClient.describeImages).toHaveBeenCalled()
 })

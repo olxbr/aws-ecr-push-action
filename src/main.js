@@ -137,22 +137,22 @@ const deleteImages = async (config) => {
   const filter = {tagStatus: 'ANY'};
   info(`Deleting images form ${repositoryName}... Keeping ${keepImages}`);
 
-  var joinedImg = [];
+  let joinedImg = [];
   const imagesList = await listImagesECR({repositoryName, maxResults, filter}); // NOSONAR
   const imageQuantity = imagesList['imageIds'].length;
   info(`Found ${imageQuantity} in th repo`);
-  for (var i = 0; i < imageQuantity; i += 100){
+  for (let i = 0; i < imageQuantity; i += 100){
     var describedImageList = await describeImages({repositoryName,  imageIds: imagesList['imageIds'].slice(i, i+100)}); // NOSONAR
     joinedImg.push(...describedImageList['imageDetails']);
   }
 
   const sortedImageList = sortByKey(joinedImg, 'imagePushedAt');
 
-  var imagesToDelete = [];
-  var imagesSize = 0;
-  for (var i = 0; i < (sortedImageList.length - keepImages); i++){
-    var imageDigest = sortedImageList[i]['imageDigest'];
-    var imageTag = sortedImageList[i]['imageTags'];
+  let imagesToDelete = [];
+  let imagesSize = 0;
+  for (let i = 0; i < (sortedImageList.length - keepImages); i++){
+    var imageDigest = sortedImageList[i]['imageDigest']; // NOSONAR
+    var imageTag = sortedImageList[i]['imageTags']; // NOSONAR
     imagesSize += sortedImageList[i]['imageSizeInBytes'];
     if (imageDigest == null || imageTag == null) {
       imagesToDelete.push({
