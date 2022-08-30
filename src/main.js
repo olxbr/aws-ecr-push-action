@@ -135,12 +135,12 @@ const deleteImages = async (config) => {
   const repositoryName = config.repositoryNames[0];
   const maxResults = 1000;
   const filter = {tagStatus: 'ANY'};
-  info(`Deleting images form ${repositoryName}... Keeping ${keepImages}`);
+  info(`Searching images to delete form ${repositoryName}... Will be kept ${keepImages} images`);
 
   let joinedImg = [];
   const imagesList = await listImagesECR({repositoryName, maxResults, filter}); // NOSONAR
   const imageQuantity = imagesList['imageIds'].length;
-  info(`Found ${imageQuantity} in th repo`);
+  info(`Found ${imageQuantity} in th repo...`);
   for (let i = 0; i < imageQuantity; i += 100){
     var describedImageList = await describeImages({repositoryName,  imageIds: imagesList['imageIds'].slice(i, i+100)}); // NOSONAR
     joinedImg.push(...describedImageList['imageDetails']);
@@ -166,10 +166,10 @@ const deleteImages = async (config) => {
     }
   }
   if (imagesToDelete.length > 0){
-    info(`Will be deleted ${imagesToDelete.length} images and clean ${imagesSize} bytes`);
+    info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${imagesSize}bytes`);
     const deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
-      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length}`);
+      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
       if (deletedImagesResponse['failures'].length != 0){
         info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
       }
@@ -178,7 +178,7 @@ const deleteImages = async (config) => {
     }
     return deletedImagesResponse
   } else {
-    info(`Found ${imagesToDelete.length} images to be cleanup, keeping ${keepImages}`);
+    info(`Found no images to delete... Keeping ${keepImages}`);
     return 0
   }
 };
