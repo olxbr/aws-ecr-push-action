@@ -4,7 +4,8 @@ const {
   defineRepositoryPolicy,
   dockerLoginOnECR,
   reportImageThreats,
-  pushImage
+  pushImage,
+  deleteImages
 } = require('./main');
 
 
@@ -31,6 +32,64 @@ jest.mock('./AWSClient', () => {
     setRepositoryPolicy: jest.fn(async params => params.policyText),
 
     putImageScanningConfiguration: jest.fn(async noop => noop),
+
+    batchDeleteImage: jest.fn(async params => {
+      return {
+        '$metadata': {
+            httpStatusCode: 200,
+          },
+        failures: [],
+        imageIds: params.imageIds // NOSONAR
+      }
+    }),
+
+    listImagesECR: jest.fn(async params => {
+      return {imageIds: 
+        [
+          {
+            imageDigest: 'sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794', // NOSONAR
+            imageTag: undefined
+          },
+          {
+            imageDigest: 'sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927', // NOSONAR
+            imageTag: undefined
+          },
+          {
+            imageDigest: 'sha256:YOUNGEST_IMAGE34c26298efe1f1dfdeba497ff54f17242c8637fa40c3238440', // NOSONAR
+            imageTag: undefined
+          }
+        ]
+      }
+    }),
+
+    describeImages: jest.fn(async params => {
+      return { 
+        imageDetails: [
+            {
+              imageDigest: 'sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794', // NOSONAR
+              imagePushedAt: new Date('2022-01-30T05:30:53.000Z'),
+              imageSizeInBytes: 264556141,
+              imageTags: undefined,
+              repositoryName: 'cross/action-tester/slow-test'
+          },
+          {
+            imageDigest: 'sha256:YOUNGEST_IMAGE34c26298efe1f1dfdeba497ff54f17242c8637fa40c3238440', // NOSONAR
+            imagePushedAt: new Date('2022-07-26T15:45:32.000Z'),
+            imageSizeInBytes: 263301607,
+            imageTags: undefined,
+            repositoryName: 'cross/action-tester/slow-test'
+          },
+          {
+            imageDigest: 'sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927', // NOSONAR
+            imagePushedAt: new Date('2022-07-26T05:45:32.000Z'),
+            imageSizeInBytes: 265419182,
+            imageTags: undefined,
+            repositoryName: 'cross/action-tester/slow-test'
+          }
+      ]
+      }
+    }),
+
   }
 })
 
@@ -102,4 +161,49 @@ test('Defines repository policy for new repos', async() => {
     }
     const repositoryPolicy = await defineRepositoryPolicy(params)
     expect(repositoryPolicy).toBe(JSON.stringify(policyFixture))
+})
+
+test('Test -1 flag to skip deletion process', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: -1,
+    }
+    const deletedImages = await deleteImages(params)
+    expect(deletedImages).toBe(0)
+})
+
+test('Test delete not a necessary quantity of images', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: 20,
+    }
+    await deleteImages(params)
+    expect(AWSClient.listImagesECR).toHaveBeenCalled()
+    expect(AWSClient.describeImages).toHaveBeenCalled()
+})
+
+test('Test delete all images', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: 0,
+    }
+    const deleteResponse = await deleteImages(params)
+    expect(AWSClient.listImagesECR).toHaveBeenCalled()
+    expect(AWSClient.describeImages).toHaveBeenCalled()
+    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse['imageIds'].length).toBe(3)
+})
+
+test('Test delete two images and keep de youngest', async() => {
+    const params = {
+      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+      keepImages: 1,
+    }
+    const deleteResponse = await deleteImages(params)
+    expect(AWSClient.listImagesECR).toHaveBeenCalled()
+    expect(AWSClient.describeImages).toHaveBeenCalled()
+    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse['imageIds'].length).toBe(2)
+    expect(deleteResponse['imageIds']).toContainEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTag": undefined}) // NOSONAR
+    expect(deleteResponse['imageIds']).toContainEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": undefined}) // NOSONAR
 })

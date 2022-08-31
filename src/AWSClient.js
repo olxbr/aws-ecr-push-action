@@ -5,7 +5,10 @@ const {
   CreateRepositoryCommand,
   GetAuthorizationTokenCommand,
   SetRepositoryPolicyCommand,
-  PutImageScanningConfigurationCommand
+  PutImageScanningConfigurationCommand,
+  BatchDeleteImageCommand,
+  ListImagesCommand,
+  DescribeImagesCommand
 } = require('@aws-sdk/client-ecr');
 
 
@@ -21,6 +24,9 @@ const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
+const batchDeleteImage = (params) => client.send(new BatchDeleteImageCommand(params));
+const listImagesECR = (params) => client.send(new ListImagesCommand(params));
+const describeImages = (params) => client.send(new DescribeImagesCommand(params));
 
 exports.client = client
 exports.describeRepo = describeRepo
@@ -28,4 +34,6 @@ exports.createRepo = createRepo
 exports.getAuthorizationToken = getAuthorizationToken
 exports.setRepositoryPolicy = setRepositoryPolicy
 exports.putImageScanningConfiguration = putImageScanningConfiguration
-
+exports.batchDeleteImage = batchDeleteImage
+exports.listImagesECR = listImagesECR
+exports.describeImages = describeImages

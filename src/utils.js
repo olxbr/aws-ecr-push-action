@@ -18,4 +18,12 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
   return cmd.stdout.toString();
 };
 
+const sortByKey = (array, key) => {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key]; // NOSONAR
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0)); // NOSONAR
+    });
+}
+
 exports.executeSyncCmd = executeSyncCmd;
+exports.sortByKey = sortByKey;

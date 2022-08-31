@@ -4,7 +4,9 @@ const {
   getRepositoryUri,
   defineRepositoryPolicy,
   dockerLoginOnECR,
-  pushImage
+  pushImage,
+  deleteImages
+
 } = require('./main');
 const { sendMetrics } = require('./metrics');
 const { reportImageThreats } = require('./sec');
@@ -31,6 +33,7 @@ const run = async () => {
     const x9ContainersBranch = core.getInput('x9_container_branch');
     const ignoreThreats = core.getInput('ignore_threats');
     const trivyIgnoreURL = core.getInput('trivy_ignore_url');
+    const keepImages = core.getInput('keep_images');
 
     const awsConfig = {
       AWS_ACCOUNT_ID,
@@ -47,6 +50,7 @@ const run = async () => {
       ignoreThreats,
       trivyIgnoreURL,
       aws: awsConfig,
+      keepImages,
     };
 
     info(`Action params: ${JSON.stringify(params)}`)
@@ -83,6 +87,7 @@ const run = async () => {
       tags.forEach((tag) => {
         pushImage({ ...params, tag });
       });
+      deleteImages(params);
     }
 
   } catch (err) {
