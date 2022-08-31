@@ -166,7 +166,7 @@ const deleteImages = async (config) => {
     }
   }
   if (imagesToDelete.length > 0){
-    info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${imagesSize/1024/1024} Megabytes`);
+    info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${(imagesSize/1024/1024).toFixed(2)} Megabytes`);
     const deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
       info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
