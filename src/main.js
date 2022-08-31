@@ -156,7 +156,7 @@ const deleteImages = async (config) => {
     imageDigest = sortedImageList[i]['imageDigest'];
     imageTag = sortedImageList[i]['imageTags'];
     imagesSize += sortedImageList[i]['imageSizeInBytes'];
-    if (imageDigest == null || imageTag == null) {
+    if (imageDigest != null || imageTag != null) {
       imagesToDelete.push({
         imageDigest: imageDigest,
         imageTag: imageTag
