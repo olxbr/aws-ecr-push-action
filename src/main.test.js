@@ -34,6 +34,15 @@ jest.mock('./AWSClient', () => {
     putImageScanningConfiguration: jest.fn(async noop => noop),
 
     batchDeleteImage: jest.fn(async params => {
+      if (params.imageIds.lenght > 100) {
+        return {
+        '$metadata': {
+            httpStatusCode: 400,
+          },
+        failures: [],
+        imageIds: params.imageIds // NOSONAR
+      }
+      }
       return {
         '$metadata': {
             httpStatusCode: 200,
@@ -190,8 +199,9 @@ test('Test delete all images', async() => {
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.listImagesECR).toHaveBeenCalled()
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
-    expect(deleteResponse['imageIds'].length).toBe(3)
+    expect(deleteResponse.length).toBe(1)
+    expect(deleteResponse[0]['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse[0]['imageIds'].length).toBe(3)
 })
 
 test('Test delete two images and keep de youngest', async() => {
@@ -202,8 +212,9 @@ test('Test delete two images and keep de youngest', async() => {
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.listImagesECR).toHaveBeenCalled()
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
-    expect(deleteResponse['imageIds'].length).toBe(2)
-    expect(deleteResponse['imageIds']).toContainEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTag": undefined}) // NOSONAR
-    expect(deleteResponse['imageIds']).toContainEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": undefined}) // NOSONAR
+    expect(deleteResponse.length).toBe(1)
+    expect(deleteResponse[0]['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse[0]['imageIds'].length).toBe(2)
+    expect(deleteResponse[0]['imageIds']).toContainEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTag": undefined}) // NOSONAR
+    expect(deleteResponse[0]['imageIds']).toContainEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": undefined}) // NOSONAR
 })

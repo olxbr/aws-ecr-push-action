@@ -167,16 +167,21 @@ const deleteImages = async (config) => {
   }
   if (imagesToDelete.length > 0){
     info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${(imagesSize/1024/1024).toFixed(2)} Megabytes`);
-    const deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR
-    if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
-      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
-      if (deletedImagesResponse['failures'].length != 0){
-        info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
+    let deletedImagesResponse;
+    let deletedImagesBatch = [];
+    for(let i = 0; i < imagesToDelete.length; i += 100){
+      deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete.slice(i, i+100)}); // NOSONAR
+      deletedImagesBatch.push(deletedImagesResponse)
+      if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
+        info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
+        if (deletedImagesResponse['failures'].length != 0){
+          info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
+        }
+      } else {
+        Error(`Failed to delete response: ${deletedImagesResponse}`);
       }
-    } else {
-      Error(`Failed to delete response: ${deletedImagesResponse}`);
     }
-    return deletedImagesResponse
+    return deletedImagesBatch
   } else {
     info(`Found no images to delete... Keeping ${keepImages}`);
     return 0
