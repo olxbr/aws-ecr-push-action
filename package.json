@@ -7,11 +7,11 @@
     "start": "STATE_isPre=true isLocal=false AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "start:local": "STATE_isPre=true isLocal=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "start:dry": "STATE_isPre=true isLocal=true dryRun=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
-    "test" : "jest --coverage",
-    "test.watch" : "jest --coverage --watch"
+    "test": "jest --coverage",
+    "test.watch": "jest --coverage --watch"
   },
   "dependencies": {
-    "@actions/core": "^1.3.0",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.0",
     "@aws-sdk/client-ecr": "^3.13.1",
     "axios": "^0.21.2",
