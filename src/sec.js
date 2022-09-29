@@ -75,7 +75,7 @@ const reportImageThreats = (config) => {
       '--build-arg',
       'TRIVY_IMAGE=cross/devsecops/trivy:latest',
       '--build-arg',
-      'BASE_IMAGE=base_images/alpine:3.14-base',
+      'BASE_IMAGE=public.ecr.aws/docker/library/alpine:3.14',
       '--build-arg',
       `TARGET_IMAGE=${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
