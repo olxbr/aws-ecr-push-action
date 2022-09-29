@@ -12,6 +12,7 @@ COPY --from=target / ../base-root
 
 FROM base-stage as clamscan-stage
 WORKDIR /scans
+RUN apk add --no-cache ca-certificates curl
 RUN apk update && apk upgrade && apk add --no-cache clamav-libunrar clamav
 COPY --from=clamav /var/lib/clamav/main.cvd /var/lib/clamav/
 COPY --from=clamav /var/lib/clamav/daily.cvd /var/lib/clamav/
