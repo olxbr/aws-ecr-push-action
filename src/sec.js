@@ -25,7 +25,7 @@ const reportImageThreats = (config) => {
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
-  var rootDir = __dirname.replace(/\/(src|dist).*/,'') // File can be on src or dist
+  var rootDir = __dirname.replace(/\/(src|dist).*/,'').replace('&','') // File can be on src or dist
 
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
   process.chdir(`${workspace}`);
