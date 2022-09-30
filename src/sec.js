@@ -15,6 +15,9 @@ const enforced = require('./enforcedCVEs.js');
 function info(msg) {
   require('./logger').info(`sec.js - ${msg}`)
 }
+function warn(msg) {
+  require('./logger').warn(`sec.js - ${msg}`)
+}
 
 const reportImageThreats = (config) => {
   info(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
@@ -144,8 +147,8 @@ const reportImageThreats = (config) => {
   // Evaluate findings from Trivy
   const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
   const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
-  if (!fs.existsSync(trivyScanFile)) {
-    throw new Error(`report image threats file ${trivyScanFileName} reading failed`);
+  if (!fs.existsSync(trivyScanFile) || fs.readFileSync(trivyScanFile).length < 2) {
+    warn(`report image threats file ${trivyScanFileName} reading failed. Check will NOT be executed!`);
   }
 
   const reportContent = fs.readFileSync(trivyScanFile);
@@ -156,57 +159,52 @@ const reportImageThreats = (config) => {
   }
 
   process.stdout.write('Trivy	');
+  const grepTrivy = executeSyncCmd(
+    'grep',
+    ['^Total: ', trivyScanFile],
+    `report image threats file ${trivyScanFileName} grep failed`
+  );
+  const totalsTrivy = grepTrivy.match(/\d+/);
+  if (totalsTrivy.some(isNaN)) {
+    throw new Error(`report image threats file ${trivyScanFileName} missing totals`);
+  }
+  if (
+    ((`${config.minimalSeverity}` === 'CRITICAL') &&
+      (
+        totalsTrivy[0] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-  if (require('fs').existsSync(trivyScanFile)) {
-    const grepTrivy = executeSyncCmd(
-      'grep',
-      ['^Total: ', trivyScanFile],
-      `report image threats file ${trivyScanFileName} grep failed`
-    );
-    const totalsTrivy = grepTrivy.match(/\d+/);
-    if (totalsTrivy.some(isNaN)) {
-      throw new Error(`report image threats file ${trivyScanFileName} missing totals`);
-    }
-    if (
-      ((`${config.minimalSeverity}` === 'CRITICAL') &&
-        (
-          totalsTrivy[0] > CRITICAL_VULNS_THRESHOLD)
-      ) ||
+    ((`${config.minimalSeverity}` === 'HIGH') &&
+      (
+        totalsTrivy[0] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[1] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-      ((`${config.minimalSeverity}` === 'HIGH') &&
-        (
-          totalsTrivy[0] > HIGH_VULNS_THRESHOLD ||
-          totalsTrivy[1] > CRITICAL_VULNS_THRESHOLD)
-      ) ||
+    ((`${config.minimalSeverity}` === 'MEDIUM') &&
+      (
+        totalsTrivy[0] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[1] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[2] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-      ((`${config.minimalSeverity}` === 'MEDIUM') &&
-        (
-          totalsTrivy[0] > MEDIUM_VULNS_THRESHOLD ||
-          totalsTrivy[1] > HIGH_VULNS_THRESHOLD ||
-          totalsTrivy[2] > CRITICAL_VULNS_THRESHOLD)
-      ) ||
+    ((`${config.minimalSeverity}` === 'LOW') &&
+      (
+        totalsTrivy[0] > LOW_VULNS_THRESHOLD ||
+        totalsTrivy[1] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[2] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[3] > CRITICAL_VULNS_THRESHOLD)
+    ) ||
 
-      ((`${config.minimalSeverity}` === 'LOW') &&
-        (
-          totalsTrivy[0] > LOW_VULNS_THRESHOLD ||
-          totalsTrivy[1] > MEDIUM_VULNS_THRESHOLD ||
-          totalsTrivy[2] > HIGH_VULNS_THRESHOLD ||
-          totalsTrivy[3] > CRITICAL_VULNS_THRESHOLD)
-      ) ||
-
-      ((`${config.minimalSeverity}` === 'UNKNOWN') &&
-        (
-          totalsTrivy[0] > UNKNOWN_VULNS_THRESHOLD ||
-          totalsTrivy[1] > LOW_VULNS_THRESHOLD ||
-          totalsTrivy[2] > MEDIUM_VULNS_THRESHOLD ||
-          totalsTrivy[3] > HIGH_VULNS_THRESHOLD ||
-          totalsTrivy[4] > CRITICAL_VULNS_THRESHOLD)
-      )
-    ) {
-      throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
-    }
-  } else {
-    info(`File ${trivyScanFileName} does NOT exists! No vulnerabilities was checked.`)
+    ((`${config.minimalSeverity}` === 'UNKNOWN') &&
+      (
+        totalsTrivy[0] > UNKNOWN_VULNS_THRESHOLD ||
+        totalsTrivy[1] > LOW_VULNS_THRESHOLD ||
+        totalsTrivy[2] > MEDIUM_VULNS_THRESHOLD ||
+        totalsTrivy[3] > HIGH_VULNS_THRESHOLD ||
+        totalsTrivy[4] > CRITICAL_VULNS_THRESHOLD)
+    )
+  ) {
+    throw new Error(`report image threats file ${trivyScanFileName} threat threshold exceeded`);
   }
 
   const critical_cves = enforced.CVES;
