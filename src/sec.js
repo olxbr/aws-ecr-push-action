@@ -157,8 +157,8 @@ const reportImageThreats = (config) => {
 
   process.stdout.write('Trivy	');
   const grepTrivy = executeSyncCmd(
-    'test',
-    ['-f', trivyScanFile, '&&', 'grep', '^Total: ', trivyScanFile],
+    'grep',
+    ['^Total: ', trivyScanFile, '||', 'true'],
     `report image threats file ${trivyScanFileName} grep failed`
   );
   const totalsTrivy = grepTrivy.match(/\d+/);
