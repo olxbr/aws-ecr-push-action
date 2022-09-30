@@ -22,7 +22,7 @@ const reportImageThreats = (config) => {
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
-  var rootDir = __dirname.replace(/\/(src|dist).*/,'')
+  var rootDir = __dirname.replace(/\/(src|dist).*/,'') // File can be on src or dist
 
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
   process.chdir(`${workspace}`);
@@ -157,8 +157,8 @@ const reportImageThreats = (config) => {
 
   process.stdout.write('Trivy	');
   const grepTrivy = executeSyncCmd(
-    'grep',
-    ['^Total: ', `${trivyScanFile}`],
+    'test',
+    ['-f', trivyScanFile, '&&', 'grep', '^Total: ', trivyScanFile],
     `report image threats file ${trivyScanFileName} grep failed`
   );
   const totalsTrivy = grepTrivy.match(/\d+/);
