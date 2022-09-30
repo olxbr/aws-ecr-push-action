@@ -147,7 +147,7 @@ const reportImageThreats = (config) => {
   // Evaluate findings from Trivy
   const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
   const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
-  if (!fs.existsSync(trivyScanFile) || fs.readFileSync(trivyScanFile).length < 2) {
+  if (!fs.existsSync(trivyScanFile) || fs.readFileSync(trivyScanFile).length < 4) {
     msg = `report image threats file ${trivyScanFileName} reading failed. Check will NOT be executed!`
     warn(msg)
     return msg
