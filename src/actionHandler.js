@@ -32,7 +32,7 @@ const run = async () => {
     const x9ContainersDistro = core.getInput('x9_container_distro');
     const x9ContainersBranch = core.getInput('x9_container_branch');
     const ignoreThreats = core.getInput('ignore_threats');
-    const trivyIgnoreURL = core.getInput('trivy_ignore_url');
+    const trivyIgnoreFile = core.getInput('trivy_ignore_file');
     const keepImages = core.getInput('keep_images');
 
     const awsConfig = {
@@ -48,7 +48,7 @@ const run = async () => {
       x9ContainersDistro,
       x9ContainersBranch,
       ignoreThreats,
-      trivyIgnoreURL,
+      trivyIgnoreFile,
       aws: awsConfig,
       keepImages,
     };

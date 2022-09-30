@@ -15,6 +15,9 @@ const enforced = require('./enforcedCVEs.js');
 function info(msg) {
   require('./logger').info(`sec.js - ${msg}`)
 }
+function warn(msg) {
+  require('./logger').warn(`sec.js - ${msg}`)
+}
 
 const reportImageThreats = (config) => {
   info(`X9Containers will find something to blame now... on process ID: ${X9CONTAINERS_UUID}`);
@@ -22,20 +25,32 @@ const reportImageThreats = (config) => {
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
+  var rootDir = __dirname.replace(/\/(src|dist).*/,'').replace(/&/g,'') // File can be on src or dist
 
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
   process.chdir(`${workspace}`);
+  info(`PWD is ${rootDir}/${workspace}`);
 
+  // Get Dockerfile and Trivy directly from current action
   executeSyncCmd(
-    'curl',
+    'cp',
     [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/${config.x9ContainersBranch}/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
-      '--output',
+      `${rootDir}/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
       `${dockerfileName}`
     ],
-    `report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile failed`
-  );
-  info(`report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile done`);
+    `report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile failed`
+  )
+  info(`report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile done`);
+
+  executeSyncCmd(
+    'cp',
+    [
+      `${rootDir}/X9Containers/${config.trivyIgnoreFile}`,
+      `${config.trivyIgnoreFile}`
+    ],
+    `report image threats cp ${config.trivyIgnoreFile}.X9.Dockerfile failed`
+  )
+  info(`report image threats cp ${config.trivyIgnoreFile} done`);
 
   // Run image scan
   info('report image threats analysis will start');
@@ -75,13 +90,13 @@ const reportImageThreats = (config) => {
       '--build-arg',
       'TRIVY_IMAGE=cross/devsecops/trivy:latest',
       '--build-arg',
-      'BASE_IMAGE=base_images/alpine:3.14-base',
+      'BASE_IMAGE=public.ecr.aws/docker/library/alpine:3.14',
       '--build-arg',
       `TARGET_IMAGE=${config.repositoryNames[0]}:${config.tags[0]}`,
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--build-arg',
-      `TRIVY_IGNORE_URL=${config.trivyIgnoreURL}`,
+      `TRIVY_IGNORE_FILE=${config.trivyIgnoreFile}`,
       '--no-cache',
       '.'
     ]
@@ -132,8 +147,10 @@ const reportImageThreats = (config) => {
   // Evaluate findings from Trivy
   const trivyScanFileName = 'image-vulnerabilities-trivy.txt';
   const trivyScanFile = `${scansFolder}/${trivyScanFileName}`;
-  if (!fs.existsSync(trivyScanFile)) {
-    throw new Error(`report image threats file ${trivyScanFileName} reading failed`);
+  if (!fs.existsSync(trivyScanFile) || fs.readFileSync(trivyScanFile).length < 4) {
+    msg = `report image threats file ${trivyScanFileName} reading failed. Check will NOT be executed!`
+    warn(msg)
+    return msg
   }
 
   const reportContent = fs.readFileSync(trivyScanFile);
@@ -146,7 +163,7 @@ const reportImageThreats = (config) => {
   process.stdout.write('Trivy	');
   const grepTrivy = executeSyncCmd(
     'grep',
-    ['^Total: ', `${trivyScanFile}`],
+    ['^Total: ', trivyScanFile],
     `report image threats file ${trivyScanFileName} grep failed`
   );
   const totalsTrivy = grepTrivy.match(/\d+/);
