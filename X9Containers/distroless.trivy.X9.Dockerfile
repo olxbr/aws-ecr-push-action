@@ -12,10 +12,10 @@ COPY --from=target / ../base-root
 
 FROM base-stage as trivy-stage
 ARG TRIVY_SEVERITY
-ARG TRIVY_IGNORE_URL
+ARG TRIVY_IGNORE_FILE
 WORKDIR /scans
 RUN apk add --no-cache ca-certificates curl
-RUN curl $TRIVY_IGNORE_URL --output .trivyignore
+ADD $TRIVY_IGNORE_FILE .trivyignore
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy --debug filesystem --timeout 20m --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress /base-root | tee image-vulnerabilities-trivy.txt
 RUN echo "DONE RUNNING TRIVY"

@@ -22,20 +22,31 @@ const reportImageThreats = (config) => {
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
+  var rootDir = __dirname.replace(/\/(src|dist).*/,'')
 
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
   process.chdir(`${workspace}`);
+  info(`PWD is ${rootDir}/${workspace}`);
 
+  // Get Dockerfile and Trivy directly from current action
   executeSyncCmd(
-    'curl',
+    'cp',
     [
-      `https://raw.githubusercontent.com/olxbr/aws-ecr-push-action/${config.x9ContainersBranch}/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
-      '--output',
+      `${rootDir}/X9Containers/${config.x9ContainersDistro}.X9.Dockerfile`,
       `${dockerfileName}`
     ],
-    `report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile failed`
-  );
-  info(`report image threats curl ${config.x9ContainersDistro}.X9.Dockerfile done`);
+    `report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile failed`
+  )
+  executeSyncCmd(
+    'cp',
+    [
+      `${rootDir}/${config.trivyIgnoreFile}`,
+      `${config.trivyIgnoreFile}`
+    ],
+    `report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile failed`
+  )
+
+  info(`report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile done`);
 
   // Run image scan
   info('report image threats analysis will start');
@@ -81,7 +92,7 @@ const reportImageThreats = (config) => {
       '--build-arg',
       `TRIVY_SEVERITY=${minimalSeverity}`,
       '--build-arg',
-      `TRIVY_IGNORE_URL=${config.trivyIgnoreURL}`,
+      `TRIVY_IGNORE_FILE=${config.trivyIgnoreFile}`,
       '--no-cache',
       '.'
     ]
