@@ -42,7 +42,7 @@ const reportImageThreats = (config) => {
   executeSyncCmd(
     'cp',
     [
-      `${rootDir}/${config.trivyIgnoreFile}`,
+      `${rootDir}/X9Containers/${config.trivyIgnoreFile}`,
       `${config.trivyIgnoreFile}`
     ],
     `report image threats cp ${config.trivyIgnoreFile}.X9.Dockerfile failed`
