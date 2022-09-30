@@ -22,7 +22,7 @@ const reportImageThreats = (config) => {
   // Obtain a X9Containers Dockerfile
   var dockerfileName = `${X9CONTAINERS_UUID}.X9.Dockerfile`;
   var workspace = `${X9CONTAINERS_UUID}_X9Containers`;
-  var rootDir = __dirname.replace(/\/(src|dist).*/,'')
+  var rootDir = __dirname.replace(/(.*aws-ecr-push-action).*/,'$1')
 
   executeSyncCmd('mkdir', ['-p', `${workspace}`]);
   process.chdir(`${workspace}`);
@@ -37,16 +37,17 @@ const reportImageThreats = (config) => {
     ],
     `report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile failed`
   )
+  info(`report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile done`);
+
   executeSyncCmd(
     'cp',
     [
       `${rootDir}/${config.trivyIgnoreFile}`,
       `${config.trivyIgnoreFile}`
     ],
-    `report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile failed`
+    `report image threats cp ${config.trivyIgnoreFile}.X9.Dockerfile failed`
   )
-
-  info(`report image threats cp ${config.x9ContainersDistro}.X9.Dockerfile done`);
+  info(`report image threats cp ${config.trivyIgnoreFile} done`);
 
   // Run image scan
   info('report image threats analysis will start');
