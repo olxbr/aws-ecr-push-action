@@ -101,6 +101,6 @@ const run = async () => {
 run().then(() => {
   if(isLocal) {
     info('Outputs')
-    info(core.getOutputs())
+    info(JSON.stringify(core.getOutputs()))
   }
 });
