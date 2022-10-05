@@ -136,8 +136,8 @@ const deleteImages = async (config) => {
   const filter = {tagStatus: 'ANY'};
   info(`Searching images to delete from ${repositoryName}... Will be kept ${keepImages} images`);
 
-  const imagesList = await describeImages({repositoryName, maxResults, filter}); // NOSONAR
-  info(`Found total of [${imagesList['imageDetails'].length}] images in the repo...`);
+  let imagesList = await describeImages({repositoryName, maxResults, filter}); // NOSONAR
+  info(`Found total of ${imagesList['imageDetails'].length} images in the repo...`);
   info(`Listing all images: ${JSON.stringify(imagesList)}`)
 
   info(`Finding ALL UNTAGGED images first...`);
@@ -162,11 +162,11 @@ const deleteImages = async (config) => {
 
     // Delete untagged if exists
     if (untaggedImgIds.length > 0) {
-      info(`Deleting [${untaggedImgIds.length}] UNTAGGED images and will be cleaned [${untaggedCleanedSizeInMB.toFixed(2)}] Megabytes...`)
+      info(`Deleting ${untaggedImgIds.length} UNTAGGED images and will be cleaned ${untaggedCleanedSizeInMB.toFixed(2)} Megabytes...`)
       delUntaggedImages = await batchDeleteImage({repositoryName: repositoryName, imageIds: untaggedImgIds}); // NOSONAR
 
       if (delUntaggedImages['$metadata']['httpStatusCode'] == 200){
-        info(`Successfuly deleted ${untaggedImgIds.length} images`);
+        info(`Successfuly deleted ${untaggedImgIds.length} untagged images`);
       } else {
         Error(`Failed to delete response: ${delUntaggedImagese}`);
       }
