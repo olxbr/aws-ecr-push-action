@@ -25,7 +25,6 @@ const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenC
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
 const batchDeleteImage = (params) => client.send(new BatchDeleteImageCommand(params));
-const listImagesECR = (params) => client.send(new ListImagesCommand(params));
 const describeImages = (params) => client.send(new DescribeImagesCommand(params));
 
 exports.client = client
@@ -35,5 +34,4 @@ exports.getAuthorizationToken = getAuthorizationToken
 exports.setRepositoryPolicy = setRepositoryPolicy
 exports.putImageScanningConfiguration = putImageScanningConfiguration
 exports.batchDeleteImage = batchDeleteImage
-exports.listImagesECR = listImagesECR
 exports.describeImages = describeImages
