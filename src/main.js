@@ -126,10 +126,11 @@ const pushImage = (config) => {
 
 const deleteImages = async (config) => {
   const keepImages = config.keepImages;
+  let countDeletedImg = 0;
   
   if (keepImages == -1) {
     info(`The keepImages is set to ${keepImages} so no image will be deleted`);
-    return 0
+    return countDeletedImg;
   }
 
   const repositoryName = config.repositoryNames[0];
@@ -168,6 +169,7 @@ const deleteImages = async (config) => {
 
       if (delUntaggedImages['$metadata']['httpStatusCode'] == 200){
         info(`Successfuly deleted ${untaggedImgIds.length} untagged images`);
+        countDeletedImg += untaggedImgIds.length
       } else {
         Error(`Failed to delete response: ${delUntaggedImagese}`);
       }
@@ -204,6 +206,7 @@ const deleteImages = async (config) => {
     let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR    
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
       info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
+      countDeletedImg += imagesToDelete.length
       if (deletedImagesResponse['failures'].length != 0){
         info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
       }
@@ -214,7 +217,7 @@ const deleteImages = async (config) => {
     return deletedImagesResponse
   } else {
     info(`Found no images to delete... Keeping ${keepImages}`);
-    return 0
+    return countDeletedImg
   }
 };
 

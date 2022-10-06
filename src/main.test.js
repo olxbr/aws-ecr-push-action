@@ -191,6 +191,17 @@ test('Test delete not a necessary quantity of images', async() => {
     expect(AWSClient.describeImages).toHaveBeenCalled()
 })
 
+test('Test delete ONLY untagged images', async() => {
+  const params = {
+    repositoryNames: ['cross/devtools/devtools-scripts-fake'],
+    keepImages: 5
+  }
+
+  const deleteResponse = await deleteImages(params)
+  expect(AWSClient.describeImages).toHaveBeenCalled()
+  expect(deleteResponse).toBe(2) // Only tagged images
+})
+
 test('Test delete all images', async() => {
     const params = {
       repositoryNames: ['cross/devtools/devtools-scripts-fake'],
