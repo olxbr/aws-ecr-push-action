@@ -205,7 +205,7 @@ const deleteImages = async (config) => {
 
     let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR    
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
-      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
+      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images and keeping last ${keepImages}`);
       countDeletedImg += imagesToDelete.length
       if (deletedImagesResponse['failures'].length != 0){
         info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
