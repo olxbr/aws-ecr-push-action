@@ -194,7 +194,7 @@ const deleteImages = async (config) => {
     if (imageDigest != null) {
       imagesToDelete.push({
         imageDigest: imageDigest,
-        imageTag: imageTag
+        imageTags: imageTag
       });
     } else {
       Error('Image information Error');
