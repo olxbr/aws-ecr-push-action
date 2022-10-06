@@ -211,5 +211,5 @@ test('Test keep just 1 youngest image', async() => {
     expect(AWSClient.describeImages).toHaveBeenCalled()
     expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
     expect(deleteResponse['imageIds'].length).toBe(1)
-    expect(deleteResponse['imageIds'][0]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": ['v0.0.1']}) // NOSONAR
+    expect(deleteResponse['imageIds'][0]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTags": ['v0.0.1']}) // NOSONAR
 })

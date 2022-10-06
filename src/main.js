@@ -155,7 +155,7 @@ const deleteImages = async (config) => {
         untaggedImgInfos.push(imageInfo);
         untaggedImgIds.push({
           imageDigest: imageInfo.imageDigest,
-          imageTag: undefined
+          imageTags: undefined
         });
 
       }
@@ -185,8 +185,6 @@ const deleteImages = async (config) => {
   let imageDigest;
   let imageTag;
 
-  console.log(imagesList['imageDetails'])
-  console.log(sortedImageList)
   for (let i = 0; i < (sortedImageList.length - keepImages); i++){
     imageDigest = sortedImageList[i]['imageDigest'];
     imageTag = sortedImageList[i]['imageTags'];
@@ -204,7 +202,6 @@ const deleteImages = async (config) => {
     info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${(imagesSize/1024/1024).toFixed(2)} Megabytes`);
 
     let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR    
-    console.log(deletedImagesResponse)
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
       info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
       if (deletedImagesResponse['failures'].length != 0){
