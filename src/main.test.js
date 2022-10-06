@@ -89,7 +89,7 @@ jest.mock('./AWSClient', () => {
             registryId: '073521391622'
           },
           {
-            imageDigest: 'sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927', // NOSONAR
+            imageDigest: 'sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1928', // NOSONAR
             imagePushedAt: new Date('2022-07-26T05:44:32.000Z'),
             imageSizeInBytes: 265411979,
             imageTags: undefined,
@@ -179,19 +179,10 @@ test('Test -1 flag to skip deletion process', async() => {
       keepImages: -1,
     }
     const deletedImages = await deleteImages(params)
-    expect(deletedImages).toBe(0)
+    expect(deletedImages.length).toBe(0)
 })
 
-test('Test delete not a necessary quantity of images', async() => {
-    const params = {
-      repositoryNames: ['cross/devtools/devtools-scripts-fake'],
-      keepImages: 20,
-    }
-    await deleteImages(params)
-    expect(AWSClient.describeImages).toHaveBeenCalled()
-})
-
-test('Test delete ONLY untagged images', async() => {
+test('Test delete ONLY untagged images and keep 2 tagged images', async() => {
   const params = {
     repositoryNames: ['cross/devtools/devtools-scripts-fake'],
     keepImages: 5
@@ -199,7 +190,10 @@ test('Test delete ONLY untagged images', async() => {
 
   const deleteResponse = await deleteImages(params)
   expect(AWSClient.describeImages).toHaveBeenCalled()
-  expect(deleteResponse).toBe(2) // Only tagged images
+  // Should return only deleted untagged images
+  expect(deleteResponse.length).toBe(2)
+  expect(deleteResponse[0]).toStrictEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTags": undefined}) // NOSONAR
+  expect(deleteResponse[1]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1928", "imageTags": undefined}) // NOSONAR
 })
 
 test('Test delete all images', async() => {
@@ -209,8 +203,12 @@ test('Test delete all images', async() => {
     }
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse['imageIds'].length).toBe(2)
-    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    // Should return all images delete with this sequence
+    expect(deleteResponse.length).toBe(4)
+    expect(deleteResponse[0]).toStrictEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTags": undefined}) // NOSONAR
+    expect(deleteResponse[1]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1928", "imageTags": undefined}) // NOSONAR
+    expect(deleteResponse[2]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTags": [ 'v0.0.1' ]}) // NOSONAR
+    expect(deleteResponse[3]).toStrictEqual({"imageDigest": "sha256:YOUNGEST_IMAGE34c26298efe1f1dfdeba497ff54f17242c8637fa40c3238440", "imageTags": [ 'latest' ]}) // NOSONAR
 })
 
 test('Test keep just 1 youngest image', async() => {
@@ -220,7 +218,9 @@ test('Test keep just 1 youngest image', async() => {
     }
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
-    expect(deleteResponse['imageIds'].length).toBe(1)
-    expect(deleteResponse['imageIds'][0]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTags": ['v0.0.1']}) // NOSONAR
+    // Shoud return all three images deleted (tagged and untagged)
+    expect(deleteResponse.length).toBe(3)
+    expect(deleteResponse[0]).toStrictEqual({"imageDigest": "sha256:OLDEST_IMAGEff96ae8aee5bf5a77276ac3b6afafd6657e0eec049551d276794", "imageTags": undefined}) // NOSONAR
+    expect(deleteResponse[1]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1928", "imageTags": undefined}) // NOSONAR
+    expect(deleteResponse[2]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTags": [ 'v0.0.1' ]}) // NOSONAR
 })
