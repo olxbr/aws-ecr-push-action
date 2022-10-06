@@ -12,7 +12,8 @@ const {
   putImageScanningConfiguration,
   batchDeleteImage,
   describeImages
-} = require('./AWSClient')
+} = require('./AWSClient');
+const { Console } = require('console');
 
 // pseudo logger
 function info(msg) {
@@ -163,7 +164,7 @@ const deleteImages = async (config) => {
     // Delete untagged if exists
     if (untaggedImgIds.length > 0) {
       info(`Deleting ${untaggedImgIds.length} UNTAGGED images and will be cleaned ${untaggedCleanedSizeInMB.toFixed(2)} Megabytes...`)
-      delUntaggedImages = await batchDeleteImage({repositoryName: repositoryName, imageIds: untaggedImgIds}); // NOSONAR
+      let delUntaggedImages = await batchDeleteImage({repositoryName: repositoryName, imageIds: untaggedImgIds}); // NOSONAR
 
       if (delUntaggedImages['$metadata']['httpStatusCode'] == 200){
         info(`Successfuly deleted ${untaggedImgIds.length} untagged images`);
@@ -173,7 +174,7 @@ const deleteImages = async (config) => {
 
       // Removes deleted untagged images from the main list
       imagesList['imageDetails'] = imagesList['imageDetails'].filter(untagged => !untaggedImgInfos.includes(untagged))
-      info(`Listing ONLY TAGGED images now [${imagesList['imageDetails'].length}]: ${JSON.stringify(imagesList)}`)
+      info(`Listing ONLY TAGGED images now ${imagesList['imageDetails'].length}: ${JSON.stringify(imagesList)}`)
     }
   }
 
@@ -203,6 +204,7 @@ const deleteImages = async (config) => {
     for(let i = 0; i < imagesToDelete.length; i += 100){
       deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete.slice(i, i+100)}); // NOSONAR
       deletedImagesBatch.push(deletedImagesResponse)
+      console.log(deletedImagesResponse)
       if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
         info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
         if (deletedImagesResponse['failures'].length != 0){
