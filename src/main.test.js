@@ -198,19 +198,18 @@ test('Test delete all images', async() => {
     }
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse[0]['imageIds'].length).toBe(2)
-    expect(deleteResponse[0]['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse['imageIds'].length).toBe(2)
+    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
 })
 
-test('Test delete three images and keep de youngest', async() => {
+test('Test keep just 1 youngest image', async() => {
     const params = {
       repositoryNames: ['cross/devtools/devtools-scripts-fake'],
       keepImages: 1,
     }
     const deleteResponse = await deleteImages(params)
     expect(AWSClient.describeImages).toHaveBeenCalled()
-    expect(deleteResponse.length).toBe(1)
-    expect(deleteResponse[0]['$metadata']).toStrictEqual({"httpStatusCode": 200})
-    expect(deleteResponse[0]['imageIds'].length).toBe(1)
-    expect(deleteResponse[0]['imageIds']).toContainEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": undefined}) // NOSONAR
+    expect(deleteResponse['$metadata']).toStrictEqual({"httpStatusCode": 200})
+    expect(deleteResponse['imageIds'].length).toBe(1)
+    expect(deleteResponse['imageIds'][0]).toStrictEqual({"imageDigest": "sha256:MID_AGE_IMAGE69c1354667d9e9fdc149be320a9608c05cc0899d94fa69f1927", "imageTag": ['v0.0.1']}) // NOSONAR
 })

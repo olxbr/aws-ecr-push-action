@@ -184,6 +184,9 @@ const deleteImages = async (config) => {
   let imagesSize = 0;
   let imageDigest;
   let imageTag;
+
+  console.log(imagesList['imageDetails'])
+  console.log(sortedImageList)
   for (let i = 0; i < (sortedImageList.length - keepImages); i++){
     imageDigest = sortedImageList[i]['imageDigest'];
     imageTag = sortedImageList[i]['imageTags'];
@@ -211,7 +214,7 @@ const deleteImages = async (config) => {
       Error(`Failed to delete response: ${deletedImagesResponse}`);
     }
   
-    return [deletedImagesResponse]
+    return deletedImagesResponse
   } else {
     info(`Found no images to delete... Keeping ${keepImages}`);
     return 0
