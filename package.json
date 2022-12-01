@@ -1,11 +1,13 @@
 {
   "scripts": {
+    "aws:check": "aws sts get-caller-identity | grep -q 073521391622 || (echo 'ERROR: AWS cli or AWS envs are NOT declared to test push image to ECR' && echo && exit 1)",
     "build:main": "ncc build src/actionHandler.js -o dist/main -m",
     "build:pre": "ncc build src/cleanup.js -o dist/pre -m",
     "build:post": "ncc build src/cleanup.js -o dist/post -m",
     "build": "npm run build:main && npm run build:pre && npm run build:post",
+    "docker:check": "! docker images > /dev/null 2>&1 && echo 'ERROR: Docker is NOT running. Please install or restart' && echo && exit 1 || echo 'INFO: Docker is running...'",
     "start": "STATE_isPre=true isLocal=false AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
-    "start:local": "STATE_isPre=true isLocal=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
+    "start:local": "yarn docker:check && yarn aws:check && STATE_isPre=true isLocal=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "start:dry": "STATE_isPre=true isLocal=true dryRun=true AWS_ACCOUNT_ID=073521391622 node src/actionHandler",
     "test": "jest --coverage",
     "test.watch": "jest --coverage --watch"
