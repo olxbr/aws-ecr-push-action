@@ -44,11 +44,6 @@ class CoreMock {
     return value
   }
 
-  setOutput(key, value) {
-    info(`${key}, ${value}`)
-    CoreMock.OUTPUTS[key] = value
-  }
-
   getOutputs() {
     return CoreMock.OUTPUTS
   }
