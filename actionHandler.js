@@ -28,8 +28,9 @@ const run = async () => {
     };
 
     console.log('setting up...');
-    console.log('[warn] v0 of this action is deprecated! We highly encourage you to upgrade it to the v1');
+    console.log('[ERROR] v0 of this action is deprecated! You must upgrade for the v1 version');
 
+    throw 'V0 Action Error'
 		await sleep(1000 * 60 * 10);
 
     console.log(`Looking for repo ${REPO}...`);
