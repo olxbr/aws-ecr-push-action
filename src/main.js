@@ -11,9 +11,9 @@ const {
   setRepositoryPolicy,
   putImageScanningConfiguration,
   batchDeleteImage,
-  listImagesECR,
   describeImages
-} = require('./AWSClient')
+} = require('./AWSClient');
+const { Console } = require('console');
 
 // pseudo logger
 function info(msg) {
@@ -126,10 +126,11 @@ const pushImage = (config) => {
 
 const deleteImages = async (config) => {
   const keepImages = config.keepImages;
+  let arrayAllDeleteImgs = [];
   
   if (keepImages == -1) {
     info(`The keepImages is set to ${keepImages} so no image will be deleted`);
-    return 0
+    return arrayAllDeleteImgs;
   }
 
   const repositoryName = config.repositoryNames[0];
@@ -137,21 +138,55 @@ const deleteImages = async (config) => {
   const filter = {tagStatus: 'ANY'};
   info(`Searching images to delete from ${repositoryName}... Will be kept ${keepImages} images`);
 
-  let joinedImg = [];
-  const imagesList = await listImagesECR({repositoryName, maxResults, filter}); // NOSONAR
-  const imageQuantity = imagesList['imageIds'].length;
-  info(`Found ${imageQuantity} in th repo...`);
-  for (let i = 0; i < imageQuantity; i += 100){
-    var describedImageList = await describeImages({repositoryName,  imageIds: imagesList['imageIds'].slice(i, i+100)}); // NOSONAR
-    joinedImg.push(...describedImageList['imageDetails']);
+  let imagesList = await describeImages({repositoryName, maxResults, filter}); // NOSONAR
+  info(`Found total of ${imagesList['imageDetails'].length} images in the repo...`);
+  info(`Listing all images: ${JSON.stringify(imagesList)}`)
+
+  info(`Finding ALL UNTAGGED images first...`);
+  if (imagesList && imagesList['imageDetails']) {
+    let untaggedImgIds          = [];
+    let untaggedImgInfos        = [];
+    let untaggedCleanedSizeInMB = 0;
+
+    imagesList['imageDetails'].forEach( imageInfo => {
+
+      // Get only untagged
+      if (imageInfo.imageTags == undefined) {
+        untaggedCleanedSizeInMB += imageInfo.imageSizeInBytes/1024/1024;
+        untaggedImgInfos.push(imageInfo);
+        untaggedImgIds.push({
+          imageDigest: imageInfo.imageDigest,
+          imageTags: undefined
+        });
+
+      }
+    });
+
+    // Delete untagged if exists
+    if (untaggedImgIds.length > 0) {
+      info(`Deleting ${untaggedImgIds.length} UNTAGGED images and will be cleaned ${untaggedCleanedSizeInMB.toFixed(2)} Megabytes...`)
+      let delUntaggedImages = await batchDeleteImage({repositoryName: repositoryName, imageIds: untaggedImgIds}); // NOSONAR
+
+      if (delUntaggedImages['$metadata']['httpStatusCode'] == 200){
+        info(`Successfuly deleted ${untaggedImgIds.length} untagged images`);
+        arrayAllDeleteImgs.push(...untaggedImgIds)
+      } else {
+        Error(`Failed to delete response: ${delUntaggedImagese}`);
+      }
+
+      // Removes deleted untagged images from the main list
+      imagesList['imageDetails'] = imagesList['imageDetails'].filter(untagged => !untaggedImgInfos.includes(untagged))
+      info(`Listing ONLY TAGGED images now ${imagesList['imageDetails'].length}: ${JSON.stringify(imagesList)}`)
+    }
   }
 
-  const sortedImageList = sortByKey(joinedImg, 'imagePushedAt');
+  const sortedImageList = sortByKey(imagesList['imageDetails'], 'imagePushedAt');
 
   let imagesToDelete = [];
   let imagesSize = 0;
   let imageDigest;
   let imageTag;
+
   for (let i = 0; i < (sortedImageList.length - keepImages); i++){
     imageDigest = sortedImageList[i]['imageDigest'];
     imageTag = sortedImageList[i]['imageTags'];
@@ -159,7 +194,7 @@ const deleteImages = async (config) => {
     if (imageDigest != null) {
       imagesToDelete.push({
         imageDigest: imageDigest,
-        imageTag: undefined
+        imageTags: imageTag
       });
     } else {
       Error('Image information Error');
@@ -167,24 +202,22 @@ const deleteImages = async (config) => {
   }
   if (imagesToDelete.length > 0){
     info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${(imagesSize/1024/1024).toFixed(2)} Megabytes`);
-    let deletedImagesResponse;
-    let deletedImagesBatch = [];
-    for(let i = 0; i < imagesToDelete.length; i += 100){
-      deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete.slice(i, i+100)}); // NOSONAR
-      deletedImagesBatch.push(deletedImagesResponse)
-      if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
-        info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images`);
-        if (deletedImagesResponse['failures'].length != 0){
-          info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
-        }
-      } else {
-        Error(`Failed to delete response: ${deletedImagesResponse}`);
+
+    let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR    
+    if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
+      info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images and keeping last ${keepImages}`);
+      arrayAllDeleteImgs.push(...imagesToDelete)
+      if (deletedImagesResponse['failures'].length != 0){
+        info(`Failed to delete this images ${deletedImagesResponse['$metadata']['failures']}`);
       }
+    } else {
+      Error(`Failed to delete response: ${deletedImagesResponse}`);
     }
-    return deletedImagesBatch
+  
+    return arrayAllDeleteImgs
   } else {
     info(`Found no images to delete... Keeping ${keepImages}`);
-    return 0
+    return arrayAllDeleteImgs
   }
 };
 

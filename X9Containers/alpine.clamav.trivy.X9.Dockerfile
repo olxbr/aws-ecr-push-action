@@ -6,13 +6,14 @@ ARG TARGET_IMAGE
 
 FROM $REGISTRY/$CLAMAV_IMAGE as clamav
 FROM $REGISTRY/$TRIVY_IMAGE as trivy
-FROM $REGISTRY/$BASE_IMAGE as base
+FROM $BASE_IMAGE as base
 
 FROM $REGISTRY/$TARGET_IMAGE as trivy-stage
 ARG TRIVY_SEVERITY
-ARG TRIVY_IGNORE_URL
+ARG TRIVY_IGNORE_FILE
 WORKDIR /scans
-RUN curl $TRIVY_IGNORE_URL --output .trivyignore
+RUN apk add --no-cache ca-certificates curl
+COPY $TRIVY_IGNORE_FILE .trivyignore
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
 RUN trivy --debug filesystem --timeout 15m --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress --skip-files usr/local/bin/trivy / | tee image-vulnerabilities-trivy.txt
 

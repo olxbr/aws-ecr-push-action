@@ -15,6 +15,10 @@ jobs:
   ecr:
     runs-on: ubuntu-latest
     name: Docker build and push to ECR
+    env:
+      ## Repository must be in the format '<BU>/<SQUAD>/<PROJECT NAME | MY NAME>'
+      ECR_REPOSITORY: 'cross/devtools/momo'
+      ECR_IMAGE_VERSION: '0.2.2'
     steps:
 
       - name: Checkout
@@ -22,12 +26,9 @@ jobs:
 
       # Exemple of build using docker
       - name: Docker Build
-        env:
-            ## Repository must be in the format '<BU>/<SQUAD>/<PROJECT NAME | MY NAME>'
-            ECR_REPOSITORY: 'cross/devtools/momo'
         run: |
             docker build --pull -t ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest .
-            docker tag ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:0.2.2
+            docker tag ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:$ECR_IMAGE_VERSION
             docker tag ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:latest ${{ secrets.CONTAINER_REGISTRY_HOST }}/$ECR_REPOSITORY:beta
 
       - name: Push to ECR
@@ -35,9 +36,11 @@ jobs:
         id: ecr
         with:
           # The complete repository name from ECR {BU}/{TEAM}/{PROJECT} (ex. cross/devtools/devtools-scripts).
-          ecr_repository: 'cross/devtools/momo'
+          ecr_repository: ${{ env.ECR_REPOSITORY }}
           # Comma-separated string of ECR image tags (ex. latest, 1.0.0)
-          tags: 'latest,0.2.2,beta'
+          tags: 'latest,${{ env.ECR_IMAGE_VERSION }},beta'
+          # Keep last N images on ECR (default: 100)
+          keep_images: 20
         # Warning! Don't change this env values!
         # Just copy and paste this whole block as is in your repo
         env:
