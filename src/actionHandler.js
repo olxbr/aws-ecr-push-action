@@ -71,13 +71,10 @@ const run = async () => {
 
     info(`Looking for repo ${REPO}...`);
     const repositoryUri = await getRepositoryUri(params);
-    core.setOutput('repository_uri', repositoryUri);
 
     if (!dryRun) {
       info(`Setting repo policy ${REPO}...`);
       const policy_output = await defineRepositoryPolicy(params);
-      core.setOutput('repository_policy', policy_output.policyText);
-
       const ecrLoginResult = await dockerLoginOnECR(params); //NOSONAR
     }
 
