@@ -89,7 +89,7 @@ jobs:
           
   update_tag:
     name: Update the major tag to include the ${{ github.event.inputs.TAG_NAME || github.event.release.tag_name }} changes
-    enviroment: production
+    environment: production
     runs-on: ubuntu-latest
     needs: [trigger]
     steps:
