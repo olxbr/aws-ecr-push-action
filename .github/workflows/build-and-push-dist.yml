@@ -29,6 +29,8 @@ jobs:
         
       - name: Build dist
         run: yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Commit dist
         uses: EndBug/add-and-commit@v7
