@@ -3,11 +3,11 @@ const { v4: uuidv4 } = require('uuid')
 const { executeSyncCmd } = require('./utils');
 
 const VIRUS_THRESHOLD = 0;
-const CRITICAL_VULNS_THRESHOLD = 5;
-const HIGH_VULNS_THRESHOLD = 25;
-const MEDIUM_VULNS_THRESHOLD = 50;
-const LOW_VULNS_THRESHOLD = 125;
-const UNKNOWN_VULNS_THRESHOLD = 500;
+const CRITICAL_VULNS_THRESHOLD = 3;
+const HIGH_VULNS_THRESHOLD = 20;
+const MEDIUM_VULNS_THRESHOLD = 40;
+const LOW_VULNS_THRESHOLD = 75;
+const UNKNOWN_VULNS_THRESHOLD = 150;
 const X9CONTAINERS_UUID = uuidv4();
 const enforced = require('./enforcedCVEs.js');
 

@@ -24,6 +24,8 @@ jobs:
         
       - name: Build dist
         run: yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Run tests
         env:
