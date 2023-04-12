@@ -7,7 +7,7 @@ function info(msg) {
 
 const executeSyncCmd = (command, arrayOfParams, errorMessage) => {
   info(`Executing command: ${command} ${arrayOfParams.toString().replace(/,/g,' ').replace(/[0-9a-zA-Z]{200,}(==)?/g,'**TOKEN**')}`);
-  const cmd = spawnSync(command, arrayOfParams);
+  const cmd = spawnSync(command, arrayOfParams, { env: { ...process.env, DOCKER_BUILDKIT: 1}});
   if (cmd.status !== 0) {
     if (errorMessage) {
       throw new Error(errorMessage);
