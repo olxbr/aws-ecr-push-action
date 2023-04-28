@@ -34,6 +34,8 @@ const run = async () => {
     const ignoreThreats = core.getInput('ignore_threats');
     const trivyIgnoreFile = core.getInput('trivy_ignore_file');
     const keepImages = core.getInput('keep_images');
+    const dockerBuildkit = core.getInput('docker_buildkit') || 0;
+
 
     const awsConfig = {
       AWS_ACCOUNT_ID,
@@ -51,6 +53,7 @@ const run = async () => {
       trivyIgnoreFile,
       aws: awsConfig,
       keepImages,
+      dockerBuildkit,
     };
 
     info(`Action params: ${JSON.stringify(params)}`)

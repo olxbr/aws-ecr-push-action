@@ -24,7 +24,7 @@ inputs:
   ignore_threats:
     description: If true, don't interrupt workflow if has security findings, during security scan.
     required: false
-    default: 'false'
+    default: "false"
   trivy_ignore_file:
     description: FILE of the .trivyignore the action will use during the build (Only valid for Trivy containers).
     required: false
@@ -33,11 +33,14 @@ inputs:
     description: The quantity of images to keep (ex. -1 will keep all images, 0 will delete them all, 10 the last 10 new images will be kept)
     required: false
     default: 100
+  build_kit:
+    description: The build kit to use (ex. buildkitd). Enable buildkitd can speed up the build process.
+    default: 0
 outputs:
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
 runs:
-  using: 'node16'
-  pre: 'dist/pre/index.js'
-  main: 'dist/main/index.js'
-  post: 'dist/post/index.js'
+  using: "node16"
+  pre: "dist/pre/index.js"
+  main: "dist/main/index.js"
+  post: "dist/post/index.js"

@@ -99,7 +99,9 @@ const reportImageThreats = (config) => {
       `TRIVY_IGNORE_FILE=${config.trivyIgnoreFile}`,
       '--no-cache',
       '.'
-    ]
+    ],
+    '',
+    {DOCKER_BUILDKIT: config.dockerBuildkit},
   );
 
   info(`report image threats docker build done, removing ${dockerfileName}`);

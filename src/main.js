@@ -127,7 +127,7 @@ const pushImage = (config) => {
 const deleteImages = async (config) => {
   const keepImages = config.keepImages;
   let arrayAllDeleteImgs = [];
-  
+
   if (keepImages == -1) {
     info(`The keepImages is set to ${keepImages} so no image will be deleted`);
     return arrayAllDeleteImgs;
@@ -203,7 +203,7 @@ const deleteImages = async (config) => {
   if (imagesToDelete.length > 0){
     info(`Will be deleted ${imagesToDelete.length} images and will be cleaned ${(imagesSize/1024/1024).toFixed(2)} Megabytes`);
 
-    let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR    
+    let deletedImagesResponse = await batchDeleteImage({repositoryName: repositoryName, imageIds: imagesToDelete}); // NOSONAR
     if (deletedImagesResponse['$metadata']['httpStatusCode'] == 200){
       info(`Successfuly deleted ${deletedImagesResponse['imageIds'].length} images and keeping last ${keepImages}`);
       arrayAllDeleteImgs.push(...imagesToDelete)
@@ -213,7 +213,7 @@ const deleteImages = async (config) => {
     } else {
       Error(`Failed to delete response: ${deletedImagesResponse}`);
     }
-  
+
     return arrayAllDeleteImgs
   } else {
     info(`Found no images to delete... Keeping ${keepImages}`);
