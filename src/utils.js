@@ -2,12 +2,21 @@ const { spawnSync } = require("child_process");
 
 // pseudo logger
 function info(msg) {
-  require('./logger').info(`utils.js - ${msg}`)
+  require("./logger").info(`utils.js - ${msg}`);
 }
 
 const executeSyncCmd = (command, arrayOfParams, errorMessage, envVars) => {
   const envs = { ...process.env, ...envVars };
-  info(`Executing command: ${command} ${arrayOfParams.toString().replace(/,/g,' ').replace(/[0-9a-zA-Z]{200,}(==)?/g,'**TOKEN**')}`);
+  info(`DOCKER_BUILDKIT is set to ${envs.DOCKER_BUILDKIT}`);
+  info(
+    `Executing command: ${command} ${arrayOfParams
+      .toString()
+      .replace(/,/g, " ")
+      .replace(
+        /[0-9a-zA-Z]{200,}(==)?/g,
+        "**TOKEN**"
+      )} with envs: ${JSON.stringify(envs)}`
+  );
   const cmd = spawnSync(command, arrayOfParams, envs);
   if (cmd.status !== 0) {
     if (errorMessage) {
@@ -20,11 +29,12 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage, envVars) => {
 };
 
 const sortByKey = (array, key) => {
-    return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key]; // NOSONAR
-        return ((x < y) ? -1 : ((x > y) ? 1 : 0)); // NOSONAR
-    });
-}
+  return array.sort(function (a, b) {
+    var x = a[key];
+    var y = b[key]; // NOSONAR
+    return x < y ? -1 : x > y ? 1 : 0; // NOSONAR
+  });
+};
 
 exports.executeSyncCmd = executeSyncCmd;
 exports.sortByKey = sortByKey;
