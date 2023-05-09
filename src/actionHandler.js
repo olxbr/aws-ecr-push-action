@@ -57,8 +57,7 @@ const run = async () => {
     info(`Action params: ${JSON.stringify(params)}`);
 
     if (!isLocal) {
-      const metricsResult = await sendMetrics({
-        //NOSONAR
+      await sendMetrics({
         "inputs.ignoreThreats": ignoreThreats === "true",
       });
     }
@@ -88,7 +87,7 @@ const run = async () => {
       tags.forEach((tag) => {
         pushImage({ ...params, tag });
       });
-      deleteImages(params);
+      await deleteImages(params);
     }
   } catch (err) {
     if (isLocal) console.error(err);

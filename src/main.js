@@ -54,8 +54,7 @@ const describeRepoErrorHandler = (config) => async (err) => {
 
   const repoPolicyResult = await defineRepositoryPolicy(config); // NOSONAR
 
-  const scanConfigResult = await putImageScanningConfiguration({
-    // NOSONAR
+  await putImageScanningConfiguration({
     repositoryName,
     imageScanningConfiguration: { scanOnPush: true },
   });
