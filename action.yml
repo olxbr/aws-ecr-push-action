@@ -33,7 +33,7 @@ inputs:
     description: The quantity of images to keep (ex. -1 will keep all images, 0 will delete them all, 10 the last 10 new images will be kept)
     required: false
     default: 100
-  build_kit:
+  docker_buildkit:
     description: The build kit to use (ex. buildkitd). Enable buildkitd can speed up the build process.
     default: 0
 outputs:

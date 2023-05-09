@@ -7,10 +7,9 @@ function info(msg) {
 
 const executeSyncCmd = (command, arrayOfParams, errorMessage, envVars) => {
   const envs = { env: { ...process.env, ...envVars }, shell: true };
-  if (envs?.env?.DOCKER_BUILDKIT) {
+  if (typeof envs?.env?.DOCKER_BUILDKIT !== "undefined") {
     info(`DOCKER_BUILDKIT is set to ${envs.env.DOCKER_BUILDKIT}`);
   }
-  info(`DOCKER_BUILDKIT is set to ${envs.env.DOCKER_BUILDKIT}`);
   info(
     `Executing command: ${command} ${arrayOfParams
       .toString()

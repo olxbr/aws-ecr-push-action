@@ -82,7 +82,6 @@ const reportImageThreats = (config) => {
   executeSyncCmd(
     "docker",
     [
-      "--debug",
       "build",
       "-f",
       `${dockerfileName}`,
