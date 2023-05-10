@@ -14,10 +14,7 @@ const executeSyncCmd = (command, arrayOfParams, errorMessage, envVars) => {
     `Executing command: ${command} ${arrayOfParams
       .toString()
       .replace(/,/g, " ")
-      .replace(
-        /[0-9a-zA-Z]{200,}(==)?/g,
-        "**TOKEN**"
-      )} with envs: ${JSON.stringify(envs)}`
+      .replace(/[0-9a-zA-Z]{200,}(==)?/g, "**TOKEN**")}`
   );
   const cmd = spawnSync(command, arrayOfParams, envs);
   if (cmd.status !== 0) {
