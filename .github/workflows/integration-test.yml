@@ -49,7 +49,7 @@ jobs:
 
       - name: Wait repo olxbr/action-tester finish
         env:
-          WAIT_TIMEOUT: 300
+          WAIT_TIMEOUT: 600
           GITHUB_API_REPO: "https://api.github.com/repos/olxbr/action-tester"
           CURL_HEADERS: "-H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.PAT }}'"
         run: |
