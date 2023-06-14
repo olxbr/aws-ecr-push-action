@@ -33,7 +33,7 @@ const run = async () => {
     const ignoreThreats = core.getInput("ignore_threats");
     const trivyIgnoreFile = core.getInput("trivy_ignore_file");
     const keepImages = core.getInput("keep_images");
-    const dockerBuildkit = core.getInput("docker_buildkit") || 0;
+    const dockerBuildkit = core.getInput("docker_buildkit");
 
     const awsConfig = {
       AWS_ACCOUNT_ID,
@@ -53,6 +53,11 @@ const run = async () => {
       keepImages,
       dockerBuildkit,
     };
+
+    if (process.env.AWS_SESSION_TOKEN) {
+      info("AWS_SESSION_TOKEN is set, unsetting it...")
+      process.env.AWS_SESSION_TOKEN = ""; // Ensure that AWS_SESSION_TOKEN is not set
+    }
 
     info(`Action params: ${JSON.stringify(params)}`);
 

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "aws:check": "aws sts get-caller-identity | grep -q 073521391622 || (echo 'ERROR: AWS cli or AWS envs are NOT declared to test push image to ECR' && echo && exit 1)",
+    "aws:check": "aws sts get-caller-identity | grep -q 073521391622 || (printf 'ERROR: Testing push image to ECR.\n * AWS cli not installed\n * AWS envs are NOT declared' && echo && echo && exit 1)",
     "build:main": "ncc build src/actionHandler.js -o dist/main -m",
     "build:pre": "ncc build src/cleanup.js -o dist/pre -m",
     "build:post": "ncc build src/cleanup.js -o dist/post -m",
