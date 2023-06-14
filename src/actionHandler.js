@@ -54,6 +54,11 @@ const run = async () => {
       dockerBuildkit,
     };
 
+    if (process.env.AWS_SESSION_TOKEN) {
+      info("AWS_SESSION_TOKEN is set, unsetting it...")
+      process.env.AWS_SESSION_TOKEN = ""; // Ensure that AWS_SESSION_TOKEN is not set
+    }
+
     info(`Action params: ${JSON.stringify(params)}`);
 
     if (!isLocal) {
