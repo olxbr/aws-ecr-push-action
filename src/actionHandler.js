@@ -33,7 +33,7 @@ const run = async () => {
     const ignoreThreats = core.getInput("ignore_threats");
     const trivyIgnoreFile = core.getInput("trivy_ignore_file");
     const keepImages = core.getInput("keep_images");
-    const dockerBuildkit = core.getInput("docker_buildkit") || 0;
+    const dockerBuildkit = core.getInput("docker_buildkit");
 
     const awsConfig = {
       AWS_ACCOUNT_ID,

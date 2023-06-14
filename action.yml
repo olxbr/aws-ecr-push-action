@@ -35,7 +35,7 @@ inputs:
     default: 100
   docker_buildkit:
     description: The build kit to use (ex. buildkitd). Enable buildkitd can speed up the build process.
-    default: 0
+    default: '0'
 outputs:
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.
