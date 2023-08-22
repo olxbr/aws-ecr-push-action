@@ -1,0 +1,10 @@
+site_name: ECR Push Action
+docs_dir: .
+
+nav:
+  - Home: README.md
+
+plugins:
+  - techdocs-core
+  - kroki
+  - same-dir
