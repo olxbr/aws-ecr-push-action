@@ -31,7 +31,9 @@ const buildPolicy = ({ awsPrincipalRules }) => {
       {
         Sid: "AllowSecImageScanning",
         Effect: "Allow",
-        Principal: "*",
+        Principal: {
+          AWS: "arn:aws:iam::025517087168:role/github-enable-ecr-scan-on-push-security-role",
+        },
         Action: [
           "ecr:BatchGetRepositoryScanningConfiguration",
           "ecr:DescribeImageScanFindings",
@@ -41,9 +43,24 @@ const buildPolicy = ({ awsPrincipalRules }) => {
           "ecr:PutRegistryScanningConfiguration",
           "ecr:StartImageScan",
         ],
+      },
+      {
+        Sid: "LambdaCrossAccount",
+        Effect: "Allow",
+        Principal: {
+          Service: "lambda.amazonaws.com",
+        },
+        Action: ["ecr:BatchGetImage", "ecr:GetDownloadUrlForLayer"],
         Condition: {
           StringLike: {
-            "aws:PrincipalOrgID": principalRules,
+            "aws:sourceARN": [
+              "arn:aws:lambda:us-east-1:025517087168:function:*",
+              "arn:aws:lambda:us-east-1:073521391622:function:*",
+              "arn:aws:lambda:us-east-1:183337677225:function:*",
+              "arn:aws:lambda:us-east-1:375164415270:function:*",
+              "arn:aws:lambda:us-east-1:444914307613:function:*",
+              "arn:aws:lambda:us-east-1:312705011799:function:*",
+            ],
           },
         },
       },
