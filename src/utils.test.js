@@ -1,7 +1,6 @@
 const { spawnSync } = require("child_process");
 const events = require("events");
 const buffer = require("buffer");
-const sinon = require("sinon");
 
 jest.mock("child_process");
 
