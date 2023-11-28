@@ -189,7 +189,7 @@ const reportImageThreats = (config) => {
       "--build-arg",
       `REGISTRY=${config.aws["ECR_ENDPOINT"]}`,
       "--build-arg",
-      "TRIVY_IMAGE=cross/devsecops/trivy:latest",
+      "TRIVY_IMAGE=public.ecr.aws/aquasecurity/trivy:latest",
       "--build-arg",
       "BASE_IMAGE=public.ecr.aws/docker/library/alpine:3.18",
       "--build-arg",
