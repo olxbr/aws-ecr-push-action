@@ -59,7 +59,3 @@ jobs:
 You can run the action on your local machine with `npm run start:local` after exporting the correct AWS credentials.
 
 Alternatively, you can use `npm run stat:dry` to start a dry run that will not push anything to AWS.
-
-## The security analysis image
-
-We have a custom Trivy image to run the security analysis, that is built at [devsecops-tools](https://github.com/olxbr/devsecops-tools/blob/15a2be9f8e6c874c724cf0f510b31a327dfecaf9/.github/workflows/push-latest-clamav-trivy-images.yml)
