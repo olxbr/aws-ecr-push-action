@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        
+
       - name: Build dist
         run: yarn build
         env:
@@ -29,6 +29,6 @@ jobs:
 
       - name: Run tests
         env:
-          AWS_ACCESS_KEY_ID: 'AKIAIOSFODNN7EXAMPLE'
-          AWS_SECRET_ACCESS_KEY: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+          AWS_ACCESS_KEY_ID: "AKIAIOSFODNN7EXAMPLE"
+          AWS_SECRET_ACCESS_KEY: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
         run: yarn test
