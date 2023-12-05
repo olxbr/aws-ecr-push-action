@@ -54,6 +54,7 @@ jobs:
 > The image need to be at te format `CONTAINER_REGISTRY_HOST/ECR_REPOSITORY:TAG`
 > For this, you can use the secret `CONTAINER_REGISTRY_HOST` to add this prefix.
 
+
 ## Running local
 
 You can run the action on your local machine with `npm run start:local` after exporting the correct AWS credentials.

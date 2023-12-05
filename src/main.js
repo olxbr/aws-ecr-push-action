@@ -222,7 +222,9 @@ const deleteImages = async (config) => {
   let imageDigest;
   let imageTag;
 
-  for (let i = 0; i < sortedImageList.length - keepImages; i++) {
+  let totalImagesToBeDeleted = sortedImageList.length - keepImages;
+
+  for (let i = 0; i < totalImagesToBeDeleted; i++) {
     imageDigest = sortedImageList[i]["imageDigest"];
     imageTag = sortedImageList[i]["imageTags"];
     imagesSize += sortedImageList[i]["imageSizeInBytes"];
@@ -244,6 +246,7 @@ const deleteImages = async (config) => {
       ).toFixed(2)} Megabytes`
     );
 
+    info(`Deleting images...`);
     let deletedImagesResponse = await batchDeleteImage({
       repositoryName: repositoryName,
       imageIds: imagesToDelete,
@@ -252,10 +255,10 @@ const deleteImages = async (config) => {
       info(
         `Successfuly deleted ${deletedImagesResponse["imageIds"].length} images and keeping last ${keepImages}`
       );
-      arrayAllDeleteImgs.push(...imagesToDelete);
+      arrayAllDeleteImgs.push(...deletedImagesResponse["imageIds"]);
       if (deletedImagesResponse["failures"].length != 0) {
         info(
-          `Failed to delete this images ${deletedImagesResponse["$metadata"]["failures"]}`
+          `Failed to delete this images ${deletedImagesResponse["failures"]}`
         );
       }
     } else {
