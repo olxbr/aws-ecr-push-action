@@ -20,7 +20,7 @@ jest.mock("./AWSClient", () => {
         return {
           repositoryUri: `http://xpto.registry/${params.repositoryNames[0]}`,
         }; // NOSONAR
-      var error = new Error("Repo not found");
+      let error = new Error("Repo not found");
       error.name = "RepositoryNotFoundException";
       throw error;
     }),
@@ -288,7 +288,7 @@ test("Test only 100 images whem more than 100 images are found", async () => {
     };
     const twoHundredImages = Array(200)
       .fill(0)
-      .map((x) => Object.assign({}, image));
+      .map((x) => image);
     return {
       $metadata: {
         httpStatusCode: 200,
