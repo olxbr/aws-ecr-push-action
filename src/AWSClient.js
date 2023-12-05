@@ -7,10 +7,13 @@ const {
   SetRepositoryPolicyCommand,
   PutImageScanningConfigurationCommand,
   BatchDeleteImageCommand,
-  ListImagesCommand,
   DescribeImagesCommand
 } = require('@aws-sdk/client-ecr');
 
+// pseudo logger
+function warn(msg) {
+  require("./logger").warn(`AWSClient.js - ${msg}`);
+}
 
 const credentialsProvider = defaultProvider({ timeout: 20000 });
 
@@ -24,8 +27,17 @@ const createRepo = (params) => client.send(new CreateRepositoryCommand(params));
 const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenCommand(params));
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
-const batchDeleteImage = (params) => client.send(new BatchDeleteImageCommand(params));
 const describeImages = (params) => client.send(new DescribeImagesCommand(params));
+
+const batchDeleteImage = (params) => {
+  const totalImagesToBeDeleted = params.imageIds.length
+  if (totalImagesToBeDeleted > 100) {
+    warn(`Only 100 images will be deleted. Total images to be deleted: ${totalImagesToBeDeleted}`)
+    params.imageIds = params.imageIds.slice(0, 100);
+    warn(`batchDeleteImage params: ${JSON.stringify(params)}`);
+  }
+  return client.send(new BatchDeleteImageCommand(params))};
+
 
 exports.client = client
 exports.describeRepo = describeRepo
