@@ -67,7 +67,7 @@ const checkTrivyResults = (scansFolder, minimalSeverity) => {
     return "os not supported by Trivy, skipping workflow interruption";
   }
 
-  const totalLine = reportContent.toString().match(/^(Total:.*)/gm);
+  let totalLine = reportContent.toString().match(/^(Total:.*)/gm);
   if (totalLine === null || totalLine.length === 0 ) {
     throw new Error(`Unable to find total line in ${trivyScanFile}`);
   }
