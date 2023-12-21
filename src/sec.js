@@ -71,6 +71,7 @@ const checkTrivyResults = (scansFolder, minimalSeverity) => {
   if (totalLine === null || totalLine.length === 0 ) {
     throw new Error(`Unable to find total line in ${trivyScanFile}`);
   }
+  
   // Useful when there is more than 1 'totals'
   if (totalLine.length > 1) {
     info(`result has more than 1 summary. Sort the array from Bigger to Lower. Total line has ${totalLine}`)
