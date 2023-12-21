@@ -69,7 +69,7 @@ const checkTrivyResults = (scansFolder, minimalSeverity) => {
 
   const totalLine = reportContent.toString().match(/^(Total:.*)/gm);
   if (totalLine === null || totalLine.length === 0 ) {
-    throw new Error(`Unable to find total line in ${trivyScanFileName}`);
+    throw new Error(`Unable to find total line in ${trivyScanFile}`);
   }
   // Useful when there is more than 1 'totals'
   if (totalLine.length > 1) {
@@ -79,7 +79,7 @@ const checkTrivyResults = (scansFolder, minimalSeverity) => {
   const totalsTrivy = totalLine[0].match(/\d+/);
   if (totalsTrivy.some(isNaN)) {
     throw new Error(
-      `report image threats file ${trivyScanFileName} missing totals`
+      `report image threats file ${trivyScanFile} missing totals`
     );
   }
   if (
