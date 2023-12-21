@@ -67,14 +67,20 @@ const checkTrivyResults = (scansFolder, minimalSeverity) => {
     return "os not supported by Trivy, skipping workflow interruption";
   }
 
-  const totalLine = reportContent.toString().match(/^(Total:.*)/gm);
-  if (totalLine === null || totalLine.length === 0 || totalLine.length > 1) {
-    throw new Error(`Unable to find total line in ${trivyScanFileName}`);
+  let totalLine = reportContent.toString().match(/^(Total:.*)/gm);
+  if (totalLine === null || totalLine.length === 0 ) {
+    throw new Error(`Unable to find total line in ${trivyScanFile}`);
+  }
+  
+  // Useful when there is more than 1 'totals'
+  if (totalLine.length > 1) {
+    info(`result has more than 1 summary. Sort the array from Bigger to Lower. Total line has ${totalLine}`)
+    totalLine = totalLine.sort().reverse()
   }
   const totalsTrivy = totalLine[0].match(/\d+/);
   if (totalsTrivy.some(isNaN)) {
     throw new Error(
-      `report image threats file ${trivyScanFileName} missing totals`
+      `report image threats file ${trivyScanFile} missing totals`
     );
   }
   if (
