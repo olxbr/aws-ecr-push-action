@@ -12,7 +12,7 @@ WORKDIR /scans
 RUN apk add --no-cache ca-certificates curl
 COPY $TRIVY_IGNORE_FILE .trivyignore
 COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
-RUN trivy --debug filesystem --timeout 15m --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress --skip-files usr/local/bin/trivy / | tee image-vulnerabilities-trivy.txt
+RUN trivy --debug filesystem --timeout 15m --ignore-unfixed --vuln-type os --severity $TRIVY_SEVERITY --exit-code 0 --no-progress --skip-files usr/local/bin/trivy / 2>&1 | tee image-vulnerabilities-trivy.txt
 
 FROM base as final-stage
 WORKDIR /scans
