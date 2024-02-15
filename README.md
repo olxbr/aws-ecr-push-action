@@ -60,4 +60,3 @@ jobs:
 You can run the action on your local machine with `npm run start:local` after exporting the correct AWS credentials.
 
 Alternatively, you can use `npm run stat:dry` to start a dry run that will not push anything to AWS.
-
