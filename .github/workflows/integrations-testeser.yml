@@ -13,7 +13,7 @@ jobs:
     if: ${{ github.event.inputs.action == 'start' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Create Branch
         uses: peterjgrainger/action-create-branch@v2.0.1
@@ -35,7 +35,7 @@ jobs:
     env:
       PR_NUMBER: "59" # existing PR
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: "integration-test-tester"
 
