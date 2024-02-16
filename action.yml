@@ -35,7 +35,11 @@ inputs:
     default: 100
   docker_buildkit:
     description: The build kit to use (ex. buildkitd). Enable buildkitd can speed up the build process.
-    default: '0'
+    default: "0"
+  cost_center:
+    description: The UUID for for the cost center. Will be used for cost allocation.
+    required: false
+    default: ""
 outputs:
   repository_uri:
     description: The URI of the ECR registry i.e. aws_account_id.dkr.ecr.region.amazonaws.com.

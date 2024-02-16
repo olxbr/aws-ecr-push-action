@@ -9,6 +9,7 @@ const {
   putImageScanningConfiguration,
   batchDeleteImage,
   describeImages,
+  updateRepositryTags,
 } = require("./AWSClient");
 const { Console } = require("console");
 

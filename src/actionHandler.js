@@ -34,6 +34,7 @@ const run = async () => {
     const trivyIgnoreFile = core.getInput("trivy_ignore_file");
     const keepImages = core.getInput("keep_images");
     const dockerBuildkit = core.getInput("docker_buildkit");
+    const costCenter = core.getInput("cost_center");
 
     const awsConfig = {
       AWS_ACCOUNT_ID,
@@ -52,10 +53,11 @@ const run = async () => {
       aws: awsConfig,
       keepImages,
       dockerBuildkit,
+      costCenter,
     };
 
     if (process.env.AWS_SESSION_TOKEN) {
-      info("AWS_SESSION_TOKEN is set, unsetting it...")
+      info("AWS_SESSION_TOKEN is set, unsetting it...");
       process.env.AWS_SESSION_TOKEN = ""; // Ensure that AWS_SESSION_TOKEN is not set
     }
 
@@ -87,6 +89,7 @@ const run = async () => {
     }
 
     reportImageThreats(params);
+    await setCostTagForRepository(params);
 
     if (!dryRun) {
       tags.forEach((tag) => {
