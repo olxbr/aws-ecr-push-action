@@ -7,7 +7,8 @@ const {
   SetRepositoryPolicyCommand,
   PutImageScanningConfigurationCommand,
   BatchDeleteImageCommand,
-  DescribeImagesCommand
+  DescribeImagesCommand,
+  TagResourceCommand
 } = require('@aws-sdk/client-ecr');
 
 // pseudo logger
@@ -28,6 +29,7 @@ const getAuthorizationToken = (params) => client.send(new GetAuthorizationTokenC
 const setRepositoryPolicy = (params) => client.send(new SetRepositoryPolicyCommand(params));
 const putImageScanningConfiguration = (params) => client.send(new PutImageScanningConfigurationCommand(params));
 const describeImages = (params) => client.send(new DescribeImagesCommand(params));
+const updateRepositryTags = (params) => client.send(new TagResourceCommand(params));
 
 const batchDeleteImage = (params) => {
   const totalImagesToBeDeleted = params.imageIds.length
@@ -47,3 +49,4 @@ exports.setRepositoryPolicy = setRepositoryPolicy
 exports.putImageScanningConfiguration = putImageScanningConfiguration
 exports.batchDeleteImage = batchDeleteImage
 exports.describeImages = describeImages
+exports.updateRepositryTags = updateRepositryTags

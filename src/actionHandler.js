@@ -9,6 +9,7 @@ const {
 } = require("./main");
 const { sendMetrics } = require("./metrics");
 const { reportImageThreats } = require("./sec");
+const { setCostTagForRepository } = require("./costs");
 
 const isLocal = !!process.env["isLocal"];
 const dryRun = !!process.env["dryRun"];
@@ -34,6 +35,7 @@ const run = async () => {
     const trivyIgnoreFile = core.getInput("trivy_ignore_file");
     const keepImages = core.getInput("keep_images");
     const dockerBuildkit = core.getInput("docker_buildkit");
+    const costCenter = core.getInput("cost_center");
 
     const awsConfig = {
       AWS_ACCOUNT_ID,
@@ -52,6 +54,7 @@ const run = async () => {
       aws: awsConfig,
       keepImages,
       dockerBuildkit,
+      costCenter,
     };
 
     if (process.env.AWS_SESSION_TOKEN) {
@@ -103,6 +106,7 @@ const run = async () => {
     }
 
     reportImageThreats(params);
+    await setCostTagForRepository(params);
 
     if (!dryRun) {
       tags.forEach((tag) => {
