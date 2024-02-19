@@ -58,8 +58,11 @@ const run = async () => {
     };
 
     if (process.env.AWS_SESSION_TOKEN) {
-      info("AWS_SESSION_TOKEN is set, unsetting it...");
-      process.env.AWS_SESSION_TOKEN = ""; // Ensure that AWS_SESSION_TOKEN is not set
+      info("AWS_SESSION_TOKEN is set, unsetting it...")
+
+      isLocal ?
+        info("LOCAL run detected. AWS_SESSION_TOKEN will be used!") :
+        process.env.AWS_SESSION_TOKEN = "" // Ensure that AWS_SESSION_TOKEN is not set
     }
 
     info(`Action params: ${JSON.stringify(params)}`);
@@ -68,6 +71,19 @@ const run = async () => {
       await sendMetrics({
         "inputs.ignoreThreats": ignoreThreats === "true",
       });
+    }
+
+    if (isLocal) {
+      info(`LOCAL run detected. Generate a docker image to test - ${ECR_ENDPOINT}/${REPO}:${tags}`)
+      require('./utils').executeSyncCmd("docker", [
+        `pull`,
+        `alpine:latest`
+      ]);
+      require('./utils').executeSyncCmd("docker", [
+        `tag`,
+        `alpine:latest`,
+        `${ECR_ENDPOINT}/${REPO}:${tags}`
+      ]);
     }
 
     info(`Analyzing repository name (${REPO}) against "bu/squad/project"...`);
