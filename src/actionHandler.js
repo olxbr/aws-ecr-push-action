@@ -9,6 +9,7 @@ const {
 } = require("./main");
 const { sendMetrics } = require("./metrics");
 const { reportImageThreats } = require("./sec");
+const { setCostTagForRepository } = require("./costs");
 
 const isLocal = !!process.env["isLocal"];
 const dryRun = !!process.env["dryRun"];

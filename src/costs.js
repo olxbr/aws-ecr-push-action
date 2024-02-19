@@ -13,7 +13,7 @@ function info(msg) {
 const getCostsUuidFromBackstageFile = () => {
   info("Getting cost center from backstage file");
   // Try to Read the file catalog-info.yaml and get the metadata from metadata.[teams.olxbr.io/cloud-cost-center]
-  const backstageFile = "catalog-info.yml";
+  const backstageFile = "catalog-info.yaml";
   // Read file
   let backstageFileContent;
   try {
@@ -31,9 +31,11 @@ const getCostsUuidFromBackstageFile = () => {
     // Return the file metadata
     info(`Backstage Metadata: ${JSON.stringify(backstageFileJson.metadata)}`);
     info(
-      `Backstage Cost center: ${backstageFileJson.metadata["teams.olxbr.io/cloud-cost-center"]}`
+      `Backstage Cost center: ${backstageFileJson.metadata.annotations["teams.olxbr.io/cloud-cost-center"]}`
     );
-    return backstageFileJson.metadata["teams.olxbr.io/cloud-cost-center"];
+    return backstageFileJson.metadata.annotations[
+      "teams.olxbr.io/cloud-cost-center"
+    ];
   } catch (err) {
     warn(`Error parsing file ${backstageFile}: ${err}`);
     return "";
@@ -67,7 +69,9 @@ const setCostTagForRepository = async (params) => {
     costCenter = getCostsUuidFromBackstageFile();
   }
   if (!costCenter) {
-    warn("No cost center found to tag the repository");
+    warn(
+      "No cost center found to tag the repository! If you whant to tag the repository, please set the cost center in the action input or in the backstage config file."
+    );
     return;
   }
   const repoData = await describeRepo({
