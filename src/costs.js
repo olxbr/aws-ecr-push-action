@@ -19,7 +19,6 @@ const getCostsUuidFromBackstageFile = () => {
   try {
     info(`Reading file ${backstageFile}`);
     backstageFileContent = fs.readFileSync(backstageFile);
-    info(`File content: ${backstageFileContent}`);
   } catch (err) {
     warn(`File Not found ${backstageFile}: ${err}`);
     return "";
@@ -32,14 +31,15 @@ const getCostsUuidFromBackstageFile = () => {
     for (const doc of backstageFileJson) {
       if (doc.metadata && doc.metadata.annotations) {
         info(
-          `Backstage Cost center: ${doc.metadata.annotations["teams.olxbr.io/cloud-cost-center"]}`
+          `BackstageFile: Cost Center found: ${doc.metadata.annotations["teams.olxbr.io/cloud-cost-center"]}`
         );
         return doc.metadata.annotations["teams.olxbr.io/cloud-cost-center"];
       }
     }
-    return backstageFileJson.metadata.annotations[
-      "teams.olxbr.io/cloud-cost-center"
-    ];
+    info(
+      "BackstageFile: Cost Center not found, maybe there is no annotation of cloud-cost-center"
+    );
+    return "";
   } catch (err) {
     warn(`Error parsing file ${backstageFile}: ${err}`);
     return "";
@@ -84,6 +84,9 @@ const setCostTagForRepository = async (params) => {
   const resourceArn = repoData.repositoryArn
     ? repoData.repositoryArn
     : repoData.repositories[0].repositoryArn;
+  info(
+    `Setting cost center tag for repository ${repositoryName} with cost center ${costCenter}! If you think this is wrong, please set the cost center in the action input or in the backstage config file.`
+  );
   await tagResource(resourceArn, costCenter);
 };
 

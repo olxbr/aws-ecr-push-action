@@ -41,7 +41,8 @@ test("getCostsUuidFromBackstageFile should return the cloud cost center metadata
   // Mock the file content
   let backstageFileContent = `
 metadata:
-  teams.olxbr.io/cloud-cost-center: 00000-0000-0000-0000-00000
+  annotations:
+    teams.olxbr.io/cloud-cost-center: 00000-0000-0000-0000-00000
 `;
 
   // Mock the readFileSync function
