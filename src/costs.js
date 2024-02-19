@@ -27,12 +27,16 @@ const getCostsUuidFromBackstageFile = () => {
   // Parse file with yaml parser
   try {
     info("Parsing file");
-    const backstageFileJson = yaml.load(backstageFileContent);
+    const backstageFileJson = yaml.loadAll(backstageFileContent);
     // Return the file metadata
-    info(`Backstage Metadata: ${JSON.stringify(backstageFileJson.metadata)}`);
-    info(
-      `Backstage Cost center: ${backstageFileJson.metadata.annotations["teams.olxbr.io/cloud-cost-center"]}`
-    );
+    for (const doc of backstageFileJson) {
+      if (doc.metadata && doc.metadata.annotations) {
+        info(
+          `Backstage Cost center: ${doc.metadata.annotations["teams.olxbr.io/cloud-cost-center"]}`
+        );
+        return doc.metadata.annotations["teams.olxbr.io/cloud-cost-center"];
+      }
+    }
     return backstageFileJson.metadata.annotations[
       "teams.olxbr.io/cloud-cost-center"
     ];
