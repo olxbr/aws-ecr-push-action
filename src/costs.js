@@ -74,7 +74,7 @@ const setCostTagForRepository = async (params) => {
   }
   if (!costCenter) {
     warn(
-      "No cost center found to tag the repository! If you whant to tag the repository, please set the cost center in the action input or in the backstage config file."
+      "No cost center found to tag the repository! If you want to tag the repository, please set the cost center in the action input or in the backstage config file."
     );
     return;
   }
