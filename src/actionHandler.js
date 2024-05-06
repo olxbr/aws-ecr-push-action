@@ -65,6 +65,12 @@ const run = async () => {
         process.env.AWS_SESSION_TOKEN = "" // Ensure that AWS_SESSION_TOKEN is not set
     }
 
+    // Check environment variables for AWS credentials is set
+    if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
+      require("./logger").error(`actionHandler.js - AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY not set. Maybe you are running in public repo or public fork?`);
+      process.exit(1);
+    }
+
     info(`Action params: ${JSON.stringify(params)}`);
 
     if (!isLocal) {
