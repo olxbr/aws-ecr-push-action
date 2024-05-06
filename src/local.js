@@ -40,7 +40,8 @@ class CoreMock {
     const input = CoreMock.ACTION.inputs[key]
     if (!input) throw new Error(`Invalid input: ${key}`)
     const value = input.default
-    if(!value) throw new Error(`Input ${key} has no default value`)
+    info(`Input ${key} has default value: [${value}]`)
+    if(!value && value != '') throw new Error(`Input ${key} has no default value`)
     return value
   }
 
