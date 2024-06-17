@@ -21,15 +21,12 @@ function info(msg) {
 const validateImageName = (config) => async (err) => {
   let validatedBU = false;
   let validatedLen = false;
-  const allowedPrefix = ["cross", "olx", "zap", "vivareal", "base_images"];
+  const allowedPrefix = ["cross", "olx", "zap", "vivareal"];
 
   const repositoryName = config.repositoryNames[0];
   const repositoryNameSplited = repositoryName.split("/");
 
-  if (
-    repositoryNameSplited.length >= 3 ||
-    repositoryNameSplited.indexOf("base_images") == 0
-  ) {
+  if (repositoryNameSplited.length >= 3) {
     validatedLen = true;
   }
 
